@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a70375f6ad677dcec18fe0606d5a09cec8960f70
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fe63ad503b49a760823635902b3744a1ae2d85a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496105"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719644"
 ---
 # <a name="odbc-connection-manager"></a>диспетчер соединений ODBC
 
@@ -49,7 +49,7 @@ ms.locfileid: "88496105"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из последующих разделов.  
   
--   [Справочник по пользовательскому интерфейсу диспетчера подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
+-   [Справочник по пользовательскому интерфейсу диспетчера подключений ODBC]()  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -72,5 +72,4 @@ ms.locfileid: "88496105"
  Выберите соединение и затем удалите его, используя кнопку **Удалить** .  
 ## <a name="see-also"></a>См. также  
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

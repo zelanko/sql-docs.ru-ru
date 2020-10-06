@@ -22,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 74894762db3d65e3789922c39e3571c531906c82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf7bb7c42a9172148ccdf551eed0b62b3cf5938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500947"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670987"
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
-  Чтобы воспользоваться преимуществами функций, появившихся в текущем выпуске, вы можете перевести экземпляры служб Analysis Services на версию SQL Server с аналогичным режимом сервера. Эта процедура описана в разделе [Новые возможности в службах Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services).  
+  Чтобы воспользоваться преимуществами функций, появившихся в текущем выпуске, вы можете перевести экземпляры служб Analysis Services на версию SQL Server с аналогичным режимом сервера. Эта процедура описана в разделе [Новые возможности в службах Analysis Services](/analysis-services/what-s-new-in-analysis-services).  
   
  Вы можете обновить каждый экземпляр на месте независимо от других экземпляров, выполняемых на том же оборудовании. Но большинство администраторов устанавливают экземпляр новой версии для тестирования приложений, прежде чем переносить рабочие нагрузки на новый сервер. Однако для серверов разработки или тестирования обновление на месте может быть более удобным.  
   
@@ -51,21 +51,21 @@ ms.locfileid: "88500947"
   
 ### <a name="side-by-side-upgrade"></a>Параллельное обновление  
   
--   Создайте резервные копии для всех баз данных и убедитесь, что каждая из них может быть восстановлена. Дополнительные сведения см. в разделе [Резервное копирование и восстановление баз данных Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases).  
+-   Создайте резервные копии для всех баз данных и убедитесь, что каждая из них может быть восстановлена. Дополнительные сведения см. в разделе [Резервное копирование и восстановление баз данных Analysis Services](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases).  
   
 -   Определите подмножество отчетов, электронных таблиц или моментальных снимков панелей мониторинга для последующего использования в качестве основы для подтверждения операций, выполняемых после обновления сервера. Если это возможно, соберите показатели производительности, чтобы провести сравнение показателей для тех же рабочих нагрузок на обновленном сервере.  
   
 -   Установите новый экземпляр служб Analysis Services, выбрав тот же режим сервера (табличный или многомерный), что используется на сервере, который требуется заменить. 
   
-     Выполните действия после установки для настройки портов и добавления администраторов сервера. Дополнительные сведения см. в статье [Настройка после установки &#40;службы Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/post-install-configuration-analysis-services).  
+     Выполните действия после установки для настройки портов и добавления администраторов сервера. Дополнительные сведения см. в статье [Настройка после установки &#40;службы Analysis Services&#41;](/analysis-services/instances/post-install-configuration-analysis-services).  
   
 -   Подключите или восстановите каждую базу данных.  
   
--   Запустите DBCC для проверки целостности базы данных. Табличные модели подвергаются более тщательной проверке с поиском потерянных объектов в иерархии модели. Для многомерных моделей проверяются только индексы секций. Дополнительные сведения см. в статье [Средство проверки согласованности базы данных &#40;DBCC&#41; для табличных и многомерных баз данных Analysis Services](https://docs.microsoft.com/analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services).  
+-   Запустите DBCC для проверки целостности базы данных. Табличные модели подвергаются более тщательной проверке с поиском потерянных объектов в иерархии модели. Для многомерных моделей проверяются только индексы секций. Дополнительные сведения см. в статье [Средство проверки согласованности базы данных &#40;DBCC&#41; для табличных и многомерных баз данных Analysis Services](/analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services).  
   
 -   Проверьте отчеты, электронные таблицы и панели мониторинга, чтобы убедиться, что в поведении и вычислениях нет нежелательных изменений. Производительность многомерных и табличных рабочих нагрузок должна повыситься.  
   
--   Протестируйте операции обработки, при необходимости устраните ошибки со входом в систему и разрешениями. При использовании для подключения учетной записи службы по умолчанию новая служба будет запущена под другой учетной записью. Дополнительные сведения см. в разделе [Настройка учетных записей служб &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).  
+-   Протестируйте операции обработки, при необходимости устраните ошибки со входом в систему и разрешениями. При использовании для подключения учетной записи службы по умолчанию новая служба будет запущена под другой учетной записью. Дополнительные сведения см. в разделе [Настройка учетных записей служб &#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services).  
   
 -   Протестируйте операции резервного копирования и восстановления на обновленном сервере, указав в сценариях новое имя сервера.  
   
@@ -87,10 +87,9 @@ ms.locfileid: "88500947"
 |Многомерная|1100|SQL Server 2012 и более поздней версии|  
 |Многомерная|1050|SQL Server 2005, 2008, 2008 R2|  
   
- Дополнительные сведения см. в статьях [Уровень совместимости многомерной базы данных &#40;службы Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services) и [Уровень совместимости табличных моделей служб Analysis Services](https://docs.microsoft.com/analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services).  
+ Дополнительные сведения см. в статьях [Уровень совместимости многомерной базы данных &#40;службы Analysis Services&#41;](/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services) и [Уровень совместимости табличных моделей служб Analysis Services](/analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services).  
   
 ## <a name="see-also"></a>См. также раздел  
  [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Обновление Power Pivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
-  
   

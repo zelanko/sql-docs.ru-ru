@@ -11,12 +11,12 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90eb3c3e9565d25c3b17f1080923b26efad97196
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900269"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670974"
 ---
 # <a name="upgrade-master-data-services"></a>Обновление служб Master Data Services
 
@@ -98,7 +98,7 @@ ms.locfileid: "85900269"
         > [!IMPORTANT]  
         >  Существующее веб-приложение MDS из более ранней версии SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) можно выбрать в диспетчере конфигурации Master Data Services версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Не следует выбрать существующее веб-приложение, и вместо этого следует создать веб-приложение [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] для MDS. В противном случае произойдет ошибка при попытке связать веб-приложение обновленной базы данных MDS, которые были запрашиваемая страница недоступна из-за неверной конфигурации данных для этой страницы.  
         >   
-        >  Если необходимо использовать одинаковые имена (псевдонимы) для веб-приложения MDS в качестве существующего ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]), необходимо сначала удалить веб-приложение и пул приложений, связанный с IIS, а затем создать веб-приложение с тем же именем с помощью диспетчера конфигурации Master Data Services версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Дополнительные сведения об удалении веб-приложения и пулов приложений из служб IIS см. в разделах [Удаление приложения (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) и [Удаление пула приложений (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Если необходимо использовать одинаковые имена (псевдонимы) для веб-приложения MDS в качестве существующего ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]), необходимо сначала удалить веб-приложение и пул приложений, связанный с IIS, а затем создать веб-приложение с тем же именем с помощью диспетчера конфигурации Master Data Services версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Дополнительные сведения об удалении веб-приложения и пулов приложений из служб IIS см. в разделах [Удаление приложения (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771205(v=ws.10)) и [Удаление пула приложений (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772406(v=ws.10)).  
   
 4.  Свяжите новое веб-приложение с обновленной базой данных служб MDS.  
   
@@ -158,5 +158,4 @@ ms.locfileid: "85900269"
   
 ## <a name="see-also"></a>См. также:  
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
-  
   

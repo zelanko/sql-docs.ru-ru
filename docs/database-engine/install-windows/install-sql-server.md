@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 426df300ba160d9a19ff8c29edb7e413d28e6ec6
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: c981154462ec6b544d8dd877d1b6a41a6fa0ac2c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216718"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670597"
 ---
 # <a name="sql-server-installation-guide"></a>Руководство по установке SQL Server
 
@@ -31,7 +31,7 @@ ms.locfileid: "88216718"
 Дополнительные сведения о других сценариях развертывания см. в следующих источниках:
 
 - [Linux](../../linux/sql-server-linux-setup.md)
-- [Контейнеры Docker](../../linux/sql-server-linux-configure-docker.md)
+- [Контейнеры Docker](../../linux/sql-server-linux-docker-container-deployment.md)
 - [Kubernetes — кластеры больших данных](../../big-data-cluster/deploy-get-started.md)
 
 Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] доступен только в виде 64-разрядного приложения. Ниже приведены важные подробности о том, как получить и установить SQL Server.
@@ -86,12 +86,12 @@ ms.locfileid: "88216718"
 |Статья|Описание|  
 |-----------|-----------------|  
 |[Мастер установки](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Установите SQL Server с помощью графического интерфейса мастера установки, запущенного из файла setup.exe на установочном носителе. |  
-|[Командная строка](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|Пример синтаксиса и параметров установки для запуска установки SQL Server из командной строки. | 
+|[Командная строка](./install-sql-server-from-the-command-prompt.md)|Пример синтаксиса и параметров установки для запуска установки SQL Server из командной строки. | 
 |[Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Установите [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] в Windows Server Core.|  
 |[Параметры для средства проверки конфигурации системы](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|Содержит обсуждение функций средства проверки конфигурации (SCC).|   
-|[Файл конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|Образцы синтаксиса и параметров установки для запуска программы установки с помощью файла конфигурации.|  
+|[Файл конфигурации](./install-sql-server-using-a-configuration-file.md)|Образцы синтаксиса и параметров установки для запуска программы установки с помощью файла конфигурации.|  
 |[SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|Образцы синтаксиса и параметров установки для запуска программы установки с помощью SysPrep.|
-|[Добавление компонентов в экземпляр](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Обновление компонентов существующего экземпляра [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
+|[Добавление компонентов в экземпляр](./add-features-to-an-instance-of-sql-server-setup.md)|Обновление компонентов существующего экземпляра [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
 |[Установка отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)| Установка экземпляра отказоустойчивого кластера SQL Server.  | 
 |[Исправление неудавшейся установки [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Восстановление поврежденной установки [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
 |[Переименование компьютера с SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Обновите системные метаданные, хранящиеся в sys.servers, после переименования узла компьютера, на котором размещен изолированный экземпляр SQL Server. |  
@@ -107,7 +107,7 @@ ms.locfileid: "88216718"
 |[Ядро СУБД SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md)|Установка и настройка [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Репликация SQL Server](../../database-engine/install-windows/install-sql-server-replication.md)|Установка и настройка репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Распределенное воспроизведение](../../tools/distributed-replay/install-distributed-replay-overview.md)|Содержит список статей, связанных с установкой компонента распределенного воспроизведения.|  
-|[Средства управления SQL Server со средой SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Установка и настройка средств управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Средства управления SQL Server со средой SSMS](../../ssms/download-sql-server-management-studio-ssms.md)|Установка и настройка средств управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|Рекомендации по установке компонентов PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 
@@ -116,7 +116,7 @@ ms.locfileid: "88216718"
 |Статья|Описание|  
 |-----------|-----------------|  
 |[Настройка брандмауэра Windows (SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Общие сведения о конфигурации брандмауэра и настройке брандмауэра Windows для предоставления доступа к SQL Server.|  
-|[Настройка брандмауэра Windows (SSAS)](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Настройте порт и брандмауэр, чтобы разрешить доступ к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.|  
+|[Настройка брандмауэра Windows (SSAS)](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Настройте порт и брандмауэр, чтобы разрешить доступ к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.|  
 |[Настройка многосетевого компьютера](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Настройте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэр Windows в режиме повышенной безопасности для предоставления сетевого подключения экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.|  
 
  
@@ -127,4 +127,4 @@ ms.locfileid: "88216718"
 [Установка SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)   
 [Установка служб SQL Server Analysis Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)   
 [Установка компонентов бизнес-аналитики [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
-[Решения высокого уровня доступности &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+[Решения высокого уровня доступности &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)

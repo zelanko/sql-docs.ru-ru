@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22b1d58bac2433f9f5bae7dac5a6568050e38daf
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772640"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670287"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85772640"
 ### <a name="operating-system-support"></a>Поддержка операционных систем  
  Дополнительные сведения о поддержке **расширенной защиты**в ОС Windows можно найти по следующим ссылкам:  
   
--   [Интегрированная проверка подлинности Windows с расширенной защитой](https://msdn.microsoft.com/library/dd639324.aspx)  
+-   [Интегрированная проверка подлинности Windows с расширенной защитой](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   
 -   [Советы по безопасности от Microsoft (973811), расширенная защита для проверки подлинности](/security-updates/SecurityAdvisories/2009/973811)
   
@@ -100,12 +100,11 @@ ms.locfileid: "85772640"
 ## <a name="configuring-other-sql-server-components"></a>Настройка других компонентов SQL Server  
  Дополнительные сведения о настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]см. в разделе [Расширенная защита для проверки подлинности служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
- При использовании IIS для получения доступа к данным [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по соединению с протоколами HTTP или HTTPS службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могут использовать расширенную защиту, реализуемую IIS. Дополнительные сведения о настройке IIS для использования расширенной защиты см. в разделе [Настройка расширенной защиты в IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105).  
+ При использовании IIS для получения доступа к данным [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по соединению с протоколами HTTP или HTTPS службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могут использовать расширенную защиту, реализуемую IIS. Дополнительные сведения о настройке IIS для использования расширенной защиты см. в разделе [Настройка расширенной защиты в IIS 7.5](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee909472(v=ws.10)).  
   
 ## <a name="see-also"></a>См. также:  
  [Сетевая конфигурация сервера](../../database-engine/configure-windows/server-network-configuration.md)   
  [Конфигурация клиентской сети](../../database-engine/configure-windows/client-network-configuration.md)   
- [Общие сведения о расширенной защите для проверки подлинности](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [Интегрированная проверка подлинности Windows с расширенной защитой](https://go.microsoft.com/fwlink/?LinkId=179922)  
-  
+ [Общие сведения о расширенной защите для проверки подлинности](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+ [Интегрированная проверка подлинности Windows с расширенной защитой](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   

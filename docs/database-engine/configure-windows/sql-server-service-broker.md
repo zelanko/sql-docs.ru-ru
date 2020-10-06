@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 5a22d4bf95b7d6bfc7c6a5e00c5613b04a80749e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863412"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670777"
 ---
 # <a name="service-broker"></a>Компонент Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] предоставляют встроенную поддержку для обмена сообщениями и очередей в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [Управляемом экземпляре SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Это облегчает разработчикам создание сложных, надежных распределенных приложений, использующих компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)] для связи между разнородными базами данных.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] предоставляют встроенную поддержку для обмена сообщениями и очередей в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [Управляемом экземпляре SQL Azure](/azure/sql-database/sql-database-managed-instance-index). Это облегчает разработчикам создание сложных, надежных распределенных приложений, использующих компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)] для связи между разнородными базами данных.  
   
 ## <a name="when-to-use-service-broker"></a>Когда следует использовать компонент Service Broker
 
@@ -90,7 +90,7 @@ FROM ExpenseQueue;
   
 -   См. информацию об инструкциях CREATE, ALTER и DROP в разделе [Инструкции на языке описания данных (DDL) (Transact-SQL)](../../t-sql/statements/statements.md)  
   
--   [Инструкции компонента Service Broker](../../t-sql/statements/service-broker-statements.md)  
+-   [Инструкции компонента Service Broker](../../t-sql/statements/statements.md)  
   
 -   [Представления каталога компонента Service Broker (Transact-SQL)](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)  
   
@@ -98,7 +98,7 @@ FROM ExpenseQueue;
   
 -   [Программа ssbdiagnose (компонент Service Broker)](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- Сведения об основных понятиях компонента [, а также задачах разработки и управления см. в](https://go.microsoft.com/fwlink/?LinkId=231312) ранее опубликованной документации [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Эта документация не повторяется в документации по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] из-за малого числа изменений в компоненте [!INCLUDE[ssSB](../../includes/sssb-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Сведения об основных понятиях компонента [, а также задачах разработки и управления см. в](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) ранее опубликованной документации [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Эта документация не повторяется в документации по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] из-за малого числа изменений в компоненте [!INCLUDE[ssSB](../../includes/sssb-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="whats-new-in-service-broker"></a>Новые возможности (компонент Service Broker)  
  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]не были внесены значимые изменения.  В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]появились следующие изменения.  
@@ -107,7 +107,7 @@ FROM ExpenseQueue;
 
 - Service Broker не поддерживается в нескольких экземплярах. 
  - `sys.routes` — предварительные требование: выберите адрес из sys.routes. Адрес должен иметь значение LOCAL для каждого маршрута. См. статью о [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
- - `CREATE ROUTE`. `CREATE ROUTE` можно использовать только с локальным (`LOCAL`) адресом `ADDRESS`. См. статью о [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `CREATE ROUTE`. `CREATE ROUTE` можно использовать только с локальным (`LOCAL`) адресом `ADDRESS`. См. статью о [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md).
  - `ALTER ROUTE` — нельзя использовать `ALTER ROUTE` с параметром `ADDRESS`, значение которого отличается от `LOCAL`. См. статью об [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>Сообщения могут отправляться в несколько целевых служб (многоадресная рассылка)  
@@ -125,6 +125,4 @@ FROM ExpenseQueue;
   
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Чаще всего Service Broker используется для [уведомлений о событиях](../../relational-databases/service-broker/event-notifications.md). Узнайте, как [реализовать уведомления о событиях](../../relational-databases/service-broker/implement-event-notifications.md), [настроить безопасность диалога](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md) или [получить дополнительные сведения](../../relational-databases/service-broker/get-information-about-event-notifications.md). 
-
-
+Чаще всего Service Broker используется для [уведомлений о событиях](../../relational-databases/service-broker/event-notifications.md). Узнайте, как [реализовать уведомления о событиях](../../relational-databases/service-broker/implement-event-notifications.md), [настроить безопасность диалога](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md) или [получить дополнительные сведения](../../relational-databases/service-broker/get-information-about-event-notifications.md).

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0acb31fb6669213aed14721eb52c55b457ec1f2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aa433db303e80610fb8f109d8a0905f888348c1b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894197"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671147"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Обновление экземпляров реплики группы доступности AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "85894197"
 При обновлении экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], на котором размещается группа доступности AlwaysOn, до новой версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], нового пакета обновления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или накопительного пакета обновления, а также при установке нового пакета обновления Windows или накопительного пакета обновления Windows) вы можете выполнить последовательное обновление. Это позволит сократить время простоя первичной реплики до одной операции перехода на другой ресурс вручную (или двух таких операций, если нужно перейти на исходную первичную реплику). При обновлении вторичная реплика будет недоступна для отработки отказа или операций только для чтения. После обновления для синхронизации между вторичной репликой и узлом первичной реплики может потребоваться некоторое время; кроме того, может отмечаться значительное увеличение сетевого трафика (в зависимости от объема действий на узле первичной реплики). Также обратите внимание, что после начальной отработки отказа во вторичную реплику, где работает более новая версия SQL Server, базы данных в этой группе доступности будут обновлены до последней версии. При этом для таких баз данных не будут доступны реплики для чтения. Время простоя после первоначальной отработки отказа будет зависеть от количества баз данных в группе доступности. Если вы планируете восстановить размещение в исходной первичной реплике, этот шаг не будет повторяться при восстановлении.
   
 >[!NOTE]  
->В этой статье мы ограничимся обсуждением обновления только SQL Server. Здесь не рассматривается обновление операционной системы с отказоустойчивым кластером Windows Server (WSFC). Обновление операционной системы Windows, на которой размещен отказоустойчивый кластер, не поддерживается для операционных систем ниже Windows Server 2012 R2. Обновление узла кластера под управлением Windows Server 2012 R2 описано в статье [Cluster Operating System Rolling Upgrade](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade) (Последовательное обновление операционной системы в кластере).  
+>В этой статье мы ограничимся обсуждением обновления только SQL Server. Здесь не рассматривается обновление операционной системы с отказоустойчивым кластером Windows Server (WSFC). Обновление операционной системы Windows, на которой размещен отказоустойчивый кластер, не поддерживается для операционных систем ниже Windows Server 2012 R2. Обновление узла кластера под управлением Windows Server 2012 R2 описано в статье [Cluster Operating System Rolling Upgrade](/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade) (Последовательное обновление операционной системы в кластере).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
 Перед установкой ознакомьтесь со следующими важными сведениями.  
@@ -256,12 +256,11 @@ ms.locfileid: "85894197"
 
 1. Обновление экземпляра, который изначально был первичной репликой.
 
-Дополнительные сведения см. в статье [CDC functionality may break after upgrading to the latest](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/) (Возможное нарушение функциональности записи измененных данных после обновления до последнего накопительного обновления).
+Дополнительные сведения см. в статье [CDC functionality may break after upgrading to the latest](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016) (Возможное нарушение функциональности записи измененных данных после обновления до последнего накопительного обновления).
 
   
 ## <a name="see-also"></a>См. также:  
  [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
 
- [Установка SQL Server 2016 из командной строки](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-  
+ [Установка SQL Server 2016 из командной строки](../../install-windows/install-sql-server-from-the-command-prompt.md)  
   

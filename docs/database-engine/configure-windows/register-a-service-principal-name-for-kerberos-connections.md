@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/12/2020
-ms.openlocfilehash: 242b87166035c8ffc0e01272b5910f85a66620e7
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 27e19a66912c220e8c407c4182c3241906af5ea5
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200687"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670337"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имени участника-службы для соединений Kerberos
 
@@ -68,7 +68,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!NOTE]  
 >  Если домен Windows настроен для выполнения в режиме работы ниже Windows Server 2008 R2, учетная запись управляемой службы не будет иметь необходимых разрешений для регистрации имен субъектов-служб для службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Если требуется проверка подлинности Kerberos, администратор домена должен вручную зарегистрировать имена субъектов-служб SQL Server в управляемой учетной записи службы.
 
-Дополнительные сведения см. в разделе [Реализация ограниченного делегирования Kerberos в SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)  
+Дополнительные сведения см. в разделе [Реализация ограниченного делегирования Kerberos в SQL Server 2008](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100))  
 
 ##  <a name="spn-formats"></a><a name="Formats"></a> Форматы имени участника-службы
 
@@ -190,4 +190,4 @@ WHERE session_id = @@SPID;
 - [Имена участника-службы (SPN) в клиентских соединениях (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)
 - [Имена участника-службы (SPN) в клиентских соединениях (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)
 - [Компоненты собственного клиента SQL Server](../../relational-databases/native-client/features/sql-server-native-client-features.md)
-- [Управление проблемами проверки подлинности по протоколу Kerberos в средах служб Reporting Service](https://technet.microsoft.com/library/ff679930.aspx)
+- [Управление проблемами проверки подлинности по протоколу Kerberos в средах служб Reporting Service](/previous-versions/sql/sql-server-2008/ff679930(v=sql.100))

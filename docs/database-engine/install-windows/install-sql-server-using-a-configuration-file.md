@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110218"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670311"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Установка SQL Server с помощью файла конфигурации
 
@@ -66,7 +66,7 @@ FEATURES=SQL,Tools
 3. Отмените установку, не завершая ее, чтобы создать INI-файл. 
   
     > [!NOTE]  
-    >  Инфраструктура программы установки запишет все соответствующие параметры для запущенных действий (за исключением конфиденциальных данных, например паролей). Параметр /IAcceptSQLServerLicenseTerms также не записывается в файл конфигурации и требует или изменения файла конфигурации, или указания значения в командной строке. Дополнительные сведения см. в разделе [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Также включается значение для логических параметров, для которых значения обычно не указываются через командную строку. 
+    >  Инфраструктура программы установки запишет все соответствующие параметры для запущенных действий (за исключением конфиденциальных данных, например паролей). Параметр /IAcceptSQLServerLicenseTerms также не записывается в файл конфигурации и требует или изменения файла конфигурации, или указания значения в командной строке. Дополнительные сведения см. в разделе [Установка SQL Server из командной строки](./install-sql-server-from-the-command-prompt.md). Также включается значение для логических параметров, для которых значения обычно не указываются через командную строку. 
   
 ## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Использование файла конфигурации для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -145,8 +145,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ```  
   
 ## <a name="see-also"></a>См. также раздел  
- [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Установка SQL Server из командной строки](./install-sql-server-from-the-command-prompt.md)   
  [Установка отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Обновление экземпляра отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).  
-  
   

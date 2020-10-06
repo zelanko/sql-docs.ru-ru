@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcec8cc2395f22774b853407fe5959286e539e7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7ecd953c8c383ef78c6e84221282eda76a5f7fca
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917136"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671143"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "86917136"
   
  Только члены роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin могут подключаться с использованием выделенного административного соединения.  
   
- Выделенное административное соединение доступно и поддерживается через программу командной строки `sqlcmd` со специальным административным ключом (`-A`). Дополнительные сведения об использовании `sqlcmd` см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подключиться, подставляя префикс `admin:` к имени экземпляра в формате `sqlcmd -S admin:<*instance_name*>`. Выделенное административное соединение можно также запустить через редактор запросов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключившись к `admin:\<*instance_name*>`.
+ Выделенное административное соединение доступно и поддерживается через программу командной строки `sqlcmd` со специальным административным ключом (`-A`). Дополнительные сведения об использовании `sqlcmd` см. в разделе [Использование программы sqlcmd с переменными скрипта](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подключиться, подставляя префикс `admin:` к имени экземпляра в формате `sqlcmd -S admin:<*instance_name*>`. Выделенное административное соединение можно также запустить через редактор запросов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключившись к `admin:\<*instance_name*>`.
 
 > [!Note]  
 > Установка DAC из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "86917136"
  `sqlcmd -S serverName.database.windows.net,1434 -U sa -P <xxx> -d AdventureWorks`  
   
 ## <a name="related-content"></a>См. также  
- [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
+ [Использование программы sqlcmd с переменными скрипта](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
@@ -136,5 +136,3 @@ ms.locfileid: "86917136"
  [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
  [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
-  
-

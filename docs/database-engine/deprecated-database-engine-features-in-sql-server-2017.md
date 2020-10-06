@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244085"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670527"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
 
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | Устаревшая функция | Замена | Имя функции | Идентификатор функции |
 |--------------------|-------------|--------------|------------|
-Обновление с версии 100 (SQL Server 2008 и SQL Server 2008 R2). | Когда [поддержка](https://aka.ms/sqllifecycle) версии SQL Server завершается, соответствующий уровень совместимости базы данных помечается как нерекомендуемый. Однако мы будем как можно дольше поддерживать приложения, сертифицированные для работы на любом соответствующем уровне совместимости, чтобы упростить обновление. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Уровень совместимости базы данных 100 | 108 |
+Обновление с версии 100 (SQL Server 2008 и SQL Server 2008 R2). | Когда [поддержка](/lifecycle/products/?products=sql-server) версии SQL Server завершается, соответствующий уровень совместимости базы данных помечается как нерекомендуемый. Однако мы будем как можно дольше поддерживать приложения, сертифицированные для работы на любом соответствующем уровне совместимости, чтобы упростить обновление. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Уровень совместимости базы данных 100 | 108 |
 
 ### <a name="database-objects"></a>Объекты базы данных
 
@@ -370,6 +370,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)** . Если разработчик выделил значение **varbinary(50)** , может потребоваться внести изменения в приложения на случай изменения размера возвращаемых куки-файлов в будущих выпусках. Хотя эта проблема не связана с устареванием, она описана в данном разделе, так как требует внесения аналогичных изменений в приложения. Дополнительные сведения см. в разделе [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
-
+ [Неподдерживаемые функции ядра СУБД в SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 815ecb54acf22b1ac28adae534847fa842b2e87a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1d9b69cc55ab617eb3a4c5b4ed2ebb27726f35b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784137"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670017"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Настройка брандмауэра Windows для доступа к компоненту Database Engine
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,6 +97,5 @@ ms.locfileid: "85784137"
 7.  В диалоговом окне **Имя** введите имя и описание правила и нажмите кнопку **Готово**.  
   
 ## <a name="see-also"></a>См. также:  
- [Руководство. Настройка параметров брандмауэра (база данных SQL Microsoft Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
-  
+ [Руководство. Настройка параметров брандмауэра (база данных SQL Microsoft Azure)](/azure/azure-sql/database/firewall-configure)  
   

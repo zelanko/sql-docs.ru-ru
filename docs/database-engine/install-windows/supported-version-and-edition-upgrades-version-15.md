@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ec6c743ea40da4d7ee6846c3a1373d3912ec0dc9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 687f314e776dcc049f03cb4c8a164fb5fa84073e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900301"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670207"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2019"></a>Поддерживаемые обновления версий и выпусков (SQL Server 2019)
 
@@ -44,7 +44,7 @@ ms.locfileid: "85900301"
   
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] доступен только для 64-разрядных платформ. Межплатформенное обновление не поддерживается. Невозможно обновить 32-разрядный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до стандартного 64-разрядного при помощи программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Но можно создать резервную копию или отсоединить базы данных от 32-разрядного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем восстановить их или присоединить к новому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-разрядная версия), если базы данных не опубликованы в репликации. Необходимо повторно создать имена входа и другие объекты пользователя в системных базах данных master, msdb и model.  
   
-- Добавить новые компоненты в процессе обновления существующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]нельзя. После обновления экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] добавить новые компоненты можно при помощи программы установки [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Дополнительные сведения см. в разделе [Добавление компонентов в экземпляр SQL Server (программа установки)](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+- Добавить новые компоненты в процессе обновления существующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]нельзя. После обновления экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] добавить новые компоненты можно при помощи программы установки [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Дополнительные сведения см. в разделе [Добавление компонентов в экземпляр SQL Server (программа установки)](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 ## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>Обновление ранних версий до [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
@@ -100,7 +100,7 @@ ms.locfileid: "85900301"
 
 Следующие советы и средства помогут запланировать и реализовать миграцию.
 
-- Средства миграции Миграцию поддерживает [помощник по миграции данных (DMA)](https://aka.ms/dma).
+- Средства миграции Миграцию поддерживает [помощник по миграции данных (DMA)](../../dma/dma-overview.md).
 - Резервное копирование и восстановление Резервную копию, созданную в SQL Server 2008 или SQL Server 2008 R2, можно восстановить до SQL Server 2019.
 - Доставка журналов Доставка журналов поддерживается, если основной экземпляр работает в SQL Server 2008 с пакетом обновления 3 (SP3) или более поздней версии либо в SQL Server 2008 R2 с пакетом обновления 2 (SP2) или более поздней версии, а дополнительный экземпляр — в SQL Server 2019. 
 
@@ -149,4 +149,4 @@ ms.locfileid: "85900301"
 
  [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
- [Обновление SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Обновление SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)

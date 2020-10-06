@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 19e6eb1601d0640e68ee17617154e4964a1f43a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24af2c500ddd9a14dd5d8b1c68f7ecdefda6bc33
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725267"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670842"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Параметр конфигурации сервера «Agent XPs»
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Задачи автоматизированного администрирования (агент SQL Server)](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)   
+ [Задачи автоматизированного администрирования (агент SQL Server)](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)   
  [Запуск, остановка или приостановка службы агента SQL Server](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
-  
   

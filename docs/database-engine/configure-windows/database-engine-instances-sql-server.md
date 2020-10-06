@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d363980f09ecf0bd732bafc119bd5dd511d29f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772596"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670732"
 ---
 # <a name="database-engine-instances-sql-server"></a>Экземпляры компонента Database Engine (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85772596"
 |Описывает, как управлять службой, связанной с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Это включает такие действия, как запуск и остановка службы или настройка параметров запуска.|[Управление службами компонента Database Engine](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |Описывает выполнение задач сетевой конфигурации сервера, таких как включение протоколов, изменение порта или канала, использующегося протоколом, настройка шифрования, настройка службы обозревателя SQL Server, предоставление или скрытие компонента SQL Server Database Engine в сети или регистрация имени участника-службы сервера.|[Сетевая конфигурация сервера](../../database-engine/configure-windows/server-network-configuration.md)|  
 |Описывает выполнение задач сетевой конфигурации клиента, например настройку протоколов клиента и создание или удаление псевдонимов сервера.|[Конфигурация клиентской сети](../../database-engine/configure-windows/client-network-configuration.md)|  
-|Описывает редакторы среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , которые могут использоваться для разработки, отладки и запуска скриптов, например скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] . Также описывает, как кодировать скрипты Windows PowerShell для работы с компонентами SQL Server.|[Работа со сценариями компонента Database Engine](../../relational-databases/scripting/database-engine-scripting.md)|  
+|Описывает редакторы среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , которые могут использоваться для разработки, отладки и запуска скриптов, например скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] . Также описывает, как кодировать скрипты Windows PowerShell для работы с компонентами SQL Server.|[Работа со сценариями компонента Database Engine](../../ssms/scripting/database-engine-scripting.md)|  
 |Описывает, как с помощью планов обслуживания задать рабочие процессы часто выполняемых задач администрирования для экземпляра. Рабочие процессы включают такие задачи, как резервное копирование баз данных и обновление статистики для повышения производительности.|[Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |Описывает, как использовать регулятор ресурсов для управления потреблением ресурсов и рабочими нагрузками путем ограничения времени ЦП и объема памяти, которые могут использоваться запросами приложений.|[Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)|  
 |Описывает, как приложения базы данных могут использовать компонент Database Mail для отправки сообщений электронной почты из компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Database Mail](../../relational-databases/database-mail/database-mail.md)|  
@@ -55,7 +55,6 @@ ms.locfileid: "85772596"
   
 ## <a name="see-also"></a>См. также:  
  [Приложение sqlservr](../../tools/sqlservr-application.md)   
- [Функции базы данных](../../relational-databases/database-features.md)   
- [Возможности экземпляров ядра СУБД](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [Функции базы данных](../../relational-databases/databases/databases.md)   
+ [Возможности экземпляров ядра СУБД](../../relational-databases/databases/databases.md)  
   

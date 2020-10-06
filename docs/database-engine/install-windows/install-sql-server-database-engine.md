@@ -13,12 +13,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8638c87129cfcc567296c0cf20b6b4a9f2f2b08a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883251"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670462"
 ---
 # <a name="install-sql-server-database-engine"></a>Установка ядра СУБД SQL
 
@@ -73,13 +73,12 @@ ms.locfileid: "85883251"
   
 
 > [!NOTE]  
->  По умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] образцы баз данных и образцы кода не устанавливаются. Дополнительные сведения об установке примеров баз данных и примеров кода см. в разделе [Образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Более старые примеры см. на [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
+>  По умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] образцы баз данных и образцы кода не устанавливаются. Дополнительные сведения об установке примеров баз данных и примеров кода см. в разделе [Образцы Microsoft SQL Server](../../samples/sql-samples-where-are.md). Более старые примеры см. на [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
 
   
 ## <a name="see-also"></a>См. также раздел  
  [Выпуски и поддерживаемые функции SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Решения высокого уровня доступности (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [Решения высокого уровня доступности (SQL Server)](../sql-server-business-continuity-dr.md)   
  [Обновление SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

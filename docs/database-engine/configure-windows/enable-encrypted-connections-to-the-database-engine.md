@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027295"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670977"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
 
@@ -74,7 +74,7 @@ ms.locfileid: "90027295"
 > Чтобы использовать шифрование в отказоустойчивом кластере, необходимо установить сертификат сервера с полным именем DNS виртуального сервера на все узлы отказоустойчивого кластера. Например, для кластера, имеющего два узла с именами ***test1.\*\<your company>\*.com*** и ***test2.\*\<your company>\*.com***, и виртуального сервера ***virtsql*** необходимо установить сертификат для ***virtsql.\*\<your company>\*.com*** на оба узла. Для параметра **ForceEncryption** в поле свойства **Протоколы для virtsql** в окне **Сетевая конфигурация SQL Server** можно выбрать значение **Да**.
 
 > [!NOTE]
-> При создании зашифрованного подключения для индексатора Поиска Azure к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виртуальной машине Azure см. раздел [Настройка подключения индексатора Поиска Azure к SQL Server в виртуальной машине Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
+> При создании зашифрованного подключения для индексатора Поиска Azure к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виртуальной машине Azure см. раздел [Настройка подключения индексатора Поиска Azure к SQL Server в виртуальной машине Azure](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers). 
 
 ## <a name="certificate-requirements"></a>Требования к сертификатам
 
@@ -126,7 +126,7 @@ ms.locfileid: "90027295"
 
 > [!IMPORTANT]
 > В рабочей среде рекомендуется получить доверенный сертификат из центра сертификации.    
-> В целях тестирования можно использовать самозаверяющие сертификаты. Чтобы создать самозаверяющий сертификат, см. раздел о [командлете Powershell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) или [команде certreq](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
+> В целях тестирования можно использовать самозаверяющие сертификаты. Чтобы создать самозаверяющий сертификат, см. раздел о [командлете Powershell New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) или [команде certreq](/windows-server/administration/windows-commands/certreq_1).
   
 ## <a name="install-across-multiple-servers"></a>Установка на нескольких серверах
 
@@ -187,4 +187,4 @@ ms.locfileid: "90027295"
 
 + [Поддержка TLS 1.2 для Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-+ [Командлет Powershell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)
++ [Командлет Powershell New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902359"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670389"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Использование панели мониторинга групп доступности AlwaysOn (среда SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -331,7 +331,7 @@ ms.locfileid: "85902359"
 
 Агент SQL выполняет сбор данных и должен быть включен как на первичной реплике, так и по меньшей мере на одной из вторичных реплик. Просмотреть отчет можно, щелкнув правой кнопкой мыши группу доступности и выбрав пункты "Отчеты" > "Стандартные отчеты" в **обозревателе объектов** среды SQL Server Management Studio.  
 
-Дополнительные сведения см. в разделе [Отчеты о задержках в группах доступности AlwaysOn](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+Дополнительные сведения см. в разделе [Отчеты о задержках в группах доступности AlwaysOn](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports).
 
 ## <a name="related-tasks"></a>Связанные задачи  
   
@@ -340,5 +340,4 @@ ms.locfileid: "85902359"
 ## <a name="see-also"></a>См. также:  
  [sys.dm_os_performance_counters (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Отслеживание групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

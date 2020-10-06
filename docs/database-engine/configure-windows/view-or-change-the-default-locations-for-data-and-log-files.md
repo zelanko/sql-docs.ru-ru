@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9a0c720684f0eefa301e9a5387ffda54e349f85d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d20175640070884a45d9a7230fb4da0f09afc0f1
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680785"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670720"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>Просмотр или изменение расположения по умолчанию для файлов данных и журнала
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,6 @@ ms.locfileid: "85680785"
 >**ПРИМЕЧАНИЕ.** После изменения расположений по умолчанию необходимо остановить и запустить службу SQL Server, чтобы завершить изменение.  
   
 ## <a name="see-also"></a>См. также раздел  
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)   
  [Создание базы данных](../../relational-databases/databases/create-a-database.md)  
-  
   

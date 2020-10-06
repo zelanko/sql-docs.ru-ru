@@ -12,12 +12,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: da776f4ccddcfaaa6c0f8e6af6363f2ef9a1f13d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3fd592913164d92851ca738090de9dd200df66f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913902"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719421"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Задача Azure Data Lake Analytics
 
@@ -59,8 +59,8 @@ ms.locfileid: "86913902"
 |Тип источника|Динамические параметры|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Введите отправляемый запрос U-SQL непосредственно в окно параметров или нажмите кнопку обзора (...), чтобы ввести запрос U-SQL в диалоговое окно **Ввод запроса U-SQL**.|  
-|**SourceType = FileConnection**|Выберите существующий диспетчер подключений файлов или щелкните <**Новое подключение**>, чтобы создать подключение файла. См. дополнительные сведения о [диспетчере подключения файлов](../../integration-services/connection-manager/file-connection-manager.md) и [редакторе диспетчера подключения файлов](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Выберите существующую переменную или щелкните \<**New variable...**>, чтобы создать новую. См. дополнительные сведения о [переменных Integration Services](../../integration-services/integration-services-ssis-variables.md) и [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = FileConnection**|Выберите существующий диспетчер подключений файлов или щелкните <**Новое подключение**>, чтобы создать подключение файла. См. дополнительные сведения о [диспетчере подключения файлов](../../integration-services/connection-manager/file-connection-manager.md) и [редакторе диспетчера подключения файлов](../connection-manager/file-connection-manager.md).|  
+|**SourceType = Variable**|Выберите существующую переменную или щелкните \<**New variable...**>, чтобы создать новую. См. дополнительные сведения о [переменных Integration Services](../../integration-services/integration-services-ssis-variables.md) и [добавлении переменной](../integration-services-ssis-variables.md).|
 | &nbsp; | &nbsp; |
 
 
@@ -137,4 +137,3 @@ OUTPUT @rs1
 - [Диспетчер подключений Azure Data Lake Analytics](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
 - [Задача «Файловая система» для Azure Data Lake](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 - [Диспетчер подключений Azure Data Lake Store](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-

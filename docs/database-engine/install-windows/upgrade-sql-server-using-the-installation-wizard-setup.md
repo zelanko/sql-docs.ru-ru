@@ -14,12 +14,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 27f8f9e04bc78fb382a2f40826bc67215839460d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900202"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670249"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Обновление SQL Server с помощью мастера установки (программа установки)
 
@@ -46,7 +46,7 @@ ms.locfileid: "85900202"
 Необходимо запустить программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо пользоваться учетной записью домена, имеющей разрешения на чтение и выполнение в удаленной общей папке и являющейся локальным администратором.  
   
 > [!WARNING]  
->  Не забудьте, что во время обновления невозможно ни изменять обновляемые компоненты, ни добавлять их. Дополнительные сведения о добавлении компонентов к обновляемому экземпляру [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] после завершения обновления см. в статье [Добавление компонентов в экземпляр SQL Server (программа установки)](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+>  Не забудьте, что во время обновления невозможно ни изменять обновляемые компоненты, ни добавлять их. Дополнительные сведения о добавлении компонентов к обновляемому экземпляру [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] после завершения обновления см. в статье [Добавление компонентов в экземпляр SQL Server (программа установки)](./add-features-to-an-instance-of-sql-server-setup.md).  
   
  Если вы обновляете [!INCLUDE[ssDE](../../includes/ssde-md.md)], ознакомьтесь со статьей [Составление и тестирование плана обновления Database Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) и выполните следующие задачи, подходящие для вашей среды.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "85900202"
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**.  
   
-15. На странице «Параметры обновления полнотекстового поиска» укажите параметры обновления для обновляемых баз данных. Дополнительные сведения см. в разделе [Параметры обновления полнотекстового поиска](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. На странице «Параметры обновления полнотекстового поиска» укажите параметры обновления для обновляемых баз данных. Дополнительные сведения см. в разделе [Параметры обновления полнотекстового поиска](./install-sql-server.md).  
   
 16. Если все правила удовлетворены, окно «Правила компонентов» автоматически сменится следующим.  
   
@@ -143,6 +143,5 @@ ms.locfileid: "85900202"
   
 ## <a name="see-also"></a>См. также:  
  [Обновление SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Обратная совместимость_удалено](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [Обратная совместимость_удалено](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

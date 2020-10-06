@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1b6a98658ec6d550ff9255361cc343bb617fac46
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9fcccee3820f2b7b99da3f5c1f742f17edbde68d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735223"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671127"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85735223"
   
   
 ##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a> Поддержка зеркального отображения базы данных  
- Дополнительные сведения о поддержке зеркального отображения базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+ Дополнительные сведения о поддержке зеркального отображения базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
   
  Имейте в виду, что зеркальное отображение базы данных работает при любом поддерживаемом уровне совместимости базы данных. Сведения о поддерживаемых уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -119,5 +119,4 @@ ms.locfileid: "85735223"
  [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
-  
   

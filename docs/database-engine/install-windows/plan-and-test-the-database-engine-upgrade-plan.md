@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93fa8a3fa6346a9e93f8caae43aecc0ba49bb763
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900340"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671037"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Составление и тестирование плана обновления ядра СУБД
 
@@ -29,7 +29,7 @@ ms.locfileid: "85900340"
 
 - [Заметки о выпуске SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
 - [Заметки о выпуске для SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
-- Статья [Обратная совместимость ядра СУБД SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+- Статья [Обратная совместимость ядра СУБД SQL Server](../discontinued-database-engine-functionality-in-sql-server.md).  
   
 ## <a name="pre-upgrade-planning-checklist"></a>Контрольный список планирования обновления  
  Перед обновлением [!INCLUDE[ssDE](../../includes/ssde-md.md)]просмотрите приведенный ниже контрольный список, а также связанные статьи. Эти статьи относятся ко всем методам обновления и помогут вам подобрать оптимальный: последовательное обновление, обновление путем новой установки или обновление на месте. Например, вы не можете выполнить обновление на месте или последовательное обновление при обновлении операционной системы, SQL Server 2005 или 32-разрядной версии SQL Server. Дерево принятия решений см. в разделе [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "85900340"
     > [!NOTE]  
     >  При обновлении до [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] с предыдущей версии выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise выберите Enterprise Edition: лицензирование по числу ядер и Enterprise Edition. Эти выпуски Enterprise отличаются только режимом лицензирования. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
--   **Обратная совместимость**. Ознакомьтесь со статьей, посвященной обратной совместимости ядра СУБД [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)], в которой описываются изменения в поведении между [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] и версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которую вы обновляете. См. раздел [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+-   **Обратная совместимость**. Ознакомьтесь со статьей, посвященной обратной совместимости ядра СУБД [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)], в которой описываются изменения в поведении между [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] и версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которую вы обновляете. См. раздел [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md).  
   
 -   **Помощник по миграции данных**. Запустите помощник по миграции данных, который поможет выявить проблемы, препятствующие обновлению, и критические изменения, из-за которых требуется изменить существующие сценарии или приложения.
     Помощник по миграции данных можно скачать [здесь](https://aka.ms/get-dma).  
@@ -98,4 +98,4 @@ ms.locfileid: "85900340"
 [Обновление [компонент ядра СУБД]](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>Дополнительные ресурсы 
-[Руководство по переносу баз данных](https://aka.ms/datamigration)  
+[Руководство по переносу баз данных](https://aka.ms/datamigration)

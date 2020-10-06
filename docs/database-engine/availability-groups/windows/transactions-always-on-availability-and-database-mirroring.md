@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 804cf6d89a67441228caead33cbc8969db530d6c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500944"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671057"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Транзакции — группы доступности AlwaysOn и зеркальное отображение баз данных
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ SQL Server 2017 поддерживает распределенные транз
 
 Дополнительные сведения см. в следующих статьях:
 
-- [DTC Administration Guide](https://msdn.microsoft.com/library/ms681291.aspx) (Руководство по администрированию DTC)
-- [DTC Developers Guide](https://msdn.microsoft.com/library/ms679938.aspx) (Руководство для разработчиков DTC)
-- [DTC Programmers Reference](https://msdn.microsoft.com/library/ms686108.aspx) (Справочник для программистов DTC)
+- [DTC Administration Guide](/previous-versions/windows/desktop/ms681291(v=vs.85)) (Руководство по администрированию DTC)
+- [DTC Developers Guide](/previous-versions/windows/desktop/ms679938(v=vs.85)) (Руководство для разработчиков DTC)
+- [DTC Programmers Reference](/previous-versions/windows/desktop/ms686108(v=vs.85)) (Справочник для программистов DTC)
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 с пакетом обновления 1 (SP1) и более ранние версии: поддержка транзакций между базами данных в одном экземпляре SQL Server  
 
@@ -93,5 +93,4 @@ SQL Server 2017 поддерживает распределенные транз
   
 ## <a name="next-steps"></a>Дальнейшие действия  
  [Группы доступности Always On: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
   

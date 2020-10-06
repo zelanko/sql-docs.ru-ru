@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 180a0a75b36ff945b672a730783b80766753a1b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 41cfd3a4bcb4077c37a0d2801652d8bf6dfedc9f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900291"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671022"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2017"></a>Поддерживаемые обновления версий и выпусков (SQL Server 2017)
 
@@ -47,7 +47,7 @@ ms.locfileid: "85900291"
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] доступен только для 64-разрядных платформ. Межплатформенное обновление не поддерживается. Невозможно обновить 32-разрядный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до стандартного 64-разрядного при помощи программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Но можно создать резервную копию или отсоединить базы данных от 32-разрядного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем восстановить их или присоединить к новому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-разрядная версия), если базы данных не опубликованы в репликации. Необходимо повторно создать имена входа и другие объекты пользователя в системных базах данных master, msdb и model.  
   
--   Добавить новые компоненты в процессе обновления существующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]нельзя. После обновления экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] добавить новые компоненты можно при помощи программы установки [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]. Дополнительные сведения см. в разделе [Добавление компонентов в экземпляр SQL Server (программа установки)](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+-   Добавить новые компоненты в процессе обновления существующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]нельзя. После обновления экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] добавить новые компоненты можно при помощи программы установки [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]. Дополнительные сведения см. в разделе [Добавление компонентов в экземпляр SQL Server (программа установки)](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 -   Кластеры отработки отказа не поддерживаются в режиме WOW.  
     
@@ -185,5 +185,4 @@ ms.locfileid: "85900291"
  [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  
  [Обновление SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
   

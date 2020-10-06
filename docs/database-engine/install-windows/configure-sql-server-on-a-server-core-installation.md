@@ -14,12 +14,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1791807519f8e7a6fb47c8ec838f7f9da112a3ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4be5f264e790bb84142cbed1460e937a40c41663
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883265"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670487"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
 
@@ -34,15 +34,15 @@ ms.locfileid: "85883265"
   
 Дополнительные сведения о дистанционной настройке установкой Server Core и управлении еюсм. в следующих статьях:  
   
-- [Установка Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [Установка Server Core](/windows-server/get-started/getting-started-with-server-core)  
   
-- [Настройка установки Server Core системы Windows Server 2016 с помощью Sconfig.cmd](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [Настройка установки Server Core системы Windows Server 2016 с помощью Sconfig.cmd](/windows-server/get-started/sconfig-on-ws2016)  
   
-- [Установка ролей и компонентов в Windows Server 2012 R2 с Server Core](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [Установка ролей и компонентов в Windows Server 2012 R2 с Server Core](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))
   
-- [Управление установкой Server Core. Обзор](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Управление установкой Server Core. Обзор](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441255(v=ws.10))  
   
-- [Администрирование установки Server Core](https://go.microsoft.com/fwlink/?LinkId=245963)
+- [Администрирование установки Server Core](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441258(v=ws.10))
   
 ##  <a name="install-ssnoversion-updates"></a><a name="BKMK_InstallSQLUpdates"></a> Установка обновлений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 Этот раздел содержит сведения об установке обновлений для [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] на компьютере под управлением Windows Server Core. Пользователям рекомендуется своевременно оценивать и устанавливать последние обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы обеспечить наличие последних обновлений безопасности для систем. Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] на компьютере под управлением Windows Server Core см. в разделе [Установка SQL Server на Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "85883265"
 - [Установка обновлений для SQL Server после установки экземпляра](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyInstall)  
   
 ###  <a name="installing-updates-for-ssnoversion-during-a-new-installation"></a><a name="bkmk_NewInstall"></a> Установка обновлений для [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] при установке нового экземпляра  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает только установку из командной строки в операционной системе Server Core. Дополнительные сведения см. в разделе [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает только установку из командной строки в операционной системе Server Core. Дополнительные сведения см. в разделе [Установка SQL Server из командной строки](./install-sql-server-from-the-command-prompt.md).  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объединяет последние обновления продукта с установкой основного продукта, чтобы он и применимые обновления устанавливались одновременно.  
   
@@ -230,6 +230,5 @@ $Tcp
   
 ## <a name="see-also"></a>См. также:  
  [Установка SQL Server в Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [Инструкции по установке](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [Инструкции по установке](/previous-versions/sql/)  
   

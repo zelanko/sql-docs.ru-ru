@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93f20096c1ccce60b5ea0e2299725a4037f71ae3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e712528cc3716f054b498e4f322c64ea4873918d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894182"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670670"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Настройка виртуальной машины Azure в качестве вторичной реплики в группе доступности
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85894182"
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена текущая первичная реплика.  
   
--   Необходима гибридная среда, где в локальной подсети установлено VPN-подключение типа "сеть — сеть" к Azure. Дополнительные сведения см. в разделе [Настройка виртуальной частной сети между площадками через портал управления](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
+-   Необходима гибридная среда, где в локальной подсети установлено VPN-подключение типа "сеть — сеть" к Azure. Дополнительные сведения см. в разделе [Настройка виртуальной частной сети между площадками через портал управления](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-classic-portal).  
   
 -   Группа доступности должна содержать реплики доступности локально.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "85894182"
   
 1.  Сначала загрузите сертификат управления для подписки Azure. Нажмите кнопку **Загрузить** , чтобы открыть страницу входа.  
   
-2.  Войдите в Microsoft Azure, используя учетную запись Майкрософт или учетную запись вашей организации. Учетная запись Майкрософт или организации имеет формат адреса электронной почты, например "mailto:patc@contoso.com" patc@contoso.com. Дополнительные сведения об учетных данных Azure см. в разделах [Часто задаваемые вопросы об учетной записи Майкрософт для организаций](https://technet.microsoft.com/jj592903) и [Устранение проблем с входом при использовании учетной записи организации](https://support.microsoft.com/kb/2756852).  
+2.  Войдите в Microsoft Azure, используя учетную запись Майкрософт или учетную запись вашей организации. Учетная запись Майкрософт или организации имеет формат адреса электронной почты, например "mailto:patc@contoso.com" patc@contoso.com. Дополнительные сведения об учетных данных Azure см. в разделах [Часто задаваемые вопросы об учетной записи Майкрософт для организаций](/previous-versions/jj592903(v=msdn.10)) и [Устранение проблем с входом при использовании учетной записи организации](https://support.microsoft.com/kb/2756852).  
   
 3.  Затем подключитесь к подписке, нажав кнопку **Подключиться**. После подключения раскрывающиеся списки заполняются параметрами Azure, такими как **Виртуальная сеть** и **Подсеть виртуальной сети**.  
   
@@ -107,5 +107,4 @@ ms.locfileid: "85894182"
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Добавление вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
-  
   

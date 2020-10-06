@@ -13,19 +13,19 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8689e210cd0faf265fc1dcf96705a87cecccf5ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc4877a76b314baf13353e6fe979210244d81c48
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900213"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670242"
 ---
 # <a name="upgrade-sql-server"></a>Обновление SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
  Экземпляры [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] можно обновить до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] напрямую. Для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] необходимо выполнить либо параллельное обновление, либо миграцию, чтобы перейти на SQL Server 2019, так как между поддерживаемыми основными операционными системами нет перекрытия. Перед запуском программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]просмотрите следующие статьи, относящиеся к процессу обновления, и связанные заметки о выпуске.  
   
-   - Сведения об обновлении [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]см. в статье [Вы выполняете обновление с версии SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
+   - Сведения об обновлении [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]см. в статье [Вы выполняете обновление с версии SQL Server 2005?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)  
    - [Заметки о выпуске для SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
    - [Заметки о выпуске SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
   
@@ -34,7 +34,7 @@ ms.locfileid: "85900213"
   
 -   [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Подготовка к обновлению с помощью помощника по миграции данных](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
--   [Вы выполняете обновление с версии SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
+-   [Вы выполняете обновление с версии SQL Server 2005?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)  
 -   [Обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
 -   [Обновление [компонент ядра СУБД]](../../database-engine/install-windows/upgrade-database-engine.md)  
 -   [Обновление служб Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)  
@@ -55,6 +55,5 @@ ms.locfileid: "85900213"
  [Обновление реплицируемых баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Обновление служб Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [Анализатор соответствия рекомендациям для SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=436)   
- [Обратная совместимость](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
-  
+ [Обратная совместимость](../discontinued-database-engine-functionality-in-sql-server.md)  
   

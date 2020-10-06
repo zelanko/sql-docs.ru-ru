@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74014a2fe98646a5a25d337719636c3471562ff3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887999"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670662"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Определение причин, по которым изменения в первичной реплике не отражаются во вторичной реплике группы доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -127,6 +127,5 @@ from sys.dm_hadr_database_replica_states
  Если поток повтора на самом деле запаздывает, нужно исследовать первопричину снижения производительности на вторичной реплике. Если присутствует состязание ввода-вывода с рабочей нагрузкой отчетов, можно использовать [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) для управления циклами ЦП, которые рабочая нагрузка отчетов использует для косвенного управления использованными циклами ввода-вывода. Например, если рабочая нагрузка отчетов использует 10 процентов ресурсов ЦП, но она привязана к вводу-выводу, можно с помощью Resource Governor ограничить использование ресурсов ЦП на 5 процентов для регулирования рабочей нагрузки чтения, что минимизирует влияние на операции ввода-вывода.  
   
 ## <a name="next-steps"></a>Дальнейшие действия  
- [Устранение связанных с производительностью неполадок в SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)
-  
+ [Устранение связанных с производительностью неполадок в SQL Server 2008](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))
   

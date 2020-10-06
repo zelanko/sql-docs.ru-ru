@@ -17,12 +17,12 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e5635065e77921b661d5b60e5ebcd0aad850295b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 199230f8438a93db64fd5e32ded526699c447a7b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883488"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670950"
 ---
 # <a name="install-sql-server-replication"></a>Установка репликации SQL Server
 
@@ -43,11 +43,10 @@ ms.locfileid: "85883488"
 ## <a name="installing-replication-from-the-command-prompt"></a>Установка репликации из командной строки  
  **Установка репликации при установке нового экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
-- См. раздел [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+- См. раздел [Установка SQL Server из командной строки](./install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="see-also"></a>См. также раздел  
  [Установка SQL Server](../../database-engine/install-windows/install-sql-server.md)   
- [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Установка SQL Server из командной строки](./install-sql-server-from-the-command-prompt.md)   
  [Возможности, поддерживаемые различными выпусками SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md)  
-  
   

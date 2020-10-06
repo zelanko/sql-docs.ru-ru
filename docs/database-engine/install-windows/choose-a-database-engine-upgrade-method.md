@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f3f9aef2003676c90d049a894a03c816225def3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: fd4acadbf94f45c1b155d10a70a376ea11c326e4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244082"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670510"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "87244082"
 >  При составлении плана обновления, кроме того, можно рассмотреть возможность обновления базы данных SQL Azure или виртуализации среды SQL Server. Эти статьи выходят за рамки данной статьи. Дополнительные сведения см. по следующим ссылкам:
 >   - [Обзор SQL Server в виртуальных машинах Azure](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
 >   - [База данных SQL Azure](https://azure.microsoft.com/services/sql-database/) 
->   - [Выбор варианта SQL Server в Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
+>   - [Выбор варианта SQL Server в Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview).  
   
 ## <a name="upgrade-in-place"></a>Обновление на месте  
  В этом случае программа установки SQL Server обновляет существующую установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заменяя существующие биты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] новыми битами [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], а затем обновляет все системные и пользовательские базы данных.  Обновление на месте — это самый простой метод, подразумевающий некоторое время простоя; в случае необходимости отката он занимает больше времени, кроме того, этот вариант поддерживается не для всех сценариев. Дополнительные сведения о поддерживаемых и неподдерживаемых сценариях обновления на месте см. в разделе [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
@@ -81,7 +81,7 @@ ms.locfileid: "87244082"
  После переноса пользовательской базы данных перенаправьте новых пользователей в новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью одного из имеющихся методов (например, переименовав сервер, используя запись DNS или изменив строки подключения).  Метод новой установки сокращает риски и время простоя по сравнению с обновлением на месте и упрощает обновление оборудования и операционной системы, необходимые для обновления до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Если уже имеется решение высокой доступности или какие-либо другие среды с несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перейдите к разделу [Последовательное обновление](#rolling-upgrade). Если решения высокой доступности нет, можно временно настроить [зеркальное отображение базы данных](../database-mirroring/setting-up-database-mirroring-sql-server.md) , чтобы дополнительно сократить время простоя для упрощения обновления, или воспользоваться этой возможностью для настройки [группы доступности AlwaysOn](https://msdn.microsoft.com/library/hh510260.aspx) в качестве постоянного решения высокой доступности.  
+>  Если уже имеется решение высокой доступности или какие-либо другие среды с несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перейдите к разделу [Последовательное обновление](#rolling-upgrade). Если решения высокой доступности нет, можно временно настроить [зеркальное отображение базы данных](../database-mirroring/setting-up-database-mirroring-sql-server.md) , чтобы дополнительно сократить время простоя для упрощения обновления, или воспользоваться этой возможностью для настройки [группы доступности AlwaysOn](../availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md) в качестве постоянного решения высокой доступности.  
   
  Например, этот подход можно использовать для обновления:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "87244082"
 -   установки SQL Server для архитектуры x86, поскольку [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздних версий не поддерживает установки x86;   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на новом оборудовании или в новой версии операционной системы.    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в сочетании с консолидацией серверов;   
--   SQL Server 2005, поскольку [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздних версий не поддерживает обновление выпуска SQL Server 2005 на месте. Дополнительные сведения см. в статье [Обновление SQL Server 2005](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).
+-   SQL Server 2005, поскольку [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздних версий не поддерживает обновление выпуска SQL Server 2005 на месте. Дополнительные сведения см. в статье [Обновление SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
 
   
 Действия, необходимые для обновления методом новой установки, немного различаются в зависимости от того, используется ли подключенное хранилище или хранилище SAN.  
@@ -114,4 +114,4 @@ ms.locfileid: "87244082"
   
 ## <a name="next-steps"></a>Дальнейшие действия
  [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
- [Завершение обновления ядра СУБД](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
+ [Завершение обновления ядра СУБД](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)

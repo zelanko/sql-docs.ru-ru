@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f33fff4f29650e54803d47dc2188ec67d5594f89
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 5a9770cd648fe804ee973878adee27b2d55080d0
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472386"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671067"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Установка SQL Server с помощью PowerShell Desired State Configuration
 
@@ -44,7 +44,7 @@ ms.locfileid: "87472386"
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>Установка DSC-ресурса SqlServerDsc
 
-DSC-ресурс [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) можно скачать в [коллекции PowerShell](https://www.powershellgallery.com/) с помощью командлета [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module?view=powershell-5.1). 
+DSC-ресурс [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) можно скачать в [коллекции PowerShell](https://www.powershellgallery.com/) с помощью командлета [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1). 
 
 > [!NOTE]
 > Для установки модуля служба PowerShell должна быть запущена **от имени администратора**.
@@ -71,7 +71,7 @@ Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666
 
 ### <a name="configuration"></a>Конфигурация
 
-Создайте функцию конфигурации, которая будет вызываться для создания документов в формате [MOF](https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-).
+Создайте функцию конфигурации, которая будет вызываться для создания документов в формате [MOF](/windows/desktop/WmiSdk/managed-object-format--mof-).
 
 ```PowerShell
 Configuration SQLInstall
@@ -180,7 +180,7 @@ Start-DscConfiguration -Path C:\SQLInstall -Wait -Force -Verbose
 
 ### <a name="dsc"></a>DSC
 
-Командлеты [Test-DscConfiguration](https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) позволяют определить, соответствует ли текущее состояние сервера желаемому. В нашем случае это установка SQL Server. Результатом выполнения **Test-DscConfiguration** должно быть значение **True** (Истина).
+Командлеты [Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) позволяют определить, соответствует ли текущее состояние сервера желаемому. В нашем случае это установка SQL Server. Результатом выполнения **Test-DscConfiguration** должно быть значение **True** (Истина).
 
 ```PowerShell
 PS C:\> Test-DscConfiguration

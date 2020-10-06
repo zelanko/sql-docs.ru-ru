@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472455"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669908"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику (группы доступности AlwaysOn)
 
@@ -155,7 +155,7 @@ GO
 
 ## <a name="sql-server-instance-offline"></a>Экземпляр SQL Server в автономном режиме
 
-Если экземпляр SQL Server, указанный в строке подключения, недоступен (простой), то произойдет сбой подключения, независимо от роли реплики на целевом сервере. Чтобы избежать длительного простоя приложения, в строке подключения нужно настроить альтернативного партнера для отработки отказа (`FailoverPartner`). Приложение должно реализовать логику повторных попыток для охвата первичных и вторичных реплик, не подключенных к сети, во время фактической отработки отказа. Сведения о строках подключения см. в статье о [свойстве SqlConnection.ConnectionString](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
+Если экземпляр SQL Server, указанный в строке подключения, недоступен (простой), то произойдет сбой подключения, независимо от роли реплики на целевом сервере. Чтобы избежать длительного простоя приложения, в строке подключения нужно настроить альтернативного партнера для отработки отказа (`FailoverPartner`). Приложение должно реализовать логику повторных попыток для охвата первичных и вторичных реплик, не подключенных к сети, во время фактической отработки отказа. Сведения о строках подключения см. в статье о [свойстве SqlConnection.ConnectionString](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
 
 ## <a name="see-also"></a>См. также:
 
@@ -163,4 +163,4 @@ GO
  
 [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

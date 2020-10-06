@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 646db60d22175c298a686bed903fdd9246c2a59f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 43b80003afbb83090aa7575aa038f6bebe7958a4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897022"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670905"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Выполнение планового перехода на другой ресурс вручную для группы доступности Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "85897022"
 2. Используйте командлет **Switch-SqlAvailabilityGroup** . 
   
     > [!NOTE] 
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Дополнительные сведения: [Получение справки по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md). 
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Дополнительные сведения: [Получение справки по SQL Server PowerShell](../../../powershell/sql-server-powershell.md). 
   
      В следующем примере выполняется ручная отработка отказа группы доступности *MyAg* на вторичную реплику по указанному пути: 
   
@@ -104,8 +104,8 @@ ms.locfileid: "85897022"
   
     Настройка и использование поставщика SQL Server PowerShell: 
   
-    -   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
-    -   [Получение справки по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
+    -   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md) 
+    -   [Получение справки по SQL Server PowerShell](../../../powershell/sql-server-powershell.md) 
 
 ##  <a name="follow-up-after-you-manually-fail-over-an-availability-group"></a><a name="FollowUp"></a> Дальнейшие действия: после отработки отказа группы доступности вручную 
  Если отработка отказа была выполнена на ресурс, не входящий в [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] группы доступности, перенастройте голоса кворума узлов отказоустойчивой кластеризации Windows Server, чтобы отразить новую конфигурацию группы доступности. Дополнительные сведения: [Отказоустойчивая кластеризация Windows Server &#40;WSFC&#41; с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
@@ -121,5 +121,4 @@ ms.locfileid: "85897022"
  * [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [Отработка отказа и режимы отработки отказа &#40;группы доступности AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
  * [Принудительный переход на другой ресурс вручную для группы доступности &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
-  
   

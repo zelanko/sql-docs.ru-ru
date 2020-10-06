@@ -11,12 +11,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e853d79f42fd8f8ca87b4ab4a82dd6f24635e93
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b562b03068ebee035f9b298c62ca49d5c1c0f396
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395040"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671107"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Установка SQL Server с помощью SysPrep
 
@@ -175,7 +175,7 @@ ms.locfileid: "87395040"
   
 11. На странице "**Конфигурация сервера**: учетные записи служб" укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке. 
   
-     Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб отдельно, чтобы каждой службе предоставлялся минимальный набор, с тем условием, чтобы службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставлялись минимальные права доступа, необходимые для выполнения их задач. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) и [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
+     Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб отдельно, чтобы каждой службе предоставлялся минимальный набор, с тем условием, чтобы службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставлялись минимальные права доступа, необходимые для выполнения их задач. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](./install-sql-server.md) и [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   
      Чтобы задать одну учетную запись входа для всех учетных записей служб этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], укажите учетные данные в полях, которые находятся в нижней части страницы. 
   
@@ -183,15 +183,15 @@ ms.locfileid: "87395040"
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**. 
   
-12. На вкладке **Настройка сервера — параметры сортировки** можно для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]задать параметры сортировки, отличные от параметров по умолчанию. Дополнительные сведения см. в разделе [Настройка сервера — параметры сортировки](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022). 
+12. На вкладке **Настройка сервера — параметры сортировки** можно для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]задать параметры сортировки, отличные от параметров по умолчанию. Дополнительные сведения см. в разделе [Настройка сервера — параметры сортировки](./install-sql-server.md). 
   
 13. На странице «Настройка компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] — провизионирование учетных записей» укажите следующие сведения:  
   
     - Режим безопасности: выберите для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]режим проверки подлинности, «Проверка подлинности Windows» или «Смешанный режим». Если выбран смешанный режим проверки подлинности, необходимо задать надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
-         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — конфигурация сервера](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
+         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — конфигурация сервера](./install-sql-server.md). 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Администраторы: для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]должен быть задан как минимум один системный администратор. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**, затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — конфигурация сервера](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Администраторы: для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]должен быть задан как минимум один системный администратор. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**, затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — конфигурация сервера](./install-sql-server.md). 
   
      После изменения списка нажмите кнопку **ОК**. Проверьте список администраторов в диалоговом окне конфигурации. После завершения работы со списком нажмите кнопку **Далее**. 
   
@@ -200,11 +200,11 @@ ms.locfileid: "87395040"
     > [!IMPORTANT]  
     >  Если при установке были указаны каталоги, отличные от каталогов по умолчанию, проверьте их уникальность для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-     Дополнительные сведения см. в разделе [Настройка компонента Database Engine — каталоги данных](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487). 
+     Дополнительные сведения см. в разделе [Настройка компонента Database Engine — каталоги данных](./install-sql-server.md). 
   
-15. Чтобы включить FILESTREAM в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] , используйте страницу «Конфигурация компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]— FILESTREAM». Дополнительные сведения см. в разделе [Настройка компонента Database Engine — Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02). 
+15. Чтобы включить FILESTREAM в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] , используйте страницу «Конфигурация компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]— FILESTREAM». Дополнительные сведения см. в разделе [Настройка компонента Database Engine — Filestream](./install-sql-server.md). 
   
-16. На странице «Конфигурация служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] » укажите тип установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения о режимах настройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Параметры конфигурации служб Reporting Services (SSRS)](https://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391). 
+16. На странице «Конфигурация служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] » укажите тип установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения о режимах настройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Параметры конфигурации служб Reporting Services (SSRS)](./install-sql-server.md). 
   
 17. На странице **Отчеты об ошибках** укажите сведения, которые будут отправлены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] и помогут улучшить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию параметры создания отчетов об ошибках включены. 
   
@@ -301,12 +301,11 @@ ms.locfileid: "87395040"
 ##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a> Изменение и удаление завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  Процесс добавления и удаления компонентов и удаления завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аналогичен процессу, выполняемому для установленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в следующих статьях:  
   
-- [Добавление компонентов в экземпляр SQL Server &#40;программа установки&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
+- [Добавление компонентов в экземпляр SQL Server &#40;программа установки&#41;](./add-features-to-an-instance-of-sql-server-setup.md)  
   
 - [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Что такое Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
- [Как работает Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
+ [Что такое Windows SysPrep](/previous-versions/windows/it-pro/windows-vista/cc721940(v=ws.10))   
+ [Как работает Windows SysPrep](/previous-versions/windows/it-pro/windows-vista/cc766514(v=ws.10))  
   
