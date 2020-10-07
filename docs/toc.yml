@@ -1831,7 +1831,7 @@
           items:
             - name: Создание
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Удалить
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Изменить
               href: relational-databases/tables/modify-edge-constraint.md
@@ -6030,8 +6030,6 @@
       items:
         - name: Новые возможности
           href: dma/dma-whatsnew.md
-        - name: Оценка Базы данных SQL
-          href: dma/dma-assesssqlonprem.md
         - name: Оценка MSSQL Integration Services
           href: dma/dma-assess-ssis.md
         - name: Сохранение и загрузка оценок
@@ -6044,8 +6042,6 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: Перенос учетных данных SQL Server
           href: dma/dma-migrateserverlogins.md
-        - name: "Оценка размещения данных SQL\_Server для проверки готовности Базы данных\_SQL Azure"
-          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: Рекомендации
           href: dma/dma-bestpractices.md
         - name: Объединение отчетов с оценкой
@@ -6056,6 +6052,14 @@
           href: dma/dma-commandline.md
         - name: Настройка параметров
           href: dma/dma-configurationsettings.md
+        - name: Оценка готовности к работе с базой данных SQL Azure
+          items:
+            - name: Создание оценки
+              href: dma/dma-assesssqlonprem.md
+            - name: Использование графического пользовательского интерфейса DMA
+              href: dma/dma-assess-sql-data-estate-to-sqldb.md
+            - name: Использование командной строки DMA
+              href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
     - name: Помощник по миграции SQL Server (SSMA)
       href: ssma/toc.yml
 - name: 'Управление, мониторинг и настройка'
