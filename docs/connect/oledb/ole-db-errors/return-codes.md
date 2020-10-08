@@ -22,12 +22,12 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18d2b3f5029e70379f0692a919aa8fe6cd4ed10b
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: fe59f14e43a32d6c6b3239c24f1be665e7bbad82
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862246"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727190"
 ---
 # <a name="return-codes"></a>Коды возврата
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88862246"
 
   Для краткости можно сказать, что вызов функции-члена класса или структуры завершается успешно либо с ошибкой. Точнее сказать, вызов функции может оказаться успешным, но результат оказывается не таким, на какой рассчитывал разработчик приложения.  
   
- Дополнительные сведения о кодах возврата OLE DB см. в статье [Коды возврата (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
+ Дополнительные сведения о кодах возврата OLE DB см. в статье [Коды возврата (OLE DB)](/previous-versions/windows/desktop/ms725451(v=vs.85)).  
   
  Если функция-член OLE DB Driver for SQL Server возвращает S_OK, значит выполнение функции завершилось успешно.  
   
@@ -50,5 +50,4 @@ ms.locfileid: "88862246"
   
 ## <a name="see-also"></a>См. также:  
  [ошибки](../../oledb/ole-db-errors/errors.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009340"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727455"
 ---
 # <a name="connecting-to-sql-server"></a>Подключение к SQL Server
 
@@ -77,7 +77,7 @@ Server = tcp:localhost,1433
 
 Включение шифрования повышает безопасность за счет снижения производительности.
 
-См. сведения о [шифровании подключений в SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) и [использовании шифрования без проверки](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+См. сведения о [шифровании подключений в SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) и [использовании шифрования без проверки](../../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 Независимо от параметров для **Encrypt** и **TrustServerCertificate**учетные данные входа на сервер (имя пользователя и пароль) всегда шифруются. Следующая таблица показывает эффект от параметров **Encrypt** и **TrustServerCertificate** .  
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b748efb2fecd7030622ee85b7dc9bb72d20dc674
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 43b91e08726ed548d24ba3461f45164eb97bb6b7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860634"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727375"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Установка драйвера OLE DB для SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88860634"
 
 Файлы заголовка и библиотеки OLE DB Driver for SQL Server (msoledbsql.h и msoledbsql.lib) устанавливаются в `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`. Кроме того, 64-разрядный msoledbsql.msi устанавливает такие же файлы в `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`.  
 
-OLE DB Driver for SQL Server можно распространять с помощью msoledbsql.msi. При развертывании приложения может потребоваться установить OLE DB Driver for SQL Server. Один из способов установки нескольких пакетов в одном (с точки зрения пользователя) сеансе установки состоит в применении технологии построителей цепочек и загрузчиков. Дополнительные сведения см. в статьях [Разработка пользовательского пакета начального загрузчика для Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) и [Добавление настраиваемых необходимых компонентов](https://go.microsoft.com/fwlink/?LinkId=115668).  
+OLE DB Driver for SQL Server можно распространять с помощью msoledbsql.msi. При развертывании приложения может потребоваться установить OLE DB Driver for SQL Server. Один из способов установки нескольких пакетов в одном (с точки зрения пользователя) сеансе установки состоит в применении технологии построителей цепочек и загрузчиков. Дополнительные сведения см. в статьях [Разработка пользовательского пакета начального загрузчика для Visual Studio 2005](/previous-versions/aa730839(v=vs.80)) и [Добавление настраиваемых необходимых компонентов](/visualstudio/deployment/creating-bootstrapper-packages).  
   
 64-разрядный msoledbsql.msi также устанавливает 32-разрядную версию OLE DB Driver for SQL Server. Если приложение планируется использовать на платформе, отличной от той, на которой оно разрабатывалось, можно скачать версии msoledbsql.msi для x64 и x86.
 
@@ -63,4 +63,4 @@ OLE DB Driver for SQL Server можно распространять с пом
 Опция APPGUID требует запуска программы установки из командной строки.
 
 ## <a name="see-also"></a>См. также:  
- [Создание приложений с помощью драйвера OLE DB для SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [Создание приложений с помощью драйвера OLE DB для SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)

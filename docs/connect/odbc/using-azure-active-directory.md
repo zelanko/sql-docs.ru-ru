@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c71c9a458d285cdf33bd785e1bec74a6f33d5820
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: e6925b2b79629fbcbe84f6577e2617e9b45ea82c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288196"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727388"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Использование Azure Active Directory с драйвером ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -45,7 +45,7 @@ Microsoft ODBC Driver for SQL Server версии 13.1 или более поз
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_RESET`|(не задано)|См. описание ключевого слова `Authentication` выше. `SQL_AU_NONE` предоставляется для явного переопределения заданного значения `Authentication` в имени DSN или строке подключения, в то время как `SQL_AU_RESET` отменяет атрибут, если он был установлен, и значение имени DSN или строки подключения получает более высокий приоритет.|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|Указатель на `ACCESSTOKEN` или значение NULL|NULL|Если значение не равно NULL, указывается используемый маркер доступа Azure AD. Указание маркера доступа, а также ключевых слов строки подключения `UID`, `PWD`, `Trusted_Connection`, `Authentication` или эквивалентных атрибутов является ошибкой. <br> **ПРИМЕЧАНИЕ.** Драйвер ODBC версии 13.1 поддерживает это только в _Windows_.|
-|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(см. описание)|Управляет шифрованием соединения. `SQL_EN_OFF` отключает шифрование, а `SQL_EN_ON`— включает. Если предварительный атрибут параметра `Authentication` не имеет значение _none_ или если значение `SQL_COPT_SS_ACCESS_TOKEN` задано, а ключевое слово `Encrypt` не указано ни в имени DSN, ни в строке подключения, по умолчанию используется значение `SQL_EN_ON`. В противном случае значение по умолчанию — `SQL_EN_OFF`. Если для атрибута подключения `SQL_COPT_SS_AUTHENTICATION` не задано значение _none_, явно задайте для `SQL_COPT_SS_ENCRYPT` нужное значение, если ключевое слово `Encrypt` не указано в имени DSN или в строке подключения. Действительное значение этого атрибута определяет, [будет ли использоваться шифрование для подключения](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(см. описание)|Управляет шифрованием соединения. `SQL_EN_OFF` отключает шифрование, а `SQL_EN_ON`— включает. Если предварительный атрибут параметра `Authentication` не имеет значение _none_ или если значение `SQL_COPT_SS_ACCESS_TOKEN` задано, а ключевое слово `Encrypt` не указано ни в имени DSN, ни в строке подключения, по умолчанию используется значение `SQL_EN_ON`. В противном случае значение по умолчанию — `SQL_EN_OFF`. Если для атрибута подключения `SQL_COPT_SS_AUTHENTICATION` не задано значение _none_, явно задайте для `SQL_COPT_SS_ENCRYPT` нужное значение, если ключевое слово `Encrypt` не указано в имени DSN или в строке подключения. Действительное значение этого атрибута определяет, [будет ли использоваться шифрование для подключения](../../relational-databases/native-client/features/using-encryption-without-validation.md).|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Не поддерживается в Azure Active Directory, так как изменения паролей в субъектах Azure AD невозможно выполнить через подключение ODBC. <br><br>Истечение срока действия пароля для проверки подлинности SQL Server было введено в SQL Server 2005. Добавлен атрибут `SQL_COPT_SS_OLDPWD`, чтобы клиент мог предоставлять как старый, так и новый пароль для подключения. Если задано это свойство, поставщик не будет использовать пул соединений для первого и последующих соединений, поскольку строка подключения будет содержать старый пароль, который уже изменен.|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|_Нерекомендуемый_. Вместо этого для параметра `SQL_COPT_SS_AUTHENTICATION` укажите значение `SQL_AU_AD_INTEGRATED`. <br><br>Задает принудительное использование проверки подлинности Windows (Kerberos в Linux и macOS) для проверки доступа по имени входа для сервера. Если используется проверка подлинности Windows, драйвер пропускает значения идентификатора пользователя и пароля, предоставленные в процессе обработки `SQLConnect`, `SQLDriverConnect` или `SQLBrowseConnect`.|
 
@@ -135,7 +135,7 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-`ACCESSTOKEN` представляет собой структуру переменной длины, состоящую из _4-байт_, за которой следует значение _длины_ байт непрозрачных данных, образующих маркер доступа. Из-за того, как SQL Server обрабатывает маркеры доступа, один из них, полученный с помощью ответа JSON [OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios), должен быть расширен таким образом, чтобы за каждым байтом был байт нулевого отступа, аналогично строке UCS-2, содержащей только символы ASCII. Маркер является непрозрачным значением, а длина, указанная в байтах, не должна содержать символ завершения NULL. По причине существенных ограничений длины и формата этот метод проверки подлинности доступен только программно с помощью атрибута подключения `SQL_COPT_SS_ACCESS_TOKEN`. Соответствующее ключевое слово DSN или строки подключения отсутствуют. Строка подключения не должна содержать ключевые слова `UID`, `PWD`, `Authentication` или `Trusted_Connection`.
+`ACCESSTOKEN` представляет собой структуру переменной длины, состоящую из _4-байт_, за которой следует значение _длины_ байт непрозрачных данных, образующих маркер доступа. Из-за того, как SQL Server обрабатывает маркеры доступа, один из них, полученный с помощью ответа JSON [OAuth 2.0](/azure/active-directory/develop/active-directory-authentication-scenarios), должен быть расширен таким образом, чтобы за каждым байтом был байт нулевого отступа, аналогично строке UCS-2, содержащей только символы ASCII. Маркер является непрозрачным значением, а длина, указанная в байтах, не должна содержать символ завершения NULL. По причине существенных ограничений длины и формата этот метод проверки подлинности доступен только программно с помощью атрибута подключения `SQL_COPT_SS_ACCESS_TOKEN`. Соответствующее ключевое слово DSN или строки подключения отсутствуют. Строка подключения не должна содержать ключевые слова `UID`, `PWD`, `Authentication` или `Trusted_Connection`.
 
 > [!NOTE]
 > Драйвер ODBC версии 13.1 поддерживает такую проверку подлинности только в _Windows_.

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 701476b8e1cea1f84d7fdbf970a345311d686cfd
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: b6cef1fb9b92df92cba00ea9e9aa8c9591e887a6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860063"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727241"
 ---
 # <a name="ssvariant-structure"></a>Структура SSVARIANT
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860063"
 
   Структура **SSVARIANT**, определенная в файле msoledbsql.h, соответствует значению DBTYPE_SQLVARIANT в OLE DB Driver for SQL Server.  
   
- **SSVARIANT** представляет собой избирательное соединение. В зависимости от значения элемента vt объект-получатель может определить, какой элемент следует считывать. Значения vt соответствуют типам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Таким образом, структура **SSVARIANT** может содержать любой тип SQL Server. Дополнительные сведения о структуре данных для стандартных типов OLE DB см. в статье об [индикаторах типа](https://go.microsoft.com/fwlink/?LinkId=122171).  
+ **SSVARIANT** представляет собой избирательное соединение. В зависимости от значения элемента vt объект-получатель может определить, какой элемент следует считывать. Значения vt соответствуют типам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Таким образом, структура **SSVARIANT** может содержать любой тип SQL Server. Дополнительные сведения о структуре данных для стандартных типов OLE DB см. в статье об [индикаторах типа](/previous-versions/windows/desktop/ms711251(v=vs.85)).  
   
 ## <a name="remarks"></a>Remarks  
  Если DataTypeCompat==80, несколько подтипов **SSVARIANT** становятся строками. Например, следующие значения vt будут представлены в **SSVARIANT** в виде VT_SS_WVARSTRING:  
@@ -87,7 +87,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 - Кодовая страница клиентского компьютера не соответствует кодовой странице параметров сортировки базы данных.
 - Буфер клиента для вставки отличных от ASCII символов узких строк, закодированных с использованием кодовой страницы клиента.
 - Выполняется одно из следующих условий:
-  - Для поля `pwszDataSourceType` в структуре `DBPARAMBINDINFO`, описывающее параметр, соответствующий столбцу `sql_variant`, было установлено значение `L"DBTYPE_SQLVARIANT"`, `L"DBTYPE_VARIANT"` или `L"sql_variant"`. Подробная информация доступна в следующих статьях: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85)).
+  - Для поля `pwszDataSourceType` в структуре `DBPARAMBINDINFO`, описывающее параметр, соответствующий столбцу `sql_variant`, было установлено значение `L"DBTYPE_SQLVARIANT"`, `L"DBTYPE_VARIANT"` или `L"sql_variant"`. Подробная информация доступна в следующих статьях: [ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)).
 
     *или диспетчер конфигурации служб*
   - Подготовлен параметризованный SQL-запрос, используемый для вставки.
@@ -153,5 +153,4 @@ UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <Fi
 
 ## <a name="see-also"></a>См. также:  
  [Типы данных (OLE DB)](../../oledb/ole-db-data-types/data-types-ole-db.md)  
-  
   

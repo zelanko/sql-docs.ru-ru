@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: db9392b523be8777a96e4d262cfca5acccc8f406
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680659"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726845"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>Форматирование десятичных строк и денежных значений (драйвер PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Чтобы сохранить точность, [типы decimal или numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) всегда извлекаются как строки с особой точностью и масштабом. Если какое-либо значение меньше 1, начальный ноль отсутствует. Это аналогично полям money и smallmoney, так как они являются десятичными полями с фиксированным масштабом равным 4.
+Чтобы сохранить точность, [типы decimal или numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) всегда извлекаются как строки с особой точностью и масштабом. Если какое-либо значение меньше 1, начальный ноль отсутствует. Это аналогично полям money и smallmoney, так как они являются десятичными полями с фиксированным масштабом равным 4.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Добавление ведущих нулей, если они отсутствуют
 Начиная с версии 5.6.0, атрибут подключения или инструкции `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` позволяет пользователю форматировать десятичные строки. Этот атрибут принимает логическое значение (true или false) и влияет только на форматирование десятичных или числовых значений в результатах выборки. Иными словами, этот атрибут не влияет на другие операции, такие как вставка или обновление.

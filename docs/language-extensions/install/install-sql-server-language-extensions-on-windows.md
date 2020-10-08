@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 41f0e9f1c4040e9d26432d8635667f045694e314
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: fd04b92aaffab70835ce2affb56ece70cdb393b3
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989864"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765785"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Установка расширений языка для SQL Server в Windows
 
@@ -23,7 +23,7 @@ ms.locfileid: "90989864"
 Сведения о том, как установить компонент расширений языка в SQL Server, запустив мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Эта статья предназначена для установки расширений языка SQL Server в Windows. Инструкции по установке в Linux см. в статье [Установка расширений языка (Java) для SQL Server 2019 на Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions).
+> Эта статья предназначена для установки расширений языка SQL Server в Windows. Инструкции по установке в Linux см. в статье [Установка расширений языка (Java) для SQL Server 2019 на Linux](../..//linux/sql-server-linux-setup-language-extensions.md).
 
 <a name="prerequisites"></a> 
 
@@ -33,7 +33,7 @@ ms.locfileid: "90989864"
 
 + Необходим экземпляр ядра СУБД. Вы не можете установить только функции расширений языка, хотя их можно добавлять в существующий экземпляр постепенно.
 
-+ Для обеспечения непрерывности бизнес-процессов [группы доступности Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) поддерживаются для расширений языка. Необходимо установить расширения языка и настроить пакеты на каждом узле.
++ Для обеспечения непрерывности бизнес-процессов [группы доступности Always On](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) поддерживаются для расширений языка. Необходимо установить расширения языка и настроить пакеты на каждом узле.
 
 + Установка расширений языка поддерживается в отказоустойчивом кластере в SQL Server 2019.
 
@@ -87,7 +87,7 @@ ms.locfileid: "90989864"
 
         - Если вы хотите использовать собственную среду выполнения Java, выберите **Службы машинного обучения и расширения языка**. Не выбирайте Java.
 
-        Если вы хотите использовать R и Python, см. раздел [Установка служб машинного обучения SQL Server в Windows](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install).
+        Если вы хотите использовать R и Python, см. раздел [Установка служб машинного обучения SQL Server в Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 
     ![Параметры расширений языка](../media/sql-install-feature-selection.png)
 
@@ -107,7 +107,7 @@ ms.locfileid: "90989864"
 
     Обратите внимание на расположение папки в каталоге `..\Setup Bootstrap\Log`, где хранятся файлы конфигурации. После завершения установки можно просмотреть установленные компоненты в файле сводки.
 
-6. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+6. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## <a name="add-the-jre_home-variable"></a>Добавление переменной JRE_HOME
 
@@ -161,7 +161,7 @@ ms.locfileid: "90989864"
 1. Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > Скачать и установить соответствующую версию можно с этой страницы: [Скачайте SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > Скачать и установить соответствующую версию можно с этой страницы: [Скачайте SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
     > 
     > Можно также использовать среду [Azure Data Studio](../../azure-data-studio/what-is.md), которая поддерживает административные задачи и запросы к SQL Server.
   
@@ -194,7 +194,7 @@ ms.locfileid: "90989864"
 
 ## <a name="register-external-language"></a>Регистрация внешнего языка
 
-Для каждой базы данных, в которой необходимо использовать расширения языка, зарегистрируйте внешний язык с помощью команды [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+Для каждой базы данных, в которой необходимо использовать расширения языка, зарегистрируйте внешний язык с помощью команды [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 Следующий пример добавляет внешний язык Java в базу данных на сервере SQL Server в Windows.
 
@@ -204,7 +204,7 @@ FROM (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
 
-Дополнительные сведения см. в разделе [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+Дополнительные сведения см. в разделе [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 ## <a name="verify-installation"></a>Проверка установки
 
@@ -241,7 +241,7 @@ GO
 В базе данных могут потребоваться следующие обновления конфигурации:
 
 * [Предоставление пользователям доступа к службам машинного обучения SQL Server](../../machine-learning/security/user-permission.md)
-* [Предоставление пользователям разрешения на выполнение определенного языка](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
+* [Предоставление пользователям разрешения на выполнение определенного языка](../../t-sql/statements/create-external-language-transact-sql.md#permissions)
 
 > [!NOTE]
 > Необходимость дополнительной настройки зависит от схемы безопасности, в которой установлен ваш SQL Server, и от того, как ваши пользователи должны подключаться к базе данных и запускать внешние скрипты.

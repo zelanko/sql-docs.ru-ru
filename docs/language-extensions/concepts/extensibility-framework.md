@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 44f32695e91c3c273b024b9f8d7259c59b43014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180311"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765694"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Архитектура расширяемости в расширениях языка SQL Server
 
@@ -58,7 +58,7 @@ The following diagram visually describes opportunities and benefits of the exten
 |-------------------|-----------|---------------------|
 | JavaLauncher.dll для Java | Расширение Java | SQL Server 2019 |
 
-Служба [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] работает в **SQLRUserGroup**, которая использует [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) для изоляции выполнения.
+Служба [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] работает в **SQLRUserGroup**, которая использует [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) для изоляции выполнения.
 
 Для каждого экземпляра ядра СУБД, к которому были добавлены службы машинного обучения SQL Server, создается отдельная служба [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. Для каждого экземпляра ядра СУБД существует одна служба панели запуска, поэтому при наличии нескольких экземпляров с поддержкой внешних сценариев для каждой из них будет установлена служба панели запуска. Экземпляр ядра СУБД привязан к созданной для нее службе панели запуска. Все вызовы внешнего скрипта в хранимой процедуре или T-SQL приводят к тому, что служба SQL Server вызывает службу панели запуска, созданную для того же экземпляра.
 
@@ -86,7 +86,7 @@ The following diagram visually describes opportunities and benefits of the exten
 
 + **Другие протоколы**
 
-  Процессы, которые могут потребоваться для работы в блоках или передачи данных обратно удаленному клиенту, также могут использовать формат файла [Xdf-File](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Фактический перенос данных осуществляется через закодированные BLOB-объекты.
+  Процессы, которые могут потребоваться для работы в блоках или передачи данных обратно удаленному клиенту, также могут использовать формат файла [Xdf-File](/machine-learning-server/r/concept-what-is-xdf). Фактический перенос данных осуществляется через закодированные BLOB-объекты.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570330"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727510"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Использование функции Always Encrypted с драйвером JDBC
 
@@ -134,7 +134,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 Начиная с JDBC Driver **8.4.1** добавлена поддержка проверки подлинности в Azure Key Vault с помощью управляемых удостоверений.
 
-Если приложение размещено в Azure, пользователь может использовать [управляемые удостоверения](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) для проверки подлинности в Azure Key Vault, тем самым устраняя необходимость размещать и предоставлять учетные данные в коде. 
+Если приложение размещено в Azure, пользователь может использовать [управляемые удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) для проверки подлинности в Azure Key Vault, тем самым устраняя необходимость размещать и предоставлять учетные данные в коде. 
 
 #### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>Свойства подключения для проверки подлинности Azure Key Vault с помощью управляемых удостоверений
 
@@ -164,7 +164,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 Обратите внимание, что ранее добавленные свойства подключения `keyVaultProviderClientId` и `keyVaultProviderClientKey` больше не рекомендуются и заменены свойствами подключения, описанными выше.
 
-Сведения о настройке управляемых удостоверений см. в статье [Настройка управляемых удостоверений для ресурсов Azure на виртуальной машине с помощью портала Azure](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
+Сведения о настройке управляемых удостоверений см. в статье [Настройка управляемых удостоверений для ресурсов Azure на виртуальной машине с помощью портала Azure](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
 
 ### <a name="using-windows-certificate-store-provider"></a>Использование поставщика хранилища сертификатов Windows
 The SQLServerColumnEncryptionCertificateStoreProvider можно использовать для хранения главных ключей столбцов в хранилище сертификатов Windows. Чтобы создать определения главного ключа столбца и ключа шифрования столбцов в базе данных, используйте мастер Always Encrypted в SQL Server Management Studio (SSMS) или другие поддерживаемые инструменты. Этот же мастер можно использовать для создания самозаверяющего сертификата в хранилище сертификатов Windows, который можно использовать в качестве главного ключа столбца для данных Always Encrypted. Дополнительные сведения о синтаксисе T-SQL для главного ключа столбца и ключа шифрования столбца см. в статьях [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) и [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md) соответственно.

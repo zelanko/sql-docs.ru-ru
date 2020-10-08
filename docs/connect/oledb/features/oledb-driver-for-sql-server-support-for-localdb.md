@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c7f5ac94ff64ef32aaee793c59529ad0377b2f5
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: bcb768c0beea3ce836586bc718e1b7757da7ce72
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860681"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727321"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Поддержка драйвера OLE DB для SQL Server в LocalDB
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860681"
   
 -   [Справочник по SQL Server Express LocalDB](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
--   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+-   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-express-localdb.md)  
   
  LocalDB позволяет выполнять следующие действия.  
   
@@ -47,5 +47,4 @@ SERVER=(localdb)\v11.0
   
 ## <a name="see-also"></a>См. также:  
  [Возможности драйвера OLE DB для SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
   

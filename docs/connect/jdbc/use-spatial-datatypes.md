@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b545ec1d33d17674266d58a2a120f07af423ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487965"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727531"
 ---
 # <a name="using-spatial-datatypes"></a>Использование пространственных типов данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Пространственные типы данных (Geometry и Geography) поддерживаются, начиная с предварительного выпуска драйвера JDBC версии 6.5.0. Пространственные типы данных в настоящее время не поддерживаются с хранимыми процедурами, параметрами с табличным значением (TVP), функциями BulkCopy и Always Encrypted. На этой странице показаны различные варианты использования типов данных Geometry и Geography с помощью драйвера JDBC. Общие сведения о пространственных типах данных см. в [этой статье](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview).
+Пространственные типы данных (Geometry и Geography) поддерживаются, начиная с предварительного выпуска драйвера JDBC версии 6.5.0. Пространственные типы данных в настоящее время не поддерживаются с хранимыми процедурами, параметрами с табличным значением (TVP), функциями BulkCopy и Always Encrypted. На этой странице показаны различные варианты использования типов данных Geometry и Geography с помощью драйвера JDBC. Общие сведения о пространственных типах данных см. в [этой статье](../../relational-databases/spatial/spatial-data-types-overview.md).
 
 ## <a name="creating-a-geometry--geography-object"></a>Создание объекта Geometry или Geography
 

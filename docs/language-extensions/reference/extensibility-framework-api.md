@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a0eb128a4b1c299d8a2d939582312cdc22ae4d40
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180506"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765768"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>API платформы расширяемости для SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -541,7 +541,7 @@ SQLRETURN GetTelemetryResults(
 
 ## <a name="installexternallibrary"></a>InstallExternalLibrary
 
-Устанавливает библиотеку. Функция является необязательной и не требует реализации. Реализация по умолчанию заключается в копировании содержимого библиотеки (см. [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)) в файл в нужном месте. Имя файла соответствует имени библиотеки.
+Устанавливает библиотеку. Функция является необязательной и не требует реализации. Реализация по умолчанию заключается в копировании содержимого библиотеки (см. [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)) в файл в нужном месте. Имя файла соответствует имени библиотеки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -571,7 +571,7 @@ SQLRETURN InstallExternalLibrary(
 \[Входные данные\] Длина имени библиотеки.
 
 *LibraryFile*  
-\[Входные данные\] Путь (в виде строки) к файлу библиотеки, содержащему двоичное содержимое, указанное [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+\[Входные данные\] Путь (в виде строки) к файлу библиотеки, содержащему двоичное содержимое, указанное [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 *LibraryFileLength*  
 \[Входные данные\] Длина строки LibraryFile.
@@ -637,4 +637,4 @@ SQLRETURN UninstallExternalLibrary(
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- [Пакет SDK Майкрософт для расширения возможностей Java в SQL Server](../how-to/extensibility-sdk-java-sql-server.md) 
+- [Пакет SDK Майкрософт для расширения возможностей Java в SQL Server](../how-to/extensibility-sdk-java-sql-server.md)

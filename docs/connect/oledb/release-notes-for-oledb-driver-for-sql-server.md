@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011918"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726949"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Заметки о выпуске Microsoft OLE DB Driver for SQL Server
 
@@ -49,8 +49,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | Исправление ошибки | Сведения |
 | :-------- | :------ |
-| Исправлены различные ошибки в интерфейсе [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) | Некоторые ошибки, касающиеся многобайтовых кодовых страниц, приводили к тому, что интерфейс преждевременно сообщал о завершении потока во время операции чтения.|
-| Исправлена утечка памяти в интерфейсе [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) | Исправлена утечка памяти в интерфейсе [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) при включении свойства `SSPROP_IRowsetFastLoad`. |
+| Исправлены различные ошибки в интерфейсе [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) | Некоторые ошибки, касающиеся многобайтовых кодовых страниц, приводили к тому, что интерфейс преждевременно сообщал о завершении потока во время операции чтения.|
+| Исправлена утечка памяти в интерфейсе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) | Исправлена утечка памяти в интерфейсе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) при включении свойства `SSPROP_IRowsetFastLoad`. |
 | Исправлена ошибка в сценариях с использованием типа данных `sql_variant` и строк, отличных от ASCII. | Некоторые сценарии с использованием типа данных `sql_variant` и строк, отличных от ASCII, могут приводить к повреждению данных. Подробная информация доступна в следующих статьях: [Известные проблемы](ole-db-data-types/ssvariant-structure.md#known-issues). |
 | Устранены проблемы с кнопкой *Проверить соединение* в диалоговом окне [настройки UDL](help-topics/data-link-pages.md). | Кнопка *Проверить соединение* в диалоговом окне [настройки UDL](help-topics/data-link-pages.md) теперь учитывает свойства инициализации, заданные на вкладке *Все*. |
 | Исправлена обработка значения по умолчанию для свойства `SSPROP_INIT_PACKETSIZE` | Устранена непредвиденная ошибка, возникавшая, когда свойству `SSPROP_INIT_PACKETSIZE` присваивалось значение по умолчанию `0`. Подробные сведения об этом свойстве см. в статье [Свойства инициализации и авторизации](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
@@ -82,7 +82,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | Исправление ошибки | Сведения |
 | :-------- | :------ |
-| Исправлена логика удаления индекса в [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Предыдущие версии драйвера OLE DB не умеют удалять индекс первичного ключа, если идентификатор схемы не совпадает с идентификатором владельца этого индекса. |
+| Исправлена логика удаления индекса в [IIndexDefinition::DropIndex](/previous-versions/windows/desktop/ms722733(v=vs.85)). | Предыдущие версии драйвера OLE DB не умеют удалять индекс первичного ключа, если идентификатор схемы не совпадает с идентификатором владельца этого индекса. |
 | &nbsp; | &nbsp; |
 
 Чтобы скачать предыдущие версии драйвера OLE DB, щелкните заголовки со ссылками в приведенных ниже разделах.
@@ -120,7 +120,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | Исправление ошибки | Сведения |
 | :-------- | :------ |
-| Исправлена неинтерактивная проверка подлинности Azure Active Directory в многопотоковом подразделении (MTA). | Драйвер OLE DB 18.2.1 некорректно пытается изменить модель параллелизма COM в подразделении, ранее инициализированном как многопотоковое (MTA). В результате, если приложение впоследствии совершает несколько вызовов [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) или [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521) до вызова интерфейса [IDBInitialize::Initialize](https://go.microsoft.com/fwlink/?linkid=2092522), драйверу не удается подключиться с использованием какой-либо модели проверки подлинности Azure Active Directory. |
+| Исправлена неинтерактивная проверка подлинности Azure Active Directory в многопотоковом подразделении (MTA). | Драйвер OLE DB 18.2.1 некорректно пытается изменить модель параллелизма COM в подразделении, ранее инициализированном как многопотоковое (MTA). В результате, если приложение впоследствии совершает несколько вызовов [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize) или [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) до вызова интерфейса [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)), драйверу не удается подключиться с использованием какой-либо модели проверки подлинности Azure Active Directory. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1821"></a>18.2.1

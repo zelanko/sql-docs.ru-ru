@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf7ec186a6a233d12034114f88b98efea50e72f9
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: d62ab2a7715360b8cceeecccada01717d87471c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381017"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726835"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Руководство. отправлять и извлекать данные UTF-8 с помощью встроенной поддержки UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Сведения о хранении данных в Юникоде см. в статье [Работа с данными в Юникоде](https://msdn.microsoft.com/library/ms175180.aspx).  
+Сведения о хранении данных в Юникоде см. в статье [Работа с данными в Юникоде](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105)).  
   
 ## <a name="example"></a>Пример  
 Следующий пример похож на первый, но вместо указания кодировки UTF-8 для соединения этот пример показывает, как указать кодировку UTF-8 для столбца.  
@@ -231,4 +231,3 @@ sqlsrv_close( $conn);
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  
-  

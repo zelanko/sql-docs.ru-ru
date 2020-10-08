@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 782d9ed7f3ca08583e994db3428a66eb9a38051f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b44230f2872fe1df98625614e57f487b9e8c1d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727884"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807596"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>Требования для определяемых пользователем агрегатных функций среды CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Тип в сборке CLR можно зарегистрировать как определяемую пользователем агрегатную функцию, если он реализует необходимую статистическую обработку. Этот контракт состоит из атрибута **SqlUserDefinedAggregate** и методов контракта статистической обработки. Контракт статистической обработки включает механизм сохранения промежуточного состояния статистической обработки и механизм для накопления новых значений, состоящий из четырех методов: **init**, **accumulate**, **Merge**и **Terminate**. Если вы удовлетворены этими требованиями, вы сможете использовать все преимущества определяемых пользователем статистических функций в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В следующих подразделах этого раздела содержатся подробные сведения о создании определяемых пользователем статистических функций и работе с ними. Пример см. в разделе [Вызов определяемых пользователем агрегатных функций CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
- Дополнительные сведения см. в разделе [склусердефинедаггрегатеаттрибуте](https://go.microsoft.com/fwlink/?LinkId=124626).  
+ Дополнительные сведения см. в разделе [склусердефинедаггрегатеаттрибуте](/dotnet/api/microsoft.sqlserver.server.sqluserdefinedaggregateattribute).  
   
 ## <a name="aggregation-methods"></a>Методы статистической обработки  
  Класс, зарегистрированный как определяемая пользователем статистическая функция, должен поддерживать следующие методы экземпляра. Это методы, которые использует обработчик запросов для выполнения статистической обработки.  
@@ -53,8 +53,7 @@ ms.locfileid: "85727884"
 |---------------------|  
 |Обновлено описание метода **accumulate** ; Теперь он принимает более одного параметра.|  
   
-## <a name="see-also"></a>См. также  
- [Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
+## <a name="see-also"></a>См. также:  
+ [Определяемые пользователем типы CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [Вызов определяемых пользователем агрегатных функций CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)  
-  
   

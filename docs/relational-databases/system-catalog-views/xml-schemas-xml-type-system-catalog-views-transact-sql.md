@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bf6327cb83f4461feabd09c748099f465b5e89b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 64288434142650043cbb8bb864d2cea348eeda28
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551346"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807178"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>Представления каталога XML-схем (системы типов XML) (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -65,6 +65,5 @@ ms.locfileid: "89551346"
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Системные представления &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [Системные представления &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)  
   

@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04e883861bfd14d5a5b69a080e1ed41bfeccd147
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 901410fb36080d39436a3a908a0ffd9260c5b513
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180299"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765800"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Вызов среды выполнения Java в расширениях языка SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-[Расширения языка SQL Server](../language-extensions-overview.md) используют системную хранимую процедуру [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) в качестве интерфейса для вызова среды выполнения Java. 
+[Расширения языка SQL Server](../language-extensions-overview.md) используют системную хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) в качестве интерфейса для вызова среды выполнения Java. 
 
 В этой статье описываются детали реализации классов и методов Java, которые выполняются в SQL Server.
 
@@ -56,7 +56,7 @@ ms.locfileid: "88180299"
 
 ### <a name="call-java-class"></a>Вызов класса Java
 
-Системная хранимая процедура [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) является интерфейсом для вызова среды выполнения Java. В следующем примере показан вызов `sp_execute_external_script` с использованием расширения Java и параметров для указания пути, сценария и пользовательского кода.
+Системная хранимая процедура [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) является интерфейсом для вызова среды выполнения Java. В следующем примере показан вызов `sp_execute_external_script` с использованием расширения Java и параметров для указания пути, сценария и пользовательского кода.
 
 > [!NOTE]
 > Обратите внимание, что не нужно указывать, какой вызывать метод. По умолчанию вызывается метод с именем **execute**. Это означает, что необходимо следовать требованиям [пакета расширяемости SDK для Java в SQL Server](extensibility-sdk-java-sql-server.md) и реализовать метод execute в классе Java.
@@ -90,7 +90,7 @@ EXEC sp_execute_external_script
 
 ## <a name="use-external-library"></a>Использование внешней библиотеки
 
-В SQL Server 2019 версии-кандидате 1 можно использовать внешние библиотеки для языка Java в Windows и Linux. Можно скомпилировать классы в JAR-файл и передать этот файл и другие зависимости в базу данных с помощью инструкции DDL [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+В SQL Server 2019 версии-кандидате 1 можно использовать внешние библиотеки для языка Java в Windows и Linux. Можно скомпилировать классы в JAR-файл и передать этот файл и другие зависимости в базу данных с помощью инструкции DDL [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 Пример передачи JAR-файла с помощью внешней библиотеки:
 
@@ -113,7 +113,7 @@ EXEC sp_execute_external_script
 with result sets ((column1 int))
 ```
 
-Дополнительные сведения см. в разделе [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+Дополнительные сведения см. в разделе [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-library-transact-sql.md).
 
 ## <a name="loopback-connection-to-sql-server"></a>Подключение к SQL Server с замыканием на себя
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1057252f896b62a5659b53aa53eb2f5c6d9b17ea
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: e6729d46fe498c6efe8e49f941c0ef1b007870b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288086"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727405"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Известные проблемы с драйвером ODBC в Linux и macOS
 
@@ -76,7 +76,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 Дополнительные сведения об устранении неполадок подключения см. в статьях:  
 
-- [Шаги для устранения неполадок с подключением SQL](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
+- [Шаги для устранения неполадок с подключением SQL](/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
   
 - [Устранение проблем с подключением в SQL Server 2005 — часть I](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2005-connectivity-issue-troubleshoot-part-i/ba-p/383034)  
   
@@ -91,4 +91,4 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 - [Установка Microsoft ODBC Driver for SQL Server в Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [Установка Microsoft ODBC Driver for SQL Server в macOS](install-microsoft-odbc-driver-sql-server-macos.md)
 
-Дополнительные сведения см. в [рекомендациях по программированию](programming-guidelines.md) и [заметках о выпуске](release-notes-odbc-sql-server-linux-mac.md).  
+Дополнительные сведения см. в [рекомендациях по программированию](programming-guidelines.md) и [заметках о выпуске](release-notes-odbc-sql-server-linux-mac.md).

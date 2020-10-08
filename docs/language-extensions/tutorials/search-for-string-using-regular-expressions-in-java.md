@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dab5079ab3c0447b0895bbc3642f23884317f3c4
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9de0a8e595cca3009be4a44b63ce268d673b6dff
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180511"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765742"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Руководство по Поиск строки с использованием регулярных выражений (regex) в Java
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88180511"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-+ Экземпляр ядра СУБД SQL Server 2019 с платформой расширяемости и расширением программирования Java [в Windows](../install/install-sql-server-language-extensions-on-windows.md) или [в Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions). Дополнительные сведения см. в статье [Расширения языка в SQL Server 2019](../language-extensions-overview.md). Дополнительные сведения о требованиях к программированию см. в разделе [Как вызывать Java в SQL Server](../how-to/call-java-from-sql.md).
++ Экземпляр ядра СУБД SQL Server 2019 с платформой расширяемости и расширением программирования Java [в Windows](../install/install-sql-server-language-extensions-on-windows.md) или [в Linux](../../linux/sql-server-linux-setup-language-extensions.md). Дополнительные сведения см. в статье [Расширения языка в SQL Server 2019](../language-extensions-overview.md). Дополнительные сведения о требованиях к программированию см. в разделе [Как вызывать Java в SQL Server](../how-to/call-java-from-sql.md).
 
 + SQL Server Management Studio или Azure Data Studio для выполнения T-SQL.
 
@@ -216,11 +216,11 @@ GO
 
 Для выполнения кода Java пользователю необходимо предоставить разрешение на выполнение внешнего скрипта на этом языке.
 
-Дополнительные сведения см. в разделе [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+Дополнительные сведения см. в разделе [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 ## <a name="create-external-libraries"></a>Создание внешних библиотек
 
-Для создания внешней библиотеки для файлов `.jar` используйте инструкцию [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql). SQL Server получит доступ к файлам `.jar`, и вам не нужно задавать специальные разрешения на доступ к **каталогу классов**.
+Для создания внешней библиотеки для файлов `.jar` используйте инструкцию [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md). SQL Server получит доступ к файлам `.jar`, и вам не нужно задавать специальные разрешения на доступ к **каталогу классов**.
 
 В этом примере будут созданы две внешние библиотеки: одна для пакета SDK, вторая для кода регулярных выражений Java.
 

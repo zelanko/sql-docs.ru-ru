@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: af86eae9866960c58ec9967f32a45998e5a91106
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147585"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727267"
 ---
 # <a name="sql-server-login-dialog-box"></a>Диалоговое окно входа SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "88147585"
 > [!NOTE]  
 > Поведение запроса диалоговое окно входа SQL Server управляется свойством инициализации `DBPROP_INIT_PROMPT`. Дополнительные сведения см. в разделе:
 > - [Свойства инициализации и авторизации](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [Руководство по программированию OLE DB](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [Руководство по программированию OLE DB](/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![Снимок экрана диалогового окна входа SQL Server](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>Параметры
 |Параметр|Описание|
 |---   |---        |
-|Сервер|Имя экземпляра SQL Server в сети. Выберите имя сервера/экземпляра из списка либо введите его в поле **Server** (Сервер). Также на клиентском компьютере можно создать серверный псевдоним с помощью средства **Диспетчер конфигурации SQL Server** и ввести это имя в поле **Server** (Сервер). <br/><br/>При использовании того же компьютера, на котором установлен SQL Server, можно ввести "(локальный)". Затем вы сможете подключиться к локальному экземпляру SQL Server. Это возможно даже в том случае, если запущена несетевая версия SQL Server.<br/><br/>Дополнительные сведения об именах серверов для разных типов сетей см. в статье [Руководство по установке SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541)|
+|Сервер|Имя экземпляра SQL Server в сети. Выберите имя сервера/экземпляра из списка либо введите его в поле **Server** (Сервер). Также на клиентском компьютере можно создать серверный псевдоним с помощью средства **Диспетчер конфигурации SQL Server** и ввести это имя в поле **Server** (Сервер). <br/><br/>При использовании того же компьютера, на котором установлен SQL Server, можно ввести "(локальный)". Затем вы сможете подключиться к локальному экземпляру SQL Server. Это возможно даже в том случае, если запущена несетевая версия SQL Server.<br/><br/>Дополнительные сведения об именах серверов для разных типов сетей см. в статье [Руководство по установке SQL Server](../../../database-engine/install-windows/install-sql-server.md)|
 |Режим проверки подлинности|Вы можете выбрать из раскрывающегося списка следующие параметры проверки подлинности:<br/><ul><li>`Windows Authentication:` проверка подлинности в SQL Server с использованием учетных данных пользователя Windows, вошедшего в систему.</li><li>`SQL Server Authentication:` проверка подлинности с помощью имени для входа и пароля.</li><li>`Active Directory - Integrated:` встроенная проверка подлинности с помощью идентификатора Azure Active Directory. Этот режим можно также использовать для проверки подлинности Windows в SQL Server.</li><li>`Active Directory - Password:` проверка подлинности по идентификатору и паролю пользователя с использованием идентификатора Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` встроенная проверка подлинности с использованием идентификатора Azure Active Directory. Этот режим поддерживает Многофакторную идентификацию Microsoft Azure (MFA).</li></ul>|
 |Имя участника-службы сервера|Если используется доверительное соединение, можно указать имя участника-службы для соединения с основным сервером.|
 |Идентификатор входа|Указывает имя для входа, которое будет использоваться при соединении. Текстовое поле для имени входа доступно только в том случае, если для параметра `Authentication Mode` задано значение `SQL Server Authentication`, `Active Directory - Password` или `Active Directory - Universal with MFA support`.|

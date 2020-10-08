@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9d16c785696a18262b818668af9d65c55f37616
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393152"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727498"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Использование проверки подлинности NTLM для подключения к SQL Server
 
@@ -35,11 +35,11 @@ ms.locfileid: "86393152"
 
 Все свойства, кроме **domain**, являются обязательными. Драйвер выдаст ошибку, если они отсутствуют, когда используется свойство authenticationScheme **NTLM**. 
 
-Дополнительные сведения о настройке свойств подключения см. [здесь](../../connect/jdbc/setting-the-connection-properties.md). Дополнительные сведения о протоколе проверки подлинности Microsoft NTLM см. [здесь](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
+Дополнительные сведения о настройке свойств подключения см. [здесь](../../connect/jdbc/setting-the-connection-properties.md). Дополнительные сведения о протоколе проверки подлинности Microsoft NTLM см. [здесь](/windows/desktop/SecAuthN/microsoft-ntlm).
 
 ## <a name="remarks"></a>Remarks
 
-В статье [Безопасность сети: уровень проверки подлинности LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) приведено описание параметров сервера SQL Server, которые управляют поведением проверки подлинности NTLM. 
+В статье [Безопасность сети: уровень проверки подлинности LAN Manager](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) приведено описание параметров сервера SQL Server, которые управляют поведением проверки подлинности NTLM. 
 
 ## <a name="logging"></a>Logging
 
@@ -79,7 +79,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Дополнительные сведения об именах субъектов-служб (SPN) см. в разделах:
 
-- [Поддержка имени субъекта-службы в клиентских соединениях](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
+- [Поддержка имени субъекта-службы в клиентских соединениях](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
 
 > [!NOTE]  
 > Атрибут соединения serverSpn поддерживается только драйвером Microsoft JDBC Driver версии 4.2 или более поздней.

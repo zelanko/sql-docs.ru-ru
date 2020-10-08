@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c25f97d79477497d60d458c994ef5dbdc102463d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393132"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727543"
 ---
 # <a name="tracing-driver-operation"></a>Трассировка операций драйвера
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "86393132"
   Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает трассировку (или ведение журнала), что позволяет решать проблемы с драйвером JDBC при его использовании в приложении. Чтобы включить использование трассировки, драйвер JDBC использует интерфейсы API ведения журнала в java.util.logging, который обеспечивает набор классов для создания объектов Logger и LogRecord.  
   
 > [!NOTE]  
->  Для собственного компонента (sqljdbc_xa.dll), который включен в комплект драйвера JDBC, трассировка включается стандартом BID. Дополнительные сведения о BID см. в статье [Трассировка доступа к данным в SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
+>  Для собственного компонента (sqljdbc_xa.dll), который включен в комплект драйвера JDBC, трассировка включается стандартом BID. Дополнительные сведения о BID см. в статье [Трассировка доступа к данным в SQL Server](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)).  
   
  При разработке приложения вы можете выполнять вызовы объектов Logger, которые в свою очередь создают объекты LogRecord, передаваемые затем объектам Handler для обработки. Объекты Logger и Handler используют уровни ведения журнала и, при необходимости, фильтры ведения журнала для регулирования обрабатываемых записей журнала (LogRecord). Когда операции ведения журнала завершены, объекты Handler могут также использовать объекты Formatter для публикации данных журнала.  
   
@@ -161,5 +161,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## <a name="see-also"></a>См. также раздел  
  [Диагностика проблем с JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

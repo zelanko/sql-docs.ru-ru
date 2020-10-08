@@ -15,12 +15,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00bf7bad226fc793c17a80a0e10e86c970aae195
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 3676f8daad2e597510323577a67f37c9a901f2b0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862136"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726960"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Интерфейсы драйвера OLE DB для SQL Server (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88862136"
   
  В этом справочнике по программированию драйвера OLE DB для SQL Server описываются не все интерфейсы и методы OLE DB, а только те, которые демонстрируют поведение, специфичное для драйвера OLE DB для SQL Server.  
   
- Полное описание базовых интерфейсов и методов OLE DB можно найти в пособии [Справочник разработчика OLE DB](https://go.microsoft.com/fwlink/?LinkId=45232).  
+ Полное описание базовых интерфейсов и методов OLE DB можно найти в пособии [Справочник разработчика OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -39,5 +39,4 @@ ms.locfileid: "88862136"
   
 ## <a name="see-also"></a>См. также:  
  [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

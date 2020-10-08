@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b425d57a0b1aee0c01db62d3fd1b77eb59c8aed
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4008dd4f023170b50bdf28f1f026da9ee892f970
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632954"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726865"
 ---
 # <a name="idle-connection-resiliency"></a>Устойчивость соединения в режиме ожидания
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "81632954"
 
 ## <a name="example"></a>Пример
 
-Следующий код подключается к базе данных и выполняет запрос. Подключение прервано из-за завершения сеанса, и предпринята попытка выполнить новый запрос с использованием разорванного подключения. В примере используется образец базы данных [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
+Следующий код подключается к базе данных и выполняет запрос. Подключение прервано из-за завершения сеанса, и предпринята попытка выполнить новый запрос с использованием разорванного подключения. В примере используется образец базы данных [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)).
 
 В этом примере мы указываем буферизованный курсор перед прерыванием подключения. Если не указать буферизованный курсор, подключение не будет восстановлено из-за наличия активного серверного курсора, поэтому подключение не будет бездействующим во время прерывания. Однако в этом случае перед прерыванием подключения можно вызвать sqlsrv_free_stmt () для освобождения курсора, и подключение будет успешно восстановлено.
 

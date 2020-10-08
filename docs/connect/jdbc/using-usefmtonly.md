@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: da61e1881d4c7df01cdc92ad41f6a78c95dda8b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad8f30b236ca9d4fe8a134db3e1726aaeb17a2d3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450044"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727465"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>Получение ParameterMetaData через useFmtOnly
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -91,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  Этот компонент поддерживает только запросы `SELECT/INSERT/UPDATE/DELETE`. Запросы должны начинаться с одного из 4 поддерживаемых ключевых слов или [обобщенного табличного выражения](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017), за которым следует один из поддерживаемых запросов. Параметры в обобщенных табличных выражениях не поддерживаются.
+>  Этот компонент поддерживает только запросы `SELECT/INSERT/UPDATE/DELETE`. Запросы должны начинаться с одного из 4 поддерживаемых ключевых слов или [обобщенного табличного выражения](../../t-sql/queries/with-common-table-expression-transact-sql.md?view=sql-server-2017), за которым следует один из поддерживаемых запросов. Параметры в обобщенных табличных выражениях не поддерживаются.
 
 ## <a name="known-issues"></a>Известные проблемы
   С этой функцией сейчас связаны некоторые проблемы из-за недостатков в логике синтаксического анализа SQL. Эти проблемы могут быть решены в будущем обновлении компонентов, и они описаны ниже вместе с предложениями по решению проблемы.
@@ -139,7 +139,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Настройка свойств подключения](../../connect/jdbc/setting-the-connection-properties.md)  
-  
   

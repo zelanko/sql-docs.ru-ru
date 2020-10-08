@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b165f5ceb5e8f08539cb48473a6f3d701623f6a
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 327a4ca587a577bdca3fe8f42748998f29060146
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861382"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727163"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Перечисление источников данных OLE DB (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88861382"
 
   В этом образце показано, как использовать объект перечислителя для построения списка доступных источников данных.  
   
- Для перечисления источников данных, доступных перечислителю MSOLEDBSQL, потребитель вызывает метод [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312). Этот метод возвращает набор строк информации о видимых в настоящее время источниках данных.  
+ Для перечисления источников данных, доступных перечислителю MSOLEDBSQL, потребитель вызывает метод [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)). Этот метод возвращает набор строк информации о видимых в настоящее время источниках данных.  
   
  В зависимости от используемой сетевой библиотеки проводится поиск источников данных в соответствующем домене. Для именованных каналов это домен, в который загружен клиент. Для AppleTalk это зона по умолчанию. Для SPX/IPX это список установок [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , найденный в системной базе данных. Для Banyan VINES это установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , найденные в локальной сети. Сокеты Multiprotocol и TCP/IP не поддерживаются.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88861382"
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Перечисление источников данных OLE DB  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

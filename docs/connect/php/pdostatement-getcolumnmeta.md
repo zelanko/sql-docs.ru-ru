@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 58b6882fe4f0fce4ddf948121cb6ad35e5828fd7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645086"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726745"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -72,7 +72,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>Метаданные классификации данных о конфиденциальности
 
-Начиная с версии 5.8.0, пользователям доступен новый атрибут инструкции `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`, который позволяет получать [метаданные классификации данных о конфиденциальности](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) из Microsoft SQL Server 2019 с помощью `PDOStatement::getColumnMeta`. Для этого требуется драйвер Microsoft ODBC Driver версии 17.4.2 или выше.
+Начиная с версии 5.8.0, пользователям доступен новый атрибут инструкции `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`, который позволяет получать [метаданные классификации данных о конфиденциальности](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4) из Microsoft SQL Server 2019 с помощью `PDOStatement::getColumnMeta`. Для этого требуется драйвер Microsoft ODBC Driver версии 17.4.2 или выше.
 
 Обратите внимание, что атрибут `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` по умолчанию имеет значение `false`, но вы можете указать значение `true`, и тогда массив упомянутого выше поля `flags` будет заполнен метаданными классификации данных о конфиденциальности, если они существуют. 
 
@@ -136,4 +136,3 @@ for ($i = 0; $i < $numCol; $i++) {
 [Класс PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

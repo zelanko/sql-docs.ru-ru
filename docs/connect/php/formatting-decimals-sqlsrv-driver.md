@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b111dd925a98c4f0380dfceb0a09ddffadb96592
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680729"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726828"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Форматирование десятичных строк и денежных значений (драйвер SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Чтобы сохранить точность, [типы decimal или numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) всегда извлекаются как строки с особой точностью и масштабом. Если какое-либо значение меньше 1, начальный ноль отсутствует. Это аналогично полям money и smallmoney, так как они являются десятичными полями с фиксированным масштабом равным 4.
+Чтобы сохранить точность, [типы decimal или numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) всегда извлекаются как строки с особой точностью и масштабом. Если какое-либо значение меньше 1, начальный ноль отсутствует. Это аналогично полям money и smallmoney, так как они являются десятичными полями с фиксированным масштабом равным 4.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Добавление ведущих нулей, если они отсутствуют
 Начиная с версии 5.6.0, параметр `FormatDecimals` добавляется на уровнях подключения sqlsrv и инструкции, что позволяет пользователю форматировать десятичные строки. Этот параметр принимает логическое значение (true или false) и влияет только на форматирование десятичных или числовых значений в результатах выборки. Иными словами, параметр `FormatDecimals` не влияет на другие операции, такие как вставка или обновление.

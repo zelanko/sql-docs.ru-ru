@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf29942e5d427a4a4852a6d1a856d81765690050
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 198c8a21fcea9a1386effe8d30c8d954180d6dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414530"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727487"
 ---
 # <a name="using-sql_variant-data-type"></a>Использование данных типа sql_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Начиная с версии 6.3.0, драйвер JDBC поддерживает тип данных sql_variant. Sql_variant также поддерживается при использовании таких функций, как возвращающие табличные значения параметры и BulkCopy с некоторыми ограничениями, упомянутыми ниже на этой странице. В типе данных sql_variant можно хранить не все типы данных. Чтобы получить список поддерживаемых sql_variant типов данных, см. [документацию](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) SQL Server.
+Начиная с версии 6.3.0, драйвер JDBC поддерживает тип данных sql_variant. Sql_variant также поддерживается при использовании таких функций, как возвращающие табличные значения параметры и BulkCopy с некоторыми ограничениями, упомянутыми ниже на этой странице. В типе данных sql_variant можно хранить не все типы данных. Чтобы получить список поддерживаемых sql_variant типов данных, см. [документацию](../../t-sql/data-types/sql-variant-transact-sql.md) SQL Server.
 
 ##  <a name="populating-and-retrieving-a-table"></a>Заполнение и получение таблицы.
 Предположим, что у одного столбца есть таблица со столбцом sql_variant:
@@ -95,4 +95,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## <a name="see-also"></a>См. также раздел
 
-[Основные сведения о типах данных JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Основные сведения о типах данных JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
