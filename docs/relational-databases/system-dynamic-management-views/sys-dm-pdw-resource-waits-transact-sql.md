@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_resource_waits (Transact-SQL)
-title: sys. dm_pdw_resource_waits (Transact-SQL) | Документация Майкрософт
+description: sys.dm_pdw_resource_waits (Transact-SQL)
+title: sys.dm_pdw_resource_waits (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/26/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf3b21433a4eb19be526487e9df03a8df7bce276
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8ab07f9c8b990b7d002de070ece8717fb90b97a
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474699"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834108"
 ---
-# <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits (Transact-SQL)
+# <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Отображает сведения о ожидании для всех типов ресурсов в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
@@ -28,9 +28,9 @@ ms.locfileid: "88474699"
 |Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Расположение запроса в списке ожидания.|порядковый номер, основанный на 0. Оно не является уникальным для всех записей ожидания.|  
-|session_id|**nvarchar(32)**|Идентификатор сеанса, в котором произошло состояние ожидания.|См. раздел session_id в [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|тип|**nvarchar(255)**|Тип ожидания, который представляет эта запись.|Возможные значения:<br /><br /> Соединение<br /><br /> Параллельные локальные запросы<br /><br /> Параллелизм распределенных запросов<br /><br /> Параллелизм DMS<br /><br /> Параллелизм резервного копирования|  
-|object_type|**nvarchar(255)**|Тип объекта, на который влияет ожидание.|Возможные значения:<br /><br /> **ОБЪЕКТАМИ**<br /><br /> **СУБД**<br /><br /> **SYSTEM**<br /><br /> **СХЕМЫ**<br /><br /> **ПРИКЛАД**|  
+|session_id|**nvarchar(32)**|Идентификатор сеанса, в котором произошло состояние ожидания.|См. session_id в [sys.dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|type|**nvarchar(255)**|Тип ожидания, который представляет эта запись.|Возможные значения:<br /><br /> Подключение<br /><br /> Параллельные локальные запросы<br /><br /> Параллелизм распределенных запросов<br /><br /> Параллелизм DMS<br /><br /> Параллелизм резервного копирования|  
+|object_type|**nvarchar(255)**|Тип объекта, на который влияет ожидание.|Возможные значения:<br /><br /> **ОБЪЕКТАМИ**<br /><br /> **DATABASE**<br /><br /> **СИСТЕМОЙ**<br /><br /> **SCHEMA**<br /><br /> **ПРИКЛАД**|  
 |object_name|**nvarchar (386)**|Имя или идентификатор GUID указанного объекта, на который влияет ожидание.|Таблицы и представления отображаются с именами из трех частей.<br /><br /> Индексы и статистика отображаются с именами из четырех частей.<br /><br /> Имена, участники и базы данных являются строковыми именами.|  
 |request_id|**nvarchar(32)**|Идентификатор запроса, для которого произошло состояние ожидания.|Идентификатор Кид запроса.<br /><br /> Идентификатор GUID для запросов загрузки.|  
 |request_time|**datetime**|Время запроса блокировки или ресурса.||  
@@ -41,7 +41,7 @@ ms.locfileid: "88474699"
 |resource_class|**nvarchar (20)**|Внутренние |Просмотреть [ресурс Monitor ожидает](#monitor-resource-waits) ниже|  
   
 ## <a name="monitor-resource-waits"></a>Мониторинг ожиданий ресурсов 
-С появлением [групп рабочей нагрузки](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)слоты выдачи больше не применяются.  Используйте приведенный ниже запрос и `resources_requested` столбец, чтобы понять ресурсы, необходимые для выполнения запроса.
+С появлением [групп рабочей нагрузки](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)слоты выдачи больше не применяются.  Используйте приведенный ниже запрос и `resources_requested` столбец, чтобы понять ресурсы, необходимые для выполнения запроса.
 
 ```sql
 select rw.wait_id
@@ -60,7 +60,6 @@ select rw.wait_id
   join sys.dm_pdw_resource_waits rw on rw.request_id = r.request_id
 ```
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
-  
   

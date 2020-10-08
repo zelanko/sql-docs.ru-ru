@@ -1,6 +1,6 @@
 ---
 description: sys.dm_resource_governor_workload_groups_history_ex (база данных SQL Azure)
-title: sys. dm_resource_governor_workload_groups_history_ex (база данных SQL Azure) | Документация Майкрософт
+title: sys.dm_resource_governor_workload_groups_history_ex (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: eee98e604fad74b58db9acd5e1f5b20a0189f216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d761d1ca80037e26f8757ec681929dd5356b182f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489772"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834403"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -101,8 +101,8 @@ WHERE name LIKE 'User%'
 ORDER BY snapshot_time DESC;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Управление частотой ведения журнала перевода](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Ограничения ресурсов на основе DTU для эластичного пула](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Ограничения ресурсов виртуального ядра для эластичного пула](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Управление частотой ведения журнала перевода](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Ограничения ресурсов на основе DTU для эластичного пула](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Ограничения ресурсов виртуального ядра для эластичного пула](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

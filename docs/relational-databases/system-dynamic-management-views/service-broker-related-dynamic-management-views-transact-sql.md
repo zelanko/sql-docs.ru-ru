@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ed1d15e3a8b1e98e58290e42c47362b188d10d19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7c1d053bbe680ba7dd78939ab4b4c485510660f3
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542382"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834132"
 ---
 # <a name="service-broker-related-dynamic-management-views-transact-sql"></a>Динамические административные представления, связанные с компонентом Service Broker (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "89542382"
     :::column-end:::
 :::row-end:::
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Системные представления &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [Системные представления &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)  
   

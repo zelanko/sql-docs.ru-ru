@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_sys_info (Transact-SQL)
-title: sys. dm_os_sys_info (Transact-SQL) | Документация Майкрософт
+title: sys.dm_os_sys_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56df59d84dafd1f19e74cadcca586e4da9e1c084
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5419919b14c15615cb84d124387c98e9ba2e90a5
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539364"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834431"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Возвращает разнородный набор полезных сведений о компьютере, а также о ресурсах, доступных для служб [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и используемых ими.  
   
-> **Примечание.** Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_os_sys_info**.  
+> **Примечание.** Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_os_sys_info**.  
   
 |Имя столбца|Тип данных|Примечания и описание для конкретной версии |  
 |-----------------|---------------|-----------------|  
@@ -68,7 +68,7 @@ ms.locfileid: "89539364"
 |**process_kernel_time_ms**|**bigint**|**Применимо к**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и выше.<br /><br /> Общее время в миллисекундах, затраченное всеми потоками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме ядра. Это значение может быть больше, чем время одного процессора, поскольку оно включает в себя время всех процессоров сервера. Не допускает значения NULL.|  
 |**process_user_time_ms**|**bigint**|**Применимо к**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и выше.<br /><br /> Общее время в миллисекундах, затраченное всеми потоками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в пользовательском режиме. Это значение может быть больше, чем время одного процессора, поскольку оно включает в себя время всех процессоров сервера. Не допускает значения NULL.|  
 |**time_source**|**int**|**Применимо к**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и выше.<br /><br /> Указывает API-интерфейс, который службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют для извлечения реального времени. Не допускает значения NULL.<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
-|**time_source_desc**|**nvarchar(60)**|**Применимо к**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и выше.<br /><br /> Описывает столбец **time_source** . Не допускает значения NULL.<br /><br /> QUERY_PERFORMANCE_COUNTER = API [QueryPerformanceCounter](https://go.microsoft.com/fwlink/?LinkId=163095) извлекает время стены.<br /><br /> MULTIMEDIA_TIMER = API [таймера мультимедиа](https://go.microsoft.com/fwlink/?LinkId=163094) , который получает время стены.|  
+|**time_source_desc**|**nvarchar(60)**|**Применимо к**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и выше.<br /><br /> Описывает столбец **time_source** . Не допускает значения NULL.<br /><br /> QUERY_PERFORMANCE_COUNTER = API [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) извлекает время стены.<br /><br /> MULTIMEDIA_TIMER = API [таймера мультимедиа](/previous-versions//ms713418(v=vs.85)) , который получает время стены.|  
 |**virtual_machine_type**|**int**|**Применимо к**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и выше.<br /><br /> Указывает, выполняется ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виртуальной среде.  Не допускает значения NULL.<br /><br /> 0 = нет<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
 |**virtual_machine_type_desc**|**nvarchar(60)**|**Применимо к**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и выше.<br /><br /> Описывает столбец **virtual_machine_type** . Не допускает значения NULL.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не работает внутри виртуальной машины.<br /><br /> ГИПЕРВИЗОР = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает внутри виртуальной машины, размещенной под управлением низкоуровневой оболочки (ОС узла, использующей аппаратную виртуализацию).<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает внутри виртуальной машины, размещенной в ОС, которая не использует помощник по оборудованию, например Microsoft Virtual PC.|  
 |**softnuma_configuration**|**int**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше.<br /><br /> Задает способ настройки узлов NUMA. Не допускает значения NULL.<br /><br /> 0 = ВЫКЛЮЧЕНо указывает оборудование по умолчанию<br /><br /> 1 = Автоматизированная программная архитектура NUMA<br /><br /> 2 = ручная программная NUMA с помощью реестра|  
@@ -90,7 +90,3 @@ ms.locfileid: "89539364"
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
-  
-
-
-

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_child_instances (Transact-SQL)
-title: sys. dm_os_child_instances (Transact-SQL) | Документация Майкрософт
+title: sys.dm_os_child_instances (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c148c6d3bab448d89294eba4af7ebec8cd2cf6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 81cceff6a1336fadecb84f1d70c5f41c7625dc07
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539372"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834452"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "89539372"
   
 > **ВАЖНО!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Сведения, возвращаемые из **sys. dm_os_child_instances** , можно использовать для определения состояния каждого пользовательского экземпляра (heart_beat) и получения имени канала (instance_pipe_name), которое можно использовать для создания соединения с пользовательским экземпляром с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или SQLCmd. Подключиться к пользовательскому экземпляру можно сразу после того, как он был запущен внешним процессом, таким как клиентское приложение. Инструменты управления SQL не могут запустить пользовательский экземпляр.  
+ Сведения, возвращаемые из **sys.dm_os_child_instances** , можно использовать для определения состояния каждого пользовательского экземпляра (heart_beat) и получения имени канала (instance_pipe_name), которое можно использовать для создания соединения с пользовательским экземпляром с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или SQLCmd. Подключиться к пользовательскому экземпляру можно сразу после того, как он был запущен внешним процессом, таким как клиентское приложение. Инструменты управления SQL не могут запустить пользовательский экземпляр.  
   
 > **Примечание.** Пользовательские экземпляры являются [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] только функцией.  
 > 
-> **Примечание** . Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_os_child_instances**.  
+> **Примечание** . Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_os_child_instances**.  
   
 |Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
@@ -56,13 +56,9 @@ ms.locfileid: "89539372"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Дополнительные сведения о динамическом административном представлении см. в разделе [динамические административные представления и функции &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
-## <a name="see-also"></a>См. также  
- [Пользовательские экземпляры для тех, кто не обладает правами администратора](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
+## <a name="see-also"></a>См. также:  
+ [Пользовательские экземпляры для тех, кто не обладает правами администратора](/previous-versions/sql/)  
   
-  
-
-
-

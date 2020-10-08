@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_physical_stats (Transact-SQL)
-title: sys. dm_db_index_physical_stats (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9633305e5d60a9ccbdfcf57f966353792c24a12a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518940"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833864"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "89518940"
   Возвращает сведения о размере и фрагментации данных и индексов указанной таблицы или представления в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для индекса возвращается одна строка для каждого уровня сбалансированного дерева в каждой секции. Для кучи возвращается одна строка для единицы распределения IN_ROW_DATA каждой секции. Для данных больших объектов (LOB) возвращается одна строка для единицы распределения LOB_DATA каждой секции. Если в таблице существуют данные с переполнением строки, то возвращается одна строка для единицы распределения ROW_OVERFLOW_DATA в каждой секции. Не возвращает информацию об индексах columnstore с оптимизированной памятью xVelocity.  
   
 > [!IMPORTANT]
-> Если вы запрашиваете представление **sys. dm_db_index_physical_stats** на экземпляре сервера, на котором размещена Always On [вторичная реплика для чтения](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), может возникнуть ошибка блокировки повтора. Это связано с тем, что данное динамическое административное представление получает блокировку (IS) в указанной пользовательской таблице либо в представлении, которые могут блокировать запросы посредством потока REDO для монопольной блокировки (X) этой пользовательской таблицы или представления.  
+> При запросе **sys.dm_db_index_physical_stats** на экземпляре сервера, на котором размещена Always On [вторичная реплика для чтения](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), может возникнуть ошибка блокировки повтора. Это связано с тем, что данное динамическое административное представление получает блокировку (IS) в указанной пользовательской таблице либо в представлении, которые могут блокировать запросы посредством потока REDO для монопольной блокировки (X) этой пользовательской таблицы или представления.  
   
- **sys. dm_db_index_physical_stats** не возвращает сведения о индексах, оптимизированных для памяти. Сведения об использовании индексов, оптимизированных для памяти, см. в разделе [sys. dm_db_xtp_index_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **sys.dm_db_index_physical_stats** не возвращает сведения о индексах, оптимизированных для памяти. Сведения об использовании индексов, оптимизированных для памяти, см. в разделе [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -111,7 +111,7 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Средний размер записи в байтах.<br /><br /> Для индекса средний размер записи применяется к текущему уровню сбалансированного дерева в единице распределения IN_ROW_DATA.<br /><br /> Для кучи — средний размер записи в единице распределения IN_ROW_DATA.<br /><br /> Для единиц распределения LOB_DATA или ROW_OVERFLOW_DATA — средний размер записи во всей единице распределения.<br /><br /> NULL, если *mode* = Limited.|  
 |forwarded_record_count|**bigint**|Количество записей в куче, содержащих указатели на данные в других местах. (Такое состояние возникает во время обновления, когда не хватает места для сохранения новой строки в исходном расположении.)<br /><br /> NULL для любой единицы распределения, отличающейся от единиц распределения IN_ROW_DATA для кучи.<br /><br /> Значение NULL для куч, если *mode* = Limited.|  
 |compressed_page_count|**bigint**|Количество сжатых страниц.<br /><br /> Вновь выделенные для куч страницы не сжаты с использованием сжатия PAGE. Куча — это СТРАНИЦА, сжимаемая при наступлении двух особых условий: при массовом импорте данных или при перестройке кучи. Типичные операции DML, которые вызывают выделение страниц, не связаны со сжатием PAGE. Перестройте кучу, если значение compressed_page_count увеличивается сверх желательного порога.<br /><br /> Для таблиц с кластеризованным индексом значение compressed_page_count указывает эффективность сжатия страниц.|  
-|hobt_id|BIGINT|Только для индексов columnstore это идентификатор набора строк, который отслеживает внутренние данные columnstore для секции. Наборы строк хранятся в виде куч данных или двоичных деревьев. Они имеют тот же идентификатор индекса, что и родительский индекс columnstore. Дополнительные сведения см. в разделе [sys. internal_partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, если <br /><br /> Область **применения**: SQL Server 2016 и более поздней версии, база данных SQL azure, управляемый экземпляр SQL Azure|  
+|hobt_id|BIGINT|Только для индексов columnstore это идентификатор набора строк, который отслеживает внутренние данные columnstore для секции. Наборы строк хранятся в виде куч данных или двоичных деревьев. Они имеют тот же идентификатор индекса, что и родительский индекс columnstore. Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, если <br /><br /> Область **применения**: SQL Server 2016 и более поздней версии, база данных SQL azure, управляемый экземпляр SQL Azure|  
 |column_store_delete_buffer_state|tinyint| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ОЧИСТКА<br /><br /> 4 = СНЯТИЕ С УЧЕТА<br /><br /> 5 = ГОТОВО<br /><br />Область **применения**: SQL Server 2016 и более поздней версии, база данных SQL azure, управляемый экземпляр SQL Azure|  
 |column_store_delete_buff_state_desc|| Недопустимый — родительский индекс не является индексом columnstore.<br /><br /> Это используется с помощью открытых и удаляемых сканеров.<br /><br /> Сток — удаляются, но сканеры все еще используют его.<br /><br /> Очистка буфера закрывается, а строки в буфере записываются в точечный рисунок удаления.<br /><br /> Снятие с учета-строки в закрытом буфере удаления записываются в битовую карту удаления, но буфер не был усечен, так как сканеры все еще используют его. Новым сканерам не нужно использовать буфер снятия с учета, поскольку достаточно свободного места в открытом буфере.<br /><br /> Готово — этот буфер удаления готов к использованию. <br /><br /> Область **применения**: SQL Server 2016 и более поздней версии, база данных SQL azure, управляемый экземпляр SQL Azure|  
 |version_record_count|**bigint**|Это число записей версий строк, сохраняемых в этом индексе.  Эти версии строк поддерживаются функцией [ускоренного восстановления базы данных](../../relational-databases/accelerated-database-recovery-concepts.md) . <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
@@ -121,11 +121,11 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|Число записей версий, которые хранятся за пределами исходной строки данных. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|Число записей версий, которые считаются долгосрочными. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Функция динамического управления sys.dm_db_index_physical_stats заменяет инструкцию DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Режимы просмотра  
- Режим, в котором выполняется функция, определяет уровень просмотра для получения статистических данных, используемых функцией. *режим* указывается как ограниченный, выборочный или подробный. Эта функция проходит цепочки страниц в поисках единиц распределения, составляющих заданные секции таблицы или индекса. для sys. dm_db_index_physical_stats требуется только блокировка с намерением общего доступа (—), независимо от режима, в котором она выполняется.  
+ Режим, в котором выполняется функция, определяет уровень просмотра для получения статистических данных, используемых функцией. *режим* указывается как ограниченный, выборочный или подробный. Эта функция проходит цепочки страниц в поисках единиц распределения, составляющих заданные секции таблицы или индекса. для sys.dm_db_index_physical_stats требуется только блокировка с намерением общего доступа (—), независимо от режима, в котором она выполняется.  
   
  Режим LIMITED является самым быстрым, в нем производится наименьшее число просмотров страниц. Для индекса просматриваются только страницы родительского уровня в сбалансированном дереве (то есть страницы, расположенные выше конечного уровня). Для кучи просматриваются только связанные PFS- и IAM-страницы. Страницы данных в куче просматриваются в режиме LIMITED.  
   
@@ -138,7 +138,7 @@ sys.dm_db_index_physical_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Использование системных функций для указания значений параметров  
  Можно использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] функции [DB_ID](../../t-sql/functions/db-id-transact-sql.md) и [object_id](../../t-sql/functions/object-id-transact-sql.md) , чтобы указать значения для параметров *database_id* и *object_id* . Однако передавая значения, которые не допустимы для этих функций, можно получить неожиданные результаты. Например, если имя базы данных или объекта не могут быть найдены из-за того, что объект или база данных не существуют или соответствующее имя указано неверно, обе функции возвращают NULL. Функция sys.dm_db_index_physical_stats интерпретирует NULL как значение шаблона, задающее все базы данных или все объекты.  
   
- Кроме того, функция OBJECT_ID обрабатывается до вызова функции sys. dm_db_index_physical_stats и, следовательно, вычисляется в контексте текущей базы данных, а не в базе данных, указанной в *database_id*. Это поведение может привести к тому, что функция OBJECT_ID возвратит значение NULL или, если имя объекта существует в контексте как текущей, так и указанной базы данных, возвратит сообщение об ошибке. В следующих примерах демонстрируются эти неожиданные результаты.  
+ Кроме того, функция OBJECT_ID обрабатывается до вызова функции sys.dm_db_index_physical_stats и, следовательно, вычисляется в контексте текущей базы данных, а не в базе данных, указанной в *database_id*. Это поведение может привести к тому, что функция OBJECT_ID возвратит значение NULL или, если имя объекта существует в контексте как текущей, так и указанной базы данных, возвратит сообщение об ошибке. В следующих примерах демонстрируются эти неожиданные результаты.  
   
 ```  
 USE master;  
@@ -175,7 +175,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>Рекомендации  
- Всегда следует проверять, что функции DB_ID и OBJECT_ID возвращают допустимый идентификатор. Например, при использовании OBJECT_ID укажите имя из трех частей `OBJECT_ID(N'AdventureWorks2012.Person.Address')` , например, или проверьте значение, возвращаемое функциями, прежде чем использовать их в функции sys. dm_db_index_physical_stats. Примеры А и Б демонстрируют безопасный способ указания базы данных и идентификаторов объекта.  
+ Всегда следует проверять, что функции DB_ID и OBJECT_ID возвращают допустимый идентификатор. Например, при использовании OBJECT_ID укажите имя из трех частей `OBJECT_ID(N'AdventureWorks2012.Person.Address')` , например, или проверьте значение, возвращаемое функциями, прежде чем использовать их в функции sys.dm_db_index_physical_stats. Примеры А и Б демонстрируют безопасный способ указания базы данных и идентификаторов объекта.  
   
 ## <a name="detecting-fragmentation"></a>Выявление фрагментации  
  Фрагментация возникает в процессе изменений данных (инструкциями INSERT, UPDATE и DELETE), выполняемых на таблице и, следовательно, в индексах, определенных для таблицы. Так как эти изменения обычно не распределяются равномерно по строкам таблицы и индекса, заполненность каждой страницы со временем может меняться. Для запросов, выполняющих просмотр части или всех индексов таблицы, этот вид фрагментации может приводить к чтению дополнительных страниц. Это затрудняет параллельный просмотр данных.  
@@ -430,14 +430,12 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с индексами &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [Системные представления &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Системные представления &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)  
   
-  
-

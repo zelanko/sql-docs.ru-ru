@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548485"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834250"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (база данных SQL Azure)
 
@@ -48,10 +48,10 @@ ms.locfileid: "89548485"
 |last_commit|**datetimeoffset**|Время последней фиксации транзакции в базе данных. При получении в базе данных источника указывает время последней фиксации в базе данных источника. При получении в базе данных-получателе указывает время последней фиксации в базе данных-получателе. При получении в базе данных-получателе, когда первичная реплика канала репликации находится в недоступном виде, она указывает до того, как будет перехвачена дополнительная точка.|
   
 > [!NOTE]  
->  Если отношение репликации завершается удалением базы данных-получателя (раздел 4,2), то строка для этой базы данных в представлении **sys. dm_geo_replication_link_status** исчезает.  
+>  Если отношение репликации завершается удалением базы данных-получателя (раздел 4,2), строка для этой базы данных в представлении **sys.dm_geo_replication_link_status** исчезает.  
   
 ## <a name="permissions"></a>Разрешения  
- Любая учетная запись с view_database_state разрешением может выполнять запросы к **sys. dm_geo_replication_link_status**.  
+ Любая учетная запись с view_database_state разрешением может запрашивать **sys.dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Пример  
  Отображение времени отдержек репликации и последней репликации баз данных-получателей.  
@@ -65,9 +65,8 @@ SELECT
 FROM sys.dm_geo_replication_link_status;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ALTER DATABASE &#40;база данных SQL Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys. geo_replication_links &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys. dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+## <a name="see-also"></a>См. также:  
+ [ALTER DATABASE &#40;база данных SQL Azure&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.geo_replication_links &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
-  

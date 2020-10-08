@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_external_work (Transact-SQL)
-title: sys. dm_exec_external_work (Transact-SQL) | Документация Майкрософт
+description: sys.dm_exec_external_work (Transact-SQL)
+title: sys.dm_exec_external_work (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -23,27 +23,27 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 660b41d250f8bfccfc8d0e123f0e1a6aafb5fcde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5559a1f1ce7ebc4a231a24022c9642d598d81f73
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548517"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834422"
 ---
-# <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm_exec_external_work (Transact-SQL)
+# <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Возвращает сведения о рабочей нагрузке для каждого рабочего узла на каждом из вычислений.  
   
- Запросите представление sys. dm_exec_external_work, чтобы обозначить работу для взаимодействия с внешним источником данных (например, Hadoop или External SQL Server).  
+ Запрос sys.dm_exec_external_work для обнаружения работы, которая будет использоваться для связи с внешним источником данных (например, Hadoop или External SQL Server).  
   
 |Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Уникальный идентификатор связанного запроса Polybase.|См. раздел *request_ID* в [sys. Dm_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|`int`|Запрос, выполняемый этим исполнителем.|См. раздел *step_index* в  [sys. Dm_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|`int`|Шаг в плане DMS, который выполняется этим исполнителем.|См. раздел [sys. dm_exec_dms_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|`int`|Узел, на котором запущена Рабочая роль.|См. раздел [sys. dm_exec_compute_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|тип|`nvarchar(60)`|Тип внешней работы.|"Разделение файлов"|  
+|execution_id|`nvarchar(32)`|Уникальный идентификатор связанного запроса Polybase.|См. *request_ID* в [sys.dm_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|`int`|Запрос, выполняемый этим исполнителем.|См. *step_index* в  [sys.dm_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|`int`|Шаг в плане DMS, который выполняется этим исполнителем.|См. раздел [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|`int`|Узел, на котором запущена Рабочая роль.|См. раздел [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|type|`nvarchar(60)`|Тип внешней работы.|"Разделение файлов"|  
 |work_id|`int`|Идентификатор фактического разбиения.|Больше или равно 0.|  
 |input_name|`nvarchar(4000)`|Имя входных данных для чтения|Имя файла при использовании Hadoop.|  
 |read_location|`bigint`|Смещение или расположение чтения.|Смещение файла для чтения.|  
@@ -55,9 +55,8 @@ ms.locfileid: "89548517"
 |total_elapsed_time|`int`|Общее время в миллисекундах||
 |compute_pool_id|`int`|Уникальный идентификатор пула.|
 
-## <a name="see-also"></a>См. также  
- [Устранение неполадок в Polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>См. также:  
+ [Устранение неполадок в Polybase с помощью динамических административных представлений](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

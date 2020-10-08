@@ -21,19 +21,19 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f06228aaec7abb9d9eb7de6237be696319cd661f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550332"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834272"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Возвращает строку для каждой пользовательской базы данных (версии 11), которая в настоящее время находится в связи непрерывного копирования георепликации. Если для базы данных-источника инициировано несколько связей непрерывного копирования, эта таблица содержит по одной строке для каждой активной базы данных-получателя.  
   
-При использовании базы данных SQL версии 12 следует использовать [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (поскольку *sys. dm_continuous_copy_status* применяется только к версии 11).
+При использовании базы данных SQL версии 12 следует использовать [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (поскольку *sys.dm_continuous_copy_status* применимо только к версии 11).
 
   
 |Имя столбца|Тип данных|Описание|  
@@ -52,15 +52,14 @@ ms.locfileid: "89550332"
 ## <a name="permissions"></a>Разрешения  
  Для получения данных необходимо членство в роли базы данных **db_owner** . Пользователь dbo, члены роли базы данных **DBManager** и имя входа sa могут также запрашивать это представление.  
   
-## <a name="remarks"></a>Примечания  
- Представление **sys. dm_continuous_copy_status** создается в базе данных **ресурсов** и отображается во всех базах данных, включая логическую реплику. Однако запрос этого представления для логической базы данных master возвращает пустой набор.  
+## <a name="remarks"></a>Комментарии  
+ Представление **sys.dm_continuous_copy_status** создается в базе данных **ресурсов** и отображается во всех базах данных, включая логическую реплику. Однако запрос этого представления для логической базы данных master возвращает пустой набор.  
   
- Если отношение непрерывного копирования к базе данных завершается, строка для этой базы данных в представлении **sys. dm_continuous_copy_status** исчезает.  
+ Если отношение непрерывного копирования к базе данных завершается, строка для этой базы данных в представлении **sys.dm_continuous_copy_status** исчезает.  
   
- Как и представление **sys. dm_database_copies** , **sys. dm_continuous_copy_status** отражает состояние отношения непрерывного копирования, в котором база данных является первичной или активной базой данных-получателем. В отличие от **sys. dm_database_copies**, **sys. dm_continuous_copy_status** содержит несколько столбцов, содержащих сведения об операциях и производительности. К этим столбцам относятся **last_replication**и **replication_lag_sec**..  
+ Как и представление **sys.dm_database_copies** , **sys.dm_continuous_copy_status** отражает состояние отношения непрерывного копирования, в котором база данных является первичной или активной базой данных-получателем. В отличие **sys.dm_database_copies**от sys.dm_database_copies **sys.dm_continuous_copy_status** содержит несколько столбцов, содержащих сведения об операциях и производительности. К этим столбцам относятся **last_replication**и **replication_lag_sec**..  
   
 ## <a name="see-also"></a>См. также:  
- [sys. dm_database_copies &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Активные хранимые процедуры георепликации &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
-  
+ [sys.dm_database_copies &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [Активные хранимые процедуры георепликации &#40;Transact-SQL&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

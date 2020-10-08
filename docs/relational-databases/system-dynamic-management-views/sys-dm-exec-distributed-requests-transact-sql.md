@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_distributed_requests (Transact-SQL)
-title: sys. dm_exec_distributed_requests (Transact-SQL) | Документация Майкрософт
+description: sys.dm_exec_distributed_requests (Transact-SQL)
+title: sys.dm_exec_distributed_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2794dfd106c00531c1c1cff96571dbb59c0b67a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ceec8dbac1d66a516ad80e2e029fce2d5f405fc
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548600"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834372"
 ---
-# <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-SQL)
+# <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Содержит сведения обо всех запросах, которые в данный момент или недавно были активны в запросах Polybase. В нем отображается одна строка для каждого запроса или запроса.  
   
- В зависимости от идентификатора сеанса и запроса пользователь может получить фактически распределенные запросы, созданные для выполнения, с помощью sys. dm_exec_distributed_requests. Например, запрос, включающий обычные SQL и внешние таблицы SQL, будет разноситься в различные инструкции и запросы, выполняемые на различных узлах вычислений. Для трассировки распределенных шагов на всех вычислительных узлах мы представляем глобальный идентификатор выполнения, который можно использовать для трассировки всех операций на вычислительных узлах, связанных с одним конкретным запросом и оператором соответственно.  
+ На основе идентификатора сеанса и запроса пользователь может получить фактические распределенные запросы, созданные для выполнения, с помощью sys.dm_exec_distributed_requests. Например, запрос, включающий обычные SQL и внешние таблицы SQL, будет разноситься в различные инструкции и запросы, выполняемые на различных узлах вычислений. Для трассировки распределенных шагов на всех вычислительных узлах мы представляем глобальный идентификатор выполнения, который можно использовать для трассировки всех операций на вычислительных узлах, связанных с одним конкретным запросом и оператором соответственно.  
   
 |Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
@@ -47,9 +47,8 @@ ms.locfileid: "89548600"
 |end_time|**datetime**|Время, когда обработчик завершил компиляцию запроса.|Значение NULL для очереди или активных запросов; в противном случае допустимое значение DateTime меньше или равно текущему времени.|  
 |total_elapsed_time|**int**|Время, затраченное на выполнение с момента запуска запроса, в миллисекундах.|Между 0 и разностью между start_time и end_time. Если total_elapsed_time превышает максимальное значение для целого числа, total_elapsed_time будет продолжать быть максимальным значением. Это условие выдаст предупреждение "превышено максимальное значение". Максимальное значение в миллисекундах эквивалентно 24,8 дням.|  
   
-## <a name="see-also"></a>См. также  
- [Устранение неполадок в Polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>См. также:  
+ [Устранение неполадок в Polybase с помощью динамических административных представлений](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

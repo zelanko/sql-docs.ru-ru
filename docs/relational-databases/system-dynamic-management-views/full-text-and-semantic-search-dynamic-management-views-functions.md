@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4faaa92980259861682bf8e73aaca434d8e29e44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f2d7a48bfbccf174b26a08ec3a887f44247a457
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88374710"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834292"
 ---
 # <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Динамические административные представления Full-Text и семантического поиска — функции
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,6 +70,5 @@ ms.locfileid: "88374710"
   
 ## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Системные представления &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [Системные представления &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)  
   

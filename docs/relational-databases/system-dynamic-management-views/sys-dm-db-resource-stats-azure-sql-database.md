@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_resource_stats (база данных SQL Azure)
-title: sys. dm_db_resource_stats (база данных SQL Azure) | Документация Майкрософт
+title: sys.dm_db_resource_stats (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/27/2020
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 083a9d14803d0a8c4e34c43e338f58a0b44be5ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475034"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833705"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88475034"
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Время в формате UTC, указывающее окончание текущего отчетного интервала.|  
 |avg_cpu_percent|**Decimal (5, 2)**|Средний уровень использования вычислительных мощностей в процентах от предела для уровня службы.|  
-|avg_data_io_percent|**Decimal (5, 2)**|Среднее использование операций ввода-вывода данных в процентах от ограничения уровня службы. Сведения о масштабировании баз данных см. [в статье Статистика использования ресурсов при вводе](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)-выводе.|  
+|avg_data_io_percent|**Decimal (5, 2)**|Среднее использование операций ввода-вывода данных в процентах от ограничения уровня службы. Сведения о масштабировании баз данных см. [в статье Статистика использования ресурсов при вводе](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)-выводе.|  
 |avg_log_write_percent|**Decimal (5, 2)**|Среднее число операций записи в журнал транзакций (в Мбит/с) в процентах от пределов уровня службы.|  
 |avg_memory_usage_percent|**Decimal (5, 2)**|Средний уровень использования памяти в процентах от предела для уровня службы.<br /><br /> Сюда входит память, используемая для страниц буферного пула и хранения объектов OLTP в памяти.|  
 |xtp_storage_percent|**Decimal (5, 2)**|Использование хранилища для выполняющейся в памяти OLTP в процентах от ограничения уровня службы (в конце интервала отчетности). Сюда входит память, используемая для хранения следующих объектов OLTP в памяти: оптимизированных для памяти таблиц, индексов и табличных переменных. Он также включает память, используемую для обработки операций ALTER TABLE.<br /><br /> Возвращает 0, если выполняющаяся в памяти OLTP не используется в базе данных.|  
@@ -51,17 +51,17 @@ ms.locfileid: "88475034"
 |||
   
 > [!TIP]  
-> Дополнительные сведения об этих ограничениях и уровнях служб см. в разделах [уровни служб](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Ручная настройка производительности запросов в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/), [ограничения ресурсов базы данных SQL и управление ресурсами](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
+> Дополнительные сведения об этих ограничениях и уровнях служб см. в разделах [уровни служб](/azure/azure-sql/database/purchasing-models), [Ручная настройка производительности запросов в базе данных SQL Azure](/azure/azure-sql/database/performance-guidance), [ограничения ресурсов базы данных SQL и управление ресурсами](/azure/sql-database/sql-database-resource-limits-database-server).
   
 ## <a name="permissions"></a>Разрешения
  Для этого представления необходимо разрешение VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Комментарии
- Данные, возвращаемые **sys. dm_db_resource_stats** , выражаются в процентах от максимально допустимого уровня обслуживания и производительности, который вы используете.
+ Данные, возвращаемые **sys.dm_db_resource_stats** , выражаются в процентном отношении к максимально допустимому уровню обслуживания или уровня производительности, который вы используете.
  
  Если база данных была переключена на другой сервер за последние 60 минут, представление будет возвращать данные только за время отработки отказа.  
   
- Для менее детального представления этих данных с более длительным периодом хранения используйте представление каталога **sys. resource_stats** в базе данных **master** . Это представление сохраняет данные каждые 5 минут и сохраняет исторические данные в течение 14 дней.  Дополнительные сведения см. в статье [sys. resource_stats &#40;базе данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Для менее детального представления этих данных с более длительным периодом хранения используйте **sys.resource_stats** представление каталога в базе данных **master** . Это представление сохраняет данные каждые 5 минут и сохраняет исторические данные в течение 14 дней.  Дополнительные сведения см. в статье [sys.resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Если база данных является членом эластичного пула, то статистика ресурсов, представленная в виде процентных значений, выражается в процентах от максимального предела для баз данных, как указано в конфигурации эластичного пула.  
   
@@ -101,5 +101,5 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys. resource_stats &#40;&#41;уровней служб базы данных SQL Azure](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)
+## <a name="see-also"></a>См. также:  
+ [sys.resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [уровни служб](/azure/azure-sql/database/purchasing-models)

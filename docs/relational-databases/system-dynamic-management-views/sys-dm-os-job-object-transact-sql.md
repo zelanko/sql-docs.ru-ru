@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_job_object (база данных SQL Azure)
-title: sys. dm_os_job_object (база данных SQL Azure) | Документация Майкрософт
+title: sys.dm_os_job_object (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/03/2020
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3ed298216393b59d723eb58cac783f9836ce93d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8ee9c4054a9bb39f7eebcd30aa0fa9c85d7bde7
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489881"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834068"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -55,7 +55,6 @@ ms.locfileid: "88489881"
 ## <a name="permissions"></a>Разрешения  
 Для Управляемый экземпляр SQL требуется `VIEW SERVER STATE` разрешение. В Базе данных SQL требуется соответствующее разрешение `VIEW DATABASE STATE`.  
  
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 
-Дополнительные сведения об управляемых экземплярах см. в разделе [SQL управляемый экземпляр](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
-  
+Дополнительные сведения об управляемых экземплярах см. в разделе [SQL управляемый экземпляр](/azure/sql-database/sql-database-managed-instance).

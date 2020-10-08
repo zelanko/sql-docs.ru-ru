@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_compute_nodes (Transact-SQL)
-title: sys. dm_exec_compute_nodes (Transact-SQL) | Документация Майкрософт
+description: sys.dm_exec_compute_nodes (Transact-SQL)
+title: sys.dm_exec_compute_nodes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,14 +23,14 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f92655d1b489ddaf35ec8085d68a2059781ecb48
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 85a63b9df2e4d1bbb7a0f4c9096ae8ff192315eb
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542164"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834161"
 ---
-# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-SQL)
+# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
@@ -41,13 +41,12 @@ ms.locfileid: "89542164"
 |Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом. Ключ для этого представления.|Уникален в масштабном кластере независимо от типа.|  
-|тип|**nvarchar(32)**|Тип узла.|"COMPUTE", "HEAD"|  
+|type|**nvarchar(32)**|Тип узла.|"COMPUTE", "HEAD"|  
 |name|**nvarchar(32)**|Логическое имя узла.|Любая строка соответствующей длины.|  
 |address|**nvarchar(32)**|IP-адрес этого узла.|Диапазон IP-адресов|  
   
 ## <a name="see-also"></a>См. также:  
- [Устранение неполадок в Polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Устранение неполадок в Polybase с помощью динамических административных представлений](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   
