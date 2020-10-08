@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8fc0f34c860c9919d56d3d2c4645e9fea8bb428
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 341b021bbc582b2273f7601bfb993b4db40a4590
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042405"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725455"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
 
@@ -81,7 +81,7 @@ ms.locfileid: "89042405"
   
  <sup>2</sup> В версии 3.0 в форме исправления добавлена поддержка базы данных SQL Azure. Мы рекомендуем пользователям баз данных SQL Azure использовать последнюю версию драйвера.  
   
- <sup>3</sup> Microsoft JDBC Driver для SQL Server версии 2.0 и Microsoft JDBC Driver для SQL Server 2005 версии 1.2 могут подключаться к SQL Server 2008 в качестве клиента нижнего уровня. Когда допускается подключение к клиенту более низкого уровня с последующим преобразованием данных, приложения могут выполнять запросы и выполнять обновления для таких новых типов данных SQL Server 2008: time, date, datetime2, datetimeoffset и FILESTREAM. Дополнительные сведения о том, как использовать эти новые типы данных с помощью драйвера JDBC, см. в статьях  [Working with SQL Server 2008 Date/Time Data Types using v1.2 JDBC driver](https://go.microsoft.com/fwlink/?LinkId=145198) (Использование типов данных Date и Time в SQL Server 2008 с помощью драйвера JDBC 1.2) и  [Working with SQL Server 2008 Filestream using v1.2 JDBC driver](https://go.microsoft.com/fwlink/?LinkId=145199)(Использование типа данных Filestream в SQL Server 2008 с помощью драйвера JDBC). Дополнительные сведения об обратной совместимости новых типов данных см. в статьях  [Использование данных даты и времени](https://go.microsoft.com/fwlink/?LinkId=145211)и  [Поддержка FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=145212) в электронной документации по SQL Server.  
+ <sup>3</sup> Microsoft JDBC Driver для SQL Server версии 2.0 и Microsoft JDBC Driver для SQL Server 2005 версии 1.2 могут подключаться к SQL Server 2008 в качестве клиента нижнего уровня. Когда допускается подключение к клиенту более низкого уровня с последующим преобразованием данных, приложения могут выполнять запросы и выполнять обновления для таких новых типов данных SQL Server 2008: time, date, datetime2, datetimeoffset и FILESTREAM. Дополнительные сведения о том, как использовать эти новые типы данных с помощью драйвера JDBC, см. в статьях  [Working with SQL Server 2008 Date/Time Data Types using v1.2 JDBC driver](/archive/blogs/jdbcteam/) (Использование типов данных Date и Time в SQL Server 2008 с помощью драйвера JDBC 1.2) и  [Working with SQL Server 2008 Filestream using v1.2 JDBC driver](/archive/blogs/jdbcteam/)(Использование типа данных Filestream в SQL Server 2008 с помощью драйвера JDBC). Дополнительные сведения об обратной совместимости новых типов данных см. в статьях  [Использование данных даты и времени](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105))и  [Поддержка FILESTREAM](../../relational-databases/native-client/features/filestream-support.md) в электронной документации по SQL Server.  
   
  <sup>4</sup> Поддержка подключений между Microsoft JDBC Driver и хранилищем Parallel Data Warehouse была впервые реализована в Microsoft JDBC Driver 4.0 для SQL Server и обновлении 3 для устройства Parallel Data Warehouse в Microsoft SQL Server 2008 R2.  
   

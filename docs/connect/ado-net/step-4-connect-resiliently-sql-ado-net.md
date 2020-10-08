@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: d2a300ce4565d9eb6104dd73c89a7b30b7aa1e8e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391769"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725537"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET
 
@@ -41,7 +41,7 @@ ms.locfileid: "86391769"
   
 Программа должна отличать временные ошибки от постоянных. Временные ошибки — это условия возникновения ошибок, которые можно устранить в течение короткого периода времени, например, временные проблемы с сетью.  Примером постоянной ошибки может быть случай, когда программа содержит опечатку в имени целевой базы данных. В этом случае ошибка "No such database found" (Такой базы данных не найдено) будет сохраняться, и не будет устранена в течение короткого времени.  
   
-Список номеров ошибок, которые считаются временными сбоями, можно найти в статье [Troubleshooting connectivity issues and other errors with Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/) (Устранение неполадок с соединениями и других ошибок с Базой данных SQL Microsoft Azure)  
+Список номеров ошибок, которые считаются временными сбоями, можно найти в статье [Troubleshooting connectivity issues and other errors with Microsoft Azure SQL Database](/azure/sql-database/sql-database-develop-error-messages/) (Устранение неполадок с соединениями и других ошибок с Базой данных SQL Microsoft Azure)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Шаг 2. Создание и запуск примера приложения  
   
@@ -319,4 +319,4 @@ ERROR: Unable to access the database!
   
 ## <a name="next-steps"></a>Дальнейшие действия  
   
-Чтобы изучить другие лучшие методики и рекомендации по разработке, перейдите на [Подключение к базе данных SQL: ссылки, рекомендации и советы по разработке](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Чтобы изучить другие лучшие методики и рекомендации по разработке, перейдите на [Подключение к базе данных SQL: ссылки, рекомендации и советы по разработке](/azure/azure-sql/database/develop-overview)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529355"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725705"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Введение в пространство имен Microsoft.Data.SqlClient
 
@@ -77,7 +77,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### <a name="new-connection-string-property-synonyms"></a>Новые синонимы свойств строки подключения
 
-Для следующих свойств строки подключения были добавлены новые синонимы, чтобы избежать путаницы в свойствах, состоящих более чем из одного слова. Старые имена свойств будут по-прежнему поддерживаться для обратной совместимости, но при получении строки подключения из [SqlConnectionStringBuilder](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder) будут включаться новые свойства строки подключения.
+Для следующих свойств строки подключения были добавлены новые синонимы, чтобы избежать путаницы в свойствах, состоящих более чем из одного слова. Старые имена свойств будут по-прежнему поддерживаться для обратной совместимости, но при получении строки подключения из [SqlConnectionStringBuilder](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder) будут включаться новые свойства строки подключения.
 
 |Существующее свойство строки подключения|Новый синоним|
 |-----------------------------------|-----------|
@@ -214,11 +214,11 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
  [Разработка с использованием постоянного шифрования с поставщиком данных .NET Framework](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
- [Always Encrypted: защита конфиденциальных данных и хранение ключей шифрования в хранилище сертификатов Windows](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+ [Always Encrypted: защита конфиденциальных данных и хранение ключей шифрования в хранилище сертификатов Windows](/azure/sql-database/sql-database-always-encrypted)
 
 ### <a name="authentication"></a>Аутентификация
 
-С помощью параметра строки подключения _Аутентификация_ можно указать различные режимы проверки подлинности. Дополнительные сведения см. в [документации по SqlAuthenticationMethod](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2).
+С помощью параметра строки подключения _Аутентификация_ можно указать различные режимы проверки подлинности. Дополнительные сведения см. в [документации по SqlAuthenticationMethod](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2).
 
 > [!NOTE]
 > Настраиваемые поставщики хранилища ключей, например поставщик Azure Key Vault, необходимо обновить, чтобы они поддерживали Microsoft.Data.SqlClient. Также для поддержки Microsoft.Data.SqlClient необходимо обновить поставщики анклава.

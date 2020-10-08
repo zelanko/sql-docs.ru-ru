@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f5b3b210cb4e20bdf9585a7efdfd0f10aa19f29
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772826"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725797"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Просмотр состояния кластера больших данных 
 
@@ -24,7 +24,7 @@ ms.locfileid: "85772826"
 
 ## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Использование Azure Data Studio
 
-После скачивания последней **сборки предварительной оценки**[Azure Data Studio](https://aka.ms/getazuredatastudio) вы можете просматривать конечные точки служб и состояние кластера больших данных с помощью панели мониторинга кластера больших данных SQL Server. Некоторые из приведенных ниже функций появились в сборке предварительной оценки Azure Data Studio впервые.
+После скачивания последней **сборки предварительной оценки**[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) вы можете просматривать конечные точки служб и состояние кластера больших данных с помощью панели мониторинга кластера больших данных SQL Server. Некоторые из приведенных ниже функций появились в сборке предварительной оценки Azure Data Studio впервые.
 
 1. Сначала создайте подключение к кластеру больших данных в Azure Data Studio. Дополнительные сведения см. в статье [Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio](connect-to-big-data-cluster.md).
 
@@ -83,11 +83,11 @@ ms.locfileid: "85772826"
 
 ## <a name="use-azdata"></a>Использование azdata
 
-Для просмотра обеих конечных точек и состояния кластера также можно использовать команды [azdata](deploy-install-azdata.md).
+Для просмотра обеих конечных точек и состояния кластера также можно использовать команды [azdata](../azdata/install/deploy-install-azdata.md).
 
 ### <a name="service-endpoints"></a>Конечные точки служб
 
-1. Войдите в кластер больших данных с помощью [azdata login](reference-azdata.md). Задайте для параметра **--controller-endpoint** значение внешнего IP-адреса конечной точки контроллера.
+1. Войдите в кластер больших данных с помощью [azdata login](../azdata/reference/reference-azdata.md). Задайте для параметра **--controller-endpoint** значение внешнего IP-адреса конечной точки контроллера.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -100,7 +100,7 @@ ms.locfileid: "85772826"
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. Выполните команду [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md), чтобы получить список с описанием каждой конечной точки и соответствующими значениями IP-адреса и порта. 
+1. Выполните команду [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md), чтобы получить список с описанием каждой конечной точки и соответствующими значениями IP-адреса и порта. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -126,7 +126,7 @@ ms.locfileid: "85772826"
 
 ### <a name="view-cluster-status"></a>Просмотр состояния кластера
 
-Проверить состояние кластера можно с помощью команды [`azdata bdc status show`](reference-azdata-bdc-status.md).
+Проверить состояние кластера можно с помощью команды [`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show
@@ -211,7 +211,7 @@ azdata bdc status show
 
 ### <a name="view-specific-resource-status"></a>Просмотр состояния конкретного ресурса
 
-Состояние конкретного ресурса в кластере можно просмотреть с помощью команды [azdata bdc status show](reference-azdata-bdc-status.md). При использовании этой команды можно фильтровать результаты с помощью параметра `--resource`. Ниже приведены некоторые примеры входных данных для параметра `--resource`.
+Состояние конкретного ресурса в кластере можно просмотреть с помощью команды [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md). При использовании этой команды можно фильтровать результаты с помощью параметра `--resource`. Ниже приведены некоторые примеры входных данных для параметра `--resource`.
 
 - master
 - управляющие
@@ -316,7 +316,7 @@ azdata bdc status show --all --resource storage-0
 
 ### <a name="view-controller-status"></a>Просмотр состояния контроллера
 
-Состояние контроллера можно увидеть с помощью команды [`azdata bdc control status show`](reference-azdata-bdc-control-status.md). Она предоставляет аналогичные ссылки на панели мониторинга, связанные с компонентами контроллера в кластере больших данных.
+Состояние контроллера можно увидеть с помощью команды [`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md). Она предоставляет аналогичные ссылки на панели мониторинга, связанные с компонентами контроллера в кластере больших данных.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

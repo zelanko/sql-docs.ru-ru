@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 27b9c232fe785d3c016848f3bb952236b8e7cd75
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: b53e71c4c302145af14c1f2e37f30fe0e3c8f8e2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85110159"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725725"
 ---
 # <a name="data-discovery-and-classification-in-sqlclient"></a>Обнаружение и классификация данных в SqlClient
 
@@ -24,7 +24,7 @@ ms.locfileid: "85110159"
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-Набор функций [обнаружения и классификации данных SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) служит для обнаружения конфиденциальных данных в базах данных, их классификации, назначения им меток и создания отчетов. SqlClient включает API, предоставляющий сведения об обнаружении и классификации данных только для чтения, если базовый источник поддерживает эту функцию. Доступ к этим сведениям осуществляется через SqlDataReader.
+Набор функций [обнаружения и классификации данных SQL](../../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017) служит для обнаружения конфиденциальных данных в базах данных, их классификации, назначения им меток и создания отчетов. SqlClient включает API, предоставляющий сведения об обнаружении и классификации данных только для чтения, если базовый источник поддерживает эту функцию. Доступ к этим сведениям осуществляется через SqlDataReader.
 
 В этом примере приложения показано, как получить доступ к свойствам классификации данных SqlDataReader.
 
@@ -32,4 +32,4 @@ ms.locfileid: "85110159"
 
 **См. также:**  
 
- [Функции SQL Server и ADO.NET](sql-server-features-adonet.md)   
+ [Функции SQL Server и ADO.NET](sql-server-features-adonet.md)

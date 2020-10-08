@@ -11,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a6faff357f036f521a88fa37b15db5ead82b5758
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 85b7c9f681a79a3678b932c63f755fc01d543100
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529405"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726596"
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
 Используйте платформу данных SQL от Майкрософт для создания ориентированных на данные решений на мобильных устройствах и рабочих столах для веб-серверов, корпоративных серверов и облака.  
 
 ## <a name="sql-data-storage"></a>Хранение данных SQL
 * [Компонент SQL Server Database Engine](../database-engine/install-windows/install-sql-server-database-engine.md). Компонент ядра СУБД SQL Server используется для создания реляционных баз данных, для обработки транзакций в сети или для интерактивной аналитической обработки. 
-* [Azure SQL.](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) Использование SQL Azure для перемещения базы данных в облако 
+* [Azure SQL.](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) Использование SQL Azure для перемещения базы данных в облако 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709). SQL Server Compact используется для создания автономных и периодически подключаемых приложений для мобильных устройств, рабочих столов и веб-клиентов.
-* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md). Используйте LocalDB в процессе разработки для написания и тестирования кода Transact-SQL без необходимости управления полным экземпляром SQL Server.
+* [LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md). Используйте LocalDB в процессе разработки для написания и тестирования кода Transact-SQL без необходимости управления полным экземпляром SQL Server.
 
 ## <a name="sql-data-tools"></a>Инструменты SQL Data
 * [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). Azure Data Studio используется в Windows, macOS и Linux для запуска SQL Server, Базы данных SQL Azure, PostgreSQL, Jupyter Notebooks и т. д.

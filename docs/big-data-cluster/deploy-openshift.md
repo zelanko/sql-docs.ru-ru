@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c8dad935a404d682cf5c627a09795bf257efc209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86553029"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725885"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в локальной среде OpenShift и Azure Red Hat OpenShift
 
@@ -88,7 +88,7 @@ ms.locfileid: "86553029"
 
 ## <a name="deploy-big-data-cluster"></a>Развертывание кластера больших данных
 
-1. Установите последний [azdata](deploy-install-azdata.md).
+1. Установите последний [azdata](../azdata/install/deploy-install-azdata.md).
 
 1. Клонируйте один из встроенных файлов конфигурации для OpenShift в зависимости от целевой среды (локальная среда OpenShift или АТО) и сценария развертывания. Параметры для OpenShift во встроенных файлах конфигурации описаны в подразделе *Параметры для OpenShift в файлах конфигурации развертывания* ниже. Дополнительные сведения о доступных файлах конфигурации см. в [руководстве по развертыванию](deployment-guidance.md).
 

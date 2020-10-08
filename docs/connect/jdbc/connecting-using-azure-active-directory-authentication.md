@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117133"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725475"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Установка подключения с использованием проверки подлинности Azure Active Directory
 
@@ -24,7 +24,7 @@ ms.locfileid: "91117133"
 
 В этой статье содержатся сведения о разработке приложений Java для использования функции проверки подлинности Azure Active Directory в Microsoft JDBC Driver for SQL Server.
 
-Вы можете использовать проверку подлинности Azure Active Directory, которая является механизмом подключения к Базе данных SQL Azure версии 12 с помощью удостоверений в Azure Active Directory. Проверка подлинности Azure Active Directory используется для централизованного управления удостоверениями пользователей базы данных и в качестве альтернативы проверке подлинности SQL Server. JDBC Driver позволяет указать учетные данные Azure Active Directory в строке подключения JDBC для подключения к Базе данных SQL Azure. Сведения о настройке проверки подлинности Azure Active Directory см. в [этой статье](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+Вы можете использовать проверку подлинности Azure Active Directory, которая является механизмом подключения к Базе данных SQL Azure версии 12 с помощью удостоверений в Azure Active Directory. Проверка подлинности Azure Active Directory используется для централизованного управления удостоверениями пользователей базы данных и в качестве альтернативы проверке подлинности SQL Server. JDBC Driver позволяет указать учетные данные Azure Active Directory в строке подключения JDBC для подключения к Базе данных SQL Azure. Сведения о настройке проверки подлинности Azure Active Directory см. в [этой статье](/azure/azure-sql/database/authentication-aad-overview). 
 
 Для поддержки проверки подлинности Azure Active Directory в Microsoft JDBC Driver for SQL Server доступны следующие свойства подключения:
 *   **authentication**:  с помощью этого свойства можно указать метод проверки подлинности SQL, используемый для установки подключения. Возможны следующие значения: 
@@ -287,7 +287,7 @@ You have successfully logged on as: <your user name>
     12. На панели слева щелкните Azure Active Directory. В разделе "Регистрация приложений" найдите вкладку End points (Конечные точки). Скопируйте URL-адрес в разделе OATH 2.0 TOKEN ENDPOINT (Конечная точка токена OATH 2.0). Это URL-адрес службы токенов безопасности.
     
     ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Войдите в систему пользовательской базы данных Azure SQL Server в качестве администратора Azure Active Directory и с помощью команды T-SQL подготовьте пользователя автономной базы данных для субъекта приложения. Сведения о создании администратора Azure Active Directory и пользователя автономной базы данных см. в [этой статье](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).
+2. Войдите в систему пользовательской базы данных Azure SQL Server в качестве администратора Azure Active Directory и с помощью команды T-SQL подготовьте пользователя автономной базы данных для субъекта приложения. Сведения о создании администратора Azure Active Directory и пользователя автономной базы данных см. в [этой статье](/azure/azure-sql/database/authentication-aad-overview).
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
@@ -351,4 +351,4 @@ public class AADTokenBased {
 ```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
-``` 
+```

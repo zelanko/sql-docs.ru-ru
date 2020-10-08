@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4c88a8ccbc242b0fd85c66acfb3539ec260c58dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3923db97ce144662f7fe5410c13278862d1ab6a1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928939"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725683"
 ---
 # <a name="asynchronous-operations"></a>Асинхронные операции
 
@@ -26,7 +26,7 @@ ms.locfileid: "80928939"
 Платформа .NET предоставляет несколько стандартных шаблонов асинхронного проектирования, которые разработчики могут использовать, чтобы воспользоваться преимуществами фоновых потоков и освобождения пользовательского интерфейса или потоков с высоким приоритетом для выполнения других операций в своем классе <xref:Microsoft.Data.SqlClient.SqlCommand>. В частности, методы <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>и <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>, связанные с методами <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> и <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A>, обеспечивают асинхронную поддержку.  
   
 > [!NOTE]
->  Асинхронное программирование — это основная функция .NET. Дополнительные сведения о разных видах асинхронной техники, доступных разработчикам, см. в статье [Асинхронный вызов синхронных методов](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously).  
+>  Асинхронное программирование — это основная функция .NET. Дополнительные сведения о разных видах асинхронной техники, доступных разработчикам, см. в статье [Асинхронный вызов синхронных методов](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously).  
   
 Несмотря на то, что использование асинхронных методов с функциями ADO.NET не добавляет никаких особых соображений, важно помнить о преимуществах создания многопоточных приложений и о их ловушках. В приведенных в этом разделе примерах указываются некоторые важные проблемы, которые необходимо учитывать при создании приложений с многопоточной функциональностью.  
   
@@ -42,4 +42,4 @@ ms.locfileid: "80928939"
   
 ## <a name="next-steps"></a>Дальнейшие действия
 - [SQL Server и ADO.NET](index.md)
-- [Асинхронный вызов синхронных методов](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)
+- [Асинхронный вызов синхронных методов](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)

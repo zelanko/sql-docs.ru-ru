@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2d9b12cb2042b1e67e13057345056cfcb0105f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438406"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725530"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Функции поддержки разных языков JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,15 +55,14 @@ ms.locfileid: "88438406"
 ## <a name="collation-support"></a>Поддержка параметров сортировки  
  В версии JDBC Driver 3.0 поддерживаются все параметры сортировки, поддерживаемые [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], а также новые параметры сортировки и новые версии имен параметров сортировки Windows, реализованные в [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
- Дополнительные сведения о параметрах сортировки см. в разделах [Поддержка параметров сортировки и Юникода](https://go.microsoft.com/fwlink/?LinkId=131366) и [Имя параметров сортировки Windows (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о параметрах сортировки см. в разделах [Поддержка параметров сортировки и Юникода](/previous-versions/sql/sql-server-2008-r2/ms143503(v=sql.105)) и [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-international-domain-names-idn"></a>Использование международных доменных имен (IDN)  
  JDBC Driver 6.0 для SQL Server поддерживает использование международных доменных имен (IDN), которые при необходимости могут преобразовать имя сервера в Юникоде в кодировку, совместимую с ASCII (Punycode), во время подключения.  Если международные доменные имена хранятся в системе доменных имен (DNS) в виде строк ASCII в формате Punycode (как указано в RFC 3490), включите преобразование имени сервера в Юникоде, задав для свойства serverNameAsACE значение true.  В противном случае, если служба DNS настроена на использование символов Юникода, задайте для свойства serverNameAsACE значение false (по умолчанию).  Для более старых версий JDBC Driver можно также преобразовать имя сервера в Punycode с помощью методов [IDN.toASCII Java](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html), прежде чем устанавливать это свойство для подключения.  
   
 > [!NOTE]  
->  Большинство программ сопоставителя, написанных для платформ, отличных от Windows, основано на интернет-стандартах DSN, поэтому для международных доменных имен чаще всего используется формат Punycode, хотя DNS-сервер под управлением Windows в частной сети можно в индивидуальном порядке настроить на использование символов UTF-8.  Дополнительные сведения см. в разделе [Поддержка символов Юникода](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
+>  Большинство программ сопоставителя, написанных для платформ, отличных от Windows, основано на интернет-стандартах DSN, поэтому для международных доменных имен чаще всего используется формат Punycode, хотя DNS-сервер под управлением Windows в частной сети можно в индивидуальном порядке настроить на использование символов UTF-8.  Дополнительные сведения см. в разделе [Поддержка символов Юникода](/previous-versions/windows/it-pro/windows-server-2003/cc738403(v=ws.10)).  
   
 ## <a name="see-also"></a>См. также раздел  
  [Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
   

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 904f90d5758fe158fac1737c6cab79dc51ef857a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f55cb14a95844558e4a759a4acce71509d62d4ba
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924310"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725625"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Изменение данных больших значений (max) в ADO.NET
 
@@ -27,7 +27,7 @@ ms.locfileid: "80924310"
   
 Типы данных `max` можно использовать для сравнения как переменные языка Transact-SQL, а также для объединения. Кроме того, их можно использовать в предложениях DISTINCT, ORDER BY и GROUP BY инструкции SELECT, а также в агрегатах, объединениях и вложенных запросах.
 
-Дополнительные сведения о типах данных больших значений см. в [этой статье](https://go.microsoft.com/fwlink/?LinkId=120498) в электронной документации на SQL Server.
+Дополнительные сведения о типах данных больших значений см. в [этой статье](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100)) в электронной документации на SQL Server.
   
 ## <a name="large-value-type-restrictions"></a>Ограничения типов больших значений  
 Приведенные ниже ограничения применяются к типам данных `max`, которые не существуют для типов данных меньших значений.  

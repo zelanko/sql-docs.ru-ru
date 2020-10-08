@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db42b544127041a0d06cce8ff5f94466198bfa9f
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860572"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725869"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Настройка параметров развертывания для кластерных ресурсов и служб
 
@@ -171,7 +171,7 @@ ms.locfileid: "88860572"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Установка azdata](deploy-install-azdata.md).
+- [Установка azdata](../azdata/install/deploy-install-azdata.md).
 
 - В каждом из примеров в этом разделе предполагается, что вы создали копию одной из стандартных конфигураций. Дополнительные сведения см. в статье [Создание настраиваемой конфигурации](deployment-guidance.md#customconfig). Например, следующая команда создает каталог с именем `custom-bdc`, содержащий два файла конфигурации развертывания JSON — `bdc.json` и `control.json`, основанных на конфигурации по умолчанию `aks-dev-test`:
 

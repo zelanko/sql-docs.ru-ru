@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c051a634199bf6a8adc9a0b52a73196f68901893
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64352409e567c5854d348dce8e6545317b41bc01
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730603"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725825"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>Управление кластерами больших данных для информационной панели контроллера SQL Server
 
@@ -27,14 +27,14 @@ ms.locfileid: "85730603"
 
 Для запуска записной книжки требуются следующие компоненты:
 
-* последняя версия [Azure Data Studio](https://aka.ms/getazuredatastudio);
+* последняя версия [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md);
 * [расширение [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], установленное в Azure Data Studio](../azure-data-studio/data-virtualization-extension.md).
 
 Помимо перечисленных выше компонентов, для работы кластера больших данных SQL Server 2019 требуется следующее:
 
 * **azdata**
-    - [Установщик Windows](deploy-install-azdata-installer.md)
-    - [Диспетчер пакетов Linux](deploy-install-azdata-linux-package.md)
+    - [Установщик Windows](../azdata/install/deploy-install-azdata-installer.md)
+    - [Диспетчер пакетов Linux](../azdata/install/deploy-install-azdata-linux-package.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI](/cli/azure/install-azure-cli)
 

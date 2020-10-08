@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d5c44c11d9f5158abc52634f648a4159f86c143
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988509"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726615"
 ---
 # <a name="connection-modules-for-microsoft-sql-database"></a>Модули подключения для баз данных Microsoft SQL
 
-В этой статье содержатся ссылки для загрузки модулей подключения или *драйверов*, которые клиентские программы могут использовать для взаимодействия с [Microsoft SQL Server](../relational-databases/database-features.md), а также с двойником в облаке [Базы данных SQL Azure](/azure/sql-database/). Драйверы доступны для различных языков, работающих в следующих операционных системах:
+В этой статье содержатся ссылки для загрузки модулей подключения или *драйверов*, которые клиентские программы могут использовать для взаимодействия с [Microsoft SQL Server](../relational-databases/databases/databases.md), а также с двойником в облаке [Базы данных SQL Azure](/azure/sql-database/). Драйверы доступны для различных языков, работающих в следующих операционных системах:
 
 - Linux
 - macOS
@@ -54,7 +54,7 @@ ms.locfileid: "87988509"
 
 | Язык | Скачать драйвер ORM |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework 6 или более поздняя версия](https://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework 6 или более поздняя версия](/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, входящая в установку Laravel](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/) |
@@ -85,7 +85,7 @@ ms.locfileid: "87988509"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-- [Примеры кода для подключения к Базе данных SQL Azure в облаке с использованием Java и других языков](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Примеры кода для подключения к Базе данных SQL Azure в облаке с использованием Java и других языков](/azure/sql-database/sql-database-connect-query-java).
 
 <!--
 Image references, **obsolete** markdown syntax alternative:

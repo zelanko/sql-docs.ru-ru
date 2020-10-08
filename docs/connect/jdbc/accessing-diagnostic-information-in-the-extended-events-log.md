@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 6d9b75ea8c722ca753e831811226b8128df15266
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922250"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725510"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Доступ к диагностическим сведениям в журнале расширенных событий
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "82922250"
   
  Идентификатор подключения клиента можно получить программными средствами с помощью [интерфейса ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). Идентификатор соединения также содержится во всех связанных с соединением исключениях.  
   
- В случае ошибки соединения идентификатор соединения клиента в трассировочной информации встроенной диагностики (BID) сервера и в кольцевом буфере соединений поможет сопоставить клиентские соединения с соединениями на сервере. Дополнительные сведения о трассировке BID на сервере см. в разделе [Трассировка доступа к данным](https://go.microsoft.com/fwlink/?LinkId=125805). Обратите внимание, что в статье о трассировке доступа к данным также содержатся соответствующие сведения, неприменимые к [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. См. статью о [трассировке операций драйвера с использованием [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]](../../connect/jdbc/tracing-driver-operation.md).  
+ В случае ошибки соединения идентификатор соединения клиента в трассировочной информации встроенной диагностики (BID) сервера и в кольцевом буфере соединений поможет сопоставить клиентские соединения с соединениями на сервере. Дополнительные сведения о трассировке BID на сервере см. в разделе [Трассировка доступа к данным](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)). Обратите внимание, что в статье о трассировке доступа к данным также содержатся соответствующие сведения, неприменимые к [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. См. статью о [трассировке операций драйвера с использованием [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]](../../connect/jdbc/tracing-driver-operation.md).  
   
  Драйвер JDBC также отсылает идентификатор действия определенного процесса. Идентификатор активности регистрируется в сеансах расширенных событий, если сеанс запущен со включенным параметром TRACK_CAUSAILITY. В случае проблем с производительностью активного соединения получить идентификатор действия можно из трассировки клиента (поле ActivityID), а затем найти этот идентификатор действия в выходных данных расширенных событий. Идентификатором действия в расширенных событиях является 16-байтовый идентификатор GUID (который отличается от идентификатора GUID соединения клиента), к которому добавляется порядковый номер из четырех байт. Этот порядковый номер представляет порядок запроса в потоке. Значение ActivityId отправляется для пакетных инструкций SQL и запросов RPC. Чтобы включить отправку значения ActivityId на сервер, сначала необходимо указать следующую пару «ключ-значение» в файле Logging.Properties:  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
   
 ## <a name="see-also"></a>См. также раздел
 
-[Диагностика проблем с JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+[Диагностика проблем с JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)

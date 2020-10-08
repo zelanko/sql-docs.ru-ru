@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d3905604b45eec2f1e9c7c1c93bd53b1863695f3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b5f4500645b60a98dd97166e12bdf0899149b1c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925470"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725605"
 ---
 # <a name="query-notifications-in-sql-server"></a>Уведомления запросов в SQL Server
 
@@ -35,19 +35,19 @@ ms.locfileid: "80925470"
   
 Уведомления можно настроить для инструкций SELECT и EXECUTE. При использовании инструкции EXECUTE SQL Server регистрирует уведомление о выполненной команде, а не саму инструкцию EXECUTE. Команда должна соответствовать требованиям, предъявляемым к инструкции SELECT. Если регистрируемая команда состоит из нескольких инструкций, ядро СУБД создает уведомления для каждой из них.  
   
-При разработке приложения, где нужны надежные, передаваемые за доли секунды уведомления об изменении данных, см. подразделы **Планирование эффективной стратегии уведомлений о запросах** и **Альтернативные подходы к уведомлениям о запросах** в разделе [Планирование уведомлений](https://go.microsoft.com/fwlink/?LinkId=211984) электронной документации на SQL Server. Дополнительные сведения об уведомлениях о запросах и SQL Server Service Broker см. по следующим ссылкам в электронной документации на SQL Server.  
+При разработке приложения, где нужны надежные, передаваемые за доли секунды уведомления об изменении данных, см. подразделы **Планирование эффективной стратегии уведомлений о запросах** и **Альтернативные подходы к уведомлениям о запросах** в разделе [Планирование уведомлений](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105)) электронной документации на SQL Server. Дополнительные сведения об уведомлениях о запросах и SQL Server Service Broker см. по следующим ссылкам в электронной документации на SQL Server.  
   
 **Документация по SQL Server**  
   
-- [Использование уведомлений запросов](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [Использование уведомлений запросов](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [Создание запроса для уведомления](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [Создание запроса для уведомления](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Разработка (компонент Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [Разработка (компонент Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Информационный центр по компоненту Service Broker для разработчиков](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Информационный центр по компоненту Service Broker для разработчиков](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [Руководство разработчика (компонент Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Руководство разработчика (компонент Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>В этом разделе  
 [Включение уведомлений запросов](enable-query-notifications.md)  

@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6c5ec4c058edc0f1d63aee7c0ab305d9becfdc56
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 53d7b050fe1269f704a38ca5542c0dae6fdfd0f7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790317"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725005"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>Настройка Apache Spark и Apache Hadoop в Кластерах больших данных
 
@@ -155,5 +155,5 @@ ms.locfileid: "87790317"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 - [Свойства конфигурации Apache Spark и Apache Hadoop (HDFS).](reference-config-spark-hadoop.md)
-- [Справочник `azdata`](reference-azdata.md)
+- [Справочник `azdata`](../azdata/reference/reference-azdata.md)
 - [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

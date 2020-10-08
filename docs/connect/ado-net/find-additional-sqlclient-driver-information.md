@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 26ee3500511ca937e0712b9338ba9a796b3a8a45
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: 1ae61c177686f072729c1763974c1cdc3d00baa7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85106889"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725715"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>Поиск дополнительных сведений о драйвере SqlClient
 
@@ -32,7 +32,7 @@ ms.locfileid: "85106889"
 |--------------|-----------------|  
 |[Репозиторий GitHub среды выполнения .NET](https://github.com/dotnet/runtime)|Этот репозиторий содержит реализацию библиотеки для .NET Core.|
 |[Репозиторий поставщика данных Microsoft SqlClient для SQL Server на сайте GitHub](https://github.com/dotnet/SqlClient)|Этот репозиторий содержит исходный код драйвера SqlClient.|  
-|[Обозреватель .NET API](https://docs.microsoft.com/dotnet/api/)|Этот сайт содержит сведения об API драйвера для .NET.|  
+|[Обозреватель .NET API](/dotnet/api/)|Этот сайт содержит сведения об API драйвера для .NET.|  
   
 ## <a name="next-steps"></a>Дальнейшие действия
- [Общие сведения о драйвере SqlClient](overview-sqlclient-driver.md)  
+ [Общие сведения о драйвере SqlClient](overview-sqlclient-driver.md)

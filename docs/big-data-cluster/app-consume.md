@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45c89f83ca8d478eac40be867bbde946ce8e51d8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 12767b789fee400130990f6451a8a29e5bce6605
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681069"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725095"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Использование приложения, развернутого в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], с помощью веб-службы на основе REST
 
@@ -26,7 +26,7 @@ ms.locfileid: "88681069"
 ## <a name="prerequisites"></a>предварительные требования
 
 - [Кластер больших данных SQL Server](deployment-guidance.md)
-- [Служебная программа командной строки azdata](deploy-install-azdata.md)
+- [Служебная программа командной строки azdata](../azdata/install/deploy-install-azdata.md)
 - Приложение, развернутое с помощью [azdata](app-create.md) или [расширения развертывания приложения](app-deployment-extension.md)
 
 > [!NOTE]

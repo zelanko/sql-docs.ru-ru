@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 06abbc88d80dffba14a48d82561dd4db1a2eb68e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cbeac11486783b8eb2f0de59bd34e72234c8ea68
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924324"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725616"
 ---
 # <a name="large-udts"></a>Большие UDT
 
@@ -27,7 +27,7 @@ ms.locfileid: "80924324"
   
 Ранее размер определяемых пользователем типов был ограничен 8 килобайтами. Это ограничение было снято в SQL Server 2008 для определяемых пользователем типов, имеющих формат <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined>.  
   
-Полную документацию по пользовательским типам см. в разделе [Определяемые пользователем типы данных CLR](https://go.microsoft.com/fwlink/?LinkId=98366) в электронной документации по SQL Server.
+Полную документацию по пользовательским типам см. в разделе [Определяемые пользователем типы данных CLR](/previous-versions/sql/sql-server-2008/ms131120(v=sql.100)) в электронной документации по SQL Server.
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Получение схем пользовательского типа с помощью GetSchema  
 Метод <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> <xref:Microsoft.Data.SqlClient.SqlConnection> возвращает сведения о схеме базы данных в <xref:System.Data.DataTable>.
@@ -110,4 +110,3 @@ reader.close
   
 ## <a name="next-steps"></a>Дальнейшие действия
 - [Двоичные данные и данные больших значений SQL Server](sql-server-binary-large-value-data.md)
- 

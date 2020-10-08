@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f44991b2ea59d3f6cf6e1cf5a2bd653f270aa1ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896246"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725585"
 ---
 # <a name="sql-server-express-user-instances"></a>Пользовательские экземпляры SQL Server Express
 
@@ -113,7 +113,7 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  Пользовательские экземпляры не поддерживаются в коде среды CLR, который выполняется в SQL Server. Если для объекта <xref:Microsoft.Data.SqlClient.SqlConnection>, в котором в строке подключения указано значение `User Instance=true`, вызывается `Open`, выдается исключение <xref:System.InvalidOperationException>.  
+>  Пользовательские экземпляры не поддерживаются в коде среды CLR, который выполняется в SQL Server. Если для объекта <xref:System.InvalidOperationException>, в котором в строке подключения указано значение `Open`, вызывается <xref:Microsoft.Data.SqlClient.SqlConnection>, выдается исключение `User Instance=true`.  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>Время существования подключения пользовательского экземпляра  
 В отличие от версий SQL Server, которые запускаются как службы, экземпляры SQL Server Express не нужно запускать и останавливать вручную. Каждый раз, когда пользователь входит в систему и подключается к пользовательскому экземпляру, экземпляр запускается, если он еще не запущен. Для баз данных пользовательских экземпляров задан параметр `AutoClose`. Это позволяет автоматически завершать работу базы данных по истечении периода бездействия. Запущенный процесс sqlservr.exe выполняется в течение ограниченного времени ожидания после закрытия последнего подключения с экземпляром. Таким образом его не нужно перезапускать при открытии другого подключения до истечения времени ожидания. Пользовательский экземпляр автоматически завершает работу, если до истечения времени ожидания не будет открыто новое подключение. Администратор системы на родительском экземпляре может устанавливать длительность времени ожидания для пользовательского экземпляра при помощи процедуры **sp_configure**, которая изменяет параметр **user instance timeout**. Значение по умолчанию — 60 минут.  
@@ -143,7 +143,7 @@ private static void OpenSqlConnection()
   
 - Любое приложение с одним пользователем, в котором не требуется совместное использование данных.  
   
-- Развертывание ClickOnce. Если .NET Framework 2.0 (или более поздняя версия) либо .NET Core 1.0 (или более поздняя версия), а также SQL Server Express уже установлены на целевом компьютере, пакет установки, загруженный как результат действия ClickOnce, может быть установлен и использован пользователями, не имеющими административных привилегий. Обратите внимание, что администратор должен установить SQL Server Express, если он является частью процесса установки. Дополнительные сведения см. в статье [ClickOnce Deployment for Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms) (Развертывание ClickOnce для Windows Forms).
+- Развертывание ClickOnce. Если .NET Framework 2.0 (или более поздняя версия) либо .NET Core 1.0 (или более поздняя версия), а также SQL Server Express уже установлены на целевом компьютере, пакет установки, загруженный как результат действия ClickOnce, может быть установлен и использован пользователями, не имеющими административных привилегий. Обратите внимание, что администратор должен установить SQL Server Express, если он является частью процесса установки. Дополнительные сведения см. в статье [ClickOnce Deployment for Windows Forms](/dotnet/framework/winforms/clickonce-deployment-for-windows-forms) (Развертывание ClickOnce для Windows Forms).
   
 - Выделенное размещение ASP.NET с использованием проверки подлинности Windows. В интрасети может размещаться один экземпляр SQL Server Express. Приложение подключается с помощью учетной записи ASP.NET Windows, а не с использованием олицетворения. Пользовательские экземпляры не следует использовать для сценариев сторонних разработчиков или совместного размещения, где все приложения совместно используют один пользовательский экземпляр и больше не изолированы друг от друга.  
   

@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: fba6b9523b4b22ccaa4bdf9047b8f1bfda05aa79
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: aa13708615610effcb524c4cdf087b6302045a3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85106906"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725695"
 ---
 # <a name="overview-of-the-sqlclient-driver"></a>Общие сведения о драйвере SqlClient
 
@@ -39,4 +39,4 @@ ms.locfileid: "85106906"
 
 ## <a name="next-steps"></a>Дальнейшие действия
  [Репозиторий GitHub для драйвера SqlClient](https://github.com/dotnet/SqlClient)  
- [Обозреватель .NET API](https://docs.microsoft.com/dotnet/api/)
+ [Обозреватель .NET API](/dotnet/api/)

@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392182"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725855"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Обновление [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -60,10 +60,10 @@ ms.locfileid: "89392182"
 1. Обновите `azdata`.
 
    Следуйте инструкциям по установке `azdata`. 
-   - [Установщик Windows](deploy-install-azdata-installer.md)
-   - [Linux — apt](deploy-install-azdata-linux-package.md)
-   - [Linux — yum](deploy-install-azdata-yum.md)
-   - [Linux — zypper](deploy-install-azdata-zypper.md)
+   - [Установщик Windows](../azdata/install/deploy-install-azdata-installer.md)
+   - [Linux — apt](../azdata/install/deploy-install-azdata-linux-package.md)
+   - [Linux — yum](../azdata/install/deploy-install-azdata-yum.md)
+   - [Linux — zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
    >Если `azdata` был установлен с помощью `pip`, необходимо вручную удалить его перед установкой с помощью установщика Windows или диспетчера пакетов Linux.

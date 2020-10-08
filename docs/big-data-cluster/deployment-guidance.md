@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765773"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725875"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes
 
@@ -80,7 +80,7 @@ kubectl config view
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- [Расширение Data Virtualization](../azure-data-studio/data-virtualization-extension.md) для Azure Data Studio
+- [Расширение Data Virtualization](../azure-data-studio/extensions/data-virtualization-extension.md) для Azure Data Studio
 
 
 ## <a name="deployment-overview"></a><a id="deploy"></a> Общие сведения о развертывании
@@ -255,7 +255,7 @@ Cluster deployed successfully.
    > [!TIP]
    > Если вы не изменили имя по умолчанию во время развертывания, используйте `-n mssql-cluster` в предыдущей команде. `mssql-cluster` — это имя по умолчанию для кластера больших данных.
 
-1. Войдите в кластер больших данных с помощью [azdata login](reference-azdata.md). Задайте для параметра `--endpoint` значение внешнего IP-адреса конечной точки контроллера.
+1. Войдите в кластер больших данных с помощью [azdata login](../azdata/reference/reference-azdata.md). Задайте для параметра `--endpoint` значение внешнего IP-адреса конечной точки контроллера.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -266,7 +266,7 @@ Cluster deployed successfully.
    > [!TIP]
    > Если вы являетесь администратором кластера Kubernetes и имеете доступ к файлу конфигурации кластера (файл конфигурации kube), можно настроить текущий контекст так, чтобы он указывал на целевой кластер Kubernetes. В этом случае можно выполнить вход с помощью `azdata login -n <namespaceName>`, где `namespace` — имя кластера больших данных. Вам будет предложено ввести учетные данные, если они не указаны в команде login.
    
-1. Выполните команду [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md), чтобы получить список с описанием каждой конечной точки и соответствующими значениями IP-адреса и порта. 
+1. Выполните команду [azdata bdc endpoint list](../azdata/reference/reference-azdata-bdc-endpoint.md), чтобы получить список с описанием каждой конечной точки и соответствующими значениями IP-адреса и порта. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -298,7 +298,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ## <a name="verify-the-cluster-status"></a><a id="status"></a> Проверка состояния кластера
 
-После развертывания можно проверить состояние кластера с помощью команды [azdata bdc status show](reference-azdata-bdc-status.md).
+После развертывания можно проверить состояние кластера с помощью команды [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show
@@ -381,7 +381,7 @@ Bdc: ready                                                                      
 
 Можно также получить более подробные сведения о состоянии с помощью следующих команд.
 
-- Команда [azdata bdc control status show](reference-azdata-bdc-control-status.md) возвращает состояние работоспособности для всех компонентов, связанных со службой управления.
+- Команда [azdata bdc control status show](../azdata/reference/reference-azdata-bdc-control-status.md) возвращает состояние работоспособности для всех компонентов, связанных со службой управления.
 ```
 azdata bdc control status show
 ```

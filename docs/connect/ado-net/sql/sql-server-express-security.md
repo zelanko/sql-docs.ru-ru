@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed42778724b468892ff72203695e976d176459b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243428"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725572"
 ---
 # <a name="sql-server-express-security"></a>Безопасность SQL Server Express
 
@@ -42,8 +42,8 @@ ms.locfileid: "87243428"
   
 |Ресурс|Описание|
 |-|-|  
-|[Электронная документация по Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Полная документация по SQL Server 2005, экспресс-выпуск.|  
-|[Пользовательские экземпляры для тех, кто не обладает правами администратора](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) в электронной документации на SQL Server.|Описание создания и развертывания пользовательских экземпляров.|  
+|[Электронная документация по Microsoft SQL Server 2005 Express Edition](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Полная документация по SQL Server 2005, экспресс-выпуск.|  
+|[Пользовательские экземпляры для тех, кто не обладает правами администратора](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) в электронной документации на SQL Server.|Описание создания и развертывания пользовательских экземпляров.|  
 |[Пользовательские экземпляры SQL Server Express](sql-server-express-user-instances.md)|Описание возможностей пользовательского экземпляра в приложении ADO.NET. Содержит сведения о том, как включить пользовательский экземпляр, подключиться к нему с помощью <xref:Microsoft.Data.SqlClient.SqlConnection>, а также информацию о времени существования пользовательского экземпляра и сценариях его использования.|  
   
 ## <a name="next-steps"></a>Дальнейшие действия

@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9768c406ca94cd16e8e9075bd5247434b8359d5c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243445"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725765"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Первичная обработка данных с использованием ускорителя кода PROSE
 
@@ -37,7 +37,7 @@ import prose.codeaccelerator as cx
 - Исправление типов данных в кадре данных.
 - Поиск регулярных выражений, представляющих закономерности в списке строк.
 
-Общие сведения о методах этого ускорителя кода см. в [документации](https://aka.ms/prose-codeaccelerator-overview).
+Общие сведения о методах этого ускорителя кода см. в [документации](/python/api/overview/azure/prose/intro).
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>Считывание данных из файла в кадр данных
 
@@ -86,7 +86,7 @@ def read_file(file):
     return df
  ```
 
-Ускоритель может создать код для загрузки файлов с разделителями, файлов JSON и файлов фиксированной ширины в кадр данных. Для считывания файлов фиксированной ширины `ReadFwfBuilder` может использовать удобочитаемый файл схемы, анализ которого позволяет определить позиции столбцов. Дополнительные сведения см. в [документации](https://aka.ms/prose-codeaccelerator-docs).
+Ускоритель может создать код для загрузки файлов с разделителями, файлов JSON и файлов фиксированной ширины в кадр данных. Для считывания файлов фиксированной ширины `ReadFwfBuilder` может использовать удобочитаемый файл схемы, анализ которого позволяет определить позиции столбцов. Дополнительные сведения см. в [документации](/python/api/overview/azure/prose/intro).
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>Исправление типов данных в кадре данных
 
@@ -106,7 +106,7 @@ builder = cx.DetectTypesBuilder(df)
 builder.learn().code()
 ```
 
-Дополнительные сведения см. в [документации](https://aka.ms/prose-codeaccelerator-fixtypes).
+Дополнительные сведения см. в [документации](/python/api/overview/azure/prose/fixdatatypes).
 
 ## <a name="identifying-patterns-in-strings"></a>Выявление закономерностей в строках
 
@@ -143,4 +143,4 @@ builder.learn().regexes
 ^Unknown$
 ```
 
-Помимо создания регулярных выражений, `FindPatternsBuilder` также может создавать код для кластеризации значений на основе созданных регулярных выражений. Кроме того, может быть сделано утверждение о том, что все значения в столбце соответствуют созданным регулярным выражениям. Дополнительные сведения и другие практические сценарии см. в [документации](https://aka.ms/prose-codeaccelerator-findpatterns).
+Помимо создания регулярных выражений, `FindPatternsBuilder` также может создавать код для кластеризации значений на основе созданных регулярных выражений. Кроме того, может быть сделано утверждение о том, что все значения в столбце соответствуют созданным регулярным выражениям. Дополнительные сведения и другие практические сценарии см. в [документации](/python/api/overview/azure/prose/findpatterns).
