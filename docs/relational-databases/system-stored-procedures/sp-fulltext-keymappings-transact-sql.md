@@ -21,12 +21,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c426c12b38adc491e42b9392d7a36c47f3fd46f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cfac86a5cb8000203873f2434212bf2b50749a6d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536549"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810100"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -50,7 +50,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  Внутренний идентификатор документа (DocId), который соответствует значению ключа. При использовании недопустимого значения *docid* не происходит возврата значений.  
   
  *key*  
- Значение полнотекстового ключа из указанной таблицы. При использовании недопустимого значения *key* не происходит возврата значений. Дополнительные сведения о значениях полнотекстовых ключей см. в разделе [Управление полнотекстовыми индексами](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Значение полнотекстового ключа из указанной таблицы. При использовании недопустимого значения *key* не происходит возврата значений. Дополнительные сведения о значениях полнотекстовых ключей см. в разделе [Управление полнотекстовыми индексами](../search/create-and-manage-full-text-indexes.md).  
   
 > [!IMPORTANT]  
 >  Дополнительные сведения об использовании одного, двух или трех параметров см. в подразделе «Примечания» далее в этом разделе.  
@@ -70,12 +70,12 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="permissions"></a>Разрешения  
  Эта функция является открытой, поэтому не требует специальных разрешений.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  В следующей таблице описывается эффект от использования одного, двух или трех параметров.  
   
 |Этот список параметров...|Имеет этот результат...|  
 |--------------------------|----------------------|  
-|*table_id*|При вызове только с параметром *table_id* sp_fulltext_keymappings возвращает все значения полнотекстового ключа (Key) из указанной базовой таблицы вместе с DocId, соответствующим каждому ключу. В это число входят ключи, которые должны быть удалены.<br /><br /> Эта функция используется для диагностики и устранения неисправностей при возникновении различных проблем. Эту функцию рекомендуется использовать для просмотра содержимого полнотекстовых индексов, если выбранный полнотекстовый ключ не имеет типа данных integer. Это подразумевает объединение результатов sp_fulltext_keymappings с результатами **sys. dm_fts_index_keywords_by_document**. Дополнительные сведения см. в разделе [sys. dm_fts_index_keywords_by_document &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Однако, как правило, рекомендуется при возможности выполнять sp_fulltext_keymappings с параметрами, которые указывают полнотекстовый ключ или DocId. Это более эффективный способ, чем возврат всей карты ключей, особенно для очень большой таблицы, при работе с которой может возникнуть значительное снижение производительности при возврате всей карты ключей.|  
+|*table_id*|При вызове только с параметром *table_id* sp_fulltext_keymappings возвращает все значения полнотекстового ключа (Key) из указанной базовой таблицы вместе с DocId, соответствующим каждому ключу. В это число входят ключи, которые должны быть удалены.<br /><br /> Эта функция используется для диагностики и устранения неисправностей при возникновении различных проблем. Эту функцию рекомендуется использовать для просмотра содержимого полнотекстовых индексов, если выбранный полнотекстовый ключ не имеет типа данных integer. Это подразумевает объединение результатов sp_fulltext_keymappings с результатами **sys.dm_fts_index_keywords_by_document**. Дополнительные сведения см. в разделе [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Однако, как правило, рекомендуется при возможности выполнять sp_fulltext_keymappings с параметрами, которые указывают полнотекстовый ключ или DocId. Это более эффективный способ, чем возврат всей карты ключей, особенно для очень большой таблицы, при работе с которой может возникнуть значительное снижение производительности при возврате всей карты ключей.|  
 |*table_id*, *DocId*|Если указаны только *table_id* и *DocId* , *DocId* должен иметь значение, не равное NULL, и указать допустимый DocId в указанной таблице. Эта функция используется для изоляции настраиваемых полнотекстовых ключей из базовой таблицы, которая соответствует DocId определенного полнотекстового индекса.|  
 |*table_id*, null, *Key*|Если имеются три параметра, второй параметр должен иметь значение NULL, а *ключ* должен быть не NULL и указывать допустимое значение полнотекстового ключа из указанной таблицы. Эта функция используется для изоляции настраиваемых DocId, которые соответствуют определенным полнотекстовым ключам в базовой таблице.|  
   
@@ -92,7 +92,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 > [!NOTE]  
 >  В примерах этого раздела используется таблица `Production.ProductReview` образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Этот индекс можно создать, выполнив пример, приведенный для `ProductReview` таблицы в [инструкции CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
-### <a name="a-obtaining-all-the-key-and-docid-values"></a>А. Получение значений Key и DocId  
+### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Получение значений Key и DocId  
  В следующем примере с помощью инструкции [Declare](../../t-sql/language-elements/declare-local-variable-transact-sql.md) создается локальная переменная, `@table_id` а в качестве ее значения присваивается идентификатор `ProductReview` таблицы. В примере выполняется **sp_fulltext_keymappings** указания `@table_id` параметра *table_id* .  
   
 > [!NOTE]  
@@ -137,7 +137,6 @@ GO
 | ----- | ----- | --- |
 |`4`|`4`|`4`|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
-  
   

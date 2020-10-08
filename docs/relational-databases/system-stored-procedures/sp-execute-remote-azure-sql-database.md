@@ -16,19 +16,19 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1fbd97400ced46a70026b832ad4721d9f33cf690
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543473"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810250"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Выполняет [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию в одной удаленной базе данных SQL Azure или наборе баз данных, служащих в качестве сегментов в схеме горизонтального секционирования.  
   
- Хранимая процедура является частью функции эластичных запросов.  См. раздел [Общие сведения о запросах эластичной базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) и [запросы эластичной базы данных для сегментирования (горизонтальное секционирование)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/).  
+ Хранимая процедура является частью функции эластичных запросов.  См. раздел [Общие сведения о запросах эластичной базы данных SQL Azure](/azure/azure-sql/database/elastic-query-overview) и [запросы эластичной базы данных для сегментирования (горизонтальное секционирование)](/azure/azure-sql/database/elastic-query-horizontal-partitioning).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +73,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  `sp_execute_remote` параметры должны быть указаны в определенном порядке, как описано в разделе синтаксис выше. Если параметры вводятся не в этом порядке, будет выдано сообщение об ошибке.  
   
  `sp_execute_remote` поведение аналогично [выполнению &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) в отношении пакетов и области имен. Инструкция или пакет Transact-SQL в параметре sp_execute_remote * \@ stmt* не компилируются до тех пор, пока не будет выполнена инструкция sp_execute_remote.  
@@ -106,4 +106,3 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-    

@@ -1,6 +1,6 @@
 ---
-description: Отслеживание изменений представлений каталога — sys. change_tracking_databases
-title: sys. change_tracking_databases (Transact-SQL) | Документация Майкрософт
+description: Отслеживание изменений представлений каталога sys.change_tracking_databases
+title: sys.change_tracking_databases (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 653588e0fca8593305e70634029a54832264e8b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 05421e215b41fcf0f1be93b189873c3f0d2aa51c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545165"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810370"
 ---
-# <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Отслеживание изменений представлений каталога — sys. change_tracking_databases
+# <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Отслеживание изменений представлений каталога sys.change_tracking_databases
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает одну строку для каждой базы данных, для которой включено отслеживание изменений.  
@@ -43,10 +43,9 @@ ms.locfileid: "89545165"
 |retention_period_units|**tinyint**|Единица времени для срока хранения:<br /><br /> 1 = Минуты;<br /><br /> 2 = Часы;<br /><br /> 3 = Дни.|  
   
 ## <a name="permissions"></a>Разрешения  
- Те же проверки разрешений выполняются для sys. change_tracking_databases как и для sys. databases. Если вызывающий объект sys. change_tracking_databases не является владельцем базы данных, то минимальными разрешениями, необходимыми для просмотра соответствующей строки, являются разрешения на уровне сервера ALTER ANY DATABASE или VIEW любое базу данных или разрешение CREATE DATABASE в базе данных master или текущей базе данных.  
+ Для sys.change_tracking_databases выполняются те же проверки разрешений, что и для sys. databases. Если вызывающий объект sys.change_tracking_databases не является владельцем базы данных, то минимальными разрешениями, необходимыми для просмотра соответствующей строки, являются разрешения на уровне сервера ALTER ANY DATABASE или VIEW любое базу данных или разрешение CREATE DATABASE в базе данных master или текущей базе данных.  
   
 ## <a name="see-also"></a>См. также:  
- [Отслеживание изменений представления каталога &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Отслеживание изменений представления каталога &#40;&#41;Transact-SQL ](./catalog-views-transact-sql.md)   
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
   

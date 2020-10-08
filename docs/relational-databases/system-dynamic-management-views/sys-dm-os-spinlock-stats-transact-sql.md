@@ -1,6 +1,6 @@
 ---
-description: sys. dm_os_spinlock_stats (Transact-SQL)
-title: sys. dm_os_spinlock_stats (Transact-SQL) | Документация Майкрософт
+description: sys.dm_os_spinlock_stats (Transact-SQL)
+title: sys.dm_os_spinlock_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,14 +23,14 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042755"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810110"
 ---
-# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -53,9 +53,9 @@ ms.locfileid: "90042755"
   
 ## <a name="remarks"></a>Комментарии  
  
- sys. dm_os_spinlock_stats можно использовать для обнаружения источника конфликтов спина. В некоторых случаях может быть разрешено или устранено состязание за взаимоблокировки. Но возможны и такие ситуации, когда будет необходимо обратиться в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ sys.dm_os_spinlock_stats можно использовать для обнаружения источника конфликтов спина. В некоторых случаях может быть разрешено или устранено состязание за взаимоблокировки. Но возможны и такие ситуации, когда будет необходимо обратиться в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Можно сбросить содержимое sys. dm_os_spinlock_stats, выполнив следующую команду `DBCC SQLPERF` :  
+ Вы можете сбросить содержимое sys.dm_os_spinlock_stats, используя следующую команду `DBCC SQLPERF` :  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -405,7 +405,7 @@ GO
  
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  
  [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
@@ -413,6 +413,7 @@ GO
 
  [Когда происходит деспин-фактор использования ЦП в SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
+ [Диагностика и разрешение конфликтов спин/блокировок на SQL Server](../diagnose-resolve-spinlock-contention.md)
   
   
 

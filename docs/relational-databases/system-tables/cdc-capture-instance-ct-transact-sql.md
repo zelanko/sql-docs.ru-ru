@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0515c57b3c3249cc748c2ab96a12c2c1ef35d700
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d0a2dae85606a5e1cb0ffd5f86776e7aae25680
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538389"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809790"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Таблица изменений, созданная при включении системы отслеживания измененных данных в исходной таблице. Эта таблица содержит по одной строке для каждой операции вставки и удаления в исходной таблице и по две строки для каждой операции обновления в исходной таблице. Если имя таблицы изменений не задано при включении исходной таблицы, создается производное имя. Имя имеет формат CDC. *capture_instance*_CT, где *capture_instance* — имя схемы исходной таблицы и имя исходной таблицы в формате *schema_table*. Например, если таблица **Person. адрес** в образце базы данных **AdventureWorks** включена для отслеживания измененных данных, то производное имя таблицы изменений будет храниться в **CDC. Person_Address_CT**.  
   
- Рекомендуется **не выполнять запросы к системным таблицам напрямую**. Вместо этого выполните функции [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) и [cdc. fn_cdc_get_net_changes_<capture_instance ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)>.  
+ Рекомендуется **не выполнять запросы к системным таблицам напрямую**. Вместо этого выполните [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) и [CDC.fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance функции.  
   
 
   
@@ -44,9 +44,9 @@ ms.locfileid: "89538389"
 |*\<captured source table columns>*|непостоянно|Остальные столбцы в таблице изменений — это столбцы из исходной таблицы, определенные, как отслеживаемые при создании экземпляра отслеживания. Если в списке отслеживаемых столбцов не указано ни одного столбца, в эту таблицу включаются все столбцы из исходной таблицы.|  
 |**__ $ command_id** |**int** |Отслеживает порядок операций в рамках транзакции. |  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
 
-Столбец `__$command_id` был представлен в накопительном обновлении в версиях 2012 – 2016. Сведения о версии и загрузке см. в статье базы знаний 3030352 в [исправлении: таблица изменений неправильно упорядочивается для обновленных строк после включения системы отслеживания измененных данных для Microsoft SQL Server базы данных](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Дополнительные сведения см. в разделе [функция CDC может прерываться после обновления до последней версии Cu для SQL Server 2012, 2014 и 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+Столбец `__$command_id` был представлен в накопительном обновлении в версиях 2012 – 2016. Сведения о версии и загрузке см. в статье базы знаний 3030352 в [исправлении: таблица изменений неправильно упорядочивается для обновленных строк после включения системы отслеживания измененных данных для Microsoft SQL Server базы данных](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Дополнительные сведения см. в разделе [функция CDC может прерываться после обновления до последней версии Cu для SQL Server 2012, 2014 и 2016](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016).
 
 ## <a name="captured-column-data-types"></a>Типы данных отслеживаемых столбцов  
  Отслеживаемые столбцы, включенные в эту таблицу, имеют те же типы данных и значения, что и соответствующие им столбцы в исходной таблице, за следующими исключениями.  
@@ -63,9 +63,9 @@ ms.locfileid: "89538389"
  По умолчанию максимальный объем данных, которые можно добавить в столбец, отслеженный с помощью одной инструкции INSERT, UPDATE, WRITETEXT или UPDATETEXT, не должен превышать 65 536 байт или 64 КБ. Чтобы увеличить этот размер для поддержки больших объемов данных LOB, используйте [параметр конфигурации сервера max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) , чтобы указать больший максимальный размер. Дополнительные сведения см. в статье [Настройка параметра конфигурации сервера max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
 ## <a name="data-definition-language-modifications"></a>Изменения, внесенные с помощью языка DDL  
- Изменения DDL в исходной таблице, такие как добавление или удаление столбцов, записываются в таблицу [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Эти изменения не применяются к таблице изменений. То есть определение таблицы изменений остается постоянным. При вставке строк в таблицу изменений процесс отслеживания не учитывает столбцы, которые не появляются в списке отслеживаемых столбцов, связанных с исходной таблицей. Если в списке отслеживаемых столбцов появляется столбец, больше не присутствующий в исходной таблице, этому столбцу присваивается значение NULL.  
+ Изменения DDL в исходной таблице, такие как добавление или удаление столбцов, записываются в таблицу [CDC.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Эти изменения не применяются к таблице изменений. То есть определение таблицы изменений остается постоянным. При вставке строк в таблицу изменений процесс отслеживания не учитывает столбцы, которые не появляются в списке отслеживаемых столбцов, связанных с исходной таблицей. Если в списке отслеживаемых столбцов появляется столбец, больше не присутствующий в исходной таблице, этому столбцу присваивается значение NULL.  
   
- Изменение типа данных столбца в исходной таблице также записывается в таблицу [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Тем не менее, это изменение не затрагивает определение таблицы изменений. Тип данных отслеживаемого столбца в таблице изменений меняется, если процесс отслеживания найдет запись журнала, относящуюся к изменению на языке DDL, внесенному в исходную таблицу.  
+ Изменение типа данных столбца в исходной таблице также записывается в таблицу [CDC.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Тем не менее, это изменение не затрагивает определение таблицы изменений. Тип данных отслеживаемого столбца в таблице изменений меняется, если процесс отслеживания найдет запись журнала, относящуюся к изменению на языке DDL, внесенному в исходную таблицу.  
   
  Если нужно изменить тип данных отслеживаемого столбца в исходной таблице способом, который сократил бы размер этого типа данных, используется следующая процедура, которая обеспечивает успешное изменение соответствующего столбца в таблице изменений.  
   
@@ -82,8 +82,7 @@ ms.locfileid: "89538389"
   
  Для операций вставки и удаления устанавливаются все биты в маске обновления. Для операций обновления маска обновления как в старой строке обновления, так и в новой меняется, чтобы отразить столбцы, изменившиеся во время обновления.  
   
-## <a name="see-also"></a>См. также  
- [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys. sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
-  
+## <a name="see-also"></a>См. также:  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   

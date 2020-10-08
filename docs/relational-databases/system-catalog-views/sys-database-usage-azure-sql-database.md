@@ -1,6 +1,6 @@
 ---
 description: sys.database_usage (база данных SQL Azure)
-title: sys. database_usage (база данных SQL Azure) | Документация Майкрософт
+title: sys.database_usage (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -21,12 +21,12 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c72973c21b2e660667b2bed31d771f3ce19c43b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0c8809138bfad5cc9b7c4866978e7f2c111e09a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455273"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809213"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88455273"
   
  Содержит число, тип и длительность баз данных на [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервере.  
   
- Представление **sys. database_usage** содержит следующие столбцы.  
+ Представление **sys.database_usage** содержит следующие столбцы.  
   
 |Имя столбца|Описание|  
 |-----------------|-----------------|  
@@ -46,11 +46,10 @@ ms.locfileid: "88455273"
 ## <a name="permissions"></a>Разрешения  
  Доступ только для чтения к этому представлению доступен всем пользователям с разрешениями на подключение к базе данных **master** .  
   
-## <a name="remarks"></a>Remarks  
- Представление **sys. database_usage** возвращает по одной строке для каждого дня подписки.  
+## <a name="remarks"></a>Комментарии  
+ Представление **sys.database_usage** возвращает по одной строке для каждого дня подписки.  
   
 ## <a name="see-also"></a>См. также:  
  [Сведения о ценах на базу данных SQL](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Учетные записи и выставление счетов в базе данных SQL Azure](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
-  
+ [Учетные записи и выставление счетов в базе данных SQL Azure](/previous-versions/azure/ee621788(v=azure.100))  
   

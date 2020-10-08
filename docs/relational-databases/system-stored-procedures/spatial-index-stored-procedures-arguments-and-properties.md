@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a56a267fb7f10da12f0679c74f26b72a205fbf4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 840668495c620ca3cb7a403d3775238b12a52ec8
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541479"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809730"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Хранимые процедуры пространственного индекса — аргументы и свойства
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -301,7 +301,7 @@ ms.locfileid: "89541479"
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом роли **Public** . Необходимо разрешение READ ACCESS на сервере и объекте. Это относится ко всем хранимым процедурам пространственного индекса.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Свойства, которые содержат значения NULL, не включаются в набор возвращаемых значений.  
   
 ## <a name="examples"></a>Примеры  
@@ -318,10 +318,9 @@ ms.locfileid: "89541479"
 ## <a name="requirements"></a>Требования  
   
 ## <a name="see-also"></a>См. также:  
- [Хранимые процедуры пространственного индекса &#40;языке Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Хранимые процедуры пространственного индекса &#40;языке Transact-SQL&#41;]()   
  [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Основы XQuery](../../xquery/xquery-basics.md)   
  [Справочник по языку XQuery (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  
-  
   

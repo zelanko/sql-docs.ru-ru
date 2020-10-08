@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447209"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810200"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -165,14 +165,14 @@ sp_execute_external_script
 
 ### <a name="monitor-script-execution"></a>Мониторинг выполнения скрипта
 
-Мониторинг выполнения скрипта с помощью [sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) и [sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
+Отслеживайте выполнение скрипта с помощью [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) и [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>Параметры моделирования секций
 
 Можно задать два дополнительных параметра, которые позволяют моделировать секционированные данные, где секции основаны на одном или нескольких столбцах, которые позволяют естественно сегментировать набор данных в логические секции, созданные и используемые только во время выполнения скрипта. Столбцы, содержащие повторяющиеся значения для Age, Gender, географического региона, даты или времени, представляют собой несколько примеров, которые применяются к секционированным наборам данных.
 
-Эти два параметра являются **input_data_1_partition_by_columns** и **input_data_1_order_by_columns**, где второй параметр используется для упорядочивания результирующего набора. Параметры передаются в качестве входных данных во `sp_execute_external_script` внешний скрипт, который выполняется один раз для каждой секции. Дополнительные сведения и примеры см. в разделе [учебник. Создание моделей на основе секций](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition).
+Эти два параметра являются **input_data_1_partition_by_columns** и **input_data_1_order_by_columns**, где второй параметр используется для упорядочивания результирующего набора. Параметры передаются в качестве входных данных во `sp_execute_external_script` внешний скрипт, который выполняется один раз для каждой секции. Дополнительные сведения и примеры см. в разделе [учебник. Создание моделей на основе секций](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).
 
 Скрипт можно выполнить параллельно, указав `@parallel=1` . Если входной запрос можно выполнить параллельно, следует задать в `@parallel=1` качестве части аргументов значение `sp_execute_external_script` . По умолчанию оптимизатор запросов работает в `@parallel=1` таблицах, имеющих более 256 строк, но если вы хотите, чтобы эта возможность была бы обработана явно, этот скрипт включает параметр в качестве демонстрации.
 
@@ -334,4 +334,4 @@ GO
 + [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server, объект External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

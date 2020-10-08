@@ -1,6 +1,6 @@
 ---
-description: sys. sp_cleanup_temporal_history (Transact-SQL)
-title: sys. sp_cleanup_temporal_history | Документация Майкрософт
+description: sys.sp_cleanup_temporal_history (Transact-SQL)
+title: sys.sp_cleanup_temporal_history | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.service: sql-database
@@ -10,14 +10,14 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3b47fd6b0ee5a06ae1ce585f583a699a530e350b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1eb0487c46b0ef3d16c7a8286292fce5cef11538
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545802"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809150"
 ---
-# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history (Transact-SQL)
+# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-SQL)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
@@ -45,7 +45,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 Выходной параметр, возвращающий число удаленных строк. Если таблица журнала имеет кластеризованный индекс columnstore, этот параметр возвратит значение всегда 0.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Эта хранимая процедура может использоваться только с временными таблицами, для которых указан конечный срок хранения.
 Используйте эту хранимую процедуру только в том случае, если необходимо немедленно очистить все устаревшие строки из таблицы журнала. Следует иметь в курсе, что он может оказать значительное влияние на журнал базы данных и подсистему ввода-вывода, так как он удаляет все подходящие строки в рамках одной транзакции.
@@ -66,4 +66,4 @@ select @rowcnt
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-[Политика хранения временных таблиц](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)
+[Политика хранения временных таблиц](/azure/sql-database/sql-database-temporal-tables-retention-policy)

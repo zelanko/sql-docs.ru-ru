@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cdf2a8a9e5b608c68f544e3f31357dbca07228a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b2b519fd8e52af2a67c37941a4868622aa254599
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538793"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810350"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Разрешения  
  Пользователю должна быть назначена роль PUBLIC для получения доступа к процедуре. Необходимо разрешение READ ACCESS на сервере и объекте.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `sp_help_spatial_geography_index` для исследования пространственного индекса **географии** **SIndx_SpatialTable_geography_col2** определенного в таблице **geography_col** для данного примера запроса в ** \@ QS**. Этот пример возвращает только основные свойства указанного индекса.  
@@ -67,9 +67,8 @@ exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geogra
 ## <a name="requirements"></a>Требования  
   
 ## <a name="see-also"></a>См. также:  
- [Хранимые процедуры пространственного индекса](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Хранимые процедуры пространственного индекса](./spatial-index-stored-procedures-arguments-and-properties.md)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.database_principals (Transact-SQL)
-title: sys. database_principals (Transact-SQL) | Документация Майкрософт
+title: sys.database_principals (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5f5069c17300f6559181f0cd0a4038f7b2e3651
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f23d179e0a3864d9408ab24571270007eff6254e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469995"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810788"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "88469995"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя участника, уникальное в пределах базы данных.|  
 |**principal_id**|**int**|Идентификатор участника, уникальный в пределах базы данных.|  
-|**type**|**char (1)**|Тип участника:<br /><br /> A = роль приложения<br /><br /> C = пользователь сопоставлен с сертификатом<br /><br /> E = внешний пользователь из Azure Active Directory<br /><br /> G = группа Windows<br /><br /> K = пользователь сопоставлен с асимметричным ключом<br /><br /> R = роль базы данных<br /><br /> S = пользователь SQL<br /><br /> U = пользователь Windows<br /><br /> X = Внешняя группа из группы или приложений Azure Active Directory|  
+|**type**|**char(1)**|Тип участника:<br /><br /> A = роль приложения<br /><br /> C = пользователь сопоставлен с сертификатом<br /><br /> E = внешний пользователь из Azure Active Directory<br /><br /> G = группа Windows<br /><br /> K = пользователь сопоставлен с асимметричным ключом<br /><br /> R = роль базы данных<br /><br /> S = пользователь SQL<br /><br /> U = пользователь Windows<br /><br /> X = Внешняя группа из группы или приложений Azure Active Directory|  
 |**type_desc**|**nvarchar(60)**|Описание типа участника.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|Имя, используемое в случае, когда схема не определяется именем SQL. NULL для участников с типами, отличными от S, U или A.|  
 |**create_date**|**datetime**|Время создания участника.|  
 |**modify_date**|**datetime**|Время последнего изменения участника.|  
 |**owning_principal_id**|**int**|Идентификатор участника, являющегося владельцем данного участника. По умолчанию владельцем всех предопределенных ролей базы данных является **dbo** .|  
-|**sid**|**varbinary(85)**|SID (идентификатор защиты) участника.  NULL для SYS и INFORMATION SCHEMAS.|  
+|**трансляцию**|**varbinary(85)**|SID (идентификатор защиты) участника.  NULL для SYS и INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Если значение равно 1, эта строка представляет запись для одной из предопределенных ролей базы данных: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
 |**authentication_type**|**int**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Обозначает тип проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> 0 — без проверки подлинности<br />1: проверка подлинности экземпляра<br />2: проверка подлинности базы данных<br />3: проверка подлинности Windows<br />4. Проверка подлинности Azure Active Directory|  
 |**authentication_type_desc**|**nvarchar(60)**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Описание типа проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> Нет: нет проверки подлинности<br />ЭКЗЕМПЛЯР: проверка подлинности экземпляра<br />БАЗА данных: проверка подлинности базы данных<br />WINDOWS: проверка подлинности Windows<br />Внешний: проверка подлинности Azure Active Directory|  
@@ -127,8 +127,5 @@ JOIN sys.schemas AS s
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Пользователи автономной базы данных — Создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
- [Подключение к базе данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
+ [Подключение к базе данных SQL с использованием аутентификации Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview)  
   
-  
-
-

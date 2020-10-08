@@ -15,12 +15,12 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aef702d89da9a4277fcc01bddc619eab5878ba6c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f2cc89e6e7582497f2419fe19d650f0463ab0bd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428376"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810450"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,6 +60,5 @@ ms.locfileid: "88428376"
   
 ## <a name="see-also"></a>См. также:  
  [Сведения о реализации API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [Функция SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)  
-  
+ [Функция SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md)  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5779e5982ee6c9c3729b2995b25771b993a5e442
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f7fbd6decf193fa695066a8133ec37e74d7e959
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727611"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810778"
 ---
 # <a name="clr-integration---overview"></a>Общие сведения об интеграции со средой CLR
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,10 +59,9 @@ ms.locfileid: "85727611"
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Выбор между расширенными хранимыми процедурами и управляемым кодом  
  Расширенные хранимые процедуры позволяют реализовать возможности, недоступные в хранимых процедурах [!INCLUDE[tsql](../../includes/tsql-md.md)]. Однако расширенные хранимые процедуры могут нарушить целостность процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а управляемый код, проверенный на строгую типизацию, — нет. Далее, управление памятью, планирование потоков и волокон, а также службы Synchronization Services более тесно интегрированы между управляемым кодом среды CLR и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Интеграция со средой CLR обеспечивает более защищенный по сравнению с расширенными хранимыми процедурами способ создания хранимых процедур при необходимости выполнения задач, недоступных для [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения об интеграции со средой CLR и расширенных хранимых процедурах см. в статье [производительность интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [Архитектура интеграции со средой CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [Архитектура интеграции со средой CLR](./clr-integration-architecture-clr-hosted-environment.md)   
  [Доступ к данным из объектов базы данных CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Приступая к работе с интеграцией со средой CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
-  
   

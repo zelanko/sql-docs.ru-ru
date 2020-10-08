@@ -14,18 +14,18 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40f3ef6735bb2de27fd4fda07c3f508717f52515
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9841e46f97248413f142886193d9c2afedbe4e04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790677"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809806"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Основные проблемы безопасности SQLXML
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Далее приведены рекомендации по безопасности при использовании SQLXML для доступа к данным.  
   
--   Поставщик SQLXMLOLEDB предоставляет свойство **стреамфлагс** , которое позволяет устанавливать флаги, указывающие, какие функции SQLXML должны быть включены или отключены для каждого конкретного экземпляра. При помощи этого свойства можно настраивать использование SQLXML, а также гарантировать, что работать будут только требуемые компоненты. Дополнительные сведения см. в разделе [SQLXMLOLEDB Provider &#40;SQLXML 4,0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   Поставщик SQLXMLOLEDB предоставляет свойство **стреамфлагс** , которое позволяет устанавливать флаги, указывающие, какие функции SQLXML должны быть включены или отключены для каждого конкретного экземпляра. При помощи этого свойства можно настраивать использование SQLXML, а также гарантировать, что работать будут только требуемые компоненты. Дополнительные сведения см. в разделе [SQLXMLOLEDB Provider &#40;SQLXML 4,0&#41;](../data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md).  
   
 -   Когда возникают и возвращаются ошибки SQLXML, они могут содержать такие сведения о схеме базы данных, как имена таблиц, имена столбцов или сведения о типе. При обработке этих ошибок следует соблюдать осторожность с тем, чтобы сведения об установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не стали доступными пользователям, когда в этом нет необходимости.  
   
@@ -51,7 +51,6 @@ ms.locfileid: "85790677"
   
 -   При выполнении дельты SQLXML переводит дельту в команды DELETE, UPDATE и INSERT, выполняемые на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Только эти команды всегда затрагивают существующие данные. Команды, сформированные SQLXML, никогда не изменяют базу данных. Пользователь должен явным образом дать команду на изменение структуры базы данных. Например, включив их в блок **SQL: Query** шаблона.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы безопасности SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
-  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e69f48867cc5dd66d72d30f6fa72b2d44d5fc54c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7416b00b55ea680e25d80151957b3da0ccfc6351
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719896"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810390"
 ---
 # <a name="clr-scalar-valued-functions"></a>Скалярные функции среды CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -151,10 +151,9 @@ GO
   
  Обратите внимание, что имя функции в [!INCLUDE[tsql](../../includes/tsql-md.md)] не обязательно должно соответствовать имени общего статического целевого метода.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сопоставление данных параметров среды CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [Общие сведения о настраиваемых атрибутах интеграции со средой CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
+ [Общие сведения о настраиваемых атрибутах интеграции со средой CLR](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)   
  [Определяемые пользователем функции](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [Доступ к данным из объектов среды CLR для работы с базами данных](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
-  
   
