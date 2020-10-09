@@ -1,6 +1,6 @@
 ---
 description: Возвращающие табличное значение параметры (ODBC)
-title: Возвращающие табличные значения параметры (ODBC) | Документация Майкрософт
+title: Параметры Table-Valued (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f263b0ade88e21f79182f2667714de2e1a105155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b82ec830d04f89fd4a166a999673a6182429a66
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420508"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867868"
 ---
 # <a name="table-valued-parameters-odbc"></a>Возвращающие табличное значение параметры (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Поддержка в ODBC возвращающих табличное значение параметров позволяет клиентским приложениям с большей эффективностью передавать параметризованные данные на сервер за счет передачи нескольких строк в ходе одного вызова.  
   
- Сведения о возвращающих табличное значение параметрах на сервере см. в разделе [Использование возвращающих табличные значения параметров &#40;ядро СУБД&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Сведения о возвращающих табличное значение параметрах на сервере см. в разделе [использование Table-Valued параметров &#40;ядро СУБД&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  В ODBC существует два способа передачи на сервер возвращающих табличное значение параметров.  
   
@@ -77,12 +77,8 @@ ms.locfileid: "88420508"
   
  [Сводка по API-интерфейсам возвращающих табличное значение параметров ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Приводит перечень функций ODBC, которые поддерживают возвращающие табличное значение параметры.  
-  
- [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
- Описывает, как следует выполнять типичные задачи.  
-  
+
 ## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Возвращающие табличное значение параметры &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
-  
   

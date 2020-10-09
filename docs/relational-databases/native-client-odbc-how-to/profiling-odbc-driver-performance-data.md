@@ -14,12 +14,12 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bedad59ad9f61b7ab12b207bc87bf1c7e250c8a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9b55ba95c05d75c384cc89bd55452a5663bbc959
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88329440"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868851"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>Создание профилей данных производительности драйвера ODBC
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88329440"
   В этом образце показаны параметры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для драйвера ODBC, относящиеся к сбору статистики производительности. Образец создает один файл: odbcperf.log. Этот образец показывает и создание файла журнала со сведениями о производительности, и отображение сведений о производительности непосредственно из структуры данных SQLPERF (структура SQLPERF определена в файле Odbcss.h.). Этот образец разработан для ODBC версии 3.0 или более поздней.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Запись сведений о производительности драйвера при помощи администратора ODBC  
   
@@ -37,7 +37,7 @@ ms.locfileid: "88329440"
   
 3.  Щелкните источник данных, для которого необходимо заносить в журнал производительность.  
   
-4.  Щелкните **Настройка**.  
+4.  Нажмите **Настроить**.  
   
 5.  В мастере настройки имени DSN Microsoft SQL Server перейдите к странице с **записью статистики драйвера ODBC log в файл журнала**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "88329440"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Программная запись сведений о производительности драйвера  
   
-1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA_LOG, а также полный путь и имя файла журнала данных производительности. Например:  
+1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA_LOG, а также полный путь и имя файла журнала данных производительности. Пример:  
   
     ```  
     "C:\\Odbcperf.log"  
@@ -244,5 +244,4 @@ int main() {
 ## <a name="see-also"></a>См. также:  
  [Инструкции по профилированию производительности драйвера ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [Создание профилей производительности драйвера ODBC](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
-  
   

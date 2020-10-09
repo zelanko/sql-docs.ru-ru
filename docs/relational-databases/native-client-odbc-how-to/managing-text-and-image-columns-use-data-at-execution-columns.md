@@ -14,12 +14,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02b21f406a010d55724f73562361d1bc92486d8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7ada6dd2eea49f407731cb8ef985c9f12405b2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420548"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868928"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Управление столбцами text и image — использование столбцов данных времени выполнения
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88420548"
   
     -   Для последнего параметра поместите заданный программой идентификатор столбца.  
   
-2.  Вызов функции [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) возвращает SQL_NEED_DATA, что указывает, что столбцы с данными времени выполнения готовы для обработки.  
+2.  Вызов функции [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) возвращает SQL_NEED_DATA, что указывает, что столбцы с данными времени выполнения готовы для обработки.  
   
 3.  Для каждого столбца с данными времени выполнения.  
   
-    -   Вызовите функцию [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) , чтобы вернуть указатель на массив столбцов. Будет возвращено значение SQL_NEED_DATA, если существует другой столбец с данными времени выполнения.  
+    -   Вызовите функцию [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) , чтобы вернуть указатель на массив столбцов. Будет возвращено значение SQL_NEED_DATA, если существует другой столбец с данными времени выполнения.  
   
     -   Вызовите функцию [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) один или более раз, чтобы отправить данные столбца, до тех пор, пока не будет отправлена длина.  
   
-4.  Вызовите функцию [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) , чтобы указать, что данные для конечного столбца с данными времени выполнения отправлены. При этом не будет возвращено значение SQL_NEED_DATA.  
+4.  Вызовите функцию [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) , чтобы указать, что данные для конечного столбца с данными времени выполнения отправлены. При этом не будет возвращено значение SQL_NEED_DATA.  
 
 ## <a name="example"></a>Пример  
  В этом образце показано, как с помощью функции SQLGetData считывать символьные данные из переменной типа SQL_LONG. Этот образец не поддерживается на архитектуре IA64.  
@@ -188,6 +188,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Разделы руководства по управлению столбцами Text и Image &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [Разделы руководства по управлению столбцами Text и Image &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

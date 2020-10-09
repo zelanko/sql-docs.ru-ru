@@ -14,12 +14,12 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9542741a00cee0206931e6194e3ded2089fe3f4d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ce4d81317218c8823b528c3e37df40694471e9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460783"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868909"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Управление столбцами text и image — использование параметров данных времени выполнения
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88460783"
   
     -   Используйте параметр **rgbValue** (восьмой параметр) определяемого программой идентификатора параметра.  
   
-2.  При вызове метода [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) или [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) возвращается SQL_NEED_DATA; это означает, что параметры с данными времени выполнения готовы к обработке.  
+2.  При вызове метода [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) или [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) возвращается SQL_NEED_DATA; это означает, что параметры с данными времени выполнения готовы к обработке.  
   
 3.  Для каждого параметра с данными времени выполнения:  
   
-    -   Для получения заданного программой идентификатора параметра вызовите метод [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) . Если существует другой параметр с данными времени выполнения, будет возвращено значение SQL_NEED_DATA.  
+    -   Для получения заданного программой идентификатора параметра вызовите метод [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) . Если существует другой параметр с данными времени выполнения, будет возвращено значение SQL_NEED_DATA.  
   
     -   Вызовите метод [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) один или несколько раз, чтобы отправить данные параметра до отправки длины.  
   
-4.  Вызовите метод [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) , чтобы указать, что все данные для конечного параметра с данными времени выполнения отправлены. При этом не будет возвращено значение SQL_NEED_DATA.  
+4.  Вызовите метод [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) , чтобы указать, что все данные для конечного параметра с данными времени выполнения отправлены. При этом не будет возвращено значение SQL_NEED_DATA.  
   
 ## <a name="example"></a>Пример  
  Образец демонстрирует, как считывать символьные данные переменной SQL_LONG с помощью методов SQLParamData и SQLPutData. Этот образец не поддерживается на архитектуре IA64.  
@@ -226,6 +226,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Разделы руководства по управлению столбцами Text и Image &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [Разделы руководства по управлению столбцами Text и Image &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

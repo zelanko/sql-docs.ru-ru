@@ -14,12 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d3a6cead69651eedec63d9c34e24674ec6dd6ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1610a48081c8eb8e4cab0829527516e9ee44246
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470450"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867704"
 ---
 # <a name="use-a-statement-odbc"></a>Использование инструкции (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,21 +27,21 @@ ms.locfileid: "88470450"
     
 ### <a name="to-use-a-statement"></a>Использование инструкции  
   
-1.  Для выделения дескриптора инструкции вызовите функцию [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) с параметром *HandleType*, имеющим значение SQL_HANDLE_STMT.  
+1.  Для выделения дескриптора инструкции вызовите функцию [SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md) с параметром *HandleType*, имеющим значение SQL_HANDLE_STMT.  
   
 2.  Также можно вызвать [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) для настройки параметров инструкции или [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) для получения атрибутов инструкции.  
   
      Чтобы использовать серверные курсоры, необходимо установить атрибуты курсоров в значения, отличные от значений по умолчанию.  
   
-3.  Если инструкция будет выполняться несколько раз, то ее можно подготовить к выполнению с помощью функции [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360).  
+3.  Если инструкция будет выполняться несколько раз, то ее можно подготовить к выполнению с помощью функции [SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md).  
   
-4.  Если инструкция имеет связанные маркеры параметров, можно привязать их к переменным программы с помощью функции [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Для подготовленной инструкции можно вызвать функции [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) и [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to find the number и characteristics of the parameters.  
+4.  Если инструкция имеет связанные маркеры параметров, можно привязать их к переменным программы с помощью функции [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Для подготовленной инструкции можно вызвать функции [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) и [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to find the number и characteristics of the parameters.  
   
 5.  Произведите прямое выполнение инструкции с помощью функции SQLExecDirect.  
   
      \- или -  
   
-     Если инструкция была подготовлена, выполните ее несколько раз с помощью функции [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400).  
+     Если инструкция была подготовлена, выполните ее несколько раз с помощью функции [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md).  
   
      \- или -  
   
@@ -75,5 +75,4 @@ ms.locfileid: "88470450"
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции по выполнению запросов &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

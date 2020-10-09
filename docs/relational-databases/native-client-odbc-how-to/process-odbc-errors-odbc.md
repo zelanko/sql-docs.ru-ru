@@ -14,29 +14,29 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5bade3c381024ef8e20ac069ed3effd16ac1e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cab8507af433b39a6be6e35063d8a89c713af3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490887"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868874"
 ---
 # <a name="process-odbc-errors-odbc"></a>Обработка ошибок ODBC (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Для получения сообщений ODBC можно использовать две функции ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) и [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Для получения в полях диагностики **SQLState**, **pfNative**и **ErrorMessage** сведений, касающихся ODBC, вызывайте функцию [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) до тех пор, пока она не вернет значение SQL_NO_DATA. Чтобы получить отдельные поля, можно вызвать функцию [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) для каждой записи диагностики. Все зависящие от драйвера поля нужно получить с помощью функции **SQLGetDiagField**.  
+  Для получения сообщений ODBC можно использовать две функции ODBC: [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) и [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Для получения в полях диагностики **SQLState**, **pfNative**и **ErrorMessage** сведений, касающихся ODBC, вызывайте функцию [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) до тех пор, пока она не вернет значение SQL_NO_DATA. Чтобы получить отдельные поля, можно вызвать функцию [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) для каждой записи диагностики. Все зависящие от драйвера поля нужно получить с помощью функции **SQLGetDiagField**.  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) и [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) обрабатываются диспетчером драйверов ODBC, а не отдельным драйвером. Диспетчер драйверов ODBC не кэширует зависящие от драйвера поля диагностики, пока не будет установлено соединение. Вызов функции [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) для зависящих от драйвера полей диагностики невозможен до установления соединения. Это касается и команд соединения ODBC, даже если они возвращают значение SQL_SUCCESS_WITH_INFO. Зависящие от драйвера поля диагностики будут недоступны до следующего вызова функции ODBC.  
+ [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) и [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) обрабатываются диспетчером драйверов ODBC, а не отдельным драйвером. Диспетчер драйверов ODBC не кэширует зависящие от драйвера поля диагностики, пока не будет установлено соединение. Вызов функции [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) для зависящих от драйвера полей диагностики невозможен до установления соединения. Это касается и команд соединения ODBC, даже если они возвращают значение SQL_SUCCESS_WITH_INFO. Зависящие от драйвера поля диагностики будут недоступны до следующего вызова функции ODBC.  
   
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В этом образце показана работа простого обработчика ошибок, вызывающего функцию [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) для получения стандартных сведений ODBC. Затем производится проверка наличия допустимого соединения; при положительном результате проверки вызывается функция **SQLGetDiagField** для зависящих от драйвера ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полей диагностики. Этот образец не поддерживается на архитектуре IA64.  
+ В этом образце показана работа простого обработчика ошибок, вызывающего функцию [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) для получения стандартных сведений ODBC. Затем производится проверка наличия допустимого соединения; при положительном результате проверки вызывается функция **SQLGetDiagField** для зависящих от драйвера ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полей диагностики. Этот образец не поддерживается на архитектуре IA64.  
   
  Этот образец разработан для ODBC версии 3.0 или более поздней.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](/windows/win32/seccrypto/cryptography-reference).  
   
  Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
@@ -241,5 +241,4 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
-  
   

@@ -22,11 +22,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab2bb533605c09a0a0d20e970eef58c1fbdd7ffd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 95cf24fb9cfa226708c4d628110c295f35e1fe4d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002918"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869347"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Использование параметров инструкции — привязка параметров
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,9 +60,8 @@ ms.locfileid: "86002918"
   
  Именованные параметры поддерживаются только при использовании [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции **EXECUTE** или escape-последовательности ODBC CALL для выполнения хранимой процедуры.  
   
- Если для параметра хранимой процедуры задано значение **SQL_DESC_NAME** , все параметры хранимых процедур в запросе также должны устанавливаться **SQL_DESC_NAME**.  Если литералы используются в вызовах хранимых процедур, где параметры имеют **SQL_DESC_NAME** заданы, литералы должны использовать формат *"имя* = *значение*", где *Name* — имя параметра хранимой процедуры (например, @p1 ). Дополнительные сведения см. в разделе [Привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Если для параметра хранимой процедуры задано значение **SQL_DESC_NAME** , все параметры хранимых процедур в запросе также должны устанавливаться **SQL_DESC_NAME**.  Если литералы используются в вызовах хранимых процедур, где параметры имеют **SQL_DESC_NAME** заданы, литералы должны использовать формат *"имя* = *значение*", где *Name* — имя параметра хранимой процедуры (например, @p1 ). Дополнительные сведения см. в разделе [Привязка параметров по имени (именованные параметры)](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование параметров инструкции](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
-  
   

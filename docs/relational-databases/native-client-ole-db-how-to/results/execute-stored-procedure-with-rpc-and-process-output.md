@@ -15,12 +15,12 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 950eedbbc453e0ce2df16bec101ab88840f403fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1910f2b310e38e3ec8b29fd4150f218467a0abea
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88407560"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866901"
 ---
 # <a name="execute-sql-server-native-client-stored-procedure-with-rpc-and-process-output"></a>Выполнение SQL Server Native Client хранимой процедуры с помощью RPC и выходных данных процесса
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88407560"
   Хранимые процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются с сервера в последнем пакете и потому недоступны приложению до полного освобождения набора строк. Если команда возвращает множество результатов, то данные параметров вывода будут доступны, когда метод **IMultipleResults::GetResult** вернет значение DB_S_NORESULT или при полном освобождении интерфейса **IMultipleResults** (в зависимости от того, что произойдет раньше).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с использованием [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с использованием [API шифрования Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Обработка кодов возврата и выходных параметров  
   
@@ -399,5 +399,4 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции по обработке результатов &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

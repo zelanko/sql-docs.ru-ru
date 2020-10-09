@@ -16,12 +16,12 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bb6b097a811bc134a94ede766cc5774df5dfc3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 100973ff2e7ae4d3bf066bfe49f09aa3a979230f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420558"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866971"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Выделение дескрипторов и соединение с SQL Server (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,19 +33,19 @@ ms.locfileid: "88420558"
   
 2.  Включите зависящий от драйвера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл заголовка Odbcss.h.  
   
-3.  Вызовите [функцию SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) с **параметром handletype** SQL_HANDLE_ENV, чтобы инициализировать ODBC и выделить обработчик среды.  
+3.  Вызовите [функцию SQLAllocHandle](../../odbc/reference/syntax/sqlallochandle-function.md) с **параметром handletype** SQL_HANDLE_ENV, чтобы инициализировать ODBC и выделить обработчик среды.  
   
 4.  Вызовите [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) с **атрибутом** , имеющим значение SQL_ATTR_ODBC_VERSION, а **ValuePtr** — значение SQL_OV_ODBC3, чтобы указать, что приложение будет использовать вызовы функций формата ODBC 3. x.  
   
-5.  При необходимости вызовите [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) , чтобы задать другие параметры среды, или вызовите [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) , чтобы получить параметры среды.  
+5.  При необходимости вызовите [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) , чтобы задать другие параметры среды, или вызовите [SQLGetEnvAttr](../../odbc/reference/syntax/sqlgetenvattr-function.md) , чтобы получить параметры среды.  
   
-6.  Вызовите [функцию SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) с **параметром handletype** SQL_HANDLE_DBC, чтобы выделить маркер подключения.  
+6.  Вызовите [функцию SQLAllocHandle](../../odbc/reference/syntax/sqlallochandle-function.md) с **параметром handletype** SQL_HANDLE_DBC, чтобы выделить маркер подключения.  
   
 7.  При необходимости вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) , чтобы задать параметры соединения, или вызовите [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) , чтобы получить параметры соединения.  
   
 8.  Вызовите SQLConnect, чтобы использовать существующий источник данных для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     либо  
+     Или  
   
      Вызовите [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) , чтобы использовать строку подключения для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88420558"
 13. Вызовите **SQLFreeHandle** с **параметром handletype** SQL_HANDLE_ENV, чтобы освободить обработчик среды.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ## <a name="example"></a>Пример  
  В этом примере показан вызов **SQLDriverConnect** для подключения к экземпляру, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуя наличия существующего источника данных ODBC. Передавая неполную строку подключения в **SQLDriverConnect**, драйвер ODBC запрашивает у пользователя ввод недостающих данных.  
@@ -105,5 +105,4 @@ retcode = SQLDriverConnect(hdbc1,      // Connection handle
                   &cbConnStrOut,   // Address of output length  
                   SQL_DRIVER_PROMPT);  
 ```  
-  
   

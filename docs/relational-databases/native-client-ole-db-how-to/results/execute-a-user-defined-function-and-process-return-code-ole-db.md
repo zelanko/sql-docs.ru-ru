@@ -1,6 +1,6 @@
 ---
-description: Выполнение SQL Server Native Client определяемой пользователем функции и кода возврата процесса (OLE DB)
-title: Определяемая пользователем функция, код возврата (OLE DB)
+description: Выполнение функции SQL Server Native Client User-Defined и кода возврата обработки (OLE DB)
+title: Функция User-Defined, код возврата (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e50cdc551c609f5a30e7b70aa844cb4e46739070
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0f9f31caa5b026df62d509db5c276e60839877b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475739"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866644"
 ---
-# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>Выполнение SQL Server Native Client определяемой пользователем функции и кода возврата процесса (OLE DB)
+# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>Выполнение функции SQL Server Native Client User-Defined и кода возврата обработки (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом примере выполняется определяемая пользователем функция и распечатывается код возврата. Этот образец не поддерживается на архитектуре IA64.  
@@ -29,7 +29,7 @@ ms.locfileid: "88475739"
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ## <a name="example"></a>Пример  
  Выполните первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы создать хранимую процедуру, используемую приложением.  
@@ -369,5 +369,4 @@ go
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции по обработке результатов &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

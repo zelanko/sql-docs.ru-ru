@@ -15,12 +15,12 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11156b3b3080c537f1fb65eee081632ce7f3c1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d32f5f577d9c594556c477620e89435cf66226
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423966"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869136"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88423966"
  При [!INCLUDE[tsql](../../includes/tsql-md.md)] выполнении инструкции INSERT, Update, DELETE или MERGE с предложением OUTPUT SQLRowCount не возвращает количество строк, затронутых до тех пор, пока не будут потреблены все строки результирующего набора, сформированного предложением OUTPUT. Чтобы сконсуме эти строки, вызовите SQLFetch или SQLFetchScroll. Склресултколс возвращает значение-1, пока не будут использованы все строки результатов. После того как SQLFetch или SQLFetchScroll возвращает SQL_NO_DATA, приложение должно вызвать SQLRowCount, чтобы определить число затронутых строк перед вызовом SQLMoreResults для перехода к следующему результату.  
   
 ## <a name="see-also"></a>См. также:  
- [Функция SQLRowCount](https://go.microsoft.com/fwlink/?LinkId=59367)   
+ [Функция SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

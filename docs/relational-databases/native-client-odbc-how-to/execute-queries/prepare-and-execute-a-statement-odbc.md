@@ -15,12 +15,12 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a00b92a059014ff36ee1e0b473285641ef107c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ee418dfb4378ea0291996a0a16e5f0596faf471
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423774"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867745"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Подготовка и выполнение инструкцию (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "88423774"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>Однократная подготовка инструкции и многократное ее выполнение  
   
-1.  Вызовите функцию [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) , чтобы подготовить инструкцию.  
+1.  Вызовите функцию [SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md) , чтобы подготовить инструкцию.  
   
-2.  Можно также вызвать метод [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) , чтобы определить количество параметров в подготовленной инструкции.  
+2.  Можно также вызвать метод [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) , чтобы определить количество параметров в подготовленной инструкции.  
   
 3.  Выполните следующие действия для каждого параметра подготовленной инструкции (не обязательно).  
   
@@ -42,9 +42,9 @@ ms.locfileid: "88423774"
   
     -   Если в инструкции имеются маркеры параметров, поместите значения данных в буфер связанного параметра.  
   
-    -   Вызовите функцию [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) , чтобы выполнить подготовленную инструкцию.  
+    -   Вызовите функцию [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) , чтобы выполнить подготовленную инструкцию.  
   
-    -   При использовании входных параметров времени выполнения функция [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) возвращает SQL_NEED_DATA. Отправьте данные по фрагментам при помощи функций [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) и [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   При использовании входных параметров времени выполнения функция [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) возвращает SQL_NEED_DATA. Отправьте данные по фрагментам при помощи функций [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) и [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>Подготовка инструкции с привязкой параметра на уровне столбца  
   
@@ -60,7 +60,7 @@ ms.locfileid: "88423774"
   
 2.  Вызовите SQLPrepare, чтобы подготовить инструкцию.  
   
-3.  Можно также вызвать метод [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) , чтобы определить количество параметров в подготовленной инструкции.  
+3.  Можно также вызвать метод [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) , чтобы определить количество параметров в подготовленной инструкции.  
   
 4.  При необходимости для каждого параметра в подготовленной инструкции вызовите SQLDescribeParam, чтобы получить сведения о параметрах.  
   
@@ -116,5 +116,4 @@ ms.locfileid: "88423774"
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции по выполнению запросов &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

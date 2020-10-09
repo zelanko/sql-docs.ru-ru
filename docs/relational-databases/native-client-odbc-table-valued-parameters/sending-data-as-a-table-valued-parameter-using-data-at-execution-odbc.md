@@ -1,6 +1,6 @@
 ---
 description: Отправка данных в виде возвращающего табличное значение параметра с использованием данных времени выполнения (ODBC)
-title: Возвращающий табличное значение параметр, данные во время выполнения (ODBC)
+title: Параметр Table-Valued, данные во время выполнения (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72fc2ad3db6c6eddde0124fc2144fa6faca6f058
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499145"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868217"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра с использованием данных времени выполнения (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Это похоже на процедуру « [все в памяти](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) », но использует для возвращающего табличное значение параметра данные при выполнении.  
   
- Другой пример, демонстрирующий возвращающий табличное значение параметр, см. в разделе [Использование возвращающих табличное значение параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Другой пример, демонстрирующий возвращающий табличное значение параметр, см. в разделе [использование Table-Valued параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
  В этом примере при вызове SQLExecute или SQLExecDirect драйвер возвращает SQL_NEED_DATA. Затем приложение вызывает метод SQLParamData несколько раз, пока драйвер не вернет значение, отличное от SQL_NEED_DATA. Драйвер возвращает *параметервалуептр* , чтобы сообщить приложению о параметре, для которого запрашиваются данные. Приложение вызывает SQLPutData для предоставления данных параметров перед следующим вызовом метод SQLParamData. Для возвращающего табличное значение параметра вызов SQLPutData указывает, сколько строк было подготовлено для драйвера (в этом примере всегда 1). Когда в драйвер передавались все строки табличного значения, вызывается SQLPutData, чтобы указать, что доступны 0 строк.  
   
@@ -582,6 +582,5 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](./table-valued-parameters-odbc.md)  
   

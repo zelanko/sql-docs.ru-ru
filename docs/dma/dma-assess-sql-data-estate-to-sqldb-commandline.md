@@ -15,14 +15,14 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: a631ed40344fc8661cef23b9758aa35feb041c45
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91729261"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867692"
 ---
-# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database"></a>ДМАКМД: Оценка готовности SQL Serverного пространства данных для переноса в базу данных SQL Azure 
+# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>ДМАКМД: Оценка готовности SQL Serverного пространства данных для переноса в Azure SQL 
 
 Во многих организациях, пытающихся перейти на Azure, важно оценить существующие локальные SQL Server экземпляры и определить правильный целевой объект SQL Azure: база данных SQL Azure, Azure SQL Управляемый экземпляр или SQL Server на виртуальных машинах Azure. 
 

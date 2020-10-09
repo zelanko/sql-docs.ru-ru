@@ -19,12 +19,12 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71e8c8187cb9e70e32e3c29deaf1e3a9bd912c94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f8e3230a9db88d5341fa816ec7f33c62502ce22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465302"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868980"
 ---
 # <a name="information-in-ole-db-defined-error-interfaces"></a>Сведения в интерфейсах ошибок, определенных OLE DB
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88465302"
 |Функция-член|Описание|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Заполняет структуру ERRORINFO основными сведениями об ошибке. Структура ERRORINFO содержит элементы, которые идентифицируют возвращаемое значение HRESULT для ошибки, поставщика и интерфейс, к которому относится ошибка.|  
-|**GetCustomErrorObject**|Возвращает ссылку на интерфейсы **ISQLErrorInfo** и [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15).|  
+|**GetCustomErrorObject**|Возвращает ссылку на интерфейсы **ISQLErrorInfo** и [ISQLServerErrorInfo](../../connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15).|  
 |**GetErrorInfo**|Возвращает ссылку на интерфейс **IErrorInfo**.|  
 |**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента не возвращает параметры потребителю через **жетеррорпараметерс**.|  
 |**GetRecordCount**|Число доступных записей ошибок.|  
@@ -60,5 +60,4 @@ ms.locfileid: "88465302"
   
 ## <a name="see-also"></a>См. также:  
  [ошибки](../../relational-databases/native-client-ole-db-errors/errors.md)  
-  
   

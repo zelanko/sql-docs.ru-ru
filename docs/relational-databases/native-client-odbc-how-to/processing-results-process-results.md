@@ -14,12 +14,12 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48143270af2a56f9662d742ec41e5984972b30c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d61cdfb974a59f61fe53ba65656d49002a816d32
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490870"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868862"
 ---
 # <a name="processing-results---process-results"></a>Результаты обработки — обработка результатов
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88490870"
   
 3.  Для каждой строки в результирующем наборе сделайте следующее.  
   
-    -   Вызовите функцию [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401), чтобы получить следующую строку.  
+    -   Вызовите функцию [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md), чтобы получить следующую строку.  
   
     -   Если используются привязанные столбцы, используйте данные, теперь доступные в привязанных буферах столбцов.  
   
@@ -42,15 +42,15 @@ ms.locfileid: "88490870"
   
     -   Получение данных из столбца типа text или image производится многократным вызовом функции **SQLGetData** .  
   
-4.  Когда функция [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) указывает конец результирующего набора, возвращая SQL_NO_DATA, вызовите функцию [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md), чтобы определить, доступен ли другой результирующий набор.  
+4.  Когда функция [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) указывает конец результирующего набора, возвращая SQL_NO_DATA, вызовите функцию [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md), чтобы определить, доступен ли другой результирующий набор.  
   
     -   Если вернулось значение SQL_SUCCESS, то доступен другой результирующий набор.  
   
     -   Если вернулось значение SQL_NO_DATA, то больше нет результирующих наборов.  
   
-    -   Если вернулось значение SQL_SUCCESS_WITH_INFO или SQL_ERROR, вызовом функции [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) определите, есть ли выходные данные от инструкции PRINT или RAISERROR.  
+    -   Если вернулось значение SQL_SUCCESS_WITH_INFO или SQL_ERROR, вызовом функции [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) определите, есть ли выходные данные от инструкции PRINT или RAISERROR.  
   
-         Если в качестве выходных параметров используются привязанные параметры инструкции или возвращаемое значение хранимой процедуры, используйте данные, имеющиеся в буферах привязанного параметра. Кроме того, если используются привязанные параметры, при каждом вызове функции [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) или [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) инструкция SQL будет выполняться *S* раз, где *S* — количество элементов в массиве привязанных параметров. Это значит, что придется обработать *S* наборов результатов, каждый из которых содержит все результирующие наборы, выходные параметры и коды возврата, обычно возвращаемые при исполнении отдельной инструкции SQL.  
+         Если в качестве выходных параметров используются привязанные параметры инструкции или возвращаемое значение хранимой процедуры, используйте данные, имеющиеся в буферах привязанного параметра. Кроме того, если используются привязанные параметры, при каждом вызове функции [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) или [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) инструкция SQL будет выполняться *S* раз, где *S* — количество элементов в массиве привязанных параметров. Это значит, что придется обработать *S* наборов результатов, каждый из которых содержит все результирующие наборы, выходные параметры и коды возврата, обычно возвращаемые при исполнении отдельной инструкции SQL.  
   
     > [!NOTE]  
     >  Если результирующий набор содержит вычисляемые строки, каждая вычисляемая строка доступна как отдельный результирующий набор. Эти вычисляемые результирующие наборы находятся среди обычных строк, разбивая их на несколько результирующих наборов.  
@@ -60,9 +60,8 @@ ms.locfileid: "88490870"
 6.  Если есть еще один результирующий набор, перейдите к шагу 1.  
 
 > [!NOTE]  
->  Чтобы отменить обработку результирующего набора прежде, чем функция [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) вернет значение SQL_NO_DATA, вызовите функцию [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
+>  Чтобы отменить обработку результирующего набора прежде, чем функция [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) вернет значение SQL_NO_DATA, вызовите функцию [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Получение сведений о результирующем наборе &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
-  
   

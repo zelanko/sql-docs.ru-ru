@@ -14,12 +14,12 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd8d4777a3967929b6ffbb560bfd8de1ed3e3837
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14fa992f8cfa0c02f8f09c95a7cab655373bf6db
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465369"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867019"
 ---
 # <a name="fetch-columns-in-sql-server-native-client-using-irowgetcolumns-ole-db"></a>Извлечение столбцов в SQL Server Native Client с помощью IRow:: DataColumn (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88465369"
 -   Как дважды получить доступ к столбцу. В первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным. Если в структуре DBCOLUMNACCESS **pData** имеет значение NULL, а **cbMaxLen** = 0, вызов **IRow**- **>GetColumns()** возвращает только фактическую длину столбца. В этом случае **IRow->GetColumns()** можно вызвать снова для того же столбца, чтобы получить данные.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Получение столбцов с помощью IRow::GetColumns  
   
@@ -522,5 +522,4 @@ go
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции по OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

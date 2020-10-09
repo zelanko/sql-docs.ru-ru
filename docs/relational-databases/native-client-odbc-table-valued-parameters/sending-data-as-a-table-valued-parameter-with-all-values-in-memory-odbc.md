@@ -1,6 +1,6 @@
 ---
 description: Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC)
-title: Возвращающий табличное значение параметр, значения в памяти (ODBC)
+title: Параметр Table-Valued, значения в памяти (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676d0c40ca7c064945284d5a486ec0cda698688d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a95b9d9feca9f2bb3ac896c45aa30f18f5d23ad7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499093"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868183"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  В этом разделе описывается передача данных хранимой процедуре в виде возвращающего табличное значение параметра, когда все значения хранятся в памяти. Другой пример, демонстрирующий возвращающий табличное значение параметр, см. в разделе [Использование возвращающих табличное значение параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  В этом разделе описывается передача данных хранимой процедуре в виде возвращающего табличное значение параметра, когда все значения хранятся в памяти. Другой пример, демонстрирующий возвращающий табличное значение параметр, см. в разделе [использование Table-Valued параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Предварительное требование  
  Эта процедура предполагает, что на сервере выполнен следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -130,6 +130,5 @@ from @Items
     ```  
   
 ## <a name="see-also"></a>См. также:  
- [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](./table-valued-parameters-odbc.md)  
   

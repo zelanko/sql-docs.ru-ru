@@ -14,19 +14,19 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a27332a7948c535b768f6507aad81ca72bbcbb26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455989"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867992"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>Перечисление SQL Server Native Client OLE DB источников данных (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом образце показано, как использовать объект перечислителя для построения списка доступных источников данных.  
   
- Для перечисления источников данных, видимых перечислителю SQLOLEDB, потребитель вызывает метод [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) . Этот метод возвращает набор строк информации о видимых в настоящее время источниках данных.  
+ Для перечисления источников данных, видимых перечислителю SQLOLEDB, потребитель вызывает метод [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) . Этот метод возвращает набор строк информации о видимых в настоящее время источниках данных.  
   
  В зависимости от используемой сетевой библиотеки проводится поиск источников данных в соответствующем домене. Для именованных каналов это домен, в который загружен клиент. Для AppleTalk это зона по умолчанию. Для SPX/IPX это список установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , найденный в системной базе данных. Для Banyan VINES это установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , найденные в локальной сети. Сокеты Multiprotocol и TCP/IP не поддерживаются.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88455989"
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Перечисление источников данных OLE DB  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

@@ -14,11 +14,12 @@ ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0f1e1be06331ef8ba1251a352e13e9d81ae6f46
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 76c5e2aab1f515ee52feb97218880e8831f3bea8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004298"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868844"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>Выполнение хранимых процедур — вызов хранимых процедур
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,15 +40,14 @@ ms.locfileid: "86004298"
   
 2.  Вызовите [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) для каждого параметра входа, входа-выхода и выхода, а также для значения, возвращаемого процедурой (если оно имеется).  
   
-3.  Выполните инструкцию с помощью [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
+3.  Выполните инструкцию с помощью [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md).  
   
 > [!NOTE]  
 >  Если приложение отправляет процедуру при помощи синтаксиса Transact-SQL EXECUTE (в отличие от escape-последовательности ODBC CALL), драйвер SQL Server ODBC передает этот вызов процедуры SQL Server в виде инструкции SQL, а не RPC. Кроме того, при использовании инструкции Transact-SQL EXECUTE выходные параметры не возвращаются.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   [Пакетирование вызовов хранимых процедур](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [Выполнение хранимых процедур](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Вызов хранимой процедуры](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [Процедуры](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
-  
   

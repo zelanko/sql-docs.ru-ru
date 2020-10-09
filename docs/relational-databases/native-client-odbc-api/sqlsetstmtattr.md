@@ -15,12 +15,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3909eca1ac7b61da6d9d29ecbe0f4283065b122b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420778"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868454"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88420778"
   
 |Значение *ValuePtr*|Описание|  
 |----------------------|-----------------|  
-|SQL_DP_ON|По умолчанию. После вызова [функции SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360)подготовка инструкции откладывается до вызова **SQLExecute** или выполнения операции метасвойства (**SQLDescribeCol** или **SQLDescribeParam**).|  
+|SQL_DP_ON|По умолчанию. После вызова [функции SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md)подготовка инструкции откладывается до вызова **SQLExecute** или выполнения операции метасвойства (**SQLDescribeCol** или **SQLDescribeParam**).|  
 |SQL_DP_OFF|Инструкция подготовлена сразу после выполнения **SQLPrepare** .|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -149,7 +149,6 @@ ms.locfileid: "88420778"
  Если функция каталога, отличная от then SQLTables, SQLColumns или SQLPrimaryKeys, вызывается, когда SQL_SOPT_SS_NAME_SCOPE имеет значение, отличное от SQL_SS_NAME_SCOPE_TABLE, возвращается SQL_ERROR. Создается диагностическая запись с параметром SQLSTATE HY010 и сообщением «Ошибочная последовательность функций (значение атрибута SQL_SOPT_SS_NAME_SCOPE не равно SQL_SS_NAME_SCOPE_TABLE)».  
   
 ## <a name="see-also"></a>См. также:  
- [Функция SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)   
+ [Функция SQLGetStmtAttr](../../odbc/reference/syntax/sqlgetstmtattr-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

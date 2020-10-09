@@ -15,12 +15,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd4bb999be51961d11dccf5cae107706dae9f6d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42323e6fbf35ddb6093ac4e764e81e7f0274cbb2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423986"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867474"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88423986"
   
 -   Значение меньше 0 является ошибочным и приводит к внесению в журнал диагностической записи со значением SQLState, равным HY090, и сообщением «Недопустимая длина строки или буфера».  
   
- Параметр *датаптр* игнорируется, но ему должно быть присвоено значение, отличное от NULL. Дополнительные сведения см. в разделе, посвященном TVP строке привязки в [Binding и передача данных значений параметров и столбцов, возвращающих](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)табличное значение.  
+ Параметр *датаптр* игнорируется, но ему должно быть присвоено значение, отличное от NULL. Дополнительные сведения см. в разделе о переменной TVP Binding в [Binding и Передача данных Table-Valued параметров и значений столбцов](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
  Если *StrLen_Or_Ind* имеет любое значение, отличное от SQL_DEFAULT_PARAM или число от 0 до SQL_PARAMSET_SIZE (то есть параметр *ColumnSize* SQLBindParameter), это является ошибкой. Эта ошибка приводит к тому, что SQLPutData возвращает SQL_ERROR: SQLSTATE = HY090, "Недопустимая строка или длина буфера".  
   
@@ -64,10 +64,9 @@ ms.locfileid: "88423986"
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>Поддержка функции SQLPutData для больших определяемых пользователем типов данных CLR  
- **SQLPutData** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLPutData** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [типы больших User-Defined CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Функция SQLPutData](https://go.microsoft.com/fwlink/?LinkId=59365)   
+ [Функция SQLPutData](../../odbc/reference/syntax/sqlputdata-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   
