@@ -21,16 +21,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d75c8cb02c64b5965fd5a6fe084b065c3dc8ba65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809850"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892404"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (база данных SQL Azure)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Возвращает успешные [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] подключения к базе данных, сбои подключений и взаимоблокировки. С помощью этих данных можно отслеживать и устранять неполадки операций с базой данных, используя [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "91809850"
   
  Представление `sys.event_log` содержит следующие столбцы.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных. Если подключение завершилось ошибкой и пользователь не указал имя базы данных, то этот столбец остается пустым.|  
 |**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -89,7 +89,7 @@ ms.locfileid: "91809850"
 
  Пользователи с разрешением на доступ к базе данных **master** имеют доступ только для чтения к этому представлению.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий
 
@@ -172,7 +172,7 @@ WHERE event_type = 'throttling'
     AND end_time <= '2011-09-25 11:00:00';  
 ```
 
-### <a name="db-scoped-extended-event"></a>Расширенное событие с областью действия базы данных
+### <a name="db-scoped-extended-event"></a>DB-Scoped расширенное событие
 
  Используйте следующий пример кода для настройки сеанса расширенного события с областью действия базы данных (XEvent):  
 

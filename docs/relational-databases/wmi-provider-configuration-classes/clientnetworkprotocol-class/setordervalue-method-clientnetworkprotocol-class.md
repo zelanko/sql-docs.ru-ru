@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ea0b09b3a20322065648efd3692d835b7c16ac9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1496143b862037ae8a4d0593ac3cc412dfd0b56e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521407"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889304"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Метод SetOrderValue (класс ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +42,15 @@ object.SetOrderValue(OrderValue)
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
 |*OrderValue*|Значение u**int32** , задающее порядковый номер.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Свойства клиентских протоколов (вкладка «Порядок»)](https://technet.microsoft.com/library/ms187884.aspx)  
-  
+## <a name="see-also"></a>См. также:  
+ [Свойства клиентских протоколов (вкладка «Порядок»)](../../../tools/configuration-manager/client-protocols-properties-order-tab.md)  
   

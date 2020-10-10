@@ -25,19 +25,19 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bcb65baaf591267d1c40b254bb23fe19e383192
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d11d28460905bcf1581aeaa56777b72f987f8452
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428196"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890805"
 ---
 # <a name="creating-a-driver-application"></a>Создание приложения драйвера
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В архитектуре ODBC имеется четыре компонента, которые выполняют следующие функции.  
   
-|Компонент|Функция|  
+|Компонент|Компонент|  
 |---------------|--------------|  
 |Приложение|Вызывает функции ODBC для связи с источником данных ODBC, поставляет инструкции SQL и обрабатывает результирующие наборы.|  
 |Диспетчер драйверов|Управляет связью между приложением и всеми драйверами ODBC, используемыми приложением.|  
@@ -111,9 +111,9 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- На раннем этапе разработки приложения необходимо решить, будет ли приложение нуждаться в нескольких одновременных вызовах ODBC. Существует два метода поддержки нескольких одновременных вызовов ODBC. Они описаны в оставшихся разделах этой темы. Дополнительные сведения см. в [справочнике программиста по ODBC](https://go.microsoft.com/fwlink/?LinkId=45250).  
+ На раннем этапе разработки приложения необходимо решить, будет ли приложение нуждаться в нескольких одновременных вызовах ODBC. Существует два метода поддержки нескольких одновременных вызовов ODBC. Они описаны в оставшихся разделах этой темы. Дополнительные сведения см. в [справочнике программиста по ODBC](../../../odbc/reference/odbc-programmer-s-reference.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Асинхронный режим и команда SQLCancel](../../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)  
   
@@ -121,5 +121,4 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
   

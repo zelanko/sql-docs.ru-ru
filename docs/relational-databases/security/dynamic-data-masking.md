@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb0c19820d7f3dcb4ff60c39d0cf3cbd6661b062
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005593"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727629"
 ---
 # <a name="dynamic-data-masking"></a>Динамическое маскирование данных
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,8 +32,6 @@ ms.locfileid: "86005593"
 * DDM включает функции полного и частичного маскирования, а также возможность использования случайной маски для числовых данных.
 * Назначение и использование масок осуществляется простыми командами [!INCLUDE[tsql_md](../../includes/tsql-md.md)].
 
-Например, специалист службы поддержки в центре вызовов может идентифицировать абонентов по нескольким цифрам номера социального страхования или кредитной карты,  при этом эти номера не должны предоставляться полностью. Можно определить правило маскирования, которое маскирует все цифры номера социального страхования или кредитной карты за исключением последних четырех в результирующем наборе любого запроса. Другой пример — с помощью соответствующей маски для защиты персональных данных разработчик может отправлять запросы к рабочей среде для устранения неполадок, не нарушая правил соответствия.
-
 Назначение динамического маскирования данных — ограничение раскрытия конфиденциальных данных, при котором пользователи, у которых нет доступа к данным, не смогут их просматривать. Динамическое маскирование данных не сможет помешать пользователям подключиться к базе данных напрямую и выполнить запросы для получения фрагментов конфиденциальных данных. Динамическое маскирование данных дополняет другие функции безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (аудит, шифрование, безопасность на уровне строк...). Настоятельно рекомендуется использовать маскирование вместе с этими функциями для лучшей защиты конфиденциальных данных в базе данных.  
   
 Динамическое маскирование данных доступно в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]и настраивается с помощью команд [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о настройке динамического маскирования данных с помощью портала Azure см. в разделе [Приступая к работе с динамическим маскированием данных в базах данных SQL (портал Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
@@ -46,7 +44,7 @@ ms.locfileid: "86005593"
 |По умолчанию|Полное маскирование в соответствии с типами данных назначенных полей.<br /><br /> Для строковых типов данных используйте XXXX или меньшее количество X, если размер поля меньше 4 символов (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Для числовых данных типов используйте нулевое значение (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Для типов данных даты и времени используйте 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Для двоичных типов данных используйте однобайтовое значение 0 ASCII (**binary**, **varbinary**, **image**).|Пример синтаксиса для определения столбца: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Пример синтаксиса для изменения: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Метод маскирования, который раскрывает первую букву адреса электронной почты и постоянный суффикс .com, в формате адреса электронной почты. `aXXX@XXXX.com`.|Пример определения синтаксиса: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Пример синтаксиса для изменения: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Случайные|Функция случайного маскирования для использования с любым числовым типом, которая маскирует исходное значение случайным значением в указанном диапазоне.|Пример определения синтаксиса: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Пример синтаксиса для изменения: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|Пользовательская строка|Метод маскирования, который раскрывает первую и последнюю буквы и добавляет пользовательскую строку заполнения в середине. `prefix,[padding],suffix`<br /><br /> Примечание. Если исходное значение слишком короткое для заполнения всей маски, часть префикса или суффикса не раскрывается.|Пример определения синтаксиса: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Пример синтаксиса для изменения: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Дополнительные примеры<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|Пользовательская строка|Метод маскирования, который раскрывает первую и последнюю буквы и добавляет пользовательскую строку заполнения в середине. `prefix,[padding],suffix`<br /><br /> Примечание. Если исходное значение слишком короткое для заполнения всей маски, часть префикса или суффикса не раскрывается.|Пример определения синтаксиса: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Пример синтаксиса для изменения: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Дополнительный пример:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
   
 ## <a name="permissions"></a>Разрешения  
  Для создания таблицы с динамическим маскированием данных не требуется специальных разрешений — только стандартные разрешения **CREATE TABLE** и **ALTER** для схемы.  
@@ -157,7 +155,7 @@ REVERT;
   
 ### <a name="adding-or-editing-a-mask-on-an-existing-column"></a>Добавление или изменение маски для существующего столбца  
  Используйте инструкцию **ALTER TABLE** для добавления маски к существующему столбцу в таблице или для изменения маски для этого столбца.  
-В следующем примере функция маскирования добавляется к столбцу `LastName` :  
+В следующем примере функция маскирования добавляется к столбцу `LastName`:  
   
 ```sql  
 ALTER TABLE Membership  

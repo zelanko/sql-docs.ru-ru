@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a4fa2a1bb7dda435676564989c1fb648eb3a956
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dcc745710132ea85b7027152900b7d693df37aab
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521521"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889080"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>Метод SetEnable (класс ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Включает сетевой протокол клиента, указанный в параметре [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx).  
+  Включает сетевой протокол клиента, указанный в параметре [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,9 +43,8 @@ object.SetEnableMethod()
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов клиента и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>См. также:  
+ [Настройка сетевых протоколов клиента и сетевых библиотек](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

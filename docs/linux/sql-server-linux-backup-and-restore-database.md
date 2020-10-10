@@ -9,18 +9,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088975"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753522"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Резервное копирование и восстановление баз данных SQL Server в Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Вы можете создавать резервные копии баз данных из SQL Server 2017 в Linux различными способами. На сервере Linux можно использовать **sqlcmd** для подключения к SQL Server и создания резервных копий. Из Windows можно подключиться к SQL Server в Linux и создать резервные копии с помощью пользовательского интерфейса. Функция резервного копирования одинакова для разных платформ. Например, можно выполнять резервное копирование баз данных локально, на удаленные диски или в [службу хранилища BLOB-объектов Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+
+> [!IMPORTANT]
+> SQL Server на Linux поддерживает резервное копирование в Хранилище BLOB-объектов Azure только с использованием блочных BLOB-объектов. Использование ключа хранилища для резервного копирования и восстановления приведет к использованию страничного BLOB-объекта, что не поддерживается. Используйте вместо этого подписанный URL-адрес. Сравнение блочных и страничных BLOB-объектов см. в разделе [Резервное копирование в блочные и страничные BLOB-объекты](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob).
 
 ## <a name="backup-a-database"></a>Резервное копирование базы данных
 

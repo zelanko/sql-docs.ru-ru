@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df2e36110a9e4a52a3587644b96994bc040442e8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6187c97f246a8c4eb445fb0afe224922b2c57f03
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519911"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891964"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Основные сведения о поставщике WMI для событий сервера
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Поставщик инструментария WMI для событий сервера позволяет использовать Инструментарий управления Windows (WMI) для контроля событий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В ходе своей работы поставщик преобразует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в управляемый объект инструментария WMI. Этот поставщик позволяет инструментарию WMI использовать все события, которые могут формировать уведомления о событии в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], играя роль управляющего приложения, взаимодействующего с инструментарием WMI, может реагировать на эти события, расширяя область событий, охватываемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущих версий.  
   
- Управляющие приложения, такие как агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], могут получать доступ к событиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика WMI для событий сервера путем выполнения инструкций WMI Query Language (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании языка WQL приложение получает тип события для определенной базы данных или объекта базы данных. Поставщик WMI для событий сервера преобразовывает запрос в уведомление о событии, создавая уведомление в базе данных-получателе. Дополнительные сведения о работе с уведомлениями о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Основные понятия поставщика WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx). События, которые могут быть запрошены, перечислены в [поставщике WMI для классов и свойств событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Управляющие приложения, такие как агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], могут получать доступ к событиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика WMI для событий сервера путем выполнения инструкций WMI Query Language (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании языка WQL приложение получает тип события для определенной базы данных или объекта базы данных. Поставщик WMI для событий сервера преобразовывает запрос в уведомление о событии, создавая уведомление в базе данных-получателе. Дополнительные сведения о работе с уведомлениями о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Основные понятия поставщика WMI для событий сервера](./wmi-provider-for-server-events-concepts.md). События, которые могут быть запрошены, перечислены в [поставщике WMI для классов и свойств событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
  Когда возникает событие, запускающее уведомление о событии для отправки сообщения, оно переходит к предопределенной целевой службе в **базе данных msdb** с именем **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. Служба помещает событие в предопределенную очередь в **базе данных msdb** с именем **WMIEventProviderNotificationQueue**. (Служба и очередь создаются динамически поставщиком при первом соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .) Затем поставщик считывает данные о событиях из этой очереди и преобразует их в формат управляемых объектов (MOF) перед возвратом в приложение. Данный процесс показан на следующем рисунке.  
   
@@ -62,9 +62,8 @@ GO
   
  Библиотека поставщика Sqlwep.dll загружается в службу WMI в операционной системе сервера только один раз независимо от количества экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], находящихся на сервере.  
   
- Пример [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложения управления агентом, использующего поставщик WMI для событий сервера, см. в разделе [Sample: создание агент SQL Server предупреждения с помощью поставщика WMI для событий сервера](https://technet.microsoft.com/library/ms186385.aspx). Пример приложения управления, использующего поставщик WMI для событий сервера в управляемом коде, см. в разделе [пример. Использование поставщика событий WMI в управляемом коде](https://technet.microsoft.com/library/ms179315.aspx). Дополнительные сведения также доступны в пакете SDK для WMI [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Пример [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложения управления агентом, использующего поставщик WMI для событий сервера, см. в разделе [Sample: создание агент SQL Server предупреждения с помощью поставщика WMI для событий сервера](./sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md). Пример приложения управления, использующего поставщик WMI для событий сервера в управляемом коде, см. в разделе [пример. Использование поставщика событий WMI в управляемом коде](./sample-using-the-wmi-event-provider-with-the-net-framework.md). Дополнительные сведения также доступны в пакете SDK для WMI [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия о поставщике WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx)  
-  
+## <a name="see-also"></a>См. также:  
+ [Основные понятия о поставщике WMI для событий сервера](./wmi-provider-for-server-events-concepts.md)  
   

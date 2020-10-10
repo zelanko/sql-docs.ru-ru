@@ -22,11 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 310fe1e7c2c42de405459becbde88334caf12dd5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8a3047db0cedf165016257961ea9c27474a941ef
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005732"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892334"
 ---
 # <a name="installing-sql-server-native-client"></a>Установка собственного клиента SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "86005732"
   
  Помимо установки Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в рамках установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имеется распространяемый установщик sqlncli.msi, который можно найти на установочном диске [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в следующем каталоге: `%CD%\Setup\`.  
   
- Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно распространять в виде файла sqlncli.msi. При развертывании приложения может потребоваться установка собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Один из способов установки нескольких пакетов в одном (с точки зрения пользователя) сеансе установки состоит в применении технологии построителей цепочек и загрузчиков. Дополнительные сведения см. в статьях [Разработка пользовательского пакета начального загрузчика для Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) и [Добавление настраиваемых необходимых компонентов](https://go.microsoft.com/fwlink/?LinkId=115668).  
+ Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно распространять в виде файла sqlncli.msi. При развертывании приложения может потребоваться установка собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Один из способов установки нескольких пакетов в одном (с точки зрения пользователя) сеансе установки состоит в применении технологии построителей цепочек и загрузчиков. Дополнительные сведения см. в статьях [Разработка пользовательского пакета начального загрузчика для Visual Studio 2005](/previous-versions/aa730839(v=vs.80)) и [Добавление настраиваемых необходимых компонентов](/visualstudio/deployment/creating-bootstrapper-packages).  
   
  Версии файла sqlncli.msi для архитектур x64 и Itanium устанавливают и 64-разрядную версию, и 32-разрядную версию собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если приложение планируется использовать на платформе, отличной от той, на которой оно разрабатывалось, можно скачать из центра загрузки Майкрософт версии sqlncli.msi for x64, Itanium и x86.  
   
@@ -69,8 +70,7 @@ ms.locfileid: "86005732"
   
  Значением, передаваемым в APPGUID, служит код продукта. Код продукта необходимо создать при использовании установщика (Майкрософт) для формирования пакета установки приложения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Инструкции по установке](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [Инструкции по установке](/previous-versions/sql/)  
   

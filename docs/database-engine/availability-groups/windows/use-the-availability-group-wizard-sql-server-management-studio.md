@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b4f7203d5fd4f0ab46982a7b3bca184a27a94d6
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 545b3ef714c36712b7b7973294a14e56eb78dad4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480516"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670807"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Использование мастера групп доступности (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -181,11 +181,11 @@ ms.locfileid: "89480516"
   
 -   **Блоги**  
   
-     [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](/archive/blogs/sqlalwayson/)  
   
-     [Блоги инженеров CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [Блоги инженеров CSS SQL Server](/archive/blogs/psssql/)  
   
 -   **Видеоролики**  
   
@@ -195,7 +195,7 @@ ms.locfileid: "89480516"
   
 -   **Технические документы**  
   
-     [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
      [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -210,4 +210,3 @@ ms.locfileid: "89480516"
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  

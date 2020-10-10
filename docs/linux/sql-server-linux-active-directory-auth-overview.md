@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 27a215b868101b17b7db6ec3f25dfc5456777ab1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: efce6c9f297c3dba58a37a3d097a9c8176efa287
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900137"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497995"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Проверка подлинности Azure Active Directory для SQL Server на Linux
 
@@ -52,6 +52,7 @@ ms.locfileid: "85900137"
 ## <a name="known-issues"></a>Известные проблемы
 
 - На данный момент единственный поддерживаемый способ проверки подлинности для конечной точки с зеркальным отображением базы данных — CERTIFICATE. Способ проверки подлинности WINDOWS будет включен в последующем выпуске.
+- SQL Server на Linux не поддерживает протокол NTLM для удаленных подключений. Локальное подключение может работать с NTLM.
 
 ## <a name="next-steps"></a>Next Steps
 

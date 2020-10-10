@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f49a006b0fe17120af2309f9b3991ab594ebda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423718"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412775"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Импорт политики управления на основе политик
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "88423718"
 
 
 ## <a name="example-policies"></a>Примеры политик
- Примеры политик не включены в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], однако доступ к ранее распространявшимся примерам политик можно получить, установив [SQL Server Management Studio 17](../../ssms/release-notes-ssms.md#previous-ssms-releases).  После установки SQL Server Management Studio 17 примеры политик можно найти в `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies`. Эти политики можно импортировать и использовать в качестве основы для собственных политик управления на основе политик.
+ Примеры политик доступны в [репозитории примеров кода SQL Server](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies). Эти политики можно импортировать и использовать в качестве основы для собственных политик управления на основе политик.

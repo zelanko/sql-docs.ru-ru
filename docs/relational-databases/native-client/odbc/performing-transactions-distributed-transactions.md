@@ -18,11 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7732b2e0f975ad1cd026a75f9614b3cb59ec7d8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009744"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892264"
 ---
 # <a name="create-a-distributed-transaction"></a>Создание распределенной транзакции
 
@@ -59,7 +60,7 @@ _(1)_ MSDTC можно вызывать без ODBC. В этом случае MS
 
 Предположим, что приложение ODBC собственного клиента C++ прикреплено к распределенной транзакции. Затем приложение прикрепляется во второй распределенной транзакции. В этом случае [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента оставляет исходную распределенную транзакцию и прикрепляется к новой распределенной транзакции.
 
-Дополнительные сведения см. в [справочнике программиста по DTC](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
+Дополнительные сведения см. в [справочнике программиста по DTC](/previous-versions/windows/desktop/ms686108(v=vs.85)).
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>Альтернатива C# для базы данных SQL в облаке
 
@@ -75,6 +76,6 @@ MSDTC не поддерживается для базы данных SQL Azure �
 - Связанный сервер с использованием Transact-SQL
 - Драйверы JDBC
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Выполнение транзакций (ODBC)](performing-transactions-in-odbc.md)

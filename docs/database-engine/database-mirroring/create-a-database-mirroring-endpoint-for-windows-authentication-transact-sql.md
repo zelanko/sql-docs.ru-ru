@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b7fe1a4a8ad78402226814e46ffc9d47964439
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c364aab699f49a4a9c4814a572a6a7295273650b
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789735"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529458"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "85789735"
 ###  <a name="security"></a><a name="Security"></a> безопасность  
  Методы проверки подлинности и шифрования для каждого экземпляра сервера устанавливаются администратором системы.  
   
-> [!IMPORTANT]  
+> [!WARNING]  
 >  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
- Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Требует разрешения `sysadmin` или членства в предопределенной роли сервера `CREATE ENDPOINT`. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
@@ -58,22 +58,23 @@ ms.locfileid: "85789735"
   
 3.  Определите, не существует ли уже конечная точка зеркального отображения, с помощью следующей инструкции:  
   
-    ```  
+    ```sql  
     SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
     ```  
   
     > [!IMPORTANT]  
     >  Если конечная точка зеркального отображения уже существует для данного экземпляра сервера, используйте ее для всех сеансов, устанавливаемых с этим экземпляром.  
   
-4.  Чтобы создать конечную точку с проверкой подлинности Windows на языке Transact-SQL, выполните инструкцию CREATE ENDPOINT. Эта инструкция выглядит так:  
+4.  Чтобы создать конечную точку с проверкой подлинности Windows на языке Transact-SQL, выполните инструкцию `CREATE ENDPOINT`. Эта инструкция выглядит так:  
   
+     ```syntaxsql
      CREATE ENDPOINT *\<endpointName>*  
   
      STATE=STARTED  
   
      AS TCP ( LISTENER_PORT = *\<listenerPortList>* )  
   
-     ДЛЯ DATABASE_MIRRORING  
+     FOR DATABASE_MIRRORING  
   
      (  
   
@@ -81,17 +82,18 @@ ms.locfileid: "85789735"
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { *\<algorithm>* } ]  
   
      ]  
   
-     [ **,** ] ROLE = *\<role>*  
+     [**,**] ROLE = *\<role>*  
   
      )  
-  
-     где  
+     ```
+     
+     Где:  
   
     -   *\<endpointName>*  — уникальное имя для конечной точки зеркального отображения базы данных экземпляра сервера.  
   
@@ -101,7 +103,7 @@ ms.locfileid: "85789735"
   
          Номер порта на одном компьютере может использоваться только один раз. Конечная точка зеркального отображения базы данных может использовать любой доступный порт на локальной системе, на которой эта точка создана. Чтобы определить, какие порты в данный момент используются в системе конечными точками протокола TCP, выполните следующую инструкцию Transact-SQL:  
   
-        ```  
+        ```sql  
         SELECT name, port FROM sys.tcp_endpoints;  
         ```  
   
@@ -124,12 +126,12 @@ ms.locfileid: "85789735"
   
          Алгоритм AES RC4 определяет, что данная конечная точка будет согласовывать алгоритм шифрования, отдавая предпочтение алгоритму AES. Алгоритм RC4 AES определяет, что данная конечная точка будет согласовывать алгоритм шифрования, отдавая предпочтение алгоритму RC4. Если обе конечные точки указывают оба алгоритма, но в разной последовательности, то используется та, которая указана на принимающей стороне. Явно укажите тот же алгоритм, чтобы избежать ошибок соединения между разными серверами.
   
-        > [!NOTE]  
+        > [!WARNING]  
         >  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.  
   
     -   *\<role>* определяет роль или роли, которые может выполнять сервер. Указание параметра ROLE необходимо. Однако роль конечной точки является значимой только для зеркального отображения базы данных. Для [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]роль конечной точки игнорируется.  
   
-         Чтобы сервер мог выполнять одну роль в одном сеансе зеркального отображения базы данных и другую — в другом, укажите ROLE=ALL. Чтобы ограничить роль сервера только участником или следящим, укажите ROLE=PARTNER или ROLE=WITNESS соответственно.  
+         Чтобы сервер мог выполнять одну роль в одном сеансе зеркального отображения базы данных и другую — в другом, укажите ROLE=ALL. Чтобы ограничить роль сервера только участником или следящим, укажите `ROLE = PARTNER` или `ROLE = WITNESS`, соответственно.  
   
         > [!NOTE]  
         >  Дополнительные сведения о параметрах зеркального отображения баз данных для различных выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -155,7 +157,7 @@ ms.locfileid: "85789735"
 > [!IMPORTANT]  
 >  У каждого экземпляра сервера может быть только одна конечная точка. Поэтому, если нужно, чтобы экземпляр сервера был в некоторых сеансах участником, а в некоторых — следящим, укажите ROLE=ALL.  
   
-```  
+```sql  
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  

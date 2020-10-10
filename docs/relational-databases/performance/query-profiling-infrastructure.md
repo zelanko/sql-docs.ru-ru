@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 099bf39d869caf8e42575393276e1a7e5ddadb68
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457266"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719543"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -126,7 +126,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 Появилась новая функция динамического управления [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md), которая возвращает эквивалент последнего известного действительного плана выполнения для большинства запросов и называется *статистика плана последнего запроса*. Ее можно включить на уровне базы данных с помощью конфигурации уровня базы данных [LAST_QUERY_PLAN_STATS](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
-Новое расширенное событие *query_post_execution_plan_profile* служит для сбора эквивалента действительного плана выполнения на основе упрощенного, а не стандартного профилирования, как в случае с событием *query_post_execution_showplan*. Пример сеанса с расширенным событием *query_post_execution_plan_profile* можно настроить, как показано ниже.
+Новое расширенное событие *query_post_execution_plan_profile* служит для сбора эквивалента действительного плана выполнения на основе упрощенного, а не стандартного профилирования, как в случае с событием *query_post_execution_showplan*. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] также предлагает это событие, начиная с CU14. Пример сеанса с расширенным событием *query_post_execution_plan_profile* можно настроить, как показано ниже.
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -180,7 +180,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 |---------------|---------------|---------------|
 |Global|Сеанс xEvent с расширенным событием `query_post_execution_showplan`. Минимальная версия: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Флаг трассировки 7412. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)|
 |Global|Система "Трассировка SQL" и SQL Server Profiler с событием трассировки `Showplan XML`. Минимальная версия: SQL Server 2000|Сеанс xEvent с расширенным событием `query_thread_profile`. Минимальная версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2)|
-|Global|-|Сеанс xEvent с расширенным событием `query_post_execution_plan_profile`. Минимальная версия: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|Global|-|Сеанс xEvent с расширенным событием `query_post_execution_plan_profile`. Минимальная версия: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 14 (CU14) и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |Сеанс|Используйте `SET STATISTICS XML ON`. Минимальная версия: SQL Server 2000|Используйте указание запроса `QUERY_PLAN_PROFILE`, а также сеанс xEvent с расширенным событием `query_plan_profile`. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)|
 |Сеанс|Используйте `SET STATISTICS PROFILE ON`. Минимальная версия: SQL Server 2000|-|
 |Сеанс|Нажмите кнопку [Статистика активных запросов](../../relational-databases/performance/live-query-statistics.md) в SSMS. Минимальная версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2)|-|

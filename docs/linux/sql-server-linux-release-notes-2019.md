@@ -3,16 +3,16 @@ title: Заметки о выпуске для SQL Server 2019 в Linux
 description: Эта статья содержит заметки о выпуске и поддерживаемые функции для SQL Server 2019 в Linux. Приведены заметки о выпуске для последнего и нескольких предыдущих выпусков.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b5a0f9825a44e1f0d1a4d19ba5fc86a9b9fa9630
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: 8ee707f13c8b02669486f5fab0106cb9357be232
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145403"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636114"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Заметки о выпуске для SQL Server 2019 в Linux
 
@@ -35,6 +35,8 @@ ms.locfileid: "91145403"
 
 | Release                   | Версия       | Дата выпуска |
 |---------------------------|---------------|--------------|
+| [CU8](#cu8)               |               |              |
+| [CU7 (удален)](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 02.09.2020   |
 | [CU6](#cu6)               | 15.0.4053.23  | 04.08.2020   |
 | [CU5](#cu5)               | 15.0.4043.16  | 22.06.2020   |
 | [CU4](#cu4)               | 15.0.4033.1   | 2020-03-31   |
@@ -56,6 +58,10 @@ ms.locfileid: "91145403"
 - [Установка поддержки R и Python для служб машинного обучения SQL Server 2019 в Linux](sql-server-linux-setup-machine-learning.md)
 - [Установка пакета PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Включение агента SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu8"></a><a id="cu8"></a> CU8
+
+Накопительный пакет обновления 8 (CU8) для SQL Server 2019 (15.x) еще не выпущен.
 
 ## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (июль 2020 г.)
 

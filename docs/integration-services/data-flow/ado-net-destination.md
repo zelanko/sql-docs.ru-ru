@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c1864f1a0a5e57a025f90d1219b8068656f87d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de65e13530f46b72a8474e58407de61e463685d5
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425906"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412765"
 ---
 # <a name="ado-net-destination"></a>Назначение «ADO.NET»
 
@@ -96,7 +96,7 @@ ms.locfileid: "88425906"
   
  Только поставщики ADO.NET, возвращающие объект <xref:System.Data.SqlClient.SqlConnection> , поддерживают использование интерфейса <xref:System.Data.SqlClient.SqlBulkCopy> . Поставщик данных .NET для SQL Server (SqlClient) возвращает объект <xref:System.Data.SqlClient.SqlConnection> , а настраиваемый поставщик может возвращать объект <xref:System.Data.SqlClient.SqlConnection> .  
   
- Вы можете использовать поставщик данных .NET для SQL Server (SqlClient) для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ Вы можете использовать поставщик данных .NET для SQL Server (SqlClient), чтобы подключаться к [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  Если был выбран параметр **По возможности использовать массовую вставку**, а для параметра **Ошибка** задано значение **Перенаправить строку**, то в пакет данных, перенаправляемый объектом назначения в вывод ошибок, могут попасть и строки, не содержащие ошибок. Дополнительные сведения об обработке ошибок в массовых операциях см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md). Дополнительные сведения о параметре **Ошибка** см. в разделе [Редактор назначения ADO.NET (страница "Вывод ошибок")](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   

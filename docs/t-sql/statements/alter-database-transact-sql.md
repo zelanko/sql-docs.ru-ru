@@ -1,8 +1,8 @@
 ---
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL) | Документация Майкрософт
-ms.custom: ''
-ms.date: 08/27/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f16a17c1705846936f7de6a13038b8aab6674393
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5f41b3cc0e5a9d895d83c6696105bdded8302217
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538115"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725915"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -327,6 +327,7 @@ ALTER DATABASE { database_name | CURRENT }
 {
     MODIFY NAME = new_database_name
   | MODIFY ( <edition_options> [, ... n] )
+  | MODIFY BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
   | SET { <option_spec> [ ,... n ] WITH <termination>}
   | ADD SECONDARY ON SERVER <partner_server_name>
     [WITH ( <add-secondary-option>::=[, ... n] ) ]
@@ -425,6 +426,11 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > Смена значения параметра EDITION завершается неудачей, если для свойства MAXSIZE базы данных задано значение вне допустимого диапазона, поддерживаемого этим выпуском.
 
+MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ["LOCAL" \| "ZONE" \| "GEO"]) изменяет избыточность хранилища резервных копий для восстановления на определенный момент времени и долгосрочного хранения (если оно настроено) базы данных. Изменения применяются ко всем будущим резервным копиям. Существующие резервные копии продолжают использовать предыдущий параметр. 
+
+> [!IMPORTANT]
+> Параметр BACKUP_STORAGE_REDUNDANCY для Базы данных SQL Azure сейчас предоставляется только в регионе Azure Юго-Восточной Азии, в режиме общедоступной предварительной версии.  
+
 MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) — указывает максимальный размер базы данных. Максимальный размер должен соответствовать допустимому набору значений для свойства EDITION базы данных. Смена максимального размера базы данных может потребовать также смены значения EDITION базы данных.
 
 > [!NOTE]
@@ -454,7 +460,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) — указы
 |500 ГБ|Недоступно|√|√|√ (D)|√|
 |750 ГБ|Недоступно|√|√|√|√|
 |1024 ГБ|Недоступно|√|√|√|√ (D)|
-|От 1024 до 4096 ГБ с шагом приращения 256 ГБ *|Н/Д|Н/Д|Недоступно|Недоступно|√|
+|От 1024 до 4096 ГБ с шагом приращения 256 ГБ *|Недоступно|Недоступно|Недоступно|Недоступно|√|
 
 \* P11 и P15 позволяют задавать параметру MAXSIZE значение до 4 ТБ, при этом размер по умолчанию — 1024 ГБ. P11 и P15 могут использовать до 4 ТБ включенного объема хранилища без дополнительной платы. На уровне Premium использование MAXSIZE со значением более 1 ТБ сейчас доступно в следующих регионах: восточная часть США 2, западная часть США, US Gov (Вирджиния), Западная Европа, Центральная Германия, Юго-Восточная Азия, Восточная Япония, Восточная Австралия, Центральная Канада и Восточная Канада. Дополнительные сведения об ограничениях по ресурсам для модели DTU см. в разделе [Пределы для ресурсов DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -594,6 +600,9 @@ ADD SECONDARY ON SERVER \<partner_server_name>
 > [!IMPORTANT]
 > Сейчас уровень служб "Гипермасштабирование" не поддерживает георепликацию.
 
+> [!IMPORTANT]
+> По умолчанию вторичная база данных создается с той же избыточностью хранилища резервных копий, что и у первичной базы данных (источника). Изменение избыточности хранилища резервных копий при создании вторичной базы данных не поддерживается в T-SQL. 
+
 WITH ALLOW_CONNECTIONS { **ALL** | NO }— если параметр ALLOW_CONNECTIONS не указан, ему по умолчанию присваивается значение ALL. Если указано значение ALL, это база данных только для чтения, позволяющая подключаться всем именам входа с соответствующими разрешениями.
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, `GP_Fsv2_16`, `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, `GP_Fsv2_72`, `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16`, `BC_M_18`, `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64`, `BC_M_128` }
@@ -716,6 +725,14 @@ ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
 
 ```sql
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
+```
+
+### <a name="h-update-the-backup-storage-redundancy-of-a-database"></a>З. Обновление избыточности хранилища резервных копий базы данных
+
+Обновляет избыточность хранилища резервных копий базы данных до избыточной между зонами. Все будущие резервные копии этой базы данных будут использовать новый параметр. Это касается как резервных копий для восстановления на определенный момент времени, так и для долгосрочного хранения (если оно настроено). 
+
+```sql
+ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 ```
 
 ## <a name="see-also"></a>См. также раздел
@@ -904,7 +921,8 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="syntax"></a>Синтаксис
 
-```console
+### <a name="sql-pool"></a>[Пул SQL](#tab/sqlpool)
+```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
   MODIFY NAME = new_database_name
@@ -927,6 +945,42 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
+### <a name="sql-on-demand-preview"></a>[SQL по запросу (предварительная версия)](#tab/sqlod)
+```syntaxsql
+ALTER DATABASE { database_name | Current } 
+{ 
+    COLLATE collation_name 
+  | SET { <optionspec> [ ,...n ] } 
+} 
+[;] 
+
+<optionspec> ::= 
+{ 
+    <auto_option> 
+  | <sql_option> 
+}  
+
+<auto_option> ::= 
+{ 
+    AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] } 
+  | AUTO_UPDATE_STATISTICS { ON | OFF } 
+  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 
+} 
+
+<sql_option> ::= 
+{ 
+    ANSI_NULL_DEFAULT { ON | OFF } 
+  | ANSI_NULLS { ON | OFF } 
+  | ANSI_PADDING { ON | OFF } 
+  | ANSI_WARNINGS { ON | OFF } 
+  | ARITHABORT { ON | OFF } 
+  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } 
+  | CONCAT_NULL_YIELDS_NULL { ON | OFF } 
+  | NUMERIC_ROUNDABORT { ON | OFF } 
+  | QUOTED_IDENTIFIER { ON | OFF } 
+} 
+```
+---
 
 ## <a name="arguments"></a>Аргументы
 

@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ed706ebdeb3151911d20ba76c7317bdac3b27f58
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ba9dfe13c38f4f29dd06c313c16896f34857a746
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537277"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890357"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Свойство Properties (класс ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Возвращает свойства, связанные с текущим сетевым протоколом клиента, заданным в параметре [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx).  
+  Возвращает свойства, связанные с текущим сетевым протоколом клиента, заданным в параметре [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,9 +43,8 @@ object.Properties [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Массив объектов класса [ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) , представляющих свойства, поддерживаемые текущим сетевым протоколом клиента, на который ссылается свойство **OrderValue** .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов клиента и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>См. также:  
+ [Настройка сетевых протоколов клиента и сетевых библиотек](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

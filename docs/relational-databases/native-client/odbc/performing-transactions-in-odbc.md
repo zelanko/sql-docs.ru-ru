@@ -16,11 +16,12 @@ ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3a303bd33d9f4ee0118512d9c346a5eab0ad9a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e37533e1c57ccf55dfe8bb7b5cbc5aa3da60dd3f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009732"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890794"
 ---
 # <a name="performing-transactions-in-odbc"></a>Выполнение транзакций в ODBC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,6 @@ ms.locfileid: "86009732"
   
  Приложения ODBC не должны использовать инструкции языка Transact-SQL, такие как BEGIN TRANSACTION, COMMIT TRANSACTION и ROLLBACK TRANSACTION, потому что это может привести к ситуации, когда поведение драйвера не определено. Приложение ODBC должно выполняться в режиме автоматической фиксации и не использовать никаких функций или инструкций для управления транзакциями или работать в режиме ручной фиксации и использовать функцию ODBC **SQLEndTran** для фиксации и отката транзакций.  
   
-## <a name="see-also"></a>См. также  
- [Выполнение транзакций &#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
-  
+## <a name="see-also"></a>См. также:  
+ [Выполнение транзакций &#40;ODBC&#41;]()  
   

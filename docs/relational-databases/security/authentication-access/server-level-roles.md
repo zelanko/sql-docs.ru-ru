@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334026"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636144"
 ---
 # <a name="server-level-roles"></a>Роли уровня сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -58,6 +58,9 @@ ms.locfileid: "85334026"
 |**diskadmin**|Предопределенная роль сервера **diskadmin** используется для управления файлами на диске.|  
 |**dbcreator**|Члены предопределенной роли сервера **dbcreator** могут создавать, изменять, удалять и восстанавливать любые базы данных.|  
 |**public**|Каждое имя для входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] принадлежит к роли сервера **public**. Если для участника на уровне сервера не были предоставлены или запрещены конкретные разрешения на защищаемый объект, он наследует разрешения роли public на этот объект. Разрешения роли public следует назначать только тому объекту, который будет доступен всем пользователям. Нельзя изменить членство в роли public.<br /><br /> **Примечание**. Роль **public** реализуется не так, как другие роли. В разрешениях может быть отказано, они могут предоставляться либо отменяться для предопределенных ролей public.|  
+  
+> [!IMPORTANT] 
+> Большинство разрешений, предоставляемых следующими ролями сервера, не применимы к Synapse SQL — **processadmin**, **serveradmin**, **setupadmin**и **diskadmin**.
   
 ## <a name="permissions-of-fixed-server-roles"></a>Разрешения Предопределенных Ролей Сервера  
  Каждая предопределенная роль сервера обладает определенными разрешениями, назначенными ей. На следующем рисунке показаны разрешения, назначенные ролям сервера.   

@@ -21,12 +21,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 172557586f7198bcc6151fd58f12faa0683f4fc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db94d769171bd5335253611758da5234f6d5a7c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428126"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892274"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Создание профилей производительности драйвера ODBC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,17 +68,17 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Профиль приложения  
   
--   Соединение  
+-   Подключение  
   
 -   Сеть  
   
--   Time  
+-   время;  
   
  В следующей таблице приведены описания полей структуры данных SQLPERF, также относящиеся к файлу журнала производительности.  
   
 ### <a name="application-profile-statistics"></a>Статистика профиля приложения  
   
-|Поле SQLPERF|Описание|  
+|Поле SQLPERF|Description|  
 |-------------------|-----------------|  
 |TimerResolution|Минимальное разрешение времени с часов сервера в миллисекундах. Обычно возвращается 0 (ноль). Это значение учитывается только в тех случаях, когда сообщается большое число. Если минимальное разрешение часов сервера больше, чем вероятные интервалы какой-либо статистики по таймеру, эти статистические данные могут оказаться завышенными.|  
 |SQLidu|Количество инструкций INSERT, DELETE и UPDATE после SQL_PERF_START.|  
@@ -86,7 +86,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Количество инструкций SELECT, обработанных после SQL_PERF_START.|  
 |SQLSelectRows|Количество строк, выбранных после SQL_PERF_START.|  
 |Transactions|Количество пользовательских транзакций после SQL_PERF_START, включая откаты. Если приложение ODBC запущено с параметром SQL_AUTOCOMMIT_ON, каждая команда считается транзакцией.|  
-|SQLPrepares|Число вызовов [функций SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) после SQL_PERF_START.|  
+|SQLPrepares|Число вызовов [функций SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md) после SQL_PERF_START.|  
 |ExecDirects|Число вызовов **SQLExecDirect** после SQL_PERF_START.|  
 |SQLExecutes|Число вызовов **SQLExecute** после SQL_PERF_START.|  
 |CursorOpens|Количество открытий драйвером серверного курсора после SQL_PERF_START.|  
@@ -116,7 +116,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Статистика по времени  
   
-|Поле SQLPERF|Описание|  
+|Поле SQLPERF|Description|  
 |-------------------|-----------------|  
 |msExecutionTime|Общее количество времени, затраченного драйвером на обработку после SQL_PERF_START, включая время на ожидание ответов от сервера.|  
 |msNetworkServerTime|Общее количество времени, затраченного драйвером на ожидание ответов от сервера.|  
@@ -124,5 +124,4 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 ## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Инструкции по профилированию производительности драйвера ODBC &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

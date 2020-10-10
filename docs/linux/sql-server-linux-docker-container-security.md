@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 10d2eb061a4ee6d9ff9c8d0594561667dd882dc9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 60ee13c6715362ba821575a3f8b9f9d5bc3e2bfa
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511616"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589333"
 ---
 # <a name="secure-sql-server-docker-containers"></a>Защита контейнеров Docker в SQL Server
 
@@ -126,6 +126,60 @@ chmod -R g=u <database file dir>
 ```bash
 chown -R 10001:0 <database file dir>
 ```
+## <a name="encrypting-connections-to-sql-server-linux-containers"></a>Шифрование соединений с контейнерами Linux SQL Server
+
+Чтобы шифровать соединения с контейнерами Linux SQL Server, вам потребуется сертификат, требования к которому задокументированы [здесь].
+
+Ниже приведен пример того, как можно зашифровать соединения с контейнерами Linux SQL Server. Здесь мы используем самозаверяющий сертификат, который не следует использовать в рабочих сценариях для таких сред, в них следует использовать сертификаты от центра сертификации.
+
+1. Создайте самозаверяющий сертификат, который подходит только для тестовых и нерабочих сред.
+  
+      ```bash
+      openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=sql1.contoso.com' -keyout /container/sql1/mssql.key -out /container/sql1/mssql.pem -days 365
+      ```
+     Где sql1 — имя узла контейнера SQL, поэтому при подключении к этому контейнеру именем, используемым в строке подключения, будет \'sql1.contoso.com.port\'.
+
+    > [!NOTE]
+    > Перед выполнением указанной выше команды убедитесь, что путь к папке /container/sql1/ уже существует.
+
+2. Убедитесь, что установлены правильные разрешения на файлы mssql.key and mssql.pem, чтобы избежать ошибок при подключении файлов к контейнеру SQL:
+
+    ```bash
+    chmod 440 /container/sql1/mssql.pem
+    chmod 440 /container/sql1/mssql.key
+    ```
+
+3. Теперь создайте файл mssql.conf с приведенным ниже содержимым, чтобы включить шифрование, инициированное сервером. Для шифрования, инициированного клиентом, измените последнюю строку на 'forceencryption = 0\'.
+
+    ```bash
+    [network]
+    tlscert = /etc/ssl/certs/mssql.pem
+    tlskey = /etc/ssl/private/mssql.key
+    tlsprotocols = 1.2
+    forceencryption = 1
+    ```
+
+    > [!NOTE]
+    > Для некоторых дистрибутивов Linux путь для хранения сертификата и ключа также может быть следующим: /etc/pki/tls/certs/ и /etc/pki/tls/private/ соответственно. Проверьте путь перед обновлением mssql.conf для контейнеров SQL. Расположение, заданное в mssql.conf, будет совпадать с расположением, где SQL Server в контейнере будет искать сертификат и его ключ. В данном случае это расположение — etc/ssl/certs/ и /etc/ssl/private/.
+
+    Файл mssql.conf также создается в том же расположении папки /container/sql1/. После выполнения описанных выше действий в папке sql1 должны быть три файла: mssql.conf, mssql.key и mssql.pem.
+
+4. Разверните контейнер SQL с помощью команды, показанной ниже:
+
+    ```bash
+    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -p 5434:1433 --name sql1 -h sql1 -v /container/sql1/mssql.conf:/var/opt/mssql/mssql.conf -v   /container/sql1/mssql.pem:/etc/ssl/certs/mssql.pem -v /container/sql1/mssql.key:/etc/ssl/private/mssql.key -d mcr.microsoft.com/mssql/server:2019-latest
+    ```
+
+    В приведенной выше команде мы подключили файлы mssql.conf, mssql.pem и mssql.keyк контейнеру и сопоставили порт 1433 (порт SQL Server по умолчанию) в контейнере с портом 5434 узла. 
+
+    > [!NOTE]
+    > При использовании RHEL 8 и более поздних версий можно также использовать команду \'podman run\', вместо \'docker run\'. 
+
+Следуйте указаниям в разделах \"Регистрация сертификата на клиентском компьютере\" и \"Примеры строк подключения\", приведенных [здесь][1], чтобы начать шифрование подключений к контейнерам SQL Server в Linux.
+
+  [Encrypting connection to SQL Server Linux]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true
+  [здесь]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#requirements-for-certificates
+  [1]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#client-initiated-encryption
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

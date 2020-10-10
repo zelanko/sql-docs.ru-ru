@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ceab1e91f11cdb53ed157d595260b1fb448a453f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b2475eac5044c28b3f5a5a52037ac1a3e0715a0c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545306"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892524"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Метод SetValue (класс ClientSettingsGeneralFlag)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +42,15 @@ object.SetValue(Value)
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
 |*Значение*|Логическое значение, указывающее состояние флага.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

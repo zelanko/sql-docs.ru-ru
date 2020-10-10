@@ -15,12 +15,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1129420a821c7cbce65a094a75512fd5baa54d1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899708"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670450"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 
@@ -32,8 +32,8 @@ ms.locfileid: "85899708"
 
 Другие способы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в следующих статьях.  
 
-* [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-* [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+* [Установка SQL Server из командной строки](./install-sql-server-from-the-command-prompt.md)  
+* [Установка SQL Server с помощью файла конфигурации](./install-sql-server-using-a-configuration-file.md)  
 * [Установка SQL Server с помощью SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
 * [Создание отказоустойчивого кластера SQL Server (программа установки)](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
 * [Обновление SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
@@ -70,7 +70,7 @@ ms.locfileid: "85899708"
 1. На странице **Условия лицензии** ознакомьтесь с лицензионным соглашением. Если вы согласны с условиями, установите флажок **Я принимаю условия лицензионного соглашения**, затем щелкните **Далее**.  
     
    > [!NOTE]
-   > SQL Server передает сведения об установке, а также другие данные об использовании и производительности в Майкрософт, чтобы помочь улучшить продукт. Дополнительные сведения об обработке данных SQL Server и элементах управления конфиденциальностью см. в [заявлении о конфиденциальности](https://privacy.microsoft.com/privacystatement) и руководстве по [настройке SQL Server для отправки отзывов в корпорацию Майкрософт](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
+   > SQL Server передает сведения об установке, а также другие данные об использовании и производительности в Майкрософт, чтобы помочь улучшить продукт. Дополнительные сведения об обработке данных SQL Server и элементах управления конфиденциальностью см. в [заявлении о конфиденциальности](https://privacy.microsoft.com/privacystatement) и руководстве по [настройке SQL Server для отправки отзывов в корпорацию Майкрософт](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 1. В окне **Глобальные правила** процедура установки автоматически перейдет к странице **Обновления продукта**, если ошибок в правилах нет.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "85899708"
    > Если вводится ключ продукта лицензии Enterprise Server или CAL и на компьютере установлено более 20 физических ядер или 40 логических ядер при включенной технологии Hyper-Threading, во время установки отобразится предупреждение. Вы по-прежнему можете продолжить установку, установив флажок **Установите этот флажок, чтобы подтвердить это ограничение, либо нажмите кнопку "Назад" или "Отмена", чтобы указать лицензию на продукт Enterprise Core, которая поддерживает максимум для операционной системы**, или нажмите кнопку **Назад** и введите ключ лицензии, поддерживающий максимальное число процессоров операционной системы.
 
    > [!NOTE]
-   > SQL Server передает сведения об установке, а также другие данные об использовании и производительности в Майкрософт, чтобы помочь улучшить продукт. Дополнительные сведения об обработке данных SQL Server и элементах управления конфиденциальностью см. в [заявлении о конфиденциальности](https://privacy.microsoft.com/privacystatement) и руководстве по [настройке SQL Server для отправки отзывов в корпорацию Майкрософт](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
+   > SQL Server передает сведения об установке, а также другие данные об использовании и производительности в Майкрософт, чтобы помочь улучшить продукт. Дополнительные сведения об обработке данных SQL Server и элементах управления конфиденциальностью см. в [заявлении о конфиденциальности](https://privacy.microsoft.com/privacystatement) и руководстве по [настройке SQL Server для отправки отзывов в корпорацию Майкрософт](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 1. В окне **Глобальные правила** процедура установки автоматически перейдет к странице **Обновления продукта**, если ошибок в правилах нет.  
   
@@ -310,7 +310,7 @@ ms.locfileid: "85899708"
   
        После успешного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — страница конфигурации сервера](../../sql-server/install/instance-configuration.md#serverconfig).
   
-    * **Администраторы SQL Server**. Для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо указать хотя бы одного администратора системы. Чтобы добавить учетную запись, от имени которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], щелкните **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, выберите действие **Добавить** или **Удалить**, затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    * **Администраторы SQL Server**. Для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо указать хотя бы одного администратора системы. Чтобы добавить учетную запись, от имени которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], щелкните **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, выберите действие **Добавить** или **Удалить**, затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Вы также можете добавить группу домена Windows, чтобы создать общую группу администраторов SQL в Active Directory с доступом администратора к SQL Server. 
   
      На странице **Конфигурация ядра СУБД — каталоги данных** укажите каталоги установки, отличающиеся от заданных по умолчанию. Чтобы произвести установку в каталог по умолчанию, щелкните **Далее**.  
   
@@ -326,14 +326,14 @@ ms.locfileid: "85899708"
     > [!NOTE]  
     > Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — страница MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
+    Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — страница MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop). 
 
      Используйте страницу **Конфигурация ядра СУБД — ресурсы памяти**, чтобы указать значения параметров **Min Server Memory** и **Max Server Memory**, которые будет использовать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после запуска. Вы можете сохранить здесь значения по умолчанию, выбрать вычисляемые рекомендуемые значения или вручную изменить их после выбора варианта **Рекомендуется**.
      
     > [!NOTE]  
     > Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Дополнительные сведения см. в разделе о странице [ресурсов памяти при конфигурации ядра СУБД](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+    Дополнительные сведения см. в разделе о странице [ресурсов памяти при конфигурации ядра СУБД](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory). 
 
      Чтобы включить FILESTREAM в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте страницу **Конфигурация ядра СУБД — FILESTREAM**. Дополнительные сведения см. в разделе [Настройка компонента Database Engine — страница FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
@@ -411,4 +411,4 @@ ms.locfileid: "85899708"
 * [Исправление неудавшейся установки SQL Server](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 * [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 * [Обновление SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 
+* [Установка SQL Server из командной строки](./install-sql-server-from-the-command-prompt.md)

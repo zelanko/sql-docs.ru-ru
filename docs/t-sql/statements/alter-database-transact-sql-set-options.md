@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 2ba665e435b6245320f4f5c496a212d485df7951
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0c54bbd653e6939327e96beb5d7662b14dad1ea3
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538188"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589313"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -216,7 +216,7 @@ SET
 {
     QUERY_STORE
     {
-          = OFF [ FORCED ] 
+          = OFF [ ( FORCED ) ] 
         | = ON [ ( <query_store_option_list> [,...n] ) ]
         | ( < query_store_option_list> [,...n] )
         | CLEAR [ ALL ]
@@ -763,19 +763,19 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
+ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов. Дополнительные сведения: [Сценарии использования хранилища запросов](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON     
 Включает хранилище запросов.
 
-OFF      
-Отключает хранилище запросов. OFF — значение по умолчанию. FORCED является необязательным. FORCED прерывает все выполняющиеся фоновые задачи хранилища запросов и пропускает синхронный сброс, когда хранилище запросов отключается. Приводит к максимально быстрому завершению работы хранилища запросов. FORCED применяется к [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 и более поздним сборкам.
+OFF [ ( FORCED ) ]      
+Отключает хранилище запросов. OFF — значение по умолчанию. FORCED является необязательным. FORCED прерывает все выполняющиеся фоновые задачи хранилища запросов и пропускает синхронный сброс, когда хранилище запросов отключается. Приводит к максимально быстрому завершению работы хранилища запросов. FORCED применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 и более поздним сборкам.
 
 > [!NOTE]  
 > Хранилище запросов нельзя отключить в отдельной базе данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и эластичном пуле. При исполнении `ALTER DATABASE [database] SET QUERY_STORE = OFF` будет возвращено предупреждение `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
-CLEAR     
+CLEAR [ ALL ]     
 Удаляет данные, связанные с запросами, из хранилища запросов. ALL является необязательным. ALL удаляет данные и метаданные, связанные с запросами, из хранилища запросов.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     

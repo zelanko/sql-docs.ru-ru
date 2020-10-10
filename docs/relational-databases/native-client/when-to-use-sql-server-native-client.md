@@ -15,16 +15,17 @@ ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e8392ff6003c9fcfd259b8c9710e30fa467dfa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eec9718c814e7fdf84d198e6112eceac863ebdd9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012059"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891064"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>Когда использовать собственный клиент SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — одна из технологий для доступа к данным в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Обсуждение других технологий доступа к данным см. в разделе [Схема технологий доступа к данным](https://go.microsoft.com/fwlink/?LinkID=179186).  
+  Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — одна из технологий для доступа к данным в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Обсуждение других технологий доступа к данным см. в разделе [Схема технологий доступа к данным](../../connect/connect-history.md).  
   
  В принятии решения о необходимости использования в качестве технологии доступа к данным собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо принимать во внимание ряд факторов.  
   
@@ -38,9 +39,8 @@ ms.locfileid: "86012059"
   
  Сведения о различиях между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственным клиентом и компонентами MDAC см. в разделе [Обновление приложения для SQL Server Native Client из MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client программирование](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Разделы руководства по ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Инструкции по OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

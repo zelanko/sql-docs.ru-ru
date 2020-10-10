@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb1e919942d491cdf44388f24de151b2ddeeeee0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4c28188a6abada5ff699b8ee759a84c237b8d8e8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537574"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891624"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Работа с поставщиком WMI для событий сервера
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе приводятся рекомендации, которые следует учитывать при программировании с помощью поставщика WMI для событий сервера.  
   
 ## <a name="enabling-service-broker"></a>Включение компонента Service Broker  
- Поставщик WMI для событий сервера преобразует запросы на события WQL в уведомления о событиях в целевой базе данных. Понимание работы уведомлений о событиях полезно при программировании поставщика. Дополнительные сведения см. в разделе [Основные понятия о поставщике WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx).  
+ Поставщик WMI для событий сервера преобразует запросы на события WQL в уведомления о событиях в целевой базе данных. Понимание работы уведомлений о событиях полезно при программировании поставщика. Дополнительные сведения см. в разделе [Основные понятия о поставщике WMI для событий сервера](./wmi-provider-for-server-events-concepts.md).  
   
  В частности, поскольку уведомления о событиях, созданные поставщиком WMI, используют [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для отправки сообщений о событиях сервера, при формировании событий эта служба должна быть включена. Если программа запрашивает события на экземпляре сервера, необходимо включить компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] в msdb этого экземпляра, поскольку здесь находится целевая служба [!INCLUDE[ssSB](../../includes/sssb-md.md)] (с именем SQL/Notifications/ProcessWMIEventProviderNotification/v1.0), создаваемая поставщиком. Если программа запрашивает события в базе данных или в определенном объекте базы данных, необходимо включить компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] в этой базе данных-получателе. Если соответствующий компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] не включен после развертывания приложения, то все события, формируемые базовым уведомлением о событиях, отправляются в очередь службы, которую использует уведомление о событиях, но они не возвращаются приложению инструментария WMI, пока не будет включен компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
@@ -113,7 +113,6 @@ WHERE DatabaseName = "AdventureWorks2012"
 ## <a name="working-with-event-data-on-the-client-side"></a>Работа с данными событий на стороне клиента  
  После того как поставщик WMI для событий сервера создает в целевой базе данных требуемое уведомление о событии, уведомление о событии отправляет данные о событии в целевую службу в msdb с именем **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. Целевая служба ставит событие в очередь **WMIEventProviderNotificationQueue** в базе данных **msdb**. (Служба и очередь динамически создаются поставщиком при первом соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .) Затем поставщик считывает данные о событиях XML из этой очереди и преобразует их в формат управляемых объектов (MOF) перед возвращением в клиентское приложение. Данные MOF состоят из свойств события, запрашиваемого WQL-запросом в виде определения класса общей информационной модели (CIM). Каждое свойство имеет соответствующий тип CIM. Например, `SPID` свойство возвращается как CIM типа **Sint32**. Типы CIM для каждого свойства приведены в списке под каждым из классов событий в разделе [Поставщик WMI для классов и свойств событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия о поставщике WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx)  
-  
+## <a name="see-also"></a>См. также:  
+ [Основные понятия о поставщике WMI для событий сервера](./wmi-provider-for-server-events-concepts.md)  
   

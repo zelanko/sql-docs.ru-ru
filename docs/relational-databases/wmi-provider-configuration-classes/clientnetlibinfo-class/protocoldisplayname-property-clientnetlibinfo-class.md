@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8a72a93faf6e66985cd2c19dc426f724b0fba13
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d34a04a6014351e1953ef3fd0a081a1f2e9d4abd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540793"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890934"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>Свойство ProtocolDisplayName (класс ClientNetLibInfo)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,8 @@ object.ProtocolDisplayName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее отображаемое имя протокола.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>См. также:  
+ [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

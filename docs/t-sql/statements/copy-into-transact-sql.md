@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380839"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624821"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -99,7 +99,7 @@ WITH
 - *Внешнее расположение* для ADLS 2-го поколения: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> Конечная точка BLOB-объекта доступна для ADLS 2-го поколения и предназначена для обеспечения обратной совместимости. Для лучшей производительности используйте конечную точку **BLOB-объекта**.
+> Конечная точка .blob доступна для ADLS 2-го поколения и в настоящее время обеспечивает наилучшую производительность. Используйте конечную точку .blob, если для способа проверки подлинности не требуется .dfs.
 
 - *Account* — имя учетной записи хранения.
 
@@ -141,14 +141,15 @@ WITH
 |  **Хранилище BLOB-объектов Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake 2-го поколения** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1\. Необходимо использовать конечную точку большого двоичного объекта ( **.blob**. core.windows.net) во внешнем пути к папке.
+1: Для этого способа проверки подлинности требуется конечная точка .blob ( **.blob**.core.windows.net) во внешнем пути к папке.
 
-2\. Необходимо использовать конечную точку dfs ( **.dfs**. core.windows.net) во внешнем пути к папке.
+2: Для этого способа проверки подлинности требуется конечная точка .dfs ( **.dfs**.core.windows.net) во внешнем пути к папке.
+
 
 > [!NOTE]  
 >
 > - При проверке подлинности в AAD или общедоступной учетной записи хранения указывать CREDENTIAL не требуется. 
->  - Если ваша учетная запись хранения связана с виртуальной сетью, необходимо пройти проверку подлинности с использованием MSI (управляемое удостоверение).
+> - Если ваша учетная запись хранения связана с виртуальной сетью, необходимо пройти проверку подлинности с использованием MSI (управляемое удостоверение).
 
 - Проверка подлинности на основе подписанных URL-адресов (SAS)
   
@@ -428,9 +429,6 @@ WITH (
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Каковы рекомендации по разделению файлов при использовании команды COPY для загрузки файлов Parquet или ORC?
 Разделять файлы Parquet и ORC не нужно, так как команда COPY разделяет их автоматически. Для оптимальной производительности файлы Parquet и ORC в учетной записи хранения Azure должны иметь размер не менее 256 МБ. 
-
-### <a name="when-will-the-copy-command-be-generally-available"></a>Когда команда COPY станет общедоступной?
-Команда COPY станет общедоступной в конце этого календарного года (2020). 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Есть ли ограничения на число или размер файлов?
 Ограничение на количество или размер файлов отсутствует, но для лучшей производительности мы рекомендуем использовать файлы размером не менее 4 МБ.

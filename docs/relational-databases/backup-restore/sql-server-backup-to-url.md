@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988743"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624841"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,6 +85,9 @@ ms.locfileid: "87988743"
   
 -   Максимальный поддерживаемый размер резервной копии с использованием страничного BLOB-объекта в SQL Server составляет 1 ТБ. Максимальный поддерживаемый размер резервной копии с использованием блочных BLOB-объектов составляет примерно 200 ГБ (50 000 блоков * 4 МБ MAXTRANSFERSIZE). Блочные BLOB-объекты поддерживают чередование дисков для обслуживания значительно больших размеров резервных копий.  
   
+    > [!IMPORTANT]  
+    >  Несмотря на то, что максимальный размер резервной копии, поддерживаемый одним блочным BLOB-объектом, составляет 200 ГБ, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может выполнять запись в блоки меньших размеров, в результате чего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может достигнуть предельного количества блоков (50 000) до передачи всей резервной копии. Чередуйте резервные копии (даже если они меньше 200 ГБ), чтобы избежать ограничения на количество блоков, особенно если используются разностные или несжатые резервные копии.
+
 -   Инструкции резервного копирования и восстановления можно выполнить с помощью TSQL, SMO, командлетов PowerShell, мастера архивации и восстановления SQL Server Management Studio.   
   
 -   Функция создания логического имени устройства не поддерживается. Таким образом, не поддерживается функция добавления URL-адреса в качестве устройства резервного копирования с помощью sp_dumpdevice или SQL Server Management Studio.  

@@ -4330,6 +4330,10 @@
       href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
     - name: Архитектура управления памятью
       href: relational-databases/memory-management-architecture-guide.md
+    - name: Диагностика конфликтов кратковременных блокировок
+      href: relational-databases/diagnose-resolve-latch-contention.md
+    - name: Диагностика конфликтов спин-блокировок
+      href: relational-databases/diagnose-resolve-spinlock-contention.md
 - name: Установка
   items:
     - name: Обзор

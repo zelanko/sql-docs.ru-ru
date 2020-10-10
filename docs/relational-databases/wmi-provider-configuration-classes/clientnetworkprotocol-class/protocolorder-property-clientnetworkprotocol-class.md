@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51b686edb6ac9e93862c5f90f06bb7370fe47a9a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 40ebe80960ca238cce4ff923a2e2457c45cd77f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523168"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889300"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>Свойство ProtocolOrder (класс ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,10 +43,9 @@ object.ProtocolOrder [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , определяющее порядковый номер текущего указанного сетевого протокола клиента, заданного методом **OrderValue** . Если сетевой протокол клиента отключен, это значение будет равно нулю.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)   
- [Настройка сетевых протоколов клиента и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>См. также:  
+ [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Настройка сетевых протоколов клиента и сетевых библиотек](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

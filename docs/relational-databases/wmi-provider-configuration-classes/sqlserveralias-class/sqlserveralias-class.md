@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d3acca52f0139cf0f7ef6085470a5d9e2b839494
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 48ecf56931682da1ba0cc7ee1e379ad5146479db
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550917"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891634"
 ---
 # <a name="sqlserveralias-class"></a>Класс SqlServerAlias
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -38,6 +38,5 @@ ms.locfileid: "89550917"
  **Примечание.**[SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) наследует метод **Put** из класса Provider. Однако он не возвращает результаты, как указано методом **Provider::Put** . Дополнительные сведения см. в документации WMI.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

@@ -11,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 author: jodebrui
 ms.author: jodebrui
-ms.openlocfilehash: e13dc56d78a5305b8fb8221d5622d2cd49ade704
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f9b1e77d082ad5e42a9818272fc1c4a48b44968
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735000"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529385"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>Внутренние компоненты выполняющейся в памяти OLTP SQL Server для SQL Server 2016
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**Описание.** выполняемая в памяти OLTP, которую еще часто называют Hekaton, была представлена в SQL Server 2014.
+**Описание.** Выполняемая в памяти OLTP, для которой часто используется кодовое имя Hekaton, была представлена в SQL Server 2014.
 Эта многофункциональная технология позволяет использовать большие объемы памяти и десятки ядер для повышения производительности операций OLTP в 30–40 раз! SQL Server 2016 продолжает развивать выполняющуюся в памяти OLTP: были сняты многие ограничения, найденные в SQL Server 2014, улучшены внутренние алгоритмы обработки, что позволяет выполняющейся в памяти OLTP предоставлять еще больше лучших возможностей. В этом документе описывается реализация выполняемой в памяти OLTP из SQL Server 2016 в SQL Server 2016 RTM. Используя выполняемую в памяти OLTP, таблицы можно объявить как "оптимизированные для операций в памяти", что позволит использовать возможности выполняемой в памяти OLTP. Таблицы, оптимизированные для обработки в памяти, являются полностью транзакционными, доступ к ним можно получить при помощи Transact-SQL. Хранимые процедуры, триггеры и скалярные UDF Transact-SQL можно скомпилировать в машинном коде, чтобы еще больше повысить производительность таблиц, оптимизированных для обработки в памяти. Подсистема рассчитана на большое число параллельных операций без блокировок.    
   
 **Автор:** Кален Деланей (Kalen Delaney)  
   
 **Технические редакторы:** Сунил Агарвал (Sunil Agarwal) и Хос де Брюин (Jos de Bruijn)  
   
-**Опубликовано:** Июнь 2016 г.  
+**Опубликовано:** Июнь 2016  
   
 **Применимо к:** SQL Server 2016  
   
-Для ознакомления скачайте документ [Внутренние компоненты выполняющейся в памяти OLTP SQL Server для SQL Server 2016](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf) .   
+Для ознакомления скачайте документ [Внутренние компоненты выполняющейся в памяти OLTP SQL Server для SQL Server 2016](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf).   

@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785093"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412770"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Управление на основе политик позволяет отслеживать рекомендации для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор файлов политик, которые можно импортировать в качестве политик рекомендаций, а затем оценивать эти политики для набора целей, включающего экземпляры, объекты экземпляров, базы данных или объекты базы данных. Политики можно оценивать вручную или устанавливать их для оценки набора целей согласно расписанию либо тому или иному событию. Дополнительные сведения об управлении на основе политик см. в статье [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+  Управление на основе политик позволяет отслеживать рекомендации для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  Политики можно оценивать вручную или устанавливать их для оценки набора целей согласно расписанию либо тому или иному событию. Дополнительные сведения об управлении на основе политик см. в статье [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  Доступен набор [образцов файлов политик](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies), которые можно импортировать в качестве рекомендованных политик, с последующей оценкой этих политик для набора целей, включающего экземпляры, объекты экземпляров, базы данных или объекты базы данных.
   
 ## <a name="policy-and-rules-for-database-engine"></a>Политика и правила для компонента Database Engine  
- В следующей таблице приводится список политик, включенных в установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также сведения о правилах рекомендаций, которые вычисляет каждая политика. Политики хранятся в виде XML-файлов и должны импортироваться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об импорте политик см. в статье [Импорт политики управления на основе политик](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
+ В следующей таблице приводится список политик, включенных в набор [образцов политик](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies), а также сведения о правилах рекомендаций, которые оценивает каждая политика. Политики хранятся в виде XML-файлов и должны импортироваться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об импорте политик см. в статье [Импорт политики управления на основе политик](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
   
 |Имя политики|Правило рекомендации|  
 |-----------------|------------------------|  

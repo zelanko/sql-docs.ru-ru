@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6704808520b77867bd1a0b39af5118225398dae2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 54d992dd3d9b3604644f985f9e7db5f523b553f9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537296"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889043"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>Свойство ProtocolDLL (класс ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Возвращает имя DLL-файла, необходимого сетевому протоколу, заданному в параметре [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx).  
+  Возвращает имя DLL-файла, необходимого сетевому протоколу, заданному в параметре [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,9 +43,8 @@ object.ProtocolDLL [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее DLL-файл протокола, необходимый для клиентского сетевого протокола.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов клиента и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>См. также:  
+ [Настройка сетевых протоколов клиента и сетевых библиотек](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3346d217228bf6ca914b6ae1aa31af0883383908
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec430a256e07cfee21a14bbe3fe97426b044b4fd
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173246"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636134"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Параметр конфигурации сервера external scripts enabled
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,6 +42,10 @@ ms.locfileid: "88173246"
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] поддерживает одновременно языки R и Python.
 
     Установите компонент **Службы машинного обучения** в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы включить выполнение внешних скриптов R. Во время начальной настройки нужно выбрать хотя бы один язык: R, Python или оба.
+    
++ Для [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] и более поздних версий [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] включает поддержку всех языков R, Python, Java и других языков от сторонних производителей.
+
+Установите компоненты Службы машинного обучения и Расширения языка в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы включить выполнение внешних скриптов на любом поддерживаемом языке.
 
 ## <a name="additional-requirements"></a>Дополнительные требования
 

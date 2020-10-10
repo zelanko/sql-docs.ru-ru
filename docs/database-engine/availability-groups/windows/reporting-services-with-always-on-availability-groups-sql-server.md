@@ -14,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 2aec52249b366eac2057fe8cde5e3829e5125a5d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0f38c60868785a9487e848fd9617e2b2feedf481
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893101"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670096"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "85893101"
   
  Основное преимущество применения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с источниками данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] заключается в возможности использования доступных для чтения вторичных реплик в качестве источников данных для отчетов, при этом вторичные реплики продолжают обеспечивать отработку отказа для базы данных-источника.  
   
- Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Вопросы и ответы по группам доступности AlwaysOn для SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
+ Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Вопросы и ответы по группам доступности AlwaysOn для SQL Server 2012 (../../../sql-server/index.yml)](../../../sql-server/index.yml).  
 
 ##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Требования, которые необходимо выполнить для использования служб Reporting Services и групп доступности AlwaysOn  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и Сервер отчетов Microsoft Power BI использует .NET Framework 4.0 и поддерживает свойства строки соединения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
@@ -125,7 +125,7 @@ ms.locfileid: "85893101"
   
 -   ReportServerTempDB  
   
- В этом режиме базы данных Alerting и связанные компоненты не поддерживаются и не используются. Серверы отчетов, работающие в собственном режиме, настраиваются в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint в качестве имени базы данных приложения службы следует указать имя точки доступа клиента, которую вы создали при конфигурации SharePoint. Дополнительные сведения о настройке SharePoint с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Настройка и управление группами доступности SQL Server для SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165).  
+ В этом режиме базы данных Alerting и связанные компоненты не поддерживаются и не используются. Серверы отчетов, работающие в собственном режиме, настраиваются в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint в качестве имени базы данных приложения службы следует указать имя точки доступа клиента, которую вы создали при конфигурации SharePoint. Дополнительные сведения о настройке SharePoint с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]см. в разделе [Настройка и управление группами доступности SQL Server для SharePoint Server (/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14))](/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14)).  
   
 > [!NOTE]
 >  Серверы отчетов, работающие в режиме интеграции с SharePoint, используют процесс синхронизации между базами данных приложения служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и базами данных содержимого SharePoint. Важно поддерживать работу баз данных сервера отчетов и баз данных содержимого вместе. Следует рассмотреть возможность включения этих баз данных в одну группу доступности, чтобы отработка отказа и восстановление для них выполнялось одновременно. Рассмотрим следующий сценарий.  
@@ -181,5 +181,3 @@ ms.locfileid: "85893101"
  [Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
-  
-

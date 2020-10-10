@@ -22,12 +22,12 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54eaac3f4b8a5e8cc8ab6de6c0b0c75fb54c22c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c67769e4afd62c4b69628a263f3485ee63081a2a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428186"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892014"
 ---
 # <a name="changing-sql-server-native-client-passwords-programmatically"></a>Программное изменение SQL Server Native Client паролей
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88428186"
   В версиях, предшествующих [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], при истечении пароля пользователя переустановить его мог только администратор. Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент поддерживает обработку истечения срока действия пароля программным способом с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиентского OLE DB поставщика и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера ODBC собственного клиента, а также путем изменения диалоговых окон **входа в SQL Server** .  
   
 > [!NOTE]  
->  По возможности следует предлагать пользователям вводить свои учетные данные во время выполнения, избегая их сохранения. Если необходимо сохранить учетные данные пользователей, зашифруйте их с помощью [интерфейса API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Дополнительные сведения об использовании паролей см. в разделе [Надежные пароли](../../../relational-databases/security/strong-passwords.md).  
+>  По возможности следует предлагать пользователям вводить свои учетные данные во время выполнения, избегая их сохранения. Если необходимо сохранить учетные данные пользователей, зашифруйте их с помощью [интерфейса API шифрования Win32](/windows/win32/seccrypto/cryptography-reference). Дополнительные сведения об использовании паролей см. в разделе [Надежные пароли](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Коды ошибок имени входа SQL Server  
  Если соединение нельзя установить из-за проблем проверки подлинности, то для диагностики и восстановления приложению будет доступен один из существующих кодов ошибок SQL Server.  
@@ -120,5 +120,4 @@ ms.locfileid: "88428186"
   
 ## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-  
   

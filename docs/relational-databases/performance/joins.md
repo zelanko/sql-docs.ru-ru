@@ -18,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511316"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726015"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -263,7 +263,7 @@ WHERE [fo].[Quantity] = 361;
 - Уровень совместимости базы данных имеет значение 140 или больше.
 - Запрос является инструкцией `SELECT` (инструкции для изменения данных сейчас недопустимы).
 - Соединение может выполняться посредством как индексированного соединения вложенными циклами, так и физического алгоритма хэш-соединения.
-- Хэш-соединение использует пакетный режим, реализуемый за счет того, что во всем запросе присутствует индекс columnstore, на таблицу индекса columnstore ссылается само соединение либо [для функции rowstore используется пакетный режим](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
+- Хэш-соединение использует пакетный режим, реализуемый за счет того, что во всем запросе присутствует индекс columnstore. Либо на таблицу индекса columnstore ссылается само соединение, либо [пакетный режим используется для функции rowstore](./intelligent-query-processing.md#batch-mode-on-rowstore).
 - Созданные альтернативные решения соединения вложенными циклами и хэш-соединения должны иметь одинаковый первый дочерний элемент (внешняя ссылка).
 
 ### <a name="adaptive-threshold-rows"></a>Строки адаптивного порогового значения
