@@ -1,6 +1,6 @@
 ---
 description: sys.sql_logins (Transact-SQL)
-title: sys. sql_logins (Transact-SQL) | Документация Майкрософт
+title: sys.sql_logins (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfa2b330d03b7480021487983e9ff1a3a210ad11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc8e947c60f8a1225b9079cbd55ec9d8a617b712
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88375510"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91957007"
 ---
 # <a name="syssql_logins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -35,20 +35,21 @@ ms.locfileid: "88375510"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**|--|Наследуется от **sys. server_principals**.|  
+|**\<inherited columns>**|--|Наследует от **sys.server_principals**.|  
 |**is_policy_checked**|**bit**|Проверяется политика паролей.|  
 |**is_expiration_checked**|**bit**|Проверяется истечение срока действия паролей.|  
 |**password_hash**|**varbinary (256)**|Хэш пароля имени входа SQL. Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля.|  
   
- Список столбцов, наследуемых этим представлением, см. в разделе [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Столбцы `owning_principal_id` и `is_fixed_role` не наследуются из sys. server_principals.
+ Список столбцов, наследуемых этим представлением, см. в разделе [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Столбцы `owning_principal_id` и `is_fixed_role` не наследуются от sys.server_principals.
   
 ## <a name="remarks"></a>Remarks  
- Чтобы просмотреть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имена входа для проверки подлинности и имена входа для проверки подлинности Windows, см. раздел [sys. server_principals &#40;&#41;TRANSACT-SQL ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Чтобы просмотреть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имена входа для проверки подлинности и имена входа для проверки подлинности Windows, см. раздел [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Если пользователи автономной базы данных включены, то подключения могут выполняться без имен входа. Чтобы определить эти учетные записи, см. раздел  [sys. database_principals &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ Если пользователи автономной базы данных включены, то подключения могут выполняться без имен входа. Чтобы определить эти учетные записи, см. раздел  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Любое имя входа проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может видеть собственное имя входа и имя входа sa. Для просмотра других имен входа требуется разрешение ALTER ANY LOGIN или разрешение на имя входа.  
+ Чтобы просмотреть содержимое столбца password_hash, необходимо разрешение CONTROL SERVER.
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

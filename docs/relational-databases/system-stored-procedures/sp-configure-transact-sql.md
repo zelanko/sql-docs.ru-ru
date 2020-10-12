@@ -19,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dd9ba41579e8d1c0bac76bb634e9074bf9e5c670
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536648"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955865"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -75,7 +75,7 @@ RECONFIGURE
 ## <a name="result-sets"></a>Результирующие наборы  
  При выполнении без параметров **sp_configure** возвращает результирующий набор с пятью столбцами и упорядочивает параметры в алфавитном порядке по возрастанию, как показано в следующей таблице.  
   
- Значения для **config_value** и **run_value** не эквивалентны автоматически. После обновления параметра конфигурации с помощью **sp_configure**системный администратор должен обновить значение выполняющейся конфигурации с помощью перенастройки или повторной настройки с переопределением. Дополнительные сведения см. в разделе "Примечания".  
+ Значения для **config_value** и **run_value** не эквивалентны автоматически. После обновления параметра конфигурации с помощью **sp_configure**системный администратор должен обновить значение выполняющейся конфигурации с помощью перенастройки или повторной настройки с переопределением. Дополнительные сведения см. в разделе "Замечания".  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -83,9 +83,9 @@ RECONFIGURE
 |**minimum**|**int**|Минимальное значение параметра конфигурации.|  
 |**maximum**|**int**|Максимальное значение параметра конфигурации.|  
 |**config_value**|**int**|Значение, для которого параметр конфигурации был задан с помощью **sp_configure** (значение в **sys.configуратионс. Value**). Дополнительные сведения об этих параметрах см. в разделе [Параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) и [sys.configуратионс &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|Текущее значение параметра конфигурации (значение в **sys.configуратионс. value_in_use**).<br /><br /> Дополнительные сведения см. в разделе [sys.configуратионс &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**run_value**|**int**|Текущее значение параметра конфигурации (значение в **sys.configurations.value_in_use**).<br /><br /> Дополнительные сведения см. в разделе [sys.configуратионс &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Используйте **sp_configure** для просмотра или изменения параметров серверного уровня. Для изменения параметров уровня базы данных используйте инструкцию ALTER DATABASE. Для изменения параметров, влияющих только на сеанс текущего пользователя, используйте инструкцию SET.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -112,7 +112,10 @@ RECONFIGURE
  Дополнительные сведения см. в статье [перенастройка &#40;&#41;Transact-SQL ](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
 ## <a name="advanced-options"></a>Дополнительные параметры  
- Некоторые параметры конфигурации, такие как **маска сходства** и **интервал восстановления**, обозначены как дополнительные параметры. По умолчанию эти параметры недоступны для просмотра и изменения. Чтобы сделать их доступными, установите для параметра конфигурации **шовадванцедоптионс** значение 1.  
+ Некоторые параметры конфигурации, такие как **маска сходства** и **интервал восстановления**, обозначены как дополнительные параметры. По умолчанию эти параметры недоступны для просмотра и изменения. Чтобы сделать их доступными, задайте параметру конфигурации **Показывать дополнительные параметры** значение 1. 
+ 
+> [!CAUTION]  
+> Если параметр **Показывать дополнительные параметры** установлен в значение 1, этот параметр применяется ко всем пользователям. Рекомендуется временно использовать это состояние и вернуться к 0, если выполнить задачу, требующую просмотра дополнительных параметров.  
   
  Дополнительные сведения о параметрах конфигурации и их параметрах см. в разделе [Параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
