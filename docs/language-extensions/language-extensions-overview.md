@@ -1,7 +1,7 @@
 ---
 title: Что такое расширения языка для SQL Server?
 titleSuffix: ''
-description: Расширения языка — это функция SQL Server, используемая для выполнения внешнего кода. В SQL Server 2019 поддерживается язык Java. Реляционные данные могут использоваться во внешнем коде с помощью платформы расширяемости.
+description: Расширения языка — это функция SQL Server, используемая для выполнения внешнего кода. В SQL Server 2019 поддерживаются Java, R и Python. Реляционные данные могут использоваться во внешнем коде с помощью платформы расширяемости.
 author: dphansen
 ms.author: davidph
 ms.date: 08/19/2020
@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: a7e79d6253c531ef2a008a7284fa8d7cd0365999
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645933"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765789"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>Что такое расширения языка для SQL Server?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88645933"
 
 Расширения языка используют платформу расширяемости для исполнения внешнего кода. Выполнение кода изолировано от процессов ядра, но полностью интегрировано с выполнением запросов SQL Server. Расширения языка позволяют выполнять код там, где находятся данные, устраняя необходимость извлечения данных по сети.
 
-Внешние языки определяются с помощью инструкции [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql). Системная хранимая процедура [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) используется в качестве интерфейса для исполнения кода.
+Внешние языки определяются с помощью инструкции [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). Системная хранимая процедура [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) используется в качестве интерфейса для исполнения кода.
 
 Использование расширений языка имеет несколько преимуществ.
 
@@ -53,9 +53,9 @@ ms.locfileid: "88645933"
 
 + **Установите [Пакет Microsoft Extensibility SDK для Java](how-to/extensibility-sdk-java-sql-server.md)** для выполнения кода Java на SQL Server
 
-+ **Используйте [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) или [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)** для исполнения внешнего кода в SQL Server
++ **Используйте [Azure Data Studio](../azure-data-studio/what-is.md) или [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)** для исполнения внешнего кода в SQL Server
 
-+ **Используйте системную хранимую процедуру [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)** для выполнения кода Java на SQL Server.
++ **Используйте системную хранимую процедуру [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)** для выполнения кода Java на SQL Server.
 
 ### <a name="step-3-write-your-first-code"></a>Шаг 3. Напишите свой первый код
 
@@ -69,5 +69,7 @@ ms.locfileid: "88645933"
 
 ## <a name="next-steps"></a>Дальнейшие шаги
 
++ Установка [настраиваемой среды выполнения Python для SQL Server](../machine-learning/install/custom-runtime-python.md)
++ Установка [настраиваемой среды выполнения R для SQL Server](../machine-learning/install/custom-runtime-r.md)
 + Установка [Расширений языка для SQL Server в Windows](install/install-sql-server-language-extensions-on-windows.md) или [в Linux](../linux/sql-server-linux-setup-language-extensions.md)
 + Установка [Пакета Microsoft Extensibility SDK для Java](how-to/extensibility-sdk-java-sql-server.md)

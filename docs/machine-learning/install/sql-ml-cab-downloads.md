@@ -1,22 +1,22 @@
 ---
-title: Загрузка обновлений для автономной установки
+title: Скачивание CAB-файлов обновлений для автономной установки
 description: Скачивание CAB-файлов для Служб машинного обучения SQL Server (Python и R) Эти CAB-файлы содержат обновления компонента "Службы машинного обучения" (Python и R) и используются при установке SQL Server на сервере без доступа к Интернету.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/06/2020
+ms.date: 10/02/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c7af170b3e64e60c886dd1cab2a02cba06e318e2
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: f2d9867ebad010ea8e518f3faee29041eebd79a8
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498275"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670797"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>Скачивание CAB-файлов с накопительными обновлениями Служб машинного обучения SQL Server
+# <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>Скачивание CAB-файлов с накопительными обновлениями Служб машинного обучения SQL Server для автономной установки
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
@@ -50,7 +50,7 @@ CAB-файлы перечислены в обратном хронологиче
 
 |Release | Компонент | Ссылка для скачивания | Устраненные проблемы |
 |------- | --------- | ------------- | ---------------- |
-|**[SQL Server 2019 CU7](https://support.microsoft.com/help/4552255)** |  |  |  |
+|**[SQL Server 2019 CU8](https://support.microsoft.com/help/4577194)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |

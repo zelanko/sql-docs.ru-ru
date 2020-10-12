@@ -1,25 +1,25 @@
 ---
 title: Установка из командной строки
-description: Запустите программу установки SQL Server из командной строки, чтобы добавить интеграцию языка R и Python в экземпляре ядра СУБД SQL Server.
+description: Запустите программу установки SQL Server из командной строки, чтобы добавить Службы машинного обучения с R и Python в экземпляр ядра СУБД SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179803"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624761"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Установка компонентов машинного обучения R и Python SQL Server из командной строки
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Установка Служб машинного обучения с R и Python в SQL Server из командной строки
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-В этой статье приводятся инструкции по установке компонентов машинного обучения SQL Server из командной строки:
+В этой статье приводятся инструкции по установке [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) из командной строки:
 
 + [Новый экземпляр в базе данных](#indb)
 + [Добавить в существующий экземпляр ядра СУБД](#add-existing)

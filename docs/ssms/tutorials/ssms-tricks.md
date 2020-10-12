@@ -1,12 +1,12 @@
 ---
 title: Советы и рекомендации по использованию SSMS
 description: Сведения о том, как комментировать и раскомментировать код, добавить отступы текста, применить фильтры к объектам, получить доступ к журналам ошибок и выполнять поиск имен экземпляров SQL Server с помощью SQL Server Management Studio.
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
@@ -19,43 +19,43 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462348"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724515"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Советы и рекомендации по использованию SQL Server Management Studio (SSMS)
 
-В этой статье приводятся некоторые советы и рекомендации по использованию SQL Server Management Studio (SSMS). В этой статье показано, как выполнить следующие действия: 
+В этой статье приводятся некоторые советы и рекомендации по использованию [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). В этой статье показано, как выполнить следующие действия: 
 
 > [!div class="checklist"]
 > * Комментирование и раскомментирование текста на языке Transact-SQL (T-SQL)
 > * Задание отступов в тексте
 > * Фильтрация объектов в обозревателе объектов
-> * Доступ к журналу ошибок SQL Server
-> * Определение имени экземпляра SQL Server
+> * Доступ к журналу ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+> * Определение имени экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Чтобы выполнить шаги, приведенные в этой статье, требуются среда SQL Server Management Studio, доступ к SQL Server и база данных AdventureWorks. 
+Чтобы выполнить шаги, приведенные в этой статье, требуются среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], доступ к SQL Server и база данных AdventureWorks. 
 
 * Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-* Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Установите [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Инструкции по восстановлению базы данных в среде SSMS см. в разделе [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>Комментирование и раскомментирование кода T-SQL
 
 Части текста можно закомментировать и раскомментировать с помощью кнопки **Закомментировать** на панели инструментов. Закомментированный текст не выполняется.
 
-1. Откройте среду SQL Server Management Studio.
+1. Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 2. Подключитесь к серверу SQL Server.
 
 3. Откройте окно "Новый запрос".
 
-4. Вставьте следующий код T-SQL в текстовое окно.
+4. Вставьте следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] в текстовое окно.
 
     ```sql
     USE master
@@ -105,7 +105,7 @@ ms.locfileid: "84462348"
 
 1. Откройте окно "Новый запрос".
 
-2. Вставьте в окно следующий фрагмент кода T-SQL:
+2. Вставьте следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] в текстовое окно.
 
     ```sql
     USE master
@@ -163,11 +163,11 @@ ms.locfileid: "84462348"
 
 ## <a name="access-your-sql-server-error-log"></a>Доступ к журналу ошибок SQL Server
 
-Журнал ошибок — это файл, который содержит подробные сведения о том, что происходит на вашем экземпляре SQL Server. В среде SSMS можно просмотреть журнал ошибок и выполнить запросы к нему. Журнал ошибок представляет собой LOG-файл, расположенный на вашем диске.
+Журнал ошибок — это файл, который содержит подробные сведения о том, что происходит на вашем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В среде SSMS можно просмотреть журнал ошибок и выполнить запросы к нему. Журнал ошибок представляет собой LOG-файл, расположенный на вашем диске.
 
 ### <a name="open-the-error-log-in-ssms"></a>Открытие журнала ошибок в SSMS
 
-1. Подключитесь к серверу SQL Server.  
+1. Подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 2. Разверните узел **Управление** > **Журналы SQL Server**. 
 
@@ -181,7 +181,7 @@ ms.locfileid: "84462348"
 
 2. Откройте окно "Новый запрос".
 
-3. Вставьте в окно запросов следующий фрагмент кода T-SQL:
+3. Вставьте в окно запросов следующий фрагмент кода [!INCLUDE[tsql](../../includes/tsql-md.md)]:
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
@@ -195,11 +195,11 @@ ms.locfileid: "84462348"
 
 ### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>Определение расположения журнала ошибок при наличии подключения к SQL Server
 
-1. Подключитесь к серверу SQL Server.
+1. Подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 2. Откройте окно "Новый запрос".
 
-3. Вставьте следующий фрагмент кода T-SQL в окно запросов и нажмите кнопку **Выполнить**:
+3. Вставьте следующий фрагмент кода [!INCLUDE[tsql](../../includes/tsql-md.md)] в окно запросов и нажмите кнопку **Выполнить**:
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -211,13 +211,13 @@ ms.locfileid: "84462348"
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Определение расположения журнала ошибок при отсутствии подключения к SQL Server
 
-Путь к журналу ошибок SQL Server зависит от параметров конфигурации. Путь к расположению журнала ошибок можно найти в параметрах запуска в диспетчере конфигурации SQL Server. Найдите параметр запуска, указывающий расположение журнала ошибок SQL Server, выполнив следующие действия. *Ваш путь может отличаться от указанного ниже*.
+Путь к журналу ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от параметров конфигурации. Путь к расположению журнала ошибок можно найти в параметрах запуска в диспетчере конфигурации SQL Server. Найдите параметр запуска, указывающий расположение журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполнив следующие действия. *Ваш путь может отличаться от указанного ниже*.
 
 1. Откройте диспетчер конфигурации SQL Server.
 
 2. Разверните узел **Службы**.
 
-3. Щелкните правой кнопкой мыши свой экземпляр SQL Server и выберите **Свойства**:
+3. Щелкните правой кнопкой мыши свой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выберите **Свойства**:
 
     ![Свойства сервера Configuration Manager](media/ssms-tricks/serverproperties.PNG)
 
@@ -227,13 +227,13 @@ ms.locfileid: "84462348"
 
     ![Журнал ошибок](media/ssms-tricks/errorlog.png)
 
-    В этом расположении есть несколько файлов с именем errorlog.*. Файл, имя которого заканчивается на *.log, представляет собой текущий файл журнала ошибок. Файлы, имена которых заканчиваются цифрами, — предыдущие файлы журнала. Каждый раз при перезагрузке сервера SQL Server создается новый файл журнала.
+    В этом расположении есть несколько файлов журнала ошибок. Файл, имя которого заканчивается на *.log, представляет собой текущий файл журнала ошибок. Файлы, имена которых заканчиваются цифрами, — предыдущие файлы журнала. Каждый раз при перезагрузке сервера SQL Server создается новый файл журнала.
 
-6. Откройте файл errorlog.log в Блокноте. 
+6. Откройте файл errorlog.log в Блокноте.
 
-## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Поиск имени экземпляра SQL Server
+## <a name="find-sql-server-instance-name"></a>Поиск имени экземпляра SQL Server
 
-Определить имя сервера SQL Server до и после подключения к SQL Server можно различными способами.  
+Определить имя сервера SQL Server до и после подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно различными способами.  
 
 ### <a name="before-you-connect-to-sql-server"></a>До подключения к SQL Server
 
@@ -243,7 +243,7 @@ ms.locfileid: "84462348"
 
 3. Найдите текст *Server name is*.
 
-    В одинарных кавычках указано имя экземпляра SQL Server, к которому вы будете подключаться:
+    В одинарных кавычках указано имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], к которому вы будете подключаться:
 
     ![Поиск имени сервера в журнале ошибок](media/ssms-tricks/servernameinlog.png)
 
@@ -251,7 +251,7 @@ ms.locfileid: "84462348"
 
 ### <a name="when-youre-connected-to-sql-server"></a>После подключения к SQL Server
 
-При наличии подключения к SQL Server имя сервера можно найти в трех местах: 
+При наличии подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя сервера можно найти в трех местах: 
 
 1. Имя сервера указано в обозревателе объектов:
 
@@ -266,19 +266,19 @@ ms.locfileid: "84462348"
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>При подключении к псевдониму или прослушивателю группы доступности
 
-Если вы подключились к псевдониму или прослушивателю группы доступности, то в обозревателе объектов и окне "Свойства" будут указаны сведения о них. В этом случае имя сервера SQL Server может быть недоступно напрямую, и его необходимо запросить:
+Если вы подключились к псевдониму или прослушивателю группы доступности, то в обозревателе объектов и окне "Свойства" будут указаны сведения о них. В этом случае имя сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть недоступно напрямую, и его необходимо запросить:
 
 1. Подключитесь к серверу SQL Server.
 
 2. Откройте окно "Новый запрос".
 
-3. Вставьте в окно следующий фрагмент кода T-SQL:
+3. Вставьте в окно следующий фрагмент кода [!INCLUDE[tsql](../../includes/tsql-md.md)]:
 
       ```sql
        select @@Servername
      ```
 
-4. Просмотрите результаты запроса, чтобы определить имя сервера SQL Server, к которому вы подключены: 
+4. Просмотрите результаты запроса, чтобы определить имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], к которому вы подключены: 
 
     ![Определение имени сервера SQL Server с помощью запроса](media/ssms-tricks/queryservername.png)
 

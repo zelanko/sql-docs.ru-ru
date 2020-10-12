@@ -145,23 +145,23 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: Размещение базы данных сервера отчетов в отказоустойчивом кластере SQL Server
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-    - name: Использование диспетчера конфигурации служб Reporting Services (собственный режим)
+    - name: Диспетчер конфигураций сервера отчетов (собственный режим)
       href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
       items:
-        - name: Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
+        - name: Настройка учетной записи службы сервера отчетов
           href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-        - name: Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
+        - name: Настройка URL-адресов сервера отчетов
           href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
+            - name: Сведения о резервировании и регистрации URL-адресов
               href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-            - name: Настройка URL-адреса (диспетчер конфигурации служб SSRS)
+            - name: настроить URL-адреса
               href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-            - name: Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)
+            - name: Синтаксис резервирования URL-адресов
               href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-            - name: URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
+            - name: URL-адреса в файлах конфигурации
               href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-            - name: Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
+            - name: Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах
               href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
         - name: Создание базы данных
           href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
@@ -171,7 +171,7 @@
           href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
         - name: Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)
           href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-        - name: Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)
+        - name: Настройка учетной записи автоматического выполнения.
           href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
         - name: "Ключи шифрования служб SSRS\_— управление ключами шифрования"
           href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
@@ -188,7 +188,7 @@
               href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
         - name: Параметры подписки и учетная запись общей папки (диспетчер конфигураций)
           href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-        - name: Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
+        - name: 'Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме'
           href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
         - name: Интеграция с Power BI
           href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md

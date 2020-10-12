@@ -1,21 +1,21 @@
 ---
 title: Компоненты и конфигурация SSMS
 description: Учебник, в котором описываются компоненты и основные параметры конфигурации среды SQL Server Management Studio.
-keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/16/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
-ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/16/2018
+ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247292"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662033"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Компоненты и конфигурация SQL Server Management Studio
 
@@ -53,7 +53,7 @@ ms.locfileid: "75247292"
 
 * **Свойства** (F4): представление "Свойства" будет отображаться, когда открыто окно запросов. В представлении отображаются основные свойства запроса. Например, в нем отображаются время запуска запроса, количество возвращенных строк и сведения о подключении.  
 
-    ![Свойства](media/ssms-configuration/properties.png)
+    ![Свойства конфигурации](media/ssms-configuration/properties.png)
 
 * **Обозреватель шаблонов** (CTRL+ALT+T): обозреватель шаблонов содержит различные готовые шаблоны T-SQL. Эти шаблоны можно использовать для выполнения различных действий, таких как создание или резервное копирование баз данных. 
 

@@ -5,59 +5,55 @@ description: Узнайте, как установить средство azdata
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bf2bbff5f1d048895515f18b600cd05acd8ae6f
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: ecf4eaaddf9423bb9a3ae88036b5c3cb2090451b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914945"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725291"
 ---
 # <a name="install-azdata-with-pip"></a>Установка `azdata` с помощью `pip`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-В этой статье описывается установка средства `azdata` в Windows или Linux с помощью `pip`.
+В этой статье описывается установка средства `azdata` в Windows,Linux или macOS/OS X с помощью `pip`.
 
-В Windows и Linux (дистрибутив Ubuntu) для простоты можно выполнить установку с помощью [диспетчера пакетов](./deploy-install-azdata-installer.md).
+> [!TIP]
+> Для упрощения задачи `azdata` можно установить с помощью [диспетчера пакетов](./deploy-install-azdata.md) для Windows, Linux (дистрибутивы Ubuntu, Debian, RHEL, CentOS, openSUSE и SLE) и macOS.
 
 ## <a name="prerequisites"></a><a id="prerequisites"></a> Предварительные требования
 
-`azdata` — это служебная программа командной строки на языке Python, которая позволяет администраторам кластера выполнять начальную загрузку данных и управлять ими с помощью REST API. Минимальная требуемая версия Python — 3.5. Для загрузки и установки средства `azdata` требуется `pip`. В инструкциях ниже приведены примеры для Windows и Ubuntu. Сведения об установке Python на других платформах см. в [документации по Python](https://wiki.python.org/moin/BeginnersGuide/Download).
-Кроме того, нужно также установить и обновить последнюю версию пакета Python `requests`.
+`azdata` — это служебная программа командной строки на языке Python, которая позволяет администраторам кластера выполнять начальную загрузку ресурсов данных и управлять ими с помощью REST API. Минимальная требуемая версия Python — 3.5. Для загрузки и установки средства `azdata` требуется `pip`. В приведенных ниже инструкциях приведены примеры для Windows, Linux (Ubuntu) и macOS/OS X. Сведения об установке Python на других платформах см. в [документации по Python](https://wiki.python.org/moin/BeginnersGuide/Download). Кроме того, нужно также установить и обновить последнюю версию пакета Python `requests`.
 
 ```bash
 pip3 install -U requests
 ```
 
-> [!IMPORTANT]
-> При установке более новой версии кластеров больших данных создайте резервную копию своих данных и удалите старый кластер, обновив `azdata` и установив новый выпуск. Дополнительные сведения см. в статье [Обновление до нового выпуска](../../big-data-cluster/deployment-upgrade.md).
-
 ## <a name="windows-azdata-installation"></a><a id="windows"></a> Установка `azdata` в Windows
 
-1. В клиенте Windows скачайте необходимый пакет Python из [https://www.python.org/downloads/](https://www.python.org/downloads/). Для Python 3.5.3 и более поздних версий pip3 устанавливается вместе с Python. 
+1. В клиенте Windows скачайте необходимый пакет Python из [https://www.python.org/downloads/](https://www.python.org/downloads/). В Python 3.5.3 и более поздних версий pip3 устанавливается вместе с Python.
 
-   > [!TIP] 
+   > [!TIP]
    > При установке Python3 добавьте Python в свою переменную `PATH`. Если это не сделано, позднее можно найти расположение pip3 и добавить его в переменную `PATH` вручную.
 
 1. Откройте новый сеанс Windows PowerShell, чтобы он использовал актуальный путь для Python.
 
-1. Если установлены какие-либо предыдущие выпуски `azdata`, нужно обязательно удалить их перед установкой последней версии.
+1. Начиная с выпуска SQL Server 2019 CU5, azdata имеет независимую от сервера семантическую версию. Если до этого были установлены какие-либо предыдущие выпуски `azdata`, нужно обязательно удалить их перед установкой последней версии.
 
-   Для CTP 3.2 или RC1 выполните следующую команду.
+   Например, для 2019-cu4 выполните следующую команду:
 
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
-   ```
-   или диспетчер конфигурации служб
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+   ```powershell
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-cu4/requirements.txt
    ```
 
-1. Установите `azdata` с помощью следующей команды:
+  > [!NOTE]
+  > В приведенных выше примерах замените `2019-cu6` на версию и CU вашей установки `azdata`. 
+
+1. Установить службы `azdata`.
 
    ```powershell
    pip3 install -r https://aka.ms/azdata
@@ -84,19 +80,18 @@ pip3 install -U requests
    sudo -H pip3 install --upgrade pip
    ```
 
-1. Если установлены какие-либо предыдущие выпуски `azdata`, нужно обязательно удалить их перед установкой последней версии.
+1. Начиная с выпуска SQL Server 2019 CU5, azdata имеет независимую от сервера семантическую версию. Если до этого были установлены какие-либо предыдущие выпуски `azdata`, нужно обязательно удалить их перед установкой последней версии.
 
-   Для CTP 3.2 или RC1 выполните следующую команду.
+   Например, для `2019-cu6` выполните следующую команду:
 
    ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
-   ```
-   или диспетчер конфигурации служб
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-cu6/requirements.txt
    ```
 
-1. Установите `azdata` с помощью следующей команды:
+  > [!NOTE]
+  > В приведенных выше примерах замените `2019-cu6` на версию и CU вашей установки `azdata`.
+
+1. Установить службы `azdata`.
 
    ```bash
    pip3 install -r https://aka.ms/azdata --user
@@ -111,32 +106,32 @@ pip3 install -U requests
 
 1. На клиенте macOS установите программу [Homebrew](https://brew.sh), если она еще не установлена.
 
-   ```
+   ```bash
    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
    ```
 
 1. Установите Python и pip (минимальная версия 3.0):
 
-   ```
+   ```bash
    brew install python3
    ```
 
 1. Установите зависимости:
 
-   ```
+   ```bash
    pip3 install -U requests
    brew install freetds
    ```
 
-1. Если установлены какие-либо предыдущие выпуски `azdata`, нужно обязательно удалить их перед установкой последней версии. Следующая команда удаляет версию `azdata`.
+1. Начиная с выпуска SQL Server 2019 CU5, azdata имеет независимую от сервера семантическую версию. Если до этого были установлены какие-либо предыдущие выпуски `azdata`, нужно обязательно удалить их перед установкой последней версии. Например, следующая команда удаляет версию RC1 `azdata`:
 
-   ```
+   ```bash
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. Установите `azdata` с помощью следующей команды:
+1. Установить службы `azdata`.
 
-   ```
+   ```bash
    pip3 install -r https://aka.ms/azdata
    ```
 

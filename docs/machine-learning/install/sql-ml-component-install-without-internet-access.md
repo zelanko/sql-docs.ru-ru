@@ -1,23 +1,25 @@
 ---
-title: Установка без доступа к Интернету
-description: Установка компонентов R и Python SQL Server для машинного обучения на изолированных компьютерах, защищенных брандмауэром.
+title: Автономная установка без доступа к Интернету
+description: Автономная установка компонентов Python и R SQL Server для Служб машинного обучения на изолированных компьютерах, защищенных брандмауэром.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 10/01/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487647"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636164"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Настройка компонентов R и Python SQL Server для машинного обучения на компьютерах без доступа к Интернету
+# <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>Автономная установка компонентов Python и R SQL Server для Служб машинного обучения на компьютерах без доступа к Интернету
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+В этой статье описывается, как установить Службы машинного обучения SQL Server в автономном режиме на компьютерах без доступа к Интернету, изолированных и защищенных брандмауэром.
 
 По умолчанию установщики подключаются к сайтам загрузки Майкрософт, чтобы получить необходимые и обновленные компоненты для машинного обучения на SQL Server. Если ограничения брандмауэра не позволяют установщику обратиться к этим сайтам, можно использовать устройство, подключенное к Интернету, для загрузки файлов, пересылки файлов на автономный сервер, а затем запустить программу установки.
 

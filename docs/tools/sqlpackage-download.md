@@ -8,14 +8,14 @@ ms.technology: tools-other
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.reviewer: alayu; sstein
-ms.date: 06/20/2018
-ms.openlocfilehash: 40c95546496b6b79aeb95bc63db7750646f833fc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.reviewer: drskwier; sstein
+ms.date: 10/02/2020
+ms.openlocfilehash: 1a722b41576136bdcc509c96626f8cf4351629e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990147"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721585"
 ---
 # <a name="download-and-install-sqlpackage"></a>Скачивание и установка sqlpackage
 
@@ -25,14 +25,24 @@ ms.locfileid: "90990147"
 
 |Платформа|Скачивание|Дата выпуска|Версия|Сборка
 |:---|:---|:---|:---|:---|
-|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2143544)|18 сентября 2020 г.| 18.6 | 15.0.4897.1 |
-|macOS .NET Core |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2143659)|18 сентября 2020 г.| 18.6| 15.0.4897.1 |
-|Linux .NET Core |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2143497)|18 сентября 2020 г.| 18.6| 15.0.4897.1 |
-|Windows .NET Core |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2143496)|18 сентября 2020 г.| 18.6| 15.0.4897.1 |
+|[Windows](#get-sqlpackage-for-windows)|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2143544)|18 сентября 2020 г.| 18.6 | 15.0.4897.1 |
+|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2143659)|18 сентября 2020 г.| 18.6| 15.0.4897.1 |
+|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2143497)|18 сентября 2020 г.| 18.6| 15.0.4897.1 |
+|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2143496)|18 сентября 2020 г.| 18.6| 15.0.4897.1 |
 
 Подробнее см. в [заметках о выпуске](release-notes-sqlpackage.md). Чтобы скачать дополнительные языки, воспользуйтесь разделом [Доступные языки](#available-languages).
 
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+## <a name="dacfx"></a>DacFx
+DacServices ([Microsoft.SqlServer.Dac](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.dac.dacservices)) — это связанный механизм для интеграции развертывания базы данных в конвейер приложений.  API-интерфейс DacServices доступен в пакете NuGet [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx).  Текущая версия DacFx — 150.4897.1.
+
+Установка пакета NuGet в интерфейсе командной строки .NET выполняется с помощью следующей команды:
+
+```cmd
+> dotnet add package Microsoft.SqlServer.DACFx
+```
+
+>[!NOTE]
+> Были опубликованы дополнительные пакеты NuGet с именем DacFx: "Microsoft.SqlServer.DacFx.x64" и "Microsoft.SqlServer.DacFx.x86". В пакете "Microsoft.SqlServer.DACFx" реализована поддержка обеих платформ. Новые ссылки необходимо настраивать на этот пакет, а не на варианты x64 или x86.
 
 ## <a name="get-sqlpackage-for-windows"></a>Получение sqlpackage для Windows
 
@@ -129,7 +139,7 @@ ms.locfileid: "90990147"
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
-sqlpackage на основе .NET Core 3.1 выполняется в Windows, macOS и Linux.  К sqlpackage применяются [требования к ОС для .NET Core 3.1](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)].
+sqlpackage на основе .NET Core 3.1 выполняется в Windows, macOS и Linux.  К sqlpackage применяются [требования к ОС для .NET Core 3.1](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).
 
 ### <a name="windows-x64"></a>Windows (x64)
 
@@ -168,6 +178,7 @@ sqlpackage для Windows:
 
 .NET Core sqlpackage для Linux:  
 [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40a)
+
 
 ## <a name="next-steps"></a>Next Steps
 
