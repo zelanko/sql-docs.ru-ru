@@ -88,8 +88,6 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Автономное развертывание
               href: big-data-cluster/deploy-offline.md
-            - name: Режим Active Directory
-              href: big-data-cluster/deploy-active-directory.md
             - name: Развертывание с высоким уровнем доступности
               items:
                 - name: Главный экземпляр
@@ -130,6 +128,22 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: Безопасность
           href: big-data-cluster/concept-security.md
+        - name: Режим Active Directory
+          items:
+            - name: Предварительные требования
+              href: big-data-cluster/active-directory-prerequisites.md
+            - name: Развертывание
+              href: big-data-cluster/active-directory-deploy.md
+            - name: Подключение
+              href: big-data-cluster/active-directory-connect.md
+            - name: Несколько BDC в одном домене AD
+              href: big-data-cluster/active-directory-deployment-background.md
+            - name: Автоматически создаваемые объекты AD
+              href: big-data-cluster/active-directory-objects.md
+            - name: Сверка DNS AD
+              href: big-data-cluster/active-directory-dns-reconciliation.md
+            - name: Управление доступом пользователей.
+              href: big-data-cluster/manage-user-access.md
         - name: Частный кластер
           items:
             - name: Развернуть
@@ -336,16 +350,8 @@
               href: big-data-cluster/kubernetes-rbac.md
             - name: Обновление AZDATA_PASSWORD
               href: big-data-cluster/change-azdata-password.md
-            - name: Управление доступом пользователей.
-              href: big-data-cluster/manage-user-access.md
             - name: Некорневые контейнеры
               href: big-data-cluster/non-root-containers.md
-            - name: Несколько BDC в одном домене AD
-              href: big-data-cluster/active-directory-deployment-background.md
-            - name: Автоматически создаваемые объекты AD
-              href: big-data-cluster/active-directory-objects.md
-            - name: Сверка DNS AD
-              href: big-data-cluster/active-directory-dns-reconciliation.md
         - name: Задания Spark
           items:
             - name: Отправка заданий Spark в Azure Data Studio
@@ -362,13 +368,17 @@
               href: big-data-cluster/cluster-troubleshooting-commands.md
             - name: Устранение неполадок записной книжки pyspark
               href: big-data-cluster/troubleshoot-pyspark-notebook.md
-            - name: Область группы домена Active Directory
-              href: big-data-cluster/troubleshoot-active-directory.md
-            - name: DNS Active Directory
-              href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-            - name: Сбои при входе в Active Directory
-              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-            - name: Разрешения администратора HDFS
+            - name: Устранение неполадок Active Directory
+              items:
+                - name: Прекращение развертывания AD
+                  href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+                - name: Область группы домена AD
+                  href: big-data-cluster/troubleshoot-active-directory.md
+                - name: DNS-сервер AD.
+                  href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+                - name: Сбой при входе в AD
+                  href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+            - name: Устранение неполадок разрешений администратора HDFS
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Справочник
       items:
