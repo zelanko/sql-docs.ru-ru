@@ -14,12 +14,12 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3fa4511be07d5bb0e9a69d0db4515926824600cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7fa0e0e6c3b44e07568240d879fdb6d0829e6ffc
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717692"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868115"
 ---
 # <a name="extended-events-tools"></a>Средства расширенных событий
 
@@ -89,8 +89,7 @@ ms.locfileid: "85717692"
 ## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Таблицы расширенных событий SQL Server (Transact-SQL)](https://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
+ [Таблицы расширенных событий SQL Server (Transact-SQL)](../system-tables/system-tables-transact-sql.md)   
  [Использование сеанса system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Использование поставщика PowerShell для расширенных событий](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
-  
   

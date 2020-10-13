@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d150330a700b8580f561c4459d50ceab355eb8de
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942924"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866672"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Обзор начальных областей в выполняющейся в памяти OLTP
 
@@ -72,7 +72,7 @@ SQL Server позволяет использовать функции выпол
 Вот два основных сценария:  
   
 - В*пакетной операционной аналитике* используются процессы статистической обработки, которые выполняются либо по окончании рабочего дня, либо на дополнительном оборудовании, где имеются копии данных транзакций.  
-  - К пакетной операционной аналитике относится также[хранилище данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-what-is/) .  
+  - К пакетной операционной аналитике относится также[хранилище данных SQL Azure](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) .  
 - В*операционной аналитике в режиме реального времени* используются процессы статистической обработки, которые выполняются в рабочее время и на том оборудовании, где обрабатываются транзакции.  
   
   
@@ -93,24 +93,24 @@ SQL Server позволяет использовать функции выпол
 #### <a name="real-time-operational-analytics"></a>операционной аналитике в режиме реального времени
 
 1. [Операционная аналитика в реальном времени на основе технологии в памяти](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
-2. [Операционная аналитика в реальном времени. Обзор некластеризованного индекса columnstore (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [Операционная аналитика в реальном времени. Простой пример использования некластеризованного индекса columnstore (NCCI) в SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
-4. [Операционная аналитика в реальном времени. Операции DML и некластеризованный индекс columnstore (NCCI) в SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
-5. [Операционная аналитика в реальном времени. Некластеризованный индекс columnstore (NCCI) с фильтрацией](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
-6. [Операционная аналитика в реальном времени. Параметр "Задержка сжатия" для некластеризованного индекса columnstore (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
-7. [Операционная аналитика в реальном времени. Параметр "Задержка сжатия" с индексом NCCI и производительность](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
-8. [Операционная аналитика в реальном времени. Таблицы, оптимизированные для памяти, и индекс columnstore](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
+2. [Операционная аналитика в реальном времени. Обзор некластеризованного индекса columnstore (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)
+3. [Операционная аналитика в реальном времени. Простой пример использования некластеризованного индекса columnstore (NCCI) в SQL Server 2016](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)
+4. [Операционная аналитика в реальном времени. Операции DML и некластеризованный индекс columnstore (NCCI) в SQL Server 2016](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)
+5. [Операционная аналитика в реальном времени. Некластеризованный индекс columnstore (NCCI) с фильтрацией](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)
+6. [Операционная аналитика в реальном времени. Параметр "Задержка сжатия" для некластеризованного индекса columnstore (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)
+7. [Операционная аналитика в реальном времени. Параметр "Задержка сжатия" с индексом NCCI и производительность](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)
+8. [Операционная аналитика в реальном времени. Таблицы, оптимизированные для памяти, и индекс columnstore](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
 
 #### <a name="defragment-a-columnstore-index"></a>Дефрагментация индекса columnstore
 
-1. [Дефрагментация индекса columnstore с помощью команды REORGANIZE](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)
-2. [Политика слияния индекса columnstore для команды REORGANIZE](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)
+1. [Дефрагментация индекса columnstore с помощью команды REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
+2. [Политика слияния индекса columnstore для команды REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
 
 #### <a name="bulk-importation-of-data"></a>Массовый импорт данных
 
-1. [Кластеризованный индекс columnstore. Массовая загрузка](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [Кластеризованный индекс columnstore. Оптимизация загрузки данных — минимальное ведение журналов](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
-3. [Кластеризованный индекс columnstore. Оптимизация загрузки данных — параллельный массовый импорт](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
+1. [Кластеризованный индекс columnstore. Массовая загрузка](/archive/blogs/sqlserverstorageengine/clustered-column-store-index-bulk-loading-the-data)
+2. [Кластеризованный индекс columnstore. Оптимизация загрузки данных — минимальное ведение журналов](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
+3. [Кластеризованный индекс columnstore. Оптимизация загрузки данных — параллельный массовый импорт](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
 
 
 
@@ -128,7 +128,7 @@ SQL Server позволяет использовать функции выпол
 Для того чтобы таблица существовала в активной памяти, а не на диске, в инструкции CREATE TABLE указывается определенное ключевое слово T-SQL — MEMORY_OPTIMIZED.  
   
   
-[Оптимизированная для памяти таблица](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) имеет одно представление для активной памяти и дополнительную копию на диске.  
+[Оптимизированная для памяти таблица](./sample-database-for-in-memory-oltp.md) имеет одно представление для активной памяти и дополнительную копию на диске.  
   
 - Копия на диске предназначена только для восстановления после завершения работы и перезапуска сервера или базы данных. Такая двойственность памяти и диска скрыта от вас и вашего кода.  
   
@@ -144,14 +144,14 @@ SQL Server позволяет использовать функции выпол
   
 Модули, компилируемые в собственном коде, бывают трех типов:  
   
-- [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+- [Скомпилированные в собственном коде хранимые процедуры](./a-guide-to-query-processing-for-memory-optimized-tables.md).  
 - Скомпилированные в собственном коде определяемые пользователем функции (UDF), которые являются скалярными.  
 - Скомпилированные в собственном коде триггеры.  
   
   
 #### <a name="availability-in-azure-sql-database"></a>Доступность базы данных Azure SQL  
   
-Выполняющаяся в памяти OLTP и индекс columnstore доступны в Базе данных SQL Azure. Дополнительные сведения см. в статье [Приступая к работе с In-Memory (в режиме предварительной версии) в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory).
+Выполняющаяся в памяти OLTP и индекс columnstore доступны в Базе данных SQL Azure. Дополнительные сведения см. в статье [Приступая к работе с In-Memory (в режиме предварительной версии) в базе данных SQL](/azure/sql-database/sql-database-in-memory).
   
   
 <a name="ensure-compatibility-level-gteq-130-99c"></a>  
@@ -452,7 +452,7 @@ PRINT @mesg;
 - Скомпилированные в собственном коде триггеры.  
   - В таблицах, оптимизированных для памяти, разрешаются только триггеры, скомпилированные в собственном коде.  
 - Скомпилированные в собственном коде [функции с табличными значениями](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
-  - [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
+  - [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)  
   
 Скомпилированная определяемая пользователем функция выполняется быстрее, чем интерпретированная определяемая пользователем функция. При работе с определяемыми пользователем функциями необходимо учитывать следующее:  
   
@@ -463,7 +463,7 @@ PRINT @mesg;
   
 Данные тестов и сведения о производительности определяемых пользователем функций в собственном коде см. в следующих статьях:  
   
-  - [Смягчение последствий RBAR с использованием скомпилированных в собственном коде определяемых пользователем функций в SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
+  - [Смягчение последствий RBAR с использованием скомпилированных в собственном коде определяемых пользователем функций в SQL Server 2016](/archive/blogs/sqlcat/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016)  
   - Запись [Пользовательские функции, скомпилированные в машинный код](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) в блоге Гейл Шоу (Gail Shaw) за январь 2016 г.  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
@@ -472,11 +472,11 @@ PRINT @mesg;
   
 Обратитесь к следующим статьям, посвященным некоторым соображениям, касающимся оптимизированных для памяти таблиц:  
   
-- [Миграция в In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+- [Миграция в In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   - [Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - Отчет об анализе производительности транзакции в SQL Server Management Studio позволяет оценить, улучшится ли производительность приложения в базе данных с помощью выполняемой в памяти OLTP.  
   - Инструкции по перемещению таблицы из дисковой базы данных в выполняемую в памяти OLTP см. в [Помощнике по оптимизации памяти](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) .   
-- [Резервное копирование и восстановление оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [Резервное копирование и восстановление оптимизированных для памяти таблиц](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   - Объем хранилища, используемый оптимизированными для памяти таблицами, может быть значительно больше, чем размер таблиц в памяти. Это оказывает влияние на размер резервной копии базы данных.  
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Содержит сведения о логике повторных попыток в T-SQL для транзакций в таблицах, оптимизированных для памяти.  
@@ -490,7 +490,7 @@ PRINT @mesg;
 
 В следующей статье и ее подразделах приводятся подробные сведения о хранимых процедурах, скомпилированных в собственном коде.
 
-- [Скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)
+- [Скомпилированные в собственном коде хранимые процедуры](./a-guide-to-query-processing-for-memory-optimized-tables.md)
   
 <a name="related-links-43f"></a>  
   
@@ -501,4 +501,4 @@ PRINT @mesg;
 Следующие статьи содержат примеры кода и демонстрируют повышение производительности за счет применения In-Memory OLTP:  
   
 - [Демонстрация. Улучшение производительности выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md). Маленькая демонстрация больших возможностей получения выигрыша в производительности.  
-- [Пример базы данных для выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md). Демонстрация большего масштаба.  
+- [Пример базы данных для выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md). Демонстрация большего масштаба.

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2495d1b61b0251deee1b86ce66c03b6474f36cd8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7acabfac10c3eb6e7afa1fbfbb2f546b0ae4137d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554829"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006436"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Установка компонентов SSMA на SQL Server (OracleToSQL)
 
@@ -30,11 +30,11 @@ ms.locfileid: "86554829"
 
 Кроме того, при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда для переноса данных используется модуль миграции данных на стороне сервера.
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>Предварительные условия
 
 Перед установкой SSMA для компонентов сервера Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Убедитесь, что система соответствует следующим требованиям.
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]экземпляр установлен.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр установлен.
 - Установщик [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows версии 3.1 или более поздняя версия.
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версия 4.7.2 или более поздняя. Его можно получить в [центре разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Поставщик OLE DB для Oracle (если используется OLE DB) и подключение к базе данных Oracle, которую требуется перенести. Поставщики можно установить с носителя продукта Oracle или с веб-сайта Oracle.
@@ -65,7 +65,7 @@ ms.locfileid: "86554829"
 8. Выберите нужный тип установки и нажмите кнопку **Далее**.
 
    > [!IMPORTANT]
-   > Параметр Remote следует использовать только при установке пакета расширения на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компьютере под управлением Linux или при нацеливании [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]При установке в Windows всегда должен быть установлен пакет расширений локально. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]и хранилище данных SQL Azure не поддерживает пакет расширений.
+   > Параметр Remote следует использовать только при установке пакета расширения на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компьютере под управлением Linux или при нацеливании [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] При установке в Windows всегда должен быть установлен пакет расширений локально. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] и Azure синапсе Analytics не поддерживают пакет расширений.
 
    Если пакет расширений устанавливается на локальном [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре, то на следующей странице можно будет выбрать локальный экземпляр, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в который будут перенесены схемы Oracle. Выберите экземпляр в раскрывающемся списке и нажмите кнопку **Далее**.
 
@@ -100,11 +100,11 @@ ms.locfileid: "86554829"
 
 ### <a name="sql-server-database-objects"></a>SQL Server объекты базы данных
 
-После установки пакета расширений в базе данных **сисдб** появляется таблица **ssma_oracle. bcp_migration_packages** .
+После установки пакета расширений в базе данных **сисдб** появляется таблица **ssma_oracle. bcp _migration_packages** .
 
 Каждый раз при миграции данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Задание агента. Эти задания называются **ssma_oracle пакет переноса данных {GUID}** и отображаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] узле агент [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в папке задания.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-- [Установка клиента SSMA для Oracle](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
+- [Установка SSMA для клиента Oracle](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
 - [Миграция баз данных Oracle в SQL Server](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

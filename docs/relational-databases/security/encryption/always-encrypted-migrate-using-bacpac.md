@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b82259c992000578a4fcca1c5807cf551dc9d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc54fedce772b267cf19a9396672b61cf6e6254
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498585"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867772"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>Экспорт и импорт баз данных с помощью Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "88498585"
 Подробные сведения об экспорте и импорте базы данных см. в следующих статьях:
 - [Экспорт приложения уровня данных](../../data-tier-applications/export-a-data-tier-application.md)
 - [Импорт файла BACPAC для создания новой пользовательской базы данных](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
-- [Экспорт базы данных SQL Azure в BACPAC-файл](https://docs.microsoft.com/azure/sql-database/sql-database-export)
-- [Импорт BACPAC-файла в базу данных в Базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-import)
+- [Экспорт базы данных SQL Azure в BACPAC-файл](/azure/sql-database/sql-database-export)
+- [Импорт BACPAC-файла в базу данных в Базе данных SQL Azure](/azure/sql-database/sql-database-import)
 - [SqlPackage.exe](../../../tools/sqlpackage.md)
 
 ## <a name="permissions-for-migrating-databases-with-encrypted-columns"></a>Разрешения на перенос баз данных с зашифрованными столбцами

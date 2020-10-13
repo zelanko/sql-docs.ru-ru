@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 71145a184d13ad4ca4393cd1468293e40f0ad594
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896848"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867829"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85896848"
    
  Соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выступает в качестве моста между [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и хранилищем ключей Azure, поэтому [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может использовать масштабируемость, высокий уровень производительности и высокую доступность службы хранилища ключей Azure. На следующем рисунке показано, как иерархия ключей работает в архитектуре поставщика расширенного управления ключами с хранилищем ключей Azure и Соединителем [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-  Хранилище ключей можно использовать с установками [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на виртуальных машинах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure и для локальных серверов. Служба хранилища ключей также предоставляет возможность использовать жестко контролируемые и отслеживаемые аппаратные модули безопасности (HSM) для обеспечения более высокого уровня защиты асимметричных ключей шифрования. Дополнительные сведения о хранилище ключей см. в статье [Хранилище ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521401).  
+  Хранилище ключей можно использовать с установками [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на виртуальных машинах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure и для локальных серверов. Служба хранилища ключей также предоставляет возможность использовать жестко контролируемые и отслеживаемые аппаратные модули безопасности (HSM) для обеспечения более высокого уровня защиты асимметричных ключей шифрования. Дополнительные сведения о хранилище ключей см. в статье [Хранилище ключей Azure](/azure/key-vault/general/basic-concepts).  
   
  На следующем изображении представлен поток процесса расширенного управления ключами с использованием хранилища ключей. (Номера шагов процесса на изображении не обязательно соответствуют номерам шагов установки, указанным после изображения.)  
   
@@ -56,5 +56,4 @@ ms.locfileid: "85896848"
   
 ## <a name="see-also"></a>См. также:  
  [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
   

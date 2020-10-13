@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: d6cd4c4988b07e19c04d72efe2fc19200313f355
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227061"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866640"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
 
@@ -51,12 +51,12 @@ ms.locfileid: "91227061"
 >
 >**См. также:**
 >
-> - [Прозрачное шифрование данных в Базе данных SQL Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)
-> - [Начало работы с прозрачным шифрованием данных (TDE) в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)
+> - [Прозрачное шифрование данных в Базе данных SQL Azure](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
+> - [Начало работы с прозрачным шифрованием данных (TDE) в хранилище данных SQL](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 > - [Перемещение базы данных, защищаемой прозрачным шифрованием, в другой экземпляр SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
 > - [Включение прозрачного шифрования данных в SQL Server с помощью расширенного управления ключами](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [Использование соединителя SQL Server с компонентами шифрования SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
-> - [Блог по безопасности SQL Server в TDE с вопросами и ответами](https://blogs.msdn.microsoft.com/sqlsecurity/2016/10/05/feature-spotlight-transparent-data-encryption-tde/)
+> - [Блог по безопасности SQL Server в TDE с вопросами и ответами](/archive/blogs/sqlsecurity/feature-spotlight-transparent-data-encryption-tde)
 
 ## <a name="about-tde"></a>Сведения о прозрачном шифровании данных (TDE)
 
@@ -64,7 +64,7 @@ ms.locfileid: "91227061"
 
 ### <a name="information-applicable-to-sssds"></a>Сведения, применимые к [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]
 
-При использовании прозрачного шифрования данных с [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] версии 12 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] автоматически создает сертификат на уровне сервера, хранящийся в базе данных master. Чтобы переместить базу данных TDE в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], расшифровывать ее не нужно. Дополнительные сведения об использовании прозрачного шифрования данных с [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] см. в статье [Прозрачное шифрование данных в базе данных SQL Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+При использовании прозрачного шифрования данных с [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] версии 12 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] автоматически создает сертификат на уровне сервера, хранящийся в базе данных master. Чтобы переместить базу данных TDE в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], расшифровывать ее не нужно. Дополнительные сведения об использовании прозрачного шифрования данных с [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] см. в статье [Прозрачное шифрование данных в базе данных SQL Azure](/azure/azure-sql/database/transparent-data-encryption-tde-overview).
 
 ### <a name="information-applicable-to-ssnoversion"></a>Сведения, применимые к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
@@ -324,12 +324,12 @@ ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 
 ## <a name="related-content"></a>См. также
 
-[Прозрачное шифрование данных в Базе данных SQL Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
-[Начало работы с прозрачным шифрованием данных (TDE) в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
+[Прозрачное шифрование данных в Базе данных SQL Azure](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
+[Начало работы с прозрачным шифрованием данных (TDE) в хранилище данных SQL](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
 [Шифрование SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [Ключи шифрования базы данных и SQL Server (компонент Database Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
 ## <a name="see-also"></a>См. также раздел
 
 [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)  
+[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)

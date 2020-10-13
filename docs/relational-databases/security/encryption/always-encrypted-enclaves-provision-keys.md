@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13e6fd165c65aa8aeaed4394ec91a17c82b72097
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77a438ee4f495429bbe0eb9c1e98728ecb324009
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482242"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867666"
 ---
 # <a name="provision-enclave-enabled-keys"></a>Подготовка ключей с поддержкой анклава
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "88482242"
 
 Как правило, в подготовке ключей с поддержкой анклава задействованы рабочие процессы подготовки ключей PowerShell (с разделением и без разделения ролей) для Always Encrypted, описанные в статье [Подготовка ключей Always Encrypted с помощью PowerShell](configure-always-encrypted-keys-using-powershell.md). В этом разделе приводятся конкретные сведения, касающиеся ключей с поддержкой анклава.
 
-Модуль SqlServer PowerShell расширяет функциональность командлетов [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) и [**New-SqlAzureKeyVaultColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) за счет параметра `-AllowEnclaveComputations`, позволяющего указывать главный ключ столбца с поддержкой анклава в ходе процесса подготовки. Каждый командлет создает локальный объект, содержащий свойства главного ключа столбца (хранящегося в Azure Key Vault или в хранилище сертификатов Windows). Если указано, свойство `-AllowEnclaveComputations` помечает ключ как поддерживающий анклав в локальном объекте. Кроме того, командлет обращается к указанному главному ключу столбца (в Azure Key Vault или хранилище сертификатов Windows) для добавления цифровой подписи к свойствам ключа. Созданный объект параметров для нового главного ключа столбца с поддержкой анклава можно использовать в последующем вызове командлета [**New-SqlColumnMasterKey**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcolumnmasterkey) для создания объекта метаданных, описывающего новый ключ в базе данных.
+Модуль SqlServer PowerShell расширяет функциональность командлетов [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) и [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) за счет параметра `-AllowEnclaveComputations`, позволяющего указывать главный ключ столбца с поддержкой анклава в ходе процесса подготовки. Каждый командлет создает локальный объект, содержащий свойства главного ключа столбца (хранящегося в Azure Key Vault или в хранилище сертификатов Windows). Если указано, свойство `-AllowEnclaveComputations` помечает ключ как поддерживающий анклав в локальном объекте. Кроме того, командлет обращается к указанному главному ключу столбца (в Azure Key Vault или хранилище сертификатов Windows) для добавления цифровой подписи к свойствам ключа. Созданный объект параметров для нового главного ключа столбца с поддержкой анклава можно использовать в последующем вызове командлета [**New-SqlColumnMasterKey**](/powershell/module/sqlserver/new-sqlcolumnmasterkey) для создания объекта метаданных, описывающего новый ключ в базе данных.
 
 Подготовка ключей шифрования столбцов с поддержкой анклава не отличается от подготовки ключей шифрования столбцов без поддержки анклава. Просто необходимо убедиться, что главный ключ столбца, используемый для шифрования нового ключа шифрования столбца, поддерживает анклав.
 
@@ -76,7 +76,7 @@ ms.locfileid: "88482242"
 > Сейчас модуль SqlServer PowerShell не поддерживает подготовку ключей с поддержкой анклава, хранящихся в аппаратных модулях безопасности (использующих CNG или CAPI).
 
 ### <a name="example---provision-enclave-enabled-keys-using-windows-certificate-store"></a>Пример: подготовка ключей с поддержкой анклава с помощью хранилище сертификатов Windows
-В приведенном ниже законченном примере демонстрируется подготовка ключей с поддержкой анклава с сохранением главного ключа столбца, хранящегося в хранилище сертификатов Windows. В основе сценария лежит пример из раздела [Хранилище сертификатов Windows без разделения ролей (пример)](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example). Обратите внимание на использование параметра `-AllowEnclaveComputations` в командлете [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) — это единственное различие между рабочими процессами в двух примерах.
+В приведенном ниже законченном примере демонстрируется подготовка ключей с поддержкой анклава с сохранением главного ключа столбца, хранящегося в хранилище сертификатов Windows. В основе сценария лежит пример из раздела [Хранилище сертификатов Windows без разделения ролей (пример)](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example). Обратите внимание на использование параметра `-AllowEnclaveComputations` в командлете [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) — это единственное различие между рабочими процессами в двух примерах.
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
@@ -107,8 +107,8 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ### <a name="example---provision-enclave-enabled-keys-using-azure-key-vault"></a>Пример: подготовка ключей с поддержкой анклава с помощью Azure Key Vault
 В приведенном ниже законченном примере демонстрируется подготовка ключей с поддержкой анклава с сохранением главного ключа столбца в Azure Key Vault. В основе сценария лежит пример из раздела [Azure Key Vault без разделения ролей (пример)](configure-always-encrypted-keys-using-powershell.md#azure-key-vault-without-role-separation-example). Важно отметить два различия между рабочим процессом для ключей с поддержкой анклава и процессом для ключей без поддержки анклава. 
-- В приведенном ниже сценарии командлет [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) использует параметр `-AllowEnclaveComputations` для создания главного ключа столбца с поддержкой анклава. 
-- Сценарий вызывает командлет [**Add-SqlAzureAuthenticationContext**](https://docs.microsoft.com/powershell/module/sqlserver/add-sqlazureauthenticationcontext) для входа в Azure перед вызовом командлета [**New-SqlAzureKeyVaultColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings). Вход в Azure необходим, поскольку с заданным параметром `-AllowEnclaveComputations` командлет **New-SqlAzureKeyVaultColumnMasterKeySettings** вызывает Azure Key Vault для подписывания свойств главного ключа столбца.
+- В приведенном ниже сценарии командлет [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) использует параметр `-AllowEnclaveComputations` для создания главного ключа столбца с поддержкой анклава. 
+- Сценарий вызывает командлет [**Add-SqlAzureAuthenticationContext**](/powershell/module/sqlserver/add-sqlazureauthenticationcontext) для входа в Azure перед вызовом командлета [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings). Вход в Azure необходим, поскольку с заданным параметром `-AllowEnclaveComputations` командлет **New-SqlAzureKeyVaultColumnMasterKeySettings** вызывает Azure Key Vault для подписывания свойств главного ключа столбца.
 
 ```powershell
 # Create a column master key in Azure Key Vault.
@@ -156,4 +156,4 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ## <a name="see-also"></a>См. также:  
 - [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Управление ключами для Always Encrypted с безопасными анклавами](always-encrypted-enclaves-manage-keys.md)
-- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 
+- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d039034a5c76f5f7e98b2eed84f92c27a039832d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493837"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866696"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Выполнение запросов к столбцам, использующим Always Encrypted, с помощью Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-В этой статье описывается выполнение запросов к столбцам, зашифрованным при помощи [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md), с использованием [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is). При использовании Azure Data Studio возможно:
+В этой статье описывается выполнение запросов к столбцам, зашифрованным при помощи [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md), с использованием [Azure Data Studio](../../../azure-data-studio/what-is.md). При использовании Azure Data Studio возможно:
 - извлечение значений зашифрованных данных, хранящихся в зашифрованных столбцах; 
 - извлечение значений открытого текста, хранящихся в зашифрованных столбцах;  
 - отправка значений открытого текста, предназначенных для зашифрованных столбцов (например, в инструкциях `INSERT` или `UPDATE` и в инструкциях `SELECT` в виде параметра поиска в предложениях `WHERE`). 
@@ -113,7 +113,7 @@ ms.locfileid: "88493837"
 
 ## <a name="parameterization-for-always-encrypted"></a>Параметризация для Always Encrypted
 
-Параметризация для Always Encrypted — это функция в Azure Data Studio 18.1 и последующих версиях, которая автоматически преобразует переменные Transact-SQL в параметры запросов (экземпляры [класса SqlParameter](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)). Это позволяет основному [поставщику данных Microsoft .NET для SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) определять данные, предназначенные для зашифрованных столбцов, и шифровать эти данные перед отправкой в базу данных.
+Параметризация для Always Encrypted — это функция в Azure Data Studio 18.1 и последующих версиях, которая автоматически преобразует переменные Transact-SQL в параметры запросов (экземпляры [класса SqlParameter](/dotnet/api/microsoft.data.sqlclient.sqlparameter)). Это позволяет основному [поставщику данных Microsoft .NET для SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) определять данные, предназначенные для зашифрованных столбцов, и шифровать эти данные перед отправкой в базу данных.
   
 Без параметризации поставщик данных Microsoft .NET для SQL Server передает все инструкции, созданные в редакторе запросов, в виде непараметризованных запросов. Если запрос содержит литералы или переменные Transact-SQL, предназначенные для зашифрованных столбцов, поставщик данных .NET Framework для SQL Server не сможет определить и зашифровать их перед отправкой запроса в базу данных. В результате этого из-за несоответствия типов (между переменной Transact-SQ литерала открытого текста и зашифрованным столбцом) запрос завершится сбоем. Например, если столбец `SSN` зашифрован, без параметризации следующий запрос завершится сбоем.   
 
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio использует технологию Intellisense, чтобы предоставлять сведения о том, для каких переменных можно выполнить параметризацию, а для каких эта операция завершится сбоем (с указанием причины).   
 
-Объявление переменной, для которой можно выполнить параметризацию, подчеркивается линией (как в информационном сообщении) в окне запроса. Если навести указатель мыши на подчеркнутую инструкцию объявления, появится сообщение с результатом параметризации, в том числе значениями основных свойств итогового объекта [SqlParameter Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter) (переменная сопоставляется с [SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) и [SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Кроме того, в представлении **Проблемы** можно просмотреть полный список всех параметризованных переменных. Чтобы открыть представление **Проблемы**, выберите **Представление** > **Проблемы**.    
+Объявление переменной, для которой можно выполнить параметризацию, подчеркивается линией (как в информационном сообщении) в окне запроса. Если навести указатель мыши на подчеркнутую инструкцию объявления, появится сообщение с результатом параметризации, в том числе значениями основных свойств итогового объекта [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) (переменная сопоставляется с [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) и [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Кроме того, в представлении **Проблемы** можно просмотреть полный список всех параметризованных переменных. Чтобы открыть представление **Проблемы**, выберите **Представление** > **Проблемы**.    
 
 
 

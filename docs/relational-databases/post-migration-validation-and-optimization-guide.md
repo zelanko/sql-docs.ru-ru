@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482497"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891134"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Руководство по оптимизации и проверке после миграции
 
@@ -38,7 +38,7 @@ ms.locfileid: "88482497"
 
 Это объясняется тем, что, начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], все изменения в оптимизаторе запросов привязаны к последнему [уровню совместимости базы данных](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), поэтому планы изменяются не в момент обновления, а когда пользователь изменяет параметр базы данных `COMPATIBILITY_LEVEL` на последнюю версию. В сочетании с хранилищем запросов эта возможность обеспечивает высокий уровень контроля над производительностью запросов в процессе обновления. 
 
-Дополнительные сведения об изменениях оптимизатора запросов, появившихся в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], см. в документе [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Оптимизация планов запросов с помощью модуля оценки кратности SQL Server 2014).
+Дополнительные сведения об изменениях оптимизатора запросов, появившихся в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], см. в документе [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10)) (Оптимизация планов запросов с помощью модуля оценки кратности SQL Server 2014).
 
 ### <a name="steps-to-resolve"></a>Действия по устранению
 
@@ -67,7 +67,7 @@ ms.locfileid: "88482497"
 5.  Перепишите запрос, задействовав подсказку `DISABLE_PARAMETER_SNIFFING`. Результат будет таким же, как при использовании локальной переменной — в отсутствие `OPTION(RECOMPILE)`, `WITH RECOMPILE` или `OPTIMIZE FOR <value>` сканирование параметра будет полностью отключено.
 
 > [!TIP] 
-> Воспользуйтесь функцией анализа плана [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], чтобы быстро определить наличие проблемы. Дополнительные сведения см. [здесь](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
+> Воспользуйтесь функцией анализа плана [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], чтобы быстро определить наличие проблемы. Дополнительные сведения см. [здесь](/archive/blogs/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier).
 
 ## <a name="missing-indexes"></a><a name="MissingIndexes"></a> Отсутствие индексов
 
@@ -166,8 +166,8 @@ ms.locfileid: "88482497"
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Дополнительные материалы
 
  [Рекомендации по хранилищу запросов](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[Таблицы, оптимизированные для памяти](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Таблицы, оптимизированные для памяти](./in-memory-oltp/sample-database-for-in-memory-oltp.md)  
 [Определяемые пользователем функции](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[Табличные переменные и расчетное количество строк — часть 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[Табличные переменные и расчетное количество строк — часть 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[Табличные переменные и расчетное количество строк — часть 1](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1)  
+[Табличные переменные и расчетное количество строк — часть 2](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2)  
 [Кэширование и повторное использование плана выполнения](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

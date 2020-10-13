@@ -15,12 +15,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a20924d617f3c0333d548a3134f2bfc211dab7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28658f7f420976efe51d84a86123fe037965ab48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733686"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868015"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
 
@@ -28,9 +28,9 @@ ms.locfileid: "85733686"
 
   Прежде чем использовать средство трассировки событий для Windows (ETW) в качестве назначения, рекомендуется сначала попрактиковаться в работе с данным средством. Трассировка событий Windows используется совместно с расширенными событиями или в качестве потребителя расширенных событий. Следующие внешние ссылки помогут получить начальные сведения о трассировке событий Windows.  
   
--   [События Windows](https://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [События Windows](/windows/win32/events/windows-events)  
   
--   [Усовершенствованные отладка и настройка производительности с помощью приложения ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Усовершенствованные отладка и настройка производительности с помощью приложения ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)  
   
  Цель «Трассировка событий Windows» является одноэлементным целевым объектом, хотя она может быть добавлена в несколько сеансов. Если событие происходит в нескольких сеансах, то данное событие будет передано цели трассировки событий Windows по одному разу для каждого произошедшего события. Каждый процесс может иметь только одну подсистему расширенных событий.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85733686"
     > [!IMPORTANT]  
     >  После начала первого сеанса путь к файлу изменить нельзя.  
   
--   MOF-файлы находятся в папке: *\<your install path>* \Microsoft SQL Server\Shared Дополнительные сведения см. в разделе [Формат управляющих объектов](https://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.
+-   MOF-файлы находятся в папке: *\<your install path>* \Microsoft SQL Server\Shared Дополнительные сведения см. в разделе [Формат управляющих объектов](/windows/win32/wmisdk/managed-object-format--mof-) библиотеки MSDN.
 
 <!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->
@@ -99,5 +99,4 @@ ADD TARGET package0.etw_classic_sync_target
  [sys.dm_xe_session_targets (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)  
-  
   

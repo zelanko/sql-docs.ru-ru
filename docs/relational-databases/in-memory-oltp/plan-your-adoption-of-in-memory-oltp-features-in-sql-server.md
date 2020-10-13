@@ -12,12 +12,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12288ac1ab4923e776b968a6f990e95a17f96060
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eabca1300e3937d4b1a1f48531c9cc09b1978dd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722411"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867099"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Планирование освоения возможностей выполняющейся в памяти OLTP в SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85722411"
 
 В следующих подразделах описываются факторы, которые необходимо учитывать при планировании освоения и реализации возможностей технологии обработки в памяти. Пояснительная информация в значительном объеме доступна в следующей статье:
 
-- [Повышение производительности приложений в Базе данных SQL Azure с помощью выполняющейся в памяти OLTP](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-migration/)
+- [Повышение производительности приложений в Базе данных SQL Azure с помощью выполняющейся в памяти OLTP](/azure/azure-sql/in-memory-oltp-configure)
 
 
 
@@ -42,7 +42,7 @@ ms.locfileid: "85722411"
 
 - [Требования для использования таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
     - [Выпуски и компоненты SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-    - [Рекомендации по ценовому уровню базы данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
+    - [Рекомендации по ценовому уровню базы данных SQL](/azure/azure-sql/database/service-tiers-vcore)
 
 
 ### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2. Прогнозирование объема активной памяти
@@ -59,8 +59,8 @@ ms.locfileid: "85722411"
 
 Для базы данных, размещенной в облачной службе базы данных SQL Azure, выбранный уровень службы повлияет на объем активной памяти, которую разрешено потреблять вашей базе данных. Необходимо спланировать мониторинг использования памяти вашей базой данных при помощи предупреждений. Подробная информация доступна в следующих статьях:
 
-- Проверьте ограничения хранилища In-Memory OLTP для вашей [ценовой категории](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models).
-- [Мониторинг хранилища OLTP в памяти](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
+- Проверьте ограничения хранилища In-Memory OLTP для вашей [ценовой категории](/azure/sql-database/sql-database-purchase-models).
+- [Мониторинг хранилища OLTP в памяти](/azure/azure-sql/in-memory-oltp-monitor-space)
 
 #### <a name="memory-optimized-table-variables"></a>Оптимизированные для памяти табличные переменные
 
@@ -261,7 +261,7 @@ ms.locfileid: "85722411"
 
 Рекомендации по миграции модулей Transact-SQL, в которых используются неподдерживаемые компоненты, в скомпилированные в собственном коде модули см.:
 
-- [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
+- [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](./a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 Помимо ограничений на определенные элементы Transact-SQL, также накладываются некоторые ограничения на операторы запросов, поддерживаемые в скомпилированных в собственном коде модулях T-SQL. Из-за этих ограничений скомпилированные в собственном коде хранимые процедуры не подходят для аналитических запросов, которые обрабатывают большие наборы данных.
 
@@ -297,12 +297,10 @@ ms.locfileid: "85722411"
 Скрипты Transact-SQL можно сделать более устойчивыми к ошибкам, связанным с транзакциями, добавив в скрипты *логику повторных попыток* . Логика повторных попыток окажется полезной, если вызовы UPDATE и DELETE выполняются часто или если на оптимизированную для обработки в памяти таблицу ссылается внешний ключ другой таблицы. Подробная информация доступна в следующих статьях:
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Transaction dependency limits with memory optimized tables — Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/) (Ограничения, связанные с зависимостями транзакций в оптимизированных для обработки в памяти таблицах, — ошибка 41839)
+- [Transaction dependency limits with memory optimized tables — Error 41839](/archive/blogs/sqlcat/transaction-dependency-limits-with-memory-optimized-tables-error-41839) (Ограничения, связанные с зависимостями транзакций в оптимизированных для обработки в памяти таблицах, — ошибка 41839)
 
 
 
 ## <a name="related-links"></a>Связанные ссылки
 
 - [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
-

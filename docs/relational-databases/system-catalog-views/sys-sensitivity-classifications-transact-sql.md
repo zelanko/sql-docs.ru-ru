@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d37eb7cd82ceeba6ae844c82dea5763564c689dd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 4021751337e7c49b22d6ec8bc2d24cc4e144e763
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809350"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006012"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "91809350"
 В следующем примере возвращается таблица, в которой перечислены имя таблицы, имя столбца, метка, идентификатор метки, тип сведений, идентификатор информационного типа, ранг и описание ранжирования для каждого классифицированного столбца в базе данных.
 
 > [!NOTE]
-> Метка — это ключевое слово для хранилища данных SQL Azure.
+> Метка — это ключевое слово для Azure синапсе Analytics.
 
 ```sql
 SELECT

@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7c29522d20a3d263c602884daa0277a8e1a2095
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: ba0eb3c9907acfe02939c49ea253869adbfc992b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753536"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867345"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Разрешение фрагментации индекса путем реорганизации или перестроения индекса
 
@@ -434,4 +434,4 @@ ALTER INDEX ALL ON HumanResources.Employee
 - [Производительность запросов индексов columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)
 - [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 - [Индексы сolumnstore для хранилищ данных](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)
-- [Индексы columnstore и политика слияния для групп строк](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)
+- [Индексы columnstore и политика слияния для групп строк](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)

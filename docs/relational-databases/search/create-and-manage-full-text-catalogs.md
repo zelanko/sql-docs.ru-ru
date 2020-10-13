@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d876cbff20f80261bbd7737d72f0117acb8f3ac6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f95811113261f10701e0fcfc41c70e348891f6a9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482319"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868096"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Создание и управление полнотекстовыми каталогами
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ GO
   
 3.  Выберите **Создание полнотекстового каталога**.  
   
-4.  В диалоговом окне **Создание полнотекстового каталога** укажите сведения о вновь создаваемом каталоге. Дополнительные сведения см. в разделе [Создание полнотекстового каталога (страница "Общие")](https://docs.microsoft.com/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
+4.  В диалоговом окне **Создание полнотекстового каталога** укажите сведения о вновь создаваемом каталоге. Дополнительные сведения см. в разделе [Создание полнотекстового каталога (страница "Общие")](../../t-sql/statements/create-fulltext-catalog-transact-sql.md).  
   
     > [!NOTE]  
     >  Идентификаторы полнотекстовых каталогов начинаются с 00005 и увеличиваются на единицу для каждого вновь создаваемого каталога.  

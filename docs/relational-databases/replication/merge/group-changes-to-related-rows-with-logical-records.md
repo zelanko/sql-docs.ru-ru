@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 653698d6bb6699d5434d2bfd10b21ccd93aaefa1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882483"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866995"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Изменения группирования связанных строк с логическими записями
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "85882483"
   
 -   Если логические записи используются в публикации, содержащей параметризованные фильтры, следует инициализировать каждый подписчик с помощью моментального снимка для его секции. Если подписчик инициализируется с помощью другого метода, произойдет сбой агента слияния. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
--   Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации на языке Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+-   Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации на языке Transact-SQL&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md).  
   
 ### <a name="publication-settings"></a>Настройки публикации  
   
@@ -144,5 +144,4 @@ ms.locfileid: "85882483"
   
 ## <a name="see-also"></a>См. также:  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
   

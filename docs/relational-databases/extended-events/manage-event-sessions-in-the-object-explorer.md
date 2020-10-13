@@ -11,12 +11,12 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90efcea33406b176706ce8d6fe0196d3c825fb3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 802ef2c4b7c73847e1c3de3cdc67516a9d35f2e3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727325"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868547"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Управление сеансами событий в обозревателе объектов
 
@@ -37,7 +37,7 @@ ms.locfileid: "85727325"
 -   Удаление сеанса расширенных событий  
   
 ## <a name="create-an-extended-events-session"></a>Создание сеанса расширенных событий  
- Дополнительные сведения о создании сеанса расширенных событий см. в разделе [Create an Extended Events Session](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
+ Дополнительные сведения о создании сеанса расширенных событий см. в разделе [Create an Extended Events Session](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130)).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Запуск или остановка сеанса расширенных событий  
  Сеанс расширенных событий вы можете запустить или остановить с помощью инструкции **ALTER EVENT SESSION** в **редакторе запросов** или с помощью узла **Расширенные события** в **обозревателе объектов**.  
@@ -152,5 +152,4 @@ STATE = STOP
 DROP EVENT SESSION [session_name]  
 ON SERVER  
 ```  
-  
   

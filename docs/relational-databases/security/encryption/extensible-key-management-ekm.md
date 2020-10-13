@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0524aa4738ae7003d763422c20db17e39e89e964
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896790"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867840"
 ---
 # <a name="extensible-key-management-ekm"></a>Расширенное управление ключами (Extensible Key Management)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85896790"
   
  Расширенное управление ключами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет сторонним поставщикам расширенного управления ключами и поставщикам аппаратных модулей безопасности регистрировать свои модули в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. После регистрации пользователи [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут использовать ключи шифрования, хранимые в модулях расширенного управления ключами. Таким образом, в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] доступны расширенные возможности шифрования, поддерживаемые этими модулями, такие как массовое шифрование и расшифровка, а также функции управления ключами, например устаревание или смена ключей.  
   
- При выполнении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на виртуальной машине Azure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может использовать ключи, хранящиеся в [хранилище ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521401). Дополнительные сведения см. в разделе [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+ При выполнении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на виртуальной машине Azure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может использовать ключи, хранящиеся в [хранилище ключей Azure](/azure/key-vault/general/basic-concepts). Дополнительные сведения см. в разделе [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ## <a name="ekm-configuration"></a>Конфигурация расширенного управления ключами  
  Расширенное управление ключами поддерживается не во всех выпусках [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -169,5 +169,4 @@ DECRYPTION BY EKM_AKey1
  [Создание резервной копии главного ключа базы данных](../../../relational-databases/security/encryption/back-up-a-database-master-key.md)   
  [Восстановление главного ключа базы данных](../../../relational-databases/security/encryption/restore-a-database-master-key.md)   
  [Создание идентичных симметричных ключей на двух серверах](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
-  
   

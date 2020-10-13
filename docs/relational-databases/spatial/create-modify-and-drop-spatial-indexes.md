@@ -18,12 +18,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4aeb545a92ef4eca7bdb7542b951021336de9800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d422c78227a4fcfa6ef26bb39197a8639eeb98ba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455466"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866576"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Создание, изменение и удаление пространственных индексов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "88455466"
   
 4.  В диалоговом окне **Пространственные индексы** нажмите кнопку **Добавить**.  
   
-5.  Выберите новый индекс в списке **Выбранные пространственные индексы** и в сетке справа задайте свойства пространственного индекса. Дополнительные сведения о свойствах см. в разделе [Диалоговое окно "Пространственные индексы" (визуальные инструменты для баз данных)](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
+5.  Выберите новый индекс в списке **Выбранные пространственные индексы** и в сетке справа задайте свойства пространственного индекса. Дополнительные сведения о свойствах см. в разделе [Диалоговое окно "Пространственные индексы" (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md).  
   
   
 ###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> Изменение пространственного индекса  
@@ -157,5 +157,4 @@ ms.locfileid: "88455466"
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
   

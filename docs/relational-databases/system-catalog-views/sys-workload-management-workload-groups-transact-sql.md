@@ -1,6 +1,6 @@
 ---
-description: sys. workload_management_workload_groups (Transact-SQL)
-title: sys. workload_management_workload_groups (Transact-SQL) | Документация Майкрософт
+description: sys.workload_management_workload_groups (Transact-SQL)
+title: sys.workload_management_workload_groups (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 051793030a4151385957e7c3f9fcb047c98fb743
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e6366de9514f625ef1c0a008b0ca6e0e331b5669
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419878"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006393"
 ---
-# <a name="sysworkload_management_workload_groups-transact-sql"></a>sys. workload_management_workload_groups (Transact-SQL)
+# <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-SQL)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
@@ -47,4 +47,4 @@ modify_time|**datetime**|Время последнего изменения гр
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
- Список всех представлений каталога для хранилища данных SQL и параллельного хранилища данных см. в статье [представления каталога данных SQL и параллельного](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)хранилища данных. Сведения о создании группы рабочей нагрузки см. в разделе [Создание группы рабочей нагрузки](../../t-sql/statements/create-workload-group-transact-sql.md). Дополнительные сведения о классификации рабочей нагрузки см. в разделе [изоляция рабочей нагрузки](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation) .
+ Список всех представлений каталога для Azure синапсе Analytics и параллельного хранилища данных см. в статье [хранилище данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Сведения о создании группы рабочей нагрузки см. в разделе [Создание группы рабочей нагрузки](../../t-sql/statements/create-workload-group-transact-sql.md). Дополнительные сведения о классификации рабочей нагрузки см. в разделе [изоляция рабочей нагрузки](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation) .

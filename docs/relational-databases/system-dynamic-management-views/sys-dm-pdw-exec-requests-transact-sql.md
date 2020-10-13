@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_exec_requests (Transact-SQL)
-title: sys. dm_pdw_exec_requests (Transact-SQL) | Документация Майкрософт
+description: sys.dm_pdw_exec_requests (Transact-SQL)
+title: sys.dm_pdw_exec_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4deccd8bcfd4650a8f670969d1ec112f9f99d08d
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: ceb0ec0b49d113e854073dd3da458909f387eb81
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990247"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005545"
 ---
-# <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
+# <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "90990247"
 |Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Ключ для этого представления. Уникальный числовой идентификатор, связанный с запросом.|Уникальный для всех запросов в системе.|  
-|session_id|**nvarchar(32)**|Уникальный числовой идентификатор, связанный с сеансом, в котором выполнялся этот запрос. См. раздел [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|session_id|**nvarchar(32)**|Уникальный числовой идентификатор, связанный с сеансом, в котором выполнялся этот запрос. См. раздел [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
 |status|**nvarchar(32)**|Текущее состояние запроса.|"Выполняется", "suspended", "Completed", "Canceled", "Failed".|  
 |submit_time|**datetime**|Время отправки запроса на выполнение.|Допустимое **значение DateTime** меньше или равно текущему времени и start_time.|  
 |start_time|**datetime**|Время начала выполнения запроса.|Значение NULL для запросов в очереди; в противном случае допустимое **значение DateTime** меньше или равно текущему времени.|  
@@ -37,18 +37,18 @@ ms.locfileid: "90990247"
 |end_time|**datetime**|Время, когда выполнение запроса завершилось, завершилось сбоем или было отменено.|Значение NULL для очереди или активных запросов; в противном случае допустимое **значение DateTime** меньше или равно текущему времени.|  
 |total_elapsed_time|**int**|Время, затраченное на выполнение с момента запуска запроса, в миллисекундах.|Между 0 и разностью между submit_time и end_time.</br></br> Если total_elapsed_time превышает максимальное значение для целого числа, total_elapsed_time будет продолжать быть максимальным значением. Это условие выдаст предупреждение "превышено максимальное значение".</br></br> Максимальное значение в миллисекундах равно 24,8 дням.|  
 |метка|**nvarchar(255)**|Необязательная строка метки, связанная с некоторыми инструкциями запроса SELECT.|Любая строка, содержащая "a-z", "A-Z", "0-9", "_".|  
-|error_id|**nvarchar (36)**|Уникальный идентификатор ошибки, связанной с запросом, если он есть.|См [. раздел sys. dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Если ошибка не возникала, задайте значение NULL.|  
+|error_id|**nvarchar (36)**|Уникальный идентификатор ошибки, связанной с запросом, если он есть.|См. раздел [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Если ошибка не возникала, задайте значение NULL.|  
 |database_id|**int**|Идентификатор базы данных, используемой явным контекстом (например, DB_X).|См. раздел ID в [представлении sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |.|**nvarchar(4000)**|Содержит полный текст запроса, отправленный пользователем.|Любой допустимый запрос или текст запроса. Запросы, длина которых превышает 4000 байт, усекаются.|  
 |resource_class|**nvarchar (20)**|Группа рабочей нагрузки, используемая для этого запроса. |Статические классы ресурсов</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Динамические классы ресурсов</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|Важность, с которой был выполнен запрос.  Это относительная важность запроса в этой группе рабочей нагрузки и в группах рабочей нагрузки для общих ресурсов.  Важность, указанная в классификаторе, переопределяет параметр важности группы рабочей нагрузки.</br>Область применения: Хранилище данных SQL Azure|NULL</br>low</br>below_normal</br>Обычная (по умолчанию)</br>above_normal</br>high|
-|group_name|**sysname** |Для запросов, использующих ресурсы, group_name — имя группы рабочей нагрузки, в которой выполняется запрос.  Если запрос не использует ресурсы, group_name имеет значение null.</br>Область применения: Хранилище данных SQL Azure|
+|importance|**nvarchar(128)**|Важность, с которой был выполнен запрос.  Это относительная важность запроса в этой группе рабочей нагрузки и в группах рабочей нагрузки для общих ресурсов.  Важность, указанная в классификаторе, переопределяет параметр важности группы рабочей нагрузки.</br>Область применения: Azure Synapse Analytics|NULL</br>low</br>below_normal</br>Обычная (по умолчанию)</br>above_normal</br>high|
+|group_name|**sysname** |Для запросов, использующих ресурсы, group_name — имя группы рабочей нагрузки, в которой выполняется запрос.  Если запрос не использует ресурсы, group_name имеет значение null.</br>Область применения: Azure Synapse Analytics|
 |classifier_name|**sysname**|Для запросов, использующих ресурсы, имя классификатора, используемого для назначения ресурсов и важности.||
-|resource_allocation_percentage|**Decimal (5, 2)**|Процентный объем ресурсов, выделенных для запроса.</br>Область применения: Хранилище данных SQL Azure|
-|result_cache_hit|**int**|Сведения о том, использовался ли завершенный запрос к кэшу результирующего набора.  </br>Область применения: Хранилище данных SQL Azure| 1 = попадание в кэш результирующего набора </br> 0 = промах кэша результирующего набора </br> Отрицательные целочисленные значения = причины, по которым кэширование результирующего набора не использовалось.  Дополнительные сведения см. в разделе "Примечания".|
+|resource_allocation_percentage|**Decimal (5, 2)**|Процентный объем ресурсов, выделенных для запроса.</br>Область применения: Azure Synapse Analytics|
+|result_cache_hit|**int**|Сведения о том, использовался ли завершенный запрос к кэшу результирующего набора.  </br>Область применения: Azure Synapse Analytics| 1 = попадание в кэш результирующего набора </br> 0 = промах кэша результирующего набора </br> Отрицательные целочисленные значения = причины, по которым кэширование результирующего набора не использовалось.  Дополнительные сведения см. в разделе "Примечания".|
 ||||
   
-## <a name="remarks"></a>Remarks 
+## <a name="remarks"></a>Комментарии 
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
 Отрицательное целочисленное значение в result_cache_hit столбце является битовым значением всех примененных причин, по которым результирующий набор запроса не может быть кэширован.  Этот столбец может быть [| (Побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) произведение одного или нескольких из следующих значений:  
@@ -74,10 +74,10 @@ ms.locfileid: "90990247"
   
 ## <a name="security"></a>Безопасность
 
- sys. dm_pdw_exec_requests не фильтрует результаты запроса в соответствии с разрешениями, определенными для базы данных. Имена входа с разрешением VIEW SERVER STATE могут получать результаты запроса для всех баз данных.  
+ sys.dm_pdw_exec_requests не фильтрует результаты запроса в соответствии с разрешениями для конкретной базы данных. Имена входа с разрешением VIEW SERVER STATE могут получать результаты запроса для всех баз данных.  
   
 >[!WARNING]  
->Злоумышленник может использовать sys. dm_pdw_exec_requests для получения сведений о конкретных объектах базы данных, просто выполняя разрешение VIEW SERVER STATE и не требуя разрешения для конкретной базы данных.  
+>Злоумышленник может использовать sys.dm_pdw_exec_requests для получения сведений о конкретных объектах базы данных, просто выполнив разрешение VIEW SERVER STATE и не имея разрешения для конкретной базы данных.  
   
 ## <a name="see-also"></a>См. также:
 

@@ -11,23 +11,23 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 7c23b7faa93281ab34ed4b500d10dfd50e9c8c76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737038"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867762"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Обнаружение и классификация данных — это новое средство, встроенное в [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), для **обнаружения**, **классификации**, **пометки** и **создания отчетов** о конфиденциальных данных в базах данных.
+Обнаружение и классификация данных — это новое средство, встроенное в [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md), для **обнаружения**, **классификации**, **пометки** и **создания отчетов** о конфиденциальных данных в базах данных.
 Обнаружение и классификация наиболее важных данных (деловых, финансовых, персональных и т. д.) может играть ключевую роль в защите информации в вашей организации. На основе этих процессов может формироваться инфраструктура для решения следующих задач:
 * соблюдение стандартов конфиденциальности данных;
 * управление доступом к базам данных и столбцам, содержащим конфиденциальные данные, а также усиление их безопасности.
 
 > [!NOTE]
-> Средство обнаружения и классификации данных **поддерживается в SQL Server 2012 и более поздних версий и может использоваться с [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) и более поздних версий**. Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](/azure/sql-database/sql-database-data-discovery-and-classification/).
+> Средство обнаружения и классификации данных **поддерживается в SQL Server 2012 и более поздних версий и может использоваться с [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) и более поздних версий**. Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a name="overview"></a><a id="subheading-1"></a>Обзор
 Средство обнаружения и классификации данных включает в себя набор эффективных служб, которые образуют новую парадигму SQL Information Protection, направленную на защиту данных, а не только базы данных.
@@ -93,7 +93,7 @@ ms.locfileid: "85737038"
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>Управление политикой защиты информации с помощью SSMS
 
-Управлять политикой защиты информации можно с помощью [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) или более поздней версии.
+Управлять политикой защиты информации можно с помощью [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) или более поздней версии.
 
 1. В SQL Server Management Studio (SSMS) подключитесь к серверу SQL Server.
 
@@ -116,7 +116,7 @@ ms.locfileid: "85737038"
 В SQL Server 2019 появилось представление системного каталога [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md). Это представление возвращает типы информации и метки конфиденциальности. 
 
 > [!NOTE]
-> Оно требует разрешения **VIEW ANY SENSITIVITY CLASSIFICATION**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15).
+> Оно требует разрешения **VIEW ANY SENSITIVITY CLASSIFICATION**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15).
 
 В экземплярах SQL Server 2019 выполните запрос к `sys.sensitivity_classifications`, чтобы просмотреть все классифицированные столбцы с соответствующими классификациями. Пример: 
 
@@ -190,27 +190,27 @@ FROM
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 Используйте T-SQL, чтобы добавить или удалить классификацию столбца или извлечь все классификации для целой базы данных.
 
-- Добавление и обновление классификации одного или нескольких столбцов: [ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
-- Удаление классификации одного или нескольких столбцов: [DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+- Добавление и обновление классификации одного или нескольких столбцов: [ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+- Удаление классификации одного или нескольких столбцов: [DROP SENSITIVITY CLASSIFICATION](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 # <a name="powershell-cmdlet"></a>[Командлет PowerShell](#tab/sql-powelshell)
 С помощью командлетов PowerShell можно добавлять и удалять классификации столбцов, а также извлекать все классификации и получать рекомендации для всей базы данных.
 
-- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
-- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
-- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
-- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
 
 ---
 
 ## <a name="next-steps"></a><a id="subheading-6"></a>Следующие шаги
 
-Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](https://go.microsoft.com/fwlink/?linkid=866265).
+Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](/azure/azure-sql/database/data-discovery-and-classification-overview).
 
 Рекомендуем защитить конфиденциальные столбцы путем применения механизмов защиты на уровне столбцов:
 
-* [динамическое маскирование данных](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) для затемнения конфиденциальных столбцов в процессе использования;
-* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) для шифрования конфиденциальных столбцов в процессе хранения.
+* [динамическое маскирование данных](./dynamic-data-masking.md) для затемнения конфиденциальных столбцов в процессе использования;
+* [Always Encrypted](./encryption/always-encrypted-database-engine.md) для шифрования конфиденциальных столбцов в процессе хранения.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

@@ -9,12 +9,12 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f453fd2395d887a1c0c7c1b4eed755eb96a39294
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: ccdd4b40fa378d74784f9bdc3f020f1ff87f981a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898625"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006080"
 ---
 # <a name="sql-samples"></a>Примеры SQL
 
@@ -40,7 +40,7 @@ WideWorldImporters (WWI) — это образец базы данных, дем
 
 - [WideWorldImporters файл readme и примеры](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers) на сайте GitHub.
 
-- [Учебник. Загрузка WideWorldImportersDW в хранилище данных SQL Azure](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
+- [Учебник. Загрузка WideWorldImportersDW в Azure синапсе Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
 
 
 ## <a name="adventureworks-sample-database"></a>образец базы данных AdventureWorks

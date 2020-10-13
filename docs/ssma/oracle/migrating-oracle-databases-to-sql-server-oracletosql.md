@@ -11,18 +11,18 @@ ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 194d33d0b5318ca66494b838c7f59dfde5c72b88
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 98070662e3e097aea0edc6c0879a8c63e4bb5850
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933445"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005872"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>Миграция баз данных Oracle в SQL Server (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для Oracle — это Комплексная среда, которая помогает быстро перенести базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , базу данных SQL Azure или хранилище данных SQL Azure. С помощью SSMA для Oracle можно просматривать объекты и данные базы данных, оценивать базы данных для миграции, переносить объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или хранилище данных SQL Azure, а затем переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или хранилище данных SQL Azure. Обратите внимание, что нельзя перенести системные схемы SYS и Oracle.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для Oracle — это Комплексная среда, которая помогает быстро перенести базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , базу данных SQL Azure или Azure синапсе Analytics. С помощью SSMA для Oracle можно просматривать объекты и данные базы данных, оценивать базы данных для миграции, переносить объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или аналитику Azure синапсе Analytics, а затем переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или Azure синапсе Analytics. Обратите внимание, что нельзя перенести системные схемы SYS и Oracle.
   
 ## <a name="recommended-migration-process"></a>Рекомендуемый процесс миграции  
-Чтобы успешно перенести объекты и данные из баз данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , базу данных SQL Azure или хранилище данных SQL Azure, используйте следующую процедуру:
+Чтобы успешно перенести объекты и данные из баз данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , базу данных SQL Azure или Azure синапсе Analytics, используйте следующую процедуру.
   
 1.  [Создайте новый проект SSMA](working-with-ssma-projects-oracletosql.md).  
   

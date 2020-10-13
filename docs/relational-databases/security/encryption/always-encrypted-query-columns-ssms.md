@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd8ae48dd5e1403b2dd84f6654c6954d9cd8e64
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 91523e68c03467a7c6aaab40a5cbd3ab696b1890
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942646"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866541"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Выполнение запросов к столбцам с помощью Always Encrypted с использованием SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "86942646"
 Always Encrypted можно включить или отключить при создании подключения или изменении существующего подключения в диалоговом окне **Соединение с сервером**. 
 
 Чтобы включить или отключить Always Encrypted, выполните следующие действия.
-1. Откройте диалоговое окно **Соединение с сервером** (см. статью [Подключение к экземпляру SQL Server](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance)).
+1. Откройте диалоговое окно **Соединение с сервером** (см. статью [Подключение к экземпляру SQL Server](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance)).
 1. Щелкните **Параметры >>** .
 1. Если используется SSMS 18 или более поздние версии:
     1. Выберите вкладку **Always Encrypted**.
@@ -109,7 +109,7 @@ Always Encrypted можно включить или отключить при с
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Параметризация для Always Encrypted   
  
-Параметризация для Always Encrypted — это функция в SQL Server Management Studio, которая автоматически преобразует переменные Transact-SQL в параметры запросов (экземпляры [класса SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). (Требуются службы SSMS версии не ниже 17.0.) Это позволяет основному поставщику данных .NET Framework для SQL Server определять данные, предназначенные для зашифрованных столбцов, и шифровать эти данные перед отправкой в базу данных. 
+Параметризация для Always Encrypted — это функция в SQL Server Management Studio, которая автоматически преобразует переменные Transact-SQL в параметры запросов (экземпляры [класса SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter)). (Требуются службы SSMS версии не ниже 17.0.) Это позволяет основному поставщику данных .NET Framework для SQL Server определять данные, предназначенные для зашифрованных столбцов, и шифровать эти данные перед отправкой в базу данных. 
   
 Без параметризации поставщик данных .NET Framework передает все инструкции, созданные в редакторе запросов, в виде непараметризованных запросов. Если запрос содержит литералы или переменные Transact-SQL, предназначенные для зашифрованных столбцов, поставщик данных .NET Framework для SQL Server не сможет определить и зашифровать их перед отправкой запроса в базу данных. В результате этого из-за несоответствия типов (между переменной Transact-SQ литерала открытого текста и зашифрованным столбцом) запрос завершится сбоем. Например, если столбец `SSN` зашифрован, без параметризации следующий запрос завершится сбоем.   
 
@@ -173,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 Параметризация происходит успешно в следующих случаях:   
 - тип литерала, используемый для инициализации переменной, параметризация которой выполняется, должен совпадать с типом в объявлении переменной;   
-- если в качестве объявленного типа переменной используется тип даты или времени, переменную нужно инициализировать, используя строку в одном из следующих [совместимых с ISO 8601 форматов](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles).    
+- если в качестве объявленного типа переменной используется тип даты или времени, переменную нужно инициализировать, используя строку в одном из следующих [совместимых с ISO 8601 форматов](../../../t-sql/functions/cast-and-convert-transact-sql.md#date-and-time-styles).    
 
 Ниже приведены примеры объявлений переменных Transact-SQL, которые приводят к ошибкам параметризации переменных.   
 ```sql
@@ -183,7 +183,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio использует технологию Intellisense, чтобы предоставлять сведения о том, для каких переменных можно определить параметры, а для каких эта операция завершится сбоем (с указанием причины).   
 
-Объявление переменной, для которой можно определить параметры, подчеркивается линией в редакторе запросов. Если навести указатель мыши на подчеркнутую инструкцию объявления, отобразится результат параметризации, в том числе значения основных свойств результирующего объекта [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) (с которым сопоставляется переменная): [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx), [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). Кроме того, в представлении **Список ошибок** на вкладке **Предупреждение** можно просмотреть полный список всех параметризованных переменных. Чтобы открыть представление **Список ошибок** , выберите в главном меню **Представление** , а затем щелкните **Список ошибок**.    
+Объявление переменной, для которой можно определить параметры, подчеркивается линией в редакторе запросов. Если навести указатель мыши на подчеркнутую инструкцию объявления, отобразится результат параметризации, в том числе значения основных свойств результирующего объекта [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) (с которым сопоставляется переменная): [SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), [Size](/dotnet/api/system.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue). Кроме того, в представлении **Список ошибок** на вкладке **Предупреждение** можно просмотреть полный список всех параметризованных переменных. Чтобы открыть представление **Список ошибок** , выберите в главном меню **Представление** , а затем щелкните **Список ошибок**.    
 
 Если попытка определить параметры переменной в SQL Server Management Studio завершилась сбоем, объявление переменной будет помечено знаком ошибки. Если навести указатель мыши на помеченную инструкцию выражения, отобразятся результаты ошибки. Полный список ошибок параметризации для всех переменных можно просмотреть в представлении **Список ошибок** на вкладке **Ошибка** . Чтобы открыть представление **Список ошибок** , выберите в главном меню **Представление** , а затем щелкните **Список ошибок**.   
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 4d6e28a0e86a240d03ab4cdccac843488ff84446
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834765"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869302"
 ---
 # <a name="the-transaction-log-sql-server"></a>Журнал транзакций (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85834765"
 При восстановлении каждой резервной копии журнала, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] повторно применяет все изменения, записанные в журнале, для наката всех транзакций. После восстановления последней резервной копии журнала [!INCLUDE[ssde_md](../../includes/ssde_md.md)] затем использует данные журнала для отката всех транзакций, которые не были завершены на момент сбоя. Дополнительные сведения см. в статье [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="supporting-transactional-replication"></a>Поддержка репликации транзакций
-Агент чтения журнала следит за журналами транзакций всех баз данных, которые настроены для репликации транзакций, и копирует отмеченные для репликации транзакции из журнала транзакций в базу данных распространителя. Дополнительные сведения о репликации транзакций см. в разделе [Как работает репликация транзакций](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
+Агент чтения журнала следит за журналами транзакций всех баз данных, которые настроены для репликации транзакций, и копирует отмеченные для репликации транзакции из журнала транзакций в базу данных распространителя. Дополнительные сведения о репликации транзакций см. в разделе [Как работает репликация транзакций](/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Поддержка решений высокого уровня доступности и аварийного восстановления
 Решения резервного сервера, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], зеркальное отображение базы данных и доставка журналов в значительной степени опираются на журнал транзакций. 
@@ -192,5 +192,4 @@ ms.locfileid: "85834765"
 [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
 [sys.dm_db_log_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 [sys.dm_db_log_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-  
   

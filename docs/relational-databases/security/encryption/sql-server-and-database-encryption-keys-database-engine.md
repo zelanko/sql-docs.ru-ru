@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: c73439c6fd7015bcd6bbae61d4164348331deb17
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279340"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866601"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Ключи шифрования базы данных и SQL Server (компонент Database Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "86279340"
 >  Если любой доступ к описанным выше ключам потерян, будет потерян доступ к объектам, соединениям и данным, защищенным этими ключами. Можно восстановить главный ключ службы, как описано в приведенных ссылках, или вернуться к первоначальной системе шифрования, чтобы восстановить доступ. Не существует аварийного способа восстановления доступа.  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Главный ключ службы](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Главный ключ службы]()  
  Дано краткое объяснение главного ключа службы и рекомендации.  
   
  [Расширенное управление ключами &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -105,5 +105,4 @@ ms.locfileid: "86279340"
  [Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
-  
   

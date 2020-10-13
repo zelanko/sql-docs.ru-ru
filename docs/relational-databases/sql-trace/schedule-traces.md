@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d40e02cfccc84e910650dbac4dbeab0b6edd8353
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f86e9cf97c82ead3059d846f9709aa7a0c87d99
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498483"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810818"
 ---
 # <a name="schedule-traces"></a>Планирование трассировок
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  В Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предусмотрены два способа планирования трассировок. Вы можете:  
+  В Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предусмотрены два способа планирования трассировок. Вы можете выбрать один из следующих вариантов.  
   
 -   задать время прекращения трассировки;  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88498483"
  [Хранимая процедура sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Задачи автоматизированного администрирования (агент SQL Server)](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
-  
+ [Задачи автоматизированного администрирования (агент SQL Server)](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)  
   

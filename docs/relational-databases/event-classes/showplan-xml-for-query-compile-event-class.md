@@ -13,12 +13,12 @@ ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8e9756022e5536f941ac73734df41b74bf13aa2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad5b4033fdffd55f4a25717911e53b9b04e0aa22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88384100"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866779"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile, класс событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88384100"
   
  Класс событий Showplan XML For Query Compile выводит полные данные, относящиеся ко времени компиляции, поэтому трассировки, содержащие этот класс событий, могут повлечь за собой значительные издержки производительности. Чтобы уменьшить этот эффект, используйте данный класс событий только в тех трассировках, которые применяются для наблюдения за конкретными проблемами в течение непродолжительного времени.  
   
- Документы Showplan XML имеют схему, связанную с ними. Эта схема находится на [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkId=41740)или является частью установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Документы Showplan XML имеют схему, связанную с ними. Эта схема находится на [веб-сайте Майкрософт](/previous-versions/aa720019(v=vs.71))или является частью установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Столбцы данных класса событий «XML-код инструкции Showplan компиляции запроса»  
   
@@ -64,5 +64,4 @@ ms.locfileid: "88384100"
 ## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
   

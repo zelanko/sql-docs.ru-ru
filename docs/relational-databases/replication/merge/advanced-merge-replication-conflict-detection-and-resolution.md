@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a031fdb7c4a71c26990d26a524e5a75ac784565
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a894198a994f98f9bcb2586c9b1b6a1428f562c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901874"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867917"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Подробнее о репликации слиянием — обнаружение и разрешение конфликтов
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "85901874"
  Наиболее простым способом просмотра конфликтов является использование средства просмотра конфликтов репликации, доступного из среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также предоставляет хранимые процедуры, которые позволяют создавать запросы к таблицам конфликтов.). Средство просмотра конфликтов и интерактивный сопоставитель являются аналогичными инструментами, но интерактивный сопоставитель позволяет разрешать конфликты во время выполнения синхронизации, в то время как средство просмотра конфликтов предназначено для просмотра конфликтов после их разрешения. Если метаданные конфликта остаются доступными в системных таблицах (по умолчанию метаданные конфликтов сохраняются в течение 14 суток), то результаты устранения конфликтов можно изменить в средстве просмотра конфликтов, однако при необходимости частого прямого вмешательства стоит рассмотреть возможность использования интерактивного сопоставителя.  
   
 > [!NOTE]  
->  Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации на языке Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации на языке Transact-SQL&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md).  
   
  Средство просмотра конфликтов отображает информацию из трех системных таблиц:  
   
@@ -148,9 +148,8 @@ ms.locfileid: "85901874"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [View Conflict Information for Merge Publications](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md) (Просмотр сведений о конфликтах для публикаций слиянием)  
+-   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [View Conflict Information for Merge Publications](../view-and-resolve-data-conflicts-for-merge-publications.md) (Просмотр сведений о конфликтах для публикаций слиянием)  
   
 ## <a name="see-also"></a>См. также:  
  [Синхронизация данных](../../../relational-databases/replication/synchronize-data.md)  
-  
   

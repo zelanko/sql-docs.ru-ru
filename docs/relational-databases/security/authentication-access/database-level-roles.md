@@ -39,12 +39,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bb15e848af1a5a2fa6236be0f9999accf144b1a
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: ce99d5ffe875283675e62069efed8b855ad6d43a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624861"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867431"
 ---
 # <a name="database-level-roles"></a>Роли уровня базы данных
 
@@ -97,7 +97,7 @@ ms.locfileid: "91624861"
 |**loginmanager** | Может создать и удалять имена входа в виртуальной базе данных master.|
 
 > [!NOTE]
-> Субъект на уровне сервера и администратор Azure Active Directory (если настроено) имеют все разрешения в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и Azure Synapse без необходимости участия в каких-либо ролях. См. дополнительные сведения об [аутентификации и авторизация базы данных SQL, включая предоставление доступа](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> Субъект на уровне сервера и администратор Azure Active Directory (если настроено) имеют все разрешения в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и Azure Synapse без необходимости участия в каких-либо ролях. См. дополнительные сведения об [аутентификации и авторизация базы данных SQL, включая предоставление доступа](/azure/azure-sql/database/logins-create-manage). 
 
 Некоторые роли баз данных не применимы к Azure SQL или Synapse SQL:
 - **db_backupoperator** неприменима для баз данных SQL Azure (не управляемых экземпляров) и бессерверных пулов Synapse SQL из-за недоступности команд резервного копирования и восстановление T-SQL.
@@ -153,5 +153,4 @@ ms.locfileid: "91624861"
  [Обеспечение безопасности SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
  [sp_helprotect &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
-  
   

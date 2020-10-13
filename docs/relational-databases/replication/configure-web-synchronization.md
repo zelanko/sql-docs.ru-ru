@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0c28163aab72b8011bb4fdf4984813cbd026091
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 797c213fcba4e74cc9fe2a376985352120d5898b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455622"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868134"
 ---
 # <a name="configure-web-synchronization"></a>Настроить веб-синхронизацию
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "88455622"
   
  **Настройка служб IIS для веб-синхронизации**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS для веб-синхронизации](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS для веб-синхронизации](./configure-iis-7-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS 7 для веб-синхронизации](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -160,7 +160,7 @@ ms.locfileid: "88455622"
   
 -   Для каждой публикации следует использовать отдельный виртуальный каталог на сервере IIS.  
   
--   Учетная запись, под которой запускается средство прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll), также является учетной записью, которая будет использоваться для соединения с издателем и распространителем во время синхронизации. Эта учетная запись должна быть сопоставлена с учетной записью входа SQL на издателе и распространителе. Дополнительные сведения см. в разделе "Установка разрешений для средства прослушивания репликации SQL Server" статьи [Настройка служб IIS для веб-синхронизации](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
+-   Учетная запись, под которой запускается средство прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll), также является учетной записью, которая будет использоваться для соединения с издателем и распространителем во время синхронизации. Эта учетная запись должна быть сопоставлена с учетной записью входа SQL на издателе и распространителе. Дополнительные сведения см. в разделе "Установка разрешений для средства прослушивания репликации SQL Server" статьи [Настройка служб IIS для веб-синхронизации](./configure-iis-7-for-web-synchronization.md).  
   
 -   Для доставки моментального снимка от издателя на компьютер, на котором работают службы IIS, можно использовать протокол FTP. Моментальный снимок всегда доставляется подписчику с компьютера, на котором работают службы IIS, по протоколу HTTPS. Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
@@ -177,5 +177,4 @@ ms.locfileid: "88455622"
   
 ## <a name="see-also"></a>См. также:  
  [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
   

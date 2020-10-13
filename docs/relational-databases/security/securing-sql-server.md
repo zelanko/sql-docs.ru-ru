@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 80c8c535c5463a6639c752a68e20fd95c54899b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bcb047dc1d998eb797a3bca7b6d09699f8585d2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729239"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867537"
 ---
 # <a name="securing-sql-server"></a>Обеспечение безопасности SQL Server
 
@@ -56,7 +56,7 @@ ms.locfileid: "85729239"
 |---------------------------|---------|  
 |Настройка брандмауэра для работы со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Настройка брандмауэра для работы со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Службы Integration Services (службы SSIS)](../../integration-services/service/integration-services-service-ssis-service.md)|  
-|Настройка брандмауэра для работы со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
+|Настройка брандмауэра для работы со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |Открытие конкретных портов брандмауэра, чтобы предоставить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Настройка поддержки расширенной защиты для проверки подлинности с помощью привязки каналов и привязки служб|[Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
 | &nbsp; | &nbsp; |
@@ -144,7 +144,7 @@ WDAC can also prevent the kind of highly sophisticated 'Nansh0u' attacks describ
   
 |Сведения о|См.|  
 |---------------------------|---------|  
-|Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Использование среды SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Использование среды SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)|  
 |Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и запуск запросов из командной строки|[Программа sqlcmd](../../tools/sqlcmd-utility.md)|  
 |Настройка сети и управление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)|  
 |Включение и отключение компонентов с помощью средства управления на основе политики|[Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -165,8 +165,7 @@ WDAC can also prevent the kind of highly sophisticated 'Nansh0u' attacks describ
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Оптимальные методы обеспечения безопасности SQL Server 2012 — рабочие и административные задачи](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
-[Блог по безопасности SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)  
-[Оптимальные методы обеспечения безопасности и безопасность на уровне меток (технические описания)](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
+[Блог по безопасности SQL Server](/archive/blogs/sqlsecurity/)  
+[Оптимальные методы обеспечения безопасности и безопасность на уровне меток (технические описания)](/archive/blogs/sqlsecurity/security-best-practice-and-label-security-whitepapers)  
 [Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)   
 [Защита интеллектуальной собственности SQL Server](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
-  

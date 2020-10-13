@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3ea15d89efb653bff92817ffc97300ec03958482
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e15751fb064d2843770d72f26db94b29de28f199
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899052"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867594"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Переместить базу данных, защищаемую прозрачным шифрованием, в другой экземпляр SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "85899052"
   
 -   [BACKUP CERTIFICATE (Transact-SQL)](../../../t-sql/statements/backup-certificate-transact-sql.md)  
   
--   [CREATE DATABASE (SQL Server Transact-SQL)](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE (SQL Server Transact-SQL)](../../../t-sql/statements/create-database-transact-sql.md)  
   
 -   [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)  
   
@@ -300,10 +300,9 @@ ms.locfileid: "85899052"
   
 -   [CREATE CERTIFICATE (Transact-SQL)](../../../t-sql/statements/create-certificate-transact-sql.md)  
   
--   [CREATE DATABASE (SQL Server Transact-SQL)](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE (SQL Server Transact-SQL)](../../../t-sql/statements/create-database-transact-sql.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Присоединение и отсоединение базы данных (SQL Server)](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Прозрачное шифрование данных в Базе данных SQL Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
-  
+ [Прозрачное шифрование данных в Базе данных SQL Azure](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
   
