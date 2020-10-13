@@ -17,12 +17,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e93eeab1636dd2ee866ee6727bddb99c58a8c14
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 04f5ea78761812c54c13fcf611d3f6e4765769a5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332231"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869494"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Выбор алгоритма шифрования
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "87332231"
 >   
 >  Многократное использование одного и того же RC4 или RC4_128 KEY_GUID для различных блоков данных приведет к одному и тому же ключу RC4, так как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не предоставляет рассеивание автоматически. Повторное использование ключа RC4 является типичной ошибкой, снижающей надежность шифра. Таким образом, ключевые слова RC4 и RC4_128 являются устаревшими. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- Дополнительные сведения об алгоритмах шифрования и о технологии шифрования см. в разделе [Основные понятия безопасности](https://go.microsoft.com/fwlink/?LinkId=62082) руководства разработчика для платформы .NET Framework в сети MSDN.  
+ Дополнительные сведения об алгоритмах шифрования и о технологии шифрования см. в разделе [Основные понятия безопасности](/previous-versions/aa720225(v=vs.71)) руководства разработчика для платформы .NET Framework в сети MSDN.  
   
  **Пояснение к алгоритмам DES:**  
   
@@ -77,5 +77,4 @@ ms.locfileid: "87332231"
 ## <a name="see-also"></a>См. также:  
  [Шифрование SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Иерархия средств шифрования](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

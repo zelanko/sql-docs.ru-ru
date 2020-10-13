@@ -12,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10f95ba72bbb57481d5753e4a26d2fde3ecf1f16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765053"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867824"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Создание и хранение главных ключей столбцов для Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Создание самозаверяющего сертификата с помощью среды SQL Server Management Studio (SSMS)
 
 Дополнительные сведения см. в разделе [Подготовка к работе ключей Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-Пошаговое руководство, где используется среда SSMS и ключи постоянного шифрования сохраняются в хранилище сертификатов Windows, см. в статье [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования базы данных и хранение ключей шифрования в хранилище сертификатов Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
+Пошаговое руководство, где используется среда SSMS и ключи постоянного шифрования сохраняются в хранилище сертификатов Windows, см. в статье [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования базы данных и хранение ключей шифрования в хранилище сертификатов Windows](/azure/azure-sql/database/always-encrypted-certificate-store-configure).
 
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>Предоставление приложениям и пользователям доступа к сертификатам
@@ -104,7 +104,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Создание главных ключей столбцов в хранилище ключей Azure
 
-Хранилище ключей Azure обеспечивает защиту криптографических ключей и удобно для хранения главных ключей столбцов для постоянного шифрования, особенно в том случае, если приложения размещены в Azure. Для создания ключа в [хранилище ключей Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)необходимы [подписка Azure](https://azure.microsoft.com/free/) и хранилище ключей Azure.
+Хранилище ключей Azure обеспечивает защиту криптографических ключей и удобно для хранения главных ключей столбцов для постоянного шифрования, особенно в том случае, если приложения размещены в Azure. Для создания ключа в [хранилище ключей Azure](/azure/key-vault/general/overview)необходимы [подписка Azure](https://azure.microsoft.com/free/) и хранилище ключей Azure.
 
 ### <a name="using-powershell"></a>Использование PowerShell
 
@@ -128,7 +128,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 ### <a name="using-sql-server-management-studio-ssms"></a>Использование среды SQL Server Management Studio (SSMS)
 
 Дополнительные сведения о создании главного ключа столбца в Azure Key Vault с помощью среды SSMS см. в разделе [Подготовка ключей Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-Пошаговое руководство, где используется среда SSMS и ключи постоянного шифрования сохраняются в хранилище ключей Azure, см. в статье [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования данных и хранение ключей шифрования в хранилище ключей Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
+Пошаговое руководство, где используется среда SSMS и ключи постоянного шифрования сохраняются в хранилище ключей Azure, см. в статье [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования данных и хранение ключей шифрования в хранилище ключей Azure](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Предоставление приложениям и пользователям доступа к ключам в хранилище ключей Azure
 
@@ -138,7 +138,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 
 #### <a name="using-powershell"></a>Использование PowerShell
 
-Чтобы предоставить пользователям и приложениям доступ к фактическим ключам в Azure Key Vault, необходимо задать политику доступа к хранилищу ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
+Чтобы предоставить пользователям и приложениям доступ к фактическим ключам в Azure Key Vault, необходимо задать политику доступа к хранилищу ([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
 
 ```
 $vaultName = "<vault name>"
@@ -227,4 +227,4 @@ CSP должен поддерживать алгоритм RSA, использу
   
 ## <a name="see-also"></a>См. также: 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Общие сведения об управлении ключами для Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+- [Общие сведения об управлении ключами для Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

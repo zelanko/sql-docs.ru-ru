@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: c2c6f050-8cdb-4b8e-ad38-4aae0a949847
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e35e6e779a138633c8ea15c79a2d1370c1b3edcf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06080937156afc4e38c9ef59bd9b92e98695eb57
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775991"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867875"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>Настройка хранилища данных точки управления служебной программы (служебная программа SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Данные, собранные управляемыми экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранятся в хранилище данных управления для программы (UMDW), имя файла UMDW — sysutility_mdw.  
   
- Можно задать сроком хранения данных в UMDW. Дополнительные сведения см. в статье [Администрирование программ (служебная программа SQL Server)](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d).  
+ Можно задать сроком хранения данных в UMDW. Дополнительные сведения см. в статье [Администрирование программ (служебная программа SQL Server)](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130)).  
   
  Перечисленные далее параметры конфигурации не могут быть изменены в этой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -37,5 +37,4 @@ ms.locfileid: "85775991"
   
 ## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  
   

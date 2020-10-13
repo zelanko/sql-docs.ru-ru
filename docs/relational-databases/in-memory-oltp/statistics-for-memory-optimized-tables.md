@@ -12,12 +12,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47e5ae11ff712dae493b4f836998138f42f06f67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c427c56c6ce7081b187dba2bda7b6b891e258bec
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734965"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867506"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Статистика для таблиц, оптимизированных для памяти
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -100,6 +100,5 @@ WHERE o.is_memory_optimized=1
  Создание скомпилированных в собственном коде хранимых процедур после загрузки данных гарантирует то, что оптимизатор имеет доступ к статистическим данным для оптимизированных для памяти таблиц. Это обеспечит формирование эффективных планов запросов при компиляции процедуры.  
 
 ## <a name="see-also"></a>См. также:  
- [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Таблицы, оптимизированные для памяти](./sample-database-for-in-memory-oltp.md)  
   

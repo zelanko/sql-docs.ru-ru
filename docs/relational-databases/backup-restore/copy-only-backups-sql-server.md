@@ -16,12 +16,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: acaf5441ee5ca80468d6795071f99979ac3bcda9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 85f30b310f6878e9090dcf55e63be41c16f1490e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863386"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809866"
 ---
 # <a name="copy-only-backups"></a>Резервные копии только для копирования
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "87863386"
  Резервные копии только для копирования записываются в столбец **is_copy_only** таблицы [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) .  
  
  > [!IMPORTANT]  
-> В Управляемом экземпляре SQL Azure резервная копия только для копирования не может быть создана для базы данных, зашифрованной с помощью [управляемого службой прозрачного шифрования данных (TDE)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). Управляемое службой TDE использует для шифрования данных внутренний ключ, который не может быть экспортирован, поэтому вы не сможете восстановить резервную копию в другом месте. Для создания резервных копий зашифрованных баз данных, предназначенных только для копирования, рассмотрите возможность использования [управляемого пользователем TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql), но при этом убедитесь, что ключ шифрования доступен для последующего восстановления.
+> В Управляемом экземпляре SQL Azure резервная копия только для копирования не может быть создана для базы данных, зашифрованной с помощью [управляемого службой прозрачного шифрования данных (TDE)](/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). Управляемое службой TDE использует для шифрования данных внутренний ключ, который не может быть экспортирован, поэтому вы не сможете восстановить резервную копию в другом месте. Для создания резервных копий зашифрованных баз данных, предназначенных только для копирования, рассмотрите возможность использования [управляемого пользователем TDE](/azure/sql-database/transparent-data-encryption-byok-azure-sql), но при этом убедитесь, что ключ шифрования доступен для последующего восстановления.
   
 ## <a name="to-create-a-copy-only-backup"></a>Создание резервной копии только для копирования  
  Резервную копию только для копирования можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
@@ -98,7 +98,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
-- [Поставщик SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+- [Поставщик SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md)  
 
 ## <a name="see-also"></a>См. также раздел  
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
@@ -108,4 +108,3 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)
 
-  

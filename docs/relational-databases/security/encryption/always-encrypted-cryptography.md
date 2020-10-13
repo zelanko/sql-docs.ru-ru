@@ -13,12 +13,12 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2cc6c779f441934e76108a71445078386dc4d567
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627559"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866920"
 ---
 # <a name="always-encrypted-cryptography"></a>Шифрование Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85627559"
   
  Ключ шифрования столбца — это ключ шифрования содержимого (например, ключ, используемый для защиты данных). Он защищен главным ключом столбца.  
   
- Все поставщики хранилища главного столбца ключа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] шифруют ключи шифрования столбца при помощи ключа RSA, используя оптимальное асимметричное шифрование с дополнением (RSA-OAEP). Поставщик хранилища ключей, поддерживающий Microsoft Cryptography API: Следующее поколение (CNG) в .NET Framework ([класс SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) использует параметры по умолчанию, указанные в RFC 8017, раздел A.2.1. В этих параметрах по умолчанию используется хэш-функция SHA-1 и функция генерации маски MGF1 с помощью SHA-1. Все остальные поставщики хранилищ ключей используют SHA-256. 
+ Все поставщики хранилища главного столбца ключа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] шифруют ключи шифрования столбца при помощи ключа RSA, используя оптимальное асимметричное шифрование с дополнением (RSA-OAEP). Поставщик хранилища ключей, поддерживающий Microsoft Cryptography API: Следующее поколение (CNG) в .NET Framework ([класс SqlColumnEncryptionCngProvider](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)) использует параметры по умолчанию, указанные в RFC 8017, раздел A.2.1. В этих параметрах по умолчанию используется хэш-функция SHA-1 и функция генерации маски MGF1 с помощью SHA-1. Все остальные поставщики хранилищ ключей используют SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Алгоритм шифрования данных  
  Для шифрования данных в базе данных в технологии постоянного шифрования данных используется алгоритм **AEAD_AES_256_CBC_HMAC_SHA_256** .  
@@ -181,5 +181,4 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="see-also"></a>См. также:  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Разработка приложений с помощью Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
-  
   

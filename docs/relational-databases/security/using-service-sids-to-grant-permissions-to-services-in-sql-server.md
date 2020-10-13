@@ -8,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: f366af08581accf5ef1f1c8fc00830f6cc592537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403570"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868154"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Использование идентификаторов безопасности для предоставления разрешений службам в SQL Server
 
@@ -28,7 +28,7 @@ SQL Server использует [идентификаторы безопасно
 
 По умолчанию некоторые службы не имеют идентификатора безопасности службы. Идентификатор безопасности службы должен быть создан с помощью программы [SC.exe](/windows/desktop/services/configuring-a-service-using-sc). [Этот метод](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) была принят администраторами Microsoft System Center Operations Manager для предоставления разрешений службе работоспособности в SQL Server.
 
-Когда идентификатор безопасности создан и подтвержден, ему должно быть предоставлено разрешение в SQL Server. Предоставление разрешений достигается путем создания имени входа Windows с помощью [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) или запроса. После создания имени входа ему можно предоставить разрешения, добавлять в роли и сопоставлять с базами данных так же, как и любое другое имя входа.
+Когда идентификатор безопасности создан и подтвержден, ему должно быть предоставлено разрешение в SQL Server. Предоставление разрешений достигается путем создания имени входа Windows с помощью [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) или запроса. После создания имени входа ему можно предоставить разрешения, добавлять в роли и сопоставлять с базами данных так же, как и любое другое имя входа.
 
 > [!TIP]
 > Если происходит ошибка `Login failed for user 'NT AUTHORITY\SYSTEM'`, убедитесь, существует ли идентификатор безопасности службы для данной службы, было ли имя входа безопасности службы создано в SQL Server и были ли для идентификатора безопасности службы в SQL Server предоставлены соответствующие разрешения.
@@ -41,7 +41,7 @@ SQL Server использует [идентификаторы безопасно
 
 ### <a name="granular-permissions-to-system-accounts"></a>Детализированные разрешения для системных учетных записей
 
-Системные учетные записи традиционно получали разрешения путем создания имени входа для учетных записи [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([NT AUTHORITY\SYSTEM в en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) или [NetworkService](/windows/desktop/Services/networkservice-account) ([NT AUTHORITY\NETWORK SERVICE в en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) и предоставления им разрешений. Этот метод предоставляет любому процессу или службе, которые выполняются как системная учетная запись, разрешения в SQL.
+Системные учетные записи традиционно получали разрешения путем создания имени входа для учетных записи [LocalSystem](/windows/win32/services/localsystem-account) ([NT AUTHORITY\SYSTEM в en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) или [NetworkService](/windows/desktop/Services/networkservice-account) ([NT AUTHORITY\NETWORK SERVICE в en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) и предоставления им разрешений. Этот метод предоставляет любому процессу или службе, которые выполняются как системная учетная запись, разрешения в SQL.
 
 С помощью идентификатора безопасности службы разрешения могут быть предоставлены для конкретной службы. Только эта служба имеет доступ к ресурсам, для которых ей были предоставлены разрешения, действующие во время ее выполнения. Например, если `HealthService` выполняется как `LocalSystem` и получает право `View Server State`, `LocalSystem` учетная запись будет иметь право на `View Server State` только при выполнении в контексте `HealthService`. Если другой процесс попытается получить доступ к состоянию сервера SQL как `LocalSystem`, ему будет отказано в доступе.
 
@@ -106,8 +106,8 @@ GO
 
 Дополнительные сведения о структуре идентификаторов безопасности см. в разделе [Структура SERVICE_SID_INFO](/windows/win32/api/winsvc/ns-winsvc-service_sid_info).
 
-Сведения о дополнительных доступных параметрах см. в разделе [Создание имени входа](/sql/t-sql/statements/create-login-transact-sql).
+Сведения о дополнительных доступных параметрах см. в разделе [Создание имени входа](../../t-sql/statements/create-login-transact-sql.md).
 
-Чтобы использовать безопасность на основе ролей с идентификаторами безопасности службы, ознакомьтесь с разделом [Создание ролей](/sql/t-sql/statements/create-role-transact-sql) в SQL Server.
+Чтобы использовать безопасность на основе ролей с идентификаторами безопасности службы, ознакомьтесь с разделом [Создание ролей](../../t-sql/statements/create-role-transact-sql.md) в SQL Server.
 
-Изучите различные способы [предоставления разрешений](/sql/t-sql/statements/grant-transact-sql) идентификаторам безопасности службы в SQL Server.
+Изучите различные способы [предоставления разрешений](../../t-sql/statements/grant-transact-sql.md) идентификаторам безопасности службы в SQL Server.

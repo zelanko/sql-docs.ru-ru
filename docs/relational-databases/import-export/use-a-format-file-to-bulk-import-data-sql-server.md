@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 83a024997910e16b67e66244edcd9cc34c6751a7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442526"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868053"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Использование файла форматирования для массового импорта данных (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "87442526"
   * SQLNCHAR или SQLNVARCHAR (данные отправляются в Юникоде);
   * SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).
 * База данных SQL Azure и хранилище данных SQL Azure поддерживают только [bcp](../../tools/bcp-utility.md).  Дополнительные сведения см. в следующих источниках:
-  * [Загрузка данных в хранилище данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [Загрузка данных из SQL Server в хранилище данных SQL Azure (неструктурированные файлы)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
-  * [Перенос данных](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
+  * [Загрузка данных в хранилище данных SQL Azure](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Загрузка данных из SQL Server в хранилище данных SQL Azure (неструктурированные файлы)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Перенос данных](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>Пример условий теста
 Примеры файлов форматирования в этой статье основаны на таблице и файле данных, которые определены ниже.
@@ -263,4 +263,3 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
  [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-  

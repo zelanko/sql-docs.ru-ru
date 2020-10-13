@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f321bc96749a0a5c6bf260a8093113258c64f3f1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863367"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866568"
 ---
 # <a name="configure-publishing-and-distribution"></a>Настройка публикации и распространения
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "87863367"
 
 5. Установите распространитель, вызвав метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Укажите безопасный пароль (используемый издателем для соединения с удаленным распространителем) и объект <xref:Microsoft.SqlServer.Replication.DistributionDatabase> из шага 3. Дополнительные сведения см. в разделе [Организация безопасности распространителя](../../relational-databases/replication/security/secure-the-distributor.md).
 
-   > `IMPORTANT!!` При возможности предлагать пользователю ввод учетных данных безопасности во время выполнения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
+   > `IMPORTANT!!` При возможности предлагать пользователю ввод учетных данных безопасности во время выполнения. Если необходимо хранить учетные данные, используйте [службы шифрования](/previous-versions/aa719848(v=vs.71)) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
 
 6. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
@@ -158,7 +158,7 @@ ms.locfileid: "87863367"
 11. Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Передайте имя удаленного распространителя и пароль для удаленного распространителя, указанный в шаге 5.
 
 > [!IMPORTANT]
-> По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой Windows .NET Framework.
+> По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](/previous-versions/aa719848(v=vs.71)) , предоставляемые платформой Windows .NET Framework.
 
 ###  <a name="example-rmo"></a><a name="PShellExample"></a> Пример (объекты RMO) 
 Публикацию и распространение репликации можно настраивать программно, с помощью объектов RMO.
@@ -172,6 +172,4 @@ ms.locfileid: "87863367"
 [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
 [Настройка распространения](../../relational-databases/replication/configure-distribution.md)  
 [Основные понятия объектов RMO](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-[Настройка репликации для групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md) 
-
-
+[Настройка репликации для групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

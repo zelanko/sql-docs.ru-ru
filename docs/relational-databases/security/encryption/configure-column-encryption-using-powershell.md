@@ -12,17 +12,17 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 623986a7ff2adaa7b2769090c2d94a8e9ebf2e83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7014f349998781dcd890e84a77deb4732fe028c9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493824"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91865758"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Настройка шифрования столбцов с помощью Always Encrypted с PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-В этой статье описаны шаги по настройке целевой конфигурации постоянного шифрования для столбцов базы данных с помощью командлета [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (в модуле *SqlServer* PowerShell). Командлет **Set-SqlColumnEncryption** изменяет схему целевой базы данных и данные, хранящиеся в выбранных столбцах. В зависимости от целевых параметров шифрования, указанных для столбцов и текущей конфигурации шифрования, хранимые в столбце данные могут быть зашифрованы, повторно зашифрованы или расшифрованы.
+В этой статье описаны шаги по настройке целевой конфигурации постоянного шифрования для столбцов базы данных с помощью командлета [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (в модуле *SqlServer* PowerShell). Командлет **Set-SqlColumnEncryption** изменяет схему целевой базы данных и данные, хранящиеся в выбранных столбцах. В зависимости от целевых параметров шифрования, указанных для столбцов и текущей конфигурации шифрования, хранимые в столбце данные могут быть зашифрованы, повторно зашифрованы или расшифрованы.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
@@ -66,9 +66,9 @@ ms.locfileid: "88493824"
 ---|---|---|---
 Шаг 1. Запуск среды PowerShell и импорт модуля SqlServer. | [Импорт модуля SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | нет | Нет
 Шаг 2. Соединение с сервером и базой данных | [Подключение к базе данных](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Нет | Да
-Шаг 3. Проверка подлинности в Azure, если главный ключ столбца (для смены, защищающий ключ шифрования) хранится в хранилище ключей Azure | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Да | Нет
-Шаг 4. Создание массива объектов SqlColumnEncryptionSettings — по одному для каждого столбца базы данных, который требуется зашифровать, повторно зашифровать или расшифровать. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Он определяет целевую схему шифрования столбца. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | нет | Нет
-Шаг 5. Задание нужной конфигурации шифрования, указанной в массиве объектов SqlColumnMasterKeySettings, созданном на предыдущем шаге. В зависимости от заданных целевых параметров и текущей конфигурации шифрования столбец может быть зашифрован, повторно зашифрован или расшифрован.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Примечание.** Выполнение этого шага может занять длительное время. Приложения не будут иметь доступ к таблицам во время выполнения операции или ее части в зависимости от выбранного режима (в сети или вне сети). | Да | Да
+Шаг 3. Проверка подлинности в Azure, если главный ключ столбца (для смены, защищающий ключ шифрования) хранится в хранилище ключей Azure | [Add-SqlAzureAuthenticationContext](/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Да | Нет
+Шаг 4. Создание массива объектов SqlColumnEncryptionSettings — по одному для каждого столбца базы данных, который требуется зашифровать, повторно зашифровать или расшифровать. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Он определяет целевую схему шифрования столбца. | [New-SqlColumnEncryptionSettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | нет | Нет
+Шаг 5. Задание нужной конфигурации шифрования, указанной в массиве объектов SqlColumnMasterKeySettings, созданном на предыдущем шаге. В зависимости от заданных целевых параметров и текущей конфигурации шифрования столбец может быть зашифрован, повторно зашифрован или расшифрован.| [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Примечание.** Выполнение этого шага может занять длительное время. Приложения не будут иметь доступ к таблицам во время выполнения операции или ее части в зависимости от выбранного режима (в сети или вне сети). | Да | Да
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Пример шифрования столбцов в режиме "вне сети"
 
@@ -156,5 +156,3 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
  - [Настройка постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
  - [Настройка шифрования столбцов с помощью мастера Always Encrypted](always-encrypted-wizard.md)
  - [Настройка шифрования столбцов с помощью Always Encrypted с пакетом приложения уровня данных](configure-always-encrypted-using-dacpac.md)
-
-

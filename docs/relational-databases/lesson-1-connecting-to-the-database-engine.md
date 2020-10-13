@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a3dedb6c503983cf2d916ffecbbf78e8fe1fc06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba85689470e29ee45390f6f59ad44ec222cdf945
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424116"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864055"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Подключение к ядру СУБД
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88424116"
 - Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] поставляется с разнообразными средствами. В этом разделе описываются первые необходимые средства и то, как выбрать правильное средство для работы. Все средства доступны из меню **Пуск** . Такие средства, как среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], не устанавливаются по умолчанию. Их нужно выбрать во время установки. Дополнительные сведения о средствах, описанных ниже, см. в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] содержит только подмножество средств.  
 
 ### <a name="basic-tools"></a>Основные средства
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)] . Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS предоставляется для бесплатного скачивания из [Центра загрузки Майкрософт](https://msdn.microsoft.com/library/mt238290.aspx). Последнюю версию можно использовать с более старыми версиями [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)] . Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS предоставляется для бесплатного скачивания из [Центра загрузки Майкрософт](../ssms/download-sql-server-management-studio-ssms.md). Последнюю версию можно использовать с более старыми версиями [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации устанавливается с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и с клиентскими средствами. Он позволяет включать серверные протоколы, настраивать параметры протокола, например порты TCP, настраивать автоматический запуск служб сервера и настраивать соединение клиентских компьютеров. Это средство может настроить дополнительные параметры соединения, но не активирует возможности.  
 
@@ -51,7 +51,7 @@ ms.locfileid: "88424116"
 - Если известно имя экземпляра или подключение выполняется членом локальной группы "Администраторы", соединиться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] с помощью средств, выполняемых на этом же компьютере, не составляет труда. Следующие процедуры должны исполняться на том же компьютере, на котором находится [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
-> В этом разделе рассматривается подключение к локальному экземпляру SQL Server. Инструкции по подключению к базе данных SQL Azure см. в разделе [Подключение к базе данных SQL с помощью SQL Server Management Studio и выполнение пробного запроса T-SQL](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  
+> В этом разделе рассматривается подключение к локальному экземпляру SQL Server. Инструкции по подключению к базе данных SQL Azure см. в разделе [Подключение к базе данных SQL с помощью SQL Server Management Studio и выполнение пробного запроса T-SQL](/azure/azure-sql/database/connect-query-ssms).  
 
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Определение имени экземпляра компонента Database Engine  
 
@@ -111,4 +111,3 @@ ms.locfileid: "88424116"
 
 ## <a name="next-lesson"></a>Следующее занятие  
 [Занятие 2. Подключение с другого компьютера](../relational-databases/lesson-2-connecting-from-another-computer.md)    
-  

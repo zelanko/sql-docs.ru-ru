@@ -17,12 +17,12 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627444"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866688"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Настройка шифрования столбцов с помощью мастера Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "85627444"
 Рекомендуется использовать PowerShell. 
 
  - Дополнительные сведения о настройке Always Encrypted с помощью мастера и его использовании в клиентском приложении см. в следующих учебниках по базе данных SQL Azure.
-    - [Защита конфиденциальных данных в базе данных SQL Azure с помощью Always Encrypted и главных ключей столбцов в хранилище сертификатов Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-    - [Защита конфиденциальных данных в базе данных SQL Azure с помощью Always Encrypted и главных ключей столбцов в Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
+    - [Защита конфиденциальных данных в базе данных SQL Azure с помощью Always Encrypted и главных ключей столбцов в хранилище сертификатов Windows](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
+    - [Защита конфиденциальных данных в базе данных SQL Azure с помощью Always Encrypted и главных ключей столбцов в Azure Key Vault](/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
  - Видео, в котором демонстрируется использование мастера, можно просмотреть на странице [Keeping Sensitive Data Secure with Always Encrypted (Безопасное хранение конфиденциальных данных с помощью постоянного шифрования)](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Кроме того, в блоге группы безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] есть запись [Мастер шифрования SSMS — несколько простых шагов для включения постоянного шифрования](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
  - Дополнительные сведения о ключах Always Encrypted см. в разделе [Общие сведения об управлении ключами для Always Encrypted](overview-of-key-management-for-always-encrypted.md).

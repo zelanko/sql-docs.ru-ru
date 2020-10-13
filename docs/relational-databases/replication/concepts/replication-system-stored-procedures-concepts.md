@@ -20,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08cca6276b93515385f342a591376b45c9898d04
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8a95adc8ad2b4a9c5c2b97a1d5e36820d1fe7ac1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480633"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868104"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -131,9 +131,9 @@ GO
  Для выполнения скрипта репликации после его создания может быть использован один из следующих способов.  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Создание файла SQL-запроса в среде SQL Server Management Studio  
- Файл скрипта репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] может быть создан в проекте среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] как файл SQL-запроса. После записи скрипта может быть создано соединение с базой данных для этого файла запроса и скрипт вызван на выполнение. Дополнительные сведения о создании скриптов [!INCLUDE[tsql](../../../includes/tsql-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] см. в статье о [редакторах запросов и текста (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
+ Файл скрипта репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] может быть создан в проекте среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] как файл SQL-запроса. После записи скрипта может быть создано соединение с базой данных для этого файла запроса и скрипт вызван на выполнение. Дополнительные сведения о создании скриптов [!INCLUDE[tsql](../../../includes/tsql-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] см. в статье о [редакторах запросов и текста (SQL Server Management Studio)](../../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
   
- Чтобы использовать скрипт с переменными скрипта, необходимо запустить среду [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] в режиме **sqlcmd**. В режиме **sqlcmd** редактор запросов распознает дополнительный синтаксис, характерный для **sqlcmd**, например обозначение `:setvar` для значений переменных. Дополнительные сведения о режиме **sqlcmd** см. в разделе об [изменении скриптов SQLCMD при помощи редактора запросов](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md). В следующем скрипте `:setvar` используется для предоставления значения переменной `$(DistPubServer)`.  
+ Чтобы использовать скрипт с переменными скрипта, необходимо запустить среду [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] в режиме **sqlcmd**. В режиме **sqlcmd** редактор запросов распознает дополнительный синтаксис, характерный для **sqlcmd**, например обозначение `:setvar` для значений переменных. Дополнительные сведения о режиме **sqlcmd** см. в разделе об [изменении скриптов SQLCMD при помощи редактора запросов](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md). В следующем скрипте `:setvar` используется для предоставления значения переменной `$(DistPubServer)`.  
   
 ```  
 :setvar DistPubServer N'MyPublisherAndDistributor';  
@@ -230,5 +230,4 @@ REM -- The following must be supplied on one line.
  [Основные понятия для программирования репликации](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Создание скриптов репликации](../../../relational-databases/replication/scripting-replication.md)  
-  
   

@@ -12,16 +12,16 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad32beddf999b37ad3c3a507f7cc761463264d5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ddd1c896aa3a1425b6d31d33a6d113c77c9c11bf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551580"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867485"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Поддержка среды SQL Server Management Studio для In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет средства для настройки, наблюдения и администрирования экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет средства для настройки, наблюдения и администрирования экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md).  
   
  Задачи в этом разделе показывают, как использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для управления оптимизированными для памяти таблицами, индексами в оптимизированных для памяти таблицах, изначально скомпилированными хранимыми процедурами и оптимизированными пользовательскими табличными типами.  
   
@@ -159,6 +159,5 @@ ms.locfileid: "89551580"
  Дополнительные сведения о неподдерживаемых функциях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Поддержка SQL Server для In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
+ [Поддержка SQL Server для In-Memory OLTP](./transact-sql-support-for-in-memory-oltp.md)  
   

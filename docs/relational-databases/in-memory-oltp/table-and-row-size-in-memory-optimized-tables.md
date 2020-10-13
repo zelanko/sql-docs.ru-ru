@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651004"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866623"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Размер строк и таблицы для таблиц, оптимизированных для памяти
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-До выхода [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] размер данных "в строке" для таблицы, оптимизированной для памяти, не мог превышать [8060 байт](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). Но в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версиях, а также в базе данных SQL Azure появилась возможность создать таблицу, оптимизированную для памяти, с несколькими большими столбцами (например, несколькими столбцами varbinary(8000)) и столбцами LOB (т. е. varbinary(max), varchar(max) и nvarchar(max)), и выполнять с ними операции, используя типы таблиц и модули T-SQL, скомпилированные в собственном коде. 
+До выхода [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] размер данных "в строке" для таблицы, оптимизированной для памяти, не мог превышать [8060 байт](?viewFallbackFrom=sql-server-2014). Но в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версиях, а также в базе данных SQL Azure появилась возможность создать таблицу, оптимизированную для памяти, с несколькими большими столбцами (например, несколькими столбцами varbinary(8000)) и столбцами LOB (т. е. varbinary(max), varchar(max) и nvarchar(max)), и выполнять с ними операции, используя типы таблиц и модули T-SQL, скомпилированные в собственном коде. 
   
 Столбцы, превышающие максимальный размер строки в 8060 байт, размещаются вне строки в специальной внутренней таблице. У каждого такого столбца имеется соответствующая внутренняя таблица, которая, в свою очередь, имеет один некластеризованный индекс. Дополнительные сведения о внутренних таблицах, используемых для столбцов "вне строки", см. в статье [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
  
@@ -238,9 +238,8 @@ where object_id = object_id('dbo.Orders')
 -   Для больших объектов (LOB) ограничение размера соответствует аналогичному ограничению для таблиц на диске (лимит 2 ГБ на значения LOB). 
 -   Для обеспечения оптимальной производительности рекомендуется проследить, чтобы большинство столбцов умещалось в 8060 байт. 
 
-Некоторые из этих особенностей подробно рассмотрены в записи блога о [новых возможностях выполняющейся в памяти OLTP в SQL Server 2016, появившихся после выпуска CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
+Некоторые из этих особенностей подробно рассмотрены в записи блога о [новых возможностях выполняющейся в памяти OLTP в SQL Server 2016, появившихся после выпуска CTP3](/archive/blogs/sqlserverstorageengine/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
  
 ## <a name="see-also"></a>См. также:  
- [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Таблицы, оптимизированные для памяти](./sample-database-for-in-memory-oltp.md)  
   

@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864961"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809130"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Краткое руководство. Резервное копирование и восстановление SQL с помощью службы хранилища BLOB-объектов Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "87864961"
 Чтобы выполнить задания этого руководства, необходимо владеть основными понятиями резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и синтаксисом T-SQL.  Вам потребуется учетная запись хранения Azure, среда SQL Server Management Studio (SSMS) и доступ к серверу SQL Server или Управляемому экземпляру SQL Azure. Кроме того, учетная запись, используемая для выдачи команд резервного копирования и восстановления, должна находиться в роли базы данных **db_backupoperator** с разрешениями **изменение любых учетных данных**. 
 
 - Получите бесплатную [учетную запись Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
-- Создайте [учетную запись хранения Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Создайте [учетную запись хранения Azure](/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Установите [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) или разверните [Управляемый экземпляр SQL Azure](/azure/sql-database/sql-database-managed-instance-get-started) с подключением, установленным через [виртуальную машину SQL Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) или с помощью соединения [точка — сеть](/azure/sql-database/sql-database-managed-instance-configure-p2s).
-- Назначьте учетной записи пользователя роль [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) и предоставьте разрешения на [изменение любых учетных данных](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
+- Назначьте учетной записи пользователя роль [db_backupoperator](./security/authentication-access/database-level-roles.md) и предоставьте разрешения на [изменение любых учетных данных](../t-sql/statements/alter-credential-transact-sql.md). 
 
 ## <a name="create-azure-blob-container"></a>Создание контейнера больших двоичных объектов Azure
 Контейнер обеспечивает группирование набора больших двоичных объектов. Все BLOB-объекты должны содержаться в контейнере. Учетная запись хранения может содержать неограниченное количество контейнеров, но не менее одного. Контейнер может хранить неограниченное количество больших двоичных объектов. 
@@ -46,7 +46,7 @@ ms.locfileid: "87864961"
     ![Создание контейнера](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
-  > Для резервного копирования и восстановления SQL Server проводится проверка подлинности учетной записи хранилища даже при создании открытого контейнера. Можно также создать контейнер программным образом с помощью API-интерфейсов REST. Дополнительные сведения см. в статье [Создание контейнера](https://docs.microsoft.com/rest/api/storageservices/Create-Container).
+  > Для резервного копирования и восстановления SQL Server проводится проверка подлинности учетной записи хранилища даже при создании открытого контейнера. Можно также создать контейнер программным образом с помощью API-интерфейсов REST. Дополнительные сведения см. в статье [Создание контейнера](/rest/api/storageservices/Create-Container).
 
 ## <a name="create-a-test-database"></a>Создание тестовой базы данных 
 На этом шаге создайте тестовую базу данных с помощью среды SQL Server Management Studio (SSMS). 
@@ -235,4 +235,3 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
   
 -   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
-  

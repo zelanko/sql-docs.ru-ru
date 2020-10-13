@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9f37e62285ffcd3623bd1a26609466556e07634c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242970"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810422"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Функции и задачи служебной программы SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,8 +57,7 @@ ms.locfileid: "87242970"
 |Описывает, как изменить учетную запись-посредник для программы сбора данных на управляемом экземпляре SQL Server.|[Изменение учетной записи-посредника для набора элементов сбора служебной программы на управляемом экземпляре SQL Server (служебная программа SQL Server)](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |Описывает, как переместить точку управления служебной программой с одного экземпляра SQL Server на другой.|[Перенос точки управления служебной программой из одного экземпляра SQL Server на другой (служебная программа SQL Server)](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |Описывает, как удалить точку управления служебной программой.|[Удалить точку управления служебной программой (SQL Server Utility)](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|Описывает, как устранять неполадки служебной программы SQL server.|[Устранение неполадок служебной программы SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|Описывает, как устранять неполадки служебной программы SQL server.|[Устранение неполадок служебной программы SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))|  
 |Описывает, как устранять неполадки исправности ресурсов SQL Server.|[Устранение неполадок исправности ресурсов SQL Server (служебная программа SQL Server)](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |Ссылки на разделы справки F1 по UtilityExplorer.|[Справка F1 проводника служебной программы](../../relational-databases/manage/utility-explorer-f1-help.md)|  
-  
   

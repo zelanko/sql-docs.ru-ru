@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b405768f889e73d1885b67b05d8cf124d3f28d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c916bcaa0ff0a3fb294038df30e65e7f53f367aa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498624"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867459"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88498624"
 |Тип|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Ожидаемый тип файла на основе канонического типа.|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Заголовок элемента. Например, заголовок документа, тема сообщения, подпись к фотографии или название музыкальной композиции.|  
   
- Чтобы обеспечить согласованность между форматами файлов, корпорация Майкрософт выделила подмножество часто используемых свойств документа с повышенным приоритетом для нескольких категорий документов. К таким категориям относятся связь, контакты, документы, музыкальные файлы, изображения и видеоматериалы. Дополнительные сведения о главных свойствах для каждой категории см. в разделе [System-defined properties for custom file formats (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=144336) из набора документации Windows Search.  
+ Чтобы обеспечить согласованность между форматами файлов, корпорация Майкрософт выделила подмножество часто используемых свойств документа с повышенным приоритетом для нескольких категорий документов. К таким категориям относятся связь, контакты, документы, музыкальные файлы, изображения и видеоматериалы. Дополнительные сведения о главных свойствах для каждой категории см. в разделе [System-defined properties for custom file formats (на английском языке)](/windows/win32/search/-shell-systemdefinedpropertiesforfileformats) из набора документации Windows Search.  
   
  В каждом формате файла могут быть реализованы свойства трех типов.  
   
@@ -84,9 +84,9 @@ propID = 4
 ...  
 ```  
   
- Полное описание этого свойства см. в разделе [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) документации по Windows Search.  
+ Полное описание этого свойства см. в разделе [System.Author](/windows/win32/properties/props-system-author) документации по Windows Search.  
   
- Полный список свойств Windows см. в разделе [Windows Properties (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=215013)документации по Windows Search.  
+ Полный список свойств Windows см. в разделе [Windows Properties (на английском языке)](/windows/win32/properties/props)документации по Windows Search.  
   
 ##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> Добавление свойства в список свойств поиска  
  В следующем примере показано, как добавить свойство в список свойств поиска. В примере инструкция [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) добавляет свойство `System.Author` в список свойств поиска с именем `PropertyList1`и предоставляет понятное имя `Author`для свойства.  
@@ -107,5 +107,4 @@ GO
 ## <a name="see-also"></a>См. также  
  [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

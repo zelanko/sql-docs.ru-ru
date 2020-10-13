@@ -12,12 +12,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723115"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866618"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Индексы для оптимизированных для памяти таблиц
 
@@ -143,7 +143,7 @@ ms.locfileid: "85723115"
 
 В такой ситуации рекомендуется использовать некластеризованный индекс в `(CustomerCategoryID, CustomerId)`. Этот индекс можно использовать для запросов, использующих предикат с участием `CustomerCategoryID`, но ключ индекса не содержит повторяющихся значений. Таким образом, устраняется неэффективность обслуживания индекса из-за повтора значений CustomerCategoryID или дополнительного столбца в индексе.
 
-В следующем запросе показано среднее число повторяющихся значений ключа индекса для индекса `CustomerCategoryID` в таблице `Sales.Customers`в образце базы данных [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
+В следующем запросе показано среднее число повторяющихся значений ключа индекса для индекса `CustomerCategoryID` в таблице `Sales.Customers`в образце базы данных [WideWorldImporters](../../samples/wide-world-importers-what-is.md).
 
 ```sql
 SELECT AVG(row_count) FROM
@@ -235,4 +235,4 @@ WHERE col1 = 'dn';
  [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
  [Хэш-индексы для таблиц, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Некластеризованные индексы для таблиц, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

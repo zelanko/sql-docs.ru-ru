@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 211b16d4b03439295c4970449ef61855c09addc4
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 04a4513ed886c29a18d5bee3d45324a35b3d63ea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988555"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810435"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,12 +94,12 @@ ms.locfileid: "87988555"
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
 ##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> Укажите экземпляр SQL Server  
- Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в диалоговом окне соединения, нажмите кнопку **Подключить...** . Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в диалоговом окне соединения, нажмите кнопку **Подключить...** . Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
 ##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Диалоговое окно подключения  
- Проверьте в диалоговом окне «Соединение с сервером» тип сервера, имя компьютера и сведения обо имени экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Проверьте в диалоговом окне «Соединение с сервером» тип сервера, имя компьютера и сведения обо имени экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  Если соединение зашифровано, используется зашифрованное соединение. Если соединение не зашифровано, то программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит соединение повторно с использованием зашифрованного соединения.  
@@ -129,7 +129,7 @@ ms.locfileid: "87988555"
 |Наборы элементов сбора на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны быть остановлены.|Наборы элементов сбора должны быть остановлены на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если сборщик данных отключен, включите его, остановите все работающие наборы элементов сбора, а затем снова запустите правила проверки для операции создания точки управления служебной программой.<br /><br /> Включение сборщика данных:<br /><br /> В обозревателе объектов раскройте узел **Управление** .<br /><br /> Щелкните правой кнопкой мыши **Сбор данных**, затем выберите **Включить сбор данных**.<br /><br /> Остановка набора элементов сбора:<br /><br /> В обозревателе объектов разверните узел **Управление**, затем узел **Сбор данных**и узел &lt;ui&gt;Наборы элементов сбора системных данных&lt;/ui&gt;.<br /><br /> Щелкните правой кнопкой мыши набор элементов сбора, который необходимо остановить, и выберите команду **Остановить набор сбора данных**.<br /><br /> Результат этого действия будет отображен в окне сообщения, а красный круг на значке набора элементов сбора означает его остановку.|  
 |Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть запущена на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Запустите службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте ручной запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В противном случае настройте автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |В точке управления служебной программой должна быть запущена служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Запустите службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в точке управления служебной программой. Если точка управления служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте ручной запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В противном случае настройте автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|WMI должна быть правильно настроена.|Сведения об устранении неполадок настройки WMI см. в статье [Устранение неполадок служебной программы SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|WMI должна быть правильно настроена.|Сведения об устранении неполадок настройки WMI см. в статье [Устранение неполадок служебной программы SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).|  
 |Учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть учетной записью действующего домена Windows в точке управления служебной программой.|Укажите допустимую учетную запись домена Windows. Чтобы проверить допустимость учетной записи, войдите в точку управления служебной программой с помощью этой учетной записи домена Windows.|  
 |Если выбран параметр учетной записи-посредника, то учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть допустимой учетной записью домена Windows на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Укажите допустимую учетную запись домена Windows. Чтобы проверить допустимость учетной записи, войдите на указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью этой учетной записи домена Windows.|  
 |Учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть встроенной учетной записью, как, например, «Сетевая служба».|Переназначьте учетную запись на учетную запись домена Windows. Чтобы проверить допустимость учетной записи, войдите на указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью этой учетной записи домена Windows.|  
@@ -173,7 +173,7 @@ ms.locfileid: "87988555"
 >   
 >  Дополнительные сведения:  Не удалось получить сведения о пользователе/группе Windows NT «\<DomainName\AccountName>», код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
 >   
->  Дополнительные сведения об устранении этой неполадки см. в статье [Устранение неполадок служебной программы SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
+>  Дополнительные сведения об устранении этой неполадки см. в статье [Устранение неполадок служебной программы SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).  
   
 > [!IMPORTANT]  
 >  Не меняйте свойства набора элементов сбора "Сведения о программе" на управляемом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не включайте и не выключайте сбор данных вручную, так как сбор данных происходит под управлением задания агента программы.  
@@ -199,6 +199,5 @@ ms.locfileid: "87988555"
 ## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Наблюдение за экземплярами SQL Server в служебной программе SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Устранение неполадок служебной программы SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [Устранение неполадок служебной программы SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

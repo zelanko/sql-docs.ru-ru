@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4b893bd45de93ab0ee934343e16bf6d577f1123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427936"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868077"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Улучшение производительности полнотекстовых индексов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -207,7 +207,7 @@ GO
   
  Из соображений безопасности фильтры загружаются процессами узла управляющей программы фильтрации. Экземпляр сервера использует многопоточный процесс для всех многопоточных фильтров и однопоточный процесс для однопоточных фильтров. Если документ, использующий многопоточный фильтр, содержит внедренный документ, использующий однопоточный фильтр, средство полнотекстового поиска запускает однопоточный процесс для внедренного документа. Например, если документ Word содержит PDF-документ, средство полнотекстового поиска использует многопоточный процесс для содержимого Word и запускает однопоточный процесс для PDF-содержимого. Однако однопоточный фильтр может неправильно работать в такой среде, дестабилизируя процесс фильтрации. В некоторых случаях, когда часто встречаются такие внедрения, дестабилизация может привести к сбою процесса. В этом случае средство полнотекстового поиска перенаправляет сбойный документ (например, документ Word, содержащий внедренный PDF-документ) в однопоточный процесс фильтрации. Если перенаправление происходит достаточно часто, производительность полнотекстового индексирования снижается.  
   
-Для устранения этой проблемы необходимо пометить фильтр для документа-контейнера (например, документ Word) как однопоточный фильтр. Для этого необходимо присвоить ключу реестра **ThreadingModel** для этого фильтра значение **Apartment Threaded**. Сведения об однопоточных подразделениях см. в техническом документе [Общие сведения о моделях потоков COM и их использовании](https://go.microsoft.com/fwlink/?LinkId=209159).  
+Для устранения этой проблемы необходимо пометить фильтр для документа-контейнера (например, документ Word) как однопоточный фильтр. Для этого необходимо присвоить ключу реестра **ThreadingModel** для этого фильтра значение **Apartment Threaded**. Сведения об однопоточных подразделениях см. в техническом документе [Общие сведения о моделях потоков COM и их использовании](/previous-versions/ms809971(v=msdn.10)).  
   
 ## <a name="see-also"></a>См. также:  
  [Параметры конфигурации сервера «Server Memory»](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
@@ -217,5 +217,4 @@ GO
  [sys.dm_fts_memory_buffers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [Устранение неполадок полнотекстового индексирования](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: a7938f28af84596f620246d3d70ad491cb22828c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1c0face9315a38d4748cffef71e135401102dd0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456471"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869468"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 ```
 
 ## <a name="cause"></a>Причина
-Прежде чем можно будет использовать базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ее необходимо запустить. При запуске базы данных инициализируются различные структуры данных, представляющие базу данных и ее файлы, открываются все файлы, принадлежащие базе данных, и, наконец, база данных восстанавливается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует функцию API [CreateFile](https://docs.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea) в Windows для открытия файлов, принадлежащих базе данных.
+Прежде чем можно будет использовать базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ее необходимо запустить. При запуске базы данных инициализируются различные структуры данных, представляющие базу данных и ее файлы, открываются все файлы, принадлежащие базе данных, и, наконец, база данных восстанавливается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует функцию API [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) в Windows для открытия файлов, принадлежащих базе данных.
  
 Сообщения 17207 (и 17204) указывают на то, что при попытке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] открыть файлы базы данных во время запуска произошла ошибка.
  
@@ -83,7 +83,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 1. В случае возникновения ошибки операционной системы 5 (```Access is Denied```), рассмотрите следующие методы устранения:
    -  Проверьте разрешения, заданные в файле, просмотрев свойства файла в проводнике Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует группы Windows, чтобы подготовить службу контроля доступа для различных файловых ресурсов. Убедитесь, что соответствующая группа (с именем SQLServerMSSQLUser$ComputerName$MSSQLSERVER или SQLServerMSSQLUser$ComputerName$InstanceName) имеет необходимые разрешения для файла базы данных, указанного в сообщении об ошибке. Дополнительные сведения см. в статье [Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014). Убедитесь, что группа Windows содержит учетную запись запуска службы или идентификатор безопасности службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
    -  Проверьте учетную запись пользователя, от имени которой сейчас запущена служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для получения этих сведений можно использовать диспетчер задач Windows. Найдите значение "Имя пользователя" для исполняемого файла "sqlservr.exe". Если вы недавно изменили учетную запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемым способом выполнения этой операции является использование служебной программы "Диспетчер конфигурации SQL Server". Дополнительные сведения см. в статье [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md). 
-   -  В зависимости от типа операции — открытие баз данных во время запуска сервера, присоединение базы данных, восстановление базы данных и т. д. — учетная запись, используемая для олицетворения и получения доступа к файлу базы данных, может варьироваться. Сведения о том, какая операция позволяет задавать разрешения к каким учетным записям, см. в статье [Защита данных и файлов журналов](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN). Используйте такие средства, как [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) из пакета Windows SysInternals, чтобы узнать, каким образом предоставляется доступ к файлу: в контексте безопасности учетной записи запуска службы экземпляра SQL Server или через олицетворенную учетную запись.
+   -  В зависимости от типа операции — открытие баз данных во время запуска сервера, присоединение базы данных, восстановление базы данных и т. д. — учетная запись, используемая для олицетворения и получения доступа к файлу базы данных, может варьироваться. Сведения о том, какая операция позволяет задавать разрешения к каким учетным записям, см. в статье [Защита данных и файлов журналов](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)). Используйте такие средства, как [Process Monitor](/sysinternals/downloads/procmon) из пакета Windows SysInternals, чтобы узнать, каким образом предоставляется доступ к файлу: в контексте безопасности учетной записи запуска службы экземпляра SQL Server или через олицетворенную учетную запись.
 
       Если SQL Server олицетворяет учетные данные пользователя, выполняющего операцию ALTER DATABASE или CREATE DATABASE, в средстве Process Monitor отобразятся следующие сведения (пример).
 
@@ -115,7 +115,6 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
    - Прежде чем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] попытается получить доступ к файлам базы данных в этих расположениях, убедитесь, что доступно дисковое или сетевое расположение (например, iSCSI-диск). При необходимости создайте нужные зависимости в администраторе кластера или диспетчере служб.
 
 1. Если возникает ошибка операционной системы `The process cannot access the file because it is being used by another process` = 32
-   - Используйте такие средства, как [Обозреватель процессов](https://docs.microsoft.com/sysinternals/downloads/process-explorer) или [Дескриптор](https://docs.microsoft.com/sysinternals/downloads/handle) из Windows Sysinternals, чтобы определить, нет ли у другого процесса или службы эксклюзивной блокировки для этого файла базы данных.
+   - Используйте такие средства, как [Обозреватель процессов](/sysinternals/downloads/process-explorer) или [Дескриптор](/sysinternals/downloads/handle) из Windows Sysinternals, чтобы определить, нет ли у другого процесса или службы эксклюзивной блокировки для этого файла базы данных.
    - Запретите этому процессу доступ к файлам базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Распространенными примерами являются антивирусные программы (см. руководство по исключению файлов в следующей [статье базы знаний](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).
    - В кластерной среде убедитесь, что процесс sqlservr.exe предыдущего узла-владельца освободил дескрипторы для файлов базы данных. Обычно этого не происходит, но неправильная настройка кластера или путей ввода-вывода может привести к таким проблемам.
-  

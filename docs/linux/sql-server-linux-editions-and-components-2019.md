@@ -24,13 +24,13 @@ helpviewer_keywords:
 - Setup [SQL Server]
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mikeray
-ms.openlocfilehash: aca10f1cb7d6b3bef1cd44b58f2f68ba01d57a22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.reviewer: vanto
+ms.openlocfilehash: 566750ead98f817d995c258ce992c94d9404be44
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456853"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785124"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2019 на Linux
 

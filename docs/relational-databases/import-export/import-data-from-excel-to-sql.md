@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df99c766fa727af8981f048b231abac95c3a168c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b299248e1bd953109d72e4536a4d520ccd942d7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715392"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868766"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
 
@@ -135,7 +135,7 @@ GO
 
 Дополнительные сведения о распределенных запросах см. в указанных ниже разделах.
 
-- [Распределенные запросы](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx) (Распределенные запросы по-прежнему поддерживаются в SQL Server 2016, но документация по этой функции не обновлена.)
+- [Распределенные запросы](/previous-versions/sql/sql-server-2008-r2/ms188721(v=sql.105)) (Распределенные запросы по-прежнему поддерживаются в SQL Server 2016, но документация по этой функции не обновлена.)
 - [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 - [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
@@ -252,8 +252,8 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 
 Дополнительные сведения о мастере копирования см. в указанных ниже разделах.
 
-- [Мастер копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [Руководство. Создание конвейера с действием копирования с помощью мастера копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
+- [Мастер копирования фабрики данных](/azure/data-factory/data-factory-azure-copy-wizard)
+- [Руководство. Создание конвейера с действием копирования с помощью мастера копирования фабрики данных](/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="azure-data-factory"></a><a name="adf"></a> Фабрика данных Azure
 
@@ -263,14 +263,14 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 
 Дополнительные сведения об использовании этих источников и приемников фабрики данных см. в указанных ниже разделах.
 
-- [Файловая система](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
-- [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
-- [База данных SQL Azure](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+- [Файловая система](/azure/data-factory/data-factory-onprem-file-system-connector)
+- [SQL Server](/azure/data-factory/data-factory-sqlserver-connector)
+- [База данных SQL Azure](/azure/data-factory/data-factory-azure-sql-connector)
 
 Чтобы научиться копировать данные с помощью фабрики данных Azure, см. указанные ниже разделы.
 
-- [Перемещение данных с помощью действия копирования](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [Руководство. Создание конвейера с действием копирования с помощью портала Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [Перемещение данных с помощью действия копирования](/azure/data-factory/data-factory-data-movement-activities)
+- [Руководство. Создание конвейера с действием копирования с помощью портала Azure](/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>Распространенные ошибки
 
