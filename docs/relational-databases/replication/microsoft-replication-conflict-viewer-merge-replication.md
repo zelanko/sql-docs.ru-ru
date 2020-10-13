@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7677421f25f2dcc04a80d7e39182936e40136420
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e10e89850c8028590fd9e498a062abe0ac0de06
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722040"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868238"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Средство просмотра конфликтов репликации Microsoft (репликация слиянием)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85722040"
  В случае, когда конфликт разрешается во время синхронизации, данные из проигравшей строки записываются в конфликтную таблицу. Когда принимается исходное решение конфликта или выбирается другое решение, внесенная в журнал конфликтующая строка удаляется из конфликтной таблицы. Следует периодически просматривать конфликты, чтобы сократить размер таблиц отслеживания конфликтов.  
   
 > [!NOTE]  
->  Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации на языке Transact-SQL&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации на языке Transact-SQL&#41;](./view-and-resolve-data-conflicts-for-merge-publications.md).  
   
 ## <a name="options"></a>Параметры  
  Средство просмотра конфликтов репликации разделено на две части. Верхняя часть диалогового окна отображает список конфликтов для выбранной таблицы. При выборе элемента в списке конфликтов в нижней части диалогового окна отображаются подробные данные о конфликте.  
@@ -87,5 +87,4 @@ ms.locfileid: "85722040"
 ## <a name="see-also"></a>См. также:  
  [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
   

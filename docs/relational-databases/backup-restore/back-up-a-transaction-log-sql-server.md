@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e01e01544a0417210a8f2e3a40bb10398875c37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c953e5a707bb197457d76e9d5d4f64635515ffce
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719963"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807650"
 ---
 # <a name="back-up-a-transaction-log"></a>Создание резервной копии журнала транзакций
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -153,7 +153,7 @@ GO
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell
 
-Настройка и использование [поставщика SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Используйте командлет **Backup-SqlDatabase** и укажите **Log** в качестве значения параметра **-BackupAction** .  
+Настройка и использование [поставщика SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md). Используйте командлет **Backup-SqlDatabase** и укажите **Log** в качестве значения параметра **-BackupAction** .  
   
 В следующем примере создается полная резервная копия журналов базы данных `<myDatabase>` в заданном по умолчанию расположении резервного копирования на экземпляре сервера `Computer\Instance`.  
   
@@ -174,4 +174,4 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Полные резервные копии файлов (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
+ [Полные резервные копии файлов (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)

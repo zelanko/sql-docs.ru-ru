@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458582"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890914"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Просмотр и работа с выходными данными помощника по настройке ядра СУБД (DTA)
 
@@ -45,7 +45,7 @@ ms.locfileid: "86458582"
  Графический пользовательский интерфейс можно также использовать для просмотра выходных данных настройки, созданных программой командной строки **dta** .  
   
 > [!NOTE]  
->  Если в служебной программе командной строки **dta** с помощью аргумента **-ox** задана запись выходных данных в XML-файл, можно открыть и просмотреть выходной XML-файл, выбрав пункт **Открыть файл** в меню **Файл** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Сведения о программе командной строки **dta** см. в разделе [dta, программа](../../tools/dta/dta-utility.md).  
+>  Если в служебной программе командной строки **dta** с помощью аргумента **-ox** задана запись выходных данных в XML-файл, можно открыть и просмотреть выходной XML-файл, выбрав пункт **Открыть файл** в меню **Файл** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md). Сведения о программе командной строки **dta** см. в разделе [dta, программа](../../tools/dta/dta-utility.md).  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Просмотр рекомендаций по настройке с помощью GUI помощника по настройке ядра СУБД  
   
@@ -392,5 +392,4 @@ ms.locfileid: "86458582"
 ## <a name="see-also"></a>См. также:  
  [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
-  
   

@@ -16,12 +16,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 811723fa85d059b5e750135bf551f723c5c137dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab482e4818d7d60b9876fbf300a39de0b2f9ee40
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716713"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868382"
 ---
 # <a name="replication-tutorials"></a>Учебники по репликации
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,8 +51,7 @@ ms.locfileid: "85716713"
 ## <a name="see-also"></a>См. также раздел  
 [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
-[Обзор репликации транзакций](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
+[Обзор репликации транзакций](./transactional/transactional-replication.md) 
 
-[Обзор репликации слиянием](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
+[Обзор репликации слиянием](./merge/merge-replication.md)
 
-  

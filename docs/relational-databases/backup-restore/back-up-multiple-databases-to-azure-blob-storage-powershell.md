@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e8cd67af06699c929e1f84f948606a6411c5e1a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e79840f828a7891ac3e01cd52721eb5755a97c7b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722497"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809254"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Резервное копирование нескольких баз данных в службу хранилища BLOB-объектов Azure с использованием PowerShell
 
@@ -44,7 +44,7 @@ ms.locfileid: "85722497"
   
 - В SQL Server PowerShell предусмотрены командлеты для навигации по структуре пути, которая представляет иерархию объектов, поддерживаемых поставщиком PowerShell. После перехода к нужному узлу можно использовать другие командлеты для выполнения основных операций с текущим объектом.
 
-  Дополнительные сведения см. в статье [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).
+  Дополнительные сведения см. в статье [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).
 
 - Командлет **Get-ChildItem**. Сведения, возвращаемые **Get-ChildItem**, зависят от расположения в пути SQL Server PowerShell. Например, если размещение находится на уровне компьютера, командлет возвращает все экземпляры ядра СУБД SQL Server, установленные на компьютере. Либо если расположение находится на уровне объектов, таких как базы данных, командлет возвращает список объектов базы данных. По умолчанию командлет **Get-ChildItem** не возвращает системные объекты. Для просмотра системных объектов используйте параметр `–Force`.
 

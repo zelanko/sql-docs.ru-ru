@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 98507653332b0dc221a0f1c93b189607e50574e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759028"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809180"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
 
@@ -67,7 +67,7 @@ ms.locfileid: "85759028"
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    ,SECRET = '<storage access key> ;  
+    , SECRET = '<storage access key>' ;  
     ```  
   
 -   Учетные данные существуют, но учетная запись, которая используется для запуска команды резервного копирования, не имеет разрешения доступа к учетным данным. Используйте учетную запись для входа в роль **db_backupoperator** с разрешением ***Изменение любых учетных данных*** .  
@@ -92,7 +92,7 @@ ms.locfileid: "85759028"
   
     -   Дополнительную информацию можно найти в журнале событий Windows или в журналах приложений с именем `SQLBackupToUrl`.  
 
-    -   При резервном копировании больших баз данных используйте функции COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE и несколько аргументов URL-адресов.  Дополнительные сведения см. в записи блога [Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/) (Копирование сверхбольшой базы данных в хранилище BLOB-объектов Azure).
+    -   При резервном копировании больших баз данных используйте функции COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE и несколько аргументов URL-адресов.  Дополнительные сведения см. в записи блога [Backing up a VLDB to Azure Blob Storage](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage) (Копирование сверхбольшой базы данных в хранилище BLOB-объектов Azure).
   
         ```console
         Msg 3202, Level 16, State 1, Line 1
@@ -182,4 +182,3 @@ BackupIoRequest::ReportIoError: write failure on backup device https://storageac
  [Восстановление из резервных копий в Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-  

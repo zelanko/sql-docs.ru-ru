@@ -27,12 +27,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116226"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809830"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 
@@ -81,7 +81,7 @@ ms.locfileid: "91116226"
 <sup>6</sup> При выдаче разрешения на закрепление страниц в памяти (либо в 32-разрядной системе для поддержки AWE-памяти, либо в 64-разрядной системе) рекомендуем выделить максимальный объем серверной памяти. Дополнительные сведения об LPIM см. в статье [Параметры конфигурации сервера Server Memory](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
 > [!NOTE]
-> Более старые версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно запустить в 32-разрядной операционной системе. Чтобы охватить свыше 4 ГБ памяти в 32-разрядной операционной системе, требуется использовать расширения AWE для управления памятью. Это необязательно, если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняется в 64-разрядных операционных системах. Дополнительные сведения о расширениях AWE см. в документации [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]: [Адресное пространство процесса](https://msdn.microsoft.com/library/ms189334.aspx) и [Управление памятью для больших баз данных](https://msdn.microsoft.com/library/ms191481.aspx).   
+> Более старые версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно запустить в 32-разрядной операционной системе. Чтобы охватить свыше 4 ГБ памяти в 32-разрядной операционной системе, требуется использовать расширения AWE для управления памятью. Это необязательно, если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняется в 64-разрядных операционных системах. Дополнительные сведения о расширениях AWE см. в документации [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]: [Адресное пространство процесса](/previous-versions/sql/sql-server-2008-r2/ms189334(v=sql.105)) и [Управление памятью для больших баз данных](/previous-versions/sql/sql-server-2008-r2/ms191481(v=sql.105)).   
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 

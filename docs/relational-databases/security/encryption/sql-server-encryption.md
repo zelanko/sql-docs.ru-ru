@@ -16,12 +16,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 702b7f39a3435255432474542b74a8d1f210284d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720439"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869247"
 ---
 # <a name="sql-server-encryption"></a>Шифрование SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "85720439"
  [Обеспечение безопасности SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Общие сведения о способах обеспечения безопасности платформы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и способах работы с пользователями и защищаемыми объектами.  
 
-[Обзор возможностей системы безопасности Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview)
+[Обзор возможностей системы безопасности Базы данных SQL Azure](/azure/sql-database/sql-database-security-overview)
 </br>Общие сведения о системе безопасности Базы данных SQL Azure, которая обеспечивает защиту данных, контроль доступа и возможности упреждающего мониторинга.
   
  [Криптографические функции (Transact-SQL)](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
@@ -88,5 +88,4 @@ ms.locfileid: "85720439"
  [Ключи шифрования базы данных и SQL Server (ядро СУБД)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)     
  [Включение зашифрованных соединений для ядра СУБД](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)    
-  
   

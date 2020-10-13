@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4c1494efa032ba58315e8a5f7fe5fd855b3e51f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472970"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809370"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Руководство по Цепочки владения и переключение контекста
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "88472970"
 ## <a name="prerequisites"></a>предварительные требования
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Скачайте [примеры баз данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Скачайте [примеры баз данных AdventureWorks2017](../samples/adventureworks-install-configure.md).
 
-Инструкции по восстановлению базы данных в SQL Server Management Studio см. в разделе [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Инструкции по восстановлению базы данных в SQL Server Management Studio см. в разделе [Восстановление базы данных](./backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## <a name="1-configure-the-environment"></a>1. Настройка среды  
 С помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и приведенного ниже кода откройте базу данных `AdventureWorks2017`, затем с помощью инструкции `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] проверьте, отображается ли пользователь dbo в качестве контекста.  
@@ -334,6 +334,5 @@ GO
   
 ## <a name="see-also"></a>См. также:  
 [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

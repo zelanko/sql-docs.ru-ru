@@ -1,20 +1,20 @@
 ---
 title: Высокий уровень доступности для контейнеров SQL Server
 description: Сведения о высоком уровне доступности для контейнеров SQL Server. Также вы узнаете о развертывании контейнера с помощью SQL Server в Kubernetes.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 00665a8306dbf586b92cfec14a8fe21f631f96c9
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: c4d14e0b7f76aaebd0a0bdac00c93267b91d0ab8
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088899"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785115"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Высокий уровень доступности для контейнеров SQL Server
 

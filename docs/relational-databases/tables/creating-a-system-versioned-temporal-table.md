@@ -12,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035b1793515779102b9b6b24d0377a4d33cba3c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990402"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809304"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Создание темпоральной таблицы с системным управлением версиями
 
@@ -84,7 +84,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 
 - Для параметра **HISTORY_TABLE** обязательно использовать имя схемы.
 - Если указанная схема не существует, инструкция **CREATE TABLE** завершится с ошибкой.
-- Если таблица, заданная параметром **HISTORY_TABLE** , уже существует, она будет проверена на соответствие с вновь созданной темпоральной таблицей с точки зрения [согласованности схемы и согласованности темпоральных данных](https://msdn.microsoft.com/library/dn935015.aspx). Если будет указана недопустимая таблица журнала, инструкция **CREATE TABLE** завершится с ошибкой.
+- Если таблица, заданная параметром **HISTORY_TABLE** , уже существует, она будет проверена на соответствие с вновь созданной темпоральной таблицей с точки зрения [согласованности схемы и согласованности темпоральных данных](./temporal-tables.md). Если будет указана недопустимая таблица журнала, инструкция **CREATE TABLE** завершится с ошибкой.
 
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Создание темпоральной таблицы с пользовательской таблицей журнала
 
@@ -207,4 +207,4 @@ ALTER TABLE ProjectTaskCurrent
 - [Изменение данных в темпоральной таблице с системным управлением версиями](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [Запрос данных в темпоральной таблице с системным управлением версиями](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [Изменение схемы темпоральной таблицы с системным управлением версиями](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [Остановка системного управления версиями в темпоральной таблице с системным управлением версиями](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [Остановка системного управления версиями в темпоральной таблице с системным управлением версиями](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

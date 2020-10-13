@@ -12,12 +12,12 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9677adb821528d7188a64415c344548a7ea400ed
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723125"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868677"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Введение в таблицы, оптимизированные для памяти
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85723125"
   
 ## <a name="accessing-data-in-memory-optimized-tables"></a>Доступ к данным в оптимизированных для памяти таблицах  
 
-Доступ к оптимизированным для памяти таблицам наиболее эффективным образом можно осуществлять из скомпилированных в собственном коде хранимых процедур ([Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)). К оптимизированным для памяти таблицам можно обращаться через обычный интерпретируемый [!INCLUDE[tsql](../../includes/tsql-md.md)]. Термин «интерпретируемый [!INCLUDE[tsql](../../includes/tsql-md.md)] » означает доступ к оптимизированным для памяти таблицам без использования скомпилированной хранимой процедуры. Примеры интерпретируемого доступа [!INCLUDE[tsql](../../includes/tsql-md.md)] — доступ к оптимизированной для памяти таблице из триггера DML или специального пакета [!INCLUDE[tsql](../../includes/tsql-md.md)] , представления и функции с табличным значением.  
+Доступ к оптимизированным для памяти таблицам наиболее эффективным образом можно осуществлять из скомпилированных в собственном коде хранимых процедур ([Скомпилированные в собственном коде хранимые процедуры](./a-guide-to-query-processing-for-memory-optimized-tables.md)). К оптимизированным для памяти таблицам можно обращаться через обычный интерпретируемый [!INCLUDE[tsql](../../includes/tsql-md.md)]. Термин «интерпретируемый [!INCLUDE[tsql](../../includes/tsql-md.md)] » означает доступ к оптимизированным для памяти таблицам без использования скомпилированной хранимой процедуры. Примеры интерпретируемого доступа [!INCLUDE[tsql](../../includes/tsql-md.md)] — доступ к оптимизированной для памяти таблице из триггера DML или специального пакета [!INCLUDE[tsql](../../includes/tsql-md.md)] , представления и функции с табличным значением.  
   
  В следующей таблице представлены средства собственного и интерпретируемого доступа [!INCLUDE[tsql](../../includes/tsql-md.md)] для различных объектов.  
   
@@ -108,5 +108,4 @@ ms.locfileid: "85723125"
 ## <a name="see-also"></a>См. также:
 
 [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667854"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869282"
 ---
 # <a name="view-offline-log-files"></a>просматривать файлы журнала в режиме «вне сети»
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "85667854"
   
  При использовании списка "Зарегистрированные серверы" экземпляр, к которому нужно подключиться, должен быть зарегистрирован в **Группы локальных серверов** или **Центральные серверы управления**. (Экземпляр может быть зарегистрирован сам по себе или в качестве члена группы серверов.) Дополнительные сведения о добавлении экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в список «Зарегистрированные серверы» см. в следующих разделах:  
   
--   [Создание или изменение группы серверов (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
+-   [Создание или изменение группы серверов (среда SQL Server Management Studio)](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
--   [Регистрация подключенного сервера (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)  
+-   [Регистрация подключенного сервера (среда SQL Server Management Studio)](../../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md)  
   
--   [Создание центрального сервера управления и группы сервера (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)  
+-   [Создание центрального сервера управления и группы сервера (среда SQL Server Management Studio)](../../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
  Дополнительные сведения о просмотре файлов журналов вне сети программным способом с помощью запросов WMI и WQL см. в следующих разделах:  
   
@@ -122,5 +122,4 @@ ms.locfileid: "85667854"
   
 ## <a name="see-also"></a>См. также:  
  [Средство просмотра файлов журнала](../../relational-databases/logs/log-file-viewer.md)  
-  
   

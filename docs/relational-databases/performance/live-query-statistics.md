@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fe6467cbe5cc915b876b9efa6b8afd9ff59e2bbd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457897"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890778"
 ---
 # <a name="live-query-statistics"></a>Динамическая статистика запросов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86457897"
   
 > [!WARNING]  
 > Эта функция предназначена в основном для диагностики. Ее использование может значительно снизить общую производительность запроса, особенно в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  
-> Эта функция может использоваться с [отладчиком Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+> Эта функция может использоваться с [отладчиком Transact-SQL](../../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
 ## <a name="to-view-live-query-statistics-for-one-query"></a>Просмотр динамической статистики запросов для одного запроса 
   
@@ -79,4 +79,4 @@ ms.locfileid: "86457897"
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
- [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md)   
+ [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md)

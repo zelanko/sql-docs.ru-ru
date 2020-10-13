@@ -2,20 +2,20 @@
 title: Использование RHEL FCI для SQL Server на Linux
 description: Узнайте, как использовать экземпляр отказоустойчивого кластера общего диска Red Hat Enterprise Linux (RHEL) для SQL Server, чтобы обеспечить высокую доступность, например вручную отработать отказ отказоустойчивого кластера, и добавить или удалить узлы в кластере.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 94ac1e7dbd6632d2346df2d7d1837b8ee66859c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 639e88a96ac639d20a6190bffeed75d46495aa51
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897264"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785070"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Работа экземпляра отказоустойчивого кластера RHEL для SQL Server
 

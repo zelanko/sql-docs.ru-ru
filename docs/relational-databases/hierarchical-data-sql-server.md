@@ -19,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382530"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869052"
 ---
 # <a name="hierarchical-data-sql-server"></a>Иерархические данные (SQL Server)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88382530"
   
 -   Диаграмма связей между веб-страницами  
   
- Тип данных [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) используется для создания таблиц с иерархической структурой или для описания иерархической структуры данных, которые хранятся в другом расположении. Для запросов и управления иерархическими данными следует использовать [функции hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) в [!INCLUDE[tsql](../includes/tsql-md.md)] .  
+ Тип данных [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) используется для создания таблиц с иерархической структурой или для описания иерархической структуры данных, которые хранятся в другом расположении. Для запросов и управления иерархическими данными следует использовать [функции hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) в [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
 ##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> Основные свойства типа hierarchyid  
  Значение типа данных **hierarchyid** представляет позицию в древовидной иерархии. Значения **hierarchyid** обладают следующими свойствами.  
@@ -540,8 +540,7 @@ GO
   
   
 ## <a name="see-also"></a>См. также  
- [Справочник по методам типа данных hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [Справочник по методам типа данных hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
  [Руководство. Использование типа данных hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid (Transact-SQL)](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   

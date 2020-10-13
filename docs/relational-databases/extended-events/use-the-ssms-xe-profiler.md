@@ -16,12 +16,12 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9cd63ae6c84ce09b70246aae91c16446017f6cfc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97cad6d2dae1b9ce6e4b97eae221c810cded10d4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756826"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868752"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Использование профилировщика XEvent для SSMS
 
@@ -32,7 +32,7 @@ ms.locfileid: "85756826"
 В отличие от SQL Profiler, профилировщик XEvent непосредственно интегрирован в SSMS и основан на масштабируемой технологии расширенных событий ядра СУБД SQL. Эта функция позволяет получить быстрый доступ к динамическому потоковому представлению диагностических событий в SQL Server. Это представление можно настроить, сохранив параметры в файле .viewsettings, чтобы поделиться ими с другими пользователями SSMS. Сеанс, созданный с помощью профилировщика XE, меньше вмешивается в работу SQL Server по сравнению с аналогичной трассировкой SQL при использовании SQL Profiler. Пользователь также может настроить этот сеанс с помощью окна свойств сеанса XE или с помощью TSQL.
 
 ## <a name="prerequisites"></a>Предварительные требования
-Эта функция доступна только в SQL Server Management Studio (SSMS) 17.3 и более поздних версиях. Убедитесь, что вы используете последнюю версию. Ее можно найти [здесь](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Эта функция доступна только в SQL Server Management Studio (SSMS) 17.3 и более поздних версиях. Убедитесь, что вы используете последнюю версию. Ее можно найти [здесь](../../ssms/download-sql-server-management-studio-ssms.md).
 
 ## <a name="getting-started"></a><a id="getting-started"></a> Приступая к работе
 Чтобы открыть профилировщик XEvent, выполните следующие действия.
@@ -56,5 +56,4 @@ ms.locfileid: "85756826"
 ## <a name="see-also"></a>См. также:
 [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
 [Средства расширенных событий](../../relational-databases/extended-events/extended-events-tools.md)  
-  
   

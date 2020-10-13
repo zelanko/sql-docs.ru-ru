@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d8fd7e4164807789939ba0c3fd515d1a2d8dc67
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 88ab6e015f26cf97e002bc4e21a4430bf30d9cba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410990"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868208"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>Развертывание службы защиты узла для [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
@@ -53,7 +53,7 @@ ms.locfileid: "87410990"
     Install-HgsServer -HgsDomainName $HgsDomainName -SafeModeAdministratorPassword $DSRMPassword -Restart
     ```
 
-    Компьютер HGS снова перезагрузится для завершения настройки леса Active Directory. При следующем входе в систему ваша учетная запись администратора станет учетной записью администратора домена. Для получения дополнительных сведений об управлении новым лесом и его защите рекомендуется ознакомиться с [документацией по операциям в доменных службах Active Directory](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations).
+    Компьютер HGS снова перезагрузится для завершения настройки леса Active Directory. При следующем входе в систему ваша учетная запись администратора станет учетной записью администратора домена. Для получения дополнительных сведений об управлении новым лесом и его защите рекомендуется ознакомиться с [документацией по операциям в доменных службах Active Directory](/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations).
 
 3. Далее вы настроите кластер HGS и установите службу аттестации, выполнив следующую команду в консоли Windows PowerShell с повышенными привилегиями:
 
@@ -218,7 +218,7 @@ Set-HgsServer -TrustHostKey
 
 1. Получите сертификат TLS от центра сертификации, используя полное имя службы HGS из шага 1.3 в качестве имени субъекта. Если имя службы неизвестно, его можно узнать, выполнив командлет `Get-HgsServer` на любом компьютере HGS. Вы можете добавить альтернативные DNS-имена в список альтернативных имен субъектов, если компьютеры [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] используют другое DNS-имя для доступа к кластеру HGS (например, если служба HGS находится за подсистемой балансировки сетевой нагрузки с другим адресом).
 
-2. На компьютере HGS используйте командлет [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver), чтобы включить привязку HTTPS и указать сертификат TLS, полученный на предыдущем шаге. Если сертификат уже установлен в локальном хранилище сертификатов на компьютере, используйте следующую команду, чтобы зарегистрировать его в службе HGS:
+2. На компьютере HGS используйте командлет [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver), чтобы включить привязку HTTPS и указать сертификат TLS, полученный на предыдущем шаге. Если сертификат уже установлен в локальном хранилище сертификатов на компьютере, используйте следующую команду, чтобы зарегистрировать его в службе HGS:
 
     ```powershell
     # Note: you'll need to know the thumbprint for your certificate to configure HGS this way

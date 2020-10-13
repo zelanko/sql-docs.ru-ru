@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 425a463cce75440a40551b0487015bd2d39c203a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bca6797111b59257e96e447fc3d9e4ba9ba8bb80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480283"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890884"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Администрирование серверов с помощью управления на основе политик
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "89480283"
   
  Для политик, выполненных с ошибкой, обозреватель объектов формирует предупреждение о критическом состоянии в виде красного значка рядом с целью и узлами, расположенными выше в дереве обозревателя объектов.  
   
-> **ПРИМЕЧАНИЕ.** Когда система вычисляет набор объектов для политики, системные объекты исключаются из него по умолчанию.  Например, если набор объектов для политики относится ко всем таблицам, политика будет неприменима к системным таблицам. Если пользователям требуется оценить политику, используя системные объекты, их можно явно добавить в набор объектов. Однако несмотря на то, что все политики поддерживаются режимом оценки **проверка по расписанию** , в режиме **проверка при внесении изменений** по соображениям производительности поддерживаются не все политики с обязательными наборами объектов. Дополнительные сведения см. в разделе [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes)  
+> **ПРИМЕЧАНИЕ.** Когда система вычисляет набор объектов для политики, системные объекты исключаются из него по умолчанию.  Например, если набор объектов для политики относится ко всем таблицам, политика будет неприменима к системным таблицам. Если пользователям требуется оценить политику, используя системные объекты, их можно явно добавить в набор объектов. Однако несмотря на то, что все политики поддерживаются режимом оценки **проверка по расписанию** , в режиме **проверка при внесении изменений** по соображениям производительности поддерживаются не все политики с обязательными наборами объектов. Дополнительные сведения см. в разделе [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](/archive/blogs/sqlpbm/policy-evaluation-modes)  
   
 ## <a name="three-policy-based-management-components"></a>Три компонента управления на основе политик  
  Управление на основе политик включает три следующих компонента.  
@@ -119,4 +119,4 @@ ms.locfileid: "89480283"
  
  - [Урок 1. Создание и применение политики, отключенной по умолчанию](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [Занятие 2. Создание и применение политики стандартов именования](lesson-2-create-and-apply-a-naming-standards-policy.md)
- - [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ - [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)

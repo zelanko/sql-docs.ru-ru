@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c691d1e4a6164087ee3bee776e27a786f68effe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519401"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809280"
 ---
 # <a name="create-a-full-database-backup"></a>Создание полной резервной копии базы данных
 
@@ -208,7 +208,7 @@ GO
 
 В приведенном ниже примере выполняется полное резервное копирование базы данных `SQLTestDB` в службу хранилища BLOB-объектов Azure. В нем предполагается, что у вас уже есть учетная запись хранения с контейнером больших двоичных объектов. В этом примере создается подписанный URL-адрес. Если у контейнера уже есть подписанный URL-адрес, пример завершается сбоем.
 
-Если у вас нет контейнера больших двоичных объектов Azure в учетной записи хранения, создайте его, прежде чем продолжить. Дополнительные сведения см. в разделах [Создание учетной записи хранения общего назначения](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) и [Создание контейнера](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+Если у вас нет контейнера больших двоичных объектов Azure в учетной записи хранения, создайте его, прежде чем продолжить. Дополнительные сведения см. в разделах [Создание учетной записи хранения общего назначения](/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) и [Создание контейнера](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. После подключения к соответствующему экземпляру [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в **обозревателе объектов** разверните дерево сервера.
 
@@ -368,7 +368,7 @@ GO
 > [!NOTE]
 > Для этих примеров требуется модуль SqlServer. Чтобы определить, установлен ли он, выполните команду `Get-Module -Name SqlServer`. Чтобы установить этот модуль, выполните команду `Install-Module -Name SqlServer` в рамках сеанса администратора PowerShell.
 >
-> Дополнительные сведения см. в статье [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).
+> Дополнительные сведения см. в статье [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
 
 > [!IMPORTANT]
 > При открытии окна PowerShell из SQL Server Management Studio для подключения к установке SQL Server можно опустить учетные данные из этого примера, так как для установления соединения между PowerShell и экземпляром SQL Server автоматически используются ваши учетные данные в SSMS.
@@ -379,7 +379,7 @@ GO
 
 В следующем примере создается полная резервная копия базы данных `<myDatabase>` в заданном по умолчанию расположении резервного копирования на экземпляре сервера `Computer\Instance`. Дополнительно в этом примере указывается параметр **-BackupAction Database**.
 
-Полный синтаксис и дополнительные примеры см. в разделе [Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase).
+Полный синтаксис и дополнительные примеры см. в разделе [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase).
 
 ```powershell
 $credential = Get-Credential

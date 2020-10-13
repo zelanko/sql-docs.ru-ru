@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b471d7e0f6ab13c5718e1ec37a87d423e7115f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420928"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869416"
 ---
 # <a name="linked-servers-database-engine"></a>Связанные серверы (компонент Database Engine)
 
@@ -34,7 +34,7 @@ ms.locfileid: "88420928"
   Связанные серверы позволяют [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] вести чтение данных из удаленных источников данных и выполнять команды на удаленных серверах баз данных (например, источниках данных OLE DB) за пределами экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно связанные серверы настроены на включение компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , включающей таблицы в другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или другом продукте для работы с базами данных, например Oracle. В качестве связанных серверов можно настроить источники данных OLE DB многих типов, в том числе [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel и Azure CosmosDB.
 
 > [!NOTE]
-> Связанные серверы доступны в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. Они не включены в отдельные базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и эластичные пулы. Существуют некоторые ограничения для управляемых экземпляров, описание которых можно найти [здесь](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> Связанные серверы доступны в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. Они не включены в отдельные базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и эластичные пулы. Существуют некоторые ограничения для управляемых экземпляров, описание которых можно найти [здесь](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
 ## <a name="when-to-use-linked-servers"></a>Когда использовать связанные серверы?
 
@@ -76,7 +76,7 @@ ms.locfileid: "88420928"
 > При использовании поставщика OLE DB учетная запись, под которой выполняется служба сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должна иметь разрешения на чтение и выполнение для каталога и всех его подкаталогов, в котором установлен поставщик. Сюда входят поставщики, выпущенные корпорацией Майкрософт, и любые сторонние поставщики.
 
 > [!NOTE]
-> Связанные серверы поддерживают сквозную проверку подлинности Active Directory при использовании полного делегирования. Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, также поддерживается сквозная проверка подлинности с ограниченным делегированием. Однако [ограниченное делегирование на основе ресурсов](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) не поддерживается.
+> Связанные серверы поддерживают сквозную проверку подлинности Active Directory при использовании полного делегирования. Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, также поддерживается сквозная проверка подлинности с ограниченным делегированием. Однако [ограниченное делегирование на основе ресурсов](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) не поддерживается.
 
 ## <a name="managing-providers"></a>Управление поставщиками  
 Имеется набор параметров, определяющих, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] загружает и использует поставщики OLE DB, заданные в реестре.  
@@ -107,5 +107,4 @@ ms.locfileid: "88420928"
   
 ## <a name="related-content"></a>См. также  
  [sys.servers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
- [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)

@@ -1,8 +1,8 @@
 ---
 title: Репликация SQL Server в Linux
 description: Сведения о том, как SQL Server 2017 (14.x) (накопительный пакет обновления 18) и более поздних версий поддерживают репликацию SQL Server для экземпляров SQL Server на Linux.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/09/2019
 ms.topic: article
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e705c463977bf355554ed1d242232649702d276
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 7faa2b0101ee1f54484fce2a0756812a4ad611e1
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088843"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785013"
 ---
 # <a name="sql-server-replication-on-linux"></a>Репликация SQL Server в Linux
 

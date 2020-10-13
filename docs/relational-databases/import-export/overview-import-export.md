@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c2f1b8e4a711081bb998c6417c90e28b7638e508
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e8e0c926a81d97561a16928dc33af406c69469ae
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001185"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868802"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Импорт и экспорт данных в SQL Server и базе данных SQL Azure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "86001185"
 ### <a name="design-your-own-import-or-export"></a>Разработка собственного импорта и экспорта
 Если вы хотите настроить свой собственный вариант импорта данных, воспользуйтесь следующими функциями или службами.
 -   SQL Server Integration Services Дополнительные сведения см. в разделе [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md).
--   Фабрика данных Azure Дополнительные сведения см. в разделе [Введение в фабрику данных Azure](https://docs.microsoft.com/azure/data-factory/data-factory-introduction).
+-   Фабрика данных Azure Дополнительные сведения см. в разделе [Введение в фабрику данных Azure](/azure/data-factory/data-factory-introduction).
 
 ## <a name="data-formats-for-import-and-export"></a>Форматы данных для импорта и экспорта
 
@@ -53,7 +53,7 @@ ms.locfileid: "86001185"
 Вы можете выполнять импорт и экспорт данных в виде неструктурированных файлов, а также во множестве других форматов, в виде реляционных баз данных и облачных служб. Дополнительные сведения об использовании этих вариантов в конкретных инструментах см. в следующих разделах.
 -   Сведения о мастере импорта и экспорта SQL Server см. в разделе [Подключение к источникам данных с помощью мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md).
 -   Сведения о SQL Server Integration Services см. в разделе [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).
--   Сведения о фабрике данных Azure см. в разделе [Соединители фабрики данных Azure](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector).
+-   Сведения о фабрике данных Azure см. в разделе [Соединители фабрики данных Azure](/azure/data-factory/data-factory-amazon-redshift-connector).
 
 ### <a name="commonly-used-data-formats"></a>Часто используемые форматы данных
 

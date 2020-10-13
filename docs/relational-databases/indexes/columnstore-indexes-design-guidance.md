@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2af78d5af858f6faad29c8baaf260610f377cb4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409180"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868656"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Руководство по проектированию индексов columnstore
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88409180"
 * Столбцу требуется тип данных varchar(max), nvarchar(max) или varbinary(max). Спроектируйте индекс columnstore таким образом, чтобы он не включал эти столбцы.
 * Данные таблицы не постоянные. Используйте кучу или временную таблицу для быстрого сохранения и удаления данных.
 * В таблице содержится меньше миллиона строк на секцию. 
-* Обновления и удаления составляют более 10 % операций в таблице. Большое количество операций обновления и удаления вызывает фрагментацию. Фрагментация влияет на степень сжатия и производительность запроса. Операция реорганизации позволяет передать все данные в индекс columnstore и устраняет фрагментацию. Дополнительные сведения см. в статье [Minimizing index fragmentation in columnstore index](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/) (Минимизация фрагментации индекса в индексах columnstore).
+* Обновления и удаления составляют более 10 % операций в таблице. Большое количество операций обновления и удаления вызывает фрагментацию. Фрагментация влияет на степень сжатия и производительность запроса. Операция реорганизации позволяет передать все данные в индекс columnstore и устраняет фрагментацию. Дополнительные сведения см. в статье [Minimizing index fragmentation in columnstore index](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command) (Минимизация фрагментации индекса в индексах columnstore).
 
 Дополнительные сведения см. в статье [Columnstore indexes — data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md) (Хранилище данных для индексов columnstore).
 
@@ -100,7 +100,7 @@ ms.locfileid: "88409180"
 
 Дополнительные сведения см. в статье [Get started with columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md) (Начало работы с индексами columnstore для получения операционной аналитики в реальном времени).
 
-Дополнительные сведения о выборе подходящего индекса columnstore см. в записи блога Сунила Агарвала (Sunil Agarwal) [Which columnstore index is right for my workload?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload) (Какие индексы columnstore подходят для моей рабочей нагрузки?).
+Дополнительные сведения о выборе подходящего индекса columnstore см. в записи блога Сунила Агарвала (Sunil Agarwal) [Which columnstore index is right for my workload?](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload) (Какие индексы columnstore подходят для моей рабочей нагрузки?).
 
 ## <a name="use-table-partitions-for-data-management-and-query-performance"></a>Использование секционированных таблиц для управления данными и повышения производительности запросов
 Индексы columnstore поддерживают секционирование, подходящее для управления данными и их архивирования. Секционирование также повышает производительность выполнения запросов путем ограничения операций одной или несколькими секциями.
@@ -130,7 +130,7 @@ ms.locfileid: "88409180"
 * Загрузите 1 000 000 строк в одну секцию или в несекционированную таблицу. Вы получите одну сжатую группу строк с 1 000 000 строк. Это удобно для высокого уровня сжатия данных и высокой производительности запросов.
 * Загрузите 1 000 000 строк с равномерным распределением по 10 секциям. Каждая секция получает по 100 000 строк. Это значение ниже минимального порога для сжатия columnstore. В результате индекс columnstore может иметь 10 разностных групп строк с 100 000 строк в каждой. Вы можете принудительно передать разностные группы строк в индекс columnstore. Тем не менее, если это единственные строки в индексе columnstore, сжатые группы строк будут слишком малы для максимального сжатия и максимальной производительности запросов.
 
-Дополнительные сведения о секционировании см. в записи блога Сунила Агарвала (Sunil Agarwal) [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/) (Следует ли секционировать индекс columnstore?).
+Дополнительные сведения о секционировании см. в записи блога Сунила Агарвала (Sunil Agarwal) [Should I partition my columnstore index?](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index) (Следует ли секционировать индекс columnstore?).
 
 ## <a name="choose-the-appropriate-data-compression-method"></a>Выбор подходящего метода сжатия
 Индекс columnstore предлагает два варианта сжатия данных: сжатие columnstore и сжатие архива. Способ сжатия можно выбрать при создании индекса или изменить его позже с помощью инструкции [ALTER INDEX... REBUILD](../../t-sql/statements/alter-index-transact-sql.md).
@@ -193,4 +193,3 @@ ms.locfileid: "88409180"
 * [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] — см. статью [CREATE TABLE (хранилище данных SQL Azure)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 Дополнительные сведения о преобразовании имеющейся кучи rowstore или индекса сбалансированного дерева в кластеризованный индекс columnstore или о создании некластеризованного индекса columnstore см. в статье [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
-

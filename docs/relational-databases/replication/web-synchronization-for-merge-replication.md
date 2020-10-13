@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9139d4e5b0ab2df1074774dc90af44bc711804ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7ddce7f64c33d0646f3d79aa91b75f05ff11ffe
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404480"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869270"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Веб-синхронизация для репликации слиянием
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88404480"
   
  Представители отдела информационных технологий [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] настраивают на портативных компьютерах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включают репликацию слиянием с использованием веб-синхронизации. Каждый из портативных компьютеров имеет в Интернете URL-адрес, указывающий на компоненты репликации, установленные на сервере [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS. Эти компоненты синхронизируют подписчика с издателем. Теперь каждый торговый представитель может, не пользуясь удаленным коммутируемым соединением, подключиться через любое доступное Интернет-соединение и передать или загрузить необходимые данные. При работе через Интернет-соединение используется протокол TLS (ранее — SSL), поэтому применение виртуальной частной сети (VPN) не потребуется.  
   
- Сведения о настройке компонентов, необходимых для веб-синхронизации, см. в статьях [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md), [Настройка сервера IIS для веб-синхронизации](../../relational-databases/replication/configure-iis-for-web-synchronization.md) и [Настройка сервера IIS 7 для веб-синхронизации](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
+ Сведения о настройке компонентов, необходимых для веб-синхронизации, см. в статьях [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md), [Настройка сервера IIS для веб-синхронизации](./configure-iis-7-for-web-synchronization.md) и [Настройка сервера IIS 7 для веб-синхронизации](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   
 > [!NOTE]  
 >  Веб-синхронизация рассчитана на работу с портативными компьютерами, карманными и другими клиентскими устройствами. Эта технология не предназначена для передачи больших объемов данных между серверными приложениями.  
@@ -85,5 +85,4 @@ ms.locfileid: "88404480"
 ## <a name="see-also"></a>См. также:  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
-  
   

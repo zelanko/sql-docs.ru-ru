@@ -12,12 +12,12 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e26bb81bb4289d2b60f069444230e6fb25142ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2600cee68204b3ec05c68e074cfc12d48cfee9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722440"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868525"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Собственная компиляция таблиц и хранимых процедур
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -149,7 +149,7 @@ GO
 
 Хранимые процедуры, которые отмечены как NATIVE_COMPILATION, компилируются в собственном коде. Это означает, что все инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в процедуре компилируются в машинный код для эффективного выполнения бизнес-логики, критической с точки зрения производительности.
 
-Дополнительные сведения о скомпилированных в собственном коде хранимых процедурах см. в разделе [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).
+Дополнительные сведения о скомпилированных в собственном коде хранимых процедурах см. в разделе [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 Рассмотрим следующий пример хранимой процедуры, которая вставляет строки в таблицу t1 из предыдущего примера:
 
@@ -212,6 +212,6 @@ GO
 
 ## <a name="see-also"></a>См. также:
 
-[Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Таблицы, оптимизированные для памяти](./sample-database-for-in-memory-oltp.md)
 
-[Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[Скомпилированные в собственном коде хранимые процедуры](./a-guide-to-query-processing-for-memory-optimized-tables.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e2d2fdefb8684a95c8c80376e0bb353125b911ab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6d34e2db139a4b38f073f693d3828f9d403c660
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642836"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809939"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Совместимость FILESTREAM с другими компонентами SQL Server
 
@@ -72,7 +72,7 @@ ms.locfileid: "85642836"
  Столбец **varbinary(max)** , атрибут FILESTREAM которого включен на издателе, может быть реплицирован на подписчик с атрибутом FILESTREAM или без него. Чтобы указать способ репликации этого столбца, используйте **диалоговое окно "Свойства статьи" —\<Article>** , @schema_option параметр хранимых процедур [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) или [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Данные, реплицированные в столбец типа **varbinary(max)** без атрибута FILESTREAM, не должны превышать установленный в 2 ГБ предел для данного типа данных; в противном случае формируется ошибка выполнения. Рекомендуется выполнять репликацию атрибута FILESTREAM, если данные не реплицируются в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Репликация таблиц со столбцами FILESTREAM на подписчики [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] не поддерживается, независимо установленного параметра схемы.  
   
 > [!NOTE]  
->  Репликация больших значений данных с подписчиков [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ограничена максимальным значением 256 МБ значений данных. Дополнительные сведения см. в разделе [Maximum Capacity Specifications](https://go.microsoft.com/fwlink/?LinkId=103810).  
+>  Репликация больших значений данных с подписчиков [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ограничена максимальным значением 256 МБ значений данных. Дополнительные сведения см. в разделе [Maximum Capacity Specifications](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
 ### <a name="considerations-for-transactional-replication"></a>Вопросы использования репликации транзакций  
  При использовании столбцов FILESTREAM в таблицах, опубликованных для репликации транзакций, обратите внимание на следующие положения.  
@@ -124,5 +124,4 @@ ms.locfileid: "85642836"
   
 ## <a name="see-also"></a>См. также:  
  [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-  
   

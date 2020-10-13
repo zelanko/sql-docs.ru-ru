@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: befee8aca5a1c9d7a66015a02c8851c56d0e5a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464925"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809550"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
 
@@ -74,7 +74,7 @@ ms.locfileid: "88464925"
 
 В планарной модели, или модели плоской Земли, измерение расстояний и площадей проводятся в таких же единицах измерения, в каких представляются координаты. При использовании типа данных **geometry** расстояние между точками (2, 2) и (5, 6) составляет пять единиц, независимо от используемых единиц.  
 
-В эллиптической модели, или модели круглой Земли, координаты указываются в градусах долготы и широты. Однако длины и площади обычно измеряются в метрах и квадратных метрах, хотя измерения могут зависеть от [идентификатора пространственной ссылки](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) экземпляра **geography**. Самой распространенной единицей измерения типа данных **geography** является метр.  
+В эллиптической модели, или модели круглой Земли, координаты указываются в градусах долготы и широты. Однако длины и площади обычно измеряются в метрах и квадратных метрах, хотя измерения могут зависеть от [идентификатора пространственной ссылки](./spatial-reference-identifiers-srids.md) экземпляра **geography**. Самой распространенной единицей измерения типа данных **geography** является метр.  
 
 ### <a name="orientation-of-spatial-data"></a>Ориентация пространственных данных
 
@@ -201,10 +201,10 @@ SELECT @g.ToString(), @g.STLength();
 
 ## <a name="see-also"></a>См. также раздел
 
-- [Пространственные данные (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
-- [Справочник по методам типа данных geometry](https://msdn.microsoft.com/library/bb933973.aspx)
-- [Справочник по методам типа данных geography](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)
+- [Пространственные данные (SQL Server)](./spatial-data-sql-server.md)
+- [Справочник по методам типа данных geometry](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [Справочник по методам типа данных geography](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves (тип данных geometry)](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves (тип данных geography)](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText (тип данных geometry)](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)
-- [STGeomFromText (тип данных geography)](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+- [STGeomFromText (тип данных geography)](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)

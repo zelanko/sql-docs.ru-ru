@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423388"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869401"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "88423388"
   
     -   **Создать из существующего полнотекстового списка стоп-слов**  
   
-     Дополнительные сведения см. в разделе [Создание списка полнотекстовых стоп-слов (страница "Общие")](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
+     Дополнительные сведения см. в разделе [Создание списка полнотекстовых стоп-слов (страница "Общие")](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130)).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ ms.locfileid: "88423388"
   
 4.  Щелкните правой кнопкой мыши список стоп-слов, свойства которого необходимо изменить, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне [Свойства полнотекстового списка стоп-слов](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) выполните указанные ниже действия.  
+5.  В диалоговом окне [Свойства полнотекстового списка стоп-слов](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) выполните указанные ниже действия.  
   
     1.  В списке **Действия** выберите одно из следующих действий: **Добавить стоп-слово**, **Удалить стоп-слово**, **Удалить все стоп-слова**или **Очистить список стоп-слов**.  
   
@@ -139,6 +139,5 @@ ms.locfileid: "88423388"
   
 ## <a name="upgrade-noise-words-from-sql-server-2005"></a>Обновление пропускаемых слов из SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пропускаемые слова были заменены стоп-словами. При обновлении базы данных с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]файлы пропускаемых слов более не используются. Однако файлы пропускаемых слов хранятся в папке FTDATA\FTNoiseThresaurusBak, и их можно использовать в дальнейшем при обновлении или построении соответствующих списков стоп-слов. Сведения об обновлении файлов пропускаемых слов с переходом к спискам стоп-слов см. в разделе [Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md).  
-  
   
   

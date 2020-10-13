@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636144"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869027"
 ---
 # <a name="server-level-roles"></a>Роли уровня сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91636144"
   
  В роли уровня сервера можно добавлять субъекты уровня сервера (имена входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], учетные записи Windows и группы Windows). Каждый член предопределенной роли сервера может добавлять другие имена входа к той же роли. Члены пользовательских ролей сервера не могут добавлять других участников на уровне сервера в роль.  
 > [!NOTE]
->  Разрешения уровня сервера недоступны в базе данных SQL или хранилище данных SQL. Дополнительные сведения о базе данных SQL см. в статье [Предоставление доступа к базе данных и управление им](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+>  Разрешения уровня сервера недоступны в базе данных SQL или хранилище данных SQL. Дополнительные сведения о базе данных SQL см. в статье [Предоставление доступа к базе данных и управление им](/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Предопределенные роли уровня сервера  
  В следующей таблице представлены предопределенные роли уровня сервера и их возможности.  
@@ -104,5 +104,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [REVOKE, отмена разрешений участника на уровне сервера (Transact-SQL)](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [DENY, запрет разрешения участника на уровне сервера (Transact-SQL)](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [Создание роли сервера](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
   

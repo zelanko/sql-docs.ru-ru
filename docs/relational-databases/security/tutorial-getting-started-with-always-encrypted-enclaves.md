@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279370"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868160"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство по Always Encrypted с безопасными анклавами в SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "86279370"
   - Intel VT-x с Extended Page Tables.
   - AMD-V с Rapid Virtualization Indexing.
   - Если [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] работает на виртуальной машине, низкоуровневая оболочка и физический ЦП должны предоставлять возможности вложенной виртуализации. 
-    - В Hyper-V 2016 или более поздней версии [включите расширения вложенной виртуализации на процессоре виртуальной машины](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
-    - В Azure выберите размер виртуальной машины, поддерживающий вложенную виртуализацию. Это все виртуальные машины серии v3, например Dv3 и Ev3. См. раздел [Create a nesting capable Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) (Создание виртуальной машины Azure с поддержкой вложения).
+    - В Hyper-V 2016 или более поздней версии [включите расширения вложенной виртуализации на процессоре виртуальной машины](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - В Azure выберите размер виртуальной машины, поддерживающий вложенную виртуализацию. Это все виртуальные машины серии v3, например Dv3 и Ev3. См. раздел [Create a nesting capable Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) (Создание виртуальной машины Azure с поддержкой вложения).
     - В VMWare vSphere 6.7 или более поздней версии включите для виртуальной машины поддержку технологии Virtualization Based Security (VBS), как описано в [документации VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Другие низкоуровневые оболочки и общедоступные облака могут поддерживать возможности вложенной виртуализации, позволяющие использовать Always Encrypted с анклавами VBS. Просмотрите сведения о совместимости и инструкции по настройке в документации по своему решению для виртуализации.
 - [SQL Server Management Studio (SSMS) версии не ниже 18.3](../../ssms/download-sql-server-management-studio-ssms.md).
@@ -264,7 +264,7 @@ ms.locfileid: "86279370"
     2. Выберите имя главного ключа столбца: **CMK1**.
     3. Убедитесь, что выбрано значение **Хранилище сертификатов Windows (текущий пользователь или локальный компьютер)** или **Azure Key Vault**.
     4. Выберите **Разрешить вычисления анклава**.
-    5. Если вы выбрали Azure Key Vault, войдите в Azure и выберите хранилище ключей. Дополнительные сведения о создании хранилища ключей для Always Encrypted см. в статье [Управление хранилищами ключей на портале Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
+    5. Если вы выбрали Azure Key Vault, войдите в Azure и выберите хранилище ключей. Дополнительные сведения о создании хранилища ключей для Always Encrypted см. в статье [Управление хранилищами ключей на портале Azure](/archive/blogs/kv/manage-your-key-vaults-from-new-azure-portal).
     6. Выберите сертификат или ключ Azure Key Vault, если он существует, или нажмите кнопку **Создать сертификат**, чтобы создать новый сертификат.
     7. Щелкните **ОК**.
 

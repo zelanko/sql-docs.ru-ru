@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719543"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890772"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> Дополнительные сведения о снижении потребления ресурсов профилированием запросов см. в записи блога [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Выбор разработчика: ход выполнения запроса — всегда и везде). 
+> Дополнительные сведения о снижении потребления ресурсов профилированием запросов см. в записи блога [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (Выбор разработчика: ход выполнения запроса — всегда и везде). 
 
 При выполнении сеанса расширенного события, использующего событие *query_thread_profile*, также заполняется динамическое административное представление [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) с помощью упрощенного профилирования, которое включает динамическую статистику запросов для всех сеансов при помощи [монитора активности](../../relational-databases/performance-monitor/activity-monitor.md) или прямого запроса динамического административного представления.
 
@@ -212,4 +212,4 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
  [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Действительный план выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [Динамическая статистика запросов](../../relational-databases/performance/live-query-statistics.md)      
+ [Динамическая статистика запросов](../../relational-databases/performance/live-query-statistics.md)

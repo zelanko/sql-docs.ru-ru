@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d3e1ad2ab6cda565e59268b063494c17941a81e5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6df2cae92398fdffafd4ef0e998c6f26a8103991
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780639"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869458"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,5 +116,4 @@ ms.locfileid: "85780639"
   
 Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] поддерживает автономные базы данных, подтвердите, что имя входа не удалено после преобразования в пользователя автономной базы данных.  
   
-Службы, запущенные от имени **NT AUTHORITY\NETWORK SERVICE**, должны использовать для локального соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аутентификацию по полному доменному имени компьютера. Дополнительные сведения см. в разделе [Как использовать учетную запись сетевой службы для доступа к ресурсам в ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
-  
+Службы, запущенные от имени **NT AUTHORITY\NETWORK SERVICE**, должны использовать для локального соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аутентификацию по полному доменному имени компьютера. Дополнительные сведения см. в разделе [Как использовать учетную запись сетевой службы для доступа к ресурсам в ASP.NET](/previous-versions/msp-n-p/ff647402(v=pandp.10))  

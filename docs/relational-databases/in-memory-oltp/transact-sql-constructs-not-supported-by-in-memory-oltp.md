@@ -12,12 +12,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753201"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868782"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85753201"
   
  Дополнительные сведения о поддерживаемых функциях для оптимизированных для памяти таблиц и скомпилированных в собственном коде хранимых процедур см. на следующих ресурсах:  
   
--   [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 -   [Поддержка Transact-SQL для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
 -   [Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
--   [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+-   [Скомпилированные в собственном коде хранимые процедуры](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 ## <a name="databases-that-use-in-memory-oltp"></a>Базы данных, использующие OLTP в памяти  
  В следующей таблице перечислены неподдерживаемые функции [!INCLUDE[tsql](../../includes/tsql-md.md)] , а также ключевые слова, которые могут присутствовать в тексте сообщения об ошибке, связанной с базой данных In-Memory OLTP. В таблице также перечислены пути устранения ошибки.  
@@ -110,7 +110,7 @@ ms.locfileid: "85753201"
 |Компонент|COMPUTE|Предложение **COMPUTE** не поддерживается. Удалите его из запроса.|  
 |Компонент|SELECT INTO|Предложение **INTO** в инструкции **SELECT** не поддерживается. Перепишите запрос в следующей форме: **INSERT INTO** _Таблица_ **SELECT**.|  
 |Компонент|неполный список вставки столбцов|В общем случае в инструкциях INSERT необходимо указывать значения для всех столбцов таблицы.<br /><br /> Тем не менее мы поддерживаем ограничения DEFAULT и столбцы IDENTITY(1,1) в оптимизированных для памяти таблицах. Эти столбцы могут присутствовать, но если должны присутствовать столбцы IDENTITY, они исключаются из списка столбцов INSERT.|  
-|Компонент|*Компонент*|Некоторые встроенные функции не поддерживаются в скомпилированных в собственном коде хранимых процедурах. Удалите такую функцию из хранимой процедуры. Дополнительные сведения о поддерживаемых встроенных функциях см. в следующих источниках:<br />[Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)<br />[Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|  
+|Компонент|*Компонент*|Некоторые встроенные функции не поддерживаются в скомпилированных в собственном коде хранимых процедурах. Удалите такую функцию из хранимой процедуры. Дополнительные сведения о поддерживаемых встроенных функциях см. в следующих источниках:<br />[Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)<br />[Скомпилированные в собственном коде хранимые процедуры](./a-guide-to-query-processing-for-memory-optimized-tables.md)|  
 |Компонент|CASE|**Область применения:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] и SQL Server, начиная с версии [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Выражения **CASE** не поддерживаются в запросах внутри скомпилированных в машинном коде хранимых процедур. Создайте запросы для каждого случая. Дополнительные сведения см. в статье [Реализация выражения CASE в скомпилированной в собственном коде хранимой процедуре](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] и SQL Server начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] поддерживают выражения CASE.|  
 |Компонент|INSERT EXECUTE|Удаление ссылки.|  
 |Компонент|EXECUTE|Поддерживается только скомпилированными в собственном коде хранимыми процедурами и определяемыми пользователем функциями.|  
@@ -147,7 +147,7 @@ ms.locfileid: "85753201"
 |Оператор|TSEQUAL|Данный оператор не поддерживается. Удалите **TSEQUAL** из скомпилированной хранимой процедуры.|  
 |Оператор|LIKE|Данный оператор не поддерживается. Удалите **LIKE** из скомпилированной хранимой процедуры.|  
 |Оператор|NEXT VALUE FOR|Из скомпилированных хранимых процедур нельзя обращаться к последовательностям. Получите значение, используя интерпретируемый код [!INCLUDE[tsql](../../includes/tsql-md.md)], а затем передайте его в скомпилированную хранимую процедуру. Дополнительные сведения см. в статье [Реализация IDENTITY в таблице, оптимизированной для памяти](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md).|  
-|Параметр SET|*Параметр*|Параметры SET нельзя изменить внутри скомпилированных хранимых процедур. Некоторые параметры можно задать с помощью инструкции BEGIN ATOMIC. Дополнительные сведения см. в разделе об атомарных блоках в статье [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Параметр SET|*Параметр*|Параметры SET нельзя изменить внутри скомпилированных хранимых процедур. Некоторые параметры можно задать с помощью инструкции BEGIN ATOMIC. Дополнительные сведения см. в разделе об атомарных блоках в статье [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
 |Операнд|TABLESAMPLE|Данный оператор не поддерживается. Удалите **TABLESAMPLE** из скомпилированной хранимой процедуры.|  
 |Параметр|RECOMPILE|Компилируемые хранимые процедуры компилируются во время создания. Удалите **RECOMPILE** из определения процедуры.<br /><br /> Вы можете выполнить sp_recompile для скомпилированной в собственном коде хранимой процедуры, что приведет к повторной компиляции при следующем выполнении.|  
 |Параметр|ENCRYPTION|Этот параметр не поддерживается. Удалите **ENCRYPTION** из определения процедуры.|  
@@ -187,6 +187,5 @@ ms.locfileid: "85753201"
 |Компонент|DTC|Транзакции, осуществляющие доступ к оптимизированным для памяти таблицам, не могут быть распределенными транзакциями.|  
   
 ## <a name="see-also"></a>См. также:  
- [Миграция в In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Миграция в In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

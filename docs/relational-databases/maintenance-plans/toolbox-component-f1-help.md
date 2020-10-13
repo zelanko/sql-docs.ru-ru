@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2cc50fc56b82ac8e98a6bcbb4b31f7db5beb81c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 295eaa677578effd375e5443fd20e1f5ca368669
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420758"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868648"
 ---
 # <a name="toolbox-component-f1-help"></a>Справка F1 компонента «Область элементов»
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,4 +41,4 @@ ms.locfileid: "88420758"
   
 ## <a name="see-also"></a>См. также  
  [Использование панели элементов](../../ssms/use-the-toolbox.md)   
- [Выбор элементов инструментария (страница "Задачи обслуживания")](https://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
+ [Выбор элементов инструментария (страница "Задачи обслуживания")](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)

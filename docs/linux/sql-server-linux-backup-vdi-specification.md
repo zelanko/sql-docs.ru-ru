@@ -1,20 +1,20 @@
 ---
 title: Спецификация интерфейса виртуального устройства резервного копирования (VDI) — SQL Server на Linux
 description: Сведения об интерфейсах, предоставляемых клиентским пакетом SDK для интерфейса виртуального устройства (VDI) SQL Server на Linux.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 1580977da984e84bd244166651330ab91665c774
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 8351bf128b2e53e51b49020588c8ff1ba44422a7
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088994"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784817"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Спецификация клиентского пакета SDK для VDI SQL Server на Linux
 

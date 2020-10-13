@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89006f322ce113808deb989010b62ff9df49f04c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460238"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809470"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Занятие 2. Создание данных в иерархической таблице и управление ими
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "88460238"
 ## <a name="prerequisites"></a>Предварительные требования  
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Скачайте [примеры баз данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Скачайте [примеры баз данных AdventureWorks2017](../../samples/adventureworks-install-configure.md).
 
-См. инструкции по восстановлению резервной копии базы данных с помощью SSMS см. в статье: [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+См. инструкции по восстановлению резервной копии базы данных с помощью SSMS см. в статье: [Восстановление базы данных](../backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>Создание таблицы с помощью типа данных hierarchyid
 В следующем примере создается таблица EmployeeOrg, включающая данные о сотрудниках и их иерархическом подчинении. В этом примере в базе данных AdventureWorks2017 создается таблица (что не обязательно). Для простоты эта таблица содержит только 5 столбцов.  
@@ -392,4 +392,3 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
 Все организационное дерево, которое подчинялось Jill (Wanida и Kevin) теперь подчиняется Sariya.  
   
 Хранимую процедуру для реорганизации раздела иерархии можно найти в подразделе "Перемещение поддеревьев" раздела [Реорганизация раздела иерархии](../../relational-databases/hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
-  
