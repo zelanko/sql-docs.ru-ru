@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15e065410a32b0902ad065a1903f4e28da044149
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1babfbf6364371cbd1f96b310f29416b84f2b031
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488315"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984950"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Мастер поиска баз данных (выбор расположений) (Акцесстоскл)
 На странице Выбор расположений мастера поиска баз данных введите параметры поиска для поиска баз данных Access.  
   
 Чтобы открыть мастер поиска баз данных, в меню **файл** выберите пункт **найти базы данных**. Дополнительные сведения об использовании этого диалогового окна см. в разделе [Добавление и удаление файлов базы данных Access](adding-and-removing-access-database-files-accesstosql.md) .  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
 **Обзор**  
 Щелкните, чтобы просмотреть компьютер или сеть. Выберите папку или расположение для поиска, а затем нажмите кнопку **ОК**. Нажмите кнопку **Добавить** , чтобы добавить это расположение в список.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "88488315"
 **Добавление**  
 Добавляет расположение в текстовом поле путь к списку расположений.  
   
-**Replace**  
+**Заменить**  
 Если выбран элемент в списке расположений, элемент в текстовом поле путь заменит выбранный элемент.  
   
 **Удалить**  
@@ -58,7 +58,6 @@ ms.locfileid: "88488315"
 **Владелец**  
 Введите полное имя пользователя Windows для владельца. Это может быть отформатировано как *domain* \\ *пользователь*домена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Добавление и удаление файлов базы данных Access](adding-and-removing-access-database-files-accesstosql.md)  
-[Справочник по пользовательскому интерфейсу (доступ)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Справочник по пользовательскому интерфейсу (доступ)](./user-interface-reference-accesstosql.md)  

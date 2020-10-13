@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2454ec9d594977a89ddf867645bc7e2d8fe26e57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dbcef29550276241cb638b6224914e43e2e88ec
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454156"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988471"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Работа с проектами SSMA (DB2ToSQL)
 Чтобы перенести базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , сначала необходимо создать проект SSMA. Проект представляет собой файл, содержащий следующие сведения:  
@@ -116,10 +116,9 @@ SSMA содержит несколько параметров для преоб�
 3.  Чтобы повторно подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в меню **файл** выберите команду **повторное подключение к SQL Server**.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующим шагом процесса миграции является [Подключение к базе данных DB2](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
+Следующим шагом процесса миграции является [Подключение к базе данных DB2](./connecting-to-db2-database-db2tosql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Перенос баз данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [Подключение к базе данных DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
 [Подключение к SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
-  

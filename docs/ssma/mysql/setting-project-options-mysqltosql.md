@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 642d6df01fc5855ece9bd06ea2860de076f754bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df2a29b2d411c2502573ede95feefe9c1e061c5b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418430"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987900"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Настройка параметров проекта (MySQLToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры определяют способ преобразования объектов, способ переноса данных и способ, которым типы исходных данных сопоставляются с целевыми типами данных.  Прежде чем преобразовывать объекты в SQL Server или SQL Azure или переносить данные в SQL Server или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  
@@ -45,7 +45,7 @@ SSMA имеет пять наборов параметров проекта:
   
 -   Полное  
   
--   Другой  
+-   Особые настройки  
   
 Для большинства пользователей рекомендуется использовать режим по умолчанию. Оптимистичный режим сохраняет больше текущего синтаксиса MySQL и проще в чтении. Однако поддержание текущего синтаксиса может быть неточным. Если синтаксис MySQL необходимо преобразовать в эквивалентный SQL Server или синтаксис SQL Azure, то полный режим выполняет наиболее полное преобразование. Однако результирующий код может оказаться более трудным для чтения. В пользовательском режиме можно задать параметры.  
   
@@ -55,7 +55,7 @@ SSMA имеет пять наборов параметров проекта:
   
 -   [Параметры проекта &#40;миграция&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [Параметры проекта (графический пользовательский интерфейс) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Параметры проекта (графический пользовательский интерфейс) (SSMA Common)](../sybase/project-settings-gui-sybasetosql.md)  
   
 -   [Параметры проекта &#40;сопоставление типов&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
@@ -103,4 +103,3 @@ SSMA имеет пять наборов параметров проекта:
   
 ## <a name="see-also"></a>См. также:  
 [Сопоставление типов данных MySQL и SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
-  

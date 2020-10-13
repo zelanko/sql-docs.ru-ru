@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3dbf44933ae4abe26f5dacfc79bad0d971bfe5ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bc5427d17a8678e81ee148d247d743bda9d53ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492449"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988720"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Параметры миграции данных (MySQLToSQL)
   
 ## <a name="data-migration-settings"></a>Параметры миграции данных  
 **Параметры переноса данных** позволяют пользователю создавать пользовательские запросы для переноса данных.  
   
--   Эта вкладка доступна, если для параметра **Параметры расширенной миграции данных** задано значение **Показать** и она скрыта, если параметру задано значение **скрывать** в параметрах проекта. Дополнительные сведения о параметрах миграции проекта см. в разделе [Параметры проекта (миграция)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) .  
+-   Эта вкладка доступна, если для параметра **Параметры расширенной миграции данных** задано значение **Показать** и она скрыта, если параметру задано значение **скрывать** в параметрах проекта. Дополнительные сведения о параметрах миграции проекта см. в разделе [Параметры проекта (миграция)](./project-settings-migration-mysqltosql.md) .  
   
 -   Анализ пользовательских инструкций SQL будет реализован на вкладке " **Параметры переноса данных** " узла "Таблица".  
   
@@ -52,6 +52,5 @@ ms.locfileid: "88492449"
   
 -   **Отмена:** Нажмите кнопку **"Отмена"** , чтобы восстановить параметры до внесения изменений.  
   
-## <a name="see-also"></a>См. также  
-[Перенос данных MySQL в SQL Server и SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
-  
+## <a name="see-also"></a>См. также:  
+[Перенос данных MySQL в SQL Server и SQL Azure](./migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  

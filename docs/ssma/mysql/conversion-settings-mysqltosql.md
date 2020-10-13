@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7547984e97bb47a640c162743fe0b069b38f7dff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1652913173dcd7427515db8c74d15afc75077820
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418470"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988640"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Параметры преобразования (MySQLToSQL)
 Вкладка **"Параметры"** позволяет пользователю задавать параметры уровня узла. Вкладка будет доступна на следующих узлах метабазы:  
@@ -67,7 +67,7 @@ ms.locfileid: "88418470"
   
         -   Да  
   
-        -   Нет  
+        -   нет  
   
         -   Преобразование в соответствии с параметрами проекта  
   
@@ -76,5 +76,4 @@ ms.locfileid: "88418470"
     3.  Параметры, сделанные пользователем, сохраняются в файле каскадных настроек при нажатии кнопки **Применить** .  
   
 ## <a name="see-also"></a>См. также:  
-[Параметры проекта (преобразование) (MySQL to SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
-  
+[Параметры проекта (преобразование) (MySQL to SQL)](./project-settings-conversion-mysqltosql.md)  

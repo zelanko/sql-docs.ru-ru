@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2b1aeed74dc475d3e14130ace1772ce5f604d63b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 973d2ec0a740e07aac94a4f44ab08051294d5128
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488327"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985015"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Мастер поиска баз данных (выбор файлов) (Акцесстоскл)
 На странице Выбор файлов мастера поиска баз данных перечислены файлы, найденные во время поиска. Чтобы выбрать файл для добавления в SSMA, выберите строку, содержащую имя файла. Завершив выбор файлов, нажмите кнопку **Далее** , чтобы просмотреть страницу Проверка выбора.  
@@ -26,7 +26,7 @@ ms.locfileid: "88488327"
   
 Чтобы выбрать файл для добавления в SSMA, установите флажок рядом с именем файла. Завершив выбор файлов, нажмите кнопку **Далее** , чтобы перейти на страницу завершения.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
 **Выбрать все**  
 Установите этот флажок, чтобы выбрать все базы данных в списке.  
   
@@ -51,6 +51,5 @@ ms.locfileid: "88488327"
 **Изменен**  
 Дата и время последнего обновления базы данных.  
   
-## <a name="see-also"></a>См. также  
-[Справочник по пользовательскому интерфейсу (доступ)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+## <a name="see-also"></a>См. также:  
+[Справочник по пользовательскому интерфейсу (доступ)](./user-interface-reference-accesstosql.md)  

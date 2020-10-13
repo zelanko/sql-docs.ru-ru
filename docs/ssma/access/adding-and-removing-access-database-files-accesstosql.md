@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 597de64479014e44f38c7073b6bc88e76a3137b4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 12c51ce9a3b4bdd83a1d1c4c7295f2ff438bc707
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934145"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987720"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Добавление и удаление файлов базы данных Access (Акцесстоскл)
 Чтобы перенести данные доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, необходимо добавить одну или несколько баз данных Access в проект SSMA. Эти базы данных должны иметь доступ к 97 или более поздним версиям. При наличии баз данных из более ранней версии Access необходимо преобразовать базы данных в более новую версию. Это можно сделать, открыв и сохранив базы данных в Access 97 или более поздней версии, прежде чем добавлять их в SSMA.  
@@ -129,9 +129,8 @@ ms.locfileid: "87934145"
 2.  Щелкните правой кнопкой мыши базу данных и выберите пункт **Удалить базу данных**.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующим шагом процесса миграции является [Подключение к SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+Следующим шагом процесса миграции является [Подключение к SQL Server](../sybase/connecting-to-sql-server-sybasetosql.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [создание проектов и управление ими](creating-and-managing-projects-accesstosql.md)  
-  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418560"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985130"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Преобразование схем DB2 (DB2ToSQL)
 После подключения к DB2, подключения к и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настройки параметров проекта и сопоставления данных можно преобразовать объекты базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных.  
@@ -70,7 +70,7 @@ ms.locfileid: "88418560"
 |Переменные|Сопоставляются.|  
 |Исключения, обработчики и условия|**SSMA сопоставляет "обработку исключений" со следующими исключениями:**<br /><br />Обработчики выхода — сопоставляются.<br /><br />Обработчики отмены-сопоставлены.<br /><br />Обработчики CONTINUE — не сопоставлены.<br /><br />Условия — она не сопоставляется с семантикой SQL Server.|  
 |Динамический SQL|Не сопоставлено.|  
-|Псевдонимы|Сопоставляются.|  
+|Aliases|Сопоставляются.|  
 |Псевдонимы|Частичное сопоставление. Для базового объекта требуется ручная обработка|  
 |Синонимы|Сопоставляются.|  
 |Стандартные функции в DB2|SSMA сопоставляет стандартные функции DB2, если в SQL Server доступен эквивалентная функция:|  
@@ -147,8 +147,7 @@ ms.locfileid: "88418560"
 -   Вы можете исключить объект из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателе метаданных и обозревателе МЕТАДАННЫХ DB2 снимите флажок рядом с элементом перед загрузкой объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и миграции данных из DB2.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующим шагом процесса миграции является [Загрузка преобразованных объектов в SQL Server](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
+Следующим шагом процесса миграции является [Загрузка преобразованных объектов в SQL Server](./loading-converted-database-objects-into-sql-server-db2tosql.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Перенос данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

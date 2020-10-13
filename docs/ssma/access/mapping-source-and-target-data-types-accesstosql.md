@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497852"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988700"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Сопоставление исходных и целевых типов данных (Акцесстоскл)
 Типы баз данных Access отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных. При преобразовании объектов базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты необходимо указать, как сопоставлять типы данных из Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих процедурах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
-SSMA имеет набор сопоставлений типов данных по умолчанию. Список сопоставлений по умолчанию см. в разделе [Параметры проекта (сопоставление типов)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+SSMA имеет набор сопоставлений типов данных по умолчанию. Список сопоставлений по умолчанию см. в разделе [Параметры проекта (сопоставление типов)](./project-settings-type-mapping-accesstosql.md).  
   
 ## <a name="customizing-data-type-mappings"></a>Настройка сопоставлений типов данных  
 С помощью диалогового окна « **Параметры проекта** » можно настроить сопоставление типов для всех баз данных и объектов базы данных в проекте. Сопоставления типов для проекта применяются ко всем базам данных и объектам базы данных, не имеющим пользовательских сопоставлений типов.  
@@ -91,6 +91,5 @@ SSMA имеет набор сопоставлений типов данных п
 ## <a name="next-steps"></a>Next Steps  
 Следующим шагом процесса миграции является [Преобразование объектов базы данных Access в объекты SQL Server](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

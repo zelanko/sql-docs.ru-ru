@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ddd074654a12d6eb837b9e9fc9a152c7ec1e75b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e89edc66dee92fb74071de952e056d99c91cbf12
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497786"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985040"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (DB2ToSQL)
 После преобразования схем DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно загрузить итоговые объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно либо создать объекты SSMA, либо создавать сценарии для объектов и выполнять сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные фактическим содержимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.  
@@ -104,8 +104,7 @@ ms.locfileid: "88497786"
 После загрузки преобразованных объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно предоставлять и запрещать разрешения на эти объекты. Рекомендуется сделать это перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о защите объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе «вопросы безопасности для баз данных и приложений баз данных» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующим шагом процесса миграции является [Перенос данных DB2 в SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
+Следующим шагом процесса миграции является [Перенос данных DB2 в SQL Server](./migrating-db2-data-into-sql-server-db2tosql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Перенос данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

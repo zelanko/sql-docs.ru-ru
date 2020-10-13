@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c44f7af6972c316322d4a81b7de9fa13b77205a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc1cdb31969eb94c29a6c58f974aef92c5cdfc62
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488317"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988660"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>Перенос данных Access в SQL Server — база данных SQL Azure (Акцесстоскл)
 После успешного создания объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно выполнить перенос данных из Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
   
 ## <a name="setting-migration-options"></a>Настройка параметров миграции  
-Перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure проверьте параметры миграции проекта в диалоговом окне " **Параметры проекта** ". В этом диалоговом окне можно задать размер пакета миграции, блокировку таблиц, проверку ограничений, срабатывание триггера вставки, обработку значений Identity и NULL, а также как обрабатывать даты, находящиеся вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] диапазона. Дополнительные сведения см. в разделе [Параметры проекта (миграция)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+Перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure проверьте параметры миграции проекта в диалоговом окне " **Параметры проекта** ". В этом диалоговом окне можно задать размер пакета миграции, блокировку таблиц, проверку ограничений, срабатывание триггера вставки, обработку значений Identity и NULL, а также как обрабатывать даты, находящиеся вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] диапазона. Дополнительные сведения см. в разделе [Параметры проекта (миграция)](./project-settings-migration-accesstosql.md).  
   
 ## <a name="migrating-data"></a>Перенос данных  
 Миграция данных — это операция групповой загрузки, которая перемещает строки данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure в транзакциях. Число строк, загружаемых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure в каждой транзакции, настраивается в параметрах проекта.  
@@ -54,7 +54,6 @@ ms.locfileid: "88488317"
 ## <a name="next-step"></a>Следующий шаг  
 Если у вас есть доступ к приложениям базы данных, которые вы хотите продолжить использовать после миграции, свяжите таблицы базы данных Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицами или SQL Azure. Дополнительные сведения см. [в разделе Связывание приложений Access с SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Настройка параметров преобразования и миграции](setting-conversion-and-migration-options-accesstosql.md)  
-  

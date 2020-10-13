@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cfcf6b812d820685fd2d960066b69037fc3ed5c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b612ec00ecebf5dd9e4cd2cf803567f1d7dfc149
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492467"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988447"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>Создание файлов переменных значений (MySQLToSQL)
 Файл значения переменной — это XML-файл, состоящий из значений параметров таких команд, как, имя исходного или целевого сервера, которое часто меняются при миграции с одного сервера на другой. При выполнении большого количества миграций базы данных создается несколько переменных файлов для хранения значений каждого исходного сервера и на них указывают ссылки в файле главного сценария с помощью параметра **-v** в командной строке. Это помогает поддерживать статические значения в нескольких файлах скриптов с переменными значениями в нескольких файлах переменных.  
@@ -94,5 +94,4 @@ ms.locfileid: "88492467"
 Следующий шаг в работе консоли — [Создание файлов подключения к серверу &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Создание файлов подключения к серверу (MySQL)](https://msdn.microsoft.com/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
-  
+[Создание файлов подключения к серверу (MySQL)](./creating-the-server-connection-files-mysqltosql.md)  
