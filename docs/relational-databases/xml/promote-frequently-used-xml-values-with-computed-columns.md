@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5881835f6a415b47825181d7d5a74ec24677e3c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772093"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891944"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Продвижение часто используемых XML-значений с помощью вычисляемых столбцов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  Чтобы реализовать это решение, создайте сначала потоковую функцию CLR. Тип данных **xml** представляется в ADO.NET как управляемый класс SqlXml с поддержкой метода **CreateReader()** , возвращающего объект класса XmlReader.  
   
 > [!NOTE]  
->  В примере данного раздела используются классы XPathDocument и XPathNavigator, которые вынуждают программиста загрузить в память все XML-документы. Используя подобный код в своих приложениях для обработки нескольких крупных XML-документов, знайте, что он плохо масштабируется. Старайтесь свести к минимуму число операций выделения памяти и используйте во всех возможных случаях потоковые интерфейсы. Дополнительные сведения о производительности см. в разделе [Архитектура интеграции со средой CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  В примере данного раздела используются классы XPathDocument и XPathNavigator, которые вынуждают программиста загрузить в память все XML-документы. Используя подобный код в своих приложениях для обработки нескольких крупных XML-документов, знайте, что он плохо масштабируется. Старайтесь свести к минимуму число операций выделения памяти и используйте во всех возможных случаях потоковые интерфейсы. Дополнительные сведения о производительности см. в разделе [Архитектура интеграции со средой CLR](../clr-integration/clr-integration-architecture-clr-hosted-environment.md).  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -257,5 +257,4 @@ as
   
 ## <a name="see-also"></a>См. также:  
  [Использование XML в вычисляемых столбцах](../../relational-databases/xml/use-xml-in-computed-columns.md)  
-  
   

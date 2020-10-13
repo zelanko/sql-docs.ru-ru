@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0b5f120e82f44966d42a9c511f8c240e9d74c493
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0dd256b071ce3621f02e6c4a6a152670e2fd5c0f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458621"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892224"
 ---
 # <a name="use-sql-server-objects"></a>Использование объектов SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86458621"
   
  В некоторых объектах содержится несколько экземпляров разных ресурсов данного типа, существующих на компьютере. Например, у типа объектов **Процессор** будет несколько экземпляров, если в системе установлено несколько процессоров. У типа объектов **Базы данных** будет по одному экземпляру для каждой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. У некоторых типов объектов (например, у объекта **Диспетчер памяти** ) может быть только один экземпляр. Если у типа объектов несколько экземпляров, можно добавлять счетчики для отслеживания статистики каждого экземпляра или, во многих случаях, для всех экземпляров сразу. Счетчики для экземпляра по умолчанию отображаются в формате **SQLServer:** _\<object name>_ . Счетчики для именованных экземпляров отображаются в формате **MSSQL$** _\<instance name>_ **:** _\<counter name>_ или **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ .  
   
-Значения счетчиков производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаются с помощью счетчика производительности Windows (WPC). Некоторые значения счетчика не вычисляются напрямую с помощью [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет базовые значения для подсистемы WPC, которая выполняет необходимые вычисления (например, проценты). Динамическое административное представление [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) предоставляет все счетчики с исходным значением, созданным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Столбец `cntr_type` указывает тип счетчика. Способ обработки значений счетчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подсистемой WPC зависит от типа. Дополнительные сведения о типах счетчиков производительности см. в [документации по WMI](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types).
+Значения счетчиков производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаются с помощью счетчика производительности Windows (WPC). Некоторые значения счетчика не вычисляются напрямую с помощью [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет базовые значения для подсистемы WPC, которая выполняет необходимые вычисления (например, проценты). Динамическое административное представление [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) предоставляет все счетчики с исходным значением, созданным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Столбец `cntr_type` указывает тип счетчика. Способ обработки значений счетчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подсистемой WPC зависит от типа. Дополнительные сведения о типах счетчиков производительности см. в [документации по WMI](/windows/win32/wmisdk/wmi-performance-counter-types).
   
  Добавляя или удаляя счетчики в диаграмму и сохраняя ее параметры, можно указать объекты и счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с которых будут считываться данные при запуске системного монитора.  
   
@@ -144,5 +144,4 @@ ms.locfileid: "86458621"
 ## <a name="see-also"></a>См. также:  
  [Использование объектов производительности](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
-  
   

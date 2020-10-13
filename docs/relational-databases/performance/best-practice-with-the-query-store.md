@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529495"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891054"
 ---
 # <a name="best-practices-with-query-store"></a>Рекомендации по хранилищу запросов
 
@@ -28,13 +28,13 @@ ms.locfileid: "91529495"
 
 ## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a> Используйте последнюю версию [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] включает в себя набор пользовательских интерфейсов, предназначенных для настройки хранилища запросов и использования собранных данных о рабочей нагрузке. Скачайте последнюю версию [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [здесь](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] включает в себя набор пользовательских интерфейсов, предназначенных для настройки хранилища запросов и использования собранных данных о рабочей нагрузке. Скачайте последнюю версию [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [здесь](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Краткое описание того, как использовать хранилище запросов в сценариях устранения неполадок, см. в [блогах по хранилищу запросов @Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Используйте анализ производительности процессов в Базе данных SQL Azure
 
-При запуске хранилища запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно использовать [анализ производительности запросов](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) для анализа потребления ресурсов в динамике. С помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [Azure Data Studio](../../azure-data-studio/what-is.md) можно получить подробные сведения о потреблении ресурсов (ЦП, памяти и подсистемы ввода-вывода) всеми вашими запросами, а анализ производительности запросов обеспечивает быстрый и эффективный способ определения их влияния на общее использование DTU для базы данных. Дополнительные сведения см. в разделе [Анализ производительности запросов в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+При запуске хранилища запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно использовать [анализ производительности запросов](/azure/sql-database/sql-database-query-performance) для анализа потребления ресурсов в динамике. С помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [Azure Data Studio](../../azure-data-studio/what-is.md) можно получить подробные сведения о потреблении ресурсов (ЦП, памяти и подсистемы ввода-вывода) всеми вашими запросами, а анализ производительности запросов обеспечивает быстрый и эффективный способ определения их влияния на общее использование DTU для базы данных. Дополнительные сведения см. в разделе [Анализ производительности запросов в базе данных SQL Azure](/azure/azure-sql/database/query-performance-insight-use).
 
 В этом разделе описываются оптимальные настройки по умолчанию, призванные обеспечить надежную работу хранилища запросов и зависимых компонентов. По умолчанию конфигурация оптимизирована для постоянного сбора данных, т. е. для минимальной продолжительности состояний "Отключено" и "Только для чтения". Дополнительные сведения обо всех доступных параметрах хранилища запросов см. в разделе [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 

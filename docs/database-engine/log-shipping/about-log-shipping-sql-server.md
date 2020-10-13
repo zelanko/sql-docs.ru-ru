@@ -26,16 +26,16 @@ ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3909f2e2ce97bcfb02efe850cf4d9456ed396464
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf881487ff9d0b338aa9ef02849e2fa044481ebb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883502"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987618"
 ---
 # <a name="about-log-shipping-sql-server"></a>Сведения о доставке журналов (SQL Server)
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет автоматически отправлять резервные копии журналов транзакций из *базы данных-источника* экземпляра *сервера-источника* в одну или более *баз данных-получателей* других экземпляров *сервера-получателя* . Резервные копии журналов транзакций применяются к каждой из баз данных-получателей индивидуально. Необязательный третий экземпляр сервера, известный как *сервер мониторинга*, ведет журнал и отслеживает состояние операций резервного копирования и восстановления и при необходимости выдает предупреждение, если в этих запланированных операциях происходит сбой.  
   

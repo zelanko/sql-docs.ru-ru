@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cd8b8d0ecf3e7be9a8a68710c32e15b65497e173
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 83abd087cab67c0b048ed6333e912ac1edc76f7c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480976"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810165"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Удаленное хранилище больших двоичных объектов (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "89480976"
  Некоторые сторонние поставщики хранилищ разработали средства удаленного хранения больших двоичных объектов, которые соответствуют этим стандартным API-интерфейсам и поддерживают хранилища больших двоичных объектов на разных платформах.  
   
 ## <a name="rbs-requirements"></a>Требования к удаленным хранилищам больших двоичных объектов  
- - При работе с удаленным хранилищем больших двоичных объектов необходим выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise для главного сервера базы данных, на котором хранятся метаданные больших двоичных объектов.  Однако, если используется предоставленный поставщик FILESTREAM, сами большие двоичные объекты можно хранить в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]RBS требуется по меньшей мере версия 11 драйвера ODBC для [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] и версия 13 драйвера ODBC для [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Драйверы можно найти на странице [скачивания драйвера ODBC для SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).    
+ - При работе с удаленным хранилищем больших двоичных объектов необходим выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise для главного сервера базы данных, на котором хранятся метаданные больших двоичных объектов.  Однако, если используется предоставленный поставщик FILESTREAM, сами большие двоичные объекты можно хранить в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]RBS требуется по меньшей мере версия 11 драйвера ODBC для [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] и версия 13 драйвера ODBC для [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Драйверы можно найти на странице [скачивания драйвера ODBC для SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).    
   
  Удаленное хранилище больших двоичных объектов включает поставщик FILESTREAM, позволяющий использовать удаленное хранилище больших двоичных объектов для хранения больших двоичных объектов на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы применять RBS для хранения больших двоичных объектов в другом хранилище, необходимо использовать сторонний поставщик RBS, разработанный для этого хранилища, или разработать пользовательский поставщик RBS с помощью API-интерфейса RBS. Образец поставщика, хранящего большие двоичные объекты в файловой системе NTFS, доступен в качестве обучающего ресурса на сайте [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190).  
   
 ## <a name="rbs-security"></a>Безопасность удаленного хранилища больших двоичных объектов  
- Хорошим источником информации об этой возможности является блог группы разработчиков удаленного хранилища BLOB-объектов SQL. Модель безопасности RBS описана в записи блога [Модель безопасности RBS](https://docs.microsoft.com/archive/blogs/sqlrbs/rbs-security-model).  
+ Хорошим источником информации об этой возможности является блог группы разработчиков удаленного хранилища BLOB-объектов SQL. Модель безопасности RBS описана в записи блога [Модель безопасности RBS](/archive/blogs/sqlrbs/rbs-security-model).  
   
 ### <a name="custom-providers"></a>Настраиваемые поставщики  
  Если вы используете настраиваемых поставщиков для хранения больших двоичных объектов вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обязательно защищайте сохраненные большие двоичные объекты с помощью разрешений и параметров шифрования, подходящих для среды хранения, которая используется настраиваемым поставщиком.  
@@ -89,7 +89,7 @@ ms.locfileid: "89480976"
  Образцы RBS, доступные на сайте [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) , демонстрируют способ разработки приложения RBS, а также способ разработки и установки пользовательского поставщика хранилища RBS.  
   
  **Блог об RBS**  
- В [блоге по удаленному хранилищу больших двоичных объектов](https://docs.microsoft.com/archive/blogs/sqlrbs/) содержатся дополнительные сведения, которые помогут лучше понять принципы работы, развертывания и обслуживания удаленных хранилищ больших двоичных объектов.  
+ В [блоге по удаленному хранилищу больших двоичных объектов](/archive/blogs/sqlrbs/) содержатся дополнительные сведения, которые помогут лучше понять принципы работы, развертывания и обслуживания удаленных хранилищ больших двоичных объектов.  
   
 ##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> Скрипт смены ключей  
  Сценарий из этого примера создает хранимую процедуру с именем `sp_rotate_rbs_symmetric_credential_key` , которая заменяет используемый симметричный ключ хранилища учетных данных RBS на новый симметричный ключ  
@@ -241,5 +241,4 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
 ## <a name="see-also"></a>См. также:  
 [Удаленное хранилище больших двоичных объектов и группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)   
  [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
-  
   

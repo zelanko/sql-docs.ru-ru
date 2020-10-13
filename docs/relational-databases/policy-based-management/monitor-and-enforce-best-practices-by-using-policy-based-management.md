@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 189ce28ed2480a6efedd14c91a96ebae12c862e2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412770"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892164"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "91412770"
 |Имя политики|Правило рекомендации|  
 |-----------------|------------------------|  
 |Алгоритм шифрования асимметричных ключей|[Стойкость шифрования асимметричных ключей](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Размещение резервной копии и файла данных|[Файлы резервной копии и файлы базы данных должны находиться на отдельных устройствах](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Размещение резервной копии и файла данных|[Файлы резервной копии и файлы базы данных должны находиться на отдельных устройствах](../backup-restore/backup-devices-sql-server.md)|  
 |Расположение файлов данных и журнала|[Размещение файлов данных и файлов журнала на различных дисках](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Автоматическое закрытие базы данных|[Задание значения OFF для параметра базы данных AUTO_CLOSE](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Автоматическое сжатие базы данных|[Задание значения параметра базы данных AUTO_SHRINK, равного OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Параметры сортировки базы данных|[Задание параметров сортировки пользовательских баз данных в соответствии с параметрами баз данных master и model](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Параметры сортировки базы данных|[Задание параметров сортировки пользовательских баз данных в соответствии с параметрами баз данных master и model](/previous-versions/sql/sql-server-2016/bb402915(v=sql.130))|  
 |Проверка страниц базы данных|[Задание значения CHECKSUM для параметра базы данных PAGE_VERIFY](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Состояние страницы базы данных|[Проверка целостности базы данных с потенциально поврежденными страницами](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Разрешения гостя|[Разрешения гостя для пользовательских баз данных](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -70,5 +70,4 @@ ms.locfileid: "91412770"
   
 ## <a name="see-also"></a>См. также:  
  [Работа с аспектами управления на основе политик](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
-  
   

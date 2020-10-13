@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 246c9d419d6f9b8fdbaae2619ef45df4d9465c36
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785078"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892434"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Урок 2. Создание и применение политики стандартов именования
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "85785078"
 ## <a name="prerequisites"></a>Предварительные требования
 Для работы с этим руководством требуется среда SQL Server Management Studio и доступ к серверу SQL Server.
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
   
 ## <a name="create-the-finance-database"></a>Создание базы данных Finance  
@@ -160,4 +160,4 @@ ms.locfileid: "85785078"
 Список учебников см. в разделе [Учебные материалы по SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   
 ## <a name="see-also"></a>См. также:  
-[Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
+[Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)

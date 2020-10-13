@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 40763d6caadc420a3bb1794a4759c848d579007c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 137a4156dde6cfe89ff76998b383fb4ab17ea672
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173385"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891344"
 ---
 # <a name="polybase-transact-sql-reference"></a>Справочник по PolyBase Transact-SQL
 
@@ -198,7 +198,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Создание внешних таблиц для Azure Data Lake Store
 Область применения: Хранилище данных SQL Azure
 
-Дополнительные сведения см. в разделе [Загрузка с помощью Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
+Дополнительные сведения см. в разделе [Загрузка с помощью Azure Data Lake Store](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
 
 **1. Создание учетных данных области базы данных**   
 
@@ -567,5 +567,5 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 Примеры запросов см. в разделе [Запросы PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
 ## <a name="see-also"></a>См. также  
-[Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+[Приступая к работе с PolyBase](./polybase-guide.md)   
 [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)

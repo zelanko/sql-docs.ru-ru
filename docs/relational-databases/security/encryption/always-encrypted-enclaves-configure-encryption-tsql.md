@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90bb710e57e87bfb6bf86f4ae0543329a4500940
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490477"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863643"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Настройка шифрования столбцов на месте с помощью Transact-SQL
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88490477"
 В оставшейся части этой статьи описывается запуск шифрования на месте с помощью инструкции `ALTER TABLE`/`ALTER COLUMN` из SQL Server Management Studio. Кроме того, можно выполнить `ALTER TABLE`/`ALTER COLUMN` из приложения. 
 
 > [!NOTE]
-> В настоящее время средства, отличные от SSMS, включая командлет [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) в модуле SqlServer PowerShell и [sqlcmd](../../../tools/sqlcmd-utility.md), не поддерживают использование `ALTER TABLE`/`ALTER COLUMN` для криптографических операций на месте.
+> В настоящее время средства, отличные от SSMS, включая командлет [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) в модуле SqlServer PowerShell и [sqlcmd](../../../tools/sqlcmd-utility.md), не поддерживают использование `ALTER TABLE`/`ALTER COLUMN` для криптографических операций на месте.
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>Выполнение шифрования на месте с помощью Transact-SQL в среде SSMS
 ### <a name="pre-requisites"></a>Предварительные требования

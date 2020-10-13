@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411150"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868900"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>Регистрация компьютера в службе защиты узла
 
@@ -120,7 +120,7 @@ Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Atte
 | -------------------- | ---------------- | ---------- |
 | Идентификатор платформы  | Открытый ключ подтверждения в модуле TPM компьютера и сертификат ключа подтверждения от производителя модуля TPM. | 1 на каждый компьютер |
 | Базовые показатели TPM | Регистры конфигурации платформы (PCR) в модуле TPM, которые измеряют показатели конфигурации встроенного ПО и ОС, загруженной в процессе загрузки. К примерам относятся состояние безопасной загрузки и шифрование аварийных дампов. | Один базовый план на уникальную конфигурацию компьютера (для одинакового оборудования и программного обеспечения можно использовать один и тот же базовый план) |
-| Политика целостности кода | Надежная политика [управления приложениями в Защитнике Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) для защиты компьютеров | Одна на уникальную политику непрерывной интеграции, развернутую на компьютерах. |
+| Политика целостности кода | Надежная политика [управления приложениями в Защитнике Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) для защиты компьютеров | Одна на уникальную политику непрерывной интеграции, развернутую на компьютерах. |
 
 В HGS можно настроить более одного артефакта аттестации каждого типа для поддержки смешанного парка оборудования и программного обеспечения.
 Служба HGS требует, чтобы проходящий аттестацию компьютер соответствовал хотя бы одной политике из каждой категории.
@@ -147,7 +147,7 @@ Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Atte
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. Чтобы развернуть файл `allowall_cipolicy.bin` на компьютерах [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] с помощью [групповой политики](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy), выполните инструкции в [руководстве по развертыванию управления приложениями в Защитнике Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide). Для компьютеров из рабочей группы выполните тот же процесс в редакторе локальных групповых политик (`gpedit.msc`).
+2. Чтобы развернуть файл `allowall_cipolicy.bin` на компьютерах [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] с помощью [групповой политики](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy), выполните инструкции в [руководстве по развертыванию управления приложениями в Защитнике Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide). Для компьютеров из рабочей группы выполните тот же процесс в редакторе локальных групповых политик (`gpedit.msc`).
 
 3. На компьютерах [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] выполните команду `gpupdate /force`, чтобы настроить новую политику целостности кода, а затем перезагрузите компьютеры, чтобы применить политику.
 
@@ -243,7 +243,7 @@ Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputerna
 
 После регистрации компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] в службе HGS ([шаг 4А](#step-4a-register-a-computer-in-tpm-mode) для режима TPM или [шаг 4Б](#step-4b-register-a-computer-in-host-key-mode) для режима ключа узла) необходимо проверить возможность его успешной аттестации.
 
-Вы можете проверить конфигурацию клиента аттестации HGS и выполнить попытку аттестации в любое время с помощью командлета [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
+Вы можете проверить конфигурацию клиента аттестации HGS и выполнить попытку аттестации в любое время с помощью командлета [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
 Выходные данные команды будут выглядеть следующим образом:
 
 ```

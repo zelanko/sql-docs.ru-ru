@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 89907738aa2e496e082a633f00882a72de5c07aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ce6e6c625850f1723fe2e0bed6332404a3ef117
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781597"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869471"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Справочник по ошибкам и событиям (компонент Database Engine)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "85781597"
   
 |Ресурс|Описание|  
 |--------------|-----------------|  
-|[Сообщество SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Этот сайт содержит ссылки на группы новостей и форумы, контролируемые сообществом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Кроме того, здесь перечислены источники данных сообщества, такие как блоги и сайты. Сообщество [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оказывает значительную помощь, отвечая на вопросы, однако ответ не может быть гарантирован.|  
-|[Сообщество центра разработчиков SQL Server](/sql/sql-server/)|На этом сайте находятся группы новостей, форумы и другие источники сообщества, которые полезны для разработчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Сообщество SQL Server](../../sql-server/index.yml)|Этот сайт содержит ссылки на группы новостей и форумы, контролируемые сообществом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Кроме того, здесь перечислены источники данных сообщества, такие как блоги и сайты. Сообщество [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оказывает значительную помощь, отвечая на вопросы, однако ответ не может быть гарантирован.|  
+|[Сообщество центра разработчиков SQL Server](../../sql-server/index.yml)|На этом сайте находятся группы новостей, форумы и другие источники сообщества, которые полезны для разработчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Справка и поддержка Майкрософт](https://go.microsoft.com/fwlink/?linkid=16419)|Этот сайт можно использовать для обращения к специалисту службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
-  
   

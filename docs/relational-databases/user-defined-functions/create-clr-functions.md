@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97cbd5543bd73001f599a25eaa9a79f493f40f58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e7e7ba7e0e3f526c69026b9f759937d7329d50c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472923"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811078"
 ---
 # <a name="create-clr-functions"></a>Создание функций CLR
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88472923"
 -   [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>Доступ к машинному коду  
- Функции CLR можно использовать для доступа к собственному (неуправляемому) коду, например написанному на C или C++, посредством использования средства PInvoke из управляемого кода (подробнее см. в разделе [Вызов собственных функций из управляемого кода](https://go.microsoft.com/fwlink/?LinkID=181929) ). Это даст возможность повторно использовать устаревший код в виде определяемых пользователем функций CLR или писать критичные к производительности функции в собственном коде. Для этого потребуется использование сборки UNSAFE. Предупреждения, касающиеся использования сборок UNSAFE, см. в разделе [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) .  
+ Функции CLR можно использовать для доступа к собственному (неуправляемому) коду, например написанному на C или C++, посредством использования средства PInvoke из управляемого кода (подробнее см. в разделе [Вызов собственных функций из управляемого кода](/cpp/dotnet/calling-native-functions-from-managed-code) ). Это даст возможность повторно использовать устаревший код в виде определяемых пользователем функций CLR или писать критичные к производительности функции в собственном коде. Для этого потребуется использование сборки UNSAFE. Предупреждения, касающиеся использования сборок UNSAFE, см. в разделе [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) .  
   
 ## <a name="see-also"></a>См. также  
  [Создание определяемых пользователем функций (компонент Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
@@ -64,5 +64,4 @@ ms.locfileid: "88472923"
  [Выполнение определяемых пользователем функций](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   
  [Просмотр определяемых пользователем функций](../../relational-databases/user-defined-functions/view-user-defined-functions.md)   
  [Основные понятия о программировании интеграции со средой (CLR)](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

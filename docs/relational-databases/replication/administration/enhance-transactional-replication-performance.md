@@ -23,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3af77a60678e8286fadfbafcf46f742439e9bf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902592"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891124"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Повышение производительности репликации транзакций
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "86902592"
     - Увеличение значения **SubscriptionStreams** помогает повысить общую пропускную способность агента распространения, позволяя создать несколько подключений к подписчику для параллельного применения пакетов изменений. Но в зависимости от числа процессоров и других условий метаданных (таких как первичный ключ, внешние ключи, уникальные ограничения и индексы) использование более высокого значения SubscriptionStreams может привести к нежелательным результатам. Кроме того, если не удается осуществить или зафиксировать поток, агент распространения возвращается к режиму по умолчанию и пытается повторно обработать эти пакеты в одном потоке.
 
 
-Дополнительные сведения о проведенном тестировании см. в записи блога [Optimizing replication agent profile parameters for better performance](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/) (Оптимизация параметров профилей агента репликации для повышения производительности).
+Дополнительные сведения о проведенном тестировании см. в записи блога [Optimizing replication agent profile parameters for better performance](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance) (Оптимизация параметров профилей агента репликации для повышения производительности).
 
 
 ### <a name="log-reader-agent"></a>Агент чтения журнала.
@@ -162,5 +162,4 @@ ms.locfileid: "86902592"
 [Работа с профилями агента репликации](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Просмотр и изменение параметров командной строки агента репликации (среда SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   

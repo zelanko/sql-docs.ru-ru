@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480419"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810708"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Обзор процессов восстановления (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "89480419"
 
 -   На **стадии отката** выполняется откат незавершенных транзакций, обнаруженных в TАT, чтобы убедиться в сохранении целостности базы данных. После отката база данных включается в режим «в сети», и больше никакие резервные копии журнала транзакций не могут быть применены.
 
-Сведения о ходе каждой стадии восстановления базы данных заносятся в [журнал ошибок](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ход восстановления базы данных также можно отслеживать с помощью расширенных событий. Дополнительные сведения см. в записи блога [New extended events for database recovery progress](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/) (Новые расширенные события для процесса восстановления базы данных).
+Сведения о ходе каждой стадии восстановления базы данных заносятся в [журнал ошибок](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ход восстановления базы данных также можно отслеживать с помощью расширенных событий. Дополнительные сведения см. в записи блога [New extended events for database recovery progress](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress) (Новые расширенные события для процесса восстановления базы данных).
 
 > [!NOTE]
 > Для сценария поэтапного восстановления, если файловая группа доступна только для чтения с момента, предшествующего созданию резервной копии файловых групп, использование резервных копий журналов не требуется и эта группа пропускается при восстановлении файлов. 
@@ -174,9 +174,9 @@ ms.locfileid: "89480419"
   
 Дополнительные сведения о помощнике по восстановлению баз данных см. в блогах по управлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Помощник по восстановлению: общие сведения](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [Помощник по восстановлению: общие сведения](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [Помощник по восстановлению: использование среды SSMS для создания и восстановления раздельных резервных копий](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [Помощник по восстановлению: использование среды SSMS для создания и восстановления раздельных резервных копий](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Ускоренное восстановление баз данных.
 [Ускоренное восстановление базы данных](/azure/sql-database/sql-database-accelerated-database-recovery/) доступно в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ускоренное восстановление базы данных значительно улучшает доступность базы данных, особенно при наличии продолжительных транзакций, за счет перепроектирования [процесса восстановления](#TlogAndRecovery) [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. База данных, для которой было включено ускоренное восстановление, значительно быстрее восстанавливается после отработки отказа или другого неясного завершения работы. Если включено, ускоренное восстановление базы данных также значительно быстрее завершает откат отмененных продолжительных транзакций.
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Руководство по архитектуре журнала транзакций SQL Server и управлению им](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

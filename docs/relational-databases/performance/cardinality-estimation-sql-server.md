@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571d611fe49e590d65f0f9749660844328f6c9c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990177"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891004"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Оценка количества элементов (SQL Server)
 
@@ -159,7 +159,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-Сведения о расширенных событиях, адаптированных для [!INCLUDE[ssSDS](../../includes/sssds-md.md)], см. в разделе [Расширенные события в базе данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+Сведения о расширенных событиях, адаптированных для [!INCLUDE[ssSDS](../../includes/sssds-md.md)], см. в разделе [Расширенные события в базе данных SQL](/azure/azure-sql/database/xevent-db-diff-from-svr).  
   
 ## <a name="steps-to-assess-the-ce-version"></a>Процедура оценки версии CE  
   
@@ -290,9 +290,9 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>См. также:  
  [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)  
+ [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](/previous-versions/dn673537(v=msdn.10))  
  [Указания запросов](../../t-sql/queries/hints-transact-sql-query.md)     
  [Указания запросов USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Обновление баз данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
- [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)   
+ [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)

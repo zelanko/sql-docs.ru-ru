@@ -16,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ddf8c0360de470d5640ed650c4b8339061c41b4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463835"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810490"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Свойства столбца таблицы (среда SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88463835"
  Указывает, может ли тип данных для выбранного столбца быть определен точно.  
   
  **Опубликован через службы DTS**  
- Указывает, опубликован ли столбец через службы DTS. ([Службы DTS устарели](https://msdn.microsoft.com/library/cc707786(v=sql.130).aspx#Anchor_0)). 
+ Указывает, опубликован ли столбец через службы DTS. ([Службы DTS устарели](/previous-versions/sql/sql-server-2008-r2/cc707786(v=sql.105))). 
   
  **Спецификация полного текста**  
  Выводит данные о полнотекстовом индексе. Значение этого свойства совпадает со значением свойства потомка **С полнотекстовым индексом** и указывает, построен ли для данного столбца полнотекстовый индекс.  
@@ -137,5 +137,4 @@ ms.locfileid: "88463835"
   
 > [!NOTE]  
 >  Длина типов данных **(max)** различна для каждой строки. **sp_help** возвращает (-1) в качестве длины столбцов **(max)** . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображает значение -1 как размер столбца.  
-  
   

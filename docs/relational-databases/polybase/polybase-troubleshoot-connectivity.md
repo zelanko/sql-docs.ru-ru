@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: cc030aa9036c67b1175a99ef01eab47099b8fc36
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d037abd54cc0014289b949d7e00a2bf585d3a9e4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247305"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891334"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Устранение неполадок с подключением PolyBase к Kerberos
 
@@ -253,7 +253,7 @@ PolyBase пытается получить доступ к HDFS и не мож
 4. Если центр распространения ключей поддерживает только алгоритм AES256, должны быть установлены [файлы политик JCE](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 ## <a name="see-also"></a>См. также раздел
-[Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication) (Интеграция PolyBase и Cloudera с помощью аутентификации Active Directory)  
+[Integrating PolyBase with Cloudera using Active Directory Authentication](/archive/blogs/microsoftrservertigerteam/integrating-polybase-with-cloudera-using-active-directory-authentication) (Интеграция PolyBase и Cloudera с помощью аутентификации Active Directory)  
 [Руководство Cloudera по настройке Kerberos для CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Руководство Hortonworks по настройке Kerberos для HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
 [Устранение неполадок c PolyBase](polybase-troubleshooting.md)

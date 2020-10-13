@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 280fae3d260995a15a7baa9e40a861cb2cfdecc4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458338"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892234"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, реплика базы данных
 
@@ -42,7 +42,7 @@ ms.locfileid: "86458338"
 |**Оставшихся байтов повтора**|Объем операций журнала (в килобайтах), которые необходимо повторить для завершения фазы повтора.|Вторичная реплика|  
 |**Накат, байт/с**|Количество записей журнала, выполненных повторно во вторичной базе данных-получателе в течение последней секунды.|Вторичная реплика|  
 |**Число данных журнала, требующих отмены**|Общий объем журнала, который должен быть обработан для отмены, в килобайтах.|Вторичная реплика|  
-|**Задержка транзакции**|Задержки в ожидании подтверждения незавершенной фиксации для всех текущих транзакций в миллисекундах. Разделите на значение *Зеркальная запись транзакций в секунду* для получения значения *Средняя задержка транзакции*. Дополнительные сведения см. в разделе [SQL Server 2012 AlwaysOn — часть 12 — аспекты производительности и мониторинг производительности II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/)|Первичная реплика|  
+|**Задержка транзакции**|Задержки в ожидании подтверждения незавершенной фиксации для всех текущих транзакций в миллисекундах. Разделите на значение *Зеркальная запись транзакций в секунду* для получения значения *Средняя задержка транзакции*. Дополнительные сведения см. в разделе [SQL Server 2012 AlwaysOn — часть 12 — аспекты производительности и мониторинг производительности II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii)|Первичная реплика|  
   
 ## <a name="see-also"></a>См. также:
   
@@ -50,4 +50,3 @@ ms.locfileid: "86458338"
  [SQL Server, реплика доступности](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, объект Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  

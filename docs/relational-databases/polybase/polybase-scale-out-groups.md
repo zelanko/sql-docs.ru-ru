@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: b636a615544cdf3ab642e34b1d02c59db2e11872
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818231"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892514"
 ---
 # <a name="polybase-scale-out-groups"></a>Масштабируемые группы PolyBase
 
@@ -27,7 +27,7 @@ ms.locfileid: "84818231"
 
 Обработка больших наборов данных в Hadoop или хранилище BLOB-объектов Azure автономным экземпляром SQL Server с PolyBase может сопровождаться снижением производительности. Группы PolyBase позволяют создавать кластеры экземпляров SQL Server для обработки больших наборов данных из внешних источников данных (например, Hadoop или хранилища BLOB-объектов Azure), используя возможности масштабирования. Это помогает повысить производительность запросов. Теперь можно масштабировать вычисления SQL Server в соответствии с требованиями производительности рабочей нагрузки. Масштабируемая группа PolyBase — это группа экземпляров SQL Server, позволяющая обрабатывать большие наборы внешних данных в архитектуре параллельной обработки. Производительность загрузки данных и запросов может увеличиваться линейно по мере добавления дополнительных экземпляров SQL Server в группу. 
   
-См. разделы [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) и [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md).
+См. разделы [Приступая к работе с PolyBase](./polybase-guide.md) и [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
 ![группы горизонтального масштабирования PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Масштабируемые группы PolyBase")  
   
@@ -68,5 +68,4 @@ ms.locfileid: "84818231"
 
  [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
  [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
- [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
-
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)

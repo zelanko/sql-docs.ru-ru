@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: db5d05ce1b3712eebbd77d34e8ae0b380e18dcbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36e196d2778407207ece407ddbb72c3b8788b510
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420378"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869207"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,6 @@ ms.locfileid: "88420378"
      Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выступает в качестве сервера именованного канала для клиента службы запуска управляющей программы полнотекстовой фильтрации SQL Server. Если именованный канал уже был создан другим процессом до запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то в журнале регистрации ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнале событий Windows вносится запись об ошибке, а полнотекстовый поиск становится недоступным.  Определите, в каком процессе или приложении предпринимается попытка использовать тот же именованный канал, и закройте это приложение.  
   
 ## <a name="see-also"></a>См. также  
- [Инструкции по управлению службами (диспетчер конфигурации SQL Server)](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
+ [Инструкции по управлению службами (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)   
  [Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

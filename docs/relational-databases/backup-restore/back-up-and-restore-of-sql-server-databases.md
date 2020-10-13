@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a39bffb27177281b5e5c89330bb605ce7fd90acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: afc33480cb19ac8b676c6384d839f1ae4b7d9440
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771726"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810090"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85771726"
   
  Компонент резервного копирования и восстановления SQL Server обеспечивает необходимую защиту важных данных, которые хранятся в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы свести к минимуму риск необратимой потери данных, необходимо создавать резервные копии баз данных для сохранения вносимых изменений на регулярной основе. Хорошо спланированная стратегия резервного копирования и восстановления защищает базы от потери данных, вызванной разными сбоями. Протестируйте стратегию, выполнив восстановление набора резервных копий и вернув в исходное состояние базу данных. Так вы будете готовы эффективно реагировать на проблемы.
   
- В дополнение к локальному хранилищу для хранения резервных копий SQL Server поддерживает резервное копирование и восстановление из службы хранилища BLOB-объектов Azure. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Для файлов базы данных, сохраненных в службе хранилища больших двоичных объектов Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставляет возможность использовать моментальные снимки Azure для практически мгновенного создания резервных копий и ускорения восстановления. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure также предоставляет возможности резервного копирования корпоративного класса для SQL Server на виртуальных машинах Azure. Это полностью управляемое решение резервного копирования поддерживает группы доступности Always On, долгосрочное хранение, восстановление на определенный момент времени, а также централизованное управление и мониторинг. Дополнительную информацию см. в статье [Azure Backup для SQL Server на виртуальных машинах Azure](https://docs.microsoft.com/azure/backup/backup-azure-sql-database).
+ В дополнение к локальному хранилищу для хранения резервных копий SQL Server поддерживает резервное копирование и восстановление из службы хранилища BLOB-объектов Azure. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Для файлов базы данных, сохраненных в службе хранилища больших двоичных объектов Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставляет возможность использовать моментальные снимки Azure для практически мгновенного создания резервных копий и ускорения восстановления. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure также предоставляет возможности резервного копирования корпоративного класса для SQL Server на виртуальных машинах Azure. Это полностью управляемое решение резервного копирования поддерживает группы доступности Always On, долгосрочное хранение, восстановление на определенный момент времени, а также централизованное управление и мониторинг. Дополнительную информацию см. в статье [Azure Backup для SQL Server на виртуальных машинах Azure](/azure/backup/backup-azure-sql-database).
   
 ##  <a name="why-back-up"></a>Зачем выполнять резервное копирование  
 -   Создание резервных копий баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполнение проверочных процедур восстановления резервных копий и хранение резервных копий в безопасном месте вне рабочей площадки помогают предотвратить возможную необратимую потерю данных. **Резервное копирование — единственный способ защитить данные.**
@@ -285,11 +285,10 @@ GO
  [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Создание и восстановление резервных копий баз данных служб Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
+ [Создание и восстановление резервных копий баз данных служб Analysis Services](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [Создание резервных копий и восстановление полнотекстовых каталогов и индексов](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Создание резервной копии и восстановление из копий реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
-  
   
