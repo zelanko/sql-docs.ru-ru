@@ -10,12 +10,12 @@ metadata:
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: dfa93f660ca6e5a70dc81da3be4cbd25834b28d8
-  ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+  ms.openlocfilehash: 66daa6925947d55676da896c3f69e6eec7babf61
+  ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/25/2020
-  ms.locfileid: "91364031"
+  ms.lasthandoff: 10/13/2020
+  ms.locfileid: "91987822"
 landingContent:
 - title: Сведения об Azure Data Studio
   linkLists:
@@ -37,7 +37,7 @@ landingContent:
       url: quickstart-sql-server.md
     - text: Подключение и отправка запроса к базе данных SQL Azure
       url: quickstart-sql-database.md
-    - text: Подключение к Хранилищу данных SQL Azure и запрос данных
+    - text: Подключение к Azure Synapse Analytics и запрос данных
       url: quickstart-sql-dw.md
     - text: Подключение к PostgreSQL и запрос данных
       url: quickstart-postgres.md
