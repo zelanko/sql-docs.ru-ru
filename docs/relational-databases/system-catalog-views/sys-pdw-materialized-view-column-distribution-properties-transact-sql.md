@@ -13,12 +13,12 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d81f8646196c2b8af01fa2689633284d700398c3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 5efa6d9c501d9f7903ee81770e8ceb364baadc8a
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036974"
+ms.locfileid: "92059513"
 ---
 # <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) 
 
@@ -30,7 +30,7 @@ ms.locfileid: "92036974"
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта, которому принадлежит столбец. |  
 |column_id|**int**|Идентификатор столбца.|  
-|distribution_ordinal|**tinyint**|0 = не столбец распределения.</br> 1 = хранилище данных SQL использует этот столбец для распределения материализованных представлений.|
+|distribution_ordinal|**tinyint**|0 = не столбец распределения.</br> 1 = Azure синапсе Analytics использует этот столбец для распределения материализованных представлений.|
  
 ## <a name="permissions"></a>Разрешения 
 

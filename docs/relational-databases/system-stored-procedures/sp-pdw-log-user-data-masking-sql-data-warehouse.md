@@ -1,6 +1,6 @@
 ---
-description: sp_pdw_log_user_data_masking (хранилище данных SQL)
-title: sp_pdw_log_user_data_masking (хранилище данных SQL) | Документация Майкрософт
+description: sp_pdw_log_user_data_masking (Azure синапсе Analytics)
+title: sp_pdw_log_user_data_masking (Azure синапсе Analytics) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c3b65b6e3626a79fae4f5b5ac87e997ce3c97554
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 87c151558a290f3c06a605de72931c5ee6990f60
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988810"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059362"
 ---
-# <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (хранилище данных SQL)
+# <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure синапсе Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Используйте **sp_pdw_log_user_data_masking** , чтобы включить Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий. Маскирование данных пользователя влияет на инструкции во всех базах данных на устройстве.  
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  При **sp_pdw_ log_user_data_masking** без параметров возвращается текущее состояние маскировки данных пользователя журнала TDE на устройстве в качестве скалярного результирующего набора.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий позволяет заменить литералы предопределенными константными значениями в инструкциях **SELECT** и DML, так как они могут содержать пользовательские данные. Установка *masking_mode* в значение 1 не маскирует метаданные, такие как имена столбцов или имена таблиц. Если присвоить параметру *masking_mode* значение 2, то инструкции с метаданными, например имена столбцов или имена таблиц, удаляются.  
   
  Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий реализуется следующим образом:  
@@ -75,8 +75,8 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 EXEC sp_pdw_log_user_data_masking 1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sp_pdw_database_encryption хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_database_encryption_regenerate_system_keys хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+## <a name="see-also"></a>См. также  
+ [sp_pdw_database_encryption &#40;Azure синапсе Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;Azure синапсе Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

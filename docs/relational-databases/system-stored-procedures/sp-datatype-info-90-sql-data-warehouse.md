@@ -1,6 +1,6 @@
 ---
-description: sp_datatype_info_90 (хранилище данных SQL)
-title: sp_datatype_info_90 (хранилище данных SQL) | Документация Майкрософт
+description: sp_datatype_info_90 (Azure синапсе Analytics)
+title: sp_datatype_info_90 (Azure синапсе Analytics)
 ms.custom: ''
 ms.date: 03/13/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a7f2cc25af40cc85ae3600e18d861d106af7168
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6c9d03578a2eab318be1669303e9a8b741eb3779
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987960"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059442"
 ---
-# <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (хранилище данных SQL)
+# <a name="sp_datatype_info_90-azure-synapse-analytics"></a>sp_datatype_info_90 (Azure синапсе Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Возвращает сведения о типах данных, поддерживаемых текущей средой.  
@@ -70,7 +70,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Значение для начальной точности интервала, если *data_type* — **интервал**; в противном случае — NULL.|  
 |USERTYPE|**smallint**|значение **usertype** из таблицы systypes.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  sp_datatype_info эквивалентен SQLGetTypeInfo в ODBC. Возвращаемые этой процедурой результаты упорядочиваются по значению DATA_TYPE, а затем по степени соответствия типа данных аналогичному типу данных ODBC SQL.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -86,8 +86,8 @@ EXEC sp_datatype_info_90 -9;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Хранимые процедуры хранилища данных SQL](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
+## <a name="see-also"></a>См. также  
+ [Хранимые процедуры Azure синапсе Analytics](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

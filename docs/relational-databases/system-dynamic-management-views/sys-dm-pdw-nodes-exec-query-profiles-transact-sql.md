@@ -13,19 +13,21 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ef3237f77272978c767e1519e6b7895ce4cb274b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 591bba14af18f8c622ffa5547339fd0024cf4445
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037717"
+ms.locfileid: "92059522"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
+
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Отслеживает ход выполнения запросов в хранилище данных в реальном времени, пока запрос выполняется.   
   
-## <a name="table-returned"></a>Таблица возвращена  
+## <a name="table-returned"></a>Таблица возвращена
+  
 Возвращаемые счетчики есть на каждом операторе и каждом потоке.   Результаты являются динамическими и не соответствуют результатам существующих параметров, например `SET STATISTICS XML ON` , которые создают выходные данные только после завершения запроса.  
   
 |Имя столбца|Тип данных|Описание|  
@@ -68,15 +70,18 @@ ms.locfileid: "92037717"
 |actual_read_row_count|**bigint**|Число строк, считанных оператором перед применением остаточного предиката.| 
 |estimated_read_row_count|**bigint**|**Применимо к:** Начиная с с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] пакетом обновления 1. <br/>Количество строк, которое должно быть считано оператором перед применением остаточного предиката.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Комментарии
+
 Те же примечания в [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) применяются.  
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
 
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также статью
+
  [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## <a name="next-steps"></a>Дальнейшие действия
- Дополнительные советы по разработке см. в статье [Проектные решения и методики программирования для хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ ## <a name="next-steps"></a>Дальнейшие действия 
+
+Обзор разработки Azure синапсе Analytics] (/Азуре/скл-Дата-варехаусе/скл-Дата-варехаусе-овервиев-Девелоп).

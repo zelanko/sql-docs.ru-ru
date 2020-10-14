@@ -1,5 +1,5 @@
 ---
-description: sp_pdw_add_network_credentials (хранилище данных SQL)
+description: sp_pdw_add_network_credentials (Azure синапсе Analytics)
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a91960dc4dad3909e18003309bcd7f12f1461b67
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 87757b771e7c140454d8cdceac8dc1a77600f94b
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004536"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059355"
 ---
-# <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (хранилище данных SQL)
+# <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure синапсе Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Он хранит сетевые учетные данные в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и связывает их с сервером. Например, используйте эту хранимую процедуру, чтобы предоставить [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] соответствующие разрешения на чтение и запись для выполнения операций резервного копирования и восстановления базы данных на целевом сервере или для создания резервной копии сертификата, используемого для TDE.  
@@ -79,8 +79,8 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 > [!NOTE]  
 >  Чтобы выполнить резервное копирование базы данных через InfiniBand, обязательно используйте IP-адрес InfiniBand сервера архивации.  
   
-## <a name="see-also"></a>См. также:  
- [sp_pdw_remove_network_credentials хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+## <a name="see-also"></a>См. также  
+ [sp_pdw_remove_network_credentials &#40;Azure синапсе Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
 

@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: db75957476f38a108eab5631bb00f330465b6ed3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: ec94a367ca0cc9bb354fd35cbc214d8e83ede584
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035332"
+ms.locfileid: "92059538"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.pdw_nodes_dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "92035332"
  [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
  ## <a name="next-steps"></a>Дальнейшие действия
- Дополнительные советы по разработке см. в статье [Проектные решения и методики программирования для хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ Дополнительные советы по разработке см. в статье [Общие сведения о разработке для Azure синапсе Analytics](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

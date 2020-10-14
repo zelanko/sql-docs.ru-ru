@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61fc4c7ea45478af1911fec52f1c37dc017a2263
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9e1da1d708bf8fbe5b3c3cb6cea0a6d65f6e9ccf
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987565"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059392"
 ---
 # <a name="ado-md-object-model"></a>Объектная модель ADO MD
 В этом разделе описано, как объекты представлены и связаны в объекты данных ActiveX (MD).  
@@ -32,7 +32,7 @@ ms.locfileid: "88987565"
  У каждого объекта [оси](./axis-object-ado-md.md), [ячейки](./cell-object-ado-md.md), набора [ячеек](./cellset-object-ado-md.md), [CubeDef](./cubedef-object-ado-md.md), [измерения](./dimension-object-ado-md.md), [иерархии](./hierarchy-object-ado-md.md), [уровня](./level-object-ado-md.md)и [элемента](./member-object-ado-md.md) есть стандартная коллекция [свойств](../ado-api/properties-collection-ado.md) ADO.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по объекты данных ActiveX (MD) API](?view=sql-server-ver15)   
+ [Справочник по объекты данных ActiveX (MD) API](?view=sql-server-ver15&preserve-view=true)   
  [Примеры кода объекты данных ActiveX (MD)](./ado-md-code-examples.md)   
  [объекты данных ActiveX (MD) коллекции](./ado-md-collections.md)   
  [объекты данных ActiveX (MD) перечислимые константы](./ado-md-enumerated-constants.md)   
