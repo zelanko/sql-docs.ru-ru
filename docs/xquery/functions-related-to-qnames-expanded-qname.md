@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88bbf5697112fd80f8ffea629a1ad2b9e99977fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1a59104b8becec2edd8b4b15c28e13e19011a4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720042"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036830"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Функции, связанные с QName — expanded-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Часть локального имени QName.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Следующее относится к **расширенной функции-QName ()** :  
   
 -   Если указанное значение *$paramLocal* не находится в правильной лексической форме для типа xs: NCName, возвращается пустая последовательность, представляющая динамическую ошибку.  
@@ -203,7 +203,6 @@ FROM T
 ### <a name="implementation-limitations"></a>Ограничения реализации  
  Существует одно ограничение: функция **расширенного параметра-QName ()** принимает в качестве второго аргумента пустую последовательность и возвращает пустое значение вместо возникновения ошибки времени выполнения, если второй аргумент неверен.  
   
-## <a name="see-also"></a>См. также  
- [Функции, связанные с QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+## <a name="see-also"></a>См. также:  
+ [Функции, связанные с QName &#40;XQuery&#41;]()  
   

@@ -14,23 +14,23 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 16f2223c49fc6fac5b096263c90aadc4a0a2ab61
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5b22dfee8112beb7419408dfc8a3dcadf53c631d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933485"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035167"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Миграция данных Oracle в SQL Server (OracleToSQL)
 После успешной синхронизации преобразованных объектов с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно перенести данные из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
-> Если используемое ядро является модулем миграции данных на стороне сервера, то перед переносом необходимо установить пакет SSMA для Oracle Extensions и поставщики Oracle на компьютере, на котором выполняется SSMA. Также должна быть запущена служба агент SQL Server. Дополнительные сведения об установке пакета расширений см. в разделе Installing [Server Components (OracleToSQL)](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5) .  
+> Если используемое ядро является модулем миграции данных на стороне сервера, то перед переносом необходимо установить пакет SSMA для Oracle Extensions и поставщики Oracle на компьютере, на котором выполняется SSMA. Также должна быть запущена служба агент SQL Server. Дополнительные сведения об установке пакета расширений см. в разделе Installing [Server Components (OracleToSQL)](./installing-ssma-components-on-sql-server-oracletosql.md) .  
   
 ## <a name="setting-migration-options"></a>Настройка параметров миграции  
 Перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверьте параметры миграции проекта в диалоговом окне " **Параметры проекта** ".  
   
--   С помощью этого диалогового окна можно задать такие параметры, как размер пакета миграции, блокировка таблицы, проверка ограничений, обработка значений NULL и обработка значений идентификаторов. Дополнительные сведения о параметрах миграции проекта см. в разделе [Project Settings (Migration) (OracleToSQL)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60).  
+-   С помощью этого диалогового окна можно задать такие параметры, как размер пакета миграции, блокировка таблицы, проверка ограничений, обработка значений NULL и обработка значений идентификаторов. Дополнительные сведения о параметрах миграции проекта см. в разделе [Project Settings (Migration) (OracleToSQL)](./project-settings-migration-oracletosql.md).  
   
 -   **Модуль миграции** в диалоговом окне **Параметры проекта** позволяет пользователю выполнить процесс миграции с помощью двух типов модулей миграции данных:  
   
@@ -95,13 +95,12 @@ ms.locfileid: "87933485"
   
 5.  В диалоговом окне **Подключение к Oracle** введите учетные данные подключения и нажмите кнопку **подключить**. Дополнительные сведения о подключении к Oracle см. в статье [Подключение к oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
-    Для подключения к целевой базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] введите учетные данные подключения в диалоговом окне **подключение к SQL Server** и нажмите кнопку **подключить**. Дополнительные сведения о подключении к см. в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разделе [подключение к SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    Для подключения к целевой базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] введите учетные данные подключения в диалоговом окне **подключение к SQL Server** и нажмите кнопку **подключить**. Дополнительные сведения о подключении к см. в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разделе [подключение к SQL Server](../sybase/connecting-to-sql-server-sybasetosql.md)  
   
-    Сообщения будут отображаться в области **вывода** . По завершении миграции появится **отчет о переносе данных** . Если какие бы то ни было данные не были перенесены, щелкните строку, содержащую ошибки, а затем нажмите кнопку **сведения**. Завершив работу с отчетом, нажмите кнопку **Закрыть**. Дополнительные сведения об отчете о переносе данных см. в разделе [отчет о переносе данных (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241) .  
+    Сообщения будут отображаться в области **вывода** . По завершении миграции появится **отчет о переносе данных** . Если какие бы то ни было данные не были перенесены, щелкните строку, содержащую ошибки, а затем нажмите кнопку **сведения**. Завершив работу с отчетом, нажмите кнопку **Закрыть**. Дополнительные сведения об отчете о переносе данных см. в разделе [отчет о переносе данных (SSMA Common)](../sybase/data-migration-report-sybasetosql.md) .  
   
 > [!NOTE]  
 > Если в качестве целевой базы данных используется SQL Express Edition, то разрешена только миграция данных на стороне клиента, а миграция данных на стороне сервера не поддерживается.  
   
 ## <a name="see-also"></a>См. также:  
 [Перенос баз данных Oracle в SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
-  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ff4e618126d9bb720d5bd4e8323e333c421f74f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99516dc132f9c086c96bb3b886424927d68bab1b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372180"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034963"
 ---
 # <a name="generating-reports-sybasetosql"></a>Создание отчетов (SybaseToSQL)
 Отчеты о определенных действиях, выполняемых с помощью команд, создаются в консоли SSMA на уровне дерева объектов.  
@@ -143,5 +143,4 @@ ms.locfileid: "88372180"
 -   сценарий Fail  
   
 ## <a name="see-also"></a>См. также:  
-[Запуск консоли SSMA (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
-  
+[Запуск консоли SSMA (Sybase)](./executing-the-ssma-console-sybasetosql.md)  

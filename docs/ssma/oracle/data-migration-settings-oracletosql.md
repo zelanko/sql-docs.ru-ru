@@ -11,19 +11,19 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 7df7afd3e58c93d2d9a4e30ef87039cdca9b5dc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a46cdca0d713dc9d33cc919e312a500d867fbfbd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492338"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038057"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Параметры миграции данных (OracleToSQL)
   
 ## <a name="data-migration-settings"></a>Параметры миграции данных  
 **Параметры переноса данных** позволяют пользователю создавать пользовательские запросы для переноса данных.  
   
--   Эта вкладка доступна, если для параметра **Параметры расширенной миграции данных** задано значение **Показать** и она скрыта, если параметру задано значение **скрывать** в параметрах проекта. Дополнительные сведения о параметрах миграции проекта см. в разделе [Параметры проекта (миграция)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
+-   Эта вкладка доступна, если для параметра **Параметры расширенной миграции данных** задано значение **Показать** и она скрыта, если параметру задано значение **скрывать** в параметрах проекта. Дополнительные сведения о параметрах миграции проекта см. в разделе [Параметры проекта (миграция)](./project-settings-migration-oracletosql.md) .  
   
 -   Анализ пользовательских инструкций SQL будет реализован на вкладке " **Параметры переноса данных** " узла "Таблица".  
   
@@ -53,6 +53,5 @@ ms.locfileid: "88492338"
   
 -   **Отмена:** Нажмите кнопку **"Отмена"** , чтобы восстановить параметры до внесения изменений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Перенос данных Oracle в SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
-  

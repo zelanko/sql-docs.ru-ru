@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_exec_sessions (Transact-SQL)
-title: sys. dm_pdw_exec_sessions (Transact-SQL) | Документация Майкрософт
+description: sys.dm_pdw_exec_sessions (Transact-SQL)
+title: sys.dm_pdw_exec_sessions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/22/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5801b3e1b4cf57aef3b465a6190b3093480e6ca0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d155f836abb975b39ef7b2396057a43e59686f9b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489804"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035350"
 ---
-# <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
+# <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Содержит сведения обо всех сеансах, которые в настоящее время или недавно открыты на устройстве. В нем отображается по одной строке за сеанс.  
@@ -37,14 +37,14 @@ ms.locfileid: "88489804"
 |is_transactional|**bit**|Захватывает, находится ли в данный момент сеанс в пределах транзакции.|0 для автоматической фиксации, 1 — для транзакций.|  
 |client_id|**nvarchar(255)**|Захватывает сведения о клиенте для сеанса.|Любая допустимая строка.|  
 |app_name|**nvarchar(255)**|Захватывает сведения об имени приложения, которые дополнительно задаются в рамках процесса подключения.|Любая допустимая строка.|  
-|sql_spid|**int**|Идентификационный номер SPID. Используйте `session_id` этот сеанс. Используйте `sql_spid` столбец, чтобы присоединиться к **sys. dm_pdw_nodes_exec_sessions**.<br /><br /> Предупреждение. Этот столбец содержит закрытые SPID. ** \* \* \* \* **||  
+|sql_spid|**int**|Идентификационный номер SPID. Используйте `session_id` этот сеанс. Используйте `sql_spid` столбец, чтобы присоединиться к **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> Предупреждение. Этот столбец содержит закрытые SPID. ** \* \* \* \* **||  
   
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение `VIEW SERVER STATE`.  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

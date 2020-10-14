@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c27ed4fad982831288f1e115f6da94bc70114c61
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753553"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037437"
 ---
 # <a name="functions-on-sequences---id"></a>Функции с последовательностями — id
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Одно или несколько значений xs:IDREF.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Результатом функции является последовательность элементов в экземпляре XML, в порядке документов, имеющих значение xs:ID, равное одному или нескольким значениям xs:IDREF в списке кандидатов xs:IDREF.  
   
  Если значение xs:IDREF не совпадает ни с одним элементом, функция возвращает пустую последовательность.  
@@ -177,11 +177,10 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Ограничения реализации  
  Существуют следующие ограничения:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]не поддерживает версию с двумя аргументами **ID ()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не поддерживает версию с двумя аргументами **ID ()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]требует, чтобы тип аргумента **ID ()** был подтипом xs: IDREF *.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] требует, чтобы тип аргумента **ID ()** был подтипом xs: IDREF *.  
   
-## <a name="see-also"></a>См. также  
- [Функции над последовательностями](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
-  
+## <a name="see-also"></a>См. также:  
+ [Функции над последовательностями](./xquery-functions-against-the-xml-data-type.md)  
   

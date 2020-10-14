@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_nodes (Transact-SQL)
-title: sys. dm_pdw_nodes (Transact-SQL) | Документация Майкрософт
+description: sys.dm_pdw_nodes (Transact-SQL)
+title: sys.dm_pdw_nodes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b999f7e10baece4566ebe0dd87b96b92eaabac53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b758dafadc743ffc6c51c6d1c94ab3a5ea597e2d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474798"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037690"
 ---
-# <a name="sysdm_pdw_nodes-transact-sql"></a>sys. dm_pdw_nodes (Transact-SQL)
+# <a name="sysdm_pdw_nodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Содержит сведения обо всех узлах в [!INCLUDE[ssAPS](../../includes/ssaps-md.md)] . В нем отображается одна строка для каждого узла в устройстве.  
@@ -34,7 +34,7 @@ ms.locfileid: "88474798"
 |is_passive|**int**|Указывает, работает ли виртуальная машина, на которой работает узел, на назначенном сервере или отработка отказа на запасной сервер.|на исходном сервере запущена виртуальная машина 0-Node.<br /><br /> на запасном сервере работает виртуальная машина с 1 узлом.|  
 |region|**nvarchar(32)**|Регион, в котором работает узел.|"PDW", "HDINSIGHT"|  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

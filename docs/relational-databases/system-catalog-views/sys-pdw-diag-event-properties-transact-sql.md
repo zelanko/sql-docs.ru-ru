@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_diag_event_properties (Transact-SQL)
-title: sys. pdw_diag_event_properties (Transact-SQL) | Документация Майкрософт
+description: sys.pdw_diag_event_properties (Transact-SQL)
+title: sys.pdw_diag_event_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: e3944f48-8074-43aa-9840-3d5230faedd3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 03d9b6d854374330762777e17703861af67c1a88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eaed4f37f60f63c08c4e3564f78c0ee3098f44b9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420038"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036797"
 ---
-# <a name="syspdw_diag_event_properties-transact-sql"></a>sys. pdw_diag_event_properties (Transact-SQL)
+# <a name="syspdw_diag_event_properties-transact-sql"></a>sys.pdw_diag_event_properties (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Содержит сведения о том, какие свойства связаны с событиями диагностики.  
@@ -31,6 +31,6 @@ ms.locfileid: "88420038"
 |**property_name**|**nvarchar(255)**|Имя свойства события.||  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md) (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
+ [Представления каталога Azure Synapse Analytics и Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

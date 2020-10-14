@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3b71f795855c8edecf5fb4cfc0d752181257310f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ec67a6dd1346efc4199d3ebec22589ae8ee741b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418270"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036620"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Работа с консолью SSMA для Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA), выпуск для адаптивного серверного предприятия Sybase (ASE) теперь доступен через консольное приложение в командной строке. Файлы скрипта образуют входные данные для приложения для выполнения команд. Как консольное приложение, SSMA обеспечивает взаимодействие на уровне сценариев, сокращает цикл миграции и масштабирует усилия по миграции.  
@@ -38,5 +38,4 @@ ms.locfileid: "88418270"
 |[Устранение неполадок &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Содержит краткие сведения об устранении проблем с миграцией.|  
   
 ## <a name="see-also"></a>См. также:  
-[Начало работы с SSMA для консоли Sybase (SybaseToSQL)](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
-  
+[Начало работы с SSMA для консоли Sybase (SybaseToSQL)](./getting-started-with-ssma-for-sybase-console-sybasetosql.md)  

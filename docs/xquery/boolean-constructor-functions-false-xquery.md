@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bacbbf8314f52276a6859b1a75da1d3f6bf23899
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb10d97bbfa727d75aaf032fa2031211e1bb95ea
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726774"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037047"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>Функции логического конструктора — false (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,6 @@ fn:false() as xs:boolean
 ### <a name="a-using-the-false-xquery-boolean-function"></a>A. Использование логической функции XQuery false()  
  Рабочий пример см. в разделе [true Function &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  
   
-## <a name="see-also"></a>См. также  
- [Логические функции конструктора &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
-  
+## <a name="see-also"></a>См. также:  
+ [Логические функции конструктора &#40;XQuery&#41;](./xquery-functions-against-the-xml-data-type.md)  
   

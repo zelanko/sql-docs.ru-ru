@@ -1,6 +1,6 @@
 ---
-description: sys. dm_workload_management_workload_groups_stats (Transact-SQL)
-title: sys. dm_workload_management_workload_groups_stats (Transact-SQL) | Документация Майкрософт
+description: sys.dm_workload_management_workload_groups_stats (Transact-SQL)
+title: sys.dm_workload_management_workload_groups_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/02/2019
 ms.prod: sql
@@ -12,14 +12,14 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: a439ebecacd29c2ca412e5ba90fac6b6b5af2b24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc36846a62b8b71e0e21d7ea61d088a0f16c674d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498323"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035187"
 ---
-# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-SQL)
+# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys.dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Возвращает статистику группы рабочей нагрузки и действующие значения группы рабочей нагрузки в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
@@ -39,6 +39,6 @@ ms.locfileid: "88498323"
 |effective_request_max_resource_grant_percent|**Decimal (5, 2)**|Эффективное значение времени выполнения для request_max_resource_grant_percent группы рабочей нагрузки, учитывая конфигурацию всех групп рабочей нагрузки.||
 |||||
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
- [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

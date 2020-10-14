@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_node_status (Transact-SQL)
-title: sys. dm_pdw_node_status (Transact-SQL) | Документация Майкрософт
+description: sys.dm_pdw_node_status (Transact-SQL)
+title: sys.dm_pdw_node_status (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbe3aae7c707d836bafff703c8e86adffe4d1cd9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 267b2aa14e85f77af91a0cf1a5640a16ee158215
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89531204"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035318"
 ---
-# <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-SQL)
+# <a name="sysdm_pdw_node_status-transact-sql"></a>sys.dm_pdw_node_status (Transact-SQL)
 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  Содержит дополнительные сведения (по сравнению с [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) о производительности и состоянии всех узлов устройств. В нем отображается одна строка для каждого узла в устройстве.  
+  Содержит дополнительные сведения (более [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) о производительности и состоянии всех узлов устройств. В нем отображается одна строка для каждого узла в устройстве.  
   
 |Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
@@ -43,7 +43,7 @@ ms.locfileid: "89531204"
 |received_time|**datetime**|Время последнего получения сетевого пакета этим узлом.||  
 |error_id|**nvarchar (36)**|Уникальный идентификатор последней ошибки, произошедшей на этом узле.||  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

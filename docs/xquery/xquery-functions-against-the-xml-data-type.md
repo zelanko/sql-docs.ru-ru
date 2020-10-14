@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad25db1aa5a10039bc80766b30e1d2ba478df123
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e92148b5a85ced147599eafe09156cf41c47021
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730978"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037017"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Функции XQuery для типа данных xml
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -35,43 +35,42 @@ ms.locfileid: "85730978"
   
 |Категория|Имя функции|  
 |--------------|-------------------|  
-|[Функции с числовыми значениями](https://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[толок](../xquery/numeric-values-functions-ceiling.md)|  
+|[Функции с числовыми значениями]()|[толок](../xquery/numeric-values-functions-ceiling.md)|  
 ||[фабрич](../xquery/numeric-values-functions-floor.md)|  
 ||[округло](../xquery/numeric-values-functions-round.md)|  
-|[Функции XQuery для строковых значений](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
+|[Функции XQuery для строковых значений]()|[concat](../xquery/functions-on-string-values-concat.md)|  
 ||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[Функция нижнего регистра &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
 ||[Длина строки](../xquery/functions-on-string-values-string-length.md)|  
 ||[Функция верхнего регистра &#40;XQuery&#41;](../xquery/functions-on-string-values-upper-case.md)|  
 |Функции над значениями типа Boolean|[not](../xquery/functions-on-boolean-values-not-function.md) (не);|  
-|[Функции на узлах](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
+|[Функции на узлах]()|[number](../xquery/functions-on-nodes-number.md)|  
 ||[Функция local-name (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[Функция namespace-uri (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
-|[Функции контекста](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
+|[Функции контекста]()|[last](../xquery/context-functions-last-xquery.md)|  
 ||[position](../xquery/context-functions-position-xquery.md)|  
-|[Функции над последовательностями](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
+|[Функции над последовательностями]()|[empty](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[Функция id (XQuery)](../xquery/functions-on-sequences-id.md)|  
-|[Агрегатные функции &#40;&#41;XQuery](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[count](../xquery/aggregate-functions-count.md)|  
-||[обращения](../xquery/aggregate-functions-avg.md)|  
+|[Агрегатные функции &#40;&#41;XQuery ]()|[count](../xquery/aggregate-functions-count.md)|  
+||[avg](../xquery/aggregate-functions-avg.md)|  
 ||[min](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
 ||[sum](../xquery/aggregate-functions-sum.md)|  
 |[Функции конструктора &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[Функции-конструкторы](../xquery/constructor-functions-xquery.md)|  
 |[Функции метода доступа к данным](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
-||[данные](../xquery/data-accessor-functions-data-xquery.md)|  
-|[Логические функции конструктора &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
+||[data](../xquery/data-accessor-functions-data-xquery.md)|  
+|[Логические функции конструктора &#40;XQuery&#41;]()|[true (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[Функция false (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
-|[Функции, связанные с QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
+|[Функции, связанные с QName &#40;XQuery&#41;](./functions-related-to-qnames-expanded-qname.md)|[expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
 ||[local-name-from-QName (XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)|  
 ||[namespace-uri-from-QName (XQuery)](../xquery/functions-related-to-qnames-namespace-uri-from-qname.md)|  
-|[Функции расширения запросов XQuery в SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)|[функция SQL: column () (XQuery)](../xquery/xquery-extension-functions-sql-column.md)|  
+|[Функции расширения запросов XQuery в SQL Server](./xquery-extension-functions-sql-column.md)|[функция SQL: column () (XQuery)](../xquery/xquery-extension-functions-sql-column.md)|  
 ||[функция sql:variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [методов типа данных xml](../t-sql/xml/xml-data-type-methods.md)   
- [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+ [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)   
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  
-  
   

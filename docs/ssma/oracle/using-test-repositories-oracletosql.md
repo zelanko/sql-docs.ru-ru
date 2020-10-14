@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ce33aca0939a6a956f053824da1f7fdd35930b30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b070a45c7990efbb598401b241083fcb2d804f5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320080"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035143"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Использование репозиториев тестирования (OracleToSQL)
 В репозитории тестов SSMA хранятся тестовые случаи и результаты тестов тестеров SSMA для последующего использования. Данные репозитория сохраняются в SQL Server таблицах **тесткасерепоситори** и **рунтесткасересултрепоситори** в схеме **ssma_oracle_utilities** базы данных **ссматестердб** .  
@@ -50,7 +50,7 @@ ms.locfileid: "88320080"
   
 -   Нажмите кнопку **изменить** , чтобы запустить мастер тестовых случаев и изменить выбранный тест.  
   
--   Нажмите кнопку **выполнить** , чтобы открыть диалоговое окно [Запуск тестовых случаев (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) и выполнить выбранный тест.  
+-   Нажмите кнопку **выполнить** , чтобы открыть диалоговое окно [Запуск тестовых случаев (OracleToSQL)](./running-test-cases-oracletosql.md) и выполнить выбранный тест.  
   
 ## <a name="test-results-repository"></a>Репозиторий результаты теста  
 Репозиторий результаты теста можно просмотреть на **Результаты теста** странице репозитория в окне " **тестовые случаи** ". Откройте его, нажав кнопку **Результаты теста..** . в меню **Тестер** .  
@@ -78,4 +78,3 @@ ms.locfileid: "88320080"
 ## <a name="see-also"></a>См. также:  
 [Выполнение тестовых случаев &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Тестирование перенесенных объектов базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  

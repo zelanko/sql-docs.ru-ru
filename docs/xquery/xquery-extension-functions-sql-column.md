@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b3aeded0476c809bd1bcdfbfdacb4eac3381751
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55a38974ec5e85eeec58195c18edd1f6fb8b5cb4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775409"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038072"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Функции расширения XQuery — sql:column()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85775409"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Обратите внимание, что ссылка на столбец, указанный в функции **SQL: column ()** в запросе XQuery, ссылается на столбец в строке, которая обрабатывается.  
   
  В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно ссылаться только на экземпляр **XML** в контексте исходного выражения инструкции INSERT XML. в противном случае нельзя ссылаться на столбцы, имеющие тип **XML** или определяемый пользователем тип данных CLR.  
@@ -130,12 +130,11 @@ And P.ProductModelID = 19
 select @x  
 ```  
   
-## <a name="see-also"></a>См. также  
- [SQL Server функции расширения XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server функции расширения XQuery]()   
  [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [Создание экземпляров XML-данных](../relational-databases/xml/create-instances-of-xml-data.md)   
  [методов типа данных xml](../t-sql/xml/xml-data-type-methods.md)   
  [Язык модификации XML-данных (XML DML)](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

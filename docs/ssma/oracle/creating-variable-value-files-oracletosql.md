@@ -14,12 +14,12 @@ ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 766bbd6b8908983726a18d5d66bf9700600e66e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b97455172dbed11a8d29168946decca7b3b919e4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468805"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039208"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Создание файлов переменных значений (OracleToSQL)
 Файл значения переменной — это XML-файл, состоящий из значений параметров таких команд, как, имя исходного или целевого сервера, которое часто меняются при миграции с одного сервера на другой. При выполнении большого количества миграций базы данных создается несколько переменных файлов для хранения значений каждого исходного сервера и на них указывают ссылки в файле главного сценария с помощью параметра **-v** в командной строке. Это помогает поддерживать статические значения в нескольких файлах скриптов с переменными значениями в нескольких файлах переменных.  
@@ -92,5 +92,4 @@ ms.locfileid: "88468805"
 Следующий шаг в работе консоли — [Создание файлов подключения к серверу &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Создание серверных файлов (Oracle)](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
-  
+[Создание серверных файлов (Oracle)](./creating-the-server-connection-files-oracletosql.md)  

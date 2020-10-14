@@ -13,12 +13,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1acf08369e0d6591c96e74defabe2a49d15e412d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1e8b211dc0a73ac6fd84515ce0153faa5ed7ae73
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932695"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038878"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Работа с проектами SSMA (OracleToSQL)
 Чтобы перенести базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , сначала необходимо создать проект SSMA. Проект представляет собой файл, содержащий следующие сведения:  
@@ -27,7 +27,7 @@ ms.locfileid: "87932695"
   
 -   Метаданные о целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который будет принимать перенесенные объекты и данные.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]сведения о соединении.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения о соединении.  
   
 -   Параметры проекта.  
   
@@ -65,7 +65,7 @@ SSMA содержит несколько параметров для преоб�
   
 1.  В меню **Файл** выберите пункт **Создать проект**.  
   
-    Откроется диалоговое окно **Новый проект** .  
+    Откроется диалоговое окно **Создание проекта** .  
   
 2.  В поле **Name** введите имя проекта.  
   
@@ -77,7 +77,7 @@ SSMA содержит несколько параметров для преоб�
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
@@ -121,10 +121,9 @@ SSMA содержит несколько параметров для преоб�
 3.  Чтобы повторно подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в меню **файл** выберите команду **повторное подключение к SQL Server**.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующим шагом процесса миграции является [Подключение к Oracle Database (OracleToSQL)](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
+Следующим шагом процесса миграции является [Подключение к Oracle Database (OracleToSQL)](./connecting-to-oracle-database-oracletosql.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Перенос баз данных Oracle в SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
 [Подключение к Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
 [Подключение к SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-  

@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1d86fbfceefd3f0a4fba6f3bb86a071736e12c54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6fcca84f52f5a6b9b8c033c00980374a0c17d7be
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492238"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036688"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>Параметры миграции данных (SybaseToSQL)
   
 ## <a name="data-migration-settings"></a>Параметры миграции данных  
 **Параметры переноса данных** позволяют пользователю создавать пользовательские запросы для переноса данных.  
   
--   Эта вкладка доступна, если для параметра **Параметры расширенной миграции данных** задано значение **Показать** и она скрыта, если параметру задано значение **скрывать** в параметрах проекта. Дополнительные сведения о параметрах миграции проекта см. в разделе [Параметры проекта (миграция)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) .  
+-   Эта вкладка доступна, если для параметра **Параметры расширенной миграции данных** задано значение **Показать** и она скрыта, если параметру задано значение **скрывать** в параметрах проекта. Дополнительные сведения о параметрах миграции проекта см. в разделе [Параметры проекта (миграция)](./project-settings-migration-sybasetosql.md) .  
   
 -   Анализ пользовательских инструкций SQL будет реализован на вкладке " **Параметры переноса данных** " узла "Таблица".  
   
@@ -52,6 +52,5 @@ ms.locfileid: "88492238"
   
 -   **Отмена:** Нажмите кнопку **"Отмена"** , чтобы восстановить параметры до внесения изменений.  
   
-## <a name="see-also"></a>См. также  
-[Перенос данных Sybase в SQL Server и SQL Azure](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  
-  
+## <a name="see-also"></a>См. также:  
+[Перенос данных Sybase в SQL Server и SQL Azure](./migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md)  

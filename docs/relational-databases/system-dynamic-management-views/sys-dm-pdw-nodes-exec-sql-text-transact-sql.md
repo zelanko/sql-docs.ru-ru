@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: b03cb78d4ccdfa7e7d70a82a1709fe961da0a93c
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: a6226009396b1eb99662b41bf73f9cfa096a38e1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834204"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037697"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "91834204"
 ## <a name="permissions"></a>Разрешения  
  Требуется роль сервера **sysadmin** или `VIEW SERVER STATE` разрешение на сервере.  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>См. также статью  
+ [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
   ## <a name="next-steps"></a>Дальнейшие действия
  Дополнительные советы по разработке см. в статье [Проектные решения и методики программирования для хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

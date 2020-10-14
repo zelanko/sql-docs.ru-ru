@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8cf1c6af1a526efe771ccbd3b0f02f35670a1130
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b7f9a9a69fd1f5ac685550fb91ab93ad2220f49
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492184"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038267"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (SybaseToSQL)
 После преобразования объектов базы данных «адаптивный сервер предприятия» (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно либо создать объекты SSMA, либо создавать сценарии для объектов и выполнять сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные фактическим содержимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базой данных SQL Azure.  
@@ -108,8 +108,7 @@ ms.locfileid: "88492184"
 После загрузки преобразованных объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно предоставлять и запрещать разрешения на эти объекты. Рекомендуется сделать это перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о защите объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе «вопросы безопасности для баз данных и приложений баз данных» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующим шагом процесса миграции является [Перенос данных SYBASE ASE в SQL Server или SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
+Следующим шагом процесса миграции является [Перенос данных SYBASE ASE в SQL Server или SQL Azure (SybaseToSQL)](./migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Миграция баз данных Sybase ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  

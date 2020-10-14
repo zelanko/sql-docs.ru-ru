@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
-title: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+description: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+title: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 08/05/2020
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e712d2b5adafbb3f47ef132c701a82d3c9026c9
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062353"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038305"
 ---
-# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Предоставляет сведения о кластеризованном индексе columnstore для каждого сегмента, чтобы помочь администратору принять решения по управлению системой в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys. pdw_nodes_column_store_row_groups** содержит столбец для общего числа физически хранимых строк (включая те, которые помечены как удаленные) и столбец для числа строк, помеченных как удаленные. Используйте представление **sys. pdw_nodes_column_store_row_groups** , чтобы определить, какие группы строк имеют высокий процент удаленных строк и должны быть перестроены.  
+  Предоставляет сведения о кластеризованном индексе columnstore для каждого сегмента, чтобы помочь администратору принять решения по управлению системой в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys.pdw_nodes_column_store_row_groups** содержит столбец для общего числа физически хранимых строк (включая те, которые помечены как удаленные) и столбец для числа строк, помеченных как удаленные. Используйте **sys.pdw_nodes_column_store_row_groups** , чтобы определить, какие группы строк имеют высокий процент удаленных строк и должны быть перестроены.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Идентификатор базовой таблицы. Это физическая таблица на кластерном узле, а не object_id логической таблицы на узле управления. Например, object_id не соответствует object_id в sys. Tables.<br /><br /> Для объединения с sys. Tables используйте представление sys. pdw_index_mappings.|  
+|**object_id**|**int**|Идентификатор базовой таблицы. Это физическая таблица на кластерном узле, а не object_id логической таблицы на узле управления. Например, object_id не соответствует object_id в sys. Tables.<br /><br /> Для объединения с sys. Tables используйте sys.pdw_index_mappings.|  
 |**index_id**|**int**|Идентификатор кластеризованного индекса columnstore в *object_id* таблице.|  
 |**partition_number**|**int**|Идентификатор секции таблицы, содержащей *row_group_id*группы строк. Чтобы присоединить это динамическое административное представление к sys. partitions, можно использовать *partition_number* .|  
 |**row_group_id**|**int**|Идентификатор этой группы строк. Он уникален внутри секции.|  
@@ -40,10 +40,10 @@ ms.locfileid: "89062353"
 |**pdw_node_id**|**int**|Уникальный идентификатор [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] узла.|  
 |**distribution_id**|**int**|Уникальный идентификатор распределения.|
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Возвращает одну строку для каждой группы строк columnstore для каждой таблицы с кластеризованным или некластеризованным индексом columnstore.  
   
- Используйте представление **sys. pdw_nodes_column_store_row_groups** , чтобы определить количество строк, включаемых в группу строк, и размер группы строк.  
+ Используйте **sys.pdw_nodes_column_store_row_groups** , чтобы определить количество строк, включаемых в группу строк, и размер группы строк.  
   
  Если количество удаленных строк в группе становится большим по отношению к общему числу строк, таблица становится менее эффективной. Перестройте индекс columnstore, чтобы сократить размер таблицы и уменьшить число дисковых операций ввода-вывода, необходимых для чтения таблицы. Для перестроения индекса columnstore используйте параметр **REBUILD** инструкции **ALTER INDEX** .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "89062353"
  Необходимо разрешение **VIEW SERVER STATE**.  
   
 ## <a name="examples-sssdw-and-sspdw"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере таблица **sys. pdw_nodes_column_store_row_groups** соединяется с другими системными таблицами для получения сведений о конкретных таблицах. Вычисляемый столбец `PercentFull` — это оценка эффективности группы строк. Чтобы найти сведения об одной таблице, удалите дефисы в комментариях перед предложением WHERE и укажите имя таблицы.  
+ Следующий пример соединяет таблицу **sys.pdw_nodes_column_store_row_groups** с другими системными таблицами для получения сведений о конкретных таблицах. Вычисляемый столбец `PercentFull` — это оценка эффективности группы строк. Чтобы найти сведения об одной таблице, удалите дефисы в комментариях перед предложением WHERE и укажите имя таблицы.  
   
 ```sql
 SELECT IndexMap.object_id,   
@@ -109,9 +109,9 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>См. также:  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
+ [Представления каталога Azure Synapse Analytics и Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [Создание индекса COLUMNSTORE &#40;&#41;Transact-SQL ](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys. pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys. pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   
