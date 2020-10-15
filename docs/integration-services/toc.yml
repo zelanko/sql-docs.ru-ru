@@ -1560,7 +1560,7 @@
   href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: Загрузка данных в SQL Server или базу данных SQL
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
-- name: "Загрузка данных в хранилище данных\_SQL"
+- name: Загрузка данных в Azure Synapse Analytics
   href: ../integration-services/load-data-to-sql-data-warehouse.md
 - name: Система отслеживания измененных данных
   items:

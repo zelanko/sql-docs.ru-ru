@@ -14,7 +14,7 @@
       href: quickstart-sql-server.md
     - name: Подключение и отправка запроса к базе данных SQL Azure
       href: quickstart-sql-database.md
-    - name: Подключение и отправка запроса к хранилищу данных SQL Azure
+    - name: Подключение и отправка запросов к Azure Synapse Analytics
       href: quickstart-sql-dw.md
     - name: "Подключение и отправка запроса\_PostgreSQL"
       href: quickstart-postgres.md
@@ -130,7 +130,7 @@
       href: code-snippets.md
     - name: Просмотр ресурсов SQL Azure
       href: azure-resource-explorer.md
-    - name: сочетания клавиш
+    - name: Сочетания клавиш
       href: keyboard-shortcuts.md
     - name: Сбор данных об использовании
       href: usage-data-collection.md
