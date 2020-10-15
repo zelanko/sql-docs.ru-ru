@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 32b546107697dffdf3c77ea292b7b68c5c7dc9b5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 549507edaeec804776e830864bc93526e22eaea0
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179833"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956855"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>Вставка данных из таблицы SQL в кадр данных Python pandas
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "88179833"
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* База данных SQL Azure. Сведения о регистрации см. в разделе [База данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal).
+* База данных SQL Azure. Сведения о регистрации см. в разделе [База данных SQL Azure](/azure/sql-database/sql-database-get-started-portal).
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Управляемый экземпляр SQL Azure. Сведения о регистрации см. в разделе [Управляемый экземпляр SQL Azure](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart).
+* Управляемый экземпляр SQL Azure. Сведения о регистрации см. в разделе [Управляемый экземпляр SQL Azure](/azure/azure-sql/managed-instance/instance-create-quickstart).
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) для восстановления образца базы данных в Управляемый экземпляр SQL Azure.
 ::: moniker-end

@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: dffd92620f8975b41f8ea8c13a956c3984e56ea3
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1c017a50c2c5806012547d87fd67786e8121510a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480116"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038148"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Создание проектов баз данных с использованием среды SQL Server Management Studio
 
@@ -68,6 +68,5 @@ ms.locfileid: "89480116"
 Решение состоит из одного или более проектов скриптов. Проект состоит из одного или более скриптов или соединений. Проект может содержать не только файлы сценариев.  
   
 ## <a name="see-also"></a>См. также:  
-[Использование среды SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
+[Использование среды SQL Server Management Studio](./sql-server-management-studio-ssms.md)  
 [Решения (среда SQL Server Management Studio)](../ssms/solution/solutions-sql-server-management-studio.md)  
-  

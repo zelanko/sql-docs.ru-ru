@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: ed7c74f225998a7556ece2d6f62bf5ce6e47d7eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eafa770651260fb99931556308ccce58f1bf681c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463006"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037567"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Импорт сведений о зарегистрированном сервере (среда SQL Server Management Studio)
 
@@ -56,8 +56,7 @@ ms.locfileid: "88463006"
  Регистрации серверов, использующие метод проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранят пароли отдельно для каждого пользователя. После импорта регистраций серверов пользователи должны ввести пароль при первом подключении к каждому серверу, сохраняя пароли в списке зарегистрированных серверов. Если серверы зарегистрированы с помощью проверки подлинности Windows, нет необходимости использовать эту операцию.  
   
 ## <a name="see-also"></a>См. также:  
- [Изменение регистрационных данных сервера (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)   
- [Выполнение экспорта сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
-  
+ [Изменение регистрационных данных сервера (среда SQL Server Management Studio)](./change-a-server-s-registration-sql-server-management-studio.md)   
+ [Выполнение экспорта сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](./export-registered-server-information-sql-server-management-studio.md)   
+ [Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](./create-a-new-registered-server-sql-server-management-studio.md)  
   

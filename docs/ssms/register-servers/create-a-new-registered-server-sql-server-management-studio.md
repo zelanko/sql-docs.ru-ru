@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5b75fa312f06fa91d7ffbe9a4a4226f0e3852449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9bdbf68766e6c271f17254afc4262de341deaeb3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480180"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037603"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Создание нового зарегистрированного сервера (среда SQL Server Management Studio)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88480180"
   
 -   Группы локальных серверов  
   
-     Группы локальных серверов можно использовать для простого подключения к серверам, которыми пользователь часто управляет. И локальные, и нелокальные серверы регистрируются в группах локальных серверов. Группы локальных серверов уникальны для каждого пользователя. Сведения о том, как обмениваться сведениями о зарегистрированном сервере, см. в разделах [Экспорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md) и [Импорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md).  
+     Группы локальных серверов можно использовать для простого подключения к серверам, которыми пользователь часто управляет. И локальные, и нелокальные серверы регистрируются в группах локальных серверов. Группы локальных серверов уникальны для каждого пользователя. Сведения о том, как обмениваться сведениями о зарегистрированном сервере, см. в разделах [Экспорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](./export-registered-server-information-sql-server-management-studio.md) и [Импорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](./import-registered-server-information-sql-server-management-studio.md).  
   
     > [!NOTE]  
     >  Рекомендуется использовать проверку подлинности Windows.  
@@ -98,7 +98,7 @@ ms.locfileid: "88480180"
      Нажмите эту кнопку, чтобы сохранить настройки зарегистрированного сервера.  
   
 ## <a name="multiserver-queries"></a>Многосерверные запросы  
- С помощью окна «Редактор запросов» в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно одновременно подключиться и выполнять запросы к нескольким экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Возвращаемые запросом результаты можно объединить в единую панель результатов либо они могут возвращаться как отдельные области результатов. Дополнительно редактор запросов может включить столбцы, в которых приводятся имена серверов, предоставивших каждую строку, и имена входа, используемые для подключения к серверам, предоставившим строки. Дополнительные сведения о выполнении многосерверных запросов см. в разделе [Выполнение инструкций на нескольких серверах одновременно (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
+ С помощью окна «Редактор запросов» в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно одновременно подключиться и выполнять запросы к нескольким экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Возвращаемые запросом результаты можно объединить в единую панель результатов либо они могут возвращаться как отдельные области результатов. Дополнительно редактор запросов может включить столбцы, в которых приводятся имена серверов, предоставивших каждую строку, и имена входа, используемые для подключения к серверам, предоставившим строки. Дополнительные сведения о выполнении многосерверных запросов см. в разделе [Выполнение инструкций на нескольких серверах одновременно (среда SQL Server Management Studio)](./execute-statements-against-multiple-servers-simultaneously.md).  
   
  Чтобы выполнить запрос ко всем серверам в группе локальных серверов, щелкните правой кнопкой мыши группу серверов, укажите пункт **Соединить** и выберите команду **Создать запрос**. В новом окне редактора запросов запросы выполняются по отношению ко всем все серверам в группе с использованием хранимых сведений о соединении, включая контекст проверки подлинности пользователя. Если серверы были зарегистрированы с помощью проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но пароль не был сохранен, то установить соединение не удастся.  
   
@@ -106,7 +106,6 @@ ms.locfileid: "88480180"
   
 ## <a name="see-also"></a>См. также:  
  [Скрытие системных объектов в обозревателе объектов](../object/hide-system-objects-in-object-explorer.md)   
- [Выполнение экспорта сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [Импорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
-  
+ [Выполнение экспорта сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](./export-registered-server-information-sql-server-management-studio.md)   
+ [Импорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](./import-registered-server-information-sql-server-management-studio.md)  
   

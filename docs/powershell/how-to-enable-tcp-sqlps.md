@@ -10,19 +10,18 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 08/06/2020
-ms.openlocfilehash: 9a3b653a0e82eed4bffdf88461474a999eef152d
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: ba4b1362a3f435617f36c75fbcf0e8371169f990
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714182"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005157"
 ---
 # <a name="how-to-enable-the-tcp-protocol"></a>Включение протокола TCP
 
 ## <a name="how-to-enable-the-tcp-protocol-when-connected-to-the-console-with-sqlps"></a>Инструкция по включению протокола TCP при подключении к консоли с помощью SQLPS.
 
-> [!Note]
-> Модуль **SQLPS** входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется. Самым актуальным модулем PowerShell является модуль **[SqlServer](sql-server-powershell.md)** .
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 1. Откройте окно командной строки и введите:
 
@@ -92,10 +91,6 @@ ms.locfileid: "88714182"
 
     Restart-Service -Name MSSQLSERVER -Force
     ```
-
-
-
-
 
 ## <a name="next-steps"></a>Дальнейшие шаги
 

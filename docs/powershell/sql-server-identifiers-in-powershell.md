@@ -4,7 +4,6 @@ description: Узнайте о путях, которые поставщики W
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,26 +18,25 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54a37555038b3757ebff61faad8717c6a800ff1c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.openlocfilehash: 4f889fa93b78782a368ba36085a393f8b79fdb91
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714302"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006109"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Идентификаторы SQL Server в PowerShell
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для Windows PowerShell использует идентификаторы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в путях Windows PowerShell. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] могут содержать символы, которые не поддерживаются в путях Windows PowerShell. Такие символы при использовании в идентификаторах в составе путей Windows PowerShell следует экранировать или применять для них специальную кодировку.  
   
-> [!NOTE]
-> Существует два модуля SQL Server PowerShell — **SqlServer** и **SQLPS**. Модуль **SQLPS** входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется. Самым актуальным модулем PowerShell является модуль **SqlServer**. Модуль **SqlServer** содержит обновленные версии командлетов в **SQLPS**, а также новые командлеты для поддержки последних функций SQL.  
-> Предыдущие версии модуля **SqlServer** *входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
-> Сведения об установке модуля **SqlServer** см. в статье [Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md).
-
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Идентификаторы SQL Server в путях Windows PowerShell  
- Поставщики Windows PowerShell предоставляют доступ к иерархиям данных с помощью структуры путей, аналогичной используемой в файловой системе Windows. В поставщике [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реализуются пути к объектам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]жесткий диск задается как SQLSERVER, а первая папка — как \SQL. Объекты базы данных указываются как контейнеры и элементы. Ниже приведен путь к таблице Vendor в схеме Purchasing базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] на экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]по умолчанию:  
+
+Поставщики Windows PowerShell предоставляют доступ к иерархиям данных с помощью структуры путей, аналогичной используемой в файловой системе Windows. В поставщике [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реализуются пути к объектам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]жесткий диск задается как SQLSERVER, а первая папка — как \SQL. Объекты базы данных указываются как контейнеры и элементы. Ниже приведен путь к таблице Vendor в схеме Purchasing базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] на экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]по умолчанию:  
   
 ```  
 SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  

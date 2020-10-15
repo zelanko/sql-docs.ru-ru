@@ -12,12 +12,12 @@ ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff6f5f8cd3bd9300e38f0eaaebd9d7c442ab95e8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 2e5902be2e28aaa2b3f020664ac31b8582de2a42
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479656"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038986"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (среда SQL Server Management Studio)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,14 +30,13 @@ ms.locfileid: "89479656"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает настройку таких параметров IntelliSense, как завершение инструкций и размер скриптов Transact-SQL, для которых необходимо выключить IntelliSense.|[Настройка IntelliSense (среда SQL Server Management Studio)](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)|  
-|Описывает порядок использования параметра «Сведения о параметре» для получения сведений о количестве, именах и размерах параметров для функции или хранимой процедуры.|[Сведения о параметре (технология IntelliSense)](../../relational-databases/scripting/parameter-info-intellisense.md)|  
-|Описывает порядок использования параметра «Краткие сведения» для получения подсказок, описывающих идентификатор, например таблицу или имя представления.|[Краткие сведения (технология IntelliSense)](../../relational-databases/scripting/quick-info-intellisense.md)|  
-|Описывает порядок завершения идентификатора после набора достаточного числа символов для получения краткого списка объектов, имена которых начинаются с такой же строки.|[Автоматическое завершение слов (технология IntelliSense)](../../relational-databases/scripting/complete-word-intellisense.md)|  
-|Описывает порядок идентификации IntelliSense обеих конечных точек в паре разделителей и порядок перехода между двумя концами пары.|[Автоматическое сопоставление синтаксических пар](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
+|Описывает настройку таких параметров IntelliSense, как завершение инструкций и размер скриптов Transact-SQL, для которых необходимо выключить IntelliSense.|[Настройка IntelliSense (среда SQL Server Management Studio)](./configure-intellisense-sql-server-management-studio.md)|  
+|Описывает порядок использования параметра «Сведения о параметре» для получения сведений о количестве, именах и размерах параметров для функции или хранимой процедуры.|[Сведения о параметре (технология IntelliSense)](./parameter-info-intellisense.md)|  
+|Описывает порядок использования параметра «Краткие сведения» для получения подсказок, описывающих идентификатор, например таблицу или имя представления.|[Краткие сведения (технология IntelliSense)](./quick-info-intellisense.md)|  
+|Описывает порядок завершения идентификатора после набора достаточного числа символов для получения краткого списка объектов, имена которых начинаются с такой же строки.|[Автоматическое завершение слов (технология IntelliSense)](./complete-word-intellisense.md)|  
+|Описывает порядок идентификации IntelliSense обеих конечных точек в паре разделителей и порядок перехода между двумя концами пары.|[Автоматическое сопоставление синтаксических пар](./automatic-matching-of-syntax-pairs.md)|  
 |Описывает условия, при которых IntelliSense может не работать.|Устранение сбоев в работе IntelliSense (среда SQL Server Management Studio)|  
   
 ## <a name="see-also"></a>См. также:  
- [Редакторы запросов и текста (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
-  
+ [Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
   

@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487657"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956777"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Установка SQL Server 2016 R Services
 
@@ -32,7 +32,7 @@ ms.locfileid: "88487657"
 
 + Необходим экземпляр ядра СУБД. Вы не можете установить только R, хотя его можно добавить в существующий экземпляр добавочным образом.
 
-+ Для обеспечения непрерывности бизнес-процессов [группы доступности Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) поддерживаются для служб R Services. Необходимо установить службы R Services и настроить пакеты на каждом узле.
++ Для обеспечения непрерывности бизнес-процессов [группы доступности Always On](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) поддерживаются для служб R Services. Необходимо установить службы R Services и настроить пакеты на каждом узле.
 
 + Не устанавливайте службы R Services на экземпляр отказоустойчивого кластера (FCI) SQL Server Always On. Механизм безопасности, используемый для изолирования процессов R, несовместим со средой с экземпляром отказоустойчивого кластера (FCI) SQL Server Always On.
 
@@ -91,7 +91,7 @@ ms.locfileid: "88487657"
     + Службы ядра СУБД
     + Службы R (в базе данных)
 
-1. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## <a name="set-environment-variables"></a>Настройка переменных среды
 
@@ -110,7 +110,7 @@ ms.locfileid: "88487657"
 
 ##  <a name="enable-script-execution"></a>Включение выполнения сценария
 
-1. Откройте [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) или [Azure Data Studio](../../azure-data-studio/what-is.md).
+1. Откройте [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) или [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 1. Подключитесь к экземпляру, в который вы установили R Services, щелкните **Создать запрос**, чтобы открыть окно запроса, и выполните следующую команду:
 
@@ -181,7 +181,7 @@ ms.locfileid: "88487657"
 
 1. Начните с уже установленного базового экземпляра: Начальный выпуск SQL Server 2016, SQL Server 2016 с пакетом обновления 1 (SP1) или SQL Server 2016 с пакетом обновления 2 (SP2).
 
-1. Перейдите к списку накопительных обновлений: [Последние обновления для Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+1. Перейдите к списку накопительных обновлений: [Последние обновления для Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 1. Выберите последний пакет обновления (если он еще не установлен в качестве базового экземпляра) и накопительный пакет обновления. Исполняемый файл скачивается и извлекается автоматически.
 
@@ -205,7 +205,7 @@ ms.locfileid: "88487657"
 * [Настройка брандмауэра для Служб машинного обучения SQL Server](../../machine-learning/security/firewall-configuration.md).
 * [Включение дополнительных сетевых протоколов](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 * [Включение удаленных подключений](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md).
-* [Управление квотами на диск](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) во избежание выполнения внешними скриптами задач, тратящих дисковое пространство.
+* [Управление квотами на диск](/windows/desktop/fileio/managing-disk-quotas) во избежание выполнения внешними скриптами задач, тратящих дисковое пространство.
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>

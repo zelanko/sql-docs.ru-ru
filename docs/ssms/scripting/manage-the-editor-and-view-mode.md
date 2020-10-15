@@ -21,12 +21,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093440"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038988"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Управление режимами редактирования и просмотра
 
@@ -91,7 +91,7 @@ ms.locfileid: "89093440"
  Когда режим виртуального пространства не включен, курсор переходит с конца одной строки на первый символ следующей строки и наоборот.  
   
 ## <a name="displaying-line-numbers"></a>отображение номеров строк  
- В редакторе можно включить нумерацию строк кода. Номера строк полезны при перемещении по коду. Дополнительные сведения о группах и пользователях см. в разделе [Перемещение по коду и тексту](../../relational-databases/scripting/navigate-code-and-text.md).  
+ В редакторе можно включить нумерацию строк кода. Номера строк полезны при перемещении по коду. Дополнительные сведения о группах и пользователях см. в разделе [Перемещение по коду и тексту](./navigate-code-and-text.md).  
   
 > [!NOTE]  
 >  Включение нумерации строк не приводит к печати номеров строк при печати документа. Чтобы номера строк печатались, необходимо установить флажок **Номера строк** в окне **Параметры страницы** в меню **Файл** .  
@@ -122,5 +122,4 @@ ms.locfileid: "89093440"
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>Как сразу скрыть окна всех средств  
   
 1.  В меню **Окно** выберите **Скрыть все автоматически** .  
-  
   

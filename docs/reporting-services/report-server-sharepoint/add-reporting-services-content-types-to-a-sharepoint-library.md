@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8964906be1f9d055e45c7eacb6699f7ccc87da86
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 97502e9f1e8c5784afb2d8ad05f8fb2a05dab57a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197199"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935557"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Добавление типов содержимого служб Reporting Services в библиотеку SharePoint
 
@@ -61,7 +61,7 @@ ms.locfileid: "86197199"
   
 2.  Перейдите в раздел **Параметры сайта**.  
   
-    -   В SharePoint 2013 щелкните значок **Параметры** . ![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint")  
+    -   В SharePoint 2013 щелкните значок **Параметры** . ![Параметры SharePoint](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint")  
   
     -   В SharePoint 2010 щелкните **Действия сайта**и выберите **Параметры сайта**.  
   
@@ -173,5 +173,4 @@ ms.locfileid: "86197199"
 ## <a name="see-also"></a>См. также раздел  
  [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)  
-  
   

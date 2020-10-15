@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245737"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935325"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Добавление моментального снимка к журналу отчета
 
@@ -71,7 +71,7 @@ ms.locfileid: "87245737"
 - [Настройка свойств выполнения для отчета (диспетчер отчетов)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Ограничение размеров журнала отчета (диспетчер отчетов)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Расписания](../../reporting-services/subscriptions/schedules.md)   
-- [Диспетчер отчетов (службы SSRS в собственном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Диспетчер отчетов (службы SSRS в собственном режиме)](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
@@ -160,6 +160,6 @@ ms.locfileid: "87245737"
 - [Настройка свойств выполнения для отчета (веб-портал)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limit Report History - Reporting Services](../../reporting-services/reports/limit-report-history-report-manager.md) (Ограничение размеров журнала отчета в Reporting Services).
 - [Расписания](../../reporting-services/subscriptions/schedules.md)   
-- [Веб-портал &#40;SSRS в собственном режиме&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Веб-портал &#40;SSRS в собственном режиме&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

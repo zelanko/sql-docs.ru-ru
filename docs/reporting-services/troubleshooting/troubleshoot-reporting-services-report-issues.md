@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18809d6d6d5937355fedebf72f50e82fadad10ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662800"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988378"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Устранение неполадок при подготовке отчетов служб Reporting Services
 Этот раздел поможет в устранении проблем в работе [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] при проектировании отчета, предварительном просмотре отчета, публикации отчета на сервере отчетов в основном режиме или режиме SharePoint, а также при просмотре отчета на сервере отчетов или экспорте отчета в другой формат файла.  
@@ -38,7 +38,7 @@ ms.locfileid: "80662800"
 ## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Использование [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] для проверки запросов и учетных данных  
 Можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] для проверки сложных запросов перед их добавлением в отчет.   
   
-Дополнительные сведения см. в разделах [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) и [Управление объектами с помощью обозревателя объектов](~/ssms/object/manage-objects-by-using-object-explorer.md).  
+Дополнительные сведения см. в разделах [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) и [Управление объектами с помощью обозревателя объектов](~/ssms/object/manage-objects-by-using-object-explorer.md).  
   
 ## <a name="analyze-problem-reports-with-report-data-cached-on-the-client"></a>Анализ проблем с отчетами при помощи данных отчетов, кэшированных на клиенте  
 Если автор создает отчет в Business Intelligence Development Studio, то клиент, создающий отчет, кэширует данные как RDL-файл данных, который используется при просмотре отчета. При каждом изменении запроса кэш обновляется. Для отладки в целях устранения проблем отчета иногда полезно предотвратить обновление данных отчета, чтобы данные не изменялись во время отладки.   
@@ -60,5 +60,3 @@ ms.locfileid: "80662800"
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

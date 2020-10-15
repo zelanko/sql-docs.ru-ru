@@ -16,12 +16,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 613633dced2e5e906ad5d676e05b519e5f1708a5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: decdf70e29d907e8f95b7e16cbd88ac94e16b857
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901871"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036087"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>Выявление проблем с технологией IntelliSense с помощью SQL Server Management Studio (SSMS)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "88901871"
   
      Многие функции технологии IntelliSense работают автоматически по умолчанию, но любую из них можно отключить.  
   
-     Даже если автоматическое завершение инструкций отключено, то использование функции технологии IntelliSense возможно. Дополнительные сведения см. в статье [Настройка IntelliSense (среда SQL Server Management Studio)](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md).  
+     Даже если автоматическое завершение инструкций отключено, то использование функции технологии IntelliSense возможно. Дополнительные сведения см. в статье [Настройка IntelliSense (среда SQL Server Management Studio)](./configure-intellisense-sql-server-management-studio.md).  
   
 ## <a name="database-engine-query-intellisense"></a>Поддержка технологии IntelliSense в редакторе запросов к ядру СУБД  
  В отношении редактора запросов [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] действуют следующие ограничения.  
   
--   Функция IntelliSense в редакторе запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)] поддерживает не все элементы синтаксиса языка [!INCLUDE[tsql](../../includes/tsql-md.md)] . Справка по параметрам не предоставляется по параметрам некоторых объектов, например расширенных хранимых процедур. Дополнительные сведения см. в разделе [Синтаксис языка Transact-SQL, поддерживаемый технологией IntelliSense](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md).  
+-   Функция IntelliSense в редакторе запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)] поддерживает не все элементы синтаксиса языка [!INCLUDE[tsql](../../includes/tsql-md.md)] . Справка по параметрам не предоставляется по параметрам некоторых объектов, например расширенных хранимых процедур. Дополнительные сведения см. в разделе [Синтаксис языка Transact-SQL, поддерживаемый технологией IntelliSense](./transact-sql-syntax-supported-by-intellisense.md).  
   
 -   Технология Intellisense доступна только в случае, если редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] подключен к экземпляру [!INCLUDE[ssDE](../../includes/ssde-md.md)] версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии. Технология Intellisense не доступна, когда редактор запросов подключен к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]более ранней версии.  
   
@@ -70,5 +70,4 @@ ms.locfileid: "88901871"
 -   В списки завершения не включаются объекты базы данных, на которые нет разрешений. Ссылки на объекты, для которых есть разрешения, в технологии IntelliSense отмечаются флагами. Например, если открыть скрипт, написанный другим пользователем, все ссылки на объекты, для которых у другого пользователя есть разрешения, а у вас нет, отмечаются флагами как неверные.  
   
 -   Списки завершения могут перестать функционировать при разрыве соединения с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. В этом случае необходимо восстановить соединение с экземпляром.  
-  
   

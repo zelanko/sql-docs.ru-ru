@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288295"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956639"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Создание рабочих процессов SSIS и SSRS на языке R в SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "89288295"
 
 Следующий пример взят из архивной записи блога MSDN, автор Джимми Вонг (Jimmy Wong), которая доступна по этому URL-адресу: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
-В этом примере показано, как автоматизировать задачи с помощью служб SSIS. Вы создаете хранимые процедуры с внедренным R с помощью SQL Server Management Studio, а затем выполняете эти хранимые процедуры из [задач выполнения T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) в пакете служб SSIS.
+В этом примере показано, как автоматизировать задачи с помощью служб SSIS. Вы создаете хранимые процедуры с внедренным R с помощью SQL Server Management Studio, а затем выполняете эти хранимые процедуры из [задач выполнения T-SQL](../../integration-services/control-flow/execute-t-sql-statement-task.md) в пакете служб SSIS.
 
-Для пошагового выполнения этого примера необходимо иметь представление о Management Studio, службах SSIS, конструкторе служб SSIS, конструкции пакета и T-SQL. Пакет служб SSIS использует три [задачи выполнения T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task), которые вставляют обучающие данные в таблицу, моделируют данные и оценивают данные для получения выходных данных прогноза.
+Для пошагового выполнения этого примера необходимо иметь представление о Management Studio, службах SSIS, конструкторе служб SSIS, конструкции пакета и T-SQL. Пакет служб SSIS использует три [задачи выполнения T-SQL](../../integration-services/control-flow/execute-t-sql-statement-task.md), которые вставляют обучающие данные в таблицу, моделируют данные и оценивают данные для получения выходных данных прогноза.
 
 ### <a name="load-training-data"></a>Загрузка обучающих данных
 
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-В конструкторе служб SSIS создайте [задачу выполнения SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task), которая выполняет только что определенную хранимую процедуру. Скрипт для **SQLStatement** удаляет существующие данные, указывает, какие данные следует вставить, а затем вызывает хранимую процедуру для предоставления данных.
+В конструкторе служб SSIS создайте [задачу выполнения SQL](../../integration-services/control-flow/execute-sql-task.md), которая выполняет только что определенную хранимую процедуру. Скрипт для **SQLStatement** удаляет существующие данные, указывает, какие данные следует вставить, а затем вызывает хранимую процедуру для предоставления данных.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -108,7 +108,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-Создайте хранимую процедуру, которая формирует линейную модель с помощью [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). Библиотеки RevoScaleR и revoscalepy автоматически доступны в сеансах R и Python на SQL Server, поэтому импортировать библиотеку не требуется.
+Создайте хранимую процедуру, которая формирует линейную модель с помощью [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod). Библиотеки RevoScaleR и revoscalepy автоматически доступны в сеансах R и Python на SQL Server, поэтому импортировать библиотеку не требуется.
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-В конструкторе служб SSIS создайте [задачу выполнения SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) для выполнения хранимой процедуры **generate_iris_rx_model**. Модель сериализуется и сохраняется в таблице ssis_iris_models. Скрипт для **SQLStatement** выглядит следующим образом:
+В конструкторе служб SSIS создайте [задачу выполнения SQL](../../integration-services/control-flow/execute-sql-task.md) для выполнения хранимой процедуры **generate_iris_rx_model**. Модель сериализуется и сохраняется в таблице ssis_iris_models. Скрипт для **SQLStatement** выглядит следующим образом:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 Теперь, когда у вас есть код, загружающий обучающие данные и создающий модель, осталось только использовать модель для создания прогнозов. 
 
-Для этого добавьте скрипт R в SQL-запрос, чтобы активировать встроенную функцию R [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) ssis_iris_model. Эта задача выполняется с помощью хранимой процедуры **predict_species_length**.
+Для этого добавьте скрипт R в SQL-запрос, чтобы активировать встроенную функцию R [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) ssis_iris_model. Эта задача выполняется с помощью хранимой процедуры **predict_species_length**.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-В конструкторе служб SSIS создайте [задачу выполнения SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task), которая выполняет хранимую процедуру **predict_species_length** для прогнозирования длины лепестка.
+В конструкторе служб SSIS создайте [задачу выполнения SQL](../../integration-services/control-flow/execute-sql-task.md), которая выполняет хранимую процедуру **predict_species_length** для прогнозирования длины лепестка.
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';
@@ -193,6 +193,6 @@ exec predict_species_length 'rxLinMod';
 
 С помощью [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] вы можете выполнять сложные операции в R через хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)], которые легко можно использовать во множестве средств создания отчетов, включая [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Power BI.
 
-## <a name="next-steps"></a>Дальнейшие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Примеры служб SSIS и SSRS в этой статье иллюстрируют два варианта выполнения хранимых процедур, содержащих внедренный скрипт R или Python. Ключевая идея в том, что можно сделать скрипт R или Python доступным для любого приложения или средства, которые могут отправить запрос на выполнение хранимой процедуры. Кроме того, со службами SSIS можно создавать пакеты, которые автоматизируют и планируют целый ряд операций, таких как получение данных, очистка, манипуляции и т. д., с помощью функций обработки и анализа данных R или Python, включенных в цепочку операций. Дополнительные сведения и идеи см. в разделе [Использование кода R с хранимыми процедурами в Службах машинного обучения SQL Server](operationalizing-your-r-code.md).

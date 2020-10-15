@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35bd9f8d1870c45b5c2b401639e261806e9d3f91
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902098"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036177"
 ---
 # <a name="transact-sql-debugger---information"></a>Сведения отладчика Transact-SQL
 
@@ -70,10 +70,10 @@ ms.locfileid: "88902098"
   
  Задать значение данных для переменных в окнах **Локальные значения**, **Просмотр значений**или **Контрольное значение** можно, щелкнув строку правой кнопкой мыши и выбрав команду **Изменить значение**. Столбцы **Значение** в окне **Локальные значения** , окне **Просмотр значений** , а также в диалоговом окне **Контрольное значение** допускают текстовые, XML и HTML визуализаторы данных. Визуализаторы представлены как подсказка по данным в виде лупы с правой стороны столбца **Значения** . Визуализаторы можно использовать для просмотра текстовых, XML или HTML-значений данных в программах, которые соответствуют типу данных, например просматривать XML-файлы в окне браузера.  
   
- Если в режиме отладки указатель мыши навести на идентификатор, отображается всплывающее окно **Краткие сведения** с именем выражения и его текущим значением. Дополнительные сведения см. в разделе [Краткие сведения (IntelliSense)](../../relational-databases/scripting/quick-info-intellisense.md).  
+ Если в режиме отладки указатель мыши навести на идентификатор, отображается всплывающее окно **Краткие сведения** с именем выражения и его текущим значением. Дополнительные сведения см. в разделе [Краткие сведения (IntelliSense)](./quick-info-intellisense.md).  
   
 ## <a name="breakpoints"></a>Точки останова  
- Окно **Точки останова** можно использовать для просмотра установленных точек останова и управления ими. Дополнительные сведения см. в разделе [Пошаговая отладка кода Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+ Окно **Точки останова** можно использовать для просмотра установленных точек останова и управления ими. Дополнительные сведения см. в разделе [Пошаговая отладка кода Transact-SQL](./step-through-transact-sql-code.md).  
   
 ## <a name="call-stacks"></a>Стеки вызовов  
  В окне **Стек вызовов** отображается текущее место выполнения, а также сведения о том, как выполнение прошло от исходного окна редактора через все модели [!INCLUDE[tsql](../../includes/tsql-md.md)] (функции, хранимые процедуры и триггеры) до текущего положения выполнения. Каждая строка в окне **Стек вызовов** называется кадром стека и представляет один из следующих элементов:  
@@ -104,13 +104,12 @@ ms.locfileid: "88902098"
  Когда редактор запросов находится в режиме отладки, вкладки **Результаты** и **Сообщения** остаются активными. На вкладке **Результаты** продолжают отображаться результирующие наборы от инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые выполняются во время сеанса отладки. На вкладке **Сообщения** продолжают отображаться такие сообщения, как *xx* строк затронуто, а также вывод инструкций PRINT и RAISERROR.  
   
 ## <a name="see-also"></a>См. также:  
- [окно локальных переменных](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [окно просмотра значений](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Диалоговое окно «Быстрая проверка»](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Окно точек останова](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
- [Окно стека вызовов](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Окно потоков](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
- [Окно вывода](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
- [Отладчик Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [окно локальных переменных](./transact-sql-debugger-locals-window.md)   
+ [окно просмотра значений](./transact-sql-debugger-watch-window.md)   
+ [Диалоговое окно «Быстрая проверка»](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Окно точек останова](./transact-sql-debugger-breakpoints-window.md)   
+ [Окно стека вызовов](./transact-sql-debugger-call-stack-window.md)   
+ [Окно потоков](./transact-sql-debugger-threads-window.md)   
+ [Окно вывода](./transact-sql-debugger-output-window.md)   
+ [Отладчик Transact-SQL](./transact-sql-debugger.md)  
   

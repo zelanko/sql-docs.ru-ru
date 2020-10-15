@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2530029b43a4b01d8b6fce8b321f0c9b66a6a852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417940"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037657"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Подключение к SQL Server или базе данных SQL Azure
 
@@ -53,12 +53,12 @@ ms.locfileid: "88417940"
 
 [Проектирование, создание и изменение таблиц](../visual-db-tools/design-tables-visual-database-tools.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
 [Скачивание SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
-[Службы Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
-[Службы интеграции](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
-[службы Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Хранилище Azure](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Службы Analysis Services](/analysis-services/instances/connect-from-client-applications-analysis-services)  
+[Службы интеграции](../../integration-services/sql-server-integration-services.md)  
+[службы Reporting Services](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+[Хранилище Azure](../f1-help/connect-to-microsoft-azure-storage.md)

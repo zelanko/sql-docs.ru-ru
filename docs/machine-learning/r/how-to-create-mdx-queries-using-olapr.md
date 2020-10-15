@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5789a0791654b89ac78f9333cb71e10f3ca9322e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 107b4cc7c68f1fdf91a685235d336556740547c7
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173681"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956595"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Создание запросов многомерных выражений на языке R с помощью olapR
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Пакет [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) поддерживает запросы многомерных выражений к кубам, размещенным в SQL Server Analysis Services. Вы можете создавать запросы к существующему кубу, просматривать измерения и другие объекты куба, а также вставлять существующие запросы многомерных выражений для получения данных.
+Пакет [olapR](/machine-learning-server/r-reference/olapr/olapr) поддерживает запросы многомерных выражений к кубам, размещенным в SQL Server Analysis Services. Вы можете создавать запросы к существующему кубу, просматривать измерения и другие объекты куба, а также вставлять существующие запросы многомерных выражений для получения данных.
 
 В этой статье описываются два основных применения пакета **olapR**:
 
@@ -75,9 +75,9 @@ ms.locfileid: "88173681"
 
 Следующие примеры основаны на киоске данных AdventureWorks и проекте куба, поскольку этот проект широко доступен в нескольких версиях, включая файлы резервных копий, которые можно легко восстановить в Analysis Services. Если у вас нет куба, получите пример куба одним из следующих способов:
 
-+ Создайте куб, который используется в этих примерах, следуя инструкциям учебника по службам Analysis Services вплоть до занятия 4, [Создание куба OLAP](https://docs.microsoft.com/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
++ Создайте куб, который используется в этих примерах, следуя инструкциям учебника по службам Analysis Services вплоть до занятия 4, [Создание куба OLAP](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ Скачайте существующий куб в качестве резервной копии и восстановите его в экземпляр Analysis Services. Например, полностью обработанный куб в формате ZIP есть на этом сайте: [Многомерная модель Adventure Works для SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Извлеките файл и восстановите его в экземпляр SSAS. Дополнительные сведения см. в разделе [Резервное копирование и восстановление](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases) или [Командлет Restore-ASDatabase](/powershell/module/sqlserver/restore-asdatabase).
++ Скачайте существующий куб в качестве резервной копии и восстановите его в экземпляр Analysis Services. Например, полностью обработанный куб в формате ZIP есть на этом сайте: [Многомерная модель Adventure Works для SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Извлеките файл и восстановите его в экземпляр SSAS. Дополнительные сведения см. в разделе [Резервное копирование и восстановление](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases) или [Командлет Restore-ASDatabase](/powershell/module/sqlserver/restore-asdatabase).
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. Базовое многомерное выражение со срезом
 

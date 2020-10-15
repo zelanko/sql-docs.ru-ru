@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d83f361efd4d822456366133729759cb16c18647
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 56af9dbb3c2245bc3b45d8dde24ae5be169f886d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901424"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036287"
 ---
 # <a name="specify-a-hit-count"></a>Настройка счетчика числа попаданий
 
@@ -47,7 +47,7 @@ ms.locfileid: "88901424"
   
  Если необходимо отслеживать, сколько раз достигается точка останова, без выполнения остановки, задайте очень большое значение счетчика числа попаданий, чтобы точка останова никогда не была достигнута.  
   
- Действие для точки останова по умолчанию — прекращение выполнения, если достигнуто число попаданий и удовлетворяется условие для точки останова. Сведения об указании других действий см. в разделе [Задание действия в точке останова](../../relational-databases/scripting/specify-a-breakpoint-action.md).  
+ Действие для точки останова по умолчанию — прекращение выполнения, если достигнуто число попаданий и удовлетворяется условие для точки останова. Сведения об указании других действий см. в разделе [Задание действия в точке останова](./specify-a-breakpoint-action.md).  
   
 #### <a name="to-specify-a-hit-count"></a>Настройка счетчика числа попаданий  
   
@@ -78,6 +78,5 @@ ms.locfileid: "88901424"
 4.  Нажмите кнопку **ОК** или **Отмена** для выхода из диалогового окна.  
   
 ## <a name="see-also"></a>См. также:  
- [Задание условия точки останова](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
-  
+ [Задание условия точки останова](./specify-a-breakpoint-condition.md)  
   

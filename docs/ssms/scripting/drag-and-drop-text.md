@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f341d4dd956bd032bd5dcee264cbf48a5fd05e22
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 14ad38d835e4ef96cbf91a009026e35d504ca8cb
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093445"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039046"
 ---
 # <a name="drag-and-drop-text"></a>Перетаскивание текста
 
@@ -49,6 +49,5 @@ ms.locfileid: "89093445"
  При перетаскивании текста производится его перемещение, то есть он стирается из старой позиции и вставляется в новую. При нажатой клавише CTRL во время перетаскивания производится копирование текста в новую позицию. Перетаскивание объекта из обозревателя объектов является исключением: при этой операции имя объекта из обозревателя объектов не удаляется.  
   
 ## <a name="see-also"></a>См. также:  
- [Перемещение по коду и тексту](../../relational-databases/scripting/navigate-code-and-text.md)  
-  
+ [Перемещение по коду и тексту](./navigate-code-and-text.md)  
   

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea886eed26a2f88711d1405b5130570c09c87d6c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 576a19cf5a86893c248f11897f9a2d83a80598bc
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180508"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956975"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Установка Служб машинного обучения SQL Server с поддержкой R и Python на виртуальной машине Azure
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "88180508"
 
 ## <a name="provision-sql-server-virtual-machine-in-azure"></a>Подготовка виртуальной машины SQL Server в Azure
 
-Пошаговые инструкции см. в статье [Подготовка виртуальной машины Windows SQL Server на портале Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
+Пошаговые инструкции см. в статье [Подготовка виртуальной машины Windows SQL Server на портале Azure](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
 
-Вы добавляете Службы машинного обучения в экземпляр на шаге [Настройка параметров SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings).
+Вы добавляете Службы машинного обучения в экземпляр на шаге [Настройка параметров SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings).
 
 <a name="firewall"></a>
 

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73a11047ecfe6b797cb2c79fd2c48e3c7386882f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898981"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987750"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Использование проверочных утверждений Transact-SQL в модульных тестах SQL Server
 
@@ -79,11 +79,10 @@ ms.locfileid: "85898981"
   
 @ErrorState — произвольное целое число в диапазоне от 1 до 127. Оно служит для различения повторений одной и той же ошибки, возникшей в разных местах кода.  
   
-Дополнительные сведения см. в разделе справки [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Пример использования RAISERROR в модульном тесте SQL Server приведен в статье [Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Дополнительные сведения см. в разделе справки [RAISERROR (Transact-SQL)](../t-sql/language-elements/raiserror-transact-sql.md). Пример использования RAISERROR в модульном тесте SQL Server приведен в статье [Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Использование условий теста в модульных тестах SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Проверка кода базы данных с помощью модульных тестов SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Руководство. открыть модульный тест SQL Server для изменения](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
-  

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e619e457bf538a0a8c75e0615e45ca52567ea43a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7bd83a9a7526466d1a7798ab9ef3d71647d4fd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491955"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037677"
 ---
 # <a name="open-with-new-file"></a>Открыть с помощью (создать файл)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Можно открыть документ в одном или нескольких редакторах, щелкнув **Открыть** в меню **Файл**, а затем выбрав **Файл**. В диалоговом окне **Открытие файла** выберите файл, щелкните стрелку **Открыть** , затем щелкните **Открыть с помощью**. В диалоговом окне **Открыть с помощью** в списке **Выберите программу для открытия** выберите нужную программу и нажмите **Открыть**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Выберите программу для открытия**  
 Перечисляет редакторы, доступные в [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio для выбранного типа файла. Из предоставленного списка выберите редактор, с помощью которого следует открыть документ, или нажмите кнопку **Добавить** , чтобы включить новый редактор в список.  
   
@@ -43,5 +43,5 @@ ms.locfileid: "88491955"
 > [!NOTE]  
 > В списке программ под заголовком **Выберите программу для открытия**за именем редактора по умолчанию для выбранного типа файла следует **(По умолчанию)**.  
   
-## <a name="see-also"></a>См. также:  
-[Связывание расширений файлов с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+## <a name="see-also"></a>См. также  
+[Связывание расширений файлов с редактором кода](../scripting/associate-file-extensions-to-a-code-editor.md)

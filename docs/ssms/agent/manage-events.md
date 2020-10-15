@@ -20,18 +20,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98b162787254ed49ed64e5acd38d1ff8cb13f84f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41519f278ae684c58fabb693d677ad79373a726a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418120"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037340"
 ---
 # <a name="manage-events"></a>Управление событиями
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Все сообщения об ошибках, удовлетворяющие заданному уровню серьезности либо превышающие его, могут быть перенаправлены экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данное действие называется *пересылкой событий*. Сервер пересылки является выделенным сервером, который может также являться главным. Пересылка событий может быть использована для централизации управления предупреждениями в группе серверов, что позволяет снизить рабочую нагрузку на сильно загруженные серверы.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "88418120"
   
 -   [Среда SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)  
   
 ## <a name="running-event-triggered-jobs"></a>Выполнение заданий, запускаемых событиями  
 Можно определить задание, выполняемое при получении предупреждения. Например, в качестве такого задания можно указать операцию, которая проводит диагностику или исправление проблемы, выдавшей предупреждение.  
@@ -95,5 +95,4 @@ ms.locfileid: "88418120"
 > Так как в результате выполнения задания может возникнуть событие, необходимо строго следить за тем, чтобы не образовался рекурсивный цикл, выдающий предупреждение.  
   
 ## <a name="see-also"></a>См. также:  
-[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
-  
+[sp_add_notification (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysmessages-transact-sql.md)  

@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2303fdda5ae28fb9a384a174a128b2487e637f7e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173322"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956545"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Архитектура расширяемости в службах машинного обучения SQL Server. 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "88173322"
 
 ## <a name="bxlserver-and-sql-satellite"></a>BxlServer и вспомогательное соединение SQL
 
-**BxlServer** — это исполняемый объект, предоставляемый корпорацией Майкрософт, который управляет связью между SQL Server и языковой средой выполнения. Он создает объекты задания Windows для Windows или пространства имен для Linux, которые используются для хранения сеансов внешних сценариев. Он также предоставляет защищенные рабочие папки для каждого задания внешнего сценария и использует вспомогательную среду SQL для управления обменом данными между внешней средой выполнения и SQL Server. При запуске [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) во время выполнения задания может появиться один или несколько экземпляров BxlServer.
+**BxlServer** — это исполняемый объект, предоставляемый корпорацией Майкрософт, который управляет связью между SQL Server и языковой средой выполнения. Он создает объекты задания Windows для Windows или пространства имен для Linux, которые используются для хранения сеансов внешних сценариев. Он также предоставляет защищенные рабочие папки для каждого задания внешнего сценария и использует вспомогательную среду SQL для управления обменом данными между внешней средой выполнения и SQL Server. При запуске [Process Explorer](/sysinternals/downloads/process-explorer) во время выполнения задания может появиться один или несколько экземпляров BxlServer.
 
 По сути, BxlServer — это вспомогательная среда языковой среды, которая работает с SQL Server для перемещения данных и управления задачами. BXL расшифровывается как двоичный язык Exchange и ссылается на формат данных, используемый для эффективного перемещения данных между SQL Server и внешними процессами. BxlServer также является важной частью соответствующих продуктов, таких как Microsoft R Client и Microsoft R Server.
 
@@ -139,7 +139,7 @@ BxlServer использует вспомогательное соединени
 
 + **Другие протоколы**
 
-  Процессы, которые могут потребоваться для работы в блоках или передачи данных обратно удаленному клиенту, также могут использовать формат файла [Xdf-File](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Фактический перенос данных осуществляется через закодированные BLOB-объекты.
+  Процессы, которые могут потребоваться для работы в блоках или передачи данных обратно удаленному клиенту, также могут использовать формат файла [Xdf-File](/machine-learning-server/r/concept-what-is-xdf). Фактический перенос данных осуществляется через закодированные BLOB-объекты.
 
 ## <a name="see-also"></a>См. также:
 

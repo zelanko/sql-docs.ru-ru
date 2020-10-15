@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8981ada42e88eadcb263e01dd65f1b2cf9015852
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 018a84c06eb9d74032b5d2eaf5dc7041372a14f9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480236"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037238"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Параметры ("Среда" — страница "Шрифты и цвета")
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,4 +83,4 @@ ms.locfileid: "89480236"
 Отображает образец стиля шрифта, его размера и цветовой схемы для выбранных значений из списков **Показать параметры для** и **Отображаемые элементы**. Это текстовое поле можно использовать для предварительного просмотра результатов во время экспериментов с разными параметрами форматирования.  
   
 ## <a name="see-also"></a>См. также:  
-[Выделение цветом в редакторах кода](../../relational-databases/scripting/color-coding-in-query-editors.md)  
+[Выделение цветом в редакторах кода](../scripting/color-coding-in-query-editors.md)

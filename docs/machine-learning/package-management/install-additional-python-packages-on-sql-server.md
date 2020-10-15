@@ -9,30 +9,30 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a387e10afc9210fd90248fb0240e3b77c37b2afd
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 229b0843fc8602457328921eaa6ff8991f4b5655
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042537"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956715"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Установка пакетов Python с помощью sqlmlutils
 
 [!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-В этой статье описывается использование функций из пакета [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов Python в экземпляре [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) и в [кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Устанавливаемые пакеты можно использовать в сценариях Python, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+В этой статье описывается использование функций из пакета [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов Python в экземпляре [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) и в [кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Устанавливаемые пакеты можно использовать в сценариях Python, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-В этой статье описывается использование функций из пакета [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов Python в экземпляре [Служб машинного обучения в Управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Устанавливаемые пакеты можно использовать в сценариях Python, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+В этой статье описывается использование функций из пакета [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов Python в экземпляре [Служб машинного обучения в Управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Устанавливаемые пакеты можно использовать в сценариях Python, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 ::: moniker-end
 
 Дополнительные сведения о расположении пакетов и путях установки см. в разделе [Получение сведений о пакете Python](../package-management/python-package-information.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> Описанный в этой статье пакет **sqlmlutils** используется для добавления пакетов Python в SQL Server 2019 и более поздние версии. Для SQL Server 2017 и более ранних версий обратитесь к разделу [Установка пакетов с инструментами Python](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017).
+> Описанный в этой статье пакет **sqlmlutils** используется для добавления пакетов Python в SQL Server 2019 и более поздние версии. Для SQL Server 2017 и более ранних версий обратитесь к разделу [Установка пакетов с инструментами Python](./install-python-packages-standard-tools.md?view=sql-server-2017).
 ::: moniker-end
 
 ## <a name="prerequisites"></a>Предварительные требования
@@ -41,7 +41,7 @@ ms.locfileid: "89042537"
 + Необходимо установить [Службы машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) с параметром языка Python.
 ::: moniker-end
 
-+ Установите [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) на клиентском компьютере, который используется для подключения к SQL Server. Вы можете использовать другие средства запросов и управления базами данных, но в этой статье рассматривается Azure Data Studio.
++ Установите [Azure Data Studio](../../azure-data-studio/what-is.md) на клиентском компьютере, который используется для подключения к SQL Server. Вы можете использовать другие средства запросов и управления базами данных, но в этой статье рассматривается Azure Data Studio.
 
 + Установите ядро Python в Azure Data Studio. Вы также можете установить и использовать Python из командной строки, и вам может потребоваться среда разработки Python, например [Visual Studio Code](https://code.visualstudio.com/download) с [расширением Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 
@@ -74,7 +74,7 @@ ms.locfileid: "89042537"
 
 Если вы будете использовать пакет **sqlmlutils** в Azure Data Studio, вы можете установить его с помощью функции "Управление пакетами" в записной книжке ядра Python.
 
-1. В [записной книжке ядра Python в Azure Data Studio](../../azure-data-studio/notebooks-tutorial-python-kernel.md) щелкните **Управление пакетами**.
+1. В [записной книжке ядра Python в Azure Data Studio](../../azure-data-studio/notebooks/notebooks-python-kernel.md) щелкните **Управление пакетами**.
 1. Щелкните **Добавить новую**.
 1. В поле **Поиск пакетов PIP** введите "sqlmlutils" и нажмите кнопку **Поиск**.
 1. Выберите **версию пакета**, которую необходимо установить (рекомендуется последняя версия).

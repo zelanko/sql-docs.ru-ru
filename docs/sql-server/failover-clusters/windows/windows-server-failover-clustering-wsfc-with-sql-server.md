@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9854bef628a04871e0c173847651df0b64c83088
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3340ba57a0b316c9a58fbf1b0c65d7ca01f3e1ee
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896659"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988134"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Отказоустойчивая кластеризация Windows Server с SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85896659"
   
 -   **Координация отработки отказа.** Каждый ресурс настроен для размещения на основном узле, и каждый можно автоматически или вручную переносить на один или несколько второстепенных узлов. Политика отработки отказа в зависимости от исправности управляет автоматическим переносом владения ресурсами между узлами. Узлы и размещенные приложения получают уведомления об отработке отказа, что позволяет им выполнить соответствующие действия.  
   
- Дополнительные сведения см. в статье [Failover Clustering Overview — Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)(Обзор отказоустойчивой кластеризации — Windows Server).  
+ Дополнительные сведения см. в статье [Failover Clustering Overview — Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))(Обзор отказоустойчивой кластеризации — Windows Server).  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> Технологии SQL Server AlwaysOn и WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* — это решение высокого уровня доступности и аварийного восстановления с использованием WSFC. Компоненты AlwaysOn представляют собой интегрированные, гибкие решения, повышающие доступность приложений, окупаемость вложений в оборудование и упрощающее развертывание систем высокого уровня доступности и управление ими.  
@@ -85,7 +85,7 @@ ms.locfileid: "85896659"
 >  Дополнительные сведения см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Высокий уровень доступности на уровне экземпляра с помощью экземпляров отказоустойчивого кластера AlwaysOn  
- *Экземпляр отказоустойчивого кластера* AlwaysOn представляет собой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], установленный на нескольких узлах в кластере WSFC. Этот тип экземпляра зависит от ресурсов для хранения и имени виртуальной сети. Хранилище может использовать общее дисковое пространство на базе Fibre Channel, iSCSI, FCoE или SAS либо локально подключенное хранилище на основе [локальных дисковых пространств (S2D)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview). Ресурс имени виртуальной сети зависит от одного или нескольких виртуальных IP-адресов, которые расположены в разных подсетях. Служба SQL Server и служба агента SQL Server также являются ресурсами, и обе они зависят от ресурсов хранилища и имени виртуальной сети.  
+ *Экземпляр отказоустойчивого кластера* AlwaysOn представляет собой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], установленный на нескольких узлах в кластере WSFC. Этот тип экземпляра зависит от ресурсов для хранения и имени виртуальной сети. Хранилище может использовать общее дисковое пространство на базе Fibre Channel, iSCSI, FCoE или SAS либо локально подключенное хранилище на основе [локальных дисковых пространств (S2D)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview). Ресурс имени виртуальной сети зависит от одного или нескольких виртуальных IP-адресов, которые расположены в разных подсетях. Служба SQL Server и служба агента SQL Server также являются ресурсами, и обе они зависят от ресурсов хранилища и имени виртуальной сети.  
   
  В случае отработки отказа служба WSFC переносит владение ресурсов экземпляра на указанный узел отработки отказа. Затем экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] перезапускается на узле отработки отказа и выполняется обычное восстановление баз данных. В любой момент времени FCI и базовые ресурсы могут размещаться только на одном узле в кластере.  
   
@@ -175,13 +175,13 @@ ms.locfileid: "85896659"
   
 -   [Технологии Windows Server: отказоустойчивые кластеры](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
--   [Обзор локальных дисковых пространств \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+-   [Обзор локальных дисковых пространств \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
 -   [Отказоустойчивые кластеры в Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 -   [Просмотр событий и журналов для отказоустойчивого кластера](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Командлет Get-ClusterLog отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Командлет Get-ClusterLog отказоустойчивого кластера](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
   
 ## <a name="see-also"></a>См. также:  
  [Экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
@@ -190,4 +190,3 @@ ms.locfileid: "85896659"
  [Политика отработки отказа для экземпляров откзоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [Windows Server 2016 поддерживает функцию локальных дисковых пространств Windows Server 2016](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
-  

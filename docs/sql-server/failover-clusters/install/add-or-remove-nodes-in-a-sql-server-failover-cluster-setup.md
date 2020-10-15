@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db5dbec0733140f39abe377513ff23bc7dd7b880
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a560f2d421675b3e01e8c1350b37112187dc3aa8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117046"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988575"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>Добавление или удаление узлов экземпляра отказоустойчивого кластера SQL Server (программа установки)
 
@@ -68,7 +68,7 @@ ms.locfileid: "91117046"
   
 8.  При помощи раскрывающегося списка на странице «Конфигурация узла кластера» укажите имя экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который будет изменен во время работы программы установки.  
   
-9. На странице «Конфигурация сервера — Учетные записи служб» укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке. На этой странице имя учетной записи и сведения о типе запуска для экземпляров отказоустойчивых кластеров будут указаны автоматически в соответствии с параметрами, заданными для активного узла. Необходимо указать пароли для каждой учетной записи. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) и [Настройка учетных записей службы Windows и разрешений](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. На странице «Конфигурация сервера — Учетные записи служб» укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке. На этой странице имя учетной записи и сведения о типе запуска для экземпляров отказоустойчивых кластеров будут указаны автоматически в соответствии с параметрами, заданными для активного узла. Необходимо указать пароли для каждой учетной записи. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](../../../database-engine/install-windows/install-sql-server.md) и [Настройка учетных записей службы Windows и разрешений](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Примечание по безопасности** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -108,5 +108,4 @@ ms.locfileid: "91117046"
   
 ## <a name="see-also"></a>См. также:  
  [Просмотр и чтение файлов журналов программы установки SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

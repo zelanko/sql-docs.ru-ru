@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67a423a34d0b641e15daf5828748d572e504e329
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 36bc03b94c42d8cf660039eb04c73ce88cf18223
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547904"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934952"
 ---
 # <a name="cache-a-report-report-manager"></a>кэшировать отчет (диспетчер отчетов)
   Один из способов повышения производительности состоит в настройке свойств кэширования для отчета. При кэшировании отчета копия отчета, подготовленного для хранения, сохраняется на короткий промежуток времени. Первый пользователь, запросивший этот отчет, должен ожидать, пока не закончится вся обработка, прежде чем сможет просмотреть отчет. Последующие пользователи, запрашивающие тот же отчет в пределах времени кэширования, могут сразу же просмотреть его, поскольку обработка уже выполнена.  
@@ -29,7 +29,7 @@ ms.locfileid: "84547904"
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>Назначение момента для истечения срока действия кэшированного отчета  
   
-1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../web-portal-ssrs-native-mode.md).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** . Перейдите к отчету, для которого необходимо задать свойства кэширования, подведите к нему курсор и щелкните стрелку раскрывающегося списка.  
   
@@ -50,5 +50,4 @@ ms.locfileid: "84547904"
 ## <a name="see-also"></a>См. также:  
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 88f2c0cff6bd33bf5327c7c919370015873700ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d42c0bb0c18b7917ef0e8c8a29e9522e744ce2d2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88314630"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037787"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>Проблемы развития базы данных (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,6 +36,5 @@ ms.locfileid: "88314630"
 При любых изменениях структуры базы данных необходимо сохранять журнал изменений. Одним из подходов является сохранение скриптов всех изменений, когда-либо сделанных в производственной базе данных.  
   
 ## <a name="see-also"></a>См. также:  
-[Работа с ограничениями](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Работа с ограничениями](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [Многопользовательские среды (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
-  

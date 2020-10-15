@@ -17,12 +17,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41132064138e0272911bdd8bb4c89a24444fd1c0
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 564aafe28198a0afc46ba379849d24a7f3ec588f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902114"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036358"
 ---
 # <a name="search-text-with-regular-expressions"></a>Поиск текста с помощью регулярных выражений
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -134,5 +134,5 @@ ms.locfileid: "88902114"
 |Идеографические символы / символы Хань / символы Кандзи|:Id|Совпадает со всеми идеографическими символами, например символами Хань и Кандзи.|  
   
 ## <a name="see-also"></a>См. также:  
- [Поиск и замена](../../relational-databases/scripting/search-and-replace.md)   
- [Поиск текста с символами-шаблонами](../../relational-databases/scripting/search-text-with-wildcards.md)  
+ [Поиск и замена](./search-and-replace.md)   
+ [Поиск текста с символами-шаблонами](./search-text-with-wildcards.md)

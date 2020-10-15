@@ -26,12 +26,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc2f10905bdf80c1853aecefd6783bdc60819a82
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 5916b79410568a1fd2a89b753f9a3ff8ca606780
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255330"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935350"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Условные обозначения диаграммы — форматирование (построитель отчетов)
   Условные обозначения диаграммы содержат описание каждой категории на диаграмме. Условные обозначения всегда содержат один или несколько элементов, каждый из которых состоит из цветного прямоугольника, представляющего ряд, и текстовую строку, описывающую этот ряд, как показано на следующем рисунке.  
@@ -78,12 +78,11 @@ ms.locfileid: "84255330"
  По умолчанию текст условных обозначений не оптимизируется для совпадения с областью условных обозначений. Чтобы текст условных обозначений автоматически совпадал с размером выделенного пространства, присвойте свойству AutoFitTextDisabled значение **False** и установите минимально удовлетворяющий размер шрифта для свойства MinFontSize.  
   
 ## <a name="see-also"></a>См. также:  
- [Диалоговое окно "Свойства условных обозначений"  — "Общие" (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
+ [Диалоговое окно "Свойства условных обозначений"  — "Общие" (построитель отчетов и службы SSRS)]()   
  [Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Скрытие элементов условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
-  
   

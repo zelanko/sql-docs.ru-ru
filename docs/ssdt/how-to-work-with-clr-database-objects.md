@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 46269e242cab25708006b8f1432ac12b72570779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4427101e26905c21e093eca61a5579026522991b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893848"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988687"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Руководство. работать с объектами баз данных CLR
 
-Помимо языка программирования Transact\-SQL, вы можете использовать языки .NET Framework для создания объектов базы данных, которые извлекают и обновляют данные. Объекты базы данных, написанные в управляемом коде, называются CLR-объектами базы данных SQL Server. Описание преимуществ использования CLR-объектов базы данных, размещенных в SQL Server, а также рекомендации по выбору между Transact\-SQL и CLR, см. в статьях [CLR Integration - Overview](../relational-databases/clr-integration/clr-integration-overview.md) (Общие сведения об интеграции со средой CLR) и [Преимущества использования управляемого кода для создания объектов баз данных](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
+Помимо языка программирования Transact\-SQL, вы можете использовать языки .NET Framework для создания объектов базы данных, которые извлекают и обновляют данные. Объекты базы данных, написанные в управляемом коде, называются CLR-объектами базы данных SQL Server. Описание преимуществ использования CLR-объектов базы данных, размещенных в SQL Server, а также рекомендации по выбору между Transact\-SQL и CLR, см. в статьях [CLR Integration - Overview](../relational-databases/clr-integration/clr-integration-overview.md) (Общие сведения об интеграции со средой CLR) и [Преимущества использования управляемого кода для создания объектов баз данных](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100)).  
   
 Чтобы создать CLR-объект базы данных в SQL Server Data Tools, необходимо создать проект базы данных и добавить к нему CLR-объект базы данных. В отличие от предыдущих версий Visual Studio, не требуется создавать отдельный проект CLR, а затем добавлять ссылку на него из проекта базы данных. После сборки и публикации проекта базы данных автоматически происходит одновременно публикация объектов CLR в проекте. После публикации этих объектов CLR они могут вызываться и выполняться как любые другие объекты базы данных.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "85893848"
   
 Чтобы включить отладку для CLR-объектов базы данных, откройте **обозреватель объектов SQL Server**. Щелкните правой кнопкой мыши имя сервера, который содержит подлежащие отладке CLR-артефакты базы данных, и выберите команду **Разрешить отладку SQL/CLR**. Появится окно сообщения с предупреждением: "Обратите внимание, что в ходе отладки все управляемые потоки на этом сервере будут остановлены. Включить отладку SQL CLR на этом сервере?". В процессе отладки объектов базы данных CLR прерывание выполнения приостановит все потоки на сервер и затронет других пользователей. По этой причине не следует выполнять отладку приложений базы данных CLR на рабочем сервере. Следует также отметить, что после начала отладки изменить параметры в окне **обозревателя объектов SQL Server** будет невозможно. Внесенные в окне **обозревателя объектов SQL Server** изменения вступят в силу только в следующем сеансе отладки.  
   
-Дополнительные сведения о требованиях к созданию CLR-объектов базы данных см. в статье [Building Database Objects with Common Language Runtime (CLR) Integration](https://msdn.microsoft.com/library/ms131046.aspx) (Создание объектов базы данных при помощи интеграции со средой CLR).  
+Дополнительные сведения о требованиях к созданию CLR-объектов базы данных см. в статье [Building Database Objects with Common Language Runtime (CLR) Integration](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md) (Создание объектов базы данных при помощи интеграции со средой CLR).  
   
 > [!WARNING]  
 > В следующие процедурах используются сущности, созданные в процедурах, которые описывались ранее в разделе [Разработка подключенной базы данных](../ssdt/connected-database-development.md) и статье [Разработка базы данных вне сети с учетом проекта](../ssdt/project-oriented-offline-database-development.md).  
@@ -103,6 +103,5 @@ ms.locfileid: "85893848"
   
 ## <a name="see-also"></a>См. также:  
 [Преимущества интеграции со средой CLR](../relational-databases/clr-integration/clr-integration-overview.md)  
-[Преимущества использования управляемого кода для создания объектов базы данных](https://msdn.microsoft.com/library/k2e1fb36.aspx)  
-[Создание объектов базы данных с интеграцией со средой CLR](https://msdn.microsoft.com/library/ms131046.aspx)  
-  
+[Преимущества использования управляемого кода для создания объектов базы данных](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100))  
+[Создание объектов базы данных с интеграцией со средой CLR](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  

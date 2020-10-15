@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 321257f45a593afdaf8c69228b2018347074d7ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8edcfdae75389c0922582aa7bad4ad323e6ba49a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417880"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036002"
 ---
 # <a name="projects-sql-server-management-studio"></a>Проекты (среда SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,5 +60,4 @@ ms.locfileid: "88417880"
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
 [Решения (среда SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Обозреватель решений для системы управления версиями](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
-  
+[Обозреватель решений для системы управления версиями](./solution-explorer.md)  

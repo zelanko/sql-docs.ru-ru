@@ -17,12 +17,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 50981b1da0addf5bd55e4640653d3471e3aa459d
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 01ec0494fa258aed08c723869efb414600eb8359
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545546"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988731"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Счетчики производительности для MSRS 2011 в режиме интеграции с SharePoint, объекты производительности
   В этой статье рассматриваются счетчики производительности для объектов производительности **MSRS 2011 Web Service SharePoint Mode** и **MSRS 2011 Windows Service SharePoint Mode** , которые принадлежат к числу компонентов развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в режиме SharePoint.  
@@ -30,7 +30,7 @@ ms.locfileid: "84545546"
 > [!NOTE]  
 >  Эти объекты производительности служат для наблюдения за событиями на локальном сервере отчетов. При запуске сервера отчетов в масштабном развертывании счетчики относятся к текущему серверу, а не к масштабному развертыванию в целом.  
   
- Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows. [Профилирование среды выполнения](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows. [Профилирование среды выполнения](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Сведения о счетчиках производительности и серверах отчетов в собственном режиме см. в разделах [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) и [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим интеграции с SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
@@ -120,7 +120,7 @@ ms.locfileid: "84545546"
 |**Всего обновлений моментальных снимков**|Общее число обновлений моментальных снимков состояния выполнения отчета.|  
   
 ##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> Использование командлетов PowerShell для возврата списков  
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")Следующий скрипт Windows PowerShell возвращает наборы счетчиков, в которых CounterSetName начинается с "msr"  
+ ![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")Следующий скрипт Windows PowerShell возвращает наборы счетчиков, в которых CounterSetName начинается с "msr"  
   
 ```  
 get-counter -listset msr*  
@@ -139,5 +139,4 @@ CounterSetName     : MSRS 2011 Web Service SharePoint Mode
  [Наблюдение за производительностью сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
-  
   

@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b2dd0f77dcfc8c116bfbf0f4431c2825f6cb9e68
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e68c51930cae4762723f098089d0913792748c61
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179352"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956683"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>Установка пакетов R с помощью RevoScaleR
 
@@ -33,12 +33,12 @@ ms.locfileid: "88179352"
 
 | Компонент | Description |
 |----------|-------------|
-| [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Определяет путь к библиотеке экземпляров на удаленном SQL Server. |
-| [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage); | Получает путь для одного или нескольких пакетов на удаленном SQL Server. |
-| [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | Вызывайте эту функцию из удаленного клиента R для установки пакетов в контексте вычислений SQL Server из указанного репозитория или посредством считывания сжатых пакетов, сохраненных локально. Эта функция проверяет зависимости, чтобы убедиться, что в SQL Server можно установить все связанные пакеты, как и при установке пакета R в локальном контексте. Чтобы использовать этот параметр, необходимо включить управление пакетами на сервере и в базе данных. Клиентская и серверная среды должны иметь одинаковую версию RevoScaleR. |
-| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages). | Получает список пакетов, установленных в указанном контексте вычислений. |
-| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Копирует сведения о библиотеке пакетов между файловой системой и базой данных для указанного контекста вычислений. |
-| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Удаляет пакеты из указанного контекста вычислений. Функция также вычисляет зависимости и гарантирует удаление пакетов, которые больше не используются другими пакетами в SQL Server, для освобождения ресурсов. |
+| [rxSqlLibPaths](/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Определяет путь к библиотеке экземпляров на удаленном SQL Server. |
+| [rxFindPackage](/machine-learning-server/r-reference/revoscaler/rxfindpackage); | Получает путь для одного или нескольких пакетов на удаленном SQL Server. |
+| [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | Вызывайте эту функцию из удаленного клиента R для установки пакетов в контексте вычислений SQL Server из указанного репозитория или посредством считывания сжатых пакетов, сохраненных локально. Эта функция проверяет зависимости, чтобы убедиться, что в SQL Server можно установить все связанные пакеты, как и при установке пакета R в локальном контексте. Чтобы использовать этот параметр, необходимо включить управление пакетами на сервере и в базе данных. Клиентская и серверная среды должны иметь одинаковую версию RevoScaleR. |
+| [rxInstalledPackages](/machine-learning-server/r-reference/revoscaler/rxinstalledpackages). | Получает список пакетов, установленных в указанном контексте вычислений. |
+| [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Копирует сведения о библиотеке пакетов между файловой системой и базой данных для указанного контекста вычислений. |
+| [rxRemovePackages](/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Удаляет пакеты из указанного контекста вычислений. Функция также вычисляет зависимости и гарантирует удаление пакетов, которые больше не используются другими пакетами в SQL Server, для освобождения ресурсов. |
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -56,14 +56,14 @@ ms.locfileid: "88179352"
 
 ## <a name="client-connections"></a>Клиентские подключения
 
-Поддерживается клиентская рабочая станция [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) или [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) (специалисты по обработке и анализу данных часто используют бесплатный выпуск Developer) в той же сети.
+Поддерживается клиентская рабочая станция [Microsoft R Client](/machine-learning-server/r-client/install-on-windows) или [Microsoft Machine Learning Server](/machine-learning-server/install/machine-learning-server-windows-install) (специалисты по обработке и анализу данных часто используют бесплатный выпуск Developer) в той же сети.
 
-При вызове функций управления пакетами из удаленного клиента R необходимо сначала создать объект контекста вычислений, используя функцию [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver). Затем для каждой используемой функции управления пакетами передайте контекст вычислений в качестве аргумента.
+При вызове функций управления пакетами из удаленного клиента R необходимо сначала создать объект контекста вычислений, используя функцию [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver). Затем для каждой используемой функции управления пакетами передайте контекст вычислений в качестве аргумента.
 
 При установке контекста вычислений обычно указывается удостоверение пользователя. Если при создании контекста вычислений не указать имя пользователя и пароль, будет использоваться удостоверение пользователя, запускающего код R.
 
 1. В командной строке R определите строку подключения к экземпляру и базе данных.
-2. Используйте конструктор [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver), чтобы определить контекст вычислений SQL Server с помощью строки подключения.
+2. Используйте конструктор [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver), чтобы определить контекст вычислений SQL Server с помощью строки подключения.
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -74,7 +74,7 @@ ms.locfileid: "88179352"
     packageList <- c("e1071", "mice")
     ```
 
-4. Вызовите [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) и передайте контекст вычислений и строковую переменную, содержащую имена пакетов.
+4. Вызовите [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) и передайте контекст вычислений и строковую переменную, содержащую имена пакетов.
 
     ```R
     rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)

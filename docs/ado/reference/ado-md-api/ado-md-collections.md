@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0e912950c12b6d3a3c87a497a43d75ab1c29199
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f83f06c5aa72c31df711db05198032206c5a32b9
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059422"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098673"
 ---
 # <a name="ado-md-collections"></a>Коллекции многомерных объектов ADO
 
@@ -33,8 +33,8 @@ ms.locfileid: "92059422"
 |[Члены](./members-collection-ado-md.md)|Содержит объекты- **члены** уровня или расположения вдоль оси.|  
 |[Positions](./positions-collection-ado-md.md)|Содержит объекты **позиции** , определяющие точку на оси.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по объекты данных ActiveX (MD) API](./ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по объекты данных ActiveX (MD) API](./ado-md-object-model.md?view=sql-server-ver15)   
  [Примеры кода объекты данных ActiveX (MD)](./ado-md-code-examples.md)   
  [объекты данных ActiveX (MD) перечислимые константы](./ado-md-enumerated-constants.md)   
  [Методы объекты данных ActiveX (MD)](./ado-md-methods.md)   
