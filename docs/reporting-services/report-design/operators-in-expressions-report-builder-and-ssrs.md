@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 276e6e9f1ad326b0b3930d729fe233f2e4cbb7c6
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: c310b902889b8dc78b81609439f09ba2d6e4beb7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255632"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934889"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Операторы в выражениях (построитель отчетов и службы SSRS)
   Оператор — это символ, который означает действия, применяемые к одному или более элементам выражения. В выражениях поддерживаются следующие типы операторов: арифметические, сравнения, объединения, логические (поразрядные) и сдвига.  
@@ -78,10 +78,9 @@ ms.locfileid: "84255632"
 |>>|Выполняет арифметический сдвиг битового шаблона вправо.|  
   
 ## <a name="see-also"></a>См. также:  
- [Диалоговое окно «Выражение»](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
+ [Диалоговое окно «Выражение»](/previous-versions/sql/)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Диалоговое окно "Выражение" (построитель отчетов)](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
-  
+ [Диалоговое окно "Выражение" (построитель отчетов)](./expressions-report-builder-and-ssrs.md)  
   

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 296e9220c4c8b0518bba5a7587cf3a69fcecae06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 738ff14a43dd473abeab0c02ef206417675a7fb9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882887"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987698"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Пошаговое руководство. использовать пользовательское условие теста для проверки результатов выполнения хранимой процедуры
 
@@ -35,7 +35,7 @@ ms.locfileid: "85882887"
   
 -   Проверка нового условия теста.  
   
-Для работы с этим пошаговым руководством вам потребуется Visual Studio 2010 или Visual Studio 2012 с последней версии SQL Server Data Tools. Дополнительные сведения см. в руководстве по [установке SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md).  
+Для работы с этим пошаговым руководством вам потребуется Visual Studio 2010 или Visual Studio 2012 с последней версии SQL Server Data Tools. Дополнительные сведения см. в руководстве по [установке SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md).  
   
 ## <a name="creating-a-custom-test-condition"></a>Создание пользовательского условия теста  
 Сначала будет создана библиотека классов.  
@@ -95,7 +95,7 @@ ms.locfileid: "85882887"
     Требуемые ссылки будут показаны в узле **Ссылки** для проекта в **обозревателе решений**.  
   
 ## <a name="creating-the-resultsetcolumncountcondition-class"></a>Создание класса ResultSetColumnCountCondition  
-Теперь переименуйте **Class1** в **ResultSetColumnCountCondition** и настройте наследование от [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Класс **ResultSetColumnCountCondition** является простым условием теста, которое проверяет число столбцов, возвращенных в наборе ResultSet. С помощью этого условия теста можно проверять правильность контракта для хранимой процедуры.  
+Теперь переименуйте **Class1** в **ResultSetColumnCountCondition** и настройте наследование от [testcondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). Класс **ResultSetColumnCountCondition** является простым условием теста, которое проверяет число столбцов, возвращенных в наборе ResultSet. С помощью этого условия теста можно проверять правильность контракта для хранимой процедуры.  
   
 1.  В **обозревателе решений** щелкните правой кнопкой мыши Class1.cs, выберите команду **Переименовать** и введите **ResultSetColumnCountCondition.cs**.  
   
@@ -115,13 +115,13 @@ ms.locfileid: "85882887"
         public class ResultSetColumnCountCondition  
     ```  
   
-4.  Сделайте этот класс производным от класса [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
+4.  Сделайте этот класс производным от класса [testcondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)).  
   
     ```  
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  Добавьте [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). В разделе [Руководство. Создание условия теста для конструктора модульных тестов SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) вы найдете дополнительные сведения об атрибуте UnitTesting.Conditions.ExportTestConditionAttribute.  
+5.  Добавьте [ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103)). В разделе [Руководство. Создание условия теста для конструктора модульных тестов SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) вы найдете дополнительные сведения об атрибуте UnitTesting.Conditions.ExportTestConditionAttribute.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -404,4 +404,3 @@ namespace ColumnCountCondition
   
 ## <a name="see-also"></a>См. также:  
 [Пользовательские условия теста для модульных тестов SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

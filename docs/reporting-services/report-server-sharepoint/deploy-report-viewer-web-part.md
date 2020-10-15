@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767041"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933562"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint
 
@@ -53,7 +53,7 @@ ms.locfileid: "83767041"
 
 1. На сервере SharePoint откройте командную консоль SharePoint с помощью команды **Запуск от имени администратора**.
 
-2. Выполните командлет [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx), чтобы добавить решение в ферму.
+2. Выполните командлет [Add-SPSolution](/powershell/module/sharepoint-server/Add-SPSolution), чтобы добавить решение в ферму.
 
     ```
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -61,7 +61,7 @@ ms.locfileid: "83767041"
 
     Командлет возвратит имя решения, его идентификатор, а также атрибут Deployed=False. На следующем шаге будет выполнено развертывание решения.
 
-3. Выполните командлет [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx), чтобы развернуть решение в ферме.
+3. Выполните командлет [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution), чтобы развернуть решение в ферме.
 
     **SharePoint 2013**
 
@@ -93,7 +93,7 @@ ms.locfileid: "83767041"
 
 6. Повторите эти действия для дополнительных семейств веб-сайтов, открыв каждый из сайтов и щелкнув "Действия сайта".
 
-При необходимости можно также использовать PowerShell для включения этой функции для всех сайтов с помощью командлета [Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx).
+При необходимости можно также использовать PowerShell для включения этой функции для всех сайтов с помощью командлета [Enable-SPFeature](/powershell/module/sharepoint-server/Enable-SPFeature).
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 

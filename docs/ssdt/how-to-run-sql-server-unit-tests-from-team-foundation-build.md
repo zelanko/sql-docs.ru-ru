@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed4241fb1aeac7faaceadc250f0c2e61f10179fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893927"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987540"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Руководство. Запуск модульных тестов SQL Server из сборки Team Foundation
 
@@ -23,15 +23,15 @@ ms.locfileid: "85893927"
   
 -   [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Руководство. Настройка и запуск запланированных тестов после сборки приложения](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Руководство. Настройка и запуск запланированных тестов после сборки приложения](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100))  
   
--   [Создание базового определения построения](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Создание базового определения построения](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
   
 Перед использованием этих процедур сначала следует настроить рабочую среду, выполнив следующие действия.  
   
 -   Установка построения Team Foundation Build и управления версиями Team Foundation Вероятно, вам необходимо будет установить построение Team Foundation Build и управление версиями Team Foundation на разные компьютеры.  
   
--   Установите Microsoft SQL Server Data Tools Build Utilities на тот же компьютер, на котором установлена сборка Team Foundation. Чтобы установить SQL Server Data Tools Build Utilities, сначала создайте административную точку установки. Дополнительные сведения об административной точке установки см. в статье, посвященной [установке SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md). Затем установите на сервер построения SSDTBuildUtilties.msi из расположения (/расположение), которое используется в качестве административной точки установки.  
+-   Установите Microsoft SQL Server Data Tools Build Utilities на тот же компьютер, на котором установлена сборка Team Foundation. Чтобы установить SQL Server Data Tools Build Utilities, сначала создайте административную точку установки. Дополнительные сведения об административной точке установки см. в статье, посвященной [установке SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md). Затем установите на сервер построения SSDTBuildUtilties.msi из расположения (/расположение), которое используется в качестве административной точки установки.  
   
 -   Подключитесь к экземпляру Visual Studio Team Foundation Server.  
   
@@ -215,22 +215,22 @@ ms.locfileid: "85893927"
   
 1.  Подключитесь к компьютеру, на котором работает Team Foundation Server.  
   
-    Дополнительные сведения см. в статье [Использование обозревателя управления исходным кодом](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    Дополнительные сведения см. в статье [Использование обозревателя управления исходным кодом](/previous-versions/visualstudio/visual-studio-2010/ms181370(v=vs.100)).  
   
 2.  Добавьте решение в систему управления версиями, если оно еще туда не добавлено.  
   
-    Дополнительные сведения см. в статье [Добавление файлов в систему управления версиями](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    Дополнительные сведения см. в статье [Добавление файлов в систему управления версиями](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100)).  
   
 3.  В меню **Вид** выберите пункт **Извлеченные элементы**.  
   
 4.  Внесите в систему все файлы решения.  
   
-    Дополнительные сведения см. в статье [Возврат ожидающих изменений](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    Дополнительные сведения см. в статье [Возврат ожидающих изменений](/previous-versions/visualstudio/visual-studio-2010/ms181411(v=vs.100)).  
   
     > [!NOTE]  
     > Возможно, у вас есть определенный процесс, который определяет действия по созданию автоматизированных тестов и управлению ими. Например, согласно процессу может требоваться локальная проверка построения перед внесением этого кода вместе с тестами, которые его проверяют.  
   
-    В **обозревателе решений** рядом с каждым файлом отобразится значок замка, указывающий, что он записан после изменения. Дополнительные сведения см. в статье [Просмотр свойств файлов и папок в системе управления версиями](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    В **обозревателе решений** рядом с каждым файлом отобразится значок замка, указывающий, что он записан после изменения. Дополнительные сведения см. в статье [Просмотр свойств файлов и папок в системе управления версиями](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100)).  
   
     Ваши тесты доступны для Team Foundation Build. Теперь можно создать определение построения, содержащее тесты, которые должны запускаться.  
   
@@ -280,11 +280,10 @@ ms.locfileid: "85893927"
   
 3.  Проверьте правильность значений в полях **Определение сборки **, **Агент сборки** и **Папка сброса для этой сборки** и щелкните **Поставить в очередь**.  
   
-    Откроется вкладка **В очереди** **обозревателя сборок**. Дополнительные сведения об управлении завершенными сборками см. в статьях [для Visual Studio 2010](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) или [Visual Studio 2012](https://msdn.microsoft.com/library/ms181732.aspx).  
+    Откроется вкладка **В очереди** **обозревателя сборок**. Дополнительные сведения об управлении завершенными сборками см. в статьях [для Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100)) или [Visual Studio 2012](/previous-versions/ms181732(v=vs.140)).  
   
 ## <a name="see-also"></a>См. также:  
 [Выполнение модульных тестов SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Создание базового определения построения](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Помещение построения в очередь](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Наблюдение за ходом построения](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
-  
+[Создание базового определения построения](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
+[Помещение построения в очередь](/previous-versions/visualstudio/visual-studio-2010/ms181722(v=vs.100))  
+[Наблюдение за ходом построения](/previous-versions/visualstudio/visual-studio-2010/ms181724(v=vs.100))  

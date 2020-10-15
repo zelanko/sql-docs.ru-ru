@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a13617ec599390718e5c56222fb40b5e78f384fd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245123"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892074"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4: Определение подключения к данным и таблицы данных для дочернего отчета
 После проектирования родительского отчета далее необходимо создать подключение к данным и таблицу данных для дочернего отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2014.  
@@ -62,7 +62,7 @@ ms.locfileid: "87245123"
     > [!WARNING]  
     > Обязательно снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)** .  
   
-    На этом настройка объекта [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) ADO.NET в качестве источника данных для отчета завершена. На странице конструктора набора данных в Visual Studio появится добавленный объект **DataTable** со списком столбцов, указанных в запросе. Набор данных DataSet2 содержит данные таблицы PurhcaseOrderDetail, указанные в запросе.  
+    На этом настройка объекта [DataTable](/dotnet/api/system.data.datatable) ADO.NET в качестве источника данных для отчета завершена. На странице конструктора набора данных в Visual Studio появится добавленный объект **DataTable** со списком столбцов, указанных в запросе. Набор данных DataSet2 содержит данные таблицы PurhcaseOrderDetail, указанные в запросе.  
   
 11. Сохраните файл.  
   
@@ -70,5 +70,3 @@ ms.locfileid: "87245123"
   
 ## <a name="next-task"></a>Следующая задача  
 Тем самым были успешно созданы подключение к данным и таблица данных для дочернего отчета. Затем необходимо спроектировать дочерний отчет с использованием мастера отчетов. См. [Занятие 5. Проектирование дочернего отчета с использованием мастера отчетов](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
-  
-

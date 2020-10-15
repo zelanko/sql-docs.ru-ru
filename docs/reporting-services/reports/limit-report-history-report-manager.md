@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634a033c06b2ed6815e32cf97829118dafa13b5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 809d11c82a9b09a23590592ec3f7b433e3c9ca43
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510125"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986660"
 ---
 # <a name="limit-report-history---reporting-services"></a>Ограничение журнала отчета — Reporting Services
   Журнал отчета — это коллекция моментальных снимков отчета, созданных на протяжении определенного времени. Можно создавать журнал отчета по запросу или определить в расписании, насколько часто должен создаваться моментальный снимок и добавляться к журналу.  
@@ -45,11 +45,11 @@ ms.locfileid: "79510125"
   
 3.  Перейдите на вкладку **Журнал** .  
   
-4.  Выберите параметры отчета и нажмите кнопку **Применить**. Подробные сведения о каждом параметре см. в разделе [Страница "Свойства параметров моментального снимка" (диспетчер отчетов)](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).  
+4.  Выберите параметры отчета и нажмите кнопку **Применить**. Подробные сведения о каждом параметре см. в разделе [Страница "Свойства параметров моментального снимка" (диспетчер отчетов)](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130)).  
   
 ## <a name="see-also"></a>См. также:  
  [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Диспетчер отчетов (службы SSRS в собственном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Диспетчер отчетов (службы SSRS в собственном режиме)](../web-portal-ssrs-native-mode.md)  
 
 ::: moniker-end
 
@@ -71,10 +71,9 @@ ms.locfileid: "79510125"
   
 3.  Перейдите на вкладку **Журнал** .  
   
-4.  Выберите параметры отчета и нажмите кнопку **Применить**. Сведения о каждом параметре см. в разделе [Страница свойств "Параметры моментальных снимков"](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).  
+4.  Выберите параметры отчета и нажмите кнопку **Применить**. Сведения о каждом параметре см. в разделе [Страница свойств "Параметры моментальных снимков"](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130)).  
   
 ## <a name="see-also"></a>См. также:  
  [Добавление моментального снимка в журнал отчета](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
 
 ::: moniker-end
-  

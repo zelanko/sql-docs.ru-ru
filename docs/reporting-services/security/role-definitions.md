@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 985ba6df5091c13ab4b91c7f2ba95b4c1484a584
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8dbfe6d890c84bee9a66141971a554c410d47dd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498057"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987394"
 ---
 # <a name="role-definitions"></a>Определения ролей
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]*определение роли* — это именованная коллекция задач, которая включает операции, доступные на сервере отчетов. Определение ролей содержит правила, которые сервер отчетов использует для обеспечения безопасности. Когда пользователь пытается выполнить задачу, например опубликовать отчет, сервер отчетов, сверяясь с назначением ролей этого пользователя, определяет, включена ли данная задача в определение роли пользователя. Запрос выполняется только в том случае, если задача включена в определение роли.  
@@ -46,7 +46,7 @@ ms.locfileid: "88498057"
   
  Чтобы создать определение роли, воспользуйтесь средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в статье [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md).  
   
- Созданное определение роли можно использовать, выбрав его в назначении ролей. Дополнительные сведения см. в статье [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ Созданное определение роли можно использовать, выбрав его в назначении ролей. Дополнительные сведения см. в статье [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](./grant-user-access-to-a-report-server.md).  
   
 ## <a name="customize-or-delete-a-role-definition"></a>Настройка или удаление определения роли  
  Стандартные роли можно модифицировать или заменять пользовательскими ролями. Для изменения роли следует добавлять или удалять задачи из ее определения. Переименовать роль нельзя. Любые внесенные изменения немедленно применяются ко всем назначениям ролей, содержащим это определение роли.  
@@ -57,8 +57,7 @@ ms.locfileid: "88498057"
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](./grant-user-access-to-a-report-server.md)   
  [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
-  
   

@@ -11,16 +11,16 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93d7520da2d011de53c0dc6d80eea9f131f9a470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfddd7509a8ff9a038cb5ec6bee060deae8d3a09
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718510"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987581"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
-SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. Этот раздел содержит сводку о новых возможностях в отдельных функциональных областях, а также ссылки на дополнительные сведения. Дополнительные сведения о SQL Server в Linux см. в [документации по SQL Server в Linux](https://docs.microsoft.com/sql/linux/).
+SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. Этот раздел содержит сводку о новых возможностях в отдельных функциональных областях, а также ссылки на дополнительные сведения. Дополнительные сведения о SQL Server в Linux см. в [документации по SQL Server в Linux](/sql/linux/).
 
 [![Скачать в центре оценки ПО](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Попробуйте:** [Скачать выпуск SQL Server 2017 за октябрь 2017 г.](https://go.microsoft.com/fwlink/?LinkID=829477)
 
@@ -84,7 +84,7 @@ SQL Server Analysis Services 2017 включает множество улуч
 - Редактор DAX для SSDT. (CTP 2.0)
 - Подсказки по кодированию — продвинутая функция для оптимизации обновления данных больших табличных моделей в памяти. (CTP 1.3)
 - Поддержка **уровня совместимости 1400** для табличных моделей. Чтобы создать новый проект табличной модели с уровнем совместимости 1400 или перевести уже существующий проект на этот уровень, загрузите и установите [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
-- Современный интерфейс **получения данных** для табличных моделей с уровнем совместимости 1400. См. [блог команды разработчиков Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
+- Современный интерфейс **получения данных** для табличных моделей с уровнем совместимости 1400. См. [блог команды разработчиков Analysis Services](/archive/blogs/analysisservices/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services). (CTP 1.1)
 - Свойство **Скрыть члены** скрывает пустые элементы в неоднородных иерархиях. (CTP 1.1)
 - Новое действие **Строки детализации** для конечного пользователя, позволяющее **Показать подробности** по статистических данным. Функции [SELECTCOLUMNS](/dax/selectcolumns-function-dax) и **DETAILROWS** для создания выражений со строками детализации. (CTP 1.1)
 - DAX-оператор **IN** для указания множества значений. (CTP 1.1)
@@ -94,7 +94,7 @@ SQL Server Analysis Services 2017 включает множество улуч
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>Службы SQL Server 2017 Reporting Services (SSRS)
 Службы SQL Server Reporting Services больше не доступны для установки с помощью программы установки SQL Server. Перейдите в Центр загрузки Майкрософт, чтобы [загрузить службы Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
 - В отчетах теперь доступны комментарии, позволяющие сообщать свою точку зрения и взаимодействовать с другими пользователями. Для комментариев также доступны вложения.
-- В последних выпусках построителя отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services, перетаскивая нужные поля в конструкторах запросов. См. [блог по Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+- В последних выпусках построителя отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services, перетаскивая нужные поля в конструкторах запросов. См. [блог по Reporting Services](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 - В целях разработки и настройки современных приложений службы SSRS теперь поддерживают API RESTful, полностью совместимый с OpenAPI. Полная спецификация и документация по API теперь находится на сайте [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 Дополнительные сведения см. в разделе [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) (Новые возможности служб SQL Server Reporting Services (SSRS)).
@@ -118,7 +118,7 @@ SQL Server Analysis Services 2017 включает множество улуч
 
 ## <a name="next-steps"></a>Дальнейшие действия
 - Ознакомьтесь с [заметками о выпуске SQL Server 2017](sql-server-2017-release-notes.md).
-- [Новые возможности SQL Server 2017 на Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
+- [Новые возможности SQL Server 2017 на Linux](../linux/sql-server-linux-whats-new.md).
 - Узнайте, [что нового в SQL Server 2016](what-s-new-in-sql-server-2016.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

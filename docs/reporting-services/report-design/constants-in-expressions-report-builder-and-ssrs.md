@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8737057e0e4b291abf6530f5f6f74ce145dc84d7
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 9b659b901764b48bd8db80c1e34ab58bb3897325
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779112"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934619"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>Константы в выражениях (построитель отчетов и службы SSRS)
   Константа состоит из литерального текста или предопределенного текста. Обработчик отчетов имеет доступ к стандартным константам, поэтому при включении их в выражения значения, которые они представляют, заменяются в выражении до его оценки.  
@@ -52,10 +52,9 @@ ms.locfileid: "84779112"
 |MistyRose|При создании выражения для свойства отчета, основанного на цвете фона, можно указать цвет по имени. Допустимые имена перечислены в диалоговом окне **Выражение** .|  
   
 ## <a name="see-also"></a>См. также:  
- [Диалоговое окно «Выражение»](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
+ [Диалоговое окно «Выражение»](/previous-versions/sql/)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Диалоговое окно "Выражение" (построитель отчетов)](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
-  
+ [Диалоговое окно "Выражение" (построитель отчетов)](./expressions-report-builder-and-ssrs.md)  
   

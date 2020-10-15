@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1e4c3e685bd3dc294ae1a71d54a478b937df8a0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6605fd1fd9aee53bc117701acddd5ffe28e16d8
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934293"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934716"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Сервер отчетов служб Reporting Services (режим SharePoint)
 
@@ -29,7 +29,7 @@ ms.locfileid: "87934293"
 
  Дополнительные сведения об установке и настройке см. в следующем документе.  
   
--   [Установка служб Reporting Services в режиме интеграции с SharePoint для SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode).  
+-   [Установка служб Reporting Services в режиме интеграции с SharePoint для SharePoint 2010](../install-windows/install-the-first-report-server-in-sharepoint-mode.md).  
   
 -   [Добавление дополнительного сервера отчетов в ферму](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "87934293"
   
 - Все страницы приложений, средства, сообщения об ошибках и предупреждения, создаваемые службами Reporting Services, будут выводиться на языке, используемом экземпляром служб Reporting Services (это один из языков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-- Страницы приложения, открываемые на сайте SharePoint, веб-часть средства просмотра отчетов и построитель отчетов отображаются на одном из языков, поддерживаемых для надстройки служб Reporting Services. Список поддерживаемых языков см. в [скачиваемых материалах по SQL Server](https://msdn.microsoft.com/sql/downloads/) и на странице скачивания надстройки для служб SQL Server 2016 Reporting Services.  
+- Страницы приложения, открываемые на сайте SharePoint, веб-часть средства просмотра отчетов и построитель отчетов отображаются на одном из языков, поддерживаемых для надстройки служб Reporting Services. Список поддерживаемых языков см. в [скачиваемых материалах по SQL Server](/powerapps/developer/common-data-service/org-service/subscribe-sdk-assembly-updates-using-nuget) и на странице скачивания надстройки для служб SQL Server 2016 Reporting Services.  
   
 - Сайты и центр администрирования SharePoint, справка в Интернете и сообщения доступны на языках, поддерживаемых продуктами Office Server.  
   
@@ -129,8 +129,8 @@ ms.locfileid: "87934293"
   
 |**Задача**|**Ссылка**|  
 |--------------|--------------|  
-|Подробные инструкции по установке и настройке служб Reporting Services в режиме интеграции с SharePoint.|[Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode) и [Добавление дополнительного сервера отчетов в ферму](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Горизонтально масштабируемое развертывание служб Reporting Services в SharePoint путем добавления дополнительных серверов отчетов.|[Добавление дополнительного сервера отчетов в ферму](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) и [Топологии развертывания для компонентов бизнес-аналитики SQL Server в SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
+|Подробные инструкции по установке и настройке служб Reporting Services в режиме интеграции с SharePoint.|[Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](../install-windows/install-the-first-report-server-in-sharepoint-mode.md) и [Добавление дополнительного сервера отчетов в ферму](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Горизонтально масштабируемое развертывание служб Reporting Services в SharePoint путем добавления дополнительных серверов отчетов.|[Добавление дополнительного сервера отчетов в ферму](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) и [Топологии развертывания для компонентов бизнес-аналитики SQL Server в SharePoint](/previous-versions/sql/sql-server-2016/hh231674(v=sql.130)).|  
 |Добавление дополнительных клиентских веб-интерфейсов SharePoint с установленными компонентами Reporting Services для просмотра элементов отчетов.|[Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Настройка электронной почты для сервера отчетов в среде SharePoint.|[Настройка электронной почты для приложения служб Reporting Services](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
 |Последние сведения об этом выпуске доступны на TechNet Wiki.|[Рекомендации, советы и сведения по устранению неполадок служб SQL Server 2012 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=221297).|  
@@ -138,6 +138,6 @@ ms.locfileid: "87934293"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 [Установка или удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
-[Веб-часть "Средство просмотра отчетов" на сайте SharePoint (службы Reporting Services)](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
+[Веб-часть "Средство просмотра отчетов" на сайте SharePoint (службы Reporting Services)](./report-viewer-web-part-sharepoint-site.md)
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

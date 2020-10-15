@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5764cfafb9db66dc10e2db6092cd6421b3463bd5
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: e382dc67cb0a04bafabbbf4a88c2695edba8472b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742107"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987370"
 ---
 # <a name="manage-a-running-process"></a>Управление запущенным процессом
   Среда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] наблюдает за состоянием заданий, выполняющихся на сервере отчетов. Через регулярные интервалы времени сервер отчетов просматривает внутрипроцессные задания и записывает сведения о состоянии в базу данных сервера отчетов или в базы данных приложения служб для режима интеграции с SharePoint. Задание находится в процессе выполнения, если запущены следующие процессы: выполнение запроса на удаленном или локальном сервере базы данных, обработка отчета и подготовка отчета к просмотру.  
@@ -122,7 +122,6 @@ ms.locfileid: "80742107"
  [Свойства задания (среда Management Studio)](../../reporting-services/tools/job-properties-management-studio.md)   
  [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../web-portal-ssrs-native-mode.md)   
  [Мониторинг производительности сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)  
-  
   

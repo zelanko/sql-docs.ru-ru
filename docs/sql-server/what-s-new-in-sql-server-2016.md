@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 24cf362c711abd450533b218c699fc7f2bc1dd18
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967555"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987260"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
@@ -59,10 +59,10 @@ ms.locfileid: "86967555"
 - Новое **средство проверки согласованности базы данных (DBCC)** выполняется для внутренних целей при обнаружении возможных проблем с повреждением данных.
 - **Прямой запрос**, выполняющийся перед импортом динамических внешних данных, теперь поддерживает дополнительные источники данных, включая Azure SQL, Oracle и Teradata. 
 - Реализовано множество новых **функций DAX (выражения доступа к данным)** .
-- Новое пространство имен **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** управляет экземплярами и моделями в табличном режиме. 
-- [Управляющие объекты службы Analysis Services (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) переработаны и теперь содержат вторую сборку — **Microsoft.AnalysisServices.Core.dll**.
+- Новое пространство имен **[Microsoft.AnalysisServices.Tabular](/dotnet/api/microsoft.analysisservices.tabular)** управляет экземплярами и моделями в табличном режиме. 
+- [Управляющие объекты службы Analysis Services (AMO)](/dotnet/api/) переработаны и теперь содержат вторую сборку — **Microsoft.AnalysisServices.Core.dll**.
 
-См. раздел о [подсистеме служб Analysis Services (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
+См. раздел о [подсистеме служб Analysis Services (SSAS)](/analysis-services/what-s-new-in-analysis-services). 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
 - Поддержка **групп доступности AlwaysOn**
@@ -97,13 +97,13 @@ ms.locfileid: "86967555"
 См. раздел о [службах Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## <a name="next-steps"></a>Дальнейшие действия   
-- [Установка SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   
+- [Установка SQL Server](../database-engine/install-windows/install-sql-server.md)   
 - [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
 - [Таблица SQL Server 2016](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
-- [Возможности, поддерживаемые различными выпусками SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
+- [Возможности, поддерживаемые различными выпусками SQL Server](./editions-and-components-of-sql-server-2016.md)
 - [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Установка SQL Server 2016 с помощью мастера установки](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Настройка и обслуживание установки](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [Настройка и обслуживание установки](../database-engine/install-windows/install-sql-server-servicing-updates.md)
 - [New SQL PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

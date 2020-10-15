@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 707ce1a26dd2ec64f2f7335bd0a4528339d36e84
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: b61f3a4fea633045ba064a79243a6e6c7f66149a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681373"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934812"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Добавление внешнего изображения (построитель отчетов и службы SSRS)
   Внешние изображения могут находиться на сервере отчетов в собственном режиме или в режиме интеграции с SharePoint либо находиться на любом другом веб-сайте. При включении внешних изображений в отчет необходимо проверить, что изображение существует и читатель отчета имеет разрешения на доступ к изображению. Дополнительные сведения см. в разделе [Изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
@@ -47,6 +47,5 @@ ms.locfileid: "84681373"
 ## <a name="see-also"></a>См. также:  
  [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Добавление фонового изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
-  
+ [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и службы SSRS)](./images-report-builder-and-ssrs.md)  
   

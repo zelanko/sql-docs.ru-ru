@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1ea16180c9a4e67f40302de7d70ae357b8393010
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396113"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986630"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Отключение или приостановка обработки отчетов и подписок  
 Существует несколько подходов, которые позволяют отключить или приостановить обработку отчетов и подписок [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В этой статье описаны различные подходы — от отключения подписки до прерывания подключения к источнику данных. Не все эти подходы можно применять при обоих режимах работы сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В таблице ниже приведена сводка методов и поддерживаемых режимов сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -60,7 +60,7 @@ ms.locfileid: "87396113"
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") **Отключение отдельной подписки с помощью Windows PowerShell.** Для отключения определенной подписки используйте указанный ниже сценарий PowerShell. Обновите имя сервера и идентификатор подписки в скрипте.  
+![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") **Отключение отдельной подписки с помощью Windows PowerShell.** Для отключения определенной подписки используйте указанный ниже сценарий PowerShell. Обновите имя сервера и идентификатор подписки в скрипте.  
   
 ```PS  
 #disable specific subscription  
@@ -80,7 +80,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") **Создание списка всех отключенных подписок с помощью Windows PowerShell.** Для получения списка всех отключенных подписок на текущем сервере отчетов в собственном режиме используйте приведенный ниже сценарий PowerShell. Обновите имя сервера.  
+ ![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") **Создание списка всех отключенных подписок с помощью Windows PowerShell.** Для получения списка всех отключенных подписок на текущем сервере отчетов в собственном режиме используйте приведенный ниже сценарий PowerShell. Обновите имя сервера.  
   
 ```  
 #list all disabled subscriptions  
@@ -91,7 +91,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") **Включение всех отключенных подписок с помощью Windows PowerShell.** Для включения всех подписок, которые в настоящее время отключены, используйте указанный ниже сценарий PowerShell. Обновите имя сервера.  
+ ![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") **Включение всех отключенных подписок с помощью Windows PowerShell.** Для включения всех подписок, которые в настоящее время отключены, используйте указанный ниже сценарий PowerShell. Обновите имя сервера.  
   
 ```  
 #enable all subscriptions  
@@ -105,7 +105,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") **ОТКЛЮЧЕНИЕ всех подписок с помощью Windows PowerShell.** Для отключения **ВСЕХ** подписок используйте следующий сценарий PowerShell.  
+ ![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") **ОТКЛЮЧЕНИЕ всех подписок с помощью Windows PowerShell.** Для отключения **ВСЕХ** подписок используйте следующий сценарий PowerShell.  
   
 ```  
 #DISABLE all subscriptions  
@@ -121,7 +121,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> Приостановка общего расписания  
  Если отчет или подписка выполняется по общему расписанию, можно приостановить расписание для предотвращения процесса обработки. Обработка всех отчетов и подписок, управляемая данным расписанием, откладывается до возобновления выполнения расписания.  
   
--   **Режим интеграции с SharePoint:** ![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") В разделе **Параметры сайта** выберите **Управление общими расписаниями**. Выберите расписание, а затем щелкните **Приостановка выбранных расписаний**.  
+-   **Режим интеграции с SharePoint:** ![Параметры SharePoint](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") В разделе **Параметры сайта** выберите **Управление общими расписаниями**. Выберите расписание, а затем щелкните **Приостановка выбранных расписаний**.  
   
 -   **Собственный режим.** На веб-портале нажмите кнопку **Параметры** ![кнопка "Параметры"](media/ssrs-portal-settings-gear.png) в строке меню в верхней части экрана и выберите **Параметры сайта** в раскрывающемся меню. Перейдите на вкладку **Расписания**, чтобы ее открыть. Установите флажки рядом с расписаниями, которые необходимо включить или отключить, а затем нажмите кнопку **Включить** или **Отключить** соответственно, чтобы выполнить нужное действие. Значение в столбце состояния изменится на "отключено" или "включено" соответственно.  
   
@@ -177,4 +177,3 @@ ForEach ($subscription in $subscriptions)
  [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Веб-портал сервера отчетов (SSRS в собственном режиме)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Защищаемые элементы](../../reporting-services/security/securable-items.md) 
-  

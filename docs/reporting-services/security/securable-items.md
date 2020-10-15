@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fd4b92dcacf94e2a0196f210050954a84c1ac3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f30b82c72a726faf5d2fb0e221fa36f4872acf12
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498017"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987340"
 ---
 # <a name="securable-items"></a>Защищаемые элементы
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют безопасность на основе ролей для управления доступом к элементам, которые хранятся на сервере отчетов. Предоставление пользователю доступа к серверу отчетов обычно выполняется созданием пары назначений ролей:  
@@ -61,7 +61,6 @@ ms.locfileid: "88498017"
 ## <a name="see-also"></a>См. также:  
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](./grant-user-access-to-a-report-server.md)   
  [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)  
-  
   

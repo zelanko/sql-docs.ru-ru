@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942470"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987220"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Руководство. изменить целевую платформу и опубликовать проект базы данных
 
@@ -43,7 +43,7 @@ ms.locfileid: "86942470"
   
 3.  Обратите внимание, что на панели **Список ошибок** появляется ошибка SQL70015: "Filegroup reference and partitioning scheme" is not supported in SQL Azure (SQL70015: "Ссылка на файловую группу и схема секционирования" не поддерживается в SQL Azure).  
   
-    SSDT автоматически проверяет скрипт с учетом целевой платформы. В этом случае SSDT возвращает ошибку, поскольку файловая группа не поддерживается в SQL Azure. Список неподдерживаемых инструкций Transact\-SQL в SQL Azure см. в статье [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx) (Частично поддерживаемые инструкции Transact-SQL в Базе данных SQL Microsoft Azure).  
+    SSDT автоматически проверяет скрипт с учетом целевой платформы. В этом случае SSDT возвращает ошибку, поскольку файловая группа не поддерживается в SQL Azure. Список неподдерживаемых инструкций Transact\-SQL в SQL Azure см. в статье [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](/previous-versions/azure/ee336267(v=azure.100)) (Частично поддерживаемые инструкции Transact-SQL в Базе данных SQL Microsoft Azure).  
   
 4.  Удалите предложение `ON` . Обратите внимание, что ошибка немедленно исчезнет из области **Список ошибок**.  
   
@@ -68,4 +68,3 @@ ms.locfileid: "86942470"
 **Проект, где указана целевая платформа Microsoft SQL Server 2012, может вызвать проблемы совместимости с Microsoft SQL Server 2008**. Если этот проект содержит сущности, добавленные только в Microsoft SQL Server 2012, публикация завершится ошибкой.  
   
 Развертывание завершится с ошибками, если предикаты объекта используют функцию **CONTAINS** или **FREETEXT** с вновь созданным полнотекстовым индексом, а также если используются транзакционные скрипты. Если параметр включения скриптов транзакций включен во время развертывания, то процедуры и представления определяются внутри транзакции, тогда как полнотекстовый индекс определяется за пределами транзакции в конце скрипта развертывания. В результате такого упорядочения в скрипте процедуры или представления, использующие функции CONTAINS или FREETEXT, не будут сопоставлены с полнотекстовым индексом, что приведет к ошибке развертывания.  
-  

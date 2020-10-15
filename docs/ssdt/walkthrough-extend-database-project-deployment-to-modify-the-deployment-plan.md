@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3fa3d424d3c6d46ba129c96d935612ce687b3ba0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882911"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987708"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания
 
-Можно создать участников развертывания для выполнения специализированных действий при развертывании проекта SQL. Возможные типы участников — [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) и [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Используйте [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) для изменения плана до его выполнения и [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) для осуществления операций в ходе выполнения плана. В этом пошаговом руководстве показано, как создать [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) с именем SqlRestartableScriptContributor, чтобы добавлять инструкции IF к пакетам в скрипте развертывания. Таким образом можно разрешить в скрипте повторный запуск пакетов, пока они не будут успешно завершены, если в ходе выполнения возникает ошибка.  
+Можно создать участников развертывания для выполнения специализированных действий при развертывании проекта SQL. Возможные типы участников — [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) и [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). Используйте [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) для изменения плана до его выполнения и [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) для осуществления операций в ходе выполнения плана. В этом пошаговом руководстве показано, как создать [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) с именем SqlRestartableScriptContributor, чтобы добавлять инструкции IF к пакетам в скрипте развертывания. Таким образом можно разрешить в скрипте повторный запуск пакетов, пока они не будут успешно завершены, если в ходе выполнения возникает ошибка.  
   
 В этом пошаговом руководстве показано выполнение следующих основных задач:  
   
@@ -46,9 +46,9 @@ ms.locfileid: "85882911"
   
 -   Создать проект библиотеки классов и добавить необходимые ссылки.  
   
--   Определить класс с именем SqlRestartableScriptContributor, который наследует от [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx).  
+-   Определить класс с именем SqlRestartableScriptContributor, который наследует от [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier).  
   
--   Переопределить метод [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx).  
+-   Переопределить метод [OnExecute](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute).  
   
 -   Добавить закрытые вспомогательные методы.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "85882911"
   
     ```  
   
-    Теперь вы определили участника развертывания, который наследует от [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx). В ходе сборки и развертывания специализированные участники загружаются из каталога стандартных расширений. Участники, изменяющие план развертывания, обозначаются атрибутом [ExportDeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute.aspx). Этот атрибут требуется для обнаружения участников. Атрибут должен выглядеть примерно так:  
+    Теперь вы определили участника развертывания, который наследует от [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier). В ходе сборки и развертывания специализированные участники загружаются из каталога стандартных расширений. Участники, изменяющие план развертывания, обозначаются атрибутом [ExportDeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute). Этот атрибут требуется для обнаружения участников. Атрибут должен выглядеть примерно так:  
   
     ```csharp  
     [ExportDeploymentPlanModifier("MyOtherDeploymentContributor.RestartableScriptContributor", "1.0.0.0")]  
@@ -149,7 +149,7 @@ ms.locfileid: "85882911"
   
     ```  
   
-    Метод [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) переопределяется из базового класса [DeploymentPlanContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx), являющегося базовым и для [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx), и для [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). В метод OnExecute передается объект [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), который предоставляет доступ ко всем указанным аргументам, модели базы данных-источника и целевой базы данных, плану развертывания и вариантам развертывания. В этом примере должны быть получены план развертывания и имя целевой базы данных.  
+    Метод [OnExecute](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute) переопределяется из базового класса [DeploymentPlanContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor), являющегося базовым и для [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier), и для [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). В метод OnExecute передается объект [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext), который предоставляет доступ ко всем указанным аргументам, модели базы данных-источника и целевой базы данных, плану развертывания и вариантам развертывания. В этом примере должны быть получены план развертывания и имя целевой базы данных.  
   
 2.  Перейдем к добавлению начала текста в метод OnExecute:  
   
@@ -181,7 +181,7 @@ ms.locfileid: "85882911"
   
     ```  
   
-    Этот код определяет несколько локальных переменных и задает цикл, осуществляющий обработку всех шагов плана развертывания. После завершения цикла необходимо выполнить некоторую последующую обработку и удалить временную таблицу, созданную во время развертывания для отслеживания хода выполнения плана. Здесь типы ключей: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) и [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx). Основной метод — AddAfter.  
+    Этот код определяет несколько локальных переменных и задает цикл, осуществляющий обработку всех шагов плана развертывания. После завершения цикла необходимо выполнить некоторую последующую обработку и удалить временную таблицу, созданную во время развертывания для отслеживания хода выполнения плана. Здесь типы ключей: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep) и [DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep). Основной метод — AddAfter.  
   
 3.  Теперь добавим дополнительный шаг обработки вместо комментария с текстом «Ввести дополнительный шаг обработки здесь»:  
   
@@ -248,7 +248,7 @@ ms.locfileid: "85882911"
   
     ```  
   
-    Комментарии в коде поясняют выполняемую обработку. Вкратце можно отметить, что в этом коде происходит поиск интересующих нас шагов, пропуск других шагов и останов после достижения начала шагов, следующих за развертыванием. Если шаг содержит инструкции, которые необходимо заключить в условные операции, выполняется дополнительная обработка. К основным типам, методам и свойствам относятся [BeginPreDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep.aspx), [BeginPostDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [TSqlScript](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlscript.aspx), Script, [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx) и [SqlPrintStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlprintstep.aspx).  
+    Комментарии в коде поясняют выполняемую обработку. Вкратце можно отметить, что в этом коде происходит поиск интересующих нас шагов, пропуск других шагов и останов после достижения начала шагов, следующих за развертыванием. Если шаг содержит инструкции, которые необходимо заключить в условные операции, выполняется дополнительная обработка. К основным типам, методам и свойствам относятся [BeginPreDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep), [BeginPostDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep), [TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject), [TSqlScript](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlscript), Script, [DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep) и [SqlPrintStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlprintstep).  
   
 4.  Теперь добавим код пакетной обработки вместо комментария с текстом «Ввести пакетную обработку здесь»:  
   
@@ -298,7 +298,7 @@ ms.locfileid: "85882911"
   
     ```  
   
-    В этом коде создается инструкция IF с блоком BEGIN/END. Затем выполняется дополнительная обработка инструкций пакета. После ее завершения добавляется инструкция INSERT для ввода информации во временную таблицу, которая отслеживает ход выполнения скрипта. Наконец, обновим пакет, заменив инструкции, которые использовались с новой инструкцией IF, содержащей указанные инструкции. Основные типы, методы и свойства включают [IfStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.ifstatement.aspx), [BeginEndBlockStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement.aspx), [StatementList](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.statementlist.aspx), [TSqlBatch](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch.aspx), [PredicateSetStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement.aspx), [SetOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.setoptions.aspx) и [InsertStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.insertstatement.aspx).  
+    В этом коде создается инструкция IF с блоком BEGIN/END. Затем выполняется дополнительная обработка инструкций пакета. После ее завершения добавляется инструкция INSERT для ввода информации во временную таблицу, которая отслеживает ход выполнения скрипта. Наконец, обновим пакет, заменив инструкции, которые использовались с новой инструкцией IF, содержащей указанные инструкции. Основные типы, методы и свойства включают [IfStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.ifstatement), [BeginEndBlockStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement), [StatementList](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.statementlist), [TSqlBatch](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch), [PredicateSetStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement), [SetOptions](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.setoptions) и [InsertStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.insertstatement).  
   
 5.  Теперь добавим текст инструкции, реализующей цикл. Замените комментарий с текстом «Введите дополнительную обработку инструкции здесь»:  
   
@@ -318,7 +318,7 @@ ms.locfileid: "85882911"
   
     ```  
   
-    Применительно к каждой инструкции в пакете, если эта инструкция относится к типу, требующему заключения в инструкцию sp_executesql, внесите в эту инструкцию соответствующие изменения. Затем в коде добавляется инструкция к списку инструкций, относящемуся к созданному блоку BEGIN/END. Основные типы, методы и свойства включают [TSqlStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlstatement.aspx) и [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx).  
+    Применительно к каждой инструкции в пакете, если эта инструкция относится к типу, требующему заключения в инструкцию sp_executesql, внесите в эту инструкцию соответствующие изменения. Затем в коде добавляется инструкция к списку инструкций, относящемуся к созданному блоку BEGIN/END. Основные типы, методы и свойства включают [TSqlStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlstatement) и [ExecuteStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executestatement).  
   
 6.  Наконец, добавьте раздел для последующей обработки вместо комментария с текстом «Введите дополнительную последующую обработку здесь»:  
   
@@ -353,7 +353,7 @@ ms.locfileid: "85882911"
   
     Дополнительные типы, свойства и методы, представляющие интерес, включают:  
   
-    StringBuilder, [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx) и AddBefore.  
+    StringBuilder, [DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep) и AddBefore.  
   
     Затем необходимо определить вспомогательные методы, вызываемые этим методом.  
   
@@ -363,12 +363,12 @@ ms.locfileid: "85882911"
   
     |**Метод**|**Описание**|  
     |--------------|-------------------|  
-    |CreateExecuteSQL|Определение метода CreateExecuteSQL для включения предоставленной инструкции в инструкцию EXEC sp_executesql. К основным типам, методам и свойствам относятся [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx), [ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx), [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx), [ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) и [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx).|  
-    |CreateCompletedBatchesName|Определение метода CreateCompletedBatchesName. С помощью этого метода создается имя, которое будет вставлено во временную таблицу для пакета. К основным типам, методам и свойствам относится [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx).|  
+    |CreateExecuteSQL|Определение метода CreateExecuteSQL для включения предоставленной инструкции в инструкцию EXEC sp_executesql. К основным типам, методам и свойствам относятся [ExecuteStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executestatement), [ExecutableProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference), [SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname), [ProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.procedurereference) и [ExecuteParameter](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executeparameter).|  
+    |CreateCompletedBatchesName|Определение метода CreateCompletedBatchesName. С помощью этого метода создается имя, которое будет вставлено во временную таблицу для пакета. К основным типам, методам и свойствам относится [SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname).|  
     |IsStatementEscaped|Определение метода IsStatementEscaped. Этот метод определяет, относится ли элемент модели к такому типу, который требует заключения инструкции в инструкцию EXEC sp_executesql, прежде чем ее можно будет включить в инструкцию IF. К основным типам, методам и свойствам относятся TSqlObject.ObjectType, ModelTypeClass и свойство TypeClass для следующих типов моделей: Schema, Procedure, View,  TableValuedFunction, ScalarFunction, DatabaseDdlTrigger, DmlTrigger, ServerDdlTrigger.|  
     |CreateBatchCompleteInsert|Определение метода CreateBatchCompleteInsert. Этот метод создает инструкцию INSERT, которая добавляется к скрипту развертывания для отслеживания хода выполнения скрипта. К основным типам, методам и свойствам относятся InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource и RowValue.|  
     |CreateIfNotExecutedStatement|Определение метода CreateIfNotExecutedStatement. Этот метод создает инструкцию IF для проверки того, показывают ли результаты в таблице выполнения временных пакетов, что этот пакет уже выполнялся. К основным типам, методам и свойствам относятся IfStatement, ExistsPredicate, ScalarSubquery, NamedTableReference, WhereClause, ColumnReferenceExpression, IntegerLiteral, BooleanComparisonExpression и BooleanNotExpression.|  
-    |GetStepInfo|Определение метода GetStepInfo. Этот метод извлекает сведения об элементе модели, используемом для создания скрипта данного шага, в дополнение к имени шага. Типы и методы, представляющие интерес, включают [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) и [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
+    |GetStepInfo|Определение метода GetStepInfo. Этот метод извлекает сведения об элементе модели, используемом для создания скрипта данного шага, в дополнение к имени шага. Типы и методы, представляющие интерес, включают [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext), [DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep), [TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject), [CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep), [AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep) и [DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep).|  
     |GetElementName|Создает отформатированное имя для TSqlObject.|  
   
 1.  Добавьте следующий код для определения вспомогательных методов:  
@@ -775,7 +775,7 @@ ms.locfileid: "85882911"
         > При развертывании проекта базы данных, которая идентична целевой базе данных, результирующий отчет не является слишком содержательным. Для получения более содержательных результатов разверните изменения в базе данных или новую базу данных.  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>Развертывание с помощью командной строки, в котором используется созданный файл dacpac  
-После сборки проекта SQL создается файл dacpac, который может использоваться для развертывания схемы из командной строки и который может обеспечить развертывание с другого компьютера, такого как компьютер сборки. SqlPackage — это программа командной строки, которая обеспечивает развертывание файлов dacpac с полным диапазоном вариантов, позволяющих пользователям, кроме всего прочего, развернуть dacpac или создать скрипт развертывания. Дополнительные сведения см. в описании [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080(v=VS.103).aspx).  
+После сборки проекта SQL создается файл dacpac, который может использоваться для развертывания схемы из командной строки и который может обеспечить развертывание с другого компьютера, такого как компьютер сборки. SqlPackage — это программа командной строки, которая обеспечивает развертывание файлов dacpac с полным диапазоном вариантов, позволяющих пользователям, кроме всего прочего, развернуть dacpac или создать скрипт развертывания. Дополнительные сведения см. в описании [SqlPackage.exe](../tools/sqlpackage.md).  
   
 > [!NOTE]  
 > Для успешного развертывания файлов dacpac, построенных на основе проектов с заданным свойством DeploymentContributors, необходимо установить на используемом компьютере DLL-библиотеки, которые содержат применяемых участников развертывания. Это связано с тем, что участники отмечены как требуемые для успешного развертывания.  
@@ -793,4 +793,3 @@ ms.locfileid: "85882911"
 [Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
 [Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

@@ -12,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: fe50faeeb134ca9162f5de25b6c775d3b6eea829
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545526"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986973"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Счетчики производительности для службы ReportServer, объекты производительности
   В этом разделе описываются счетчики производительности для объектов производительности **ReportServer:Service** и **ReportServerSharePoint:Service** , входящих в развертывание [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -25,7 +25,7 @@ ms.locfileid: "84545526"
 > [!NOTE]  
 >  Эти объекты производительности служат для наблюдения за событиями на локальном сервере отчетов. При запуске сервера отчетов в масштабном развертывании счетчики относятся к текущему серверу, а не к масштабному развертыванию в целом.  
   
- Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows. [Профилирование среды выполнения](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows. [Профилирование среды выполнения](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  В этом разделе:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84545526"
   
  В следующей таблице перечислены счетчики, включенные в объект производительности **ReportServer:Service** .  
   
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName  
+ ![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -77,7 +77,7 @@ ms.locfileid: "84545526"
 ##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (сервер отчетов в режиме SharePoint)  
  Объект производительности **ReportServerSharePoint:Service** был добавлен в версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName  
+ ![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -90,7 +90,7 @@ ms.locfileid: "84545526"
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> Использование командлетов PowerShell для возврата списков  
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName "ReportServerSharePoint:Service":  
+ ![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName "ReportServerSharePoint:Service":  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -100,5 +100,4 @@ ms.locfileid: "84545526"
  [Наблюдение за производительностью сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим интеграции с SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
-  
   
