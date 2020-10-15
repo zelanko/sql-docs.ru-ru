@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: e128bf4402074ecce5b65951f0d2463368c08bf6
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cfddbdca35d24589b3fa87976cbfb547f14a46ee
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812149"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891794"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)
 
@@ -25,7 +25,7 @@ ms.locfileid: "85812149"
 
 Чтобы создать внедренный источник данных, необходимы сведения о соединении с внешним источником данных и сведения о разрешениях для доступа к данным. Эти сведения обычно предоставляет владелец источника данных. Можно проверить соединение, чтобы убедиться, что указаны правильные учетные данные.
 
-Дополнительные сведения см. в статьях о [создании строк подключения к данным (построитель отчетов и службы SSRS)](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и об [указании учетных данных в построителе отчетов](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017).
+Дополнительные сведения см. в статьях о [создании строк подключения к данным (построитель отчетов и службы SSRS)](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и об [указании учетных данных в построителе отчетов](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017).
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "85812149"
 
 5. Нажмите кнопку **Подробные сведения**и воспользуйтесь предоставленными сведениями, чтобы исправить проблему.
 
-    Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017).
+    Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017).
 
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

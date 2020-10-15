@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: d0eb3bcdd62d7f78799f754b668544cfdd01fcd9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991874"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891304"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Интеграция сервера отчетов с Power BI (диспетчер конфигурации)
 
@@ -24,9 +24,9 @@ ms.locfileid: "88991874"
 
 Помимо подключения к Интернету, необходимого для перехода к службе [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , для обеспечения интеграции [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]нужно выполнить приведенные ниже требования.
 
-- **Azure Active Directory.** Организация должна использовать Azure Active Directory для управления каталогами и удостоверениями служб Azure и веб-приложений. Дополнительные сведения см. в статье [Что такое Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
+- **Azure Active Directory.** Организация должна использовать Azure Active Directory для управления каталогами и удостоверениями служб Azure и веб-приложений. Дополнительные сведения см. в статье [Что такое Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis).
 
-- **Управляемый клиент.** Панель мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , на которой будут закрепляться элементы отчетов, должна входить в управляемый клиент Azure AD.  Управляемый клиент создается автоматически во время оформления первой подписки на службы Azure, такие как Microsoft 365 и Microsoft Intune.   Вирусные клиенты сейчас не поддерживаются.  Дополнительные сведения см. в подразделах "Что такое клиент Azure AD" и "Какую версию Azure AD выбрать" в разделе [Что такое Azure Active Directory?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
+- **Управляемый клиент.** Панель мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , на которой будут закрепляться элементы отчетов, должна входить в управляемый клиент Azure AD.  Управляемый клиент создается автоматически во время оформления первой подписки на службы Azure, такие как Microsoft 365 и Microsoft Intune.   Вирусные клиенты сейчас не поддерживаются.  Дополнительные сведения см. в подразделах "Что такое клиент Azure AD" и "Какую версию Azure AD выбрать" в разделе [Что такое Azure Active Directory?](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant).
 
 - Пользователь, выполняющий интеграцию [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , должен быть членом клиента Azure AD, системным администратором [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и системным администратором базы данных каталога ReportServer.
 
@@ -46,7 +46,7 @@ ms.locfileid: "88991874"
 
 ## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> Интеграция и регистрация сервера отчетов
 
-В диспетчере конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполните приведенные ниже действия. Дополнительные сведения см. в разделе [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+В диспетчере конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполните приведенные ниже действия. Дополнительные сведения см. в разделе [Диспетчер конфигурации сервера отчетов](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 1. Откройте страницу интеграции [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] .
 

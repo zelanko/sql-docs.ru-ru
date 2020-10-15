@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b90baf141289a8dbee8eebe0c788823a50aa6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ccffdc3beca07d53302b7a7dceff0e30bbb6331
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446106"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891224"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Установка первого сервера отчетов в режиме интеграции с SharePoint
 
@@ -51,7 +51,7 @@ ms.locfileid: "88446106"
  ![Развертывание одиночного сервера в режиме интеграции служб SSRS с SharePoint](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "Развертывание одиночного сервера в режиме интеграции служб SSRS с SharePoint")  
   
 > [!TIP]  
->  Более сложные примеры развертывания см. в разделе [Топологии развертывания для компонентов бизнес-аналитики SQL Server в SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
+>  Более сложные примеры развертывания см. в разделе [Топологии развертывания для компонентов бизнес-аналитики SQL Server в SharePoint](/previous-versions/sql/sql-server-2016/hh231674(v=sql.130)).  
   
 ##  <a name="setup-accounts"></a><a name="bkmk_setupaccounts"></a> Учетная запись для установки
 
@@ -63,7 +63,7 @@ ms.locfileid: "88446106"
   
  **Создание приложений служб Reporting Services**  
   
--   После установки и регистрации служб Reporting Services создайте одно или несколько приложений служб Reporting Services. Для создания приложения службы Reporting Services учетную запись службы фермы SharePoint необходимо временно включить в группу локальных администраторов. Дополнительные сведения о разрешениях учетной записи SharePoint 2013 см. в статье [Разрешения и параметры безопасности учетной записи в SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx), а о разрешениях учетной записи SharePoint 2016 — в статье [Разрешения и параметры безопасности учетной записи в SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   После установки и регистрации служб Reporting Services создайте одно или несколько приложений служб Reporting Services. Для создания приложения службы Reporting Services учетную запись службы фермы SharePoint необходимо временно включить в группу локальных администраторов. Дополнительные сведения о разрешениях учетной записи SharePoint 2013 см. в статье [Разрешения и параметры безопасности учетной записи в SharePoint 2013](/SharePoint/install/account-permissions-and-security-settings-in-sharepoint-server-2016) (https://technet.microsoft.com/library/cc678863.aspx), а о разрешениях учетной записи SharePoint 2016 — в статье [Разрешения и параметры безопасности учетной записи в SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      В целях безопасности не рекомендуется, чтобы учетные записи администраторов фермы SharePoint также являлись учетными записями администраторов локальной операционной системы. Если вы добавили учетную запись администратора фермы в группу локальных администраторов в ходе процесса настройки, рекомендуется удалить учетную запись из группы локальных администраторов после завершения установки.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "88446106"
   
 9. Если выбрана установка служб Database Engine, примите экземпляр **MSSQLSERVER** по умолчанию на странице **Настройка экземпляра** и нажмите кнопку **Далее**.  
   
-     ![примечание](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание")Архитектура службы Reporting Services SharePoint не основывается на "экземпляре" SQL Server, как в прежней версии архитектуры Reporting Services.  
+     ![примечание](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание")Архитектура службы Reporting Services SharePoint не основывается на "экземпляре" SQL Server, как в прежней версии архитектуры Reporting Services.  
   
 10. Если отображается страница **Настройка сервера** , введите соответствующие учетные данные. Если необходимо использовать функции предупреждения об изменении данных или подписки на данные служб Reporting Services, необходимо изменить **тип запуска** для агента SQL Server на **автоматический**. Страница **Конфигурация сервера** может не отображаться в зависимости от продуктов, уже установленных на компьютере.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "88446106"
 15. Для выполнения программы установки требуется несколько минут. Появится страница **Готово** с перечислением функций и состояния каждого компонента. Возможно, откроется диалоговое окно с уведомлением о необходимости перезагрузки компьютера.  
   
 ##  <a name="step-2-register-and-start-the-reporting-services-sharepoint-service"></a><a name="bkmk_install_SSRS_sharedservice"></a> Этап 2. Регистрация и запуск служб Reporting Services в SharePoint  
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
+ ![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
   
 > [!NOTE]
 > Если производится установка в существующую ферму SharePoint, шаги, описанные в этом подразделе, выполнять не нужно. Службы Reporting Services в SharePoint были установлены и запущены в результате выполнения мастера установки SQL Server при изучении предыдущего раздела этого документа.  
@@ -261,7 +261,7 @@ ms.locfileid: "88446106"
   
 11. Создание приложения службы может занять несколько минут. По завершении этого процесса отобразятся подтверждение и ссылка на страницу **Подготовка подписок и предупреждений** . Выполните шаг подготовки, если нужно использовать функции подписки или предупреждений об изменении данных служб Reporting Services. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Сведения о создании приложения службы Reporting Services с помощью PowerShell см. в следующих статьях:  
+ ![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Сведения о создании приложения службы Reporting Services с помощью PowerShell см. в следующих статьях:  
   
 -   Обратитесь к следующему разделу [Скрипт Windows PowerShell для шагов 1–4](#bkmk_full_script).  
   
@@ -279,7 +279,7 @@ ms.locfileid: "88446106"
   
      Откройте в браузере требуемый сайт SharePoint. Например, https://\<servername>/sites/bi  
   
-2.  Щелкните **Параметры**![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint").  
+2.  Щелкните **Параметры**![Параметры SharePoint](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint").  
   
 3.  Выберите **Настройки сайта**.  
   
@@ -304,7 +304,7 @@ ms.locfileid: "88446106"
   
  Параметры  
   
--   Обновите параметр **-Account** для прокси-сервера службы. В качестве учетной записи необходимо использовать управляемую учетную запись службы на ферме SharePoint. Дополнительные сведения см. в разделе, посвященном SharePoint, [Планирование учетных записей администрирования и служб в SharePoint 2013](https://technet.microsoft.com/library/cc263445.aspx).  
+-   Обновите параметр **-Account** для прокси-сервера службы. В качестве учетной записи необходимо использовать управляемую учетную запись службы на ферме SharePoint. Дополнительные сведения см. в разделе, посвященном SharePoint, [Планирование учетных записей администрирования и служб в SharePoint 2013](/SharePoint/security-for-sharepoint-server/plan-for-administrative-and-service-accounts).  
   
 -   Изменяет параметр **-DatabaseServer** для приложения службы. Этот параметр является экземпляром компонента Database Engine.  
   
@@ -398,15 +398,15 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  Для SharePoint 2016 [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) должен быть настроен для использования служб Excel. Подробные сведения см. в следующих документах.
  
- - [Развертывание SQL Server 2016 PowerPivot и Power View в SharePoint 2016](https://docs.microsoft.com/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
+ - [Развертывание SQL Server 2016 PowerPivot и Power View в SharePoint 2016](/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
  
- - [Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm (Развертывание SQL Server 2016 PowerPivot и Power View в многоуровневой ферме SharePoint 2016)](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
+ - [Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm (Развертывание SQL Server 2016 PowerPivot и Power View в многоуровневой ферме SharePoint 2016)](/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
  Для SharePoint 2016 необходимо будет создать и настроить приложение служб Excel. Дополнительные сведения см. в следующих разделах:  
   
--   Раздел "Настройка служб Excel для интеграции служб Analysis Services" в статье [Установка служб Analysis Services в режиме Power Pivot](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
+-   Раздел "Настройка служб Excel для интеграции служб Analysis Services" в статье [Установка служб Analysis Services в режиме Power Pivot](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
--   [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
+-   [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](/SharePoint/administration/manage-excel-services-data-model-settings).  
 
 Кроме того, учетная запись безопасности для пула приложений, используемая приложением служб Reporting Services, должна иметь права администратора на сервере служб Analysis Services.
   
@@ -414,7 +414,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  Для функций подписки и предупреждений об изменении данных в службах Reporting Services может потребоваться настройка разрешений для агента SQL Server. Если отображается сообщение об ошибке, указывающее, что необходим агент SQL Server, хотя агент SQL Server уже запущен, обновите разрешения. Щелкните ссылку **Подготовка подписок и предупреждений** на странице с сообщением об успешном создании приложения службы, чтобы перейти на страницу провизионирования агента SQL Server. Шаг подготовки необходим, если система развернута более чем на одном компьютере, например если экземпляр базы данных SQL Server находится на другом компьютере. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>Настройка электронной почты для приложений служб SSRS  
- Функция предупреждения об изменении данных служб Reporting Services отправляет предупреждения в сообщениях электронной почты. Для отправки электронной почты могут потребоваться настройка приложения служб Reporting Services и изменение модуля доставки электронной почты приложением службы. Параметры электронной почты необходимо настроить и в случае, если вы планируете использовать модуль доставки электронной почты для функции подписки служб Reporting Services. Дополнительные сведения см. в статье [Настройка электронной почты для приложения служб Reporting Services (SharePoint 2013 и SharePoint 2016)](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
+ Функция предупреждения об изменении данных служб Reporting Services отправляет предупреждения в сообщениях электронной почты. Для отправки электронной почты могут потребоваться настройка приложения служб Reporting Services и изменение модуля доставки электронной почты приложением службы. Параметры электронной почты необходимо настроить и в случае, если вы планируете использовать модуль доставки электронной почты для функции подписки служб Reporting Services. Дополнительные сведения см. в статье [Настройка электронной почты для приложения служб Reporting Services (SharePoint 2013 и SharePoint 2016)](./configure-e-mail-for-a-reporting-services-service-application.md). 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>Добавление типов содержимого служб Reporting Services в библиотеки документов  
  Службы Reporting Services предоставляют стандартные типы содержимого для управления файлами общих источников данных (RSDS) и определений отчетов (RDL) построителя отчетов. Добавив в библиотеку типы содержимого **Отчет построителя отчетов** и **Источник данных отчета**, вы можете использовать команду **Создать** для создания документов этих типов. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
@@ -429,7 +429,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
   
 -   В библиотеке документов SharePoint создайте базовый отчет служб Reporting Services, который содержит только одно текстовое поле, например заголовок. Отчет не содержит никаких источников данных и наборов данных. Цель состоит в том, чтобы проверить возможность открытия построителя отчетов, создания простого отчета и просмотра этого отчета.  
   
-     Сохраните отчет в библиотеке документов и запустите отчет из библиотеки. Дополнительные сведения о создании отчетов с помощью построителя отчетов см. в разделе [Запуск построителя отчетов (построитель отчетов)](https://technet.microsoft.com/library/ms159221.aspx).  
+     Сохраните отчет в библиотеке документов и запустите отчет из библиотеки. Дополнительные сведения о создании отчетов с помощью построителя отчетов см. в разделе [Запуск построителя отчетов (построитель отчетов)](../report-builder/start-report-builder.md).  
   
 ## <a name="next-steps"></a>Дальнейшие действия
 

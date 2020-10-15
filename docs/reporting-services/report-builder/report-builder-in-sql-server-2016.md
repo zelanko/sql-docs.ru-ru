@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f8c6cb06fd63f526de699d7c6050dacd1b5ff05b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290897"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891864"
 ---
 # <a name="report-builder-in-sql-server"></a>Построитель отчетов в SQL Server
 
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio/SSDT.  При разработке отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчет можно предварительно просмотреть в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. После этого отчет можно опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (2016 и более ранние версии). 
 
-Можно также опубликовать отчет с разбивкой на страницы в службе Power BI. Узнайте больше об [отчетах с разбивкой на страницы в Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (предварительная версия).
+Можно также опубликовать отчет с разбивкой на страницы в службе Power BI. Узнайте больше об [отчетах с разбивкой на страницы в Power BI Premium](/power-bi/paginated-reports-report-builder-power-bi) (предварительная версия).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -93,5 +93,3 @@ ms.locfileid: "80290897"
   
  [Сочетания клавиш (построитель отчетов)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Описываются клавиши, которые можно использовать для навигации и проектирования отчетов в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
-  
-

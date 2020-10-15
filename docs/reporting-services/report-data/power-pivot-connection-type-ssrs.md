@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba0c6616c2a99007a379a71e0169b2bac85e5be5
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c83a33e56bca1cba9fab1c5e3ef873e9aa312f8a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458009"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891734"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Тип соединения PowerPivot (SSRS)
   Для извлечения данных из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , опубликованной в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сайте SharePoint, можно использовать модуль обработки данных служб SQL Server Analysis Services.  
@@ -62,7 +62,6 @@ ms.locfileid: "86458009"
 -   Отчет содержит только данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из источника данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
- [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
+ [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](/previous-versions/sql/)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

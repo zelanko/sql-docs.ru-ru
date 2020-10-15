@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: a9d16c785696a18262b818668af9d65c55f37616
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ed1e16aac4de3277906d00c2b1a0f4458418cc95
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727498"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081773"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Использование проверки подлинности NTLM для подключения к SQL Server
 
@@ -79,7 +79,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Дополнительные сведения об именах субъектов-служб (SPN) см. в разделах:
 
-- [Поддержка имени субъекта-службы в клиентских соединениях](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
+- [Поддержка имени субъекта-службы в клиентских соединениях](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)
 
 > [!NOTE]  
 > Атрибут соединения serverSpn поддерживается только драйвером Microsoft JDBC Driver версии 4.2 или более поздней.

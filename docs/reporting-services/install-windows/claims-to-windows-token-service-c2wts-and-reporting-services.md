@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 65f2fb2148e1a33aacb9d0b1e82039d594ea3524
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88396790"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891604"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Служба Claims to Windows Token Service (C2WTS) и службы Reporting Services
 
@@ -29,9 +29,9 @@ ms.locfileid: "88396790"
 
 Веб-часть средства просмотра отчетов можно использовать для внедрения отчетов служб SQL Server Reporting Services в собственном режиме на сайте SharePoint. Эта веб-часть доступна для SharePoint 2013 и SharePoint 2016. В SharePoint 2013 и SharePoint 2016 действует проверка подлинности на основе утверждений. В результате этого C2WTS необходимо настроить соответствующим образом, а в Reporting Services нужно настроить проверку подлинности Kerberos для правильного отображения отчетов.
 
-1. Настройте экземпляр Reporting Services (собственный режим) для проверки подлинности Kerberos, определив учетную запись службы SSRS, настроив имя субъекта-службы и обновив файл rsreportserver.config, чтобы использовать тип проверки подлинности RSWindowsNegotiate. [Регистрация имени субъекта-службы для сервера отчетов](https://docs.microsoft.com/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+1. Настройте экземпляр Reporting Services (собственный режим) для проверки подлинности Kerberos, определив учетную запись службы SSRS, настроив имя субъекта-службы и обновив файл rsreportserver.config, чтобы использовать тип проверки подлинности RSWindowsNegotiate. [Регистрация имени субъекта-службы для сервера отчетов](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. Выполните шаги из раздела, посвященного [настройке службы c2WTS](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts).
+2. Выполните шаги из раздела, посвященного [настройке службы c2WTS](?view=sql-server-2017#steps-needed-to-configure-c2wts).
  
 
 ## <a name="sharepoint-mode-integration"></a>Интеграция с режимом SharePoint
@@ -44,7 +44,7 @@ ms.locfileid: "88396790"
 
 Токены, созданные службой C2WTS, работают только при наличии ограниченного делегирования (ограничение набором определенных служб) и заданном параметре using any authentication protocol (Использовать любой протокол проверки подлинности) (переход протокола).
 
-Если в среде используется делегирование, ограниченное Kerberos, то внешние источники данных и служба SharePoint Server должны находиться в одном домене Windows. Любая служба, использующая службу токенов Claims to Windows Service (c2WTS), должна применять делегирование, **ограниченное** Kerberos, чтобы разрешить c2WTS использовать передачу протокола Kerberos для перевода утверждений в учетные данные Windows. Эти требования являются достоверными для всех общих служб SharePoint. Дополнительные сведения см. в разделе [Планирование проверки подлинности Kerberos в SharePoint 2013](https://technet.microsoft.com/library/ee806870.aspx).  
+Если в среде используется делегирование, ограниченное Kerberos, то внешние источники данных и служба SharePoint Server должны находиться в одном домене Windows. Любая служба, использующая службу токенов Claims to Windows Service (c2WTS), должна применять делегирование, **ограниченное** Kerberos, чтобы разрешить c2WTS использовать передачу протокола Kerberos для перевода утверждений в учетные данные Windows. Эти требования являются достоверными для всех общих служб SharePoint. Дополнительные сведения см. в разделе [Планирование проверки подлинности Kerberos в SharePoint 2013](/SharePoint/security-for-sharepoint-server/kerberos-authentication-planning).  
 
 1. Настройте учетную запись домена службы C2WTS. 
 
@@ -84,7 +84,7 @@ ms.locfileid: "88396790"
     * Выберите **Пользователи или компьютеры...&#42;** и введите учетную запись, в которой размещена служба. Например, если SQL Server выполняется под учетной записью с именем *sqlservice*, введите `sqlservice`. 
       Для **веб-части средства просмотра отчетов** это будет учетная запись службы для экземпляра Reporting Services (собственный режим).
 
-    * Выберите список служб. Отобразятся имена участников-служб, которые доступны в этой учетной записи. Если вы не видите в списке службу для соответствующей учетной записи, возможно, она отсутствует или размещена в другой учетной записи. Для настройки имен SPN можно использовать служебную программу SetSPN. Для **веб-части средства просмотра отчетов** отобразится имя участника-службы HTTP, настроенное в разделе [Настройка веб-части средства просмотра отчетов](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
+    * Выберите список служб. Отобразятся имена участников-служб, которые доступны в этой учетной записи. Если вы не видите в списке службу для соответствующей учетной записи, возможно, она отсутствует или размещена в другой учетной записи. Для настройки имен SPN можно использовать служебную программу SetSPN. Для **веб-части средства просмотра отчетов** отобразится имя участника-службы HTTP, настроенное в разделе [Настройка веб-части средства просмотра отчетов](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
 
     * Нажмите кнопку ОК, чтобы закрыть все диалоговые окна.
 

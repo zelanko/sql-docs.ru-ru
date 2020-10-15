@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b66ae216df1b50ee1fa71de8e18f7ee8251e1be4
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 86bc7c0352e7bf2447628a143a5c1732b132a412
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547876"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891374"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Включение и отключение компонентов служб Reporting Services
   Неиспользуемые функции сервера отчетов можно отключить в рамках блокирующей стратегии, позволяющей снизить риск атак на рабочий сервер отчетов. В большинстве случаев рекомендуется использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] параллельно; это позволит использовать все функциональные возможности, предоставляемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Однако в зависимости от используемой модели развертывания можно отключить неиспользуемые функции. Например, если вся обработка отчетов производится с использованием операций по расписанию, то можно разрешить только фоновую обработку. Подобным же образом можно ограничиться запуском веб-службы сервера отчетов, чтобы только получать отчеты по требованию в интерактивном режиме.  
@@ -116,7 +116,7 @@ ms.locfileid: "84547876"
 4.  Щелкните **ОК**.  
   
 ## <a name="see-also"></a>См. также раздел  
-[Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../install-windows/reporting-services-configuration-manager-native-mode.md)
+[Диспетчер конфигураций сервера отчетов (собственный режим)](../install-windows/reporting-services-configuration-manager-native-mode.md)
 
  Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   

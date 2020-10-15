@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5629096fb59bbb081aa535e8e3436a4cb06130d8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c6f2e0f7eefdfe78d1058d839c3e5a4fa9404e77
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726719"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080573"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -129,7 +129,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>Метаданные классификации данных о конфиденциальности
 
-В версии 5.8.0 появилась новая возможность `DataClassification`, которая позволяет пользователям получать [метаданные классификации данных о конфиденциальности](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4) из Microsoft SQL Server 2019 с помощью `sqlsrv_field_metadata`. Для этого требуется драйвер Microsoft ODBC Driver версии 17.4.2 или выше.
+В версии 5.8.0 появилась новая возможность `DataClassification`, которая позволяет пользователям получать [метаданные классификации данных о конфиденциальности](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql#subheading-4) из Microsoft SQL Server 2019 с помощью `sqlsrv_field_metadata`. Для этого требуется драйвер Microsoft ODBC Driver версии 17.4.2 или выше.
 
 По умолчанию что атрибут `DataClassification` имеет значение `false`, но вы можете указать значение `true`, и тогда возвращаемый из `sqlsrv_field_metadata` массив будет заполнен метаданными классификации данных о конфиденциальности, если они существуют. 
 

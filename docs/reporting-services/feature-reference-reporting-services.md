@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b0b603e2abb775383083942f93279c8c117a3829
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247243"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891494"
 ---
 # <a name="feature-reference-reporting-services"></a>Справочник по функциям (службы Reporting Services)
   В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] доступно несколько средств и приложений для создания, администрирования и просмотра отчетов. В этом разделе приводятся конкретные подразделы, описывающие диалоговые окна, веб-страницы и мастера этих инструментальных средств и приложений.  
@@ -29,9 +29,6 @@ ms.locfileid: "87247243"
 ## <a name="in-this-section"></a>в этом разделе  
  [Справка F1 по использованию конструктора отчетов](../reporting-services/tools/report-designer-f1-help.md)  
  Предоставляет справку для конструктора отчетов и его диалоговых окон, мастера отчетов и мастера изображений.  
-  
- [Разделы справки по диспетчеру конфигурации служб Reporting Services](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
- Справка к инструменту настройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для развертывания и управления экземплярами сервера отчетов.  
   
  [Справка F1 по использованию сервера отчетов среде Management Studio](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  Справка по диалоговым окнам, используемым для управления отчетами и серверами отчетов в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  

@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: drskwier; sstein
 ms.date: 10/02/2020
-ms.openlocfilehash: 1a722b41576136bdcc509c96626f8cf4351629e4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6b84916d94a77c0ab832ceee902f9c5d4f95dc2b
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721585"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081963"
 ---
 # <a name="download-and-install-sqlpackage"></a>Скачивание и установка sqlpackage
 
@@ -33,7 +33,7 @@ ms.locfileid: "91721585"
 Подробнее см. в [заметках о выпуске](release-notes-sqlpackage.md). Чтобы скачать дополнительные языки, воспользуйтесь разделом [Доступные языки](#available-languages).
 
 ## <a name="dacfx"></a>DacFx
-DacServices ([Microsoft.SqlServer.Dac](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.dac.dacservices)) — это связанный механизм для интеграции развертывания базы данных в конвейер приложений.  API-интерфейс DacServices доступен в пакете NuGet [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx).  Текущая версия DacFx — 150.4897.1.
+DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) — это связанный механизм для интеграции развертывания базы данных в конвейер приложений.  API-интерфейс DacServices доступен в пакете NuGet [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx).  Текущая версия DacFx — 150.4897.1.
 
 Установка пакета NuGet в интерфейсе командной строки .NET выполняется с помощью следующей команды:
 

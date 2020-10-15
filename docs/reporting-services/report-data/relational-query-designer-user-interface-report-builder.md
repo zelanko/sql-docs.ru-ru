@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: faa47b9ac36cc4606b327b1eec0ff73220d58934
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 7188feb4f922f97c5a24b240fb0dea222e67fa40
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455596"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891704"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс конструктора реляционных запросов (построитель отчетов)
   Построитель и конструктор отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]включают как графический, так и текстовый конструктор запросов, которые помогают создавать запросы, указывающие, какие данные следует получить из реляционных баз данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, или для его изменения. Также можно импортировать существующий запрос из файла или отчета.  
@@ -90,7 +90,7 @@ ms.locfileid: "86455596"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует [!INCLUDE[tsql](../../includes/tsql-md.md)], а [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] использует [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Оба диалекта языка SQL поддерживают предложение, ключевое слово и статистические выражения, предоставляемые конструктором запросов.  
   
- Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в [Справочнике по Transact-SQL &#40;компонент Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+ Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в [Справочнике по Transact-SQL &#40;компонент Database Engine&#41;](../../t-sql/language-reference.md).  
   
  Следующая таблица содержит список агрегатов и предоставляет краткое описание каждого из них.  
   
@@ -197,5 +197,4 @@ ms.locfileid: "86455596"
   
 ## <a name="see-also"></a>См. также:  
  [Средства проектирования запросов (службы SSRS)](query-design-tools-ssrs.md)  
-  
   

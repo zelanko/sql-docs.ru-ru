@@ -22,18 +22,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 447e1c66d9e94f654414ae1c7205772097fe575f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e043f333f752a515ca629c58c13045eac883127
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468896"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033632"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Автоматизация администрирования в масштабах предприятия
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
  Автоматическое администрирование нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] называется *администрированием нескольких серверов*. Оно предназначено для выполнения следующих задач.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "88468896"
 Содержит сведения о том, как автоматизированное администрирование в многосерверном окружении использует функции самонастройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
-[Разделы, посвященные обратной совместимости при установке ядра СУБД SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+[Разделы, посвященные обратной совместимости при установке ядра СУБД SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
 [Регистрация серверов](../register-servers/register-servers.md)  
 [sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  
 [sp_delete_targetserver, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
@@ -99,4 +99,3 @@ ms.locfileid: "88468896"
 [sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
 [syslogins](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
 [systargetservers](../../relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
-  

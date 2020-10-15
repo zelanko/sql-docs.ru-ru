@@ -10,12 +10,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cc9294e13539f78ac1d45781e9a51f3a8f944d3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: df5e996ffdc9a307b14c8befd71c64036927b562
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247237"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891504"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Предоставление разрешений для пользователей и оповещение администраторов
 
@@ -30,7 +30,7 @@ ms.locfileid: "87247237"
 
 **Администраторы предупреждений**. Разрешения должны включать разрешение SharePoint на управление предупреждениями. По умолчанию только уровень разрешения «Полный доступ» включает такое разрешение для сайтов, созданных с использованием шаблона веб-сайта группы. Если используются другие шаблоны сайтов, появляются разные списки групп SharePoint по умолчанию. Можно добавить разрешение на управление предупреждениями к одному из встроенных уровней разрешений или создать собственный уровень разрешений, включающий разрешения, позволяющие администраторам предупреждений просматривать и удалять предупреждения данных.
 
-Дополнительные сведения о разрешениях SharePoint см. в разделе [Пользовательские разрешения и уровни разрешений (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx).
+Дополнительные сведения о разрешениях SharePoint см. в разделе [Пользовательские разрешения и уровни разрешений (SharePoint Server 2010)](/SharePoint/sites/user-permissions-and-permission-levels).
 
 ## <a name="grant-permissions"></a>Предоставить разрешения
   

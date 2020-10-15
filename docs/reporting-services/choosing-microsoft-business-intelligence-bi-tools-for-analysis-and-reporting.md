@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: d4a0c1c88e890ed7aa92a50a83eff795a83f42e9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d6880689d05328b09c4f50b87ef8182c1c927afa
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395302"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891214"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Средства Microsoft Business Intelligence (BI) для анализа и отчетности
 
@@ -35,17 +35,16 @@ ms.locfileid: "87395302"
 |Создание мощных моделей данных||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |Самостоятельное выполнение прогнозной аналитики||||||[Надстройки интеллектуального анализа данных для Excel](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
 |Визуализация и анализ данных||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Трехмерные карты](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
-|Формирование вопросов с помощью запросов на естественном языке|||||[ВОПРОСЫ И ОТВЕТЫ](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)|
-|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр файлов размером до 10 МБ)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (поддерживает просмотр файлов размером до 250 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Мобильное приложение Power BI на устройствах с iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Мобильное приложение Power BI на устройствах с Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Мобильное приложение Power BI для Windows](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
-|Совместная работа и общий доступ|||[Веб-сайты SharePoint](https://docs.microsoft.com/sharepoint/getting-started)|[Сайтов групп SharePoint](https://go.microsoft.com/fwlink/?LinkId=391850)|[Веб-сайты Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
+|Формирование вопросов с помощью запросов на естественном языке|||||[ВОПРОСЫ И ОТВЕТЫ](/power-bi/consumer/end-user-q-and-a)|
+|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр файлов размером до 10 МБ)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (поддерживает просмотр файлов размером до 250 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Мобильное приложение Power BI на устройствах с iOS](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Мобильное приложение Power BI на устройствах с Android](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Мобильное приложение Power BI для Windows](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
+|Совместная работа и общий доступ|||[Веб-сайты SharePoint](/sharepoint/getting-started)|[Сайтов групп SharePoint](https://go.microsoft.com/fwlink/?LinkId=391850)|[Веб-сайты Power BI](/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Корпоративная бизнес-аналитика**|ИТ-специалист||||||  
-|Создавайте многомерные или табличные корпоративные модели||||||[Службы Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
+|Создавайте многомерные или табличные корпоративные модели||||||[Службы Analysis Services](/analysis-services/analysis-services-overview)|  
 |Создавайте специальные визуализации данных|||[Power View для SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
-|Создавайте панели мониторинга|||[Панели мониторинга SharePoint](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [Службы PerformancePoint Services](https://technet.microsoft.com/library/ee424392.aspx)||[Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
+|Создавайте панели мониторинга|||[Панели мониторинга SharePoint](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [Службы PerformancePoint Services](/SharePoint/administration/performancepoint-services-overview)||[Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |Создавайте рабочие отчеты||||||*[Службы Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Создавайте пользовательские и внедренные отчеты|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Дополнительные аналитические функции**|Data Scientist||||||  
 |Самостоятельное выполнение прогнозной аналитики||||||[Надстройки интеллектуального анализа данных для Excel](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
-|Используйте алгоритмы интеллектуального анализа данных||||||[Интеллектуальный анализ данных в службах Analysis Services](https://docs.microsoft.com/analysis-services/data-mining/data-mining-ssas)<br/><br/>[Службы R SQL Server](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|Используйте алгоритмы интеллектуального анализа данных||||||[Интеллектуальный анализ данных в службах Analysis Services](/analysis-services/data-mining/data-mining-ssas)<br/><br/>[Службы R SQL Server](../machine-learning/r/sql-server-r-services.md?viewFallbackFrom=sql-server-ver15)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-  

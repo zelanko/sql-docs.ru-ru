@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d02c12998f1083774727c33a261292396151a352
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725705"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081473"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Введение в пространство имен Microsoft.Data.SqlClient
 
@@ -218,7 +218,7 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="authentication"></a>Аутентификация
 
-С помощью параметра строки подключения _Аутентификация_ можно указать различные режимы проверки подлинности. Дополнительные сведения см. в [документации по SqlAuthenticationMethod](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2).
+С помощью параметра строки подключения _Аутентификация_ можно указать различные режимы проверки подлинности. Дополнительные сведения см. в [документации по SqlAuthenticationMethod](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2&preserve-view=true).
 
 > [!NOTE]
 > Настраиваемые поставщики хранилища ключей, например поставщик Azure Key Vault, необходимо обновить, чтобы они поддерживали Microsoft.Data.SqlClient. Также для поддержки Microsoft.Data.SqlClient необходимо обновить поставщики анклава.

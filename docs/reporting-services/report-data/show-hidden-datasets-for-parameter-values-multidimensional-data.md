@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 610ca1c3b7dbd5660a98dec4a91ce4f9988a5108
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4118c7ad1cccb46a08ec200eef223f62010cf45e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455256"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890822"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Отображение скрытых наборов данных для значений параметра — многомерные данные
   Отчет может включать автоматически создаваемые наборы данных (называемые также скрытыми наборами данных), которые по умолчанию не отображаются на панели данных отчета. Эти наборы данных создаются следующими способами.  
@@ -36,8 +36,7 @@ ms.locfileid: "86455256"
   
 ## <a name="see-also"></a>См. также:  
  [Средства проектирования запросов (службы SSRS)](query-design-tools-ssrs.md)   
- [Конструкторы запросов служб Reporting Services](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Конструкторы запросов служб Reporting Services](/previous-versions/sql/)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
-  
   

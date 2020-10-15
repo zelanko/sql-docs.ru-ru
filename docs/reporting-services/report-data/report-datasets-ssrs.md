@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0677b5c5cdf5ff01009a81da01668ff977d2fcff
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 7360e1490edc769d75299cdbf8d21aa98a56245a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458349"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891674"
 ---
 # <a name="report-datasets-ssrs"></a>Наборы данных отчетов (SSRS)
   Чтобы добавить данные в отчет, необходимо создать наборы данных. Каждый набор данных представляет результирующий набор команды запроса к источнику данных. Столбцы в результирующем наборе представляют собой коллекцию полей. Стройки в результирующем наборе представляют данные. Набор данных не содержит фактических данных. Набор данных содержит информацию, необходимую для получения определенного набора данных из источника данных.  
@@ -33,7 +33,7 @@ ms.locfileid: "86458349"
   
      ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- Дополнительные сведения см. в разделах [Внедренные и общие наборы данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) и [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56).  
+ Дополнительные сведения см. в разделах [Внедренные и общие наборы данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) и [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](./data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  Также можно добавить наборы данных в отчет, добавив элементы отчета, включающие наборы данных, от которых они зависят. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -133,5 +133,4 @@ ms.locfileid: "86458349"
 ## <a name="see-also"></a>См. также:  
  [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)
-  
   

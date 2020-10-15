@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1c8338fe9c477f8885839a0236f2aaaa0e9ebde
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971386"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890851"
 ---
 # <a name="install-report-builder"></a>Установите Построитель отчетов.
 
@@ -43,7 +43,7 @@ ms.locfileid: "76971386"
  
 ## <a name="install-ssrbnoversion-with-microsoft-endpoint-configuration-manager"></a>Установите [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] вместе с Microsoft Endpoint Configuration Manager 
   
- Администратор также может принудительно отправить программу на компьютер пользователя с помощью специальных программ, как например Microsoft Endpoint Configuration Manager. Сведения по использованию определенного программного обеспечения для установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]можно получить в документации по этому программному обеспечению. Дополнительные сведения см. в [документации по Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/configmgr/).  
+ Администратор также может принудительно отправить программу на компьютер пользователя с помощью специальных программ, как например Microsoft Endpoint Configuration Manager. Сведения по использованию определенного программного обеспечения для установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]можно получить в документации по этому программному обеспечению. Дополнительные сведения см. в [документации по Microsoft Endpoint Configuration Manager](/configmgr/).  
   
 > [!IMPORTANT]  
 >  Для запуска операций из командной строки в Windows Vista и Windows 7 требуются повышенные разрешения безопасности; эти ОС будут запрашивать разрешения на выполнение командной строки. Эта установка выполняется не автоматически. Для проведения автоматической установки необходимо запустить командную строку от имени администратора.  
@@ -115,8 +115,7 @@ ms.locfileid: "76971386"
   
      Если сервер отчетов отсутствует в списке существующих серверов, закройте диалоговое окно **Открытие отчета**, а затем в нижней части [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нажмите кнопку **Подключиться**, чтобы подключиться к серверу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)   
  [Удаление построителя отчетов](../../reporting-services/install-windows/uninstall-report-builder.md)  
-  
   

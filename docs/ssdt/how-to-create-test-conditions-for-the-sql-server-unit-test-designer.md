@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: ae0b544fb49a1161699a1a9e2d152abea2d847bb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518894"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985942"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Руководство. создать условия теста для конструктора модульных тестов SQL Server
 
-Создавать условия теста можно с помощью расширяемого класса [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Например, можно создать новое условие теста, которое проверяет число столбцов или значений в результирующем наборе.  
+Создавать условия теста можно с помощью расширяемого класса [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). Например, можно создать новое условие теста, которое проверяет число столбцов или значений в результирующем наборе.  
   
 ## <a name="to-create-a-test-condition"></a>Создание условия теста  
 В этой процедуре объясняется, как создать условие теста, которое появится в конструкторе модульных тестов SQL Server.  
@@ -47,9 +47,9 @@ ms.locfileid: "85518894"
   
 9. Сохраните файл и закройте его. Щелкните проект правой кнопкой мыши в **обозревателе решений** и выберите **Перезагрузить проект**.  
   
-10. Создайте класс производный от класса [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
+10. Создайте класс производный от класса [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)).  
   
-11. Подпишите сборку строгим именем. Дополнительные сведения см. в разделе [Как подписать сборку строгим именем](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Подпишите сборку строгим именем. Дополнительные сведения см. в разделе [Как подписать сборку строгим именем](/dotnet/standard/assembly/sign-strong-name).  
   
 12. Постройте библиотеку классов.  
   
@@ -172,9 +172,9 @@ namespace Ssdt.Samples.SqlUnitTesting
 }  
 ```  
   
-Класс для пользовательского условия теста является производным от базового класса [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Поскольку у нестандартного условия теста есть дополнительные свойства, пользователи могут настраивать условие в окне «Свойства» после его установки.  
+Класс для пользовательского условия теста является производным от базового класса [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). Поскольку у нестандартного условия теста есть дополнительные свойства, пользователи могут настраивать условие в окне «Свойства» после его установки.  
   
-[ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) необходимо добавить во все классы, являющиеся расширением [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Этот атрибут позволяет SQL Server Data Tools обнаруживать этот класс и использовать его при проектировании и выполнении модульных тестов. Этот атрибут принимает два параметра.  
+[ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103)) необходимо добавить во все классы, являющиеся расширением [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). Этот атрибут позволяет SQL Server Data Tools обнаруживать этот класс и использовать его при проектировании и выполнении модульных тестов. Этот атрибут принимает два параметра.  
   
 |Параметр атрибута|Положение|Описание|  
 |-----------------------|------------|---------------|  
@@ -205,4 +205,3 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 ## <a name="see-also"></a>См. также:  
 [Пользовательские условия теста для модульных тестов SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  
