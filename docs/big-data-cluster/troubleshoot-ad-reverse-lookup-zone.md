@@ -9,12 +9,12 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4cac5fe891533d623a686a02641f63cb25d4b17f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1dbe3505616fa95c429faf6d1f018f947bd60930
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82154159"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891034"
 ---
 # <a name="ad-mode-deployment-stopped---missing-reverse-lookup-zone-entry-for-dc"></a>Развертывание в режиме с AD остановлено — нет записи зоны обратного поиска для контроллера домена
 
@@ -146,4 +146,4 @@ $DcControllerDnsPtr_Result
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-[Проверьте обратную запись DNS (запись типа PTR) для контроллера домена](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).
+[Проверьте обратную запись DNS (запись типа PTR) для контроллера домена](active-directory-deploy.md#verify-reverse-dns-entry-for-domain-controller).

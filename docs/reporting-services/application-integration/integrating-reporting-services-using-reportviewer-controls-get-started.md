@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d4195123fbe1660c1c081c810d2b5b6b0feebd80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569964"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891514"
 ---
 # <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>Интеграция служб Reporting Services с помощью элементов управления средства просмотра отчетов
 
-Элементы управления средства просмотра отчетов можно использовать для интеграции отчетов RDL Reporting Services в приложения WebForms и WinForms. Дополнительные сведения о последних обновлениях см. в статье с [описанием изменений](changelog.md).
+Элементы управления средства просмотра отчетов можно использовать для интеграции отчетов RDL Reporting Services в приложения WebForms и WinForms. Дополнительные сведения о последних обновлениях см. в статье с [описанием изменений](./release-notes-ssrs-application-integration.md).
 
 ## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>Добавление элемента управления средства просмотра отчетов в новый веб-проект
 
@@ -270,9 +270,8 @@ ms.locfileid: "89569964"
 
 ## <a name="forum-feedback"></a>Отзыв на форуме
 
-Если у вас возникли проблемы, сообщите об этом на [форумах Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html).
+Если у вас возникли проблемы, сообщите об этом на [форумах Reporting Services](/answers/topics/sql-server-reporting-services.html).
 
 ## <a name="see-also"></a>См. также раздел
 
-[Интеграция служб Reporting Services с помощью элементов управления ReportViewer — сбор данных](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-
+[Интеграция служб Reporting Services с помощью элементов управления ReportViewer — сбор данных](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)

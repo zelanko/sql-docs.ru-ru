@@ -3,18 +3,18 @@ title: Создание функции из кода R, объединенног
 description: Используйте пакет R sqlrutils в SQL Server для объединения кода языка R в одну функцию, которая может быть передана в качестве аргумента хранимой процедуре.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/31/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ba94a55144278abd54ebbc2cf038463c3c5f0cb
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 44654b5c2ba4d145fa8551bd25b07c82498c4746
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288300"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892324"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Создание хранимой процедуры с помощью sqlrutils
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725885"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892494"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в локальной среде OpenShift и Azure Red Hat OpenShift
 
@@ -37,8 +37,8 @@ ms.locfileid: "91725885"
 > [!IMPORTANT]
 > Указанные ниже предварительные требования должны быть выполнены администратором кластера OpenShift (роль кластера "Администратор кластера") с достаточными разрешениями для создания этих объектов на уровне кластера. Дополнительные сведения о ролях кластера в OpenShift см. в разделе [Использование RBAC для определения и применения разрешений](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
 
-1. Измените параметр **pidsLimit** в OpenShift в соответствии с рабочими нагрузками SQL Server. Значение по умолчанию в OpenShift слишком мало для нагрузок, характерных для рабочей среды. Рекомендуется указать по меньшей мере **4096**, но оптимальное значение будет зависеть от параметра *максимального числа рабочих потоков* в SQL Server и количества процессоров ЦП на узле OpenShift. 
-    - Чтобы узнать, как изменить **pidsLimit** для кластера OpenShift, используйте [эти инструкции]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md). Обратите внимание, что версии OpenShift до **4.3.5** имели дефект, препятствовавший применению измененного значения. Обновите OpenShift до последней версии. 
+1. Измените параметр `pidsLimit` в OpenShift в соответствии с рабочими нагрузками SQL Server. Значение по умолчанию в OpenShift слишком мало для нагрузок, характерных для рабочей среды. Рекомендуется указать по меньшей мере `4096`, но оптимальное значение будет зависеть от параметра `max worker threads` в SQL Server и количества процессоров ЦП на узле OpenShift. 
+    - Чтобы узнать, как изменить `pidsLimit` для кластера OpenShift, используйте [эти инструкции]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md). Обратите внимание, что версии OpenShift до `4.3.5` имели дефект, препятствовавший применению измененного значения. Обновите OpenShift до последней версии. 
     - Чтобы упростить расчет оптимального значения с учетом среды и запланированных рабочих нагрузок SQL Server, можно использовать оценку и примеры ниже:
 
     |Количество процессоров|Максимальное число рабочих потоков по умолчанию|Число рабочих процессов на процессор по умолчанию|Минимальное значение pidsLimit|
@@ -56,7 +56,7 @@ ms.locfileid: "91725885"
     ```
 
     > [!NOTE]
-    > Настраиваемое ограничение контекста безопасности для кластера больших данных основано на встроенном *непривилегированном* ограничении контекста безопасности в OpenShift с дополнительными разрешениями. Дополнительные сведения об ограничениях контекста безопасности в OpenShift см. в разделе [Управление ограничениями контекста безопасности](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). Подробные материалы о том, какие дополнительные разрешения требуются для кластеров больших данных поверх *непривилегированного* ограничения контекста безопасности, можно скачать [здесь](https://aka.ms/sql-bdc-openshift-security).
+    > Настраиваемое ограничение контекста безопасности для кластера больших данных основано на встроенном `nonroot` ограничении контекста безопасности в OpenShift с дополнительными разрешениями. Дополнительные сведения об ограничениях контекста безопасности в OpenShift см. в разделе [Управление ограничениями контекста безопасности](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). Подробные материалы о том, какие дополнительные разрешения требуются для кластеров больших данных поверх `nonroot` ограничения контекста безопасности, можно скачать [здесь](https://aka.ms/sql-bdc-openshift-security).
 
 3. Создайте пространство имен или проект:
 
@@ -104,7 +104,7 @@ ms.locfileid: "91725885"
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   Для развертывания в ARO рекомендуется начать с одного из профилей *aro-* , включающих значения по умолчанию для *serviceType* и *storageClass*, подходящие для этой среды. Пример:
+   Для развертывания в ARO рекомендуется начать с одного из профилей `aro-` , включающих значения по умолчанию для `serviceType` и `storageClass`, подходящие для этой среды. Пример:
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -113,7 +113,7 @@ ms.locfileid: "91725885"
 1. Настройте файлы конфигурации control.json и bdc.json. Ниже приведены некоторые дополнительные ресурсы, которые помогут вам выполнить настройку для поддержки различных вариантов использования.
 
    - [Память](concept-data-persistence.md)
-   - [Сопутствующие параметры AD](deploy-active-directory.md)
+   - [Сопутствующие параметры AD](active-directory-deploy.md)
    - [Другие настройки](deployment-custom-configuration.md)
 
    > [!NOTE]
@@ -136,7 +136,7 @@ ms.locfileid: "91725885"
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>Параметры для OpenShift в файлах конфигурации развертывания
 
-Накопительный пакет обновления 5 для SQL Server 2019 представляет два параметра для управления сбором метрик объектов pod и узлов. Для этих параметров по умолчанию во встроенных профилях для OpenShift задано значение *false*, так как контейнерам мониторинга требуется [привилегированный контекст безопасности](https://www.openshift.com/blog/managing-sccs-in-openshift), что ослабляет некоторые ограничения безопасности для пространства имен, в котором развернут кластер больших данных.
+Накопительный пакет обновления 5 для SQL Server 2019 представляет два параметра для управления сбором метрик объектов pod и узлов. Для этих параметров по умолчанию во встроенных профилях для OpenShift задано значение `false`, так как контейнерам мониторинга требуется [привилегированный контекст безопасности](https://www.openshift.com/blog/managing-sccs-in-openshift), что ослабляет некоторые ограничения безопасности для пространства имен, в котором развернут кластер больших данных.
 
 ```json
     "security": {

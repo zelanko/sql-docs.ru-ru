@@ -14,16 +14,16 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1daf6c1205c33d0522f44105397be8b87dabda23
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19f906960bc31346f21e4afed436ff10517adebf
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728108"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985820"
 ---
 # <a name="sql-server-2016-release-notes"></a>Заметки о выпуске SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
-  В этой статье описываются ограничения и проблемы, связанные с выпусками SQL Server 2016, включая пакеты обновления. Сведения о новых возможностях см. в разделе [Что нового в SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
+  В этой статье описываются ограничения и проблемы, связанные с выпусками SQL Server 2016, включая пакеты обновления. Сведения о новых возможностях см. в разделе [Что нового в SQL Server 2016](./what-s-new-in-sql-server-2016.md).
 
 - [![Скачать на странице центра оценки](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Скачать SQL Server 2016 на странице **[центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 - [![Маленький значок виртуальной машины Azure](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview) Есть ли учетная запись Azure?  Тогда перейдите **[сюда](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016 с пакетом обновления 1 (SP1).
@@ -71,14 +71,14 @@ ms.locfileid: "85728108"
 |Сведения о сегментах в представлении sys.dm_exec_query_stats   |   В представление sys.dm_exec_query_stats были добавлены новые столбцы, такие как total_columnstore_segment_reads и total_columnstore_segment_skips, для отслеживания количества пропущенных и считанных сегментов columnstore.   |   [KB4051358](https://support.microsoft.com/help/4051358)   |
 |Установка правильного уровня совместимости для базы данных распространителя   |   После установки пакета обновления уровень совместимости базы данных распространителя менялся на 90. Это происходило из-за пути к коду в хранимой процедуре sp_vupgrade_replication. Теперь пакет обновления задает корректный уровень совместимости для базы данных распространителя.   |      |
 |Предоставление сведений о последнем успешном выполнении инструкции DBCC CHECKDB   |   Добавлен новый параметр базы данных для программного возвращения даты последнего успешного выполнения инструкции DBCC CHECKDB. Пользователи теперь могут выполнить запрос DATABASEPROPERTYEX([база данных], 'lastgoodcheckdbtime'), чтобы получить единое значение, представляющее дату и время последнего успешного выполнения инструкции DBCC CHECKDB в указанной базе данных.   |      |
-|Усовершенствования Showplan XML|   [Сведения, на основании которых статистика использовалась для компиляции плана запроса](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/), включая имя статистики, счетчик изменений, процент выборки и время последнего обновления статистики. Обратите внимание, что эта возможность добавлена только для моделей CE 120 и более поздних версий. Так, она не поддерживается для CE 70.| |
-| |Если оптимизатор запросов использует логику "цель строки" (или целевое число строк), в Showplan XML добавляется новый атрибут [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/).| |
-| |В реальный Showplan XML добавлены новые атрибуты среды выполнения [UdfCpuTime и UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/) для отслеживания времени, прошедшего в скалярных определяемых пользователем функциях.| |
-| |В реальном Showplan XML в [список 10 ведущих возможных ожиданий](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/) добавлен тип ожидания CXPACKET — при параллельном выполнении запросов часто используются ожидания CXPACKET, но этот тип ожидания не упоминался в реальном Showplan XML.   |      |
+|Усовершенствования Showplan XML|   [Сведения, на основании которых статистика использовалась для компиляции плана запроса](/archive/blogs/sql_server_team/sql-server-2017-showplan-enhancements), включая имя статистики, счетчик изменений, процент выборки и время последнего обновления статистики. Обратите внимание, что эта возможность добавлена только для моделей CE 120 и более поздних версий. Так, она не поддерживается для CE 70.| |
+| |Если оптимизатор запросов использует логику "цель строки" (или целевое число строк), в Showplan XML добавляется новый атрибут [EstimateRowsWithoutRowgoal](/archive/blogs/sql_server_team/more-showplan-enhancements-row-goal).| |
+| |В реальный Showplan XML добавлены новые атрибуты среды выполнения [UdfCpuTime и UdfElapsedTime](/archive/blogs/sql_server_team/more-showplan-enhancements-udfs) для отслеживания времени, прошедшего в скалярных определяемых пользователем функциях.| |
+| |В реальном Showplan XML в [список 10 ведущих возможных ожиданий](/archive/blogs/sql_server_team/new-showplan-enhancements) добавлен тип ожидания CXPACKET — при параллельном выполнении запросов часто используются ожидания CXPACKET, но этот тип ожидания не упоминался в реальном Showplan XML.   |      |
 | |Расширено предупреждение о сбросе среды выполнения. Теперь в нем указывается количество страниц, записанных в базу данных TempDB во время сброса оператора параллелизма.| |
 |Поддержка репликации для баз данных с параметрами сортировки дополнительных символов   |   Теперь репликация поддерживается в базах данных, использующих параметры сортировки дополнительных символов.   |      |
 |Улучшенное взаимодействие с Service Broker при отработке отказа группы доступности   |   В текущей реализации, если компонент Service Broker включен для баз данных группы доступности, во время отработки отказа группы доступности все подключения Service Broker, созданные в первичной реплике, остаются открытыми. Теперь во время отработки отказа группы доступности такие открытые подключения будут закрыты.   |      |
-|Улучшено устранение неполадок ожиданий параллелизма   |   за счет добавления нового ожидания [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/).   |      |
+|Улучшено устранение неполадок ожиданий параллелизма   |   за счет добавления нового ожидания [CXCONSUMER](/archive/blogs/sql_server_team/making-parallelism-waits-actionable).   |      |
 |Улучшена согласованность между динамическими административными представлениями (DMV) для предоставления одинаковых сведений   |   Теперь представление DMV sys.dm_exec_session_wait_stats отслеживает ожидания CXPACKET и CXCONSUMER согласованно с представлением DMV sys.dm_os_wait_stats.   |      |
 |Улучшено устранение неполадок взаимоблокировок параллелизма внутри запроса | Новое расширенное событие exchange_spill для предоставления сведений о количестве страниц, записанных в базу данных TempDB во время сброса оператора параллелизма, в поле xEvent worktable_physical_writes.| |
 | |Теперь столбцы сбросов (например, total_spills) в представлениях DMV sys.dm_exec_query_stats, sys.dm_exec_procedure_stats и sys.dm_exec_trigger_stats также содержат данные, сброшенные операторами параллелизма.| |
@@ -108,21 +108,21 @@ ms.locfileid: "85728108"
 
 |Компонент|Описание|Дополнительные сведения|
 |---|---|---|
-|Массовая вставка в кучи с автоматическим использованием указания TABLOCK, если установлен флаг трассировки 715| Флаг трассировки 715 включает блокировку таблицы для операций массовой загрузки в кучу без некластеризованных индексов.|[Перенос рабочих нагрузок SAP в SQL Server производится в 2,5 раза быстрее](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|CREATE или ALTER|Развертывание объектов, таких как хранимые процедуры, триггеры, определяемые пользователем функции и представления.|[Блог по ядру СУБД SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|Массовая вставка в кучи с автоматическим использованием указания TABLOCK, если установлен флаг трассировки 715| Флаг трассировки 715 включает блокировку таблицы для операций массовой загрузки в кучу без некластеризованных индексов.|[Перенос рабочих нагрузок SAP в SQL Server производится в 2,5 раза быстрее](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)|
+|CREATE или ALTER|Развертывание объектов, таких как хранимые процедуры, триггеры, определяемые пользователем функции и представления.|[Блог по ядру СУБД SQL Server](/archive/blogs/sqlserverstorageengine/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1)|
 |Поддержка DROP TABLE для репликации|Поддержка DROP TABLE DDL для репликации позволяет удалять статьи репликации.|[Статья базы знаний 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
-|Подписывание драйвера RsFx файлового потока|Драйвер RsFx файлового потока подписывается и сертифицируется с помощью портала "Информационная панель Центра разработки оборудования для Windows" (портал разработчика), что позволяет без проблем устанавливать драйвер RsFx файлового потока для SQL Server 2016 с пакетом обновления 1 (SP1) в ОС Windows Server 2016 и Windows 10.|[Перенос рабочих нагрузок SAP в SQL Server производится в 2,5 раза быстрее](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|Разрешение LPIM в учетной записи службы SQL — программное определение|Администраторы баз данных могут программно определять, действует ли разрешение "Блокировка страниц в памяти" (LPIM) во время запуска службы.|[Developers Choice: программное определение наличия разрешений LPIM и IFI в SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|Подписывание драйвера RsFx файлового потока|Драйвер RsFx файлового потока подписывается и сертифицируется с помощью портала "Информационная панель Центра разработки оборудования для Windows" (портал разработчика), что позволяет без проблем устанавливать драйвер RsFx файлового потока для SQL Server 2016 с пакетом обновления 1 (SP1) в ОС Windows Server 2016 и Windows 10.|[Перенос рабочих нагрузок SAP в SQL Server производится в 2,5 раза быстрее](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)|
+|Разрешение LPIM в учетной записи службы SQL — программное определение|Администраторы баз данных могут программно определять, действует ли разрешение "Блокировка страниц в памяти" (LPIM) во время запуска службы.|[Developers Choice: программное определение наличия разрешений LPIM и IFI в SQL Server](/archive/blogs/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
 |Очистка отслеживания изменений вручную|Новая хранимая процедура очищает внутреннюю таблицу отслеживания изменений по требованию.| [Статья базы знаний 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
-|Параллельные изменения INSERT..SELECT в локальных временных таблицах|Новые параллельные операции INSERT в INSERT..SELECT.|[Группа консультантов по SQL Server](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
+|Параллельные изменения INSERT..SELECT в локальных временных таблицах|Новые параллельные операции INSERT в INSERT..SELECT.|[Группа консультантов по SQL Server](/archive/blogs/sqlcat/real-world-parallel-insert-what-else-you-need-to-know)|
 |Showplan XML|Расширенная диагностика, включающая предупреждение о временно предоставляемом буфере памяти, сведения о максимальном объеме памяти, предоставляемом для запроса, установленных флагах трассировки, а также другие диагностические данные. | [Статья базы знаний 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
-|Память класса хранилища|Ускорьте обработку транзакций с помощью памяти класса хранилища в Windows Server 2016, которая позволяет на порядок сократить время фиксации транзакций.|[Блог по ядру СУБД SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|Используйте параметр запроса `OPTION(USE HINT('<option>'))` для изменения поведения оптимизатора запросов с помощью поддерживаемых указаний уровня запроса. В отличие от QUERYTRACEON, параметр USE HINT не требует привилегий администратора.|[Developers Choice: указания запросов USE HINT](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
-|Дополнения XEvent|Возможности диагностики, предоставляемые новыми расширенными событиями и счетчиками производительности, позволяют более эффективно устранять задержки.|[Расширенные события](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+|Память класса хранилища|Ускорьте обработку транзакций с помощью памяти класса хранилища в Windows Server 2016, которая позволяет на порядок сократить время фиксации транзакций.|[Блог по ядру СУБД SQL Server](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)|
+|USE HINT|Используйте параметр запроса `OPTION(USE HINT('<option>'))` для изменения поведения оптимизатора запросов с помощью поддерживаемых указаний уровня запроса. В отличие от QUERYTRACEON, параметр USE HINT не требует привилегий администратора.|[Developers Choice: указания запросов USE HINT](/archive/blogs/sql_server_team/developers-choice-use-hint-query-hints)|
+|Дополнения XEvent|Возможности диагностики, предоставляемые новыми расширенными событиями и счетчиками производительности, позволяют более эффективно устранять задержки.|[Расширенные события](../relational-databases/extended-events/extended-events.md)|
 
 Кроме того, обратите внимание на указанные ниже исправления.
 - На основе отзывов администраторов баз данных и участников сообщества SQL начиная с SQL Server 2016 с пакетом обновления 1 (SP1) сообщения журнала, связанные с Hekaton, сведены к минимуму.
-- Ознакомьтесь с новыми [флагами трассировки](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
+- Ознакомьтесь с новыми [флагами трассировки](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 - Полные версии образцов баз данных WideWorldImporters работают с выпусками Standard и Express начиная с SQL Server 2016 с пакетом обновления 1 (SP1) и доступны в [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). Вносить изменения в образцы не требуется. Резервные копии баз данных, созданные в версии RTM выпуска Enterprise, работают с выпусками Standard и Express в SQL Server 2016 с пакетом обновления 1 (SP1).
 
 После установки SQL Server 2016 с пакетом обновления 1 (SP1) может потребоваться перезагрузка. Мы рекомендуем запланировать и выполнить перезагрузку после установки SQL Server 2016 с пакетом обновления 1 (SP1).
@@ -130,9 +130,9 @@ ms.locfileid: "85728108"
 ### <a name="download-pages-and-more-information"></a>Страницы загрузки и дополнительные сведения
 
 - [Скачать пакет обновления 1 (SP1) для Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=54276)
-- [Выпущен SQL Server 2016 с пакетом обновления 1 (SP1)](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [Выпущен SQL Server 2016 с пакетом обновления 1 (SP1)](/archive/blogs/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released)
 - [Сведения о выпуске SQL Server 2016 с пакетом обновления 1 (SP1)](https://support.microsoft.com/kb/3182545)
-- ![info_tip](../sql-server/media/info-tip.png) В [Центре обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) можно найти ссылки и сведения для всех поддерживаемых версий, включая пакеты обновления для [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
+- ![info_tip](../sql-server/media/info-tip.png) В [Центре обновления SQL Server](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) можно найти ссылки и сведения для всех поддерживаемых версий, включая пакеты обновления для [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
@@ -219,7 +219,7 @@ ms.locfileid: "85728108"
 
  **Справка F1**: при нажатии клавиши F1 в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] в браузере открывается веб-версия статьи справки F1. Проблема связана со справкой на основе браузера даже в том случае, если настроена или установлена локальная справка.
 
-**Обновление содержимого**: В SQL Server Management Studio и Visual Studio окно справки может перестать отвечать на запросы во время добавления документации. Чтобы устранить эту проблему, выполните указанные ниже действия. Сведения об этой проблеме см. в разделе [Окно справки Visual Studio зависает](https://msdn.microsoft.com/library/mt654096.aspx).
+**Обновление содержимого**: В SQL Server Management Studio и Visual Studio окно справки может перестать отвечать на запросы во время добавления документации. Чтобы устранить эту проблему, выполните указанные ниже действия. Сведения об этой проблеме см. в разделе [Окно справки Visual Studio зависает](/previous-versions/mt654096(v=vs.140)).
 
 * Откройте файл %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings в Блокноте и измените дату в приведенном ниже коде на какую-либо дату в будущем.
 
@@ -228,8 +228,8 @@ ms.locfileid: "85728108"
 ```
 
 ## <a name="additional-information"></a>Дополнительные сведения
-+ [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [Ссылки и сведения для всех поддерживаемых версий в Центре обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx)
++ [Установка SQL Server 2016](../database-engine/install-windows/install-sql-server.md)
++ [Ссылки и сведения для всех поддерживаемых версий в Центре обновления SQL Server](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
