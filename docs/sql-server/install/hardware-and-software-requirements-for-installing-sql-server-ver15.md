@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c3513b7209cc5f79aa26486540c236ac7b7dca1c
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 89088af9d3758a710db5bd1ee313835087bad832
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288326"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987710"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019: Требования к аппаратному и программному обеспечению
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "89288326"
 
 
 > [!IMPORTANT]
-> Для компонента PolyBase существуют дополнительные аппаратные и программные требования. Дополнительные сведения см. в разделе [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+> Для компонента PolyBase существуют дополнительные аппаратные и программные требования. Дополнительные сведения см. в разделе [Приступая к работе с PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
 
 ##  <a name="operating-system-support"></a><a name="TOP_Principal"></a> Поддержка операционных систем 
@@ -176,7 +176,7 @@ ms.locfileid: "89288326"
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сейчас поддерживает диски со стандартным размером сектора в 512 байт и 4 КБ.  Использование жестких дисков с размером сектора размером более 4 КБ могут привести к ошибкам при попытке сохранить файлы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на них.  См. в разделе [Ограничения размера сектора жесткого диска в SQL Server](https://support.microsoft.com/kb/926930) дополнительные сведения о поддерживаемых размерах сектора жесткого диска в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает локальные диски только для установки файлов tempdb. Проверьте правильность пути, указанного для файлов tempdb и файлов журнала на всех узлах кластера. Если во время отработки отказа каталоги tempdb недоступны на целевом узле отработки отказа, то при переводе ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режим «в сети» произойдет ошибка.
 - Общее хранилище  
-- [Локальные дисковые пространства \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
+- [Локальные дисковые пространства \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 - Общая папка SMB  
     - Хранилище SMB не поддерживается для файлов данных автономных или кластерных установок служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Используйте вместо него непосредственно подключенное хранилище, сеть хранения данных или S2D. 
     - Хранилище SMB может размещаться на файловом сервере Windows или на устройстве с хранилищем SMB сторонних разработчиков. Если используется файловый сервер Windows, он должен иметь версию 2008 или последующую. Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с общей папкой SMB в качестве хранилища см. в разделе [Установка SQL Server с общей папкой SMB в качестве хранилища](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
@@ -206,5 +206,3 @@ ms.locfileid: "89288326"
 ## <a name="next-steps"></a>Дальнейшие шаги
 
 После ознакомления с требованиями к оборудованию и программному обеспечению для установки SQL Server можно приступить к [планированию установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) или просмотреть [рекомендации по обеспечению безопасности SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
-
-

@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5b07323de0c8d385ad4df739c935a8bef96b4022
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990337"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988000"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>Подключение SQL Server к Azure Arc
 
@@ -22,7 +22,7 @@ ms.locfileid: "90990337"
 ## <a name="prerequisites"></a>Предварительные требования
 
 * На компьютере должен быть установлен хотя бы один экземпляр SQL Server.
-* На компьютерах с ОС Windows необходимо установить Azure PowerShell. Чтобы [установить Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps), следуйте следующей инструкции.
+* На компьютерах с ОС Windows необходимо установить Azure PowerShell. Чтобы [установить Azure PowerShell](/powershell/azure/install-az-ps), следуйте следующей инструкции.
 * На компьютерах с ОС Linux необходимо скачать Azure CLI и подключиться к учетной записи Azure. Чтобы [установить Azure CLI](/cli/azure/install-azure-cli-apt), следуйте следующей инструкции.
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "90990337"
 3. Выберите подписку, группу ресурсов, регион Azure и операционную систему хост-компьютера. При необходимости укажите также прокси-сервер, используемый вашей сетью для подключения к Интернету.
 
 > [!IMPORTANT]
-> Если компьютер, на котором размещен экземпляр SQL Server, уже [подключен к службе Azure Arc](https://docs.microsoft.com/azure/azure-arc/servers/onboard-portal), убедитесь, что выбрана та же группа ресурсов, которая содержит соответствующий ресурс __Компьютер — Azure Arc__.
+> Если компьютер, на котором размещен экземпляр SQL Server, уже [подключен к службе Azure Arc](/azure/azure-arc/servers/onboard-portal), убедитесь, что выбрана та же группа ресурсов, которая содержит соответствующий ресурс __Компьютер — Azure Arc__.
 
 ![Сведения о сервере](media/join/server-details-sql-server-azure-arc.png)
 
@@ -56,7 +56,7 @@ ms.locfileid: "90990337"
 
 ### <a name="windows"></a>Windows
 
-1. Запустите экземпляр администратора __powershell.exe__ и войдите в модуль PowerShell с помощью своих учетных данных Azure. Следуйте [инструкциям по входу](https://docs.microsoft.com/powershell/azure/install-az-ps#sign-in).
+1. Запустите экземпляр администратора __powershell.exe__ и войдите в модуль PowerShell с помощью своих учетных данных Azure. Следуйте [инструкциям по входу](/powershell/azure/install-az-ps#sign-in).
 
 2. Выполнение скачанного скрипта
 
@@ -69,7 +69,7 @@ ms.locfileid: "90990337"
 
 ### <a name="linux"></a>Linux
 
-1. Используйте Azure CLI для входа со своими учетными данными Azure. Следуйте [инструкциям по входу](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).
+1. Используйте Azure CLI для входа со своими учетными данными Azure. Следуйте [инструкциям по входу](/cli/azure/authenticate-azure-cli).
 
 2. Предоставьте скачанному скрипту разрешение на выполнение и выполните его.
 

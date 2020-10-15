@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: f142a872688d28befefcffebfcdeb75976072863
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195130"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987860"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Заметки о выпуске SQL Server Data Tools (SSDT)
 
@@ -899,7 +899,7 @@ Console.WriteLine(result.DeploymentReport);
 **Analysis Services и Reporting Services**
 
 Повышена производительность средства синтаксического анализа DAX конструктора таблиц SSAS при работе с крупными выражениями DAX.
-Дополнительные сведения см. в [записи блога о службах Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
+Дополнительные сведения см. в [записи блога о службах Analysis Services](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular).
 
 ### <a name="fixed--improved-this-month"></a>Исправления и улучшения этого месяца
 
@@ -935,11 +935,11 @@ _Для SQL Server 2016_.
 
 **Новые возможности**
 
-Теперь сравнение схем поддерживается в SqlPackage.exe и API платформы приложений уровня данных (DacFx). Дополнительные сведения см. в статье  [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) (Сравнение схем SqlPackage и платформы приложений уровня данных).
+Теперь сравнение схем поддерживается в SqlPackage.exe и API платформы приложений уровня данных (DacFx). Дополнительные сведения см. в статье  [Schema Compare in SqlPackage and the Data-Tier Application Framework](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx) (Сравнение схем SqlPackage и платформы приложений уровня данных).
 
 **Analysis Services. Режим интегрированной рабочей области для табличного экземпляра SSDT (SSAS)**
 
-Теперь табличный экземпляр SSDT включает внутренний экземпляр SSAS, который табличный экземпляр SSDT запускает в фоновом режиме автоматически, если включен режим интегрированной рабочей области. В этом режиме вы сможете добавлять и просматривать таблицы, столбцы и данные в конструкторе моделей без необходимости предоставления внешнего экземпляра сервера рабочей области. Режим интегрированной рабочей области не меняет способ работы табличного экземпляра SSDT с сервером и базой данных рабочей области. Изменяется расположение базы данных рабочей области в табличном экземпляре SSDT. Чтобы включить режим интегрированной рабочей области, выберите соответствующий параметр в диалоговом окне конструктора табличных моделей, отображаемый при создании табличного проекта. Для табличных проектов, которые сейчас используют явный сервер рабочей области, можно переключиться в режим интегрированной рабочей области, задав для соответствующего параметра значение True в окне "Свойства", которое отображается при выборе файла Model.bim в обозревателе решений. Дополнительные сведения см. в [записи блога о службах Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
+Теперь табличный экземпляр SSDT включает внутренний экземпляр SSAS, который табличный экземпляр SSDT запускает в фоновом режиме автоматически, если включен режим интегрированной рабочей области. В этом режиме вы сможете добавлять и просматривать таблицы, столбцы и данные в конструкторе моделей без необходимости предоставления внешнего экземпляра сервера рабочей области. Режим интегрированной рабочей области не меняет способ работы табличного экземпляра SSDT с сервером и базой данных рабочей области. Изменяется расположение базы данных рабочей области в табличном экземпляре SSDT. Чтобы включить режим интегрированной рабочей области, выберите соответствующий параметр в диалоговом окне конструктора табличных моделей, отображаемый при создании табличного проекта. Для табличных проектов, которые сейчас используют явный сервер рабочей области, можно переключиться в режим интегрированной рабочей области, задав для соответствующего параметра значение True в окне "Свойства", которое отображается при выборе файла Model.bim в обозревателе решений. Дополнительные сведения см. в [записи блога о службах Analysis Services](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular).
 
 **Обновления и исправления**
 **средств работы с базами данных**
@@ -1012,7 +1012,7 @@ _Для SQL Server 2016_.
 **Новые возможности**  
 - **Поддержка постоянного шифрования**. Для баз данных со столбцами в режиме Always Encrypted в этом выпуске реализована полная поддержка функции Always Encrypted в основных API и программе командной строки (SqlPackage.exe). Вы можете создавать и публиковать проекты базы данных, полностью поддерживающие все функции постоянного шифрования.  
 - **Улучшенная поддержка темпоральных таблиц**. Упрощена работа с темпоральными таблицами. Теперь ссылка на них удаляется до внесения изменений и повторно добавляется после внесения изменений. Это означает, что с точки зрения поддерживаемых операций временные таблицы имеют четность с другими типами таблиц (стандартные, в памяти). 
-- **Изменения установки и SqlPackage.exe**. Внесены изменения для изоляции SSDT от ядра SQL Server и обновлений SSMS. Дополнительные сведения см. в статье [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/) (Изменения и обновления установки SSDT и SqlPackage.exe).
+- **Изменения установки и SqlPackage.exe**. Внесены изменения для изоляции SSDT от ядра SQL Server и обновлений SSMS. Дополнительные сведения см. в статье [Changes to SSDT and SqlPackage.exe installation and updates](/archive/blogs/ssdt/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates) (Изменения и обновления установки SSDT и SqlPackage.exe).
 
 
 **Обновления и исправления**
@@ -1050,12 +1050,12 @@ _Выпущено_: &nbsp;1 июня 2016 г.
 _Номер сборки_: &nbsp;14.0.60525.0  
 _Для SQL Server 2016_.
 
-Выпущена общедоступная версия SSDT. В обновлении общедоступной версии SSDT за июнь 2016 г. добавлена поддержка последних обновлений SQL Server 2016 RTM, а также исправлены различные ошибки. Дополнительные сведения см. в статье [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/) (Обновление общедоступной версии SQL Server Data Tools за июнь 2016 г.).
+Выпущена общедоступная версия SSDT. В обновлении общедоступной версии SSDT за июнь 2016 г. добавлена поддержка последних обновлений SQL Server 2016 RTM, а также исправлены различные ошибки. Дополнительные сведения см. в статье [SQL Server Data Tools GA update for June 2016](/archive/blogs/ssdt/sql-server-data-tools-ga-update-for-june-2016) (Обновление общедоступной версии SQL Server Data Tools за июнь 2016 г.).
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - [Скачать SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md) (Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI))
-- [Новые возможности в SQL Server 2016 (ядро СУБД)](https://msdn.microsoft.com/library/bb510411.aspx)
-- [Новые возможности в службах Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)
+- [Новые возможности в SQL Server 2016 (ядро СУБД)](../sql-server/what-s-new-in-sql-server-2016.md)
+- [Новые возможности в службах Analysis Services](/analysis-services/what-s-new-in-analysis-services)
 - [Новые возможности служб Integration Services в SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)

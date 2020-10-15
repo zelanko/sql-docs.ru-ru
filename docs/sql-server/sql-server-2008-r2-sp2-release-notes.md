@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d9fee236a710d7bc742f9a8fed27e12801daa550
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570313"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988273"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>Заметки о выпуске пакета обновления 2 (SP2) для SQL Server 2008 R2
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "89570313"
 Добавлено динамическое административное представление **sys.dm_db_stats_properties**. С помощью этих динамических административных представлений можно определять статистические свойства указанной таблицы или индексированного представления из текущей базы данных. Например, это динамическое административное представление возвращает количество строк, которые были отобраны, и количество шагов в гистограмме.  
   
 ## <a name="20-before-you-install"></a>2.0 Перед началом установки  
-Сведения об установке обновлений [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] см. в [Документации по службам SQL Server 2008 R2](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
+Сведения об установке обновлений [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] см. в [Документации по службам SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105)).  
   
 Для получения общих сведений о начале работы и установке SQL Server 2008 R2 см. файл сведений для SQL Server 2008 R2. Файл сведений имеется на установочном носителе.
   
@@ -65,4 +65,3 @@ ms.locfileid: "89570313"
   
 ## <a name="see-also"></a>См. также:  
 [Как определить версию и выпуск SQL Server](https://support.microsoft.com/kb/321185)  
-  

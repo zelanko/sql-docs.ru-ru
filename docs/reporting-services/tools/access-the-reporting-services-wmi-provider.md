@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 887dc0895351eecf351e08efdfe6c40a8285a6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dd5c3c1b9345ff39ad19e4f5f1541ac80024db26
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918410"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986490"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Доступ к поставщику WMI для служб Reporting Services
   Поставщик WMI служб Reporting Services отображает два класса WMI для администрирования экземпляров серверов отчетов, работающих в собственном режиме, путем создания сценариев:  
@@ -34,7 +34,7 @@ ms.locfileid: "86918410"
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13|Основные сведения, необходимые клиенту для подключения к установленному серверу отчетов.|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13\Admin|Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.<br /><br /> **\*\* Важно. \*\*** Этот класс доступен только для пользователей с правами администратора.|  
   
- Экземпляр каждого из перечисленных выше классов создается для каждого экземпляра сервера отчетов. Вы можете использовать любые средства Microsoft или сторонних производителей для получения доступа к объектам WMI, которые отображаются сервером отчетов, включая программные интерфейсы WMI, отображаемые самой платформой .NET Framework. В этом разделе рассматривается процедура получения доступа и использования экземпляров классов WMI с помощью команды PowerShell [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
+ Экземпляр каждого из перечисленных выше классов создается для каждого экземпляра сервера отчетов. Вы можете использовать любые средства Microsoft или сторонних производителей для получения доступа к объектам WMI, которые отображаются сервером отчетов, включая программные интерфейсы WMI, отображаемые самой платформой .NET Framework. В этом разделе рассматривается процедура получения доступа и использования экземпляров классов WMI с помощью команды PowerShell [Get-WmiObject](/previous-versions//dd315295(v=technet.10)).  
   
 ## <a name="determine-the-instance-name-in-the-namespace-string"></a>Определение имени экземпляра в строке пространства имен  
  Имя экземпляра в пути к пространству имен для классов WMI служб Reporting Services представляет собой кодировку имен экземпляра, которая указывается вами при установке именованных экземпляров служб Reporting Services. Конкретно в именах экземплярах кодируются специальные символы. Например, подчеркивающая линия (_) кодируется как _5f, поэтому имя экземпляра My_Instance в пути к пространству имен WMI будет закодировано как My_5fInstance.  
@@ -85,5 +85,4 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
 ## <a name="see-also"></a>См. также:  
  [Справочник по библиотеке поставщика WMI служб Reporting Services (SSRS)](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
-  
   

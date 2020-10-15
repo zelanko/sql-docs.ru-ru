@@ -38,12 +38,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 50542a1a86adcd2149a7170240796b4f6a511879
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288287"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035472"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>Редактор запросов SQL Server Management Studio (SSMS)
 
@@ -300,8 +300,8 @@ SQL Server Profiler — это интерфейс для создания тр�
 | Перетаскивание текста с одного места в скрипте в другое.| [Перетаскивание текста](../scripting/drag-and-drop-text.md) |
 | Установка закладок для более легкого поиска важных элементов кода. | [Управление закладками](../scripting/manage-bookmarks.md) |
 | Вывод скриптов или результатов в окно или сетку.| [Печать кода и результаты](../scripting/print-code-and-results.md) |
-| Просмотр и использование базовых функций редактора запросов многомерных выражений. | [Создание скриптов Analysis Services](https://docs.microsoft.com/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| Просмотр и использование базовых функций редактора запросов расширения интеллектуального анализа данных. | [Создание DMX-запроса](https://docs.microsoft.com/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| Просмотр и использование базовых функций редактора запросов многомерных выражений. | [Создание скриптов Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
+| Просмотр и использование базовых функций редактора запросов расширения интеллектуального анализа данных. | [Создание DMX-запроса](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
 | Просмотр и использование базовых функций редактора запросов XML/A. | [Редактор XML](../scripting/xml-editor-sql-server-management-studio.md) |
 | Использование функций sqlcmd в редакторе запросов ядра СУБД.| [Изменение скриптов SQLCMD](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | Использование фрагментов кода в редакторе запросов ядра СУБД. Фрагменты кода — это шаблоны часто используемых инструкций или блоков. Их можно настроить или расширить, включив в них фрагменты, специфичные для сайта.| [Фрагменты кода T-SQL](../scripting/add-transact-sql-snippets.md) |

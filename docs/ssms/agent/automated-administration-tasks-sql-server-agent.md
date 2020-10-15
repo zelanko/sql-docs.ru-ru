@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3cb9af36adb7ea1212b23684ed335c26ce3fd53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fbf48eb7ad2b960006a9e1c5987378a06d8fc44e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418370"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035757"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Задачи автоматизированного администрирования (агент SQL Server)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет автоматизировать задачи администрирования. Для этого нужно определить прогнозируемые задачи администрирования и указать, при каких условиях будет выполняться каждая из задач. Использование автоматизированного администрирования для рутинных задач освобождает время на выполнение других административных функций.  
   
@@ -40,4 +40,3 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позвол
 [Наблюдение и обработка событий](../../ssms/agent/monitor-and-respond-to-events.md)  
   
 [Автоматизация администрирования в масштабах предприятия](../../ssms/agent/automated-administration-across-an-enterprise.md)  
-  

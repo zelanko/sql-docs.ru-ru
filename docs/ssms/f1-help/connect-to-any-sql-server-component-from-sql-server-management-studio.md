@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 8f89371787c66271d8298beed886b04b2b4aade1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3df8294e7028573518fe349d8c490fe6b5a266d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497443"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034916"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Подключение к любому компоненту сервера SQL Server из среды SQL Server Management Studio
 
@@ -51,6 +51,5 @@ ms.locfileid: "88497443"
 Обозреватель решений позволяет хранить связанные запросы, скрипты, соединения, а также другие связанные данные в проекте. Каждый проект скриптов содержит узел **Соединения**, в котором можно сохранить одно или несколько соединений. Для добавления соединения щелкните правой кнопкой мыши узел **Соединения** и выберите **Создать соединение**. Для доступа к сохраненному соединению разверните пункт **Соединения** и дважды щелкните нужное соединение. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] позволяет открыть окно запроса, связанное с заданным соединением. При сохранении скриптов они остаются связанными с конкретным соединением.  
   
 ## <a name="see-also"></a>См. также:  
-[Использование среды SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+[Использование среды SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
 [Обозреватель объектов](../../ssms/object/object-explorer.md)  
-  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3632f0e69cbf451d5361aa30c55f92bb0945fb6f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 14cce727272080727ec4000c8519cdaa26e6b890
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114616"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988106"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Аварийное восстановление WSFC через принудительный кворум (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -120,9 +120,8 @@ ms.locfileid: "91114616"
   
 -   [Просмотр событий и журналов для отказоустойчивого кластера](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Командлет Get-ClusterLog отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Командлет Get-ClusterLog отказоустойчивого кластера](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
   
 ## <a name="see-also"></a>См. также:  
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
-  
   

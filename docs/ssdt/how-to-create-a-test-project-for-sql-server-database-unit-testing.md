@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5a10fdbc94858a9fe3f5b523fdd43b505e2563f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243535"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987560"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Руководство. создать тестовый проект для модульного тестирования базы данных SQL Server
 
@@ -28,7 +28,7 @@ ms.locfileid: "87243535"
 |Нужны ли разным модульным тестам SQL Server разные подключения к базам данных для выполнения и проверки теста?|Если да, то вам потребуется несколько проектов тестов. Для выполнения теста можно указать только одно подключение к базе данных. Однако для проверки теста можно указать другое подключение к базе данных.|  
 |Нужно ли развертывать разные проекты базы данных для разных модульных тестов?|Если да, то вам потребуется несколько проектов тестов. Проект тестов может развертывать только один проект базы данных.|  
   
-Дополнительные сведения о каждом из этих вопросов см. в разделе [Как настроить выполнение модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Чтобы не создавать несколько тестовых проектов, можно создать собственную реализацию [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService.  
+Дополнительные сведения о каждом из этих вопросов см. в разделе [Как настроить выполнение модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Чтобы не создавать несколько тестовых проектов, можно создать собственную реализацию [DatabaseTestService](/previous-versions/visualstudio/visual-studio-2010/dd154755(v=vs.100)) Microsoft.Data.Schema.UnitTesting.DatabaseTestService.  
   
 Есть три варианта добавления проекта теста к решению, которое содержит проект базы данных.  
   
@@ -56,4 +56,3 @@ ms.locfileid: "87243535"
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-  

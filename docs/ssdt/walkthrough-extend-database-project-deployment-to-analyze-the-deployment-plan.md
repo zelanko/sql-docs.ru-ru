@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 54ea252e2fbe828200339fdbfb4d25ef83451cb3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897474"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987550"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания
 
@@ -46,7 +46,7 @@ ms.locfileid: "85897474"
   
 -   Создать проект библиотеки классов и добавить необходимые ссылки.  
   
--   Определите класс с именем DeploymentUpdateReportContributor, наследуемый от [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx).  
+-   Определите класс с именем DeploymentUpdateReportContributor, наследуемый от [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor).  
   
 -   Переопределить метод OnExecute.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "85897474"
   
     ```  
   
-    Тем самым определен участник развертывания, который наследует от DeploymentPlanExecutor. В ходе сборки и развертывания специализированные участники загружаются из каталога стандартных расширений. Участники в выполнении плана развертывания обозначаются атрибутом [ExportDeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx).  
+    Тем самым определен участник развертывания, который наследует от DeploymentPlanExecutor. В ходе сборки и развертывания специализированные участники загружаются из каталога стандартных расширений. Участники в выполнении плана развертывания обозначаются атрибутом [ExportDeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute).  
   
     Этот атрибут требуется для обнаружения участников. Экран будет выглядеть примерно так:  
   
@@ -249,9 +249,9 @@ ms.locfileid: "85897474"
             }  
     ```  
   
-    Методу OnExecute передается объект [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), который предоставляет доступ ко всем указанным аргументам, модели базы данных-источника и базы данных-получателя, свойствам сборки и файлам расширения. В данном примере мы получаем модель, затем вызываем вспомогательные функции, чтобы вывести сведения о модели. Мы используем вспомогательный метод PublishMessage в базовом классе для вывода всех произошедших ошибок.  
+    Методу OnExecute передается объект [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext), который предоставляет доступ ко всем указанным аргументам, модели базы данных-источника и базы данных-получателя, свойствам сборки и файлам расширения. В данном примере мы получаем модель, затем вызываем вспомогательные функции, чтобы вывести сведения о модели. Мы используем вспомогательный метод PublishMessage в базовом классе для вывода всех произошедших ошибок.  
   
-    Дополнительные типы и методы, представляющие интерес, включают [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) и [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    Дополнительные типы и методы, представляющие интерес, включают [TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel), [ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult), [DeploymentPlanHandle](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanhandle) и [SqlDeploymentOptions](/dotnet/api/microsoft.sqlserver.dac.deployment.sqldeploymentoptions).  
   
     Далее определяем вспомогательный класс, который работает с планом развертывания.  
   
@@ -524,11 +524,11 @@ ms.locfileid: "85897474"
   
     |**Область кода**|**Полезные типы**|  
     |-----------------|--------------------|  
-    |Члены класса|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |Члены класса|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel), [ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult), [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)|  
     |Метод WriteReport|XmlWriter и XmlWriterSettings|  
-    |Метод ReportPlanOperations|Интересующие нас типы: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Есть и некоторые другие действия — см. полный список в документации по API.|  
-    |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |Метод ReportPlanOperations|Интересующие нас типы: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep), [SqlRenameStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlrenamestep), [SqlMoveSchemaStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlmoveschemastep), [SqlTableMigrationStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqltablemigrationstep), [CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep), [AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep), [DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep).<br /><br />Есть и некоторые другие действия — см. полный список в документации по API.|  
+    |GetElementCategory|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
+    |GetElementName|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
   
     Затем необходимо выполнить сборку библиотеки классов.  
   
@@ -738,10 +738,9 @@ ms.locfileid: "85897474"
     Анализируя план развертывания по мере его выполнения, можно отслеживать любые сведения, содержащиеся в развертывании, и выполнять дополнительные действия на основе шагов данного плана.  
   
 ## <a name="next-steps"></a>Next Steps  
-Можно создать дополнительные средства для обработки выходных XML-файлов. Это лишь один пример применения [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Также можно создать [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx), чтобы изменить план развертывания до его выполнения.  
+Можно создать дополнительные средства для обработки выходных XML-файлов. Это лишь один пример применения [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). Также можно создать [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier), чтобы изменить план развертывания до его выполнения.  
   
 ## <a name="see-also"></a>См. также:  
-[Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
-[Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
-  
+[Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели](/previous-versions/visualstudio/visual-studio-2010/ee461508(v=vs.100))  
+[Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания](/previous-versions/visualstudio/visual-studio-2010/ee461507(v=vs.100))  
+[Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания](/previous-versions/visualstudio/visual-studio-2010/ee461505(v=vs.100))  

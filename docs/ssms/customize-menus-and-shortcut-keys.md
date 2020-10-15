@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0cc9ba049ab56b65165fd1ba016ecd913df49a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 242dc262053aefe5a95e6e65d99ae98965491e55
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480231"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034931"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Настройка меню и сочетаний клавиш
 
@@ -163,5 +163,4 @@ ms.locfileid: "88480231"
 > Некоторые команды доступны только при отображении в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] соответствующего содержимого. Если команды в меню недоступны, элемент меню будет также недоступен.  
   
 ## <a name="see-also"></a>См. также:  
-[Возможности среды SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  
-  
+[Возможности среды SQL Server Management Studio](./sql-server-management-studio-ssms.md)  

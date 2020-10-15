@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a70d930b53ac4c43428f2bb0dbe0da26ab5fbfc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5a805fe8c32828dffc740959385ba599641ac03b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480737"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036227"
 ---
 # <a name="transact-sql-code-snippets"></a>Фрагменты кода [Transact-SQL]
 
@@ -28,11 +28,11 @@ ms.locfileid: "89480737"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает, как вставить существующий фрагмент, например CREATE TABLE или SELECT.|[Вставка фрагментов кода Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)|  
-|Описывает, как включить набор инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в блок BEGIN, IF или WHILE.|[Вставка фрагментов кода окружения Transact-SQL](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)|  
-|Описывает, как закончить построение инструкции или блока [!INCLUDE[tsql](../../includes/tsql-md.md)] после вставки фрагмента кода.|[Завершение фрагментов кода Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
-|Описывает, как построить собственные фрагменты и добавить их к набору фрагментов SQL Server.|[Добавление фрагментов кода Transact-SQL](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
+|Описывает, как вставить существующий фрагмент, например CREATE TABLE или SELECT.|[Вставка фрагментов кода Transact-SQL](./insert-transact-sql-snippets.md)|  
+|Описывает, как включить набор инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в блок BEGIN, IF или WHILE.|[Вставка фрагментов кода окружения Transact-SQL](./insert-surround-with-transact-sql-snippets.md)|  
+|Описывает, как закончить построение инструкции или блока [!INCLUDE[tsql](../../includes/tsql-md.md)] после вставки фрагмента кода.|[Завершение фрагментов кода Transact-SQL](./complete-transact-sql-snippets.md)|  
+|Описывает, как построить собственные фрагменты и добавить их к набору фрагментов SQL Server.|[Добавление фрагментов кода Transact-SQL](./add-transact-sql-snippets.md)|  
   
 ## <a name="see-also"></a>См. также:
 
-[Редакторы запросов и текста (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

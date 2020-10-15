@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 748addc15abc5521a82fb635626131d0cfbb0e25
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 234657a06ca2162bffc9448a1424820ead00f0c3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117230"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988342"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Управление именами входа и заданиями после переключения ролей (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91117230"
 > [!NOTE]  
 >  Эта проблема затрагивает локальные учетные записи Windows на разных компьютерах. Для доменных учетных записей эта проблема не возникает, поскольку идентификатор безопасности там один для всех компьютеров.  
   
- Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (блог Database Engine).  
+ Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (блог Database Engine).  
   
 ## <a name="jobs"></a>Задания  
  Некоторые задания, например задания резервного копирования, следует рассмотреть особо. Обычно после переключения ролей владельцу базы данных или системному администратору приходится создавать повторно задания для новой базы данных-источника или основной базы данных.  
@@ -50,5 +50,4 @@ ms.locfileid: "91117230"
 ## <a name="see-also"></a>См. также:  
  [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
-  
   

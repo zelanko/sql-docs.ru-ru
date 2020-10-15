@@ -17,12 +17,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 21975c380bc948c9f8a514da40a42fd1f422c125
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 482ff4d53e85214daf89f010f23a05ce4da0fb26
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545540"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986060"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Счетчики производительности для веб-службы MSRS 2011, объекты производительности
   В этом разделе рассматриваются счетчики производительности для объектов производительности **MSRS 2011 Web Service** и **MSRS 2011 Windows Service** . Эти объекты являются частью развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в собственном режиме.  
@@ -30,7 +30,7 @@ ms.locfileid: "84545540"
 > [!NOTE]  
 >  Эти объекты производительности служат для наблюдения за событиями на локальном сервере отчетов. При запуске сервера отчетов в масштабном развертывании счетчики относятся к текущему серверу, а не к масштабному развертыванию.  
   
- Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows по [профилированию среды выполнения](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows по [профилированию среды выполнения](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Сведения о счетчиках производительности в режиме SharePoint см. в статье [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим интеграции с SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "84545540"
 |**Всего обновлений моментальных снимков**|Общее число обновлений моментальных снимков состояния выполнения отчета.|  
   
 ##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> Использование командлетов PowerShell для возврата списков  
- ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")Следующий скрипт Windows PowerShell возвращает наборы счетчиков, в которых CounterSetName начинается с "msr":  
+ ![Содержимое, связанное с PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")Следующий скрипт Windows PowerShell возвращает наборы счетчиков, в которых CounterSetName начинается с "msr":  
   
 ```  
 get-counter -listset msr*  
@@ -128,5 +128,4 @@ get-counter -listset msr*
  [Наблюдение за производительностью сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим интеграции с SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
-  
   

@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087e3837ed8b1876216f847c956e0a4421f8a95c
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2a953cd71bc267622dd158569da80bc924e89b83
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901507"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036237"
 ---
 # <a name="step-through-transact-sql-code"></a>Пошаговая отладка кода Transact-SQL
 
@@ -33,7 +33,7 @@ ms.locfileid: "88901507"
 
 ## <a name="breakpoints"></a>Точки останова
 
-Точка останова указывает отладчику приостановку выполнения на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о точках останова см. в статье [Точки останова Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  
+Точка останова указывает отладчику приостановку выполнения на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о точках останова см. в статье [Точки останова Transact-SQL](./transact-sql-breakpoints.md).  
   
 ## <a name="controlling-statement-execution"></a>Управление выполнением инструкций
 
@@ -67,4 +67,4 @@ ms.locfileid: "88901507"
   
 ## <a name="see-also"></a>См. также:
 
-- [Сведения отладчика Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Сведения отладчика Transact-SQL](./transact-sql-debugger-information.md)

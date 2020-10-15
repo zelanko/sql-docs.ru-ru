@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51f1bd58c872516ffdf79d3a957b7c4674b82cd8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 41fc8b3ae6185183b3d81988874b23ea926077e2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726674"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081273"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -90,7 +90,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 Дополнительные сведения см. в разделе [Как Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Пример  
+## <a name="example-1"></a>Пример 1  
 Следующий пример подготавливает и выполняет инструкцию. При выполнении инструкция (см. [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)) обновляет поле в таблице *Sales.SalesOrderDetail* базы данных AdventureWorks. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
@@ -137,7 +137,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="example"></a>Пример  
+## <a name="example-2"></a>Пример 2  
 Следующий пример показывает, как подготовить инструкцию и затем повторно выполнить ее с другими значениями параметров. Пример обновляет столбец *OrderQty* в таблице *Sales.SalesOrderDetail* базы данных AdventureWorks. После завершения обновлений в базу данных направляется запрос, чтобы убедиться, что обновления выполнены успешно. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
@@ -225,7 +225,7 @@ sqlsrv_close($conn);
 > [!NOTE]
 > Рекомендуется использовать строки в качестве входных данных при привязке значений к [десятичным или числовым столбцам](../../t-sql/data-types/decimal-and-numeric-transact-sql.md), чтобы обеспечить точность и правильность, поскольку PHP имеет ограниченную точность для [чисел с плавающей запятой](https://php.net/manual/en/language.types.float.php). То же касается и столбцов bigint, особенно в том случае, если значения выходят за пределы диапазона [целых чисел](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a>Пример  
+## <a name="example-3"></a>Пример 3  
 В этом примере кода показано, как привязать десятичное значение в качестве входного параметра.  
 
 ```

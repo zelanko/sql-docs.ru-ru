@@ -9,12 +9,12 @@ ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834308"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987990"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server с поддержкой Azure Arc (предварительная версия)
 
@@ -49,7 +49,7 @@ SQL Server с поддержкой Azure Arc поддерживает SQL Server
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-Для обеспечения оптимальной безопасности рекомендуется создать в Azure настраиваемую роль с перечисленными выше минимальными разрешениями. Сведения о том, как создать настраиваемую роль в Azure с этими разрешениями, см. в разделе [Общие сведения о настраиваемых ролях](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview). Чтобы добавить назначение ролей, ознакомьтесь с разделом [Добавление или удаление назначений ролей Azure с помощью портала Azure](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) или [Добавление или удаление назначений ролей с помощью Azure RBAC и Azure CLI](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli).
+Для обеспечения оптимальной безопасности рекомендуется создать в Azure настраиваемую роль с перечисленными выше минимальными разрешениями. Сведения о том, как создать настраиваемую роль в Azure с этими разрешениями, см. в разделе [Общие сведения о настраиваемых ролях](/azure/active-directory/users-groups-roles/roles-custom-overview). Чтобы добавить назначение ролей, ознакомьтесь с разделом [Добавление или удаление назначений ролей Azure с помощью портала Azure](/azure/role-based-access-control/role-assignments-portal) или [Добавление или удаление назначений ролей с помощью Azure RBAC и Azure CLI](/azure/role-based-access-control/role-assignments-cli).
 
 ### <a name="azure-subscription-and-service-limits"></a>Ограничения подписки и служб Azure
 

@@ -10,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bc11c5b511b879e0b1f97987d8ff7a9ff3f435d2
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 59a25c594d45c57c7fe9a7f9baeb87c1fa49e3de
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928655"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987410"
 ---
 # <a name="reporting-services-data-alerts"></a>Предупреждения об изменении данных в службах Reporting Services
 
@@ -117,7 +117,7 @@ SQL Server Reporting Services — это управляемое данными
 ##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> Установка предупреждений об изменении данных  
  Функция предупреждений об изменении данных доступна только в случае, если службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] установлены в режиме интеграции с SharePoint. При установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint программа установки автоматически создает базу данных предупреждений, в которой хранятся определения предупреждений и метаданные предупреждений, и две страницы SharePoint для управления предупреждениями, а также добавляет конструктор предупреждений об изменении данных к сайту SharePoint. Для установки системы предупреждений не нужно выполнять каких-либо специальных действий.  
   
- Чтобы узнать больше об установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, включая общую службу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , представленную в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , а также приложение службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , которое необходимо создать и настроить, чтобы получить возможность использования функций [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , см. статью [Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode) в библиотеке MSDN.  
+ Чтобы узнать больше об установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, включая общую службу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , представленную в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , а также приложение службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , которое необходимо создать и настроить, чтобы получить возможность использования функций [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , см. статью [Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](./install-windows/install-the-first-report-server-in-sharepoint-mode.md) в библиотеке MSDN.  
   
  Как показано на приведенной выше диаграмме, предупреждения об изменении данных используют задания агента SQL Server. Чтобы можно было создавать задания, должен работать агент SQL Server. Агент SQL Server мог быть настроен для автоматического запуска при установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Если это не было сделано, вы можете запустить агент SQL Server вручную. Дополнительные сведения см. в статьях [Настройка агента SQL Server](../ssms/agent/configure-sql-server-agent.md) и [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

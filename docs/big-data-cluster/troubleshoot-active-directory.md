@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 269e886708ec82211a4e29ac8b1e492d9f69cc98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772887"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891074"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Устранение неполадок при интеграции кластера больших данных SQL Server с Active Directory
 
@@ -123,7 +123,7 @@ zookeeper-2       2/2     Running   0          32m
 
 ## <a name="cause"></a>Причина
 
-В примере выше развертыванию не удается создать имя входа для пользователя домена, поскольку доменная группа ограничена локальным доменом. Используйте группы с глобальной или универсальной областью. Требования к области группы AD указаны в разделе [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory](deploy-active-directory.md).
+В примере выше развертыванию не удается создать имя входа для пользователя домена, поскольку доменная группа ограничена локальным доменом. Используйте группы с глобальной или универсальной областью. Требования к области группы AD указаны в разделе [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory](active-directory-deploy.md).
 
 ## <a name="verify"></a>Проверка
 
