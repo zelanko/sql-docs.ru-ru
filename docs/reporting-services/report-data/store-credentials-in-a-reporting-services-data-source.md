@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: c0fd3f93cd38c562d5374ecfa65d52b082eef07b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 2b9db41c61a0e50dffd6a31fffa25f02f1e8369e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458206"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935234"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Сохраненные учетные данные в источнике данных Reporting Services
 
@@ -34,7 +34,7 @@ ms.locfileid: "86458206"
 Сохраненные учетные данные, используемые сервером отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , можно настроить для получения доступа к внешним данным отчета. Сохраненные учетные данные используются, если отчет запускается автоматически, например, подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которая публикует отчет как электронное письмо. Сервер отчетов возвращает и использует учетные данные при планировании или запуске обработки отчета. В этом разделе описывается настройка сохраненных учетных данных для серверов отчетов как в собственном режиме, так и в режиме интеграции с SharePoint.  
   
 ##  <a name="security-policy-requirements-for-stored-credentials"></a><a name="bkmk_top"></a> Требования политики безопасности для сохраненных учетных данных  
- ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Учетная запись, которая используется для сохраненных учетных данных, должна быть настроена в соответствии с одной из указанных ниже политик безопасности на сервере отчетов. Рекомендуется выбирать политику с минимальным уровнем разрешений, необходимых для используемой среды.  
+ ![as_powerpivot_refresh_sss_set_key](/analysis-services/analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Учетная запись, которая используется для сохраненных учетных данных, должна быть настроена в соответствии с одной из указанных ниже политик безопасности на сервере отчетов. Рекомендуется выбирать политику с минимальным уровнем разрешений, необходимых для используемой среды.  
   
 1.  **Локальный вход в систему**. Дополнительные сведения см. в разделе [Разрешение локального входа](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "86458206"
   
 8.  Нажмите кнопку **Применить**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ##  <a name="configure-stored-credentials-for-a-report-specific-data-source-sharepoint-mode"></a><a name="bkmk_stored_credentials_data_source_sharepoint"></a> Настройка сохраненных учетных данных для источника данных, связанного с отчетами (режим интеграции с SharePoint)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "86458206"
   
 8.  Нажмите кнопку **ОК**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ##  <a name="configure-stored-credentials-for-a-shared-data-source-native-mode"></a><a name="bkmk_stored_credentials_shared_data_source_native"></a> Настройка сохраненных учетных данных для общедоступного источника данных (собственный режим)  
   
@@ -122,7 +122,7 @@ ms.locfileid: "86458206"
   
 6.  Нажмите кнопку **Применить**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ##  <a name="configure-stored-credentials-for-a-shared-data-source-sharepoint-mode"></a><a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Настройка сохраненных учетных данных для общедоступного источника данных (режим интеграции с SharePoint)  
   
@@ -150,8 +150,7 @@ ms.locfileid: "86458206"
   
 7.  Нажмите кнопку **ОК**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")[Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ## <a name="see-also"></a>См. также:  
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
-  

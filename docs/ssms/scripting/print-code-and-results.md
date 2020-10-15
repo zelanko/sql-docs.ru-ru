@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a498a46d2b3afce46079faaec0ef717836fc973
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 7bb0992fc4db3bf9745c7fe3ef9058cb2955967a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093480"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036435"
 ---
 # <a name="print-code-and-results"></a>Печать кода и результаты
 
@@ -34,6 +34,5 @@ ms.locfileid: "89093480"
  Если в редакторе включена нумерация строк, они не будут выводиться на печать, если в диалоговом окне **Печать** (меню **Файл** ) не выбрано **Печать номеров строк** .  
   
 ## <a name="see-also"></a>См. также:  
- [Изменение цвета, размера и стиля шрифта](../../relational-databases/scripting/change-font-color-size-and-style.md)  
-  
+ [Изменение цвета, размера и стиля шрифта](./change-font-color-size-and-style.md)  
   

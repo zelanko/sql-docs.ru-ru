@@ -24,12 +24,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: f38ebd07eedcfe8ece4cc904def24186b76b7a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60446c708927de250ef664728fe4046ae5099d66
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88317450"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037223"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Справка F1 окна свойств (среда Management Studio)
 
@@ -58,4 +58,4 @@ ms.locfileid: "88317450"
   
 ## <a name="see-also"></a>См. также:
 
-- [Окно "Свойства" в среде SQL Server Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)
+- [Окно "Свойства" в среде SQL Server Management Studio](../scripting/use-the-properties-window-in-management-studio.md)

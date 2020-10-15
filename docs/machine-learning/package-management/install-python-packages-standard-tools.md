@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 3bee37788001edabd454891d8e9081814f198490
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8b2e61640c03af160985d9e65262eb3da600c3c2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179290"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956695"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>Установка пакетов с инструментами Python в SQL Server
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88179290"
 
 Чтобы добавить новый пакет Python, который можно использовать в скрипте в SQL Server, его необходимо установить в экземпляре Служб машинного обучения. При наличии нескольких экземпляров Служб машинного обучения необходимо добавить пакет в каждый из них.
 
-В следующих примерах установлен пакет [CNTK](https://docs.microsoft.com/cognitive-toolkit/). Это платформа для глубокого обучения от корпорации Майкрософт, которая поддерживает настройку, обучение и совместное использование различных типов нейронных сетей.
+В следующих примерах установлен пакет [CNTK](/cognitive-toolkit/). Это платформа для глубокого обучения от корпорации Майкрософт, которая поддерживает настройку, обучение и совместное использование различных типов нейронных сетей.
 
 ### <a name="for-offline-install-download-the-python-package"></a>Для автономной установки скачайте пакет Python.
 
@@ -63,7 +63,7 @@ ms.locfileid: "88179290"
 > [!IMPORTANT]
 > Убедитесь, что получена версия пакета для Windows. Если файл имеет расширение .gz, вероятно, это неправильная версия.
 
-Дополнительные сведения о скачивании платформы CNTK для нескольких платформ и нескольких версий Python см. в статье [Setup CNTK on your machine](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine) (Настройка CNTK на компьютере).
+Дополнительные сведения о скачивании платформы CNTK для нескольких платформ и нескольких версий Python см. в статье [Setup CNTK on your machine](/cognitive-toolkit/Setup-CNTK-on-your-machine) (Настройка CNTK на компьютере).
 
 ### <a name="locate-the-python-library"></a>Поиск расположения библиотеки Python
 
@@ -123,5 +123,5 @@ import cntk
 ## <a name="see-also"></a>См. также раздел
 
 + [Получение сведений о пакете Python](python-package-information.md)
-+ [Учебники по Python для Служб машинного обучения SQL Server](../tutorials/sql-server-python-tutorials.md)
++ [Учебники по Python для Служб машинного обучения SQL Server](../tutorials/python-tutorials.md)
 + [API Python для CNTK](https://cntk.ai/pythondocs/tutorials.html).

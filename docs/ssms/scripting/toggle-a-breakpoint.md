@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6c43f4376d6e60607fd1fcfb1c64f1d25cea3af
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: f9b9ddfd58beed00a00c3512b5db51e7a3a7907c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901479"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036220"
 ---
 # <a name="toggle-a-breakpoint"></a>Переключение точки останова
 
@@ -33,7 +33,7 @@ ms.locfileid: "88901479"
   
  При наличии в строке нескольких инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] можно включить точку останова для каждой из них. При щелчке серой полосы в левой части окна переключается точка останова для первой инструкции в строке. Чтобы переключить точку останова следующей инструкции, выделите любую часть этой инструкции или переместите курсор в нее и нажмите клавишу F9 либо выберите команду **Переключить точку останова** в меню **Отладка** . Нескольким точкам останова в одной строке соответствует одна глифом точки останова.  
   
- После переключения точки останова можно выполнять различные действия с точкой останова, например изменить свойства или временно отключить. Дополнительные сведения см. в разделе [Точки останова Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  
+ После переключения точки останова можно выполнять различные действия с точкой останова, например изменить свойства или временно отключить. Дополнительные сведения см. в разделе [Точки останова Transact-SQL](./transact-sql-breakpoints.md).  
   
 ## <a name="toggle-a-breakpoint"></a>Переключение точки останова  
  **Переключение точки останова на инструкции языка Transact-SQL**  
@@ -45,5 +45,4 @@ ms.locfileid: "88901479"
     -   Нажмите клавишу F9.  
   
     -   В меню **Отладка** выбрать пункт **Переключить точку останова**.  
-  
   

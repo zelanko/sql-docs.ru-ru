@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178661"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956818"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Установите R Server или сервер машинного обучения (изолированный) с помощью программы установки SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88178661"
 Программа установки SQL Server поддерживает вариант установки автономного сервера машинного обучения **как общего компонента**, то есть за пределами SQL Server. В SQL Server 2016 эта функция называется **R Server (изолированный)** .  
 ::: moniker-end
 
-Изолированный сервер, установленный программой установки SQL Server, функционально эквивалентен версиям [сервера машинного обучения](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), не зависящим от языка SQL, и поддерживает те же сценарии и ситуации использования, в том числе:
+Изолированный сервер, установленный программой установки SQL Server, функционально эквивалентен версиям [сервера машинного обучения](/machine-learning-server/what-is-machine-learning-server), не зависящим от языка SQL, и поддерживает те же сценарии и ситуации использования, в том числе:
 
 + Удаленное выполнение, переключение между локальными и удаленными сеансами в одной консоли
 + Эксплуатация с помощью веб-узлов и вычислений на узлах
@@ -192,7 +192,7 @@ ms.locfileid: "88178661"
 
 3. Если вы включили возможность запуска в качестве веб-узлов и узлов вычислений для развертывания веб-служб, создайте резервную копию файла **AppSettings.json** в качестве меры предосторожности. Применение SQL Server 2017 CU13 или более поздней версии изменяет этот файл, поэтому для сохранения исходной версии может потребоваться резервная копия.
 
-4. На компьютере с подключением к Интернету скачайте самый свежий накопительный пакет обновлений для используемой версии со страницы [Последние обновления для Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server).
+4. На компьютере с подключением к Интернету скачайте самый свежий накопительный пакет обновлений для используемой версии со страницы [Последние обновления для Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
 5. Загрузите последнее накопительное обновление. Это исполняемый файл.
 
@@ -215,7 +215,7 @@ ms.locfileid: "88178661"
     }
     ```
 
-9. [Запустите служебную программу CLI с правами администратора](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) для перезапуска веб-узлов и узлов вычислений. Инструкции и синтаксис см. в разделе [Отслеживание, запуск и остановка веб-узлов и узлов вычислений](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
+9. [Запустите служебную программу CLI с правами администратора](/machine-learning-server/operationalize/configure-admin-cli-launch) для перезапуска веб-узлов и узлов вычислений. Инструкции и синтаксис см. в разделе [Отслеживание, запуск и остановка веб-узлов и узлов вычислений](/machine-learning-server/operationalize/configure-admin-cli-stop-start).
 
 ## <a name="development-tools"></a>Инструменты разработки
 

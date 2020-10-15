@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b0bb11779dc90e17f0646bfe747550df62e94ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a08bda94128619aa9bf8c190652654ebd765d03
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463018"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035494"
 ---
 # <a name="external-tools-dialog-box"></a>Диалоговое окно «Внешние средства»
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88463018"
 Указываются переменные, которые передаются средству при выборе соответствующего пункта в меню. Аргументы могут задавать значения, передаваемые средству или команде при их запуске. Например: значение может определять имя файла или каталога. Для выбора аргумента из списка предопределенных аргументов используйте кнопки со стрелками. Можно добавить несколько аргументов. Полный список стандартных аргументов и их определений см. в разделе [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md). В зависимости от того, какая команда или средство используется, можно также вводить пользовательские аргументы, например переключатели командной строки.  
   
 **Использовать окно вывода**  
-Открывает окно вывода среды [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , чтобы отобразить выходные данные выполняемой команды. Не все средства представляют выходные данные в формате, который доступен для отображения в окне вывода. Дополнительные сведения см. в разделе [Окно вывода](../relational-databases/scripting/transact-sql-debugger-output-window.md).  
+Открывает окно вывода среды [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , чтобы отобразить выходные данные выполняемой команды. Не все средства представляют выходные данные в формате, который доступен для отображения в окне вывода. Дополнительные сведения см. в разделе [Окно вывода](./scripting/transact-sql-debugger-output-window.md).  
   
 **Рассматривать вывод как данные в формате Юникод**  
 Преобразует выходные данные в формат Юникод.  
@@ -78,4 +78,3 @@ ms.locfileid: "88463018"
 ## <a name="see-also"></a>См. также:  
 [Аргументы для внешних средств](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [Общие элементы пользовательского интерфейса](../ssms/general-user-interface-elements.md)  
-  

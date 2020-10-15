@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 577f31593aae858596ac08c4aa7f44e121a22ce8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2abd5aa8f15a0213a8eccee0965688cf626abc02
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480716"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988150"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint
   В этом разделе приводится сравнение функции авторизации на основе ролей и задач служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающих в собственном режиме, со средствами безопасности из продуктов SharePoint. В нем сравнивается терминология и характеристики ролей, задач, групп SharePoint, уровней разрешений и самих разрешений.  
@@ -63,7 +63,7 @@ ms.locfileid: "88480716"
 |---|**Группа уровня разрешений:** Например, "Только просмотр" для группы "Участники просмотра".|  
 |**Задачи.** Например, "Управление отчетами".|**Разрешения.** Например, в группе "Только просмотр" есть список разрешений, связанных с элементами представления, версиями представления и страницами представления приложения.|  
   
- Дополнительные сведения о разрешениях SharePoint см. в разделах [Уровни разрешений и разрешения](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) и [Определение уровня разрешений и групп в SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
+ Дополнительные сведения о разрешениях SharePoint см. в разделах [Уровни разрешений и разрешения](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) и [Определение уровня разрешений и групп в SharePoint 2013](/SharePoint/sites/determine-permission-levels-and-groups-in-sharepoint-server).  
   
 ##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> Сравнение ролей в собственном режиме и групп SharePoint  
  В следующей таблице сравниваются стандартные определения ролей служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме со стандартными группами SharePoint. Если группы SharePoint не соответствуют определенной необходимой роли, можно создать пользовательскую группу и назначить для нее уровни разрешений в SharePoint.  
@@ -118,5 +118,4 @@ ms.locfileid: "88480716"
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Определение ролей](../../reporting-services/security/role-definitions.md)   
  [Предопределенные роли](../../reporting-services/security/role-definitions-predefined-roles.md)  
-  
   

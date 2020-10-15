@@ -8,21 +8,21 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7f711ae8b90762003f903b7fd4a59771c5d3f53
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f787cdef6baeeaa57e79c9c5c167e12395508b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178691"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956988"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>Запуск скриптов Python и R в записных книжках Azure Data Studio с помощью служб машинного обучения SQL Server
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-Узнайте, как запускать скрипты Python и R в записных книжках [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) с помощью [служб машинного обучения SQL Server](../sql-server-machine-learning-services.md). Azure Data Studio — это кроссплатформенный инструмент для работы с базами данных.
+Узнайте, как запускать скрипты Python и R в записных книжках [Azure Data Studio](../../azure-data-studio/what-is.md) с помощью [служб машинного обучения SQL Server](../sql-server-machine-learning-services.md). Azure Data Studio — это кроссплатформенный инструмент для работы с базами данных.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Скачайте и установите Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) на своем компьютере. Azure Data Studio — кроссплатформенная среда, которая работает в Windows, macOS и Linux.
+- [Скачайте и установите Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) на своем компьютере. Azure Data Studio — кроссплатформенная среда, которая работает в Windows, macOS и Linux.
 
 - В ней установлен и включен сервер служб машинного обучения SQL Server. Службы машинного обучения можно использовать в Windows, Linux или кластерах больших данных.
 
@@ -123,7 +123,7 @@ ms.locfileid: "88178691"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- [Использование записных книжек в Azure Data Studio](../../azure-data-studio/notebooks-guidance.md)
-- [Создание и запуск записной книжки SQL Server](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
+- [Использование записных книжек в Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md)
+- [Создание и запуск записной книжки SQL Server](../../azure-data-studio/notebooks/notebooks-sql-kernel.md)
 - [Краткое руководство. Выполнение простых скриптов Python с помощью служб машинного обучения SQL Server](../tutorials/quickstart-python-create-script.md)
 - [Краткое руководство. Выполнение простых скриптов R с помощью служб машинного обучения SQL Server](../tutorials/quickstart-r-create-script.md)

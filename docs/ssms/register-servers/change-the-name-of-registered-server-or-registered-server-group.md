@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/02/2016
-ms.openlocfilehash: 28ed9e04486fe587ea3bd25d6659283846a6fa8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c02287203533d75038a909bd962c9afc70858d2b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491823"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037642"
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>Изменение имени зарегистрированного сервера или зарегистрированной группы серверов
 
@@ -44,6 +44,6 @@ ms.locfileid: "88491823"
 
 3. В поле **Имя группы** введите новое имя для группы серверов и нажмите кнопку **Сохранить**.  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Изменение регистрационных данных сервера (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)
+[Изменение регистрационных данных сервера (среда SQL Server Management Studio)](./change-a-server-s-registration-sql-server-management-studio.md)

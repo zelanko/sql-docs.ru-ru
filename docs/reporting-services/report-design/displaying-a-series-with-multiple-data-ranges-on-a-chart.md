@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 976319c02aa641873d2f92bd6c4b10c8e9427566
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 14591802d542ac15448836a5b46e005f59026367
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681523"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935220"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Отображение на диаграмме ряда с несколькими диапазонами данных
 
@@ -66,7 +66,7 @@ ms.locfileid: "84681523"
 [Форматирование диаграммы](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [Объемные эффекты, рельеф и другие эффекты на диаграмме](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [Диаграммы](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Диалоговое окно "Свойства оси" — "Параметры оси"](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[Диалоговое окно "Свойства оси" — "Параметры оси"](/previous-versions/sql/)   
 [Объединение мелких срезов на круговой диаграмме](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

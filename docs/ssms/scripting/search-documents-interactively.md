@@ -15,12 +15,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5808e51f9311a90f84527bce104d25c673198953
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: a97a33dadae8f9039a6c5a0ca935decfb1e24b4a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901917"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036387"
 ---
 # <a name="search-documents-interactively"></a>осуществлять поиск в документах в интерактивном режиме
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,10 +64,9 @@ ms.locfileid: "88901917"
  Команда **Заменить все** заменяет все найденные совпадения, включая и те, которые были пропущены нажатием кнопки **Найти далее** . Чтобы отменить команду **Заменить все**, перед тем как закрыть какой-либо файл в меню **Правка** выберите пункт **Отменить** .  
   
 ## <a name="see-also"></a>См. также:  
- [Выполнение добавочного поиска в активном документе](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [Поиск и замена](../../relational-databases/scripting/search-and-replace.md)   
- [Поиск документов с помощью списков результатов](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Поиск текста с символами-шаблонами](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Поиск текста с помощью регулярных выражений](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Выполнение добавочного поиска в активном документе](./search-an-active-document-incrementally.md)   
+ [Поиск и замена](./search-and-replace.md)   
+ [Поиск документов с помощью списков результатов](./search-documents-using-results-lists.md)   
+ [Поиск текста с символами-шаблонами](./search-text-with-wildcards.md)   
+ [Поиск текста с помощью регулярных выражений](./search-text-with-regular-expressions.md)  
   

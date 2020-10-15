@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 79053a7dcf91b220bdb288fc7efc711c80684aa0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88171873"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956850"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Мониторинг инструкций T-SQL PREDICT с использованием расширенных событий в Службах машинного обучения SQL Server
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88171873"
 
 ## <a name="table-of-extended-events"></a>Таблица расширенных событий
 
-Приведенные ниже расширенные события доступны во всех версиях SQL Server, поддерживающих инструкцию T-SQL [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql). 
+Приведенные ниже расширенные события доступны во всех версиях SQL Server, поддерживающих инструкцию T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md). 
 
 |name |object_type|description| 
 |----|----|----|
@@ -47,7 +47,7 @@ WHERE object_name LIKE `predict%'
 
 Для сбора сведений о производительности сеанса оценки с использованием PREDICT выполните указанные ниже действия.
 
-1. Создайте сеанс расширенных событий с помощью Management Studio или другого поддерживаемого [средства](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
+1. Создайте сеанс расширенных событий с помощью Management Studio или другого поддерживаемого [средства](../../relational-databases/extended-events/extended-events-tools.md).
 2. Добавьте в сеанс события `predict_function_completed` и `predict_model_cache_hit`.
 3. Запустите сеанс расширенных событий.
 4. Выполните запрос, использующий функцию PREDICT.
@@ -82,6 +82,6 @@ WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 Дополнительные сведения о расширенных событиях и о том, как отслеживать события в рамках сеанса, см. в следующих статьях:
 
 + [Мониторинг скриптов Python и R с использованием расширенных событий в Службах машинного обучения SQL Server](extended-events.md)
-+ [Основные понятия и архитектура расширенных событий](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [Настройка сбора событий в SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [Управление сеансами событий в обозревателе объектов](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [Основные понятия и архитектура расширенных событий](../../relational-databases/extended-events/extended-events.md)
++ [Настройка сбора событий в SSMS](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
++ [Управление сеансами событий в обозревателе объектов](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)

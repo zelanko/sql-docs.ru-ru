@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/16/2018
-ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: 238df1200d88023abec54fdf3fa2c37df758f0f8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662033"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038949"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Компоненты и конфигурация SQL Server Management Studio
 
@@ -33,7 +33,7 @@ ms.locfileid: "91662033"
 
 Для работы с этим учебником вам потребуется среда SQL Server Management Studio.  
 
-* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Установите [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 ## <a name="sql-server-management-studio-components"></a>Компоненты среды SQL Server Management Studio
 
@@ -138,7 +138,7 @@ ms.locfileid: "91662033"
 
 Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 
-* [Подключение к экземпляру и отправка запросов к нему](connect-query-sql-server.md)
+* [Подключение к экземпляру и отправка запросов к нему](../quickstarts/connect-query-sql-server.md)
 * [Создание скриптов](scripting-ssms.md)
 * [Использование шаблонов в SSMS](../template/templates-ssms.md)
 * [Дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md)

@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4a19d53dc1c7788a2e5002bc1189b9df47b3ee5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 182f6805ee452f065bda86ee23bfec60bc8b8999
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901814"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036137"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Отладчик Transact-SQL, окно контрольных значений
 
@@ -64,9 +64,9 @@ ms.locfileid: "88901814"
  Отображает тип данных выражения.  
   
 ## <a name="see-also"></a>См. также:  
- [Отладчик Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Сведения отладчика Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [окно локальных переменных](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Окно стека вызовов](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Диалоговое окно «Быстрая проверка»](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Отладчик Transact-SQL](./transact-sql-debugger.md)   
+ [Сведения отладчика Transact-SQL](./transact-sql-debugger-information.md)   
+ [окно локальных переменных](./transact-sql-debugger-locals-window.md)   
+ [Окно стека вызовов](./transact-sql-debugger-call-stack-window.md)   
+ [Диалоговое окно «Быстрая проверка»](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)

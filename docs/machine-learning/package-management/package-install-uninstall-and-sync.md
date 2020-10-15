@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 75d5e4cc3892ed2fd33392dc413b55936eac191d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c09f79fafca4c16048817f3ee2524f214cb13d49
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179693"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956631"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>Синхронизация пакетов R для SQL Server
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88179693"
 
 Эта функция предназначена для упрощения резервного копирования коллекций пакетов R, связанных с базами данных SQL Server. С помощью этой функции администратор может восстановить не только базу данных, но и все пакеты R, которые использовались специалистами по обработке и анализу данных, работающими с этой базой данных.
 
-В этой статье описывается функция синхронизации пакетов, а также как использовать функцию [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) для выполнения следующих задач:
+В этой статье описывается функция синхронизации пакетов, а также как использовать функцию [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) для выполнения следующих задач:
 
 + Синхронизация списка пакетов для всей базы данных SQL Server.
 
@@ -56,7 +56,7 @@ ms.locfileid: "88179693"
 1. Администратор сервера включает функцию для экземпляра SQL Server.
 2. Для каждой базы данных администратор предоставляет отдельным пользователям возможность установки или совместного использования пакетов R с помощью ролей базы данных.
 
-После этого можно использовать функции RevoScaleR, такие как [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages), для установки пакетов в базу данных.  Сведения о пользователях и пакетах, которые они могут использовать, хранятся в экземпляре SQL Server. 
+После этого можно использовать функции RevoScaleR, такие как [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages), для установки пакетов в базу данных.  Сведения о пользователях и пакетах, которые они могут использовать, хранятся в экземпляре SQL Server. 
 
 При добавлении нового пакета с помощью функций управления пакетами обновляются как записи в SQL Server, так и файловая система. Эту информацию можно использовать для восстановления сведений о пакетах для всей базы данных.
 
@@ -74,7 +74,7 @@ ms.locfileid: "88179693"
 
 ## <a name="how-package-synchronization-works"></a>Как работает синхронизация пакетов
 
-Чтобы использовать синхронизацию пакетов, вызовите [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages) (новая функция в [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)). 
+Чтобы использовать синхронизацию пакетов, вызовите [rxSyncPackages](/r-server/r-reference/revoscaler/rxsyncpackages) (новая функция в [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler)). 
 
 Для каждого вызова `rxSyncPackages` необходимо указать экземпляр SQL Server и базу данных. Затем следует указать список пакетов для синхронизации либо область пакета.
 

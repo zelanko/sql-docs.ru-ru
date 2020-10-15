@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 20506baeb0a22e4e32fd1c4b24a7d00f4493b6d5
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283555"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956543"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Управление рабочими нагрузками Python и R с помощью Resource Governor в службах машинного обучения SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "89283555"
 
 При необходимости можно создать настраиваемые **внешние пулы ресурсов** со связанными группами рабочих нагрузок и классификаторами, чтобы определить выделение ресурсов для запросов, исходящих от конкретных программ или узлов, или в соответствии с другими указанными условиями. Внешний пул ресурсов — это тип пула ресурсов в [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], который помогает управлять процессами R и Python за пределами ядра СУБД.
 
-1. [Включите управление ресурсами](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (по умолчанию оно отключено).
+1. [Включите управление ресурсами](../../relational-databases/resource-governor/enable-resource-governor.md) (по умолчанию оно отключено).
 
-2. Выполните инструкцию [CREATE EXTERNAL RESOURCE POOL](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql), чтобы создать и настроить пул ресурсов, а затем инструкцию [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql), чтобы реализовать его.
+2. Выполните инструкцию [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md), чтобы создать и настроить пул ресурсов, а затем инструкцию [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md), чтобы реализовать его.
 
 3. Создайте группу рабочей нагрузки для детализированного выделения, например, между обработкой и оценкой.
 

@@ -26,12 +26,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 347a55c139a35c7edf0a5fc37e21a2de0736c401
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: e3c5b3c399dfe95e1cbfa521e1a67044d4c5be8e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681463"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935213"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)
   Карта представляет собой набор слоев. При добавлении карты в отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы необходимо определить первый ее слой. Дополнительные слои можно создать с помощью мастера «Слой карты».  
@@ -115,9 +115,9 @@ ms.locfileid: "84681463"
   
 1.  Страница **Общие** диалогового окна **Свойства точки карты** позволяет изменить параметры метки, всплывающей подсказки и типа маркера для следующих элементов карты.  
   
-    -   Все динамические или внедренные точки слоя точек. Эти параметры переопределяются правилами для цветов, размеров и типов маркеров точек. Чтобы переопределить параметры отдельной внедренной точки, используйте страницу [Map Embedded Point Properties Dialog Box, Marker](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
+    -   Все динамические или внедренные точки слоя точек. Эти параметры переопределяются правилами для цветов, размеров и типов маркеров точек. Чтобы переопределить параметры отдельной внедренной точки, используйте страницу [Map Embedded Point Properties Dialog Box, Marker](./maps-report-builder-and-ssrs.md) .  
   
-    -   Центральная точка всех динамических или внедренных многоугольников слоя многоугольников. Эти параметры переопределяются правилами цветов, размеров и типов маркеров для центральных точек. Чтобы переопределить параметры отдельной центральной точки, используйте страницу [Map Embedded Point Properties Dialog Box, Marker](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
+    -   Центральная точка всех динамических или внедренных многоугольников слоя многоугольников. Эти параметры переопределяются правилами цветов, размеров и типов маркеров для центральных точек. Чтобы переопределить параметры отдельной центральной точки, используйте страницу [Map Embedded Point Properties Dialog Box, Marker](./maps-report-builder-and-ssrs.md) .  
   
 ##  <a name="to-specify-embedded-data-as-a-source-of-spatial-data"></a><a name="Embedded"></a> Указание внедренных данных в качестве источника пространственных данных  
   
@@ -252,5 +252,4 @@ ms.locfileid: "84681463"
 ## <a name="see-also"></a>См. также:  
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
-  
   

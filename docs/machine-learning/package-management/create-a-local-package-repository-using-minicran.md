@@ -11,12 +11,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 685d82d043d3041c375b9d1fe67962b698e8723a
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: f792898232017b0573813b7fb73e6f783e6e3936
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227129"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956736"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Создание локального репозитория пакетов R с помощью miniCRAN
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -196,4 +196,4 @@ pdb[, c("Package", "Version", "License")]
 ## <a name="see-also"></a>См. также раздел
 
 + [Получение сведений о пакете R](../package-management/r-package-information.md)
-+ [Учебники по R](../tutorials/sql-server-r-tutorials.md)
++ [Учебники по R](../tutorials/r-tutorials.md)

@@ -17,12 +17,12 @@ ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 5e70db23f7fb2e07855228204a8c1318c9eb0a2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afe40ef4863965905dedd825ee04bdb8a0e3e4d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480000"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038683"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>Построение связи «многие ко многим» (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,13 +40,12 @@ ms.locfileid: "88480000"
   
 4.  Скопируйте первичные ключевые столбцы обеих таблиц в связующую таблицу. В эту таблицу можно добавить другие столбцы, как в любую другую таблицу.  
   
-5.  Создайте первичный ключ в связующей таблице так, чтобы он содержал все первичные ключевые столбцы исходных таблиц. Дополнительные сведения см. в разделе [Как Создайте первичные ключи](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214).  
+5.  Создайте первичный ключ в связующей таблице так, чтобы он содержал все первичные ключевые столбцы исходных таблиц. Дополнительные сведения см. в разделе [Как Создайте первичные ключи](../../relational-databases/tables/create-primary-keys.md).  
   
-6.  Определите отношение «один ко многим» между каждой из первоначальных таблиц и связующей таблицей. Связующая таблица должна находиться на стороне «многих» обоих отношений. Дополнительные сведения см. в разделе [Как Создайте связи между таблицами](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
+6.  Определите отношение «один ко многим» между каждой из первоначальных таблиц и связующей таблицей. Связующая таблица должна находиться на стороне «многих» обоих отношений. Дополнительные сведения см. в разделе [Как Создайте связи между таблицами](../../relational-databases/tables/create-foreign-key-relationships.md).  
   
     > [!NOTE]  
     > Создание связующей таблицы в диаграмме базы данных не подразумевает ее заполнение данными из связанных таблиц. Дополнительные сведения о вставке данных в эту таблицу см. в разделе [Создание запросов вставки результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-  

@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d770a7396f48aa11e00eb4f4663285f4cf6eef9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c976735ddc6ce9e602969e06abc13b076a74144
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370310"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037587"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Выполнение экспорта сведений компонента «Зарегистрированные серверы» (среда SQL Server Management Studio)
 
@@ -61,7 +61,6 @@ ms.locfileid: "88370310"
     >  Хотя файлы экспорта зашифрованы, необходимо тщательно контролировать доступ к ним в случае, если в них заносятся имена пользователей и пароли для процедуры проверки подлинности SQL Server. Поэтому по умолчанию из файла экспорта исключаются имена пользователей и пароли.  
   
 ## <a name="see-also"></a>См. также:  
- [Импорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)   
- [Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
-  
+ [Импорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](./import-registered-server-information-sql-server-management-studio.md)   
+ [Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](./create-a-new-registered-server-sql-server-management-studio.md)  
   

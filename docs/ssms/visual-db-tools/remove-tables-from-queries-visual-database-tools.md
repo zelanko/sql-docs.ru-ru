@@ -16,19 +16,19 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51402e1a0017f80b192bde54d7ef53aff99f61d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c92732dc2cb4fcd817a8c954fa9d29048cd57bd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491604"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038681"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Удаление таблиц из запросов (визуальные инструменты для базы данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Из запроса можно удалить таблицу или любой возвращающий табличное значение объект.  
   
 > [!NOTE]  
-> Удаление таблицы или возвращающего табличное значение объекта из текущего запроса не приводит к их удалению из базы данных. Дополнительные сведения об удалении таблицы из базы данных см. в разделе [Как Удаление таблиц из базы данных](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
+> Удаление таблицы или возвращающего табличное значение объекта из текущего запроса не приводит к их удалению из базы данных. Дополнительные сведения об удалении таблицы из базы данных см. в разделе [Как Удаление таблиц из базы данных](../../relational-databases/tables/delete-tables-database-engine.md).  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>Удаление таблицы или табличного объекта  
   
@@ -46,4 +46,3 @@ ms.locfileid: "88491604"
 [Задание условий поиска](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Резюмирование результатов запросов](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Выполнение основных операций с запросами](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-  

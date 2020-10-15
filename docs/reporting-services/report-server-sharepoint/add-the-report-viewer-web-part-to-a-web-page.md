@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf8f744078ccad4e755cc6d635ba999e0f077574
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 0061f824a8801db7c703df4a902b7b6cac7d10bd
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767115"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935544"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>Добавление веб-части "Средство просмотра отчетов" на страницу
 
@@ -55,7 +55,7 @@ ms.locfileid: "83767115"
   
 ## <a name="see-also"></a>См. также раздел
 
- [Веб-часть "Средство просмотра отчетов" на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Веб-часть "Средство просмотра отчетов" на сайте SharePoint](./report-viewer-web-part-sharepoint-site.md)   
  [Настройка веб-части "Средство просмотра отчетов"](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
