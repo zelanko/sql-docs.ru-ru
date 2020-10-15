@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662043"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038965"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Создание скриптов для объектов в среде SQL Server Management Studio
 
@@ -43,11 +43,11 @@ ms.locfileid: "91662043"
 
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
-* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Установите [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Скачайте [образцы баз данных AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-Инструкции по восстановлению баз данных в SSMS см. в статье [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Инструкции по восстановлению баз данных в SSMS см. в статье [Восстановление базы данных](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## <a name="script-queries-from-the-gui"></a>Создание скриптов для запросов в графическом пользовательском интерфейсе
 
@@ -146,7 +146,7 @@ ms.locfileid: "91662043"
    ![Объекты скриптов](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > Вы можете создать скрипт данных для базы данных при выборе варианта *Схема и данные* для параметра **Типы данных для создания скриптов**. Однако это не подходит для крупных баз данных. Может потребоваться больше памяти, чем SSMS может выделить. Это ограничение не влияет на небольшие базы данных. Если вы хотите переместить данные в более крупную базу данных, используйте [мастер импорта и экспорта](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > Вы можете создать скрипт данных для базы данных при выборе варианта *Схема и данные* для параметра **Типы данных для создания скриптов**. Однако это не подходит для крупных баз данных. Может потребоваться больше памяти, чем SSMS может выделить. Это ограничение не влияет на небольшие базы данных. Если вы хотите переместить данные в более крупную базу данных, используйте [мастер импорта и экспорта](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 6. Нажмите кнопку **ОК**, а затем кнопку **Далее**.
 
@@ -199,7 +199,7 @@ ms.locfileid: "91662043"
 
 ## <a name="script-extended-events"></a>Создание скриптов для расширенных событий
 
-В этом разделе описывается, как создать скрипты для [расширенных событий](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
+В этом разделе описывается, как создать скрипты для [расширенных событий](../../relational-databases/extended-events/extended-events.md).
 
 1. Подключитесь к серверу SQL Server.
 
@@ -226,7 +226,7 @@ ms.locfileid: "91662043"
 
 Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS. С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 
-* [Подключение к экземпляру и отправка запросов к нему](connect-query-sql-server.md)
+* [Подключение к экземпляру и отправка запросов к нему](../quickstarts/connect-query-sql-server.md)
 * [Использование шаблонов в SSMS](../template/templates-ssms.md)
 * [Конфигурация SSMS](ssms-configuration.md)
 * [Дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md)

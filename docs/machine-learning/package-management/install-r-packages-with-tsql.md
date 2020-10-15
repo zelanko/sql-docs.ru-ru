@@ -9,25 +9,25 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1c2860efa5b47d3f6b6209f152e7085094fabaf3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 00ead49bdc0aa14304b3c95f0bee51329f6ad163
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178975"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956665"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Использование инструкции T-SQL (CREATE EXTERNAL LIBRARY) для установки пакетов R на SQL Server
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 В этой статье объясняется, как установить новые пакеты R на экземпляре SQL Server, где включено машинное обучение. Существует несколько подходов. Использование T-SQL лучше подходит администраторам сервера, которые не знакомы с R.
 
-Инструкция [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) позволяет добавить пакет или набор пакетов в экземпляр или конкретную базу данных без непосредственного запуска кода R или Python. Тем не менее этот метод требует разрешений на подготовку пакета и дополнительных разрешений для базы данных.
+Инструкция [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) позволяет добавить пакет или набор пакетов в экземпляр или конкретную базу данных без непосредственного запуска кода R или Python. Тем не менее этот метод требует разрешений на подготовку пакета и дополнительных разрешений для базы данных.
 
 + Все пакеты должны быть доступны в виде локального ZIP-файла. Их не следует загружать по запросу из Интернета.
 
 + Все зависимости должны быть идентифицированы по имени и версии и быть добавлены в ZIP-файл. Инструкция завершается ошибкой, если требуемые пакеты недоступны, включая подчиненные зависимости пакетов. 
 
-+ У вас должна быть роль **db_owner** или разрешение на создание внешней библиотеки в роли базы данных. Дополнительные сведения см. в статье [CREATE EXTERNAL LIBRARY (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
++ У вас должна быть роль **db_owner** или разрешение на создание внешней библиотеки в роли базы данных. Дополнительные сведения см. в статье [CREATE EXTERNAL LIBRARY (Transact-SQL)](../../t-sql/statements/create-external-library-transact-sql.md).
 
 ## <a name="download-packages-in-archive-format"></a>Скачивание пакета в формате архива
 
@@ -68,4 +68,4 @@ EXEC sp_execute_external_script
 ## <a name="see-also"></a>См. также раздел
 
 + [Получение сведений о пакете R](r-package-information.md)
-+ [Учебники по R](../tutorials/sql-server-r-tutorials.md)
++ [Учебники по R](../tutorials/r-tutorials.md)

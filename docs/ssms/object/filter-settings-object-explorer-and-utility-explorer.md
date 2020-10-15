@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4595be9c345b32c20bf028cc384a2e61766295d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50a7eccca6f889a7bff57b244d8c209af7b73ec2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480193"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037210"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Настройки фильтра (обозреватель объектов и обозреватель программ)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,6 +75,5 @@ ms.locfileid: "88480193"
 Позволяет удалить все настройки текущего фильтра.  
   
 ## <a name="see-also"></a>См. также:  
-[Использование среды SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+[Использование среды SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
 [Общие сведения о служебной программе SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  

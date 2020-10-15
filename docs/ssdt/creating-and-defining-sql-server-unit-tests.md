@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 861014b336d9f75c2df1dfc7888a28eb663575de
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 0db07a60c00e499cb86b5efb1113bbfd49807dc4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518754"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988220"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Создание и определение модульных тестов SQL Server
 
@@ -43,9 +43,8 @@ ms.locfileid: "85518754"
 [Выполнение модульных тестов SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 После создания модульных тестов SQL Server вы можете запустить их в окне представления теста, в конструкторе модульных тестов SQL Server или с помощью сборки Team Foundation.  
   
-[Scenario: Определение нестандартных условий теста для модульных тестов базы данных](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Scenario: Определение нестандартных условий теста для модульных тестов базы данных](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 Можно создать пользовательские условия тестов для проверки поведения, которое не покрывается стандартными условиями.  
   
 ## <a name="see-also"></a>См. также:  
 [Проверка кода базы данных с помощью модульных тестов SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

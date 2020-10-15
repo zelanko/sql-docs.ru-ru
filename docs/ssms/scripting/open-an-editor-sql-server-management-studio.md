@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093495"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036488"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Открытие редактора (среда SQL Server Management Studio)
 
@@ -52,7 +52,7 @@ ms.locfileid: "89093495"
 ### <a name="using-the-fileopen-menu"></a>Использование меню «Файл/Открыть»  
  В меню **Файл** выберите команду **Открыть**, а затем перейдите к файлу и откройте его. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] откроет соответствующий расширению файла тип редактора, скопирует содержимое файла в окно редактора и, при необходимости, откроет диалоговое окно соединения. Например, если открывается в файл с расширением SQL, среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] откроет окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , скопирует в него содержимое SQL-файла и откроет диалоговое окно соединения. Если открывается файл с расширением, не связанным с определенным редактором, среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] откроет окно текстового редактора и скопирует в него содержимое файла.  
   
- Дополнительные сведения см. в статье [Связывание расширения файла с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+ Дополнительные сведения см. в статье [Связывание расширения файла с редактором кода](./associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="using-the-toolbar"></a>Использование панели инструментов  
  На панели инструментов **Стандартные** щелкните одну из следующих кнопок.  

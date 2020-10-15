@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1a946efdd8da5a64d2475164a1b8057c7b41554f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: c1f30230b00258b5f5f662a99c2d75c29ea7ba8d
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226851"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956813"
 ---
 # <a name="plot-histograms-in-python"></a>Построение гистограмм в Python 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "91226851"
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* База данных SQL Azure. Сведения о регистрации см. в разделе [База данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal).
+* База данных SQL Azure. Сведения о регистрации см. в разделе [База данных SQL Azure](/azure/sql-database/sql-database-get-started-portal).
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Управляемый экземпляр SQL Azure. Сведения о регистрации см. в разделе [Управляемый экземпляр SQL Azure](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart).
+* Управляемый экземпляр SQL Azure. Сведения о регистрации см. в разделе [Управляемый экземпляр SQL Azure](/azure/azure-sql/managed-instance/instance-create-quickstart).
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) для восстановления образца базы данных в Управляемый экземпляр SQL Azure.
 ::: moniker-end
@@ -93,5 +93,3 @@ df.hist(bins=10)
 На экране отобразится распределение возраста клиентов в таблице FactInternetSales.
 
 ![Гистограмма Pandas](./media/python-histogram.png)
-
-

@@ -20,18 +20,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7ae7ebd74df736f2f9d8356971244f09cfb9544
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1f0b5fb8d88feb32a0543bc6edcbdf892587abf
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497595"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035039"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Создание и присоединение расписаний к заданиям
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Планирование заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предполагает определение условия или условий, при которых выполнение задания должно начаться без вмешательства пользователя. Можно запланировать автоматическое выполнение задания, создав новое расписание для задания или присоединив к нему существующее расписание.  
   
@@ -99,4 +99,3 @@ ms.locfileid: "88497595"
 ## <a name="see-also"></a>См. также:  
 [sp_help_jobschedule](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)  
 [sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
-  

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f89d245bddec039846aed82168fbe8c687d73e2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35a255bb4df3779897ec40da29da9cc15f62ba1f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491870"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037633"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Параметры (обозреватель объектов SQL Server — страница "Скрипты")
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,26 +44,26 @@ ms.locfileid: "88491870"
   
 ### <a name="general-scripting-options"></a>Общие параметры скрипта  
 **Разделить отдельные инструкции**  
-Разделяет отдельные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью пакетного разделителя. Чтобы изменить пакетный разделитель по умолчанию для **редактора запросов**, выберите **Сервис**/**Параметры**/**Выполнение запроса**/**SQL Server**/**Общие**/**Разделитель пакетов**. Значение по умолчанию — False. Дополнительные сведения см. в разделе [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
+Разделяет отдельные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью пакетного разделителя. Чтобы изменить пакетный разделитель по умолчанию для **редактора запросов**, выберите **Сервис**/**Параметры**/**Выполнение запроса**/**SQL Server**/**Общие**/**Разделитель пакетов**. Значение по умолчанию — False. Дополнительные сведения см. в разделе [GO (Transact-SQL)](../../t-sql/language-elements/sql-server-utilities-statements-go.md).  
   
 **Включить описательные заголовки**  
-Добавляет к скрипту описательные комментарии, разделяя его на разделы для каждого объекта. Значение по умолчанию — True. Дополнительные сведения см. в разделе [/ *...* / (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
+Добавляет к скрипту описательные комментарии, разделяя его на разделы для каждого объекта. Значение по умолчанию — True. Дополнительные сведения см. в разделе [/ *...* / (Comment) (Transact-SQL)](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   
 **Включить сжатие vardecimal**  
-Включает параметры хранения vardecimal. Значение по умолчанию — False. Дополнительные сведения см. в разделе [sp_db_vardecimal_storage_format (Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542).  
+Включает параметры хранения vardecimal. Значение по умолчанию — False. Дополнительные сведения см. в разделе [sp_db_vardecimal_storage_format (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
   
 **Создать скрипт для отслеживания изменений**  
 Включает в скрипт сведения об отслеживании изменений.  
   
 **Внести в скрипт полнотекстовые каталоги**  
-Включает скрипт для полнотекстовых каталогов. Значение по умолчанию — False. Дополнительные сведения см. в разделе [CREATE FULLTEXT CATALOG (Transact-SQL)](https://msdn.microsoft.com/d7a8bd93-e2d7-4a40-82ef-39069e65523b).  
+Включает скрипт для полнотекстовых каталогов. Значение по умолчанию — False. Дополнительные сведения см. в разделе [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md).  
   
 **Внести в скрипт инструкцию USE <database>**  
-Добавляет в скрипт инструкцию USE DATABASE для создания объектов базы данных в контексте текущей базы данных в **обозревателе объектов** . Если предполагается выполнение скрипта в другой базе данных, присвойте этому параметру значение False, чтобы не включать инструкцию USE DATABASE. Значение по умолчанию — True. Дополнительные сведения см. в разделе [USE (Transact-SQL)](https://msdn.microsoft.com/c05acac8-c063-4770-8e36-d7f71d500b10).  
+Добавляет в скрипт инструкцию USE DATABASE для создания объектов базы данных в контексте текущей базы данных в **обозревателе объектов** . Если предполагается выполнение скрипта в другой базе данных, присвойте этому параметру значение False, чтобы не включать инструкцию USE DATABASE. Значение по умолчанию — True. Дополнительные сведения см. в разделе [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md).  
   
 ### <a name="object-scripting-options"></a>Параметры скрипта объекта  
 
-**Проверьте наличие объекта**. Убедитесь в том, что объект с заданным именем существует, перед его изменением или удалением. Перед созданием объекта убедитесь в том, что объект с заданным именем отсутствует. Дополнительные сведения см. в разделах [IF...ELSE (Transact-SQL)](https://msdn.microsoft.com/676c881f-dee1-417a-bc51-55da62398e81) и [EXISTS (Transact-SQL)](https://msdn.microsoft.com/b6510a65-ac38-4296-a3d5-640db0c27631).
+**Проверьте наличие объекта**. Убедитесь в том, что объект с заданным именем существует, перед его изменением или удалением. Перед созданием объекта убедитесь в том, что объект с заданным именем отсутствует. Дополнительные сведения см. в разделах [IF...ELSE (Transact-SQL)](../../t-sql/language-elements/if-else-transact-sql.md) и [EXISTS (Transact-SQL)](../../t-sql/language-elements/exists-transact-sql.md).
 
 **Сформировать скрипт для зависимых объектов**  
 Формирует скрипт для дополнительных объектов, необходимых при выполнении скрипта для выбранного объекта. Значение по умолчанию — False.  
@@ -74,7 +74,7 @@ ms.locfileid: "88491870"
 **Создать скрипт с параметрами сжатия данных**. Включает в скрипт параметры сжатия данных. Значение по умолчанию — False.
 
 **Внести в скрипт расширенные свойства**  
-Включает в скрипт расширенные свойства, если они имеются у объекта. Значение по умолчанию — False. Дополнительные сведения см. в разделе [sp_addextendedproperty (Transact-SQL)](https://msdn.microsoft.com/565483ea-875b-4133-b327-d0006d2d7b4c).  
+Включает в скрипт расширенные свойства, если они имеются у объекта. Значение по умолчанию — False. Дополнительные сведения см. в разделе [sp_addextendedproperty (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md).  
   
 **Владелец скрипта**  
 Включает владельца в созданный скрипт. Значение по умолчанию — False.  
@@ -86,73 +86,72 @@ ms.locfileid: "88491870"
 Следующие параметры применяются только к скриптам таблиц и представлений.  
   
 **Преобразовать определяемые пользователем типы данных в базовые типы**  
-Преобразует определяемые пользователем типы данных в базовые типы, из которых они были созданы. Используйте значение True, если в базе данных, в которой будет выполняться скрипт, отсутствуют определяемые пользователем типы данных базы данных-источника. Используйте значение False для сохранения определяемых пользователем типов данных. Значение по умолчанию — False. Дополнительные сведения см. в разделе [CREATE TYPE (Transact-SQL)](https://msdn.microsoft.com/2202236b-e09f-40a1-bbc7-b8cff7488905).  
+Преобразует определяемые пользователем типы данных в базовые типы, из которых они были созданы. Используйте значение True, если в базе данных, в которой будет выполняться скрипт, отсутствуют определяемые пользователем типы данных базы данных-источника. Используйте значение False для сохранения определяемых пользователем типов данных. Значение по умолчанию — False. Дополнительные сведения см. в разделе [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
   
 **Создать команды SET ANSI PADDING**  
-Добавляет инструкцию SET ANSI_PADDING до и после каждой инструкции CREATE TABLE. Значение по умолчанию — True. Дополнительные сведения см. в разделе [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0).  
+Добавляет инструкцию SET ANSI_PADDING до и после каждой инструкции CREATE TABLE. Значение по умолчанию — True. Дополнительные сведения см. в разделе [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 **Включить сортировку**  
 Включить параметры сортировки в определение столбца. Значение по умолчанию — True. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 **Включить свойство IDENTITY**  
-Включает определения для начального значения свойства IDENTITY и шага приращения значения свойства IDENTITY. Значение по умолчанию — True. Дополнительные сведения см. в разделе [IDENTITY (Property) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c).  
+Включает определения для начального значения свойства IDENTITY и шага приращения значения свойства IDENTITY. Значение по умолчанию — True. Дополнительные сведения см. в разделе [IDENTITY (Property) (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 **Ссылки на внешние ключи квалификаторов схемы**  
 Добавляет имя схемы к ссылкам на таблицы для ограничений FOREIGN KEY. Значение по умолчанию — True.  
   
 **Внести в скрипт связанные значения по умолчанию и правила**  
-Включает вызовы хранимых процедур привязки **sp_bindefault** и **sp_bindrule** . Значение по умолчанию — True. Дополнительные сведения см. в разделах [sp_bindefault (Transact-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) и [sp_bindrule (Transact-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67).  
+Включает вызовы хранимых процедур привязки **sp_bindefault** и **sp_bindrule** . Значение по умолчанию — True. Дополнительные сведения см. в разделах [sp_bindefault (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) и [sp_bindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md).  
   
 **Внести в скрипт ограничения CHECK**  
 Добавляет в скрипт [ограничения CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . Значение по умолчанию — True.  
   
 **Внести в скрипт значения по умолчанию**  
-Включает в скрипт значения по умолчанию для столбца. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE DEFAULT (Transact-SQL)](https://msdn.microsoft.com/08475db4-7d90-486a-814c-01a99d783d41).  
+Включает в скрипт значения по умолчанию для столбца. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md).  
   
 **Внести в скрипт файловые группы**  
-Указывает файловую группу в предложении ON для определений таблиц. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE TABLE (Transact-SQL)](https://msdn.microsoft.com/1e068443-b9ea-486a-804f-ce7b6e048e8b).  
+Указывает файловую группу в предложении ON для определений таблиц. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).  
   
 **Внести в скрипт внешние ключи**  
 Включает в скрипт [ограничения FOREIGN KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md) . Значение по умолчанию — False.  
   
 **Внести в скрипт полнотекстовые индексы**  
-Включает в скрипт полнотекстовые индексы. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd).  
+Включает в скрипт полнотекстовые индексы. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 **Внести в скрипт индексы**  
-Включает в скрипт кластеризованные, некластеризованные индексы и XML-индексы. Значение по умолчанию — True. Дополнительные сведения см. в статье [CREATE INDEX (Transact-SQL)](https://msdn.microsoft.com/d2297805-412b-47b5-aeeb-53388349a5b9).  
+Включает в скрипт кластеризованные, некластеризованные индексы и XML-индексы. Значение по умолчанию — True. Дополнительные сведения см. в статье [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
   
 **Внести в скрипт схемы секционирования**  
-Включить в скрипт схемы секционирования таблиц. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE PARTITION SCHEME (Transact-SQL)](https://msdn.microsoft.com/5b21c53a-b4f4-4988-89a2-801f512126e4).  
+Включить в скрипт схемы секционирования таблиц. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
   
 **Внести в скрипт первичные ключи**  
 Включает в скрипт [ограничения первичных и внешних ключей](../../relational-databases/tables/primary-and-foreign-key-constraints.md) . Значение по умолчанию — True.  
   
 **Внести в скрипт команды сбора статистики**  
-Включает в скрипт определяемые пользователем команды сбора статистики. Значение по умолчанию — False. Дополнительные сведения см. в разделе [CREATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/b23e2f6b-076c-4e6d-9281-764bdb616ad2).  
+Включает в скрипт определяемые пользователем команды сбора статистики. Значение по умолчанию — False. Дополнительные сведения см. в разделе [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
   
 **Внести в скрипт триггеры**  
-Включает в скрипт триггеры. Значение по умолчанию — False. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](https://msdn.microsoft.com/edeced03-decd-44c3-8c74-2c02f801d3e7).  
+Включает в скрипт триггеры. Значение по умолчанию — False. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 **Внести в скрипт уникальные ключи**  
 Включает в скрипт [ограничения уникальности и ограничения проверки](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . Значение по умолчанию — False.  
   
 **Внести в скрипт столбцы просмотра**  
-Объявляет столбцы представления в заголовках представлений. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE VIEW (Transact-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9).  
+Объявляет столбцы представления в заголовках представлений. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
   
 **Включить системные имена DRI**  
-Включает созданные системой имена ограничений для обеспечения декларативной ссылочной целостности. Значение по умолчанию — False. Дополнительные сведения см. в статье [REFERENTIAL_CONSTRAINTS (Transact-SQL)](https://msdn.microsoft.com/5d358f18-0a85-4b55-af4b-98d5f4cd1020).  
+Включает созданные системой имена ограничений для обеспечения декларативной ссылочной целостности. Значение по умолчанию — False. Дополнительные сведения см. в статье [REFERENTIAL_CONSTRAINTS (Transact-SQL)](../../relational-databases/system-information-schema-views/referential-constraints-transact-sql.md).  
   
 ### <a name="version-options"></a>Параметры версии
 
 **Использовать параметры сценариев согласно источнику**. Если этот параметр включен, целевая версия, выпуск ядра и тип ядра для создаваемых скриптов аналогичны тем, что используются на сервере, где находится объект скрипта. При этом другие параметры версий отключаются (и игнорируются). 
 
-**Скрипт для выпуска ядра СУБД**. Создаваемые скрипты будут предназначены для указанного [выпуска ядра](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.edition.aspx).
+**Скрипт для выпуска ядра СУБД**. Создаваемые скрипты будут предназначены для указанного [выпуска ядра](/dotnet/api/microsoft.sqlserver.management.smo.edition).
 
-**Скрипт для типа ядра СУБД**. Создаваемые скрипты будут предназначены для указанного [типа ядра СУБД](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.databaseenginetype.aspx).
+**Скрипт для типа ядра СУБД**. Создаваемые скрипты будут предназначены для указанного [типа ядра СУБД](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120)).
 
 **Скрипт для версии сервера**  
 Создаваемые скрипты будут предназначены для указанной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Новые функции [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] нельзя внести в скрипты для более ранних версий. Некоторые скрипты, созданные для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , нельзя выполнять на серверах, где выполняется более ранняя версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или в базе данных с более ранним значением [уровня совместимости баз данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ## <a name="see-also"></a>См. также раздел  
-[Формирование скриптов (среда SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
-  
+[Формирование скриптов (среда SQL Server Management Studio)](../scripting/generate-scripts-sql-server-management-studio.md)  

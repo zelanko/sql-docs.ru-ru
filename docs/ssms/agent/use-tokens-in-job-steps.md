@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 933848c0d0056a67a561a6468db8f10c2bd8c478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f222f011015f4cf23cf4640b7c4bc2136d338583
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88317640"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037267"
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент позволяет применять токены в скриптах шагов заданий на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] . Применение токенов при написании шагов заданий обеспечивают такую же гибкость, какую дают переменные при написании программ. После добавления токена в скрипт шага задания агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] замещает токен во время выполнения, до того как шаг задания выполняется подсистемой [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
@@ -144,4 +144,3 @@ WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID)));
 ## <a name="see-also"></a>См. также:  
 [Реализация заданий](../../ssms/agent/implement-jobs.md)  
 [Управление шагами задания](../../ssms/agent/manage-job-steps.md)  
-  

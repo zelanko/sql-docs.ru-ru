@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3485795f239017df321e862a04c0411a3a9318c0
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: ea7e44a8069fc1b66c49f4bb20fbfc8ba3e1c3f7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480410"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036159"
 ---
 # <a name="transact-sql-debugger"></a>Отладчик Transact-SQL
 
@@ -47,7 +47,7 @@ ms.locfileid: "89480410"
 
     Если требуется отладить хранимую процедуру или функцию, можно выполнить шаг с заходом в модуль. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] откроет новое окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] с исходным кодом этого модуля, переведет это окно в режим отладки, а затем приостановит выполнение на первой инструкции модуля. Затем по коду модуля можно будет переходить, например, установив точки останова или выполняя код пошагово.  
 
-Дополнительные сведения о том, как отладчик позволяет переходить по коду, см. в разделе [Пошаговая отладка кода Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+Дополнительные сведения о том, как отладчик позволяет переходить по коду, см. в разделе [Пошаговая отладка кода Transact-SQL](./step-through-transact-sql-code.md).  
 
 ## <a name="viewing-debugger-information"></a>Просмотр сведений отладчика
 
@@ -69,11 +69,11 @@ ms.locfileid: "89480410"
 
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает настройку удаленной отладки в отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Настройка правил брандмауэра перед запуском отладчика TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|Описывает запуск, остановку операций отладчика и управление ими.|[Запуск отладчика Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|Описание использования отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] для пошагового выполнения кода.|[Пошаговая отладка кода Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
-|Описание использования отладчика для просмотра таких данных [!INCLUDE[tsql](../../includes/tsql-md.md)] , как параметры и переменные, а также системные сведения.|[Сведения отладчика Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
+|Описывает настройку удаленной отладки в отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Настройка правил брандмауэра перед запуском отладчика TSQL](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Описывает запуск, остановку операций отладчика и управление ими.|[Запуск отладчика Transact-SQL](./run-the-transact-sql-debugger.md)|  
+|Описание использования отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] для пошагового выполнения кода.|[Пошаговая отладка кода Transact-SQL](./step-through-transact-sql-code.md)|  
+|Описание использования отладчика для просмотра таких данных [!INCLUDE[tsql](../../includes/tsql-md.md)] , как параметры и переменные, а также системные сведения.|[Сведения отладчика Transact-SQL](./transact-sql-debugger-information.md)|  
 
 ## <a name="see-also"></a>См. также раздел
 
-[Редакторы запросов и текста (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

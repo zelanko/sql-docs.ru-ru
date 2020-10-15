@@ -15,12 +15,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 390ffb66c98f2328b8bfb1807a1c6dc7f4a78def
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 6e28ed3ad28a47fba60a703882684a1625523675
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901951"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036417"
 ---
 # <a name="search-an-active-document-incrementally"></a>Выполнение добавочного поиска в активном документе
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,10 +50,9 @@ ms.locfileid: "88901951"
 >  Полный список сочетаний клавиш см. в статье [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Поиск и замена](../../relational-databases/scripting/search-and-replace.md)   
- [осуществлять поиск в документах в интерактивном режиме](../../relational-databases/scripting/search-documents-interactively.md)   
- [Поиск документов с помощью списков результатов](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Поиск текста с символами-шаблонами](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Поиск текста с помощью регулярных выражений](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Поиск и замена](./search-and-replace.md)   
+ [осуществлять поиск в документах в интерактивном режиме](./search-documents-interactively.md)   
+ [Поиск документов с помощью списков результатов](./search-documents-using-results-lists.md)   
+ [Поиск текста с символами-шаблонами](./search-text-with-wildcards.md)   
+ [Поиск текста с помощью регулярных выражений](./search-text-with-regular-expressions.md)  
   

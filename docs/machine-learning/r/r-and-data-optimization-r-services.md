@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95600d85c02d120f1bb4df2e7a73411a9965550a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: eaabfce536283644a0ccedcc315d91e11f33eade
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180001"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956585"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Производительность служб R Services — оптимизация данных
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -131,19 +131,19 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 Множество алгоритмов RevoScaleR поддерживают параметры управления созданием обученной модели. Хотя точность и правильность модели важна, производительность алгоритма также важна. Чтобы должным образом сбалансировать точность и время обучения, можно изменить параметры для повышения скорости вычислений. Во многих случаях это позволяет повысить производительность, не снижая точность и правильность.
 
-+ [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
++ [rxDTree](/r-server/r-reference/revoscaler/rxdtree)
 
     `rxDTree` поддерживает параметр `maxDepth`, управляющий глубиной дерева принятия решений. По мере увеличения значения `maxDepth` возможно снижение производительности, поэтому важно проанализировать преимущества увеличения глубины в зависимости от негативного влияния на производительность.
 
     Можно сбалансировать временную сложность и точность прогнозирования, настроив такие параметры, как `maxNumBins`, `maxDepth`, `maxComplete` и `maxSurrogate`. Если увеличить глубину до 10 или 15, стоимость вычислений сильно увеличится.
 
-+ [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
++ [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
 
     Попробуйте использовать аргумент `cube`, если первая зависимая переменная в формуле является факторной.
     
     Если для параметра `cube` задано значение `TRUE`, регрессия выполняется с применением обратного секционирования. При этом операция может выполняться быстрее, а также потреблять меньше памяти, чем при стандартной регрессии. Если в формуле используется много переменных, производительность может существенно повыситься.
 
-+ [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
++ [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
 
     Используйте аргумент `cube`, если первая зависимая переменная является факторной.
     
@@ -153,31 +153,31 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + Статья о поддержке: [Варианты настройки производительности для rxDForest и rxDTree](https://support.microsoft.com/kb/3104235)
 
-+ Методы управления подгонкой модели в модели с усиленным деревом: [Оценка моделей с помощью стохастического градиентного усиления](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ Методы управления подгонкой модели в модели с усиленным деревом: [Оценка моделей с помощью стохастического градиентного усиления](/r-server/r/how-to-revoscaler-boosting)
 
-+ Общие сведения о том, как RevoScaleR перемещает и обрабатывает данные: [Написание пользовательских алгоритмов фрагментации в ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Общие сведения о том, как RevoScaleR перемещает и обрабатывает данные: [Написание пользовательских алгоритмов фрагментации в ScaleR](/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ Модель программирования для RevoScaleR: [Управление потоками в RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ Модель программирования для RevoScaleR: [Управление потоками в RevoScaleR](/r-server/r/how-to-developer-manage-threads)
 
-+ Справочник по функциям для [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
++ Справочник по функциям для [rxDForest](/r-server/r-reference/revoscaler/rxdforest)
 
-+ Справочник по функциям для [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
++ Справочник по функциям для [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees)
 
 ### <a name="use-microsoftml"></a>Использование MicrosoftML
 
 Также рекомендуется изучить новый пакет **MicrosoftML**, который предоставляет масштабируемые алгоритмы машинного обучения, которые могут использовать контексты вычислений и преобразования, предоставляемые RevoScaleR.
 
-+ [Начало работы с MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [Начало работы с MicrosoftML](/r-server/r/concept-what-is-the-microsoftml-package)
 
-+ [Выбор алгоритма MicrosoftML](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
++ [Выбор алгоритма MicrosoftML](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
 
 ### <a name="operationalize-a-solution-using-microsoft-r-server"></a>Ввод решения в эксплуатацию с помощью Microsoft R Server
 
-Если в сценарии используется быстрое прогнозирование с помощью хранимой модели или интеграция машинного обучения в приложение, можно использовать возможности [ввода в эксплуатацию ](https://docs.microsoft.com/r-server/what-is-operationalization) в Microsoft R Server (ранее назывался DeployR).
+Если в сценарии используется быстрое прогнозирование с помощью хранимой модели или интеграция машинного обучения в приложение, можно использовать возможности [ввода в эксплуатацию ](/r-server/what-is-operationalization) в Microsoft R Server (ранее назывался DeployR).
 
-+ **Специалисты по обработке и анализу данных** могут использовать пакет [mrsdeploy package](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) для совместного использования кода R на других компьютерах и интеграции аналитических средств R в веб-приложениях, классических и мобильных приложениях, а также приложениях панели мониторинга: [Публикация веб-служб R и управление ими в R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ **Специалисты по обработке и анализу данных** могут использовать пакет [mrsdeploy package](/r-server/r-reference/mrsdeploy/mrsdeploy-package) для совместного использования кода R на других компьютерах и интеграции аналитических средств R в веб-приложениях, классических и мобильных приложениях, а также приложениях панели мониторинга: [Публикация веб-служб R и управление ими в R Server](/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ **Администраторы** могут научиться управлять пакетами и безопасностью заданий R, а также наблюдать за вычислительными и веб-узлами. [Использование веб-служб и взаимодействие с ними в R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ **Администраторы** могут научиться управлять пакетами и безопасностью заданий R, а также наблюдать за вычислительными и веб-узлами. [Использование веб-служб и взаимодействие с ними в R](/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>Статьи в этой серии
 

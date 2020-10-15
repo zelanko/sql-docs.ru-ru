@@ -23,19 +23,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0bab74ab5bbd51099ef8d38b7ad8471e1d7fee55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bcfa24368b913258b1e5538bae6c21da7330450
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88318460"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037823"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Выбор учетной записи для службы агента SQL Server
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Стартовая учетная запись службы определяет учетную запись [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, с которой запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также его сетевые разрешения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как заданная учетная запись пользователя. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет выбрать учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из следующих вариантов:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "88318460"
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Ограничение 1. Использование неадминистративных учетных записей для администрирования нескольких серверов  
 Прикрепление целевого сервера к главному серверу может завершиться ошибкой, после чего появляется следующее сообщение: "Не удалось выполнить операцию прикрепления".  
   
-Чтобы устранить эту ошибку, перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6).  
+Чтобы устранить эту ошибку, перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Ограничение 2. Использование учетной записи Local System для администрирования нескольких серверов  
 Администрирование нескольких серверов поддерживается при выполнении службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под учетной записью Local System только в том случае, если целевой и главный серверы расположены на одном и том же компьютере. При использовании этой конфигурации, при прикреплении целевого сервера к главному серверу, возвращается следующее сообщение:  
@@ -120,13 +120,12 @@ ms.locfileid: "88318460"
   
 **Указание профиля электронной почты агента SQL Server**  
   
--   [Руководство. Настройка почты агента SQL Server на использование компонента Database Mail](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Руководство. Настройка почты агента SQL Server на использование компонента Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
 > [!NOTE]  
 > Запуск агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время старта операционной системы задается с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
 [Настройка учетных записей служб Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
-[Управление службами с помощью SQL Computer Manager](https://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+[Управление службами с помощью SQL Computer Manager](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)  
 [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
-  

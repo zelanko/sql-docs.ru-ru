@@ -13,12 +13,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbf692581a7ad2cb6d1e2bb5ad600b65fc63d7c3
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 3d3ccbef48b79ef0706920ab2ff83a2daee68db9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901971"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036410"
 ---
 # <a name="replace-in-files"></a>Замена в файлах
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,10 +104,10 @@ ms.locfileid: "88901971"
  Указывает, как воспринимать специальные символы, введенные в текстовые поля **Найти** или **Заменить на** . Параметры включают **Шаблоны** и **Регулярные выражения**.  
   
  **Regular Expressions**  
- Шаблон для поиска соответствия определяется специальными обозначениями. Список см. в разделе [Поиск текста с помощью регулярных выражений](../../relational-databases/scripting/search-text-with-regular-expressions.md).  
+ Шаблон для поиска соответствия определяется специальными обозначениями. Список см. в разделе [Поиск текста с помощью регулярных выражений](./search-text-with-regular-expressions.md).  
   
  **Подстановочные знаки**  
- Такие специальные символы, как звездочки (`*`) и вопросительные знаки (`?`) представляют один или несколько символов. Список см. в разделе [Поиск текста с символами-шаблонами](../../relational-databases/scripting/search-text-with-wildcards.md).  
+ Такие специальные символы, как звездочки (`*`) и вопросительные знаки (`?`) представляют один или несколько символов. Список см. в разделе [Поиск текста с символами-шаблонами](./search-text-with-wildcards.md).  
   
  **Искать в файлах указанных типов**  
  В этом списке указываются типы файлов, которые будут просмотрены в папках, заданных параметром **Искать в**. Если это поле пусто, то будет произведен поиск во всех файлах в каталогах, указанных в списке **Искать в** .  
@@ -155,4 +155,4 @@ ms.locfileid: "88901971"
  Эта вкладка панели инструментов заменяет текущее диалоговое окно на диалоговое окно **Поиск в символах** .  
   
 ## <a name="see-also"></a>См. также:  
- [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

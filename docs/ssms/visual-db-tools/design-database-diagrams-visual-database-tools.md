@@ -19,12 +19,12 @@ ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 062c72f0a57807c42d03ec3b40c5ef04a24c2586
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b813ed75abfe3577ad7dc90accc7837d36024bd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417790"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038932"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Конструирование диаграмм баз данных (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88417790"
   
 Если таблица была изменена, но еще не сохранена, то после имени таблицы появляется звездочка (*), показывающая наличие несохраненных изменений. Дополнительные сведения о сохранении измененных таблиц и диаграмм см. в разделе [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**Область выделения строки** . Чтобы выбрать столбец базы данных в таблице, щелкните область выделения строки. Если столбец является первичным ключом таблицы, то в этом списке отображается символ ключа. Дополнительные сведения о первичных ключах см. в статье [Работа с ключами](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
+**Область выделения строки** . Чтобы выбрать столбец базы данных в таблице, щелкните область выделения строки. Если столбец является первичным ключом таблицы, то в этом списке отображается символ ключа. Дополнительные сведения о первичных ключах см. в статье [Работа с ключами](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
 **Столбцы свойств** . Набор столбцов свойств виден не во всех представлениях таблицы. Таблицу можно просмотреть в любом из пяти различных представлений, позволяющих подобрать подходящий размер и размещение элементов диаграммы.  
   
@@ -73,4 +73,3 @@ ms.locfileid: "88417790"
 [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
 [Работа с макетом диаграммы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
-  

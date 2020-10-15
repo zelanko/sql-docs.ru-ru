@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 50562836f848834744ceb24365461bc43e8fe949
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ef365002594de1c5d038f19f06b47911c5dfb722
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901158"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987827"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Кластеры SQL Server с несколькими подсетями [SQL Server]
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -80,11 +80,10 @@ ms.locfileid: "85901158"
 |Описание содержимого|Раздел|  
 |-------------------------|-----------|  
 |Установка отказоустойчивого кластера SQL Server|[Создание нового отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Обновление существующего отказоустойчивого кластера SQL Server на месте|[Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
+|Обновление существующего отказоустойчивого кластера SQL Server на месте|[Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)](./upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Обслуживание существующего отказоустойчивого кластера SQL Server|[Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |Используйте оснастку управления отказоустойчивым кластером для просмотра событий и журналов WSFC|[Просмотр событий и журналов для отказоустойчивого кластера](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|Используйте Windows PowerShell для создания файла журнала для всех узлов (или конкретного узла) в отказоустойчивом кластере WSFC|[Командлет Get-ClusterLog отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)|  
+|Используйте Windows PowerShell для создания файла журнала для всех узлов (или конкретного узла) в отказоустойчивом кластере WSFC|[Командлет Get-ClusterLog отказоустойчивого кластера](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))|  
   
 
-  
   

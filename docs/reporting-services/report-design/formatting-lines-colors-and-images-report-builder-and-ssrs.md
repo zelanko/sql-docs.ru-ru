@@ -22,12 +22,12 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc3cacd9321b65dc652fa7323553b445949501fc
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: f807837cda829828b20be8e33a17530cb332aa28
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85048263"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935046"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Форматирование линий, цветов и изображений (построитель отчетов и службы SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] позволяют форматировать линии, цвета, области данных, изображения и другие элементы отчета.  
@@ -58,6 +58,5 @@ ms.locfileid: "85048263"
  [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Форматирование чисел и дат (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [Диалоговое окно "Заливка" (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
-  
+ [Диалоговое окно "Заливка" (построитель отчетов и службы SSRS)](/previous-versions/sql/)  
   

@@ -10,32 +10,32 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 4e467fb50ae2b2c76deea885990b160745c691eb
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 1019497f8f6b2c87843cf443a83f1a8683da1800
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042530"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956705"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Установка новых пакетов R с помощью sqlmlutils
 
 [!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-В этой статье описывается использование функций из пакета [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов R в экземпляре [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) и в [кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Устанавливаемые пакеты можно использовать в сценариях R, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+В этой статье описывается использование функций из пакета [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов R в экземпляре [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) и в [кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Устанавливаемые пакеты можно использовать в сценариях R, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 > [!NOTE]
-> Описанный в этой статье пакет **sqlmlutils** используется для добавления пакетов R в SQL Server 2019 и более поздних версий. Для SQL Server 2017 и более ранних версий обратитесь к разделу [Установка пакетов с инструментами R](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017).
+> Описанный в этой статье пакет **sqlmlutils** используется для добавления пакетов R в SQL Server 2019 и более поздних версий. Для SQL Server 2017 и более ранних версий обратитесь к разделу [Установка пакетов с инструментами R](./install-r-packages-standard-tools.md?view=sql-server-2017).
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-В этой статье описывается использование функций из пакета [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов R в экземпляре [Служб машинного обучения в Управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Устанавливаемые пакеты можно использовать в сценариях R, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+В этой статье описывается использование функций из пакета [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов R в экземпляре [Служб машинного обучения в Управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Устанавливаемые пакеты можно использовать в сценариях R, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 ::: moniker-end
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 - Установите [R](https://www.r-project.org) и [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) на клиентском компьютере, который используется для подключения к SQL Server. Для выполнения сценариев можно использовать любую интегрированную среду разработки R, но в этой статье применяется RStudio.
 
-- Установите [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) на клиентском компьютере, который используется для подключения к SQL Server. Вы можете использовать другие средства запросов и управления базами данных, но в этой статье рассматривается Azure Data Studio.
+- Установите [Azure Data Studio](../../azure-data-studio/what-is.md) на клиентском компьютере, который используется для подключения к SQL Server. Вы можете использовать другие средства запросов и управления базами данных, но в этой статье рассматривается Azure Data Studio.
 
 ### <a name="other-considerations"></a>Другие замечания
 

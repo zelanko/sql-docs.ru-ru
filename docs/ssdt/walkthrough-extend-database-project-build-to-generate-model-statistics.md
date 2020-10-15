@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59c98e39bccbb6d4f74ddb5e9494e7fc4bced3eb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894019"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985080"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели
 
@@ -56,12 +56,12 @@ ms.locfileid: "85894019"
   
 |**Class**|**Метод или свойство**|**Описание**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Запрашивает в модели объекты и является главной точкой входа для API модели. Можно запрашивать только типы верхнего уровня, например Table или View. Такие типы, как Columns, можно находить только по мере прохождения модели. Если не указаны фильтры ModelTypeClass, то будут возвращены все типы верхнего уровня.|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Находит связи с элементом, на который ссылается текущий TSqlObject. Например, для таблицы будут возвращены объекты, представляющие столбцы Table. В данном случае можно использовать фильтр ModelRelationshipClass, чтобы указать, какие связи следует запрашивать (например, применение фильтра Table.Columns гарантирует получение только столбцов).<br /><br />Имеется целый ряд аналогичных методов, таких как GetReferencingRelationshipInstances, GetChildren и GetParent. Дополнительные сведения см. в документации к API.|  
+|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)|GetObjects()|Запрашивает в модели объекты и является главной точкой входа для API модели. Можно запрашивать только типы верхнего уровня, например Table или View. Такие типы, как Columns, можно находить только по мере прохождения модели. Если не указаны фильтры ModelTypeClass, то будут возвращены все типы верхнего уровня.|  
+|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|GetReferencedRelationshipInstances()|Находит связи с элементом, на который ссылается текущий TSqlObject. Например, для таблицы будут возвращены объекты, представляющие столбцы Table. В данном случае можно использовать фильтр ModelRelationshipClass, чтобы указать, какие связи следует запрашивать (например, применение фильтра Table.Columns гарантирует получение только столбцов).<br /><br />Имеется целый ряд аналогичных методов, таких как GetReferencingRelationshipInstances, GetChildren и GetParent. Дополнительные сведения см. в документации к API.|  
   
 **Уникальное определение участника**  
   
-В ходе процесса сборки пользовательские участники загружаются из каталога стандартных расширений. Участники сборки обозначаются атрибутом [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) . Этот атрибут требуется для обнаружения участников. Атрибут должен выглядеть примерно так:  
+В ходе процесса сборки пользовательские участники загружаются из каталога стандартных расширений. Участники сборки обозначаются атрибутом [ExportBuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute) . Этот атрибут требуется для обнаружения участников. Атрибут должен выглядеть примерно так:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -75,7 +75,7 @@ ms.locfileid: "85894019"
   
 -   Создать проект библиотеки классов и добавить необходимые ссылки.  
   
--   Определите класс с именем ModelStatistics, который наследует от [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
+-   Определите класс с именем ModelStatistics, который наследует от [BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor).  
   
 -   Переопределить метод OnExecute.  
   
@@ -594,4 +594,3 @@ Relationships
 ## <a name="see-also"></a>См. также:  
 [Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

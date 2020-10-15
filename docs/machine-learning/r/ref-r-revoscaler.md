@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ab427983bdd327775ab817d6b56f496afe733127
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0095984a9358f742147e84e69847ab32781cab07
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179979"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956892"
 ---
 # <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR (пакет R в Службах машинного обучения SQL Server)
 
@@ -25,11 +25,11 @@ ms.locfileid: "88179979"
 
 Функции RevoScaleR указываются с префиксом rx** или **Rx**, чтобы их было легко найти.
 
-RevoScaleR выступает в качестве платформы для распределенной обработки и анализа данных. Например, можно использовать преобразования и контексты вычислений RevoScaleR с передовыми алгоритмами в [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package). Можно также использовать [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) для параллельного выполнения базовых функций R.
+RevoScaleR выступает в качестве платформы для распределенной обработки и анализа данных. Например, можно использовать преобразования и контексты вычислений RevoScaleR с передовыми алгоритмами в [MicrosoftML](/machine-learning-server/r/concept-what-is-the-microsoftml-package). Можно также использовать [rxExec](/machine-learning-server/r-reference/revoscaler/rxexec) для параллельного выполнения базовых функций R.
 
 ## <a name="full-reference-documentation"></a>Полная справочная документация
 
-Пакет **RevoScaleR** распространяется в нескольких продуктах Майкрософт, но его использование не зависит от того, получили ли вы его в SQL Server или в другом продукте. Благодаря сходству функций [документация по отдельным функциям RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) опубликована только в одном разделе в [справочнике по R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
+Пакет **RevoScaleR** распространяется в нескольких продуктах Майкрософт, но его использование не зависит от того, получили ли вы его в SQL Server или в другом продукте. Благодаря сходству функций [документация по отдельным функциям RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) опубликована только в одном разделе в [справочнике по R](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
 
 ## <a name="versions-and-platforms"></a>Версии и платформы
 
@@ -37,7 +37,7 @@ RevoScaleR выступает в качестве платформы для ра
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [Службы машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server 9.2.0 или более поздней версии](https://docs.microsoft.com/machine-learning-server/)
++ [Microsoft Machine Learning Server 9.2.0 или более поздней версии](/machine-learning-server/)
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
 > [!NOTE]
@@ -45,7 +45,7 @@ RevoScaleR выступает в качестве платформы для ра
 
 ## <a name="functions-by-category"></a>Функции по категориям
 
-Чтобы можно было понять, как использовать каждую функцию, в этом разделе приводится описание функций по категориям. Для поиска функций в алфавитном порядке можно воспользоваться [оглавлением](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference).
+Чтобы можно было понять, как использовать каждую функцию, в этом разделе приводится описание функций по категориям. Для поиска функций в алфавитном порядке можно воспользоваться [оглавлением](/machine-learning-server/r-reference/introducing-r-server-r-package-reference).
 
 ## <a name="1-data-source-and-compute"></a>1\. Источники данных и вычисления
 
@@ -55,14 +55,14 @@ RevoScaleR выступает в качестве платформы для ра
 
 | Функция| Описание|
 | ------- | ---------- |
-| [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  Создание объекта контекста вычисления SQL Server для отправки вычислений в удаленный экземпляр. Несколько функций **RevoScaleR** принимают контекст вычисления в качестве аргумента. |
-|[rxGetComputeContext/rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Получение или задание активного контекста вычислений. |
-| [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | Создание объекта данных на основе запроса или таблицы SQL Server. |
-| [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | Создание источника данных на основе соединения ODBC. |
-| [RxXdfData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxxdfdata) | Создание источника данных на основе локального XDF-файла. XDF-файлы часто используются для разгрузки данных в памяти на диск. XDF-файл может быть полезен при работе с объемом данных, превышающим объем передаваемых данных из базы данных в одном пакете, или же превышающим допустимый объем данных в памяти. Например, если вам приходится часто перемещать большие объемы данных из базы данных на локальную рабочую станцию, то вместо того, чтобы выполнять запросы к базе данных для каждой операции R, вы можете использовать XDF-файл как кэш, чтобы сохранить данные локально, а затем работать с ними в рабочей области R.|
+| [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  Создание объекта контекста вычисления SQL Server для отправки вычислений в удаленный экземпляр. Несколько функций **RevoScaleR** принимают контекст вычисления в качестве аргумента. |
+|[rxGetComputeContext/rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Получение или задание активного контекста вычислений. |
+| [RxSqlServerData](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | Создание объекта данных на основе запроса или таблицы SQL Server. |
+| [RxOdbcData](/machine-learning-server/r-reference/revoscaler/rxodbcdata) | Создание источника данных на основе соединения ODBC. |
+| [RxXdfData](/machine-learning-server/r-reference/revoscaler/rxxdfdata) | Создание источника данных на основе локального XDF-файла. XDF-файлы часто используются для разгрузки данных в памяти на диск. XDF-файл может быть полезен при работе с объемом данных, превышающим объем передаваемых данных из базы данных в одном пакете, или же превышающим допустимый объем данных в памяти. Например, если вам приходится часто перемещать большие объемы данных из базы данных на локальную рабочую станцию, то вместо того, чтобы выполнять запросы к базе данных для каждой операции R, вы можете использовать XDF-файл как кэш, чтобы сохранить данные локально, а затем работать с ними в рабочей области R.|
 
 > [!TIP]
-> Если вы не знакомы с концепциями источников данных или контекстов вычислений, рекомендуется начать с изучения [распределенных вычислений](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing) в документации по Microsoft Machine Learning Server.
+> Если вы не знакомы с концепциями источников данных или контекстов вычислений, рекомендуется начать с изучения [распределенных вычислений](/machine-learning-server/r/how-to-revoscaler-distributed-computing) в документации по Microsoft Machine Learning Server.
 
 ### <a name="perform-ddl-statements"></a>Выполнение инструкций DDL
 
@@ -70,8 +70,8 @@ RevoScaleR выступает в качестве платформы для ра
 
 | Функция| Описание|
 | ------- | ---------- |
-| [rxSqlServerTableExists и rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | Удаление таблицы [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] или проверка существования объекта или таблицы базы данных. |
-| [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | Выполнение команды языка описания данных DDL, которая определяет объекты базы данных или манипулирует ими. Эта функция не может возвращать данные и используется только для получения или изменения метаданных или схемы объекта.|
+| [rxSqlServerTableExists и rxSqlServerDropTable](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | Удаление таблицы [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] или проверка существования объекта или таблицы базы данных. |
+| [rxExecuteSQLDDL](/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | Выполнение команды языка описания данных DDL, которая определяет объекты базы данных или манипулирует ими. Эта функция не может возвращать данные и используется только для получения или изменения метаданных или схемы объекта.|
 
 ## <a name="2-data-manipulation-etl"></a>2\. Работа с данными (ETL)
 
@@ -79,9 +79,9 @@ RevoScaleR выступает в качестве платформы для ра
 
 | Функция | Описание |
 |----------|-------------|
-| [Методы rxOpen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | Проверка доступности источника данных, открытие или закрытие источника данных, чтение данных из источника, запись данных в целевой объект и закрытие источника данных.|
-| [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | Перемещение данных из источника данных в хранилище файлов или кадр данных.|
-| [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) | Преобразование данных при их перемещении между источниками данных.|
+| [Методы rxOpen](/machine-learning-server/r-reference/revoscaler/rxopen-methods) | Проверка доступности источника данных, открытие или закрытие источника данных, чтение данных из источника, запись данных в целевой объект и закрытие источника данных.|
+| [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) | Перемещение данных из источника данных в хранилище файлов или кадр данных.|
+| [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) | Преобразование данных при их перемещении между источниками данных.|
 
 <a name="graphing-functions"></a>
 
@@ -89,10 +89,10 @@ RevoScaleR выступает в качестве платформы для ра
 
 | Имя функции | Описание |
 |---------------|-------------|
-|[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |Создает гистограмму на основе данных. | 
-|[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |Создает линейный график на основе данных. | 
-|[rxLorenz](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlorenz)  |Вычисляет кривую Лоренца, которую можно построить. | 
-|[rxRocCurve](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxroc)  |Вычисляет и строит кривые ошибок на основе фактических и прогнозируемых данных. | 
+|[rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram)  |Создает гистограмму на основе данных. | 
+|[rxLinePlot](/machine-learning-server/r-reference/revoscaler/rxlineplot) |Создает линейный график на основе данных. | 
+|[rxLorenz](/machine-learning-server/r-reference/revoscaler/rxlorenz)  |Вычисляет кривую Лоренца, которую можно построить. | 
+|[rxRocCurve](/machine-learning-server/r-reference/revoscaler/rxroc)  |Вычисляет и строит кривые ошибок на основе фактических и прогнозируемых данных. | 
 
 <a name="statistics-functions"></a>
 
@@ -100,18 +100,18 @@ RevoScaleR выступает в качестве платформы для ра
 
 | Имя функции | Описание |
 |---------------|-------------|
-|[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile)<sup>*</sup> |Вычисляет приблизительные квантили для XDF-файлов и кадров данных без сортировки. | 
-|[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)<sup>*</sup> |Базовая сводная статистика по данным, включая вычисления по группе. Запись вычислений по группе в XDF-файл не поддерживается. | 
-|[rxCrossTabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs)<sup>*</sup> |Перекрестное табулирование данных на основе формул. | 
-|[rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube)<sup>*</sup> |Альтернативное перекрестное табулирование на основе формул, предназначенное для эффективного представления возвращаемых результатов куба. Запись выходных данных в XDF-файл не поддерживается. | 
-|[rxMarginals](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxmarginals)  |Маржинальные сводки по перекрестным табулированиям. | 
-|[as.xtabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/as.xtabs)  |Преобразует результаты перекрестного табулирования в объект xtabs. | 
-|[rxChiSquaredTest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Выполняет тест по критерию хи-квадрат для объекта xtabs. Используется с небольшими наборами данных и не фрагментирует данные. | 
-|[rxFisherTest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Выполняет точный тест Фишера для объекта xtabs. Используется с небольшими наборами данных и не фрагментирует данные. | 
-|[rxKendallCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Вычисляет коэффициент ранговой корреляции Кендалла с использованием объекта xtabs. | 
-|[rxPairwiseCrossTab](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpairwisecrosstab)  |Применяет функцию к парным сочетаниям строк и столбцов объекта xtabs. | 
-|[rxRiskRatio](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxriskratio)  |Вычисляет относительный риск в четырехклеточном объекте xtabs. | 
-|[rxOddsRatio](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxriskratio)  |Вычисляет отношение шансов в четырехклеточном объекте xtabs. | 
+|[rxQuantile](/machine-learning-server/r-reference/revoscaler/rxquantile)<sup>*</sup> |Вычисляет приблизительные квантили для XDF-файлов и кадров данных без сортировки. | 
+|[rxSummary](/machine-learning-server/r-reference/revoscaler/rxsummary)<sup>*</sup> |Базовая сводная статистика по данным, включая вычисления по группе. Запись вычислений по группе в XDF-файл не поддерживается. | 
+|[rxCrossTabs](/machine-learning-server/r-reference/revoscaler/rxcrosstabs)<sup>*</sup> |Перекрестное табулирование данных на основе формул. | 
+|[rxCube](/machine-learning-server/r-reference/revoscaler/rxcube)<sup>*</sup> |Альтернативное перекрестное табулирование на основе формул, предназначенное для эффективного представления возвращаемых результатов куба. Запись выходных данных в XDF-файл не поддерживается. | 
+|[rxMarginals](/machine-learning-server/r-reference/revoscaler/rxmarginals)  |Маржинальные сводки по перекрестным табулированиям. | 
+|[as.xtabs](/machine-learning-server/r-reference/revoscaler/as.xtabs)  |Преобразует результаты перекрестного табулирования в объект xtabs. | 
+|[rxChiSquaredTest](/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Выполняет тест по критерию хи-квадрат для объекта xtabs. Используется с небольшими наборами данных и не фрагментирует данные. | 
+|[rxFisherTest](/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Выполняет точный тест Фишера для объекта xtabs. Используется с небольшими наборами данных и не фрагментирует данные. | 
+|[rxKendallCor](/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Вычисляет коэффициент ранговой корреляции Кендалла с использованием объекта xtabs. | 
+|[rxPairwiseCrossTab](/machine-learning-server/r-reference/revoscaler/rxpairwisecrosstab)  |Применяет функцию к парным сочетаниям строк и столбцов объекта xtabs. | 
+|[rxRiskRatio](/machine-learning-server/r-reference/revoscaler/rxriskratio)  |Вычисляет относительный риск в четырехклеточном объекте xtabs. | 
+|[rxOddsRatio](/machine-learning-server/r-reference/revoscaler/rxriskratio)  |Вычисляет отношение шансов в четырехклеточном объекте xtabs. | 
 
 Символ <sup>*</sup> обозначает наиболее популярные функции в этой категории.
 
@@ -121,20 +121,20 @@ RevoScaleR выступает в качестве платформы для ра
 
 | Имя функции | Описание |
 |---------------|-------------|
-|[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)<sup>*</sup> |Подгоняет линейную модель к данным. | 
-|[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)<sup>*</sup> |Подгоняет модель логистической регрессии к данным. | 
-|[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm)<sup>*</sup> |Подгоняет обобщенную линейную модель к данным. | 
-|[rxCovCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor)<sup>*</sup> |Вычисляет матрицу ковариации, корреляции или суммы квадратов/векторного произведения для набора переменных. | 
-|[rxDTree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)<sup>*</sup> |Подгоняет дерево классификации или регрессии к данным. | 
-|[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)<sup>*</sup> |Подгоняет лес принятия решений с классификацией или регрессией к данным с помощью алгоритма стохастического градиентного усиления. | 
-|[rxDForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)<sup>*</sup> |Подгоняет лес принятия решений с классификацией или регрессией к данным. | 
-|[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxPredict)<sup>*</sup> |Вычисляет прогнозы для подогнанных моделей. Результатом должен быть источник данных XDF. | 
-|[rxKmeans](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxkmeans)<sup>*</sup> |Выполняет кластеризацию методом К-средних. | 
-|[rxNaiveBayes](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxnaivebayes)<sup>*</sup> |Выполняет классификацию с помощью упрощенного алгоритма Байеса. | 
-|[rxCov](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) |Вычисляет матрицу ковариации для набора переменных. | 
-|[rxCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor)  |Вычисляет матрицу корреляции для набора переменных. | 
-|[rxSSCP](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor)  |Вычисляет матрицу суммы квадратов или векторного произведения для набора переменных. | 
-|[rxRoc](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxroc)  |Вычисляет операционные характеристики приемника (ROC) с использованием фактических и прогнозируемых значений из системы бинарного классификатора. | 
+|[rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod)<sup>*</sup> |Подгоняет линейную модель к данным. | 
+|[rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit)<sup>*</sup> |Подгоняет модель логистической регрессии к данным. | 
+|[rxGlm](/machine-learning-server/r-reference/revoscaler/rxglm)<sup>*</sup> |Подгоняет обобщенную линейную модель к данным. | 
+|[rxCovCor](/machine-learning-server/r-reference/revoscaler/rxcovcor)<sup>*</sup> |Вычисляет матрицу ковариации, корреляции или суммы квадратов/векторного произведения для набора переменных. | 
+|[rxDTree](/machine-learning-server/r-reference/revoscaler/rxdtree)<sup>*</sup> |Подгоняет дерево классификации или регрессии к данным. | 
+|[rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees)<sup>*</sup> |Подгоняет лес принятия решений с классификацией или регрессией к данным с помощью алгоритма стохастического градиентного усиления. | 
+|[rxDForest](/machine-learning-server/r-reference/revoscaler/rxdforest)<sup>*</sup> |Подгоняет лес принятия решений с классификацией или регрессией к данным. | 
+|[rxPredict](/machine-learning-server/r-reference/revoscaler/rxPredict)<sup>*</sup> |Вычисляет прогнозы для подогнанных моделей. Результатом должен быть источник данных XDF. | 
+|[rxKmeans](/machine-learning-server/r-reference/revoscaler/rxkmeans)<sup>*</sup> |Выполняет кластеризацию методом К-средних. | 
+|[rxNaiveBayes](/machine-learning-server/r-reference/revoscaler/rxnaivebayes)<sup>*</sup> |Выполняет классификацию с помощью упрощенного алгоритма Байеса. | 
+|[rxCov](/machine-learning-server/r-reference/revoscaler/rxcovcor) |Вычисляет матрицу ковариации для набора переменных. | 
+|[rxCor](/machine-learning-server/r-reference/revoscaler/rxcovcor)  |Вычисляет матрицу корреляции для набора переменных. | 
+|[rxSSCP](/machine-learning-server/r-reference/revoscaler/rxcovcor)  |Вычисляет матрицу суммы квадратов или векторного произведения для набора переменных. | 
+|[rxRoc](/machine-learning-server/r-reference/revoscaler/rxroc)  |Вычисляет операционные характеристики приемника (ROC) с использованием фактических и прогнозируемых значений из системы бинарного классификатора. | 
 
 Символ <sup>*</sup> обозначает наиболее популярные функции в этой категории.
 
@@ -145,12 +145,12 @@ RevoScaleR выступает в качестве платформы для ра
 
 При локальном выполнении скрипт R обычно запускается из командной строки или из среды разработки R с указанием контекста вычисления SQL Server с помощью одной из функций **RevoScaleR**. Удаленный контекст вычисления можно использовать для всего кода или для отдельных функций. Например, может потребоваться разгрузить обучение модели на сервер, чтобы работать с актуальными данными и исключить перемещение данных.
 
-Когда вы будете готовы инкапсулировать скрипт R в хранимую процедуру [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), рекомендуется переписать код и оформить его в виде функции, которая содержит четко определенные входные и выходные данные. 
+Когда вы будете готовы инкапсулировать скрипт R в хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), рекомендуется переписать код и оформить его в виде функции, которая содержит четко определенные входные и выходные данные. 
 
 ## <a name="see-also"></a>См. также раздел
 
-+ [Учебники по R](../tutorials/sql-server-r-tutorials.md)
++ [Учебники по R](../tutorials/r-tutorials.md)
 + [Использование контекстов вычисления](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [R для разработчиков на SQL: обучение и эксплуатация модели](../tutorials/r-taxi-classification-introduction.md)
 + [Примеры продуктов Майкрософт на сайте GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
-+ [Справочник по R (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 
++ [Справочник по R (Microsoft Machine Learning Server)](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)

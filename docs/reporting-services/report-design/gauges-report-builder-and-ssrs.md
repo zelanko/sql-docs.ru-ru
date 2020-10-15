@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03c4fa2ddf36130fb9ff96899870207c6427efe1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f98991f50c259950ce9b3743d1aaff9a69bcf427
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939224"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934979"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Датчики (построитель отчетов и службы SSRS)
   В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в области данных датчика отображается отдельное значение из набора данных. Отдельный датчик всегда располагается внутри панели датчиков, где можно добавить дочерние или соседние датчики. Панель датчиков также можно применить для создания нескольких датчиков, использующих одинаковые функции, например фильтрацию, группирование или сортировку.  
@@ -283,7 +283,7 @@ ms.locfileid: "87939224"
   
 -   [Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Установка интервала привязки в датчике (построитель отчетов и SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)  
+-   [Установка интервала привязки в датчике (построитель отчетов и SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> в этом разделе  
  В следующих разделах представлены сведения о работе с датчиками.  
@@ -300,5 +300,4 @@ ms.locfileid: "87939224"
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
   

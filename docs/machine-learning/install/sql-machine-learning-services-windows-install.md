@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c3cf6afe4f99e7a728368f3454cc125998d806fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f00bbceefd5691bf4f78111aaa73f03f35bfb812
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178671"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956995"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Установка служб машинного обучения SQL Server (Python и R) в Windows
 
@@ -26,7 +26,7 @@ ms.locfileid: "88178671"
 
 + Необходим экземпляр ядра СУБД. Вы не можете установить только функции Python или R, хотя их можно добавить в существующий экземпляр постепенно.
 
-+ Для обеспечения непрерывности бизнес-процессов [группы доступности Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) поддерживаются для служб машинного обучения. Установите Службы машинного обучения и настройте пакеты на каждом узле.
++ Для обеспечения непрерывности бизнес-процессов [группы доступности Always On](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) поддерживаются для служб машинного обучения. Установите Службы машинного обучения и настройте пакеты на каждом узле.
 
 + Установка служб машинного обучения *не поддерживается* в [отказоустойчивом кластере (FCI) Always On](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) в SQL Server 2017. Она поддерживается в SQL Server 2019 и более поздних версий.
  
@@ -52,11 +52,11 @@ ms.locfileid: "88178671"
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Дополнительные сведения о том, какие выпуски SQL Server поддерживают интеграцию Python и R со Службами машинного обучения, см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017).
+Дополнительные сведения о том, какие выпуски SQL Server поддерживают интеграцию Python и R со Службами машинного обучения, см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-Дополнительные сведения о том, какие выпуски SQL Server поддерживают интеграцию Python и R со Службами машинного обучения, см. в статье [о выпусках и поддерживаемых функциях SQL Server 2019 (15.x)](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15).
+Дополнительные сведения о том, какие выпуски SQL Server поддерживают интеграцию Python и R со Службами машинного обучения, см. в статье [о выпусках и поддерживаемых функциях SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 ::: moniker-end
 
 ## <a name="run-setup"></a>Запуск программы установки
@@ -147,7 +147,7 @@ ms.locfileid: "88178671"
 
    Обратите внимание на расположение папки в каталоге `..\Setup Bootstrap\Log`, где хранятся файлы конфигурации. После завершения установки можно просмотреть установленные компоненты в файле сводки.
 
-1. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
@@ -165,7 +165,7 @@ ms.locfileid: "88178671"
 
    Обратите внимание на расположение папки в каталоге `..\Setup Bootstrap\Log`, где хранятся файлы конфигурации. После завершения установки можно просмотреть установленные компоненты в файле сводки.
 
-4. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+4. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
@@ -189,7 +189,7 @@ ms.locfileid: "88178671"
 1. Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > Скачать и установить соответствующую версию можно с этой страницы: [Скачайте SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > Скачать и установить соответствующую версию можно с этой страницы: [Скачайте SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
     > 
     > Можно также использовать среду [Azure Data Studio](../../azure-data-studio/what-is.md), которая поддерживает административные задачи и запросы к SQL Server.
   
@@ -287,7 +287,7 @@ ms.locfileid: "88178671"
 
 1. Начните с уже установленного базового экземпляра: Начальный выпуск SQL Server 2017
 
-2. Перейдите к списку накопительных обновлений: [Последние обновления для Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+2. Перейдите к списку накопительных обновлений: [Последние обновления для Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 3. Загрузите последнее накопительное обновление. Исполняемый файл скачивается и извлекается автоматически.
 
@@ -311,7 +311,7 @@ ms.locfileid: "88178671"
 * [Включение дополнительных сетевых протоколов](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Включение удаленных подключений](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Создание учетных данных для SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
-* [Управление квотами на диск](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) во избежание выполнения внешними сценариями задач, тратящих дисковое пространство
+* [Управление квотами на диск](/windows/desktop/fileio/managing-disk-quotas) во избежание выполнения внешними сценариями задач, тратящих дисковое пространство
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 В SQL Server 2019 в Windows механизм изоляции изменился. Этот механизм влияет на **SQLRUserGroup**, правила брандмауэра, разрешение файла и подразумеваемую проверку подлинности. Дополнительные сведения см. в разделе [Изменения в изоляции служб машинного обучения](sql-server-machine-learning-services-2019.md).

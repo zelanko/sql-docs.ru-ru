@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f7c34e9904cef3ce3719873aa907a7d06c74d08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae810e74288610f0d0484501c24188ec69458376
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88315410"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035927"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>Общие сведения об управлении окнами среды SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,6 +46,5 @@ ms.locfileid: "88315410"
 > Если имя входа (или пользователь автономной базы данных) используется для подключения и выполняется проверка подлинности, данные идентификаторов имени входа при подключении помещаются в кэш. Для имени входа, использующегося при проверке подлинности Windows, сюда относятся данные о членстве в группах Windows. Идентификатор имени входа остается зарегистрированным на протяжении периода, в который поддерживается соединение. Для принудительного изменения идентификатора, например сброса пароля или изменения членства в группе Windows, имя входа необходимо использовать для выхода из центра проверки подлинности (Windows или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), а затем повторно выполнить вход. Член предопределенной роли сервера **sysadmin** или любого имени входа с разрешением **ALTER ANY CONNECTION** может использовать команду **KILL** и принудительно разорвать подключение для выполнения повторного подключения с использованием имени входа. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] может повторно использовать сведения о соединении при открытии нескольких соединений в окнах обозревателя объектов и редактора запросов. Закройте все соединения для принудительного повторного подключения.  
   
 ## <a name="see-also"></a>См. также:  
-[Использование среды SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
+[Использование среды SQL Server Management Studio](./sql-server-management-studio-ssms.md)  
 [Среда SQL Server Management Studio](../ssms/the-sql-server-management-studio-environment.md)  
-  

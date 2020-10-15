@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 70f02555b6993a8edd3b226352480dc5be8951c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b548dc877969334096171ee7475c928b786e5905
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894896"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988289"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Политика отработки отказа для экземпляров отказоустойчивого кластера
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -105,11 +105,10 @@ ms.locfileid: "85894896"
  *Значение по умолчанию  
   
 ####  <a name="responding-to-failures"></a><a name="respond"></a> Действия при сбоях  
- После обнаружения одного или нескольких условий сбоя реакция службы WSFC зависит от состояния кворума WSFC и параметров перезапуска и отработки отказа для группы ресурсов FCI. Если в FCI потерян кворум WSFC, то весь экземпляр FCI переводится в режим «вне сети» и высокий уровень доступности FCI утрачивается. Если в FCI сохраняется кворум WSFC, то служба WSFC сначала может перезапустить сбойный узел, а затем выполнить отработку отказа, если попытки перезапуска не завершаются успехом. Параметры перезапуска и отработки отказа настраиваются в оснастке «Диспетчер отказоустойчивости кластеров». Дополнительные сведения об этих параметрах см. в разделе [Свойства \<Resource>: вкладка "Политики"](https://technet.microsoft.com/library/cc725685.aspx).  
+ После обнаружения одного или нескольких условий сбоя реакция службы WSFC зависит от состояния кворума WSFC и параметров перезапуска и отработки отказа для группы ресурсов FCI. Если в FCI потерян кворум WSFC, то весь экземпляр FCI переводится в режим «вне сети» и высокий уровень доступности FCI утрачивается. Если в FCI сохраняется кворум WSFC, то служба WSFC сначала может перезапустить сбойный узел, а затем выполнить отработку отказа, если попытки перезапуска не завершаются успехом. Параметры перезапуска и отработки отказа настраиваются в оснастке «Диспетчер отказоустойчивости кластеров». Дополнительные сведения об этих параметрах см. в разделе [Свойства \<Resource>: вкладка "Политики"](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725685(v=ws.11)).  
   
  Дополнительные сведения о поддержании работоспособности кворума см. в статье [Режимы кворума и конфигурация голосования WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ## <a name="see-also"></a>См. также:  
  [ALTER SERVER CONFIGURATION (Transact-SQL)](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
-  
   

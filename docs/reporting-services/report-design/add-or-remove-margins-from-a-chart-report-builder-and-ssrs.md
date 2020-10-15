@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90b6b1e10ded769785b038b03d3f9d4886c4ba96
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: bbe5af103737cb9b4a5ba7e063f19b9cd6c1da41
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882027"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935362"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>Добавление или удаление полей из диаграммы (построитель отчетов и службы SSRS)
 В гистограмме и точечной диаграмме в отчетах с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] боковые поля автоматически добавляются по краям оси X. В линейчатой диаграмме боковые поля автоматически добавляются по краям оси X. Для всех остальных диаграмм боковые поля не добавляются. Размер поля изменить нельзя.  
@@ -38,9 +38,8 @@ ms.locfileid: "84882027"
   
 ## <a name="see-also"></a>См. также:  
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](/previous-versions/sql/)   
  [Задание интервала оси (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
-  
   

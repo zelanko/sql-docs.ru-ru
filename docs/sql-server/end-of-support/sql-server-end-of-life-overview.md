@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 49cb6fddf2906583d64aa732d222a1d1a100e6c8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200292"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988617"
 ---
 # <a name="sql-server-end-of-support-options"></a>Варианты окончания поддержки SQL Server 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88200292"
 - Обновление до текущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - Приобретение [подписки на дополнительные обновления для системы безопасности](https://www.microsoft.com/cloud-platform/extended-security-updates). 
 - Перенос рабочей нагрузки на виртуальную машину Azure для получения [дополнительных обновлений для системы безопасности](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).
-- Перенос рабочей нагрузки на службу [Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas). 
+- Перенос рабочей нагрузки на службу [Базы данных SQL Azure](/azure/sql-database/sql-database-paas-vs-sql-server-iaas). 
 
 Дополнительные сведения, инструкции и средства для планирования и автоматизации обновления или миграции см. в разделах [Прекращение поддержки SQL Server 2005](https://www.microsoft.com/sql-server/sql-server-2005) и [Прекращение поддержки SQL Server 2008](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
 
@@ -241,7 +241,7 @@ ms.locfileid: "88200292"
 
 ### <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Рекомендуем использовать Azure Cosmos DB для современных, масштабируемых мобильных и веб-приложений, которые используют данные JSON и которым необходимо надежное выполнение запросов и обработка транзакционных данных. Дополнительные сведения см. в разделе [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/). Сведения об импорте данных см. в статье [Импорт данных в Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/import-data/).
+Рекомендуем использовать Azure Cosmos DB для современных, масштабируемых мобильных и веб-приложений, которые используют данные JSON и которым необходимо надежное выполнение запросов и обработка транзакционных данных. Дополнительные сведения см. в разделе [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/). Сведения об импорте данных см. в статье [Импорт данных в Cosmos DB](/azure/cosmos-db/import-data/).
 
 Преимущества Azure Cosmos DB:
 - Документы индексируются, и для запросов к ним можно использовать знакомый синтаксис SQL.
@@ -274,7 +274,7 @@ ms.locfileid: "88200292"
 | [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008%20R2) | 2010 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2008](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008) | 2008 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
-| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) |
+| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](/archive/blogs/cdnitmanagers/sql-server-2000-end-of-support-april-2013) |
 
 > [!IMPORTANT]
 > Если существует какое-либо расхождение между этой таблицей и страницей жизненного цикла [!INCLUDE[msCoName](../../includes/msconame-md.md)], то Жизненный цикл [!INCLUDE[msCoName](../../includes/msconame-md.md)] заменяет эту таблицу, так как эта таблица предназначена для использования в качестве ориентировочной ссылки.  
@@ -286,5 +286,4 @@ ms.locfileid: "88200292"
 [What are Extended Security Updates for SQL Server?](sql-server-extended-security-updates.md)  (Что такое расширенные обновления для системы безопасности?)  
 [Extend support for SQL Server 2008 and SQL Server 2008 R2 with Azure](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)  (Расширение поддержки SQL Server 2008 и SQL Server 2008 R2 с помощью Azure)  
 [What is SQL Server on Azure Virtual Machines? (Windows)](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)  (Что собой представляет SQL Server на виртуальных машинах Azure (Windows))  
-[What is the Azure SQL Database service?](/azure/sql-database/sql-database-technical-overview) (Общие сведения о базе данных SQL Azure)    
-
+[What is the Azure SQL Database service?](/azure/sql-database/sql-database-technical-overview) (Общие сведения о базе данных SQL Azure)

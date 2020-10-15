@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1f05ea22f092573364e663165559be73857ca320
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724515"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038921"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Советы и рекомендации по использованию SQL Server Management Studio (SSMS)
 
@@ -41,9 +41,9 @@ ms.locfileid: "91724515"
 
 Чтобы выполнить шаги, приведенные в этой статье, требуются среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], доступ к SQL Server и база данных AdventureWorks. 
 
-* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Установите [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Установите [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-* Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Инструкции по восстановлению базы данных в среде SSMS см. в разделе [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+* Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Инструкции по восстановлению базы данных в среде SSMS см. в разделе [Восстановление базы данных](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>Комментирование и раскомментирование кода T-SQL
 
@@ -286,7 +286,7 @@ ms.locfileid: "91724515"
 
 Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 
-* [Подключение к экземпляру и отправка запросов к нему](connect-query-sql-server.md)
+* [Подключение к экземпляру и отправка запросов к нему](../quickstarts/connect-query-sql-server.md)
 * [Создание скриптов](scripting-ssms.md)
 * [Использование шаблонов в SSMS](../template/templates-ssms.md)
 * [Конфигурация SSMS](ssms-configuration.md)

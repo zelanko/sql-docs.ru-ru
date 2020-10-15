@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a4fe4e15d2d35f55aa6af846492ac81b08394f7
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 94aaf5679fbe96d87cad66ae3350afb2d7e939ce
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255635"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935201"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Внедрение изображения в отчет (построитель отчетов и службы SSRS)
   Отчет может содержать внедренное изображение. Внедрение изображения гарантирует постоянную доступность изображения для отчета, однако увеличивает размер определения отчета (файла, который определяет отчет). Изображения, внедренные в отчет, перечислены на панель данных отчета.  
@@ -64,6 +64,5 @@ ms.locfileid: "84255635"
 ## <a name="see-also"></a>См. также:  
  [Изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
  [Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
-  
+ [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и службы SSRS)](./images-report-builder-and-ssrs.md)  
   

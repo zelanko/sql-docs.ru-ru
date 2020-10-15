@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b317c09026eb6baa0e9d0f8f2957c7c7c717af55
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180003"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956582"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Производительность служб R Services: результаты и ресурсы
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -357,19 +357,19 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 + [Как определить размер файла подкачки для 64-разрядных версий Windows](https://support.microsoft.com/kb/2860880)
 
-+ [Основные сведения об архитектуре NUMA](https://technet.microsoft.com/library/ms178144.aspx)
++ [Основные сведения об архитектуре NUMA](/previous-versions/sql/sql-server-2008-r2/ms178144(v=sql.105))
 
-+ [Как SQL Server поддерживает архитектуру NUMA](https://technet.microsoft.com/library/ms180954.aspx)
++ [Как SQL Server поддерживает архитектуру NUMA](/previous-versions/sql/sql-server-2008-r2/ms180954(v=sql.105))
 
-+ [Программная архитектура NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Программная архитектура NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
 
 ### <a name="learn-about-sql-server-optimizations"></a>Дополнительные сведения об оптимизациях SQL Server
 
 + [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [Введение в таблицы, оптимизированные для памяти](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [Введение в таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
 
-+ [Демонстрация. Повышение производительности In-Memory OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [Демонстрация. Повышение производительности In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)
 
 + [Сжатие данных](../../relational-databases/data-compression/data-compression.md)
 
@@ -383,7 +383,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 + [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)
 
-+ [Знакомство с Resource Governor](https://technet.microsoft.com/library/bb895232.aspx)
++ [Знакомство с Resource Governor](/previous-versions/sql/sql-server-2008-r2/bb895232(v=sql.105))
 
 + [Пример настройки Resource Governor](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
@@ -391,7 +391,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 + [Генератор загрузки хранилища DISKSPD. Тестовое средство производительности](https://github.com/microsoft/diskspd)
 
-+ [Fsutil](https://technet.microsoft.com/library/cc753059.aspx)
++ [Fsutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753059(v=ws.11))
 
 
 ## <a name="other-articles-in-this-series"></a>Другие статьи в этой серии

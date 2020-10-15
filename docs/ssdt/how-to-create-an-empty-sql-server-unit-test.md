@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f447368d92d3e19d6733c0c1f026298202a8c7a9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 30869fbd4c9a57c068b56d638495cce76ac23789
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518824"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988698"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Руководство. создать пустой модульный тест SQL Server
 
@@ -96,10 +96,9 @@ ms.locfileid: "85518824"
 -   Добавление тестовых условий или другого оператора контроля для проверки результатов скрипта.  
   
 > [!NOTE]  
-> Условие теста Inconclusive по умолчанию добавляется во все тесты. Оно указывает на то, что проверка теста не выполнена. Удалите это условие из теста после добавления других условий. Дополнительные сведения см. в разделе [Как добавлять условия теста в модульные тесты SQL Server](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> Условие теста Inconclusive по умолчанию добавляется во все тесты. Оно указывает на то, что проверка теста не выполнена. Удалите это условие из теста после добавления других условий. Дополнительные сведения см. в разделе [Как добавлять условия теста в модульные тесты SQL Server](/previous-versions/visualstudio/visual-studio-2010/aa833242(v=vs.100)).  
   
 ## <a name="see-also"></a>См. также:  
 [Руководство. выполнять модульные тесты SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Создание модульных тестов](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
-  
+[Создание модульных тестов](/previous-versions/visualstudio/visual-studio-2008/ms182523(v=vs.90))  

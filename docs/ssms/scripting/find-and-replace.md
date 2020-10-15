@@ -14,12 +14,12 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f8fda553ed7056a27906b36cf52a01becc7cfb
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: b788a7f0996eaf8b6321caf9418d660deb08ac9c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901298"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039068"
 ---
 # <a name="find-and-replace"></a>Найти и заменить
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,10 +91,10 @@ ms.locfileid: "88901298"
  Указывает, как воспринимать специальные символы, введенные в текстовые поля **Найти** или **Заменить на** . Параметры включают **Шаблоны** и **Регулярные выражения**.  
   
  **Regular Expressions**  
- Шаблон для поиска соответствия определяется специальными обозначениями. Список см. в разделе [Поиск текста с помощью регулярных выражений](../../relational-databases/scripting/search-text-with-regular-expressions.md).  
+ Шаблон для поиска соответствия определяется специальными обозначениями. Список см. в разделе [Поиск текста с помощью регулярных выражений](./search-text-with-regular-expressions.md).  
   
  **Подстановочные знаки**  
- Такие специальные символы, как звездочки (`*`) и вопросительные знаки (`?`) представляют один или несколько символов. Список см. в разделе [Поиск текста с символами-шаблонами](../../relational-databases/scripting/search-text-with-wildcards.md).  
+ Такие специальные символы, как звездочки (`*`) и вопросительные знаки (`?`) представляют один или несколько символов. Список см. в разделе [Поиск текста с символами-шаблонами](./search-text-with-wildcards.md).  
   
  **Следующий**  
  Начинает поиск текста, указанного в поле **Найти** .  
@@ -124,4 +124,4 @@ ms.locfileid: "88901298"
  Эта вкладка панели инструментов заменяет текущее диалоговое окно диалоговым окном **Замена в файлах** .  
   
 ## <a name="see-also"></a>См. также:  
- [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

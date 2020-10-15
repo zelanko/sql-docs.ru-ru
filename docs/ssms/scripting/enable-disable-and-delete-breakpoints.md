@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a60f2f696a132bbcf7cc6b1497c286f5670cb5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 091f6a4fbe7650152eaf7b3c605618875013f92a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901265"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039061"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Включение, отключение и удаление точек останова
 
@@ -29,7 +29,7 @@ ms.locfileid: "88901265"
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## <a name="the-breakpoints-window"></a>Окно точек останова  
- В окне **Точки останова** приводятся такие сведения, как строка кода, в которой расположена точка останова. Кроме того, в окне **Точки останова** можно удалять, отключать и включать точки останова. Дополнительные сведения об окне **Точки останова** см. в разделе [Точки останова Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  
+ В окне **Точки останова** приводятся такие сведения, как строка кода, в которой расположена точка останова. Кроме того, в окне **Точки останова** можно удалять, отключать и включать точки останова. Дополнительные сведения об окне **Точки останова** см. в разделе [Точки останова Window](./transact-sql-debugger-breakpoints-window.md).  
   
  Отключение точки останова предотвращает приостановку выполнения с ее помощью, однако определение точки при этом остается на месте на тот случай, если в будущем потребуется включить ее снова. Удаление точки останова не может быть отменено впоследствии. Необходимо перевести новую точку останова во включенное состояние для приостановки выполнения инструкции.  
   
@@ -101,6 +101,5 @@ ms.locfileid: "88901265"
 -   На панели инструментов окна **Точки останова** нажмите кнопку **Удалить все точки останова** .  
   
 ## <a name="see-also"></a>См. также:  
- [Переключение точки останова](../../relational-databases/scripting/toggle-a-breakpoint.md)  
-  
+ [Переключение точки останова](./toggle-a-breakpoint.md)  
   

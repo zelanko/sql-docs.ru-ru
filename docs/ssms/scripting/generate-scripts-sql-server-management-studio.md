@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 98d82f71690be9f22cb891d002a315ccfa7c1762
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901341"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039008"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Формирование скриптов (среда SQL Server Management Studio)
 
@@ -25,7 +25,7 @@ ms.locfileid: "88901341"
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет два механизма формирования скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] . Создать скрипты для нескольких объектов можно с помощью **мастера формирования и публикации скриптов**. Можно также создать скрипты для отдельных или нескольких объектов с помощью меню **Сформировать скрипт как** в **обозревателе объектов**.
 
-Подробное руководство по созданию скриптов для различных объектов с использованием SQL Server Management Studio (SSMS) см. в [руководстве по Создание скриптов для объектов в среде SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+Подробное руководство по созданию скриптов для различных объектов с использованием SQL Server Management Studio (SSMS) см. в [руководстве по Создание скриптов для объектов в среде SQL Server Management Studio](../tutorials/scripting-ssms.md).
 
 ## <a name="before-you-begin"></a>Перед началом
 
@@ -33,7 +33,7 @@ ms.locfileid: "88901341"
 
 ###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> Мастер формирования и публикации скриптов
 
-С помощью **мастера формирования и публикации скриптов** можно создать скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] для нескольких объектов. Этот мастер создает скрипт для всех объектов базы данных или скрипт для подмножества выделенных объектов. Мастер позволяет настраивать различные параметры скрипта, такие как включение разрешений, параметры сортировки, ограничения и т. д. Инструкции по использованию мастера см. в разделе [Мастер формирования и публикации скриптов](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).
+С помощью **мастера формирования и публикации скриптов** можно создать скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] для нескольких объектов. Этот мастер создает скрипт для всех объектов базы данных или скрипт для подмножества выделенных объектов. Мастер позволяет настраивать различные параметры скрипта, такие как включение разрешений, параметры сортировки, ограничения и т. д. Инструкции по использованию мастера см. в разделе [Мастер формирования и публикации скриптов](./generate-and-publish-scripts-wizard.md).
   
 ### <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> Меню "Сформировать скрипт как" в обозревателе объектов
 
@@ -75,4 +75,4 @@ ms.locfileid: "88901341"
 
 7. Щелкните правой кнопкой мыши один из выделенных объектов и выберите пункт **Создать скрипт для \<object type>** .
 
-    ![Сведения](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![Подробнее](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901957"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036397"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Запуск отладчика Transact-SQL
 
@@ -42,7 +42,7 @@ ms.locfileid: "88901957"
 
 Для запуска отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] необходимо соблюдение следующих требований.
 
-- Если редактор запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)] подключен к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на другом компьютере, следует настроить отладчик для удаленной отладки. Дополнительные сведения см. в разделе [Настройка правил брандмауэра перед запуском отладчика TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
+- Если редактор запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)] подключен к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на другом компьютере, следует настроить отладчик для удаленной отладки. Дополнительные сведения см. в разделе [Настройка правил брандмауэра перед запуском отладчика TSQL](./configure-firewall-rules-before-running-the-tsql-debugger.md).
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] должна работать под учетной записью Windows, которая является членом предопределенной роли сервера sysadmin.
 
@@ -114,8 +114,8 @@ ms.locfileid: "88901957"
   
 ## <a name="see-also"></a>См. также:
 
-- [Отладчик Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Пошаговая отладка кода Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Сведения отладчика Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Отладчик Transact-SQL](./transact-sql-debugger.md)
+- [Пошаговая отладка кода Transact-SQL](./step-through-transact-sql-code.md)
+- [Сведения отладчика Transact-SQL](./transact-sql-debugger-information.md)
+- [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [Динамическая статистика запросов](../../relational-databases/performance/live-query-statistics.md)

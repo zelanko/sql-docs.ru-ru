@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 41a7f1f4edc247f211ee5b3cdcaddfd139c5027c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227327"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988020"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Настройка оценки SQL по запросу для экземпляра SQL Server с поддержкой Azure Arc
 
@@ -23,13 +23,13 @@ ms.locfileid: "91227327"
 
 * Ваш экземпляр SQL Server должен быть подключен к Azure Arc. Выполните инструкции по [подключению экземпляра SQL Server к SQL Server с поддержкой Arc](connect.md).
 
-* На компьютере должно быть установлено и настроено расширение MMA. Выполните следующие инструкции: [Установка Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). Дополнительные сведения: [Агент Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent).
+* На компьютере должно быть установлено и настроено расширение MMA. Выполните следующие инструкции: [Установка Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). Дополнительные сведения: [Агент Log Analytics](/azure/azure-monitor/platform/log-analytics-agent).
 
 * Для SQL Server необходимо [включить протокол TCP/IP](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 * При работе с именованным экземпляром SQL Server необходимо запустить [Обозреватель SQL Server](../../tools/configuration-manager/sql-server-browser-service.md).
 
-* Вам нужно ознакомиться с документом по SQL Server в разделе [Предварительные требования для оценок по запросу Центра служб](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
+* Вам нужно ознакомиться с документом по SQL Server в разделе [Предварительные требования для оценок по запросу Центра служб](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
 ## <a name="enable-on-demand-sql-assessment"></a>Включение оценки SQL по запросу
 
@@ -75,6 +75,6 @@ Microsoft Monitoring Agent сканирует рабочую папку на н
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Для получения дополнительных сведений ознакомьтесь с документом по SQL Server в разделе [Предварительные требования для оценок по запросу Центра служб](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
+Для получения дополнительных сведений ознакомьтесь с документом по SQL Server в разделе [Предварительные требования для оценок по запросу Центра служб](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
 Комплексная поддержка для Оценки SQL по запросу предоставляется при наличии подписки с Единой поддержкой или поддержкой Premier. Дополнительные сведения: [Поддержка Premier для Azure](https://azure.microsoft.com/support/plans/premier).

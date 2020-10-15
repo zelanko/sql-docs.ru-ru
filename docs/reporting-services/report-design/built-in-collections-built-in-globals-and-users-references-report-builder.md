@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23c0167fddf6887d0ff4e25dcfcd9242434b4f66
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4861b5688c485ca0f8245bdf149ed995841ecdee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462198"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935442"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Встроенные коллекции — глобальные значения и ссылки на пользовательские поля (построитель отчетов)
   Коллекция "Встроенные поля", включающая как коллекцию **Глобальные переменные** , так и коллекцию **Пользователь** , представляет глобальные значения, предоставленные службами Reporting Services при обработке отчета. Коллекция **Globals** предоставляет такие значения, как имя отчета, время начала обработки отчета и текущее количество страниц для верхнего или нижнего колонтитула отчета. Коллекция **User** предоставляет идентификатор пользователя и параметры языка. Эти значения можно использовать в выражениях для фильтрации результатов отчета.  
@@ -87,9 +87,8 @@ ms.locfileid: "84462198"
   
 ## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Диалоговое окно "Выражение" (построитель отчетов)](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Диалоговое окно "Выражение" (построитель отчетов)](./expressions-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Форматирование чисел и дат (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
-  
   

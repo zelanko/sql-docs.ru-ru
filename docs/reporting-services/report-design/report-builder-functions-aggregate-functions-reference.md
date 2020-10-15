@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 8338e122e08ddf03417875c6a0436c16d1e3ff34
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255737"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935280"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Функции построителя отчетов — справочник по агрегатным функциям
   Чтобы включить в отчет статистические значения, в выражениях можно использовать агрегатные функции. Агрегатная функция по умолчанию для числовых полей — функция SUM. Можно изменить выражение и использовать другую встроенную агрегатную функцию или указать другую область. Область определяет набор данных, используемый при вычислениях.  
@@ -65,7 +65,7 @@ ms.locfileid: "84255737"
 |[Var](../../reporting-services/report-design/report-builder-functions-var-function.md)|Возвращает дисперсию всех числовых значений, отличных от NULL, заданных выражением, вычисляемым для данной области.|  
 |[VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)|Возвращает дисперсию совокупности всех числовых значений, отличных от NULL, заданных выражением, вычисляемым в контексте данной области.|  
   
- ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
+ ![Значок стрелки, используемый со ссылкой "К началу"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
 ##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> Ограничения встроенных полей, коллекций и агрегатных функций  
  В следующей таблице описываются ограничения местоположений отчетов, в которых можно добавлять выражения, содержащие ссылки на глобальные встроенные коллекции.  
@@ -102,7 +102,7 @@ ms.locfileid: "84255737"
   
 -   **Примечание 8.** Все агрегатные функции, за исключением Count и CountDistinct, должны иметь один тип данных, или все значения должны быть равны NULL.  
   
- ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
+ ![Значок стрелки, используемый со ссылкой "К началу"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
 ##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> Ограничения вложенных агрегатов  
  В следующей таблице описываются ограничения, которые используются агрегатными функциями для указания других агрегатных функций как вложенных агрегатов.  
@@ -119,7 +119,7 @@ ms.locfileid: "84255737"
   
 -   **Примечание 1.** Использование агрегатных функций разрешено только внутри выражения *Source* функции Lookup, если функция Lookup не содержится в агрегате. Использование агрегатных функций не разрешено внутри выражений *Destination* или *Result* функции поиска.  
   
- ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
+ ![Значок стрелки, используемый со ссылкой "К началу"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
 ##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> Вычисление текущих значений  
  Следующие встроенные функции вычисляют текущие значения для набора данных. Функция**RowNumber** подобна функции **RunningValue** тем, что возвращает текущее значение счетчика, которое увеличивается для каждой строки внутри содержащей области. В этих функциях параметр области должен задавать вмещающую область, которая управляет обнулением счетчика.  
@@ -129,7 +129,7 @@ ms.locfileid: "84255737"
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|Возвращает текущее количество строк в указанной области. Функция **RowNumber** начинает счет с 1, а не с 0.|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|Возвращает текущий агрегат всех числовых значений, отличных от NULL, заданных выражением, вычисляемым для данной области.|  
   
- ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
+ ![Значок стрелки, используемый со ссылкой "К началу"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
 ##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> Получение числа строк  
  Следующая встроенная функция вычисляет количество строк в данной области. Используйте эту функцию для подсчета всех строк, включая строки, содержащие значение NULL.  
@@ -138,7 +138,7 @@ ms.locfileid: "84255737"
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Возвращает число строк в указанной области, включая строки со значениями NULL.|  
   
- ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
+ ![Значок стрелки, используемый со ссылкой "К началу"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
 ##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> Уточняющий запрос значений из другого набора данных  
  Следующие функции поиска извлекают значения из указанного набора данных.  
@@ -149,7 +149,7 @@ ms.locfileid: "84255737"
 |[Функция LookupSet](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|Возвращает набор значений указанного выражения из набора данных.|  
 |[Функция Multilookup](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|Возвращает первые подходящие значения для набора имен из набора данных, содержащего пары «имя-значение».|  
   
- ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
+ ![Значок стрелки, используемый со ссылкой "К началу"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
 ##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> Получение основанных на сортировке значений  
  Следующие встроенные функции возвращают первое, последнее или предыдущее значения внутри заданной области. Эти функции зависят от порядка сортировки значений данных. С помощью этих функций можно, например, найти последнее и первое значения на странице, чтобы создать заголовок в стиле словаря. Используйте функцию **Previous** , чтобы сравнить значение в одной строке со значением в предыдущей строке конкретной области, например чтобы найти значение годового процента в таблице.  
@@ -160,7 +160,7 @@ ms.locfileid: "84255737"
 |[Последняя](../../reporting-services/report-design/report-builder-functions-last-function.md)|Возвращает последнее значение указанного выражения для заданной области.|  
 |[Назад](../../reporting-services/report-design/report-builder-functions-previous-function.md)|Возвращает значение или значение статистического выражения для предыдущего экземпляра элемента внутри заданной области.|  
   
- ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
+ ![Значок стрелки, используемый со ссылкой "К началу"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
 ##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> Получение серверных агрегатов  
  Следующая встроенная функция получает пользовательские агрегаты из поставщика данных. Например, при использовании источника данных типа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно получить агрегаты, вычисляемые на сервере источника данных и используемые в заголовке группы.  
@@ -169,7 +169,7 @@ ms.locfileid: "84255737"
 |------------------|---------------------|  
 |[Aggregate](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Возвращает пользовательские статистические данные заданного выражения в соответствии с определением поставщика данных.|  
   
- ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
+ ![Значок стрелки, используемый со ссылкой "К началу"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
 ##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> Тестирование области  
  Следующая встроенная функция тестирует текущий контекст элемента отчета, чтобы увидеть, является ли он элементом определенной области.  
@@ -178,7 +178,7 @@ ms.locfileid: "84255737"
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Указывает, входит ли текущий экземпляр элемента в пределы указанной области действия.|  
   
- ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
+ ![Значок стрелки, используемый со ссылкой "К началу"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
 ##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> Получение уровня рекурсии  
  Следующая встроенная функция получает текущий уровень при обработке рекурсивной иерархии. Чтобы управлять уровнем отступа визуальной иерархии для рекурсивной группы, используйте результат этой функции вместе со свойством **Padding** в текстовом поле. Дополнительные сведения см. в разделе [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
@@ -187,11 +187,10 @@ ms.locfileid: "84255737"
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|Возвращает текущий уровень глубины в рекурсивной иерархии.|  
   
- ![Значок стрелки, используемый со ссылкой "К началу"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
+ ![Значок стрелки, используемый со ссылкой "К началу"](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало")К началу  
   
 ## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

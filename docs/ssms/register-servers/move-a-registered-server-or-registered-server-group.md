@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 386b9f506e86f294aa4fefaf6f859763443f6c04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d433b5816919642b0d7b25b580f4314a949cf0c2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491787"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036936"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Перемещение зарегистрированного сервера или зарегистрированной группы серверов
 
@@ -38,8 +38,8 @@ ms.locfileid: "88491787"
   
 2. В диалоговом окне **Перенос регистрации сервера** разверните список групп серверов, щелкните нужный узел и нажмите кнопку **OK**.  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Регистрация серверов](../../tools/sql-server-management-studio/register-servers.md)
+[Регистрация серверов](./register-servers.md)
 
-[Создание или изменение группы серверов (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)
+[Создание или изменение группы серверов (среда SQL Server Management Studio)](./create-or-edit-a-server-group-sql-server-management-studio.md)

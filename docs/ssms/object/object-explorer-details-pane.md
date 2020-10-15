@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 846c2707e5fe04e080460241e41df0ebf7ec8329
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370790"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037194"
 ---
 # <a name="object-explorer-details-pane"></a>Область сведений обозревателя объектов
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "88370790"
 ## <a name="sql-server-object-search"></a>Поиск объектов SQL Server  
 подстановочные знаки;  
   
--   Поддерживаются стандартные символы-шаблоны. Например, поиск по **dm_os%counters** вернет как "dm_os_memory_cache_counters", так и "dm_os_performance_counters". Дополнительные сведения см. в разделе [Практическое руководство. Поиск с помощью шаблонов](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Поддерживаются стандартные символы-шаблоны. Например, поиск по **dm_os%counters** вернет как "dm_os_memory_cache_counters", так и "dm_os_performance_counters". Дополнительные сведения см. в разделе [Практическое руководство. Поиск с помощью шаблонов](../scripting/search-text-with-wildcards.md).  
   
 Область поиска  
   
@@ -101,4 +101,3 @@ ms.locfileid: "88370790"
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель объектов](../../ssms/object/object-explorer.md)  
-  

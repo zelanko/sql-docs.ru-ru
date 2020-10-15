@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd7c686682a83b95e6053d60323fe1829a500752
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b3b36bfa75c39a4acc0c41c8dae5199b7973391
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88316190"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036057"
 ---
 # <a name="add-new-items-to-a-project"></a>Добавление в проект новые элементы
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,6 @@ ms.locfileid: "88316190"
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
-[Связывание расширений файлов с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[Связывание расширений файлов с редактором кода](../scripting/associate-file-extensions-to-a-code-editor.md)  
 [Добавление существующих элементов в проект](../../ssms/solution/add-existing-items-to-a-project.md)  
 [Перемещение или удаление элемента или проекта](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
-  

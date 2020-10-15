@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d0d43fe140f2165b19cb38a6c8d7391428a14e93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a66f57b77b5d92bf39795533a29faacacdf01b95
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370810"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037620"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Создание центрального сервера управления и группы серверов
 
@@ -65,7 +65,7 @@ ms.locfileid: "88370810"
   
 4.  В поле **Зарегистрированный сервер**введите имя сервера и описание (необязательно).  
   
-5.  На вкладке **Свойства подключения** просмотрите или измените свойства сети и подключения. Дополнительные сведения см. в статье [Соединение с сервером (страница "Свойства подключения"), компонент Database Engine](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a).  
+5.  На вкладке **Свойства подключения** просмотрите или измените свойства сети и подключения. Дополнительные сведения см. в статье [Соединение с сервером (страница "Свойства подключения"), компонент Database Engine](../f1-help/connect-to-server-connection-properties-page-database-engine.md).  
   
 6.  Нажмите кнопку **Проверка**, чтобы проверить соединение.  
   
@@ -79,13 +79,12 @@ ms.locfileid: "88370810"
   
 3.  В окне **Зарегистрированные серверы**щелкните правой кнопкой мыши группу серверов и выберите команду **Регистрация нового сервера**.  
   
-4.  В окне регистрации сервера выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md). При необходимости добавьте дополнительные серверы.  
+4.  В окне регистрации сервера выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](./create-a-new-registered-server-sql-server-management-studio.md). При необходимости добавьте дополнительные серверы.  
   
 #### <a name="to-execute-queries-against-several-configuration-targets-at-the-same-time"></a>Выполнение запросов одновременно к нескольким целям конфигурации  
   
--   После создания сервера централизованного управления, одной или нескольких групп серверов и одного или нескольких зарегистрированных серверов можно выполнять запросы одновременно ко всей группе. Дополнительные сведения о выполнении инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] сразу на нескольких серверах в группе серверов см. в статье [Выполнение инструкции на нескольких серверах одновременно (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
+-   После создания сервера централизованного управления, одной или нескольких групп серверов и одного или нескольких зарегистрированных серверов можно выполнять запросы одновременно ко всей группе. Дополнительные сведения о выполнении инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] сразу на нескольких серверах в группе серверов см. в статье [Выполнение инструкции на нескольких серверах одновременно (среда SQL Server Management Studio)](./execute-statements-against-multiple-servers-simultaneously.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Администрирование нескольких серверов с использованием центральных серверов управления](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

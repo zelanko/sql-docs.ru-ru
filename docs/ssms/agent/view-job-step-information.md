@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d439de6bdf2ff7a9fccfc266a81cb540a28e419a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f74ab9949662ceffce1965ebf4fefcc9086e5e9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497500"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038698"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 В данном разделе описано, как просмотреть сведения о шаге задания в окне «Свойства шага задания». Также предоставляются сведения о просмотре выходных данных шага задания.  
   
@@ -77,4 +77,3 @@ ms.locfileid: "88497500"
     -   Если установлено соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или более поздними версиями, кнопку **Просмотр** можно нажать только при установленном флажке **Сохранять данные журнала в таблице** . В этом случае вывод шага задания производится в таблицу **sysjobstepslogs** в базе данных **msdb** .  
   
     -   Кнопка **Просмотр** недоступна, если выходные данные шагов задания записываются в файл. Чтобы просмотреть файл вывода шага задания, используйте блокнот.  
-  

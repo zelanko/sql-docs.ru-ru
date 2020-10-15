@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba5f9677022eb07a8810f3ea9c5dcffeaa716e7c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f34a6d26e48c1a77d7e289b197495d707bb9fd12
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179938"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956875"
 ---
 # <a name="olapr-r-package-in-sql-server-machine-learning-services"></a>olapR (пакет R в Службах машинного обучения SQL Server)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,7 +36,7 @@ library(olapR)
 
 ## <a name="full-reference-documentation"></a>Полная справочная документация
 
-Пакет **olapr** распространяется в нескольких продуктах Майкрософт, но его использование не зависит от того, получили ли вы его в SQL Server или в другом продукте. Благодаря сходству функций [документация по отдельным функциям sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) опубликована только в одном разделе в [справочнике по R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
+Пакет **olapr** распространяется в нескольких продуктах Майкрософт, но его использование не зависит от того, получили ли вы его в SQL Server или в другом продукте. Благодаря сходству функций [документация по отдельным функциям sqlrutils](/machine-learning-server/r-reference/olapr/olapr) опубликована только в одном разделе в [справочнике по R](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
 
 ## <a name="availability-and-location"></a>Расположение и доступность
 

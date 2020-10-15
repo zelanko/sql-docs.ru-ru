@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a81d038c5766e861c28854839192b5604f8db350
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e5b44b8acd2d1c46649203c482b8ed4370c0dcb
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491821"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036957"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>Изменение регистрационных данных сервера (SQL Server Management Studio)
 
@@ -32,6 +32,6 @@ ms.locfileid: "88491821"
 
 2. В диалоговом окне **Изменение данных регистрации серверов** измените сервер, сведения о имени входа, свойства соединения и нажмите кнопку **Сохранить**.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Регистрация серверов](../../tools/sql-server-management-studio/register-servers.md)
+[Регистрация серверов](./register-servers.md)

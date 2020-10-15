@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: e246374476c3dff300aaf6c53ee3c6e8a1896db5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519044"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987980"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Руководство. сравнить и синхронизировать данные из двух баз данных
 
@@ -83,7 +83,7 @@ ms.locfileid: "85519044"
   
     Замените заполнители (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* и *tDisplayName*) значениями для ваших базы данных-источника и целевой базы данных.  
   
-    Если база данных-источник и целевая база данных не указаны, откроется диалоговое окно **Новое сравнение данных**. Дополнительные сведения о параметрах для команды Sql.NewDataComparison см. в [справочнике по командам автоматизации функций для работы с базами данных в Visual Studio](https://msdn.microsoft.com/library/dd470565.aspx).  
+    Если база данных-источник и целевая база данных не указаны, откроется диалоговое окно **Новое сравнение данных**. Дополнительные сведения о параметрах для команды Sql.NewDataComparison см. в [справочнике по командам автоматизации функций для работы с базами данных в Visual Studio](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100)).  
   
     Сравнение данных в указанных базах данных, исходной и целевой, выполнено. Результаты отображаются в сеансе «Сравнение данных». Дополнительные сведения о просмотре результатов и синхронизации данных см. в разделах [Просмотр различий данных](#ViewDifferences) и [Синхронизация данных базы данных](#Synchronize).  
   
@@ -168,4 +168,3 @@ ms.locfileid: "85519044"
   
 ## <a name="see-also"></a>См. также:  
 [Сравнение и синхронизация данных из одной или нескольких таблиц с данными из эталонной базы данных](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)  
-  
