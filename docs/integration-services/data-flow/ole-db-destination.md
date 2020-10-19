@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477796"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987664"
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
 
@@ -96,7 +96,7 @@ ms.locfileid: "88477796"
   
 |Параметры быстрой загрузки|Описание|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Устанавливает размер в килобайтах для вставки. Параметр имеет форму **KILOBYTES_PER_BATCH** = \<positive integer value**>**.|  
+|KILOBYTES_PER_BATCH|Устанавливает размер в килобайтах для вставки. Параметр имеет форму **KILOBYTES_PER_BATCH** =  *\<positive integer value>* .|  
 |FIRE_TRIGGERS|Устанавливает запуск триггеров при вставке таблицы. Параметр имеет форму **FIRE_TRIGGERS**. Наличие параметра означает, что триггер запускается.|  
 |ORDER|Устанавливает способ сортировки введенных данных. Параметр имеет форму ORDER \<column name> ASC&#124;DESC. Количество столбцов может быть любым, необязательно включать порядок сортировки. Если порядок сортировки пропущен, операция вставки предполагает, что данные не отсортированы.<br /><br /> Примечание. Производительность можно повысить, если использовать параметр ORDER для сортировки загружаемых данных в соответствии с кластеризованным индексом таблицы.|  
   

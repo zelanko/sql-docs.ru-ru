@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669908"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866553"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику (группы доступности AlwaysOn)
 
@@ -89,7 +89,7 @@ ms.locfileid: "91669908"
 
 На следующем рисунке представлена группа доступности.
 
-![Исходная группа доступности](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![Группа доступности с первичной, вторичной и асинхронной вторичной репликами](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 Следующий сценарий Transact-SQL создает группу доступности. В этом примере для каждой реплики указан `READ_WRITE_ROUTING_URL`.
 ```sql
@@ -144,18 +144,13 @@ GO
 
 На следующей схеме клиентское приложение подключается к компьютеру COMPUTER02 с заданным параметром `ApplicationIntent=ReadWrite`. Подключение перенаправляется к первичной реплике. 
 
-![Исходная группа доступности](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![Подключение к компьютеру 2 перенаправляется на первичную реплику](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 Вторичная реплика перенаправляет вызовы чтения и записи к первичной реплике. Подключение на чтения и запись к одной из реплик будет перенаправлено к первичной реплике. 
 
 На следующей схеме для первичной реплики выполнена отработка отказа вручную на компьютер COMPUTER02. Клиентское приложение подключается к компьютеру COMPUTER01 с заданным параметром `ApplicationIntent=ReadWrite`. Подключение перенаправляется к первичной реплике. 
 
-![Исходная группа доступности](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
-
-## <a name="sql-server-instance-offline"></a>Экземпляр SQL Server в автономном режиме
-
-Если экземпляр SQL Server, указанный в строке подключения, недоступен (простой), то произойдет сбой подключения, независимо от роли реплики на целевом сервере. Чтобы избежать длительного простоя приложения, в строке подключения нужно настроить альтернативного партнера для отработки отказа (`FailoverPartner`). Приложение должно реализовать логику повторных попыток для охвата первичных и вторичных реплик, не подключенных к сети, во время фактической отработки отказа. Сведения о строках подключения см. в статье о [свойстве SqlConnection.ConnectionString](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
+![Подключение перенаправляется на новую первичную реплику на компьютере 2](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## <a name="see-also"></a>См. также:
 

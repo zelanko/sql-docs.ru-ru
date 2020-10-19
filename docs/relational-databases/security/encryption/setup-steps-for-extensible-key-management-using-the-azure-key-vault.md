@@ -2,7 +2,7 @@
 title: Настройка расширенного управления ключами прозрачного шифрования данных (TDE) с помощью Azure Key Vault
 description: Установка и настройка SQL Server Connector для Azure Key Vault.
 ms.custom: seo-lt-2019
-ms.date: 08/12/2020
+ms.date: 10/08/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: e5b18c46f602d24339c092b8f3e622b2a915baeb
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+author: Rupp29
+ms.author: arupp
+ms.openlocfilehash: e3b12ed6d4f28ce04c1ceac5960ae564368d9a9a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042892"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866603"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Настройка расширенного управления ключами SQL Server TDE с помощью Azure Key Vault
 
@@ -34,7 +34,7 @@ ms.locfileid: "90042892"
   
 - У вас должна быть подписка Azure.
   
-- Установите [Azure PowerShell версии 5.2.0 или более поздней](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+- Установите [Azure PowerShell версии 5.2.0 или более поздней](/powershell/azure/).  
 
 - Создайте экземпляр Azure Active Directory (Azure AD).
 
@@ -61,7 +61,7 @@ ms.locfileid: "90042892"
 
       ![Снимок экрана: панель "Все службы Azure"](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
 
-1. Зарегистрируйте приложение в Azure Active Directory, выполнив следующие действия. (Подробные пошаговые инструкции см. в статье "Получение удостоверения приложения" [записи блога об Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/).)
+1. Зарегистрируйте приложение в Azure Active Directory, выполнив следующие действия. (Подробные пошаговые инструкции см. в статье "Получение удостоверения приложения" [записи блога об Azure Key Vault](/archive/blogs/kv/azure-key-vault-step-by-step).)
 
     а. На панели **обзора Azure Active Directory** выберите **Регистрация приложений**.
 
@@ -85,7 +85,7 @@ ms.locfileid: "90042892"
 
     е) В области **Сертификаты & секреты** в разделе **"Значение"** нажмите кнопку **Копировать** рядом со значением секрета клиента, который будет использоваться для создания асимметричного ключа в SQL Server.
 
-    ![Снимок экрана: панель "Сертификаты и секреты"](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
+    ![Снимок экрана со значением секрета](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
 
     ж. В левой области выберите **Обзор**, а затем, в поле **Идентификатор приложения (клиента)** , скопируйте значение, которое будет использоваться для создания асимметричного ключа в SQL Server.
 
@@ -160,7 +160,7 @@ ms.locfileid: "90042892"
 > [!IMPORTANT]
 > Подписка, где создается хранилище ключей, должна находиться в том же Azure AD по умолчанию, где был создан субъект-служба Azure AD. Если вы хотите использовать экземпляр Azure AD, отличный от установленного по умолчанию, чтобы создать субъект-службу для соединителя SQL Server, следует изменить экземпляр Azure AD по умолчанию в своей учетной записи Azure перед созданием хранилища ключей. Чтобы узнать, как изменить используемый по умолчанию экземпляр Azure AD на тот, который вы хотите использовать, см. раздел "Часто задаваемые вопросы" статьи [Обслуживание и устранение неполадок соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
-1. Установите [Azure PowerShell 5.2.0 или более поздней версии](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) и войдите в него с помощью следующей команды:  
+1. Установите [Azure PowerShell 5.2.0 или более поздней версии](/powershell/azure/) и войдите в него с помощью следующей команды:  
   
     ```powershell  
     Connect-AzAccount  
@@ -266,7 +266,7 @@ ms.locfileid: "90042892"
 
 - Создайте ключ шифрования локально, на локальном аппаратном модуле безопасности (HSM). Это должен быть асимметричный ключ RSA 2048, так как SQL Server поддерживает только такие ключи.
 - Импортируйте ключ шифрования в Azure Key Vault. Этот процесс описан в последующих разделах.
-- Перед первым использованием ключа в хранилище ключей Azure создайте резервную копию ключа из Azure Key Vault. Дополнительные сведения см. в описании команды [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
+- Перед первым использованием ключа в хранилище ключей Azure создайте резервную копию ключа из Azure Key Vault. Дополнительные сведения см. в описании команды [Backup-AzureKeyVaultKey]().
 - При каждом внесении изменений в ключ (например, при добавлении списков управления доступом, тегов, ключевых атрибутов) создавайте новую резервную копию ключа из Azure Key Vault.
 
   > [!NOTE]
@@ -340,7 +340,7 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 > - Начиная с версии 1.0.3.0, соединитель SQL Server передает соответствующие сообщения об ошибках в журналы событий Windows для устранения неполадок.
 > - Начиная с версии 1.0.4.0, доступна поддержка частных облаков Azure, включая Azure для Китая, Azure для Германии и Azure для государственных организаций.
 > - В версии 1.0.5.0 внесено критическое изменение, касающееся алгоритма отпечатков. После обновления до версии 1.0.5.0 восстановление базы данных может завершаться сбоем. Дополнительные сведения см. в [статье базы знаний 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
-> - **Начиная с версии 1.0.7.0, соединитель SQL Server поддерживает фильтрацию сообщений и логику повторных попыток сетевого запроса.**
+> - **Начиная с версии 1.0.5.0 (метка времени: сентябрь 2020 г.) соединитель SQL Server поддерживает фильтрацию сообщений и логику повторных попыток сетевого запроса.**
   
   ![Снимок экрана мастера установки соединителя SQL Server.](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

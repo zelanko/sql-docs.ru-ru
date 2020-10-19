@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216773"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810010"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ Always Encrypted не поддерживается для столбцов с у
 - Столбцы со свойством `ROWGUIDCOL`.  
 - Строки (`varchar`, `char` и т. д.), столбцы с параметрами сортировки, отличными от bin2  
 - Столбцы, которые являются ключами для кластеризованных и некластеризованных индексов при использовании случайного шифрования (поддерживается детерминированное шифрование).
-- Столбцы, которые являются ключами для полнотекстовых индексов при использовании случайного шифрования (поддерживается детерминированное шифрование).  
+- Столбцы, включаемые в полнотекстовые индексы (Always Encrypted не поддерживает [полнотекстовый поиск](../../../relational-databases/search/full-text-search.md)).  
 - вычисляемые столбцы;
 - Столбцы, на которые ссылаются вычисляемые столбцы (если выражение выполняет неподдерживаемые операции для постоянного шифрования).  
 - Набор разреженных столбцов.  

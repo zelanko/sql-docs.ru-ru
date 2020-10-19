@@ -38,16 +38,16 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: bd7a5056761f6b249caea00463637c90f8ba5a49
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: cda76ce52f9b14c732cb4effb95c3ff523dd460b
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671157"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847344"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 В этой статье приведены сведения об инструкции CREATE MATERIALIZED VIEW AS SELECT T-SQL в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], используемой при разработке решений. Здесь также приведены примеры кодов.
 
@@ -113,6 +113,11 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 Материализованное представление в хранилище данных Azure похоже на индексированное представление SQL Server.Оно имеет практически те же ограничения, что и индексированное представление (подробности см. в статье [Создание индексированных представлений](/sql/relational-databases/views/create-indexed-views)) за исключением того, что материализованное представление поддерживает агрегатные функции.   
 
+>[!Note]
+>Несмотря на то, что CREATE MATERIALIZED VIEW не поддерживает COUNT, DISTINCT, COUNT (выражение DISTINCT) и COUNT_BIG (выражение DISTINCT), запросы SELECT с этими функциями могут по-прежнему пользоваться преимуществами материализованных представлений для повышения производительности, так как оптимизатор Synapse SQL может автоматически перезаписывать эти агрегаты в пользовательском запросе для сопоставления с существующими материализованными представлениями.  Дополнительные сведения см. в разделе с примером этой статьи. 
+
+APPROX_COUNT_DISTINCT не поддерживается в CREATE MATERIALIZED VIEW AS SELECT.
+
 Материализованное представление поддерживает только кластеризованный индекс columnstore. 
 
 Материализованное представление не может ссылаться на другие представления.  
@@ -146,6 +151,49 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 ## <a name="permissions"></a>Разрешения
 
 Для выполнения этой инструкции требуется 1) разрешение REFERENCES и CREATE VIEW или 2) разрешение CONTROL в отношении схемы, в которой создается представление. 
+
+## <a name="example"></a>Пример
+A. В этом примере показано, как оптимизатор Synapse SQL автоматически использует материализованные представления при выполнении запроса для лучшей производительности, даже если в запросе используются функции, которые не поддерживаются в CREATE MATERIALIZED VIEW, такие как COUNT(выражение DISTINCT). Запрос, который раньше выполнялся несколько секунд, теперь выполняется за долю секунды без каких-либо изменений в пользовательском запросе.   
+
+``` sql 
+
+-- Create a table with ~536 million rows
+create table t(a int not null, b int not null, c int not null) with (distribution=hash(a), clustered columnstore index);
+
+insert into t values(1,1,1);
+
+declare @p int =1;
+while (@P < 30)
+    begin
+    insert into t select a+1,b+2,c+3 from t;  
+    select @p +=1;
+end
+
+-- A SELECT query with COUNT_BIG (DISTINCT expression) took multiple seconds to complete and it reads data directly from the base table a. 
+select a, count_big(distinct b) from t group by a;
+
+-- Create two materialized views, not using COUNT_BIG(DISTINCT expression).
+create materialized view V1 with(distribution=hash(a)) as select a, b from dbo.t group by a, b;
+
+-- Clear all cache.
+
+DBCC DROPCLEANBUFFERS;
+DBCC freeproccache;
+
+-- Check the estimated execution plan in SQL Server Management Studio.  It shows the SELECT query is first step (GET operator) is to read data from the materialized view V1, not from base table a.
+select a, count_big(distinct b) from t group by a;
+
+-- Now execute this SELECT query.  This time it took sub-second to complete because Synapse SQL engine automatically matches the query with materialized view V1 and uses it for faster query execution.  There was no change in the user query.
+
+DECLARE @timerstart datetime2, @timerend datetime2;
+SET @timerstart = sysdatetime();
+
+select a, count_big(distinct b) from t group by a;
+
+SET @timerend = sysdatetime()
+select DATEDIFF(ms,@timerstart,@timerend);
+
+```
 
   
 ## <a name="see-also"></a>См. также раздел

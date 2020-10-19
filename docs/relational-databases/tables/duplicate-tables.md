@@ -1,8 +1,8 @@
 ---
-description: Дублирование структур таблиц
-title: Дублирование структур таблиц | Документация Майкрософт
+description: Создание копии таблицы без данных строк.
+title: Дублирование таблиц | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/05/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb4e0ebc6160dce0a1f6db3ee4d59141712e78a6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a8faa1aab3237152934f0ce9eb4cb9ce541d5d3d
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725025"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765815"
 ---
-# <a name="duplicate-table-structures"></a>Дублирование структур таблиц
+# <a name="duplicate-tables"></a>Дублирование таблиц
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно создать копию существующей таблицы с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] , создав новую таблицу и скопировав в нее сведения о столбцах из существующей таблицы.  
+В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно создать копию существующей таблицы с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] , создав новую таблицу и скопировав в нее сведения о столбцах из существующей таблицы.  
   
 > [!IMPORTANT]  
 >  Эта операция дублирует только структуру таблицы. При этом не происходит дублирования строк таблицы.  
@@ -85,5 +85,3 @@ ms.locfileid: "91725025"
 4.  Удалите все столбцы, которые не требуются в новой таблице.  
   
 5.  Нажмите кнопку **Выполнить**.  
-  
-  

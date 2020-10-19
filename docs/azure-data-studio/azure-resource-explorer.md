@@ -9,12 +9,12 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7107c1489521f733eb685887e6c1bcc543a2c147
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725235"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987855"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Просмотр ресурсов SQL Azure и управление ими с помощью обозревателя ресурсов Azure
 
@@ -101,4 +101,4 @@ ms.locfileid: "91725235"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 - [Использование [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] для подключения и отправки запроса к базе данных SQL Azure](quickstart-sql-database.md)
-- [Подключение к Хранилищу данных SQL Azure и запрос данных с помощью [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)]](quickstart-sql-dw.md)
+- [Использование [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] для подключения к Azure Synapse Analytics и запроса данных](quickstart-sql-dw.md)

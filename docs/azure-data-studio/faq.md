@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1413903521019e9b2c95b11143d7e0039fc8e103
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 0231111907d1f342aeda6aea5a9d824a56f40e8b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745974"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987573"
 ---
 # <a name="azure-data-studio-faq"></a>Вопросы и ответы по Azure Data Studio
 
@@ -181,9 +181,9 @@ API управляющих объектов SQL Server на данный мом
 
 Основными пользователями Azure Data Studio являются разработчики и администраторы баз данных.
 
-## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Интегрируется ли Azure Data Studio с хранилищем данных SQL Azure?
+## <a name="does-azure-data-studio-integrate-with-azure-synapse-analytics"></a>Интегрируется ли Azure Data Studio с Azure Synapse Analytics?
 
-Да. Поддержка хранилища данных SQL Azure в Azure Data Studio в настоящее время реализована в виде предварительной версии, так же как для Управляемого экземпляра SQL Azure и больших данных SQL Server 2019.
+Да. Поддержка Azure Synapse Analytics в Azure Data Studio в настоящее время реализована в виде предварительной версии, так же как для Управляемого экземпляра SQL Azure и больших данных SQL Server 2019.
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>Почему важно использовать Azure Data Studio для работы с новой версией SQL Server?
 

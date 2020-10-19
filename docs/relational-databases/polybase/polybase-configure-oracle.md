@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 322c858a9b20548662136e395c0db1c76171f5fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c2d0edde6ca50074f05ff51eca0de38ec947f31a
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85740955"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834032"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracled"></a>Настройка PolyBase для доступа к внешним данным в Oracle
 
@@ -49,6 +49,9 @@ ms.locfileid: "85740955"
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > Соединитель ODBC Oracle для PolyBase поддерживает только обычную проверку подлинности, но не проверку подлинности Kerberos. 
 
 1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 

@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480956"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868198"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Руководство по блокировке и управлению версиями строк транзакций
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -810,7 +810,7 @@ GO
 ## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Динамическая блокировка
  Использование блокировок низкого уровня, например блокировок строк, увеличивает параллелизм, поскольку снижается вероятность одновременной блокировки области данных двумя различными транзакциями. Использование блокировок низкого уровня также увеличивает их количество, что приводит к большей загрузке ресурсов. При использовании блокировок страниц и таблиц высокого уровня загруженность снижается, однако при этом уменьшается степень параллелизма.  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![Затраты на блокировку в сравнении с затратами на параллелизм](../relational-databases/media/lockcht.png) 
   
  В приложении [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] используется динамический выбор уровня блокировки, что обеспечивает оптимальное использование ресурсов. При выполнении запроса компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] автоматически определяет оптимальный уровень блокировки на основании характеристик схемы и запроса. Например, при просмотре индекса для уменьшения загрузки системы оптимизатор может задать блокировки на уровне страниц.  
   
@@ -940,7 +940,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 В следующем примере приводятся выходные данные после нажатия первой ссылки в результате выше:
 
@@ -2080,8 +2080,15 @@ GO
   
 -   Во время транзакции следует производить доступ к как можно меньшему объему данных.  
     Это уменьшает количество блокируемых строк, снижая таким образом состязания между транзакциями.  
+    
+-   По возможности избегайте пессимистических указаний блокировки, таких как HOLDLOCK. 
+    Такие указания, как уровень изоляции HOLDLOCK и SERIALIZABLE, могут привести к ожиданию процессов даже при общих блокировках и сокращают параллелизм.
+
+-   Старайтесь не использовать неявные транзакции, когда возможные неявные транзакции могут стать причиной непредсказуемого поведения вследствие их природы. См. раздел о [проблемах с неявными транзакциями и параллелизмом](#implicit-transactions-and-avoiding-concurrency-and-resource-problems)
+
+-   Создание индексов с уменьшенным [коэффициентом заполнения](indexes/specify-fill-factor-for-an-index.md) может предотвратить или уменьшить фрагментацию страниц индекса и тем самым сократить время поиска индекса, особенно при извлечении с диска. Чтобы просмотреть сведения о фрагментации для данных и индексов таблицы или представления, используйте sys.dm_db_index_physical_stats. 
   
-#### <a name="avoiding-concurrency-and-resource-problems"></a>Как избежать проблем параллелизма и нехватки ресурсов  
+#### <a name="implicit-transactions-and-avoiding-concurrency-and-resource-problems"></a>Неявные транзакции и предотвращение проблем с параллелизмом и нехваткой ресурсов  
  Для предотвращения проблем параллелизма и нехватки ресурсов следует аккуратно обращаться с неявными транзакциями. При использовании неявных транзакций инструкция [!INCLUDE[tsql](../includes/tsql-md.md)], следующая за `COMMIT` или `ROLLBACK`, автоматически запускает новую транзакцию. Это может привести к тому, что новая транзакция будет открыта во время просмотра данных пользователем или даже тогда, когда у пользователя запрашивается ввод данных. После завершения последней транзакции, необходимой для защиты изменения данных, следует выключить неявные транзакции до тех пор, пока они снова не понадобятся. Это позволяет [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] использовать режим автофиксации, пока приложение просматривает или запрашивает данные от пользователя.  
   
  Кроме того, когда включен уровень изоляции моментального снимка, то, даже если новая транзакция не будет удерживать блокировки, длительная транзакция предотвращает удаление старых версий из временной базы данных `tempdb`.  
@@ -2112,8 +2119,8 @@ GO
  Может потребоваться применить инструкцию KILL. Ее следует использовать с осторожностью, особенно если запущены критические процессы. Дополнительные сведения см. в разделе [KILL (Transact-SQL)](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Дополнительные материалы   
-[Издержки управления версиями строк](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
+[Издержки управления версиями строк](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [Расширенные события](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Динамические административные представления и функции (Transact-SQL)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

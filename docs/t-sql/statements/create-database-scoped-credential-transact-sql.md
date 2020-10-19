@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce8bbe0982d193a871f89023f803e5719b74771b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024379"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834209"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -54,6 +54,9 @@ WITH IDENTITY = 'identity_name'
 *credential_name* Указывает имя создаваемых учетных данных для базы данных. Аргумент *credential_name* не может начинаться с символа номера (#). Системные учетные данные начинаются с символов ##.
 
 IDENTITY **='** _identity\_name_ **'** . Указывает имя учетной записи для использования при подключении за пределами сервера. Чтобы импортировать файл из хранилища BLOB-объектов Azure с использованием общего ключа, имя удостоверения должно быть `SHARED ACCESS SIGNATURE`. Для загрузки данных в хранилище данных SQL в качестве удостоверения можно использовать любое допустимое значение. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). При использовании Kerberos (Windows Active Directory или MIT KDC) не указывайте доменное имя в аргументе IDENTITY. В этом аргументе должно быть только имя учетной записи.
+
+> [!IMPORTANT]
+> Соединители ODBC SQL, Oracle, Teradata и MongoDB для PolyBase поддерживают только обычную проверку подлинности, но не проверку подлинности Kerberos.
 
 > [!NOTE]
 > Инструкция WITH IDENTITY не требуется, если для контейнера в хранилище BLOB-объектов Azure включен анонимный доступ. См. пример запроса к хранилищу BLOB-объектов Azure в разделе [Импорт данных в таблицу из файла, который находится в хранилище BLOB-объектов Azure](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
