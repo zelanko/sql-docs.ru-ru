@@ -1,6 +1,6 @@
 ---
 description: sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-title: sys. memory_optimized_tables_internal_attributes (Transact-SQL) | Документация Майкрософт
+title: sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-author: jodebrui
-ms.author: jodebrui
+author: kevin-farlee
+ms.author: kfarlee
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23a58092954d1026071a469676e3fbfcc6628158
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 37f819a453b9619fa4e3c6185aac77859654505b
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646358"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175937"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "88646358"
 | :------ |:----------| :-----|
 |object_id  |**int**|       Идентификатор пользовательской таблицы. Внутренние оптимизированные для памяти таблицы, служащие для поддержки пользовательской таблицы (например, хранилища вне строки или удаленных строк в случае сочетания Hk/Columnstore), имеют то же значение object_id, что и их родительский объект. |
 |xtp_object_id  |**bigint**|    Идентификатор объекта выполняющейся в памяти OLTP, который соответствует внутренней оптимизированной для памяти таблице, используемой для поддержки пользовательской таблицы. Он уникален в пределах базы данных и может изменяться за время существования объекта. 
-|type|  **int** |   Тип внутренней таблицы.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|тип|  **int** |   Тип внутренней таблицы.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   Описание типа<br/><br/>DELETED_ROWS_TABLE — внутренняя таблица, отслеживающая удаленные строки для индекса columnstore<br/>USER_TABLE — таблица, содержащая данные пользователя в строке<br/>DICTIONARIES_TABLE — словари для индекса columnstore<br/>SEGMENTS_TABLE — сжатые сегменты для индекса columnstore<br/>ROW_GROUPS_INFO_TABLE — метаданные для групп сжатых строк индекса columnstore<br/>INTERNAL OFF-ROW DATA TABLE — внутренняя таблица, используемая для хранения столбца вне строки. В данном случае minor_id отражает столбец column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE — оперативный заключительный фрагмент таблицы журнала на диске. Вставляемые в журнал строки сначала вставляются во внутреннюю таблицу, оптимизированную для памяти. Существует фоновая задача, которая асинхронно перемещает строки из этой внутренней таблицы в таблицу журнала на диске. |
 |minor_id|  **int**|    Значение 0 указывает на пользователя или внутреннюю таблицу<br/><br/>Ненулевое значение обозначает идентификатор столбца, хранящегося вне строки. Соединяется с column_id в sys.columns.<br/><br/>Каждый столбец, хранящийся вне строки, имеет соответствующую строку в этом системном представлении.|
 
