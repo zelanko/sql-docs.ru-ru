@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83de666e0f6aa3dc54c3e9b864ebabf957f4ac25
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 2fbe0a54b6f48c97c81b288b8eebb5514cc637ac
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544526"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892414"
 ---
 # <a name="rename-a-report-server-computer"></a>Переименование компьютера, на котором установлен сервер отчетов
   Переименование компьютера приведет к изменению соответствующих имен веб-сервера и экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (если они установлены на одном компьютере). В некоторых случаях службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут оказаться недоступным после изменения имени компьютера. Чтобы заново настроить сервер отчетов после изменения имени компьютера, выполните шаги, описанные в этой статье.  
@@ -46,7 +46,7 @@ ms.locfileid: "84544526"
   
 ## <a name="see-also"></a>См. также раздел  
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Запуск и остановка службы сервера отчетов](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [Программа rsconfig (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)  

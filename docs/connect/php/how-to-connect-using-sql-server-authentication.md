@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 8ad83932fc6d02986f715a35fefbfedba5f320c8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728328"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080753"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>Руководство. подключиться с использованием проверки подлинности SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "81728328"
 > [!NOTE]  
 > Атрибуты соединения, кроме идентификатора пользователя и пароля, можно задать при установке соединения. Полный список поддерживаемых атрибутов соединения см. в статье [Connection Options](../../connect/php/connection-options.md).  
   
-## <a name="example"></a>Пример  
+## <a name="sqlsrv-example"></a>Пример SQLSRV  
 Следующий пример использует драйвер SQLSRV с проверкой подлинности SQL Server для подключения к локальному экземпляру SQL Server. Значения для необходимых атрибутов подключения *UID* и *PWD* берутся из текстовых файлов для конкретного приложения (*uid.txt* и *pwd.txt*), находящихся в каталоге *C:\AppData*. После установки соединения на сервер отправляется запрос для проверки имени входа пользователя.  
   
 В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
@@ -95,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Пример  
+## <a name="pdo_sqlsrv-example"></a>Пример PDO_SQLSRV  
 Этот пример использует драйвер PDO_SQLSRV для демонстрации подключения с помощью проверки подлинности SQL Server.  
   
 ```  

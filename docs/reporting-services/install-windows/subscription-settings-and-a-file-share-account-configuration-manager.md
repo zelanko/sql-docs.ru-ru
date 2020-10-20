@@ -1,6 +1,6 @@
 ---
 title: Параметры подписки и учетная запись общей папки (диспетчер конфигураций) | Документация Майкрософт
-description: На странице Параметры подписки диспетчера конфигураций служб Reporting Services можно настроить учетную запись общей папки для серверов отчетов, работающих в собственном режиме, и подписки на общую папку.
+description: На странице "Параметры подписки" диспетчера конфигурации сервера отчетов можно настроить учетную запись общей папки для серверов отчетов, работающих в собственном режиме, и подписки на общую папку.
 ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,14 +11,14 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866277"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935551"
 ---
-# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>Параметры подписки и учетная запись общей папки (диспетчер конфигураций SSRS)
+# <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>Параметры подписки и учетная запись общей папки (диспетчер конфигурации сервера отчетов)
   На странице **Параметры подписки** диспетчера конфигураций [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно настроить учетную запись общей папки для серверов отчетов, работающих в основном режиме, и подписки на общую папку. Учетная запись общей папки позволяет использовать один набор учетных данных в нескольких подписках, доставляющих отчеты в общую папку. Когда требуется изменить учетные данные, достаточно настроить изменение учетной записи общей папки, и вам не придется обновлять каждую подписку по отдельности.  
   
  Для подписок на общую папку [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] существуют два рабочих процесса:  

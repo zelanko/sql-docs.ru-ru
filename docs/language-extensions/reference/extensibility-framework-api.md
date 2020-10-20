@@ -4,24 +4,24 @@ titleSuffix: SQL Server Language Extensions
 description: Платформу расширяемости можно использовать для написания расширений языка программирования для SQL Server. API платформы расширяемости для Microsoft SQL Server — это API, который может использоваться расширением языка для взаимодействия и обмена данными с SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 04/09/2020
+ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765768"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956865"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>API платформы расширяемости для SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Платформу расширяемости можно использовать для написания расширений языка программирования для SQL Server. API платформы расширяемости для Microsoft SQL Server — это API, который может использоваться расширением языка для взаимодействия и обмена данными с SQL Server.
 
-Как автор расширения языка, вы можете использовать эту ссылку вместе с [расширением языка Java с открытым кодом для SQL Server](../how-to/extensibility-sdk-java-sql-server.md), чтобы понять, как использовать API для написания собственных расширений языка. Исходный код для расширения языка Java можно найти по адресу [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
+Как автор расширения языка вы можете использовать эту ссылку вместе с расширениями языка с открытым кодом, чтобы понять, как использовать API для написания собственных расширений языка. Исходный код для расширения языка можно найти по адресу [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
 Сведения о синтаксисе и аргументах для всех функций API приведены ниже.
 
@@ -36,7 +36,7 @@ ms.locfileid: "91765768"
 
 ## <a name="init"></a>Init
 
-Эта функция вызывается только один раз и используется для инициализации среды выполнения. Например, расширение Java инициализирует виртуальную машину Java.
+Эта функция вызывается только один раз и используется для инициализации среды выполнения. 
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -304,14 +304,14 @@ SQLRETURN Execute(
 \[Входные данные\] Количество строк в *Data*.
 
 *Data*  
-\[Входные данные\] Двумерный массив, содержащий результирующий набор `@input_data_1` в [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+\[Входные данные\]. Двумерный массив, содержащий результирующий набор `@input_data_1` в [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 Общее число столбцов равно значению *InputSchemaColumnsNumber*, полученному в вызове [InitSession](#initsession). Каждый столбец содержит элементы в количестве *RowsNumber*, которые должны интерпретироваться в соответствии с типом столбца из [InitColumn](#initcolumn).
 
 Элементы, отмеченные как NULL, в *StrLen_or_Ind* не обязательно являются допустимыми, и их следует игнорировать.
 
 *StrLen_or_Ind*  
-\[Входные данные\] Двумерный массив, содержащий индикатор длины или NULL для каждого значения в *Data*. Возможные значения для каждой ячейки:
+\[Входные данные\]. Двумерный массив, содержащий индикатор длины или NULL для каждого значения в *Data*. Возможные значения для каждой ячейки:
 
 - n, где n > 0. Указывает длину данных в байтах.
 - SQL_NULL_DATA, указывающее значение NULL.
@@ -407,12 +407,12 @@ SQLRETURN GetResults(
 \[Выходные данные\] Указатель на буфер, содержащий количество строк в *Data*.
 
 *Data*  
-\[Выходные данные\] Указатель на двумерный массив, выделенный расширением и содержащий результирующий набор `@script` в [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+\[Выходные данные\]. Указатель на двумерный массив, выделенный расширением и содержащий результирующий набор `@script` в [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 Общее число столбцов должно быть равно значению *OutputSchemaColumnsNumber*, полученному в вызове [Execute](#execute). Каждый столбец должен содержать элементы в количестве *RowsNumber*, которые должны интерпретироваться в соответствии с типом столбца из [GetResultColumn](#getresultcolumn).
 
 *StrLen_or_Ind*  
-\[Выходные данные\] Указатель на двумерный массив, выделенный расширением и содержащий индикатор длины или значения NULL для каждого значения в *Data*. Возможные значения для каждой ячейки:
+\[Выходные данные\]. Указатель на двумерный массив, выделенный расширением и содержащий индикатор длины или значения NULL для каждого значения в *Data*. Возможные значения для каждой ячейки:
 
 - n, где n > 0. Указывает длину данных в байтах.
 - SQL_NULL_DATA, указывающее значение NULL.
@@ -638,3 +638,5 @@ SQLRETURN UninstallExternalLibrary(
 ## <a name="next-steps"></a>Дальнейшие действия
 
 - [Пакет SDK Майкрософт для расширения возможностей Java в SQL Server](../how-to/extensibility-sdk-java-sql-server.md)
+- [Настраиваемая среда выполнения Python](../../machine-learning/install/custom-runtime-python.md)
+- [Настраиваемая среда выполнения R](../../machine-learning/install/custom-runtime-r.md).

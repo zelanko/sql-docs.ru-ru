@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391809"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080644"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 Если результирующий набор содержит несколько столбцов без имени, значение последнего столбца без имени присваивается ключу пустой строки ("").  
   
-## <a name="example"></a>Пример  
+## <a name="associative-array-example"></a>Пример ассоциативного массива  
 Следующий пример извлекает каждую строку результирующего набора в виде ассоциативного **массива**. В примере предполагается, что SQL Server и база данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
@@ -121,7 +121,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Пример  
+## <a name="indexed-array-xample"></a>Пример индексированного массива  
 Следующий пример извлекает каждую строку результирующего набора в виде массива с числовым индексом.  
   
 Пример извлекает из таблицы *Purchasing.PurchaseOrderDetail* базы данных AdventureWorks сведения о продуктах с определенной датой и запасом (*StockQty*) меньше указанного значения.  

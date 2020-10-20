@@ -13,12 +13,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 292736c937a2345e88964521ea294c69595729e5
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 39f1f79701a0a3fd871b2b273a48197b8b42187b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412893"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005890"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачать SQL Server Data Tools (SSDT) для Visual Studio
 
@@ -39,7 +39,7 @@ ms.locfileid: "91412893"
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Установка SSDT с Visual Studio 2019
 
-Если среда [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019&preserve-view=true) уже установлена, вы можете изменить список рабочих нагрузок, включив в него SSDT. Если вы еще не установили Visual Studio 2019, вы можете скачать и использовать [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
+Если среда [Visual Studio 2019](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2019) уже установлена, вы можете изменить список рабочих нагрузок, включив в него SSDT. Если вы еще не установили Visual Studio 2019, вы можете скачать и использовать [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
 
 Чтобы изменить установленные рабочие нагрузки Visual Studio для включения SSDT, используйте установщик Visual Studio Installer.
 
@@ -164,7 +164,7 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 |Шаблоны проектов|Поддерживаемые платформы SQL|
 |-------------------|--------------------|
-|реляционные базы данных| SQL Server 2005\* — SQL Server 2017<br> (используйте SSDT 17.x или SSDT for Visual Studio 2017 для подключения к [SQL Server на Linux](../linux/sql-server-linux-overview.md))<br /><br />База данных SQL Azure<br /><br />Хранилище данных SQL Azure (поддерживает только запросы, проекты базы данных пока не поддерживаются).<br /><br /> \* Версия SQL Server 2005 не поддерживается,<br /><br /> перейдите на поддерживаемую версию SQL.|
+|реляционные базы данных| SQL Server 2005\* — SQL Server 2017<br> (используйте SSDT 17.x или SSDT for Visual Studio 2017 для подключения к [SQL Server на Linux](../linux/sql-server-linux-overview.md))<br /><br />База данных SQL Azure<br /><br />Azure Synapse Analytics (поддерживает только запросы, проекты базы данных пока не поддерживаются)<br /><br /> \* Версия SQL Server 2005 не поддерживается,<br /><br /> перейдите на поддерживаемую версию SQL.|
 |Модели служб Analysis Services<br /><br />Reporting Services, отчеты служб | SQL Server 2008 — SQL Server 2017|
 |пакеты служб Integration Services| SQL Server 2012 — SQL Server 2019 |
 
@@ -180,9 +180,9 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 * [Форум MSDN по SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [Блог группы разработчиков SSDT](https://docs.microsoft.com/archive/blogs/ssdt/)
+* [Блог группы разработчиков SSDT](/archive/blogs/ssdt/)
 
-* [Справочник по API DACFx](https://msdn.microsoft.com/library/dn645454.aspx)
+* [Справочник по API DACFx](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))
 
 * [Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -194,7 +194,7 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 * [Учебник по службам SSIS. Создание простого ETL-пакета](../integration-services/ssis-how-to-create-an-etl-package.md)
 
-* [Руководства по службам Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)
+* [Руководства по службам Analysis Services](/analysis-services/analysis-services-tutorials-ssas)
 
 * [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 

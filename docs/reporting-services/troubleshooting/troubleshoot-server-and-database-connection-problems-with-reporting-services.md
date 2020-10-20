@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5946e49610acd59603b6730381e586ea3456ac8d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 968de0f9cf8c95b13a67f3fb2b0f36e3d8c09ced
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662792"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986116"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Устранение неполадок с подключением к серверу и базе данных в Reporting Services
-Используйте этот раздел, чтобы решать проблемы, возникающие при подключении к серверу отчетов. Также в этом разделе описываются сообщения о непредвиденных ошибках. Дополнительные сведения о настройке источников данных и настройке данных о подключении сервера отчетов см. в разделах [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) и [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Используйте этот раздел, чтобы решать проблемы, возникающие при подключении к серверу отчетов. Также в этом разделе описываются сообщения о непредвиденных ошибках. Дополнительные сведения о настройке источников данных и настройке данных о подключении сервера отчетов см. в разделах [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) и [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>Невозможно создать соединение с источником данных «имя_источника_данных». (rsErrorOpeningConnection)  
 Это общая ошибка, которая происходит, если сервер отчетов не может открыть соединение с внешним источником данных, содержащим данные отчета. Эта ошибка появляется вместе со вторым сообщением об ошибке, указывающим причину. Следующие дополнительные ошибки могут появиться вместе с **rsErrorOpeningConnection**.  
@@ -32,7 +32,7 @@ ms.locfileid: "80662792"
 Эта ошибка при соединении с SQL Server может быть вызвана тем, что в параметрах SQL Server по умолчанию запрещены удаленные соединения. (поставщик: поставщик именованных каналов, ошибка: 40 — Невозможно открыть соединение с SQL Server). Эта ошибка возвращается экземпляром компонента Database Engine, где находится база данных сервера отчетов. В большинстве случаев она возникает из-за остановки службы SQL Server. Кроме того, если используется выпуск SQL Server Express с Advanced Services или именованный экземпляр, эта ошибка возникает, если неправильно указан URL-адрес сервера отчетов или строка соединения с базой данных сервера отчетов. Чтобы решить эти проблемы, нужно сделать следующее.  
   
 * Убедитесь, что служба SQL Server (**MSSQLSERVER**) запущена. На компьютере экземпляра компонента Database Engine нажмите кнопку "Пуск", выберите "Администрирование", "Службы" и перейдите к службе SQL Server (**MSSQLSERVER**). Если эта служба не запущена, щелкните ее правой кнопкой мыши, выберите пункт "Свойства", для параметра "Тип запуска" выберите значение "Автоматически", затем последовательно нажмите кнопки "Применить", "Пуск" и "ОК".   
-* Проверьте правильность URL-адреса сервера отчетов и строки подключения к базе данных сервера отчетов. Если службы Reporting Services или компонент Database Engine были установлены как именованный экземпляр, строка соединения по умолчанию, которая создается во время установки, будет содержать имя экземпляра. Например, если экземпляр по умолчанию выпуска SQL Server Express с дополнительными службами устанавливался на сервер с именем DEVSRV01, URL-адресом веб-портала будет DEVSRV01\Reports$SQLEXPRESS. Имя базы данных сервера отчетов в строке соединения будет похоже на DEVSRV01\SQLEXPRESS. Дополнительные сведения о URL-адресах и строках соединения с источниками данных для SQL Server Express см. в разделе [Службы Reporting Services в выпуске SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Чтобы проверить строку соединения с базой данных сервера отчетов, запустите программу настройки служб Reporting Services и просмотрите страницу "Установка базы данных".  
+* Проверьте правильность URL-адреса сервера отчетов и строки подключения к базе данных сервера отчетов. Если службы Reporting Services или компонент Database Engine были установлены как именованный экземпляр, строка соединения по умолчанию, которая создается во время установки, будет содержать имя экземпляра. Например, если экземпляр по умолчанию выпуска SQL Server Express с дополнительными службами устанавливался на сервер с именем DEVSRV01, URL-адресом веб-портала будет DEVSRV01\Reports$SQLEXPRESS. Имя базы данных сервера отчетов в строке соединения будет похоже на DEVSRV01\SQLEXPRESS. Дополнительные сведения о URL-адресах и строках соединения с источниками данных для SQL Server Express см. в разделе [Службы Reporting Services в выпуске SQL Server Express with Advanced Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105)). Чтобы проверить строку соединения с базой данных сервера отчетов, запустите программу настройки служб Reporting Services и просмотрите страницу "Установка базы данных".  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Невозможно установить соединение. Убедитесь, что запущен сервер.  
 Эта ошибка возвращается поставщиком ADOMD.NET. Существует несколько возможных причин этой ошибки. Если сервер указан как «localhost», попробуйте вместо этого указать имя сервера. Эта ошибка может также произойти в случае, если невозможно выделить память для нового соединения. Дополнительные сведения см. в [статье 912017 базы знаний. Сообщение об ошибке при подключении к экземпляру служб Analysis Services SQL Server 2005:](https://support.microsoft.com/kb/912017)(Error message when you connect to an instance of SQL Server 2005 Analysis Services:).  
@@ -56,7 +56,7 @@ ms.locfileid: "80662792"
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Ошибка инструментария WMI при соединении с сервером отчетов в среде Management Studio  
 По умолчанию среда Management Studio использует инструментарий управления Windows (WMI) служб Reporting Services, чтобы установить соединение с сервером отчетов. Если поставщик WMI установлен неправильно, при попытке установить соединение с сервером отчетов возникнет следующая ошибка.  
   
-Невозможно установить соединение с \<имя_сервера>. Поставщик WMI служб Reporting Services не установлен или не настроен (Microsoft.SqlServer.Management.UI.RSClient)».  
+Не удается подключиться к \<your server name>. Поставщик WMI служб Reporting Services не установлен или не настроен (Microsoft.SqlServer.Management.UI.RSClient)».  
   
 Чтобы устранить эту ошибку, необходимо переустановить программное обеспечение. В других случаях в качестве временного решения можно соединиться с сервером отчетов через конечную точку SOAP.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "80662792"
   
 Полный текст ошибки: "Серверу отчетов не удается установить соединение с базой данных сервера отчетов. Вход не выполнен (**rsReportServerDatabaseLogonFailed**). Ошибка входа в систему: неизвестное имя пользователя или неправильный пароль».  
   
-Если изменен пароль, то необходимо обновить соединение. Дополнительные сведения см. в разделе [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Если изменен пароль, то необходимо обновить соединение. Дополнительные сведения см. в разделе [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="the-report-server-cannot-open-a-connection-to-the-report-server-database-rsreportserverdatabaseunavailable"></a>Серверу отчетов не удается установить соединение с базой данных сервера отчетов. (rsReportServerDatabaseUnavailable).  
 Полное сообщение: Серверу отчетов не удается установить соединение с базой данных сервера отчетов. Для выполнения запросов и обработки данных требуется соединение с базой данных». (rsReportServerDatabaseUnavailable)  
@@ -120,4 +120,3 @@ ms.locfileid: "80662792"
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

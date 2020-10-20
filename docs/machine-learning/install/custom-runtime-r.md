@@ -9,18 +9,18 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227166"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956394"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Установка настраиваемой среды выполнения R для SQL Server
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-В этой статье описывается, как установить настраиваемую среду выполнения для запуска скриптов R с SQL Server. Настраиваемую среду выполнения R можно использовать в следующих сценариях.
+В этой статье описывается, как установить настраиваемую среду выполнения для запуска скриптов R с SQL Server. Настраиваемая среда выполнения использует технологию расширения языка, созданную на основе платформы расширяемости, для выполнения внешнего кода. Настраиваемую среду выполнения R можно использовать в следующих сценариях.
 
 + Установка SQL Server с платформой расширяемости.
 
@@ -71,7 +71,7 @@ ms.locfileid: "91227166"
     + Службы ядра СУБД
     + Службы машинного обучения и расширения языка
 
-1. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## <a name="install-r"></a>Установка R
 

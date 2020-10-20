@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 09/24/2019
+ms.openlocfilehash: 7f032d870952cdadbde79dbf56f4c63ae351d6e9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746154"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081573"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Система управления версиями в Azure Data Studio
 
@@ -22,7 +22,7 @@ Azure Data Studio поддерживает Git для управления в�
 
 ## <a name="git-support-in-azure-data-studio"></a>Поддержка Git в Azure Data Studio
 
-Azure Data Studio поставляется вместе с диспетчером системы управления версиями (SCM) Git, но вам все равно нужно [установить Git (версии 2.0.0 или более поздней)](https://git-scm.com/download), чтобы получить доступ к этим функциям. 
+Azure Data Studio поставляется вместе с диспетчером системы управления версиями (SCM) Git, но вам все равно нужно [установить Git (версии 2.0.0 или более поздней)](https://git-scm.com/download), чтобы получить доступ к этим функциям.
 
 ## <a name="open-an-existing-git-repository"></a>Открытие существующего репозитория Git
 

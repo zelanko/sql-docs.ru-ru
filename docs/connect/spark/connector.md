@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 47412f3781274fa242c03975295cdc5ba66b1669
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 059ecfb25389de1be0f8636a868e81e621e57bac
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284818"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867236"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Соединитель Apache Spark для SQL Server и Azure SQL
 
@@ -25,7 +25,7 @@ ms.locfileid: "89284818"
 
 [Apache Spark](https://spark.apache.org/) — это единый аналитический механизм для крупномасштабной обработки данных.
 
-Вы можете создать соединитель на основе источника данных или скачать JAR-файл из раздела выпуска на GitHub. Последние сведения о соединителе см. в [репозитории GitHub для соединителя Spark SQL](https://github.com/microsoft/sql-spark-connector).
+Вы можете импортировать соединитель в проект с помощью координат Maven: `com.microsoft.azure:spark-mssql-connector:1.0.0`. Вы также можете создать соединитель на основе источника данных или скачать JAR-файл из раздела выпуска на GitHub. Последние сведения о соединителе см. в [репозитории GitHub для соединителя Spark SQL](https://github.com/microsoft/sql-spark-connector).
 
 ## <a name="supported-features"></a>Поддерживаемые функции
 
@@ -49,14 +49,15 @@ ms.locfileid: "89284818"
 ### <a name="supported-options"></a>Поддерживаемые варианты
 Соединитель Apache Spark для SQL Server и Azure SQL поддерживает параметры, определенные здесь: [SQL DataSource JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
 
-Кроме того, поддерживаются указанные ниже параметры.
+Кроме того, поддерживаются указанные ниже параметры
 
-| Параметр | По умолчанию | Описание |
+| Параметр | Значение по умолчанию | Описание |
 | --------- | ------------------ | ------------------------------------------ |
-| `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` или `NO_DUPLICATES`. `NO_DUPLICATES` реализует надежную операцию вставки в сценариях перезапуска исполнителя. |
-| `dataPoolDataSource` | `none` | `none` означает, что значение не задано и соединитель должен записывать данные в один экземпляр SQL Server. Присвойте этому параметру имя источника данных для записи в таблицу пула данных в кластере больших данных SQL Server.|
+| `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` или `NO_DUPLICATES`. `NO_DUPLICATES` реализует надежную операцию вставки в сценариях перезапуска исполнителя |
+| `dataPoolDataSource` | `none` | `none` означает, что значение не задано и соединитель должен записывать данные в один экземпляр SQL Server. Присвойте этому параметру имя источника данных для записи в таблицу пула данных в кластере больших данных|
 | `isolationLevel` | `READ_COMMITTED` | Указание уровня изоляции |
 | `tableLock` | `false` | Реализует операцию вставки с параметром `TABLOCK` для повышения производительности записи. |
+| `schemaCheckEnabled` | `true` | Отключает строгие проверки кадра данных и схемы таблицы SQL, если установлено значение false |
 
 Другие [параметры массового копирования](../jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions) могут быть заданы в качестве параметров для `dataframe` и передаваться в API `bulkcopy` при записи.
 
@@ -227,3 +228,5 @@ jdbc_df = spark.read \
 ## <a name="next-steps"></a>Дальнейшие шаги
 
 Посетите [репозиторий GitHub для соединителя SQL Spark](https://github.com/microsoft/sql-spark-connector).
+
+Сведения об уровнях изоляции см. в разделе [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70dde30aeade9841a317bc8a2b9db418ba5ccd79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 508743337b7de7b6655b66d718b8bad02882b4a1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418620"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935435"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Добавление и удаление ключей шифрования для масштабного развертывания
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут работать в модели масштабного развертывания, где несколько серверов отчетов настроены на использование общей базы данных. Членство в масштабном развертывании основано на том, хранит ли сервер отчетов ключ шифрования в базе данных сервера отчетов. Этим членством можно управлять за счет добавления и удаления ключей шифрования для конкретных экземпляров серверов отчетов. При удалении узлов из конфигурации развертывания их можно удалять в любом порядке. Если добавляются узлы к конфигурации, необходимо подключать все новые экземпляры с сервера отчетов, который уже входит в конфигурацию.  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>Использование программы настройки служб Reporting Services для масштабного развертывания  
- Наиболее простым способом настройки масштабного развертывания является применение программы настройки служб Reporting Services. Дополнительные сведения и пошаговые инструкции см. в разделе [Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ Наиболее простым способом настройки масштабного развертывания является применение программы настройки служб Reporting Services. Дополнительные сведения и пошаговые инструкции см. в разделе [Настройка развертывания с горизонтальным увеличением масштаба сервера отчетов в собственном режиме (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="using-rskeymgmt-to-configure-scale-out-deployment"></a>Использование Rskeymgmt для настройки масштабного развертывания  
  Программа **rskeymgmt** служит для инициализации использования экземпляром сервера отчетов общей базы данных сервера отчетов. Добавление сервера отчетов в масштабное развертывание требует инициализации сервера отчетов. Инициализация требует административных разрешений. Необходимо иметь права администратора для удаленного компьютера, на котором размещается сервер отчетов, присоединяемый к развертыванию.  
@@ -62,7 +62,7 @@ ms.locfileid: "88418620"
  Данные шаги удаляют сервер отчетов из масштабного развертывания, однако удаления экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов не производится. После того как сервер отчетов будет удален из масштабного развертывания, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно удалить с сервера (если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] более не нужны). Сведения см. в статье [Удаление существующего экземпляра SQL Server &#40;программа установки&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).
   
 ## <a name="see-also"></a>См. также:  
- [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Инициализация сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Настройка ключей шифрования и управление ими (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Инициализация сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

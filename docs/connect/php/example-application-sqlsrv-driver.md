@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 69df287d23713b1465a44f46e68f190bf3e25b09
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728347"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081743"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Пример приложения (драйвер SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "81728347"
 -   На локальном компьютере установлен SQL Server 2005 или SQL Server 2008 с подключенной базой данных [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).  
 -   Установлен веб-браузер.  
   
-## <a name="demonstrates"></a>Что демонстрирует  
+## <a name="adventureworks-example"></a>Пример AdventureWorks  
 Пример приложения обзоров продуктов AdventureWorks демонстрирует следующее:  
   
 -   открытие соединения с SQL Server с использованием проверки подлинности Windows;  
@@ -52,8 +52,7 @@ ms.locfileid: "81728347"
 -   отправка данных в виде потока;  
 -   проверка на наличие ошибок.  
   
-## <a name="example"></a>Пример  
-Пример приложения обзоров продуктов AdventureWorks возвращает из базы данных сведения о тех продуктах, имена которых содержат введенную пользователем строку. В списке возвращенных продуктов пользователь может просмотреть обзоры, изображение, отправить изображение и создать обзор для выбранного продукта.  
+Этот пример возвращает из базы данных сведения о тех продуктах, имена которых содержат введенную пользователем строку. В списке возвращенных продуктов пользователь может просмотреть обзоры, изображение, отправить изображение и создать обзор для выбранного продукта.  
   
 Поместите следующий код в файл с именем adventureworks_demo.php:  
   
@@ -492,7 +491,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## <a name="example"></a>Пример  
+## <a name="lob-example"></a>Пример LOB  
 Скрипт photo.php возвращает фотографию продукта для указанного **ProductID**. Этот скрипт вызывается из скрипта adventureworks_demo.php.  
   
 Поместите следующий код в файл с именем photo.php:  

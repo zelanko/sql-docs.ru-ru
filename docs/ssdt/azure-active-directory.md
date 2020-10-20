@@ -1,6 +1,6 @@
 ---
 title: Azure Active Directory в SSDT
-description: Узнайте о методах проверки подлинности Azure Active Directory, предоставляемых SQL Server Data Tools (SSDT) для базы данных SQL Azure и хранилища данных SQL Azure.
+description: Узнайте о методах проверки подлинности Azure Active Directory, предоставляемых SQL Server Data Tools (SSDT) для базы данных SQL Azure и Azure Synapse Analytics.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480848"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005922"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Поддержка Azure Active Directory в SQL Server Data Tools (SSDT)
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-SQL Server Data Tools (SSDT) предоставляет несколько методов проверки подлинности [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis).
+SQL Server Data Tools (SSDT) предоставляет несколько методов проверки подлинности [Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-whatis).
 
 В Visual Studio откройте **Обозреватель объектов SQL Server** (в меню **Представление**) и выберите **Добавить SQL Server**:
 
@@ -32,7 +32,7 @@ SQL Server Data Tools (SSDT) предоставляет несколько ме�
 В этой статье рассматривается Azure AD для следующего списка *продуктов SQL Azure*  в [облаке Azure](https://azure.microsoft.com/).
 
 - База данных SQL Azure
-- Хранилище данных SQL Azure
+- Azure Synapse Analytics
 
 ## <a name="active-directory-password-authentication"></a>Проверка подлинности с помощью пароля Active Directory
 
@@ -41,18 +41,18 @@ SQL Server Data Tools (SSDT) предоставляет несколько ме�
 - вы вошли в Windows с помощью учетных данных из домена, не включенного в федерацию с Azure; или
 - вы используете проверку подлинности Azure AD с Azure AD на базе первоначального домена или домена клиента.
 
-См. дополнительные сведения об [использовании аутентификации Azure Active Directory для аутентификации с помощью SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
+См. дополнительные сведения об [использовании аутентификации Azure Active Directory для аутентификации с помощью SQL](/azure/sql-database/sql-database-aad-authentication).  
 
 ## <a name="active-directory-integrated-authentication"></a>Интегрированная проверка подлинности Active Directory
 
-*Интегрированная проверка подлинности Active Directory* — это механизм подключения к перечисленным продуктам SQL Azure с помощью удостоверений в Azure Active Directory (Azure AD). Используйте этот метод для подключения, если вы вошли в Windows с учетными данными Azure Active Directory из федеративного домена. См. дополнительные сведения об [использовании аутентификации Azure Active Directory для аутентификации с помощью SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+*Интегрированная проверка подлинности Active Directory* — это механизм подключения к перечисленным продуктам SQL Azure с помощью удостоверений в Azure Active Directory (Azure AD). Используйте этот метод для подключения, если вы вошли в Windows с учетными данными Azure Active Directory из федеративного домена. См. дополнительные сведения об [использовании аутентификации Azure Active Directory для аутентификации с помощью SQL](/azure/sql-database/sql-database-aad-authentication).
 
 ## <a name="active-directory-interactive-authentication"></a>Интерактивная проверка подлинности Active Directory
 
-*Интерактивная проверка подлинности Active Directory* доступна при подключении к перечисленным продуктам SQL Azure с помощью SSDT, но только с [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) или более поздней версии.
+*Интерактивная проверка подлинности Active Directory* доступна при подключении к перечисленным продуктам SQL Azure с помощью SSDT, но только с [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) или более поздней версии.
 
 - [Скачайте и установите для .NET Framework (любую версию)](https://www.microsoft.com/net/download/all).
-- [Visual Studio 2017 версия 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) или более поздняя.
+- [Visual Studio 2017 версия 15.6](/visualstudio/releasenotes/vs2017-relnotes) или более поздняя.
 
 #### <a name="multi-factor-authentication-mfa"></a>Многофакторная идентификация (MFA)
 
@@ -86,9 +86,9 @@ SQL Server Data Tools (SSDT) предоставляет несколько ме�
 
 ## <a name="see-also"></a>См. также:  
 
-[Многофакторная проверка подлинности](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
-[Настройка аутентификации Azure Active Directory и управление ею с использованием базы данных SQL или хранилища данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
+[Многофакторная проверка подлинности](/azure/sql-database/sql-database-ssms-mfa-authentication)  
+[Настройка аутентификации Azure Active Directory и управление ею с использованием базы данных SQL или хранилища данных SQL](/azure/sql-database/sql-database-aad-authentication-configure)  
 [Форум MSDN по SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[Блог группы разработчиков SSDT](https://docs.microsoft.com/archive/blogs/ssdt/)  
-[Справочник по API DACFx](https://msdn.microsoft.com/library/dn645454.aspx)  
-[Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
+[Блог группы разработчиков SSDT](/archive/blogs/ssdt/)  
+[Справочник по API DACFx](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
+[Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

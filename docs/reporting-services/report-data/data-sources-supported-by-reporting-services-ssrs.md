@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88c6ae8820997bf1544ac497df6cb251c215a1ac
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603498"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006455"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -157,7 +157,7 @@ ms.locfileid: "91603498"
   
  Если конструктор запросов используется в графическом режиме, запрос анализируется и, возможно, переписывается. Текстовый конструктор запросов также доступен для написания запросов. Текстовый конструктор запросов можно использовать при необходимости четкого управления синтаксисом [!INCLUDE[tsql](../../includes/tsql-md.md)] в запросе.   
   
- Получение данных из [!INCLUDE[ssSDS](../../includes/sssds-md.md)], хранилища данных SQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется аналогично, однако существует ряд требований, относящихся только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Дополнительные сведения см. в разделе [Тип соединения SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
+ Получение данных из [!INCLUDE[ssSDS](../../includes/sssds-md.md)], Azure Synapse Analytics и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется аналогично, однако существует ряд требований, относящихся только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Дополнительные сведения см. в разделе [Тип соединения SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "91603498"
   
  Поставщик данных использует объектную модель ADOMD.NET для создания запросов с помощью XML для аналитики (XMLA) версии 1.1. Результаты возвращаются в виде плоского набора строк. Дополнительные сведения см. в разделах [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) и [Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
- Для источников данных Azure Analysis Services и набора данных Power BI Premium обратите внимание, что многофакторная проверка подлинности должна быть отключена для учетных данных, используемых для подключения к источнику данных. Если в вашей среде необходимо включить многофакторную проверку подлинности, обратитесь к разделу <a href="https://docs.microsoft.com/azure/active-directory/conditional-access/overview">Условный доступ Azure Active Directory</a>, чтобы узнать, как отключить многофакторную проверку подлинности для учетных данных, используемых в источнике данных.
+ Для источников данных Azure Analysis Services и набора данных Power BI Premium обратите внимание, что многофакторная проверка подлинности должна быть отключена для учетных данных, используемых для подключения к источнику данных. Если в вашей среде необходимо включить многофакторную проверку подлинности, обратитесь к разделу <a href="/azure/active-directory/conditional-access/overview">Условный доступ Azure Active Directory</a>, чтобы узнать, как отключить многофакторную проверку подлинности для учетных данных, используемых в источнике данных.
   
  При соединении с источником данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] модуль обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает параметры с несколькими значениями и сопоставляет свойства ячеек и элементов с расширенными свойствами, поддерживаемыми [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
@@ -240,7 +240,7 @@ ms.locfileid: "91603498"
   
  Этот модуль поддерживает именованные параметры. Oracle версии 11g или более поздней поддерживает параметры с несколькими значениями. Для работы с безымянными параметрами, зависящими от позиции, используйте модуль обработки данных OLE DB с поставщиком данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для Oracle. Дополнительные сведения о настройке Oracle в качестве источника данных см. в разделе [Как использовать службы Reporting Services для настройки источника данных Oracle и доступа к нему](https://support.microsoft.com/kb/834305). Сведения о дополнительной настройке разрешений см. в статье [Как добавить разрешения для субъекта безопасности NETWORK SERVICE](https://support.microsoft.com/kb/870668) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- Можно получить данные из хранимых процедур с несколькими входными параметрами, но эти процедуры должны возвращать только один выходной курсор. Дополнительные сведения см. в разделе [Returning results with Oracle REF CURSORs](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) (Возвращение результатов при помощи Oracle REF CURSOR) в статье "Retrieve data using a DataReader" (Получение данных с помощью DataReader).
+ Можно получить данные из хранимых процедур с несколькими входными параметрами, но эти процедуры должны возвращать только один выходной курсор. Дополнительные сведения см. в разделе [Returning results with Oracle REF CURSORs](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) (Возвращение результатов при помощи Oracle REF CURSOR) в статье "Retrieve data using a DataReader" (Получение данных с помощью DataReader).
   
  Дополнительные сведения см. в разделе [Тип соединения Oracle (службы SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md). Дополнительные сведения о соответствующем конструкторе запросов см. в разделах [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -317,5 +317,4 @@ ms.locfileid: "91603498"
  [Create data connection strings — Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  (Создание строк подключения к данным (построитель отчетов и службы SSRS))  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

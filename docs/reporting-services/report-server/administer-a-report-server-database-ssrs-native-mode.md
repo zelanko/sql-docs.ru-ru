@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e288b9b92f4fed7f103b3e4f37ed696b76a1f32f
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: da113897d64fc06a736455320f638ad4c0d82387
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548096"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934175"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)
   В развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в качестве внутреннего хранилища используются две реляционные базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию эти базы данных имеют имена ReportServer и ReportServerTempdb. База данных ReportServerTempdb создается вместе с основной базой данных сервера отчетов и используется для хранения временных данных, сведений о сеансе и кэшированных отчетов.  
@@ -34,7 +34,7 @@ ms.locfileid: "84548096"
   
 -   Чтобы скопировать содержимое существующей базы данных в другую базу данных сервера отчетов, можно присоединить копию базы данных сервера отчетов и использовать ее с другим экземпляром сервера отчетов. Либо можно создать и выполнить скрипт, использующий вызовы SOAP для повторного создания содержимого сервера отчетов в новой базе данных. Для выполнения скрипта можно использовать служебную программу **rs** .  
   
--   Чтобы управлять соединениями между сервером отчетов и его базой данных и найти, какая база данных используется для экземпляра сервера отчетов, можно использовать страницу «Установка базы данных» средства настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о подключении сервера отчетов к базе данных сервера отчетов см. в разделе [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   Чтобы управлять соединениями между сервером отчетов и его базой данных и найти, какая база данных используется для экземпляра сервера отчетов, можно использовать страницу «Установка базы данных» средства настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о подключении сервера отчетов к базе данных сервера отчетов см. в разделе [Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="sql-server-login-and-database-permissions"></a>Разрешения на вход в систему и доступ к базам данных SQL Server  
  Базы данных сервера отчетов используются сервером отчетов для внутренних целей. Соединения с любой базой данных устанавливаются службой сервера отчетов. Чтобы настроить соединение сервера отчетов с базой данных сервера отчетов, применяется средство настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -78,15 +78,16 @@ SET READ_COMMITTED_SNAPSHOT OFF
  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]явная информация о версии базы данных не доступна. Но так как версия базы данных всегда синхронизирована с версией продукта, для определения факта смены версии базы данных можно пользоваться сведениями о версии продукта. Информация о версии продукта для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отображается в виде информации о версии файла, которая появляется в файлах журналов, заголовках всех вызовов SOAP, а также в URL-адресе сервера отчетов (например, при открытии в браузере адреса `https://localhost/reportserver`).  
   
 ## <a name="see-also"></a>См. также:  
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+
+ [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Создание базы данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Операции резервного копирования и восстановления для служб Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Хранение зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Настройка ключей шифрования и управление ими (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

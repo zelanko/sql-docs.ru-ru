@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 15130a351548ab5ad1d21ef2142b5b8c68db11b8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435199"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081873"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 unset($stmt);
 ```
 
-## <a name="example"></a>Пример
+## <a name="forward-only-example"></a>Пример последовательного доступа
 Этот пример показывает, как использовать метод PDO::prepare с маркерами параметров и курсором последовательного доступа.
 
 ```
@@ -100,7 +100,7 @@ unset($stmt);
 ?>
 ```
 
-## <a name="example"></a>Пример
+## <a name="static-cursor-example"></a>Пример статического курсора
 Этот пример показывает, как использовать метод PDO::prepare с маркерами параметров и статическим курсором на стороне сервера. Пример использования курсора на стороне клиента см. в статье [Типы курсоров (драйвера PDO_SQLSRV)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
 ```
@@ -140,7 +140,7 @@ print_r($row);
 ?>
 ```
 
-## <a name="example"></a>Пример
+## <a name="targeted-example"></a>Пример целевого объекта
 В следующих двух фрагментах показано, как использовать PDO::prepare для данных, которые предназначены для столбцов CHAR/VARCHAR. Поскольку по умолчанию для PDO::prepare используется кодировка UTF-8, пользователь может избежать неявных преобразований, указав параметр `PDO::SQLSRV_ENCODING_SYSTEM`.
 
 **Вариант 1**
@@ -169,7 +169,7 @@ $statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCO
 
 <a name="emulate-prepare" />
 
-## <a name="example"></a>Пример
+## <a name="prepare-example"></a>Пример подготовки
 
 В этом примере показано, как использовать PDO::prepare с `PDO::ATTR_EMULATE_PREPARES`, имеющим значение true.
 

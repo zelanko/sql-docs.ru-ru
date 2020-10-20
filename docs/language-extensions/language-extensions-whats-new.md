@@ -9,21 +9,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f90d3d25009676f33f57c42ced48284dfae75bd2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: ca15786b88c62b41202310bd537a3224ddea458e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765752"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934886"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>Новые возможности расширений языка SQL Server
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
-Возможности [расширений языка](language-extensions-overview.md) добавляются в SQL Server в каждом выпуске, так как мы продолжаем расширять и углублять интеграцию между внешними языками и платформой данных. 
+Возможности [расширений языка](language-extensions-overview.md) добавляются в SQL Server в каждом выпуске, так как мы продолжаем расширять и углублять интеграцию между внешними языками и платформой данных.
 
-## <a name="new-in-sql-server-2019"></a>Новые возможности в SQL Server 2019 
+## <a name="new-python-and-r-language-extensions-in-sql-server-2019"></a>Новые расширения языков Python и R в SQL Server 2019
 
-В этом выпуске добавлена поддержка расширений языка в SQL Server. Дополнительные сведения обо всех возможностях этого выпуска см. в статьях [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) и [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
++ Для [Python в Windows](../machine-learning/install/custom-runtime-python.md) доступна настраиваемая среда выполнения. Об установке на Linux см. статью [Установка настраиваемой среды выполнения Python для SQL Server на Linux](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+
++ Для [R в Windows](../machine-learning/install/custom-runtime-r.md) доступна настраиваемая среда выполнения. Об установке на Linux см. статью [Установка настраиваемую среды выполнения R для SQL Server на Linux](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
+
+
+## <a name="new-java-language-extension-in-sql-server-2019"></a>Новое расширение языка Java в SQL Server 2019
+
+Дополнительные сведения обо всех возможностях этого выпуска см. в статьях [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) и [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
 
 - Средой выполнения Java по умолчанию в Windows и Linux является Open Zulu JRE и входит в состав [установки расширений языка SQL Server для Windows ](install/install-sql-server-language-extensions-on-windows.md) и [установки расширений языка SQL Server для Linux](../linux/sql-server-linux-setup-language-extensions.md).
 - Поддержка [типов данных Java](how-to/java-to-sql-data-types.md).

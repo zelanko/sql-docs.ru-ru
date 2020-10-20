@@ -4,18 +4,18 @@ description: Узнайте, как использовать подключен�
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 21c32a27a94dcf8a1981f1fde2eb4db0b71b1b8a
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: a732734e256d553c4917545d24021b02d7232b01
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714142"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988482"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Подключение к SQL Server из скрипта Python или R с замыканием на себя
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88714142"
 
 Адрес сервера, расположение файла с сертификатом клиента и расположение файла с ключом клиента уникальны для каждой процедуры `sp_execute_external_script`. Их можно получить с помощью API **rx_get_sql_loopback_connection_string()** для Python или **rxGetSqlLoopbackConnectionString()** для R.
 
-Дополнительные сведения об атрибутах строки подключения см. в статье [Ключевые слова и атрибуты строки подключения и имени DSN](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) для Microsoft ODBC Driver for SQL Server.
+Дополнительные сведения об атрибутах строки подключения см. в статье [Ключевые слова и атрибуты строки подключения и имени DSN](../../connect/odbc/dsn-connection-string-attribute.md?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) для Microsoft ODBC Driver for SQL Server.
 
 ## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Создание строки подключения с помощью пакета revoscalepy для Python
 

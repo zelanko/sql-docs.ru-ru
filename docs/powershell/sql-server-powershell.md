@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: e320408fd569cbf747c9f9ada68f51dd2bea8a41
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 968bcd1560fd4fd24dddfaf45cfe606518235b60
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714332"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081893"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 
@@ -23,13 +23,19 @@ ms.locfileid: "88714332"
 
 **[Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md)**
 
-Существует два модуля SQL Server PowerShell — **SqlServer** и **SQLPS**. Модуль **SQLPS** входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется. Самым актуальным модулем PowerShell является модуль **SqlServer**. Модуль **SqlServer** содержит обновленные версии командлетов в **SQLPS**, а также новые командлеты для поддержки последних функций SQL.  
+Существует два модуля SQL Server PowerShell — **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** и **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)** .
 
-Предыдущие версии модуля **SqlServer** входили в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x.
+Самым актуальным модулем PowerShell является модуль **SqlServer**.
 
-Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
+Модуль **SQLPS** входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется.
 
-Сведения об установке модуля **SqlServer** см. в статье [Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md).
+Модуль **SqlServer** содержит обновленные версии командлетов в **SQLPS** и новые командлеты для поддержки последних функций SQL.
+
+Предыдущие версии модуля **SqlServer** *входили* в состав среды [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md), но только с SSMS версий 16.x.
+
+Для работы PowerShell с SSMS версии 17.0 и более поздних установите модуль **SqlServer** из [коллекции PowerShell](https://www.powershellgallery.com/packages/SqlServer).
+
+Вы также можете использовать [PowerShell с Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md).
 
 **Почему модуль SQLPS изменился на SqlServer?**
 
@@ -47,7 +53,7 @@ ms.locfileid: "88714332"
 
 Компоненты модуля **SqlServer**:
 
-- [Поставщики PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_providers) — предоставляет простой механизм навигации, аналогичный путям в файловой системе. Можно построить пути, аналогичные путям файловой системы, где диску соответствует управляющая объектная модель SQL Server, а узлы основаны на классах объектной модели. Затем можно использовать привычные команды, такие как **cd** и **dir** , чтобы перемещаться по путям, аналогично переходу по структуре папок в окне командной строки. Для выполнения действий на узлах пути можно использовать другие команды, например **ren** или **del**.
+- [Поставщики PowerShell](/powershell/module/microsoft.powershell.core/about/about_providers) — предоставляет простой механизм навигации, аналогичный путям в файловой системе. Можно построить пути, аналогичные путям файловой системы, где диску соответствует управляющая объектная модель SQL Server, а узлы основаны на классах объектной модели. Затем можно использовать привычные команды, такие как **cd** и **dir** , чтобы перемещаться по путям, аналогично переходу по структуре папок в окне командной строки. Для выполнения действий на узлах пути можно использовать другие команды, например **ren** или **del**.
 
 - Набор командлетов, которые поддерживают такие действия, как запуск скрипта **sqlcmd**, содержащего инструкции Transact-SQL или XQuery.  
 
@@ -55,13 +61,13 @@ ms.locfileid: "88714332"
 
 ## <a name="sql-server-versions"></a>Версии SQL Server
 
-Командлеты SQL PowerShell можно использовать для управления экземплярами базы данных SQL Azure, хранилища данных SQL Azure и во всех [поддерживаемых продуктов SQL Server](https://support.microsoft.com/lifecycle/search/1044).
+Командлеты SQL PowerShell можно использовать для управления экземплярами базы данных SQL Azure, Azure Synapse Analytics и во всех [поддерживаемых продуктах SQL Server](https://support.microsoft.com/lifecycle/search/1044).
 
 ## <a name="sql-server-identifiers-that-contain-characters-not-supported-in-powershell-paths"></a>Идентификаторы SQL Server, содержащие символы, не поддерживаемые в путях Windows PowerShell
 
 Командлеты **Encode-Sqlname** и **Decode-Sqlname** помогают указать идентификаторы SQL Server, содержащие символы, не поддерживаемые в путях Windows PowerShell. Дополнительные сведения см. в статье [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).
 
-Используйте командлет **Convert-UrnToPath**, чтобы преобразовать уникальное имя ресурса для объекта ядра СУБД в путь для поставщика SQL Server PowerShell. Дополнительные сведения см. в статье [Convert URNs to SQL Server Provider Paths](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath).
+Используйте командлет **Convert-UrnToPath**, чтобы преобразовать уникальное имя ресурса для объекта ядра СУБД в путь для поставщика SQL Server PowerShell. Дополнительные сведения см. в статье [Convert URNs to SQL Server Provider Paths](/powershell/module/sqlserver/Convert-UrnToPath).
   
 ## <a name="query-expressions-and-unique-resource-names"></a>Выражения запросов и уникальные имена ресурсов  
 
@@ -80,9 +86,11 @@ Import-Module -Name SqlServer
 
 ## <a name="cmdlet-reference"></a>Справка по командлетам
 
-- [Командлеты SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)
-- [Командлеты SQLPS](https://docs.microsoft.com/powershell/module/sqlps)
+- [Командлеты SqlServer](/powershell/module/sqlserver)
+- [Командлеты SQLPS](/powershell/module/sqlps)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-[Скачивание модуля PowerShell SQL Server](download-sql-server-ps-module.md)
+- [Скачивание модуля PowerShell SQL Server](download-sql-server-ps-module.md)
+- [Командлеты SQL Server PowerShell](/powershell/module/sqlserver)
+- [Использование PowerShell с Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

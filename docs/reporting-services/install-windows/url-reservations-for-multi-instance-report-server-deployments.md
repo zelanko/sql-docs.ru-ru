@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 661dc1ee0e259cc2f1457e555ca685e8e581dc0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53d12c7441b796bf4564bbaf05a84ecfd7aae86a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445966"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934576"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах
   При установке нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере необходимо учесть необходимость резервирования URL-адресов для каждого экземпляра. Для каждого экземпляра веб-службе сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] необходимо, по крайней мере, по одному зарезервированному URL-адресу. Все зарезервированные адреса должны быть уникальны в рамках HTTP.SYS.  
@@ -45,8 +45,8 @@ ms.locfileid: "88445966"
 ## <a name="uniqueness-requirements"></a>Требования к уникальности  
  Используемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] технологии накладывают требования к уникальным именам. Для HTTP.SYS необходима уникальность всех URL-адресов в пределах его репозитория. Чтобы создать уникальный URL-адрес, можно изменять порт, имя узла или виртуального каталога. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] необходима уникальность идентификаторов приложений в пределах одного процесса. Это требование влияет на имена виртуальных каталогов. Оно запрещает повторение имен виртуальных каталогов в пределах одного экземпляра сервера отчетов.  
   
-## <a name="see-also"></a>См. также:  
- [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+## <a name="see-also"></a>См. также  
+ [Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   

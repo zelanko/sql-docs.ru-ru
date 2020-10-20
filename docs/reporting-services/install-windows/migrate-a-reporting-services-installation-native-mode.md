@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454584"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934842"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
 
@@ -122,7 +122,7 @@ ms.locfileid: "88454584"
 
  Перед установкой нового экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]не забудьте создать резервные копии всех файлов из текущего экземпляра.  
   
-1. Создайте резервную копию ключа шифрования для базы данных сервера отчетов. Этот шаг важен для успешной миграции. На дальнейших этапах процесса миграции необходимо восстановить его для сервера отчетов, чтобы снова получить доступ к зашифрованным данным. Чтобы создать резервную копию ключа, используйте диспетчер настройки служб Reporting Services.  
+1. Создайте резервную копию ключа шифрования для базы данных сервера отчетов. Этот шаг важен для успешной миграции. На дальнейших этапах процесса миграции необходимо восстановить его для сервера отчетов, чтобы снова получить доступ к зашифрованным данным. Чтобы создать резервную копию ключа, используйте диспетчер конфигурации сервера отчетов.  
   
 2. создайте резервную копию базы данных сервера отчетов с помощью любого из поддерживаемых методов резервного копирования базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в инструкциях по созданию архивных копий сервера отчетов базы данных в статье [Перемещение баз данных сервера отчетов на другой компьютер &#40;собственный режим служб SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
@@ -202,7 +202,7 @@ ms.locfileid: "88454584"
   
 1. Определите, поддерживаются ли сборки или необходима повторная компиляция.
 
-    * Пользовательские модули безопасности должны быть повторно написаны с использованием интерфейса [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx).
+    * Пользовательские модули безопасности должны быть повторно написаны с использованием интерфейса [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2).
   
     * Пользовательские модули подготовки отчетов для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] должны быть переписаны с использованием объектной модели для подготовки отчетов (ROM).  
   
@@ -237,15 +237,15 @@ ms.locfileid: "88454584"
 > [!IMPORTANT]
 >  Если какие-либо серверы отчетов масштабного развертывания функционируют в режиме "в сети" и не были перенесены, может возникнуть исключение *rsInvalidReportServerDatabase*, так как при подключении к обновленным базам данных эти серверы используют старую схему.  
 
-Если перенесенный сервер отчетов был настроен в качестве общей базы данных для масштабного развертывания, то перед настройкой службы сервера отчетов необходимо удалить все старые ключи шифрования из таблицы **Keys** в базе данных **ReportServer**. Если ключи не удалить, то сервер отчетов после переноса попытается инициализироваться в режиме масштабного развертывания. Дополнительные сведения см. в статьях [Добавление и удаление ключей шифрования для масштабного развертывания &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) и [Настройка ключей шифрования и управление ими &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+Если перенесенный сервер отчетов был настроен в качестве общей базы данных для масштабного развертывания, то перед настройкой службы сервера отчетов необходимо удалить все старые ключи шифрования из таблицы **Keys** в базе данных **ReportServer**. Если ключи не удалить, то сервер отчетов после переноса попытается инициализироваться в режиме масштабного развертывания. Дополнительные сведения см. в статьях [Добавление и удаление ключей шифрования для развертывания с горизонтальным увеличением масштаба (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) и [Настройка ключей шифрования и управление ими (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 
 Ключи масштабного развертывания нельзя удалить с помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Старые ключи из таблицы **Keys** в базе данных **ReportServer** необходимо удалить с помощью среды SQL Server Management Studio. Удалите все строки из таблицы Keys. При этом таблица очищается и подготавливается для восстановления симметричного ключа, как описано далее.  
 
 До удаления ключей рекомендуется сначала создать резервную копию симметричных ключей шифрования. Это можно сделать с помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Откройте диспетчер конфигурации, перейдите на вкладку "Ключи шифрования" и нажмите кнопку **Резервное копирование**. Можно также создать скрипт с командами WMI для резервного копирования ключа шифрования. Дополнительные сведения о WMI см. в статье [Метод BackupEncryptionKey &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
   
-1. Запустите диспетчер конфигурации служб Reporting Services и подключитесь к только что установленному экземпляру служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1. Запустите диспетчер конфигурации сервера отчетов и подключитесь к только что установленному экземпляру [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2. Настройте URL-адреса сервера отчетов и портала. Дополнительные сведения см. в статье [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2. Настройте URL-адреса сервера отчетов и портала. Дополнительные сведения см. в статье [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 3. Настройте базу данных сервера отчетов, выбрав существующую базу данных сервера отчетов из предыдущего экземпляра. После успешной настройки служба сервера отчетов перезапустится, и как только будет установлено подключение к базе данных сервера отчетов, эта база будет автоматически обновлена до SQL Server Reporting Services. Дополнительные сведения о методах запуска мастера изменения баз данных, который используется для создания и выбора базы данных сервера отчетов, см. в статье [Создание базы данных сервера отчетов, работающего в собственном режиме](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
@@ -300,6 +300,6 @@ ms.locfileid: "88454584"
 * [База данных сервера отчетов](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Обратная совместимость служб Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [Диспетчер конфигурации сервера отчетов](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

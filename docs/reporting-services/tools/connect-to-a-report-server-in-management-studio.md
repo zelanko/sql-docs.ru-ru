@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adcbb82d80fae35889202fe8702a98b6315da100
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 027d3bb67c087f119c3848a2d81ac0875b138db3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918420"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934853"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Подключение к серверу отчетов в среде Management Studio
 
@@ -112,5 +112,5 @@ ms.locfileid: "86918420"
 
 ## <a name="see-also"></a>См. также раздел
 
- [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  [Службы Reporting Services в среде SQL Server Management Studio (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

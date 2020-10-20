@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67efc6d07c437288c96a954c2b6d748282102e29
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: afbf987cdebb4239d96d2c1cd4fcf87301093d76
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629173"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081753"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>Пример приложения (драйвер PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "81629173"
 -   На локальном компьютере установлен SQL Server 2005 или SQL Server 2008 с подключенной базой данных [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).  
 -   Установлен веб-браузер.  
   
-## <a name="demonstrates"></a>Что демонстрирует  
+## <a name="adventureworks-example"></a>Пример AdventureWorks  
 Пример приложения обзоров продуктов AdventureWorks демонстрирует следующее:  
   
 -   открытие соединения с SQL Server с использованием проверки подлинности Windows;  
@@ -46,8 +46,7 @@ ms.locfileid: "81629173"
 -   получение данных;  
 -   проверка на наличие ошибок.  
   
-## <a name="example"></a>Пример  
-Пример приложения обзоров продуктов AdventureWorks возвращает из базы данных сведения о тех продуктах, имена которых содержат введенную пользователем строку. В списке возвращенных продуктов пользователь может просмотреть обзоры, изображение, отправить изображение и создать обзор для выбранного продукта.  
+Этот пример возвращает из базы данных сведения о тех продуктах, имена которых содержат введенную пользователем строку. В списке возвращенных продуктов пользователь может просмотреть обзоры, изображение, отправить изображение и создать обзор для выбранного продукта.  
   
 Поместите следующий код в файл с именем adventureworks_demo_pdo.php.  
   
@@ -452,7 +451,7 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## <a name="example"></a>Пример  
+## <a name="lob-example"></a>Пример LOB  
 Скрипт photo.php возвращает фотографию продукта для указанного **ProductID**. Этот скрипт вызывается из скрипта adventureworks_demo.php.  
   
 Поместите следующий код в файл с именем photo_pdo.php.  

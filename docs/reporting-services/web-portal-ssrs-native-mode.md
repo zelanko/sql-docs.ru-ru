@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29181b0830ad767c71e73c709aa7f3eee5a49190
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759798"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987400"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Веб-портал сервера отчетов (службы SSRS в собственном режиме)
 
@@ -48,7 +48,7 @@ ms.locfileid: "85759798"
 
 Некоторые функции веб-портала доступны только в определенных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Функции, поддерживаемые выпусками SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-При новой установке только у локальных администраторов есть достаточные разрешения для работы с содержимым и параметрами. Для предоставления разрешений другим пользователям локальный администратор должен создать назначения ролей, которые обеспечат доступ к серверу отчетов. Страницы приложения и задачи, к которым пользователь впоследствии сможет получить доступ, зависят от назначений ролей этому пользователю. Дополнительные сведения см. в статье [Предоставление пользователям доступа к серверу отчетов](security/grant-user-access-to-a-report-server-report-manager.md).
+При новой установке только у локальных администраторов есть достаточные разрешения для работы с содержимым и параметрами. Для предоставления разрешений другим пользователям локальный администратор должен создать назначения ролей, которые обеспечат доступ к серверу отчетов. Страницы приложения и задачи, к которым пользователь впоследствии сможет получить доступ, зависят от назначений ролей этому пользователю. Дополнительные сведения см. в статье [Предоставление пользователям доступа к серверу отчетов](./security/grant-user-access-to-a-report-server.md).
 
 > [!NOTE]
 > При просмотре веб-портала на локальном компьютере, на котором запущен сервер, может появиться сообщение о том, что просматривать эту папку не разрешено. Причина заключается в функции Universal Access Control (UAC) и в том, что браузер не запущен от имени администратора. Браузер Microsoft Edge нельзя запустить от имени администратора. Необходимо использовать Internet Explorer. Можно либо удаленно подключиться к серверу из браузера, либо запустить Internet Explorer от имени администратора и перейти на веб-портал. Если вы хотите использовать веб-портал удаленно, необходимо предоставить учетной записи права диспетчера содержимого папки.  
@@ -115,7 +115,7 @@ ms.locfileid: "85759798"
 ## <a name="see-also"></a>См. также раздел
 
 [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
-[Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+[Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Инструментальные средства служб Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Планирование поддержки служб Reporting Services в браузерах](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  

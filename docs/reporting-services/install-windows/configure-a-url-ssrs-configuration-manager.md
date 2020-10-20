@@ -1,5 +1,5 @@
 ---
-description: Настройка URL-адреса (диспетчер конфигурации служб SSRS)
+description: Настройка URL-адреса (диспетчер конфигурации сервера отчетов)
 title: Настройка URL-адреса (диспетчер конфигурации) | Документация Майкрософт
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ea8162493584be5d4cb9d312c57af16ff40d08a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0ff8cd92d090424bbf7a17315dc09dfb7b8a06f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427096"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934784"
 ---
-# <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
+# <a name="configure-a-url--report-server-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации сервера отчетов)
   Приступать к использованию [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] или веб-службы сервера отчетов можно лишь после настройки как минимум одного URL-адреса для каждого приложения. Настройка URL-адресов является обязательной в случае установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме "только файлы" (иначе говоря, если на странице "Параметры установки" сервера отчетов в мастере установки выбран параметр **Установить, но не настраивать сервер** ). При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию URL-адреса настраиваются автоматически для каждого приложения.  
   
  Используйте программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для настройки URL-адресов. Это средство позволяет определить все части URL-адреса. В отличие от более ранних версий, веб-сайты служб IIS не обеспечивают доступ к приложениям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях.  
@@ -32,7 +32,7 @@ ms.locfileid: "88427096"
   
 -   Указание дополнительных свойств URL-адреса для определения дополнительных URL-адресов.  
   
- Дополнительные сведения о хранении и поддержке URL-адресов, а также о проблемах совместимости см. в статьях [Сведения о резервировании и регистрации URL-адресов &#40;диспетчер конфигураций служб SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) и [Параллельная установка служб Reporting Services и служб IIS &#40;собственный режим SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Обзор примеров URL-адресов, часто используемых при установке служб Reporting Services, см. в подразделе [Примеры URL-адресов](#URLExamples) данного раздела.  
+ Дополнительные сведения о хранении и поддержке URL-адресов, а также о проблемах совместимости см. в статьях [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) и [Параллельная установка служб Reporting Services и IIS (собственный режим SSRS)](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Обзор примеров URL-адресов, часто используемых при установке служб Reporting Services, см. в подразделе [Примеры URL-адресов](#URLExamples) данного раздела.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Перед тем как приступать к созданию или изменению URL-адреса, нужно запомнить следующие моменты.  
@@ -45,7 +45,7 @@ ms.locfileid: "88427096"
   
 -   Выберите время, когда выполняется небольшой объем действий с отчетами. Каждый раз при изменении резервирования URL-адреса можно ожидать очистки доменов приложений для веб-службы сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] .  
   
--   Общие сведения о структуре и использовании URL-адресов в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]см. в статье [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+-   Общие сведения о структуре и использовании URL-адресов в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в статье [Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>Настройка URL-адреса для веб-службы сервера отчетов  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88427096"
   
 9. Чтобы создать URL-адрес, нажмите кнопку **Применить** .  
   
-10. Проверьте URL-адрес, щелкнув ссылку в разделе **URL-адреса** . Следует отметить, что перед началом тестирования URL-адреса необходимо создать и настроить базу данных сервера отчетов. Инструкции см. в статье [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+10. Проверьте URL-адрес, щелкнув ссылку в разделе **URL-адреса** . Следует отметить, что перед началом тестирования URL-адреса необходимо создать и настроить базу данных сервера отчетов. Инструкции см. в статье [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
 >  Если у вас имеются привязки TLS и резервирования URL-адресов и необходимо изменить привязку TLS, например для использования другого сертификата или заголовка узла, то рекомендуется выполнить следующую последовательность шагов.  
@@ -161,7 +161,7 @@ ms.locfileid: "88427096"
 6.  Проверьте URL-адрес, открыв окно браузера и введя в него этот адрес.  
   
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>URL-адреса для нескольких экземпляров сервера отчетов на одном компьютере  
- Во избежание конфликта имен при резервировании URL-адресов для нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]необходимо соблюдать соглашения об именах. Дополнительные сведения см. в статье [Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
+ Во избежание конфликта имен при резервировании URL-адресов для нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]необходимо соблюдать соглашения об именах. Дополнительные сведения см. в статье [Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
   
 ##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> Примеры конфигурации URL-адресов  
  Приведенный ниже список содержит несколько примеров того, как может выглядеть URL-адрес сервера отчетов.  
@@ -192,6 +192,6 @@ ms.locfileid: "88427096"
   
 -   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>См. также:  
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+## <a name="see-also"></a>См. также:
+
+ [Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

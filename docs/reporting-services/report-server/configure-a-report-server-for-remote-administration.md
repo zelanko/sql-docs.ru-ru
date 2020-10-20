@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4edd8925bffec751d00379c9a9e78cc6d06a62c8
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: f41eef01d203a873b3d5beac61ab5feb2995867f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545607"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891404"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>настроить сервер отчетов для удаленного администрирования
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]экземпляры сервера отчетов можно настраивать локально или удаленно. Чтобы настроить удаленный экземпляр сервера отчетов, можно использовать программу настройки служб Reporting Services. Также можно написать пользовательский код, который будет использовать поставщик инструментария управления Windows (WMI) служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Программа настройки служб Reporting Services предоставляет графический интерфейс поставщика WMI, поэтому такая настройка сервера отчетов не требует написания кода. При запуске программы можно указать, к какому удаленному серверу необходимо подключаться.  
@@ -140,6 +140,6 @@ ms.locfileid: "84545607"
 13. В столбце **Разрешить** установите флажки **Включить учетную запись**, **Включить удаленно**и **Прочесть безопасность**, затем нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также:  
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

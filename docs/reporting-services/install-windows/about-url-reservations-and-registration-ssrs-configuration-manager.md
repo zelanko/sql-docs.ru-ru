@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c705c0ea22b7fcd4a92c94493035764864d1a3f6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259337"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935186"
 ---
-# <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
+# <a name="about-url-reservations-and-registration--report-server-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации сервера отчетов)
   URL-адреса для приложений служб Reporting Services определяются в качестве резервирований URL-адресов в компоненте HTTP.SYS. Резервирование URL-адресов определяет синтаксис конечной точки URL-адреса к веб-приложению. При настройке приложений на сервере отчетов резервирование URL-адресов задается как для веб-службы сервера отчетов, так и для веб-портала. Резервирование URL-адресов создается автоматически при настройке URL-адресов в программе установке или программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   Программа установки создает резервирование URL-адресов на основе значений по умолчанию. Если производится установка в конфигурации по умолчанию, будет зарезервировано два URL-адреса: для веб-службы сервера отчетов и для веб-портала. Программа настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] позволяет добавить другие URL-адреса или изменить те, что созданы по умолчанию программой установки.  
@@ -105,6 +105,7 @@ ms.locfileid: "76259337"
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] и более поздних версий имеют новые средства безопасности, позволяющие свести к минимуму риск случайного запуска программ с повышенными правами доступа. Для этих операционных систем придется выполнить ряд дополнительных шагов для разрешения локального администрирования. Дополнительные сведения см. в разделе [Настройка сервера отчетов, работающего в основном режиме, для локального администрирования (службы SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="see-also"></a>См. также раздел  
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Синтаксис резервирования URL-адресов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+
   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 60e0814a72d09ff8612ef6d14a6ef7abfd2e92f1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866307"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934661"
 ---
-# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>Удаление и повторное создание ключей шифрования (SSRS Configuration Manager)
+# <a name="delete-and-recreate-encryption-keys-report-server-configuration-manager"></a>Удаление и повторное создание ключей шифрования (диспетчер конфигурации сервера отчетов)
   Удаление и повторное создание ключей шифрования — действия, которые выходят за пределы обычного обслуживания ключа шифрования. Эти задачи выполняются в ответ на определенную угрозу серверу отчетов или как последнее средство спасения, когда больше нельзя получить доступ к базе данных сервера отчетов.  
   
 -   Создайте симметричный ключ повторно, если есть основания полагать, что существующий симметричный ключ скомпрометирован. Также регулярное создание ключа считается хорошей практикой для обеспечения безопасности.  
@@ -35,7 +35,7 @@ ms.locfileid: "74866307"
   
  Чтобы повторно создать симметричный ключ, сервер отчетов должен находиться в рабочем состоянии. Повторное создание ключей шифрования и повторное шифрование содержимого нарушают работу сервера. На время повторного шифрования необходимо обеспечить режим «вне сети» работы сервера. Во время повторного шифрования какие-либо запросы к серверу отчетов не должны выполняться.  
   
- Можно использовать средство настройки служб Reporting Services или программу **rskeymgmt** , чтобы сбросить симметричный ключ и зашифрованные данные. Дополнительные сведения о создании симметричного ключа см. в разделе [Инициализация сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Можно использовать средство настройки служб Reporting Services или программу **rskeymgmt** , чтобы сбросить симметричный ключ и зашифрованные данные. Дополнительные сведения о создании симметричного ключа см. в разделе [Инициализация сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>Повторное создание ключей шифрования (программа настройки служб Reporting Services)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "74866307"
 4.  Для подписок, которые используют зашифрованные данные (это включает модуль доставки в общую папку и любые сторонние расширения доставки, использующие шифрование), откройте каждую подписку и повторно введите учетные данные. Подписки, которые используют доставку по электронной почте сервера отчетов, не используют зашифрованные данные и не затрагиваются изменением ключа.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Настройка ключей шифрования и управление ими (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

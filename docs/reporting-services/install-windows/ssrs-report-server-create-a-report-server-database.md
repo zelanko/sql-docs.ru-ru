@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603382"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935569"
 ---
-# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)  
+# <a name="create-a-report-server-database-report-server-configuration-manager"></a>Создание базы данных сервера отчетов, диспетчер конфигурации сервера отчетов  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -49,7 +49,7 @@ ms.locfileid: "91603382"
  ### <a name="native-mode"></a>Основной режим
  Создать базу данных сервера отчетов, работающего в собственном режиме, вы можете одним из следующих способов.  
   
-- **Автоматически**. Если вы выбрали установку с конфигурацией по умолчанию, используйте мастер установки SQL Server. В мастере установки SQL Server этот вариант назван **Установка и настройка** и размещен на странице **Report Server Installation Options** (Параметры установки сервера отчетов). Если вы выберете вариант **Install only** (Только установка), то для создания базы данных необходимо воспользоваться диспетчером конфигурации служб SQL Server Reporting Services.  
+- **Автоматически**. Если вы выбрали установку с конфигурацией по умолчанию, используйте мастер установки SQL Server. В мастере установки SQL Server этот вариант назван **Установка и настройка** и размещен на странице **Report Server Installation Options** (Параметры установки сервера отчетов). Если вы выберете вариант **Только установка**, то для создания базы данных необходимо воспользоваться диспетчером конфигурации сервера отчетов SQL Server.  
   
 - **Вручную**. Используйте диспетчер конфигурации SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Базу данных сервера отчетов следует создавать вручную, если вы используете для хранения базы данных удаленный [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Дополнительные сведения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
@@ -85,7 +85,7 @@ ms.locfileid: "91603382"
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 
-Если вы создаете базу данных сервера отчетов на удаленном компьютере, настройте подключение через учетную запись пользователя домена или учетную запись службы с сетевым доступом. Если вы используете удаленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тщательно выберите правильные учетные данные для подключения сервера отчетов к этому экземпляру. Дополнительные сведения см. в разделе [Настройка соединения с базой данных сервера отчетов &#40;диспетчер конфигурации SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Если вы создаете базу данных сервера отчетов на удаленном компьютере, настройте подключение через учетную запись пользователя домена или учетную запись службы с сетевым доступом. Если вы используете удаленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тщательно выберите правильные учетные данные для подключения сервера отчетов к этому экземпляру. Дополнительные сведения см. в разделе [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 > Сервер отчетов и экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится база данных сервера отчетов, могут находиться в разных доменах. При развертывании в Интернете сервер, как правило, защищают с помощью брандмауэра. 
@@ -98,6 +98,6 @@ ms.locfileid: "91603382"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Изучите сведения о [диспетчере конфигурации служб Reporting Services](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434).  
+Узнайте больше о [диспетчере конфигурации сервера отчетов](reporting-services-configuration-manager-native-mode.md).  
 
 Остались вопросы? Посетите [форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cf829dfabdd291367990ef21280208ac0741154c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725475"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081313"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Установка подключения с использованием проверки подлинности Azure Active Directory
 
@@ -31,7 +31,7 @@ ms.locfileid: "91725475"
     * **ActiveDirectoryMSI**
         * Поддерживается начиная с версии драйвера **7.2**. `authentication=ActiveDirectoryMSI` может использоваться для подключения к Базе данных или хранилищу данных SQL Azure изнутри Ресурса Azure с включенной поддержкой "Удостоверение". При необходимости в свойствах "Подключение" или "Источник данных" в этом режиме проверки подлинности можно указать **msiClientId**, который должен содержать идентификатор клиента Управляемого удостоверения, необходимого для получения **accessToken** при установке подключения.
     * **ActiveDirectoryIntegrated**
-        * Поддерживается начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryIntegrated` может использоваться для подключения к Базе данных или хранилищу данных SQL Azure с помощью встроенной проверки подлинности. Чтобы использовать этот режим проверки подлинности, необходимо объединить локальные службы федерации Active Directory (ADFS) в федерацию с Azure Active Directory в облаке. После настройки вы можете установить подключение, добавив собственную библиотеку "mssql-jdbc_auth-\<version>-\<arch>.dll" в путь к классам приложений в ОС Windows или настроив билет Kerberos для поддержки кроссплатформенной проверки подлинности. Вы сможете получить доступ к Базе данных SQL Azure или хранилищу данных SQL Azure без запроса учетных данных при входе в систему компьютера, присоединенного к домену.
+        * Поддерживается начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryIntegrated` может использоваться для подключения к Базе данных или хранилищу данных SQL Azure с помощью встроенной проверки подлинности. Чтобы использовать этот режим проверки подлинности, необходимо объединить локальные службы федерации Active Directory (ADFS) в федерацию с Azure Active Directory в облаке. После настройки вы можете установить подключение, добавив собственную библиотеку "mssql-jdbc_auth-\<version>-\<arch>.dll" в путь к классам приложений в ОС Windows или настроив билет Kerberos для поддержки кроссплатформенной проверки подлинности. Вы сможете получить доступ к Базе данных SQL Azure или Azure Synapse Analytics без запроса учетных данных при входе в систему компьютера, присоединенного к домену.
     * **ActiveDirectoryPassword**
         * Поддерживается, начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryPassword` может использоваться для подключения к базе данных или хранилищу данных SQL Azure с использованием имени и пароля пользователя Azure AD.
     * **SqlPassword**
@@ -286,8 +286,8 @@ You have successfully logged on as: <your user name>
     11. В разделе "Ключи" создайте ключ, заполнив поле имени, выбрав срок действия ключа и сохранив конфигурацию (оставьте поле значения пустым). После сохранения поле значения будет заполнено автоматически. Скопируйте сгенерированное значение. Это секрет клиента.
     12. На панели слева щелкните Azure Active Directory. В разделе "Регистрация приложений" найдите вкладку End points (Конечные точки). Скопируйте URL-адрес в разделе OATH 2.0 TOKEN ENDPOINT (Конечная точка токена OATH 2.0). Это URL-адрес службы токенов безопасности.
     
-    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Войдите в систему пользовательской базы данных Azure SQL Server в качестве администратора Azure Active Directory и с помощью команды T-SQL подготовьте пользователя автономной базы данных для субъекта приложения. Сведения о создании администратора Azure Active Directory и пользователя автономной базы данных см. в [этой статье](/azure/azure-sql/database/authentication-aad-overview).
+    ![Конечная точка для регистрации приложений на портале Azure — URL-адрес службы токенов безопасности](media/jdbc_aad_token.png)  
+2. Войдите в систему пользовательской базы данных Azure SQL Server в качестве администратора Azure Active Directory и с помощью команды T-SQL подготовьте пользователя автономной базы данных для субъекта приложения. Сведения о создании администратора Azure Active Directory и пользователя автономной базы данных см. в разделе [Подключение к Базе данных SQL или Azure Synapse Analytics с помощью проверки подлинности Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview).
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER

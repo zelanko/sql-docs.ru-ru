@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901373"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039025"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Мастер формирования и публикации скриптов
 
@@ -57,7 +57,7 @@ ms.locfileid: "88901373"
 
 С помощью **мастера формирования и публикации скриптов** можно создавать скрипты для переноса баз данных между экземплярами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Скрипты для базы данных вы можете создавать на экземпляре компонента ядра СУБД в локальной сети или из [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Сформированные скрипты могут выполняться на другом экземпляре компонента ядра СУБД или [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. С помощью мастера также можно публиковать содержимое базы данных непосредственно в веб-службе, созданной с помощью проекта служб Database Publishing Services. Создать скрипты можно как для всей базы данных, так и ограничить их определенными данными или объектами.
 
-Более подробный учебник по использованию мастера формирования и публикации скриптов см. на странице [Учебник по использованию мастера создания скриптов](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Более подробный учебник по использованию мастера формирования и публикации скриптов см. на странице [Учебник по использованию мастера создания скриптов](../tutorials/scripting-ssms.md#script-databases).
 
 ## <a name="before-you-begin"></a>Перед началом
 
@@ -130,7 +130,7 @@ ms.locfileid: "88901373"
 
 ![Параметр "Сохранить как записную книжку"](media/generate-and-publish-scripts-wizard/save.png)
 
-- **[Save as notebook](../../azure-data-studio/notebooks-guidance.md)** (Сохранить как записную книжку) — сохранение скрипта в одном или нескольких SQL-файлах. Нажмите кнопку обзора ( **...** ), чтобы задать имя и выбрать местоположение файла.
+- **[Save as notebook](../../azure-data-studio/notebooks/notebooks-guidance.md)** (Сохранить как записную книжку) — сохранение скрипта в одном или нескольких SQL-файлах. Нажмите кнопку обзора ( **...** ), чтобы задать имя и выбрать местоположение файла.
 
 - **Save as script file** (Сохранить как файл скрипта) — сохранение скрипта в одном или нескольких SQL-файлах. Нажмите кнопку обзора ( **...** ), чтобы задать имя и выбрать местоположение файла. Установите флажок **Перезаписать существующий файл** , чтобы заменить существующий файл с тем же именем. Нажмите кнопку **Single script file** (Один файл скрипта) или **One script file per object** (Один файл скрипта на объект), чтобы определить, каким образом должны формироваться скрипты. Щелкните **Текст в Юникоде** или **Текст ANSI**, чтобы указать тип текста, который должен использоваться в скрипте.
 
@@ -246,7 +246,7 @@ ms.locfileid: "88901373"
 
 Если все параметры верны, настройка завершится успешно.
 
-## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Создание скриптов в хранилище данных Azure SQL
+## <a name="generating-scripts-on-azure-synapse-analytics"></a>Создание скриптов в Azure Synapse Analytics
 
 Если синтаксис, полученный при использовании команды "Создать скрипт для...", не выглядит как синтаксис [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], или появляется сообщение об ошибке, параметрам формирования скрипта в среде SQL Server Management Studio необходимо присвоить значение [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 

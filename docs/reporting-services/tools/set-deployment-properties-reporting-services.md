@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 97a0f7d9bf63bf6ad74b522a42900fc36cfcd429
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512340"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891654"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Задание свойства развертывания (службы Reporting Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88512340"
  Создание наборов свойств проекта в конфигурациях проектов и управление ими производится с помощью диспетчера конфигурации. Диспетчер конфигурации представляет собой компонент, поддерживаемый средой [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], на котором основана среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .  
   
 > [!NOTE]  
-> Не следует путать этот компонент с диспетчером конфигураций служб Reporting Services, который применяется для настройки служб Reporting Services после установки. Дополнительные сведения см. в разделе [Настройка и администрирование сервера отчетов &#40;службы Reporting Services в собственном режиме&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
+> Не следует путать этот компонент с диспетчером конфигурации сервера отчетов, который применяется для настройки служб Reporting Services после установки. Дополнительные сведения см. в разделе [Настройка и администрирование сервера отчетов &#40;службы Reporting Services в собственном режиме&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
 >
 > [!NOTE]  
 > В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]действие публикации отчетов из проекта сервера отчетов или решения принято называть *развертыванием отчетов*.  

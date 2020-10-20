@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3c23ea4581998fe462175cad1b0e12107d39b0e
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: cf028fa4de6457b5ddfe520bae1d2348c52362bf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545566"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935015"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Настройка сервера отчетов (службы Reporting Services в собственном режиме)
   В зависимости от параметров, выбранных во время установки, сервер отчетов может потребовать дополнительной настройки перед началом его использования. Как минимум настройка сервера отчетов включает следующие действия.  
@@ -38,11 +38,11 @@ ms.locfileid: "84545566"
   
 ## <a name="to-minimally-configure-a-report-server-installation"></a>Минимальная настройка установки сервера отчетов  
   
-1.  Запустите программу настройки служб Reporting Services и подключитесь к экземпляру сервера отчетов. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Запустите программу настройки служб Reporting Services и подключитесь к экземпляру сервера отчетов. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Щелкните **URL-адрес веб-службы** , чтобы открыть страницу для настройки URL-адреса для сервера отчетов. Инструкции по определению URL-адресов см. в разделе [Настройка URL-адреса (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2.  Щелкните **URL-адрес веб-службы** , чтобы открыть страницу для настройки URL-адреса для сервера отчетов. Инструкции по определению URL-адресов см. в разделе [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
-3.  Чтобы создать базу данных сервера отчетов, нажмите кнопку **База данных** . Инструкции см. в статье [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+3.  Чтобы создать базу данных сервера отчетов, нажмите кнопку **База данных** . Инструкции см. в статье [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
 4.  Вернитесь на страницу **URL-адрес веб-службы** и щелкните URL-адрес, чтобы проверить, как он работает.  
   
@@ -62,5 +62,5 @@ ms.locfileid: "84545566"
  [Настройка брандмауэра для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (службы SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [Настройка сервера отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   

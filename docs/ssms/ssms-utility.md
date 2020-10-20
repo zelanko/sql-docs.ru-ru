@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/24/2020
-ms.openlocfilehash: 5688b402cf4b7dafae7812e4e86985a48626da23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cc43babe2ae064731f293a0dc96219aaeced5a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417890"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036014"
 ---
 # <a name="ssms-utility"></a>Служебная программа SSMS
 
@@ -30,7 +30,7 @@ ms.locfileid: "88417890"
 
 Служебная программа **SSMS** открывает [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Если указано, программа **Ssms** также устанавливает подключение к серверу и открывает запросы, скрипты, файлы, проекты и решения.
 
-Можно указать файлы, содержащие запросы, проекты или решения. Файлы, содержащие запросы, автоматически подключаются к серверу в случае наличия сведений для соединения и в том случае, если сервер связан с этим типом файлов. Например, SQL-файлы в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] откроются в окне редактора SQL-запросов, а MDX-файлы откроются в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] в окне редактора запросов многомерных выражений. **Решения и проекты SQL Server** открываются в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+Можно указать файлы, содержащие запросы, проекты или решения. Файлы, содержащие запросы, автоматически подключаются к серверу в случае наличия сведений для соединения и в том случае, если сервер связан с этим типом файлов. Например, SQL-файлы в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] откроются в окне редактора SQL-запросов, а MDX-файлы откроются в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] в окне редактора запросов многомерных выражений. **Решения и проекты SQL Server** открываются в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
 > [!NOTE]
 > Программа **Ssms** не выполняет запросы. Для запуска запросов из командной строки используйте программу **sqlcmd** . 
@@ -62,7 +62,10 @@ Ssms
 
 [ **-U**_username_] — имя пользователя при подключении с использованием проверки подлинности SQL.
 
-[ **-P** _password_] — пароль при подключении с использованием проверки подлинности SQL.
+> [!Note]
+> **-P** был удален в SSMS версии 18.0.
+>
+> Обходное решение. Попробуйте подключиться к серверу один раз с помощью пользовательского интерфейса и сохраните пароль.
 
 [ **-E**] — подключение с помощью проверки подлинности Windows.
 
@@ -91,40 +94,40 @@ Ssms
 
 Следующий скрипт открывает среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из командной строки с настройками по умолчанию:
 
-```
+```console
   Ssms
 ```
 
 Следующие скрипты открывают [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из командной строки посредством проверки подлинности *Active Directory — встроенная*:
 
-```
+```console
 Ssms.exe -S servername.database.windows.net -G
 ```
 
 Следующий скрипт открывает среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из командной строки с применением проверки подлинности Windows и с редактором кода, настроенным для сервера `ACCTG and the database AdventureWorks2012,` без показа экрана-заставки:
 
-```
+```console
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash
 ```
 
 Следующий скрипт открывает среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из командной строки и открывает скрипт MonthEndQuery:
 
-```
+```console
 Ssms "C:\Documents and Settings\username\My Documents\SQL Server Management Studio Projects\FinanceScripts\FinanceScripts\MonthEndQuery.sql"
 ```
 
 Следующий скрипт открывает среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из командной строки и открывает проект NewReportsProject на компьютере с именем `developer`:
 
-```
+```console
 Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 ```
 
 Следующий скрипт открывает среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из командной строки и открывает решение MonthlyReports: 
 
-```
+```console
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 ```
 
 ## <a name="see-also"></a>См. также:
 
-[Использование среды SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)
+[Использование среды SQL Server Management Studio](./sql-server-management-studio-ssms.md)

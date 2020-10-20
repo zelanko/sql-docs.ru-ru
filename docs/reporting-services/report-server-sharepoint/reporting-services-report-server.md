@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d91801bd8fa23cdb14112c98af6584d9a7b9250
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c5d469cdf48a6c03a332a370e4c2b173ae7d18d1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934259"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934684"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Сравнение серверов отчетов в собственном режиме и режиме интеграции с SharePoint Reporting Services
 
@@ -40,7 +40,7 @@ ms.locfileid: "87934259"
   
  Сервер отчетов служб Reporting Services поддерживает два режима развертывания для экземпляров сервера отчетов.  
   
--   **Собственный режим**, в том числе собственный режим с веб-частями SharePoint, в котором сервер отчетов выполняется как сервер приложений, обеспечивающий все функции обработки и управления исключительно посредством компонентов служб Reporting Services. Сервер отчетов, работающий в собственном режиме, настраивается с помощью диспетчера конфигураций Reporting Services и среды SQL Server Management Studio.  
+-   **Собственный режим**, в том числе собственный режим с веб-частями SharePoint, в котором сервер отчетов выполняется как сервер приложений, обеспечивающий все функции обработки и управления исключительно посредством компонентов служб Reporting Services. Сервер отчетов, работающий в собственном режиме, настраивается с помощью диспетчера конфигурации сервера отчетов и SQL Server Management Studio.  
   
 -   **Режим интеграции с SharePoint**, в котором сервер отчетов устанавливается как часть фермы серверов SharePoint.  Режим интеграции с SharePoint развертывается и настраивается с помощью команд Powershell и страниц управления содержимым SharePoint.  
   
@@ -137,8 +137,8 @@ ms.locfileid: "87934259"
   
 |Задача|Ссылка|  
 |----------|----------|  
-|Ознакомьтесь с требованиями к оборудованию и программному обеспечению.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Установка служб Reporting Services в режиме интеграции с SharePoint|[Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)|  
+|Ознакомьтесь с требованиями к оборудованию и программному обеспечению.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](/previous-versions/sql/sql-server-2016/jj714188(v=sql.130)).|  
+|Установка служб Reporting Services в режиме интеграции с SharePoint|[Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)|  
 |Объясняется, как настроить параметры памяти для веб-службы и службы Windows сервера отчетов.|[Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Описаны рекомендованные шаги по настройке сервера отчетов для удаленного администрирования.|[настроить сервер отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Содержит инструкции по настройке доступности папки **Мои отчеты** на экземпляре сервера отчетов, работающего в собственном режиме.|[Включение и отключение папки «Мои отчеты»](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

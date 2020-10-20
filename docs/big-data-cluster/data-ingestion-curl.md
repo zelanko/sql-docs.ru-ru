@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e4d030b54944b8fe25d930f7f0b4fc540f7aff67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae893bb1e291b244b5101ccfb2ed66bcf765f049
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784326"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866851"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-big-data-clusters-2019"></a>Загрузка данных в HDFS с помощью curl в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -47,12 +47,24 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
+## <a name="authentication-with-active-directory"></a>Проверка подлинности через Active Directory
+
+Для развертываний с Active Directory используйте параметр проверки подлинности с `curl` с проверкой подлинности согласованием. 
+
+Чтобы использовать `curl` с проверкой подлинности Active Directory, выполните следующую команду:
+
+```
+kinit <username>
+```
+
+Команда создает токен Kerberos для `curl`. Команды, показанные в следующих разделах, указывают параметр `--anyauth` для `curl`. Для URL-адресов, требующих проверки подлинности согласованием, `curl` автоматически обнаруживает и использует сгенерированный токен Kerberos вместо имени пользователя и пароля.
+
 ## <a name="list-a-file"></a>Указание файла
 
 Чтобы указать файл в **hdfs:///product_review_data**, выполните следующую команду:
 
 ```terminal
-curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+curl -i -k --anyauth -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
@@ -60,7 +72,7 @@ curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP ex
 Для конечных точек, не использующих корневую папку, выполните следующую команду cURL:
 
 ```terminal
-curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+curl -i -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>Размещение локального файла в HDFS
@@ -68,7 +80,7 @@ curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-e
 Чтобы разместить новый файл **test.csv** из локального каталога в каталоге product_review_data, выполните следующую команду curl (параметр **Content-Type** является обязательным):
 
 ```terminal
-curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k --anyauth -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
@@ -76,7 +88,7 @@ curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP
 Для конечных точек, не использующих корневую папку, выполните следующую команду cURL:
 
 ```terminal
-curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>Создание каталога
@@ -84,14 +96,14 @@ curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-sv
 Чтобы создать каталог **test** в `hdfs:///`, выполните следующую команду:
 
 ```terminal
-curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k --anyauth -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 Для конечных точек, не использующих корневую папку, выполните следующую команду cURL:
 
 ```terminal
-curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## <a name="next-steps"></a>Дальнейшие действия

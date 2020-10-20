@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426306"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080673"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -92,7 +92,7 @@ SELECT SCOPE_IDENTITY()
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a>Пример  
+## <a name="object-example"></a>Пример объекта  
 Следующий пример извлекает каждую строку результирующего набора в виде объекта PHP. В примере предполагается, что SQL Server и база данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ``` 
@@ -131,7 +131,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Пример  
+## <a name="class-example"></a>Пример класса  
 Следующий пример извлекает каждую строку результирующего набора в виде экземпляра класса *Product* , определенного в скрипте. В примере извлекаются сведения о продукте из таблиц *Purchasing.PurchaseOrderDetail* и *Production.Product* базы данных AdventureWorks для продуктов, имеющих указанный срок (*DueDate*) и количество запасов (*StockQty*) меньше указанного значения. В примере представлены некоторые правила, применяемые при указании класса в вызове **sqlsrv_fetch_object**:  
   
 -   Переменная *$product* является экземпляром класса *Product* , так как "Product" был указан с параметром *$className* , а класс *Product* существует.  

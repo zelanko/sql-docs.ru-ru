@@ -1,6 +1,6 @@
 ---
-description: Использование диспетчера конфигурации служб Reporting Services (собственный режим)
-title: Использование диспетчера конфигурации служб Reporting Services (собственный режим) | Документы Майкрософт
+description: Диспетчер конфигураций сервера отчетов (собственный режим)
+title: Диспетчер конфигурации сервера отчетов (собственный режим) | Документация Майкрософт
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03df504d7ffc4c104db9673995fa58e455961ef5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff3c1f00f91da57f91bdd0c7738929b1f5362f60
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454586"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891324"
 ---
-# <a name="reporting-services-configuration-manager-native-mode"></a>Использование диспетчера конфигурации служб Reporting Services (собственный режим)
+# <a name="report-server-configuration-manager-native-mode"></a>Диспетчер конфигураций сервера отчетов (собственный режим)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,7 +30,7 @@ ms.locfileid: "88454586"
 > [!NOTE]
 > Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016. Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не предназначен для управления серверами отчетов, работающими в режиме интеграции с SharePoint. Управление и настройка режима интеграции с SharePoint осуществляются с использованием центра администрирования SharePoint и скриптов PowerShell.  
   
-##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Сценарии использования диспетчера конфигурации служб Reporting Services  
+##  <a name="scenarios-to-use-report-server-configuration-manager"></a><a name="bkmk_scenarios"></a> Сценарии использования диспетчера конфигурации сервера отчетов  
  С помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно выполнять следующие задачи.  
   
 -   Настройка учетной записи службы сервера отчетов. Учетная запись службы сервера отчетов изначально настраивается в процессе установки, но может быть изменена с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , если требуется обновить пароль или использовать другую учетную запись.  
@@ -63,19 +63,19 @@ ms.locfileid: "88454586"
 
 - Перед подключением к удаленному экземпляру сервера отчетов для его настройки необходимо обеспечить пропускание удаленных вызовов инструментария управления Windows (WMI) через брандмауэр Windows. Дополнительные сведения о подготовке сервера отчетов для удаленного администрирования см. в разделе [Настройка сервера отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
-Диспетчер конфигурации служб Reporting Services устанавливается автоматически при установке служб SQL Server Reporting Services.
+Диспетчер конфигурации сервера отчетов устанавливается автоматически при установке служб SQL Server Reporting Services.
 
-##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Запуск диспетчера конфигурации служб Reporting Services
+##  <a name="to-start-the-report-server-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Запуск диспетчера конфигурации сервера отчетов
 
 1.  Следующий шаг должен соответствовать версии ОС Microsoft Windows.
 
-    - На стартовом экране Windows введите **Отчеты** и в результатах поиска выберите **Диспетчер конфигурации служб Reporting Services** .
+    - На стартовом экране Windows введите **Отчеты** и в результатах поиска выберите **Диспетчер конфигурации сервера отчетов**.
 
     - Нажмите кнопку **Пуск**и последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]и **Средства настройки**.
 
          Если необходимо настроить экземпляр сервера отчетов предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], откройте соответствующую ей папку установки. Например, укажите [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] вместо [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , чтобы открыть средства настройки для компонентов сервера [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .
 
-         Выберите **Диспетчер конфигурации служб Reporting Services**.
+         Выберите **Диспетчер конфигурации сервера отчетов**.
 
 2. Появится диалоговое окно **Подключение для конфигурации служб Reporting Services** , в котором можно выбрать настраиваемый экземпляр сервера отчетов. Щелкните **Подключить**.
 

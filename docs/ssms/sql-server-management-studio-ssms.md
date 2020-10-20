@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 0b46427196ad48bc6dbfaeaca25fa7e327d114f8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 91fc06c59f9e2be53409d67d0c00de1fe187e611
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480461"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035989"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Что такое SQL Server Management Studio (SSMS)?
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) — это интегрированная среда для управления любой инфраструктурой SQL. Используйте SSMS для доступа, настройки, администрирования и разработки всех компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], базы данных SQL Azure и хранилища данных SQL, а также управления ими. Среда SSMS предоставляет единую полнофункциональную служебную программу, которая сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для доступа к службе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для разработчиков и администраторов баз данных всех профессиональных уровней.
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) — это интегрированная среда для управления любой инфраструктурой SQL. Используйте SSMS для доступа, настройки, администрирования и разработки всех компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Базы данных SQL Azure и Azure Synapse Analytics, а также управления ими. Среда SSMS предоставляет единую полнофункциональную служебную программу, которая сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для доступа к службе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для разработчиков и администраторов баз данных всех профессиональных уровней.
 
 - [**Скачивание SQL Server Management Studio (SSMS)** ](download-sql-server-management-studio-ssms.md)
 - [**Скачивание SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
@@ -43,7 +43,7 @@ ms.locfileid: "89480461"
 |**Обозреватель шаблонов** используется для создания файлов со стандартным текстом, которые можно использовать для ускорения разработки запросов и скриптов, и управления ими.|[Обозреватель шаблонов](../ssms/template/template-explorer.md)|  
 |Устаревший **обозреватель решений** используется для создания проектов, применяемых для управления такими элементами администрирования, как скрипты и запросы.|[Обозреватель решений](../ssms/solution/solution-explorer.md)|  
 |Использование инструментов для визуального проектирования, включенных в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|Использование редакторов языков [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для интерактивного написания и отладки запросов и скриптов.|[Редакторы запросов и текста](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+|Использование редакторов языков [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для интерактивного написания и отладки запросов и скриптов.|[Редакторы запросов и текста](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>SQL Server Management Studio для решения задач бизнес-аналитики
 
@@ -58,7 +58,7 @@ ms.locfileid: "89480461"
 
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] позволяет создавать проекты скриптов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] , в которых выполняются разработка и сохранение скриптов с использованием многомерных выражений (MDX), расширений интеллектуального анализа данных (DMX) и XML для аналитики (XMLA). Проекты скриптов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] используются для выполнения задач управления или повторного создания баз данных, кубов и других объектов в экземплярах служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] . Например, можно разработать скрипт XMLA в проекте скрипта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] , который создает объекты непосредственно в существующем экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] . Проекты скриптов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] могут быть сохранены в составе решения и интегрироваться с контролем исходного кода.
   
-Дополнительные сведения об использовании среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]см. в разделе [Разработка и реализация с помощью среды SQL Server Management Studio](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
+Дополнительные сведения об использовании среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]см. в разделе [Разработка и реализация с помощью среды SQL Server Management Studio](/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
   
 ### <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>Управление решениями Integration Services в среде SQL Server Management Studio
 
@@ -90,7 +90,7 @@ ms.locfileid: "89480461"
 
 - Начиная с SSMS 17.0, команда разработчиков средств SQL внедрила [политику современного жизненного цикла Майкрософт](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 - Ознакомьтесь с исходным [объявлением о выходе политики современного жизненного цикла](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy). Дополнительные сведения см. в статье [Политика современного жизненного цикла: вопросы и ответы](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
-- Сведения о сборе диагностических данных и использовании функций см. в статье [Приложение к конфиденциальности в SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-privacy).
+- Сведения о сборе диагностических данных и использовании функций см. в статье [Приложение к конфиденциальности в SQL Server](../sql-server/sql-server-privacy.md).
 
 ## <a name="cross-platform-tool"></a>Кроссплатформенный инструмент
 
@@ -101,8 +101,8 @@ ms.locfileid: "89480461"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 - [Установка локализованных версий SSMS](install-other-languages.md)
-- [Подключение к экземпляру SQL Server и его запрос](tutorials/connect-query-sql-server.md)
-- [Написание инструкций Transact-SQL](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
+- [Подключение к экземпляру SQL Server и его запрос](./quickstarts/connect-query-sql-server.md)
+- [Написание инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4fad93d5682a8e3cfdd6fdf5341944c4b4b58a83
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: c87da88bcec8d1fcc29c282a1e012121a81f6f45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603173"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986710"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>зарегистрировать имя участника-службы для сервера отчетов
   При развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в сети, где для взаимной проверки подлинности используется протокол Kerberos, а сервер отчетов настроен для запуска от учетной записи пользователя домена, необходимо создать для службы сервера отчетов имя участника-службы (SPN).  
@@ -24,7 +24,7 @@ ms.locfileid: "91603173"
   
  Чтобы создать имя субъекта-службы, можно воспользоваться программой командной строки **SetSPN** . Дополнительные сведения см. в следующих разделах:  
   
--   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
+-   [Setspn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
   
 -   [Синтаксис имен субъектов-служб (SPN) SetSPN (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
@@ -69,8 +69,7 @@ Setspn -s http/<computer-name>.<domain-name> <domain-user-account>
 7.  Добавьте `<RSWindowsNegotiate/>` в качестве первой записи этого раздела для включения Kerberos.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Настройка учетной записи службы (диспетчер конфигурации сервера отчетов)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Управление сервером отчетов Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
-  
   

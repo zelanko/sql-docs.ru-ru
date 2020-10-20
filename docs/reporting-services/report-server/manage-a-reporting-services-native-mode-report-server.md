@@ -13,37 +13,37 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09eac58c362b4fd6c561fd3188d265d1bb39464
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 8e6fe5d4571ea8cd276da46f8c89688cd310da07
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547959"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935115"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Управление сервером отчетов служб Reporting Services в собственном режиме
-  Этот раздел содержит описание процедур по настройке экземпляра сервера отчетов в собственном режиме с использованием диспетчера конфигурации служб Reporting Services.  
+  Этот раздел содержит описание процедур по настройке экземпляра сервера отчетов в собственном режиме с использованием диспетчера конфигурации сервера отчетов.  
   
 ## <a name="in-this-section"></a>в этом разделе  
  Подразделы в этом разделе организованы по категориям, что упрощает поиск необходимых инструкций. Подразделы первого раздела содержат описания основных задач по настройке конфигурации сервера отчетов, работающего в собственном режиме. Подразделы второго раздела посвящены дополнительным параметрам конфигурации. Подразделы третьего раздела помогут выполнить настройку конфигурации сервера отчетов для работы в режиме интеграции с SharePoint.  
   
 ### <a name="basic-configuration"></a>Основная конфигурация  
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Представляет шаги запуска программы настройки служб Reporting Services.  
   
- [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [Настройка учетной записи службы (диспетчер конфигурации сервера отчетов)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  Объясняет, как задать учетную запись и пароль службы сервера отчетов.  
   
  [Регистрация имени участника-службы для сервера отчетов](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
  Показывает, как вручную зарегистрировать имя участника-службы для сервера отчетов, который запускается от учетной записи пользователя домена в сети, где используется проверка подлинности по протоколу Kerberos.  
   
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  Описывает, как назначить один или несколько URL-адресов для получения доступа к веб-службе сервера отчетов и веб-порталу.  
   
- [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
+ [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Представляет шаги создания базы данных сервера отчетов. Этот шаг требуется для развертывания установки служб Reporting Services.  
   
 ### <a name="advanced-or-optional-configuration"></a>Дополнительные или необязательные параметры настройки  
- [Настройка масштабного развертывания сервера отчетов в основном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Настройка развертывания с горизонтальным увеличением масштаба для сервера отчетов в собственном режиме (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Представляет шаги настройки нескольких серверов отчетов для совместного использования базы данных сервера отчетов.  
   
  [Доставка электронной почтой в службах Reporting Services](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   

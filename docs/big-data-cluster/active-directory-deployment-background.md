@@ -1,20 +1,20 @@
 ---
 title: Развертывание нескольких кластеров в домене Active Directory
 titleSuffix: SQL Server Big Data Cluster
-description: Узнайте больше о развертывании кластера больших данных SQL Server в домене Active Directory.
-author: mihaelablendea
-ms.author: mihaelab
+description: Узнайте, как развернуть несколько кластеров больших данных SQL Server в одном домене Active Directory.
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9617e4a447db1d2cef3aa9e6afc7927eb007a981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730942"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892504"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Развертывание нескольких [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в одном домене Active Directory
 

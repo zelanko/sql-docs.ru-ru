@@ -8,13 +8,13 @@ ms.date: 06/19/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: be0e80a5d6a54726fd77b753c9910764bf5f600d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 31d95c5881c68e6e897c18a935e4fa85799be60c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180381"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892134"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Что такое службы машинного обучения SQL Server (Python и R)?
 [!INCLUDE [SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -45,15 +45,23 @@ ms.locfileid: "88180381"
 ## <a name="get-started-with-machine-learning-services"></a>Приступая к работе со Службами машинного обучения
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-1. [Установите Службы машинного обучения SQL Server в Windows](install/sql-machine-learning-services-windows-install.md) или [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). Можно также использовать [Службы машинного обучения в Кластерах больших данных](../big-data-cluster/machine-learning-services.md).
+1. [Установите Службы машинного обучения SQL Server в Windows](install/sql-machine-learning-services-windows-install.md) или [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). Вы также можете использовать [Службы машинного обучения в кластерах больших данных](../big-data-cluster/machine-learning-services.md) и [Службы машинного обучения в Управляемом экземпляре SQL Azure \(предварительная версия\)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 1. Настройте средства разработки. Вы можете [выполнять сценарии Python и R в записных книжках Azure Data Studio](install/sql-machine-learning-azure-data-studio.md). Можно также выполнять T-SQL в [Azure Data Studio](../azure-data-studio/what-is.md).
 
 1. Создайте свой первый сценарий Python или R.
 
-    + [Учебники по использованию Python для машинного обучения SQL](tutorials/python-tutorials.md)
-    + [Учебники по использованию R для машинного обучения SQL](tutorials/r-tutorials.md)
+   + [Учебники по использованию Python для машинного обучения SQL](tutorials/python-tutorials.md)
+   + [Учебники по использованию R для машинного обучения SQL](tutorials/r-tutorials.md)
 ::: moniker-end
+
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ Создайте свой первый сценарий Python или R.
+
+   + [Учебники по использованию Python для машинного обучения SQL](tutorials/python-tutorials.md)
+   + [Учебники по использованию R для машинного обучения SQL](tutorials/r-tutorials.md)
+::: moniker-end
+
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 1. [Установка служб машинного обучения SQL Server в Windows](install/sql-machine-learning-services-windows-install.md).
 
@@ -61,8 +69,8 @@ ms.locfileid: "88180381"
 
 1. Создайте свой первый сценарий Python или R.
 
-    + [Учебники по использованию Python для машинного обучения SQL](tutorials/python-tutorials.md)
-    + [Учебники по использованию R для машинного обучения SQL](tutorials/r-tutorials.md)
+   + [Учебники по использованию Python для машинного обучения SQL](tutorials/python-tutorials.md)
+   + [Учебники по использованию R для машинного обучения SQL](tutorials/r-tutorials.md)
 ::: moniker-end
 
 <a name="versions"></a>
@@ -76,7 +84,7 @@ ms.locfileid: "88180381"
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 
-Сведения о версии R в SQL Server 2016 см. в [разделе о версии R в статье с описанием служб R Services](r/sql-server-r-services.md?view=sql-server-2016#version).
+Сведения о версии R в SQL Server 2016 см. в [разделе о версии R в статье с описанием служб R Services](r/sql-server-r-services.md?view=sql-server-2016&preserve-view=true#version).
 
 <a name="packages"></a>
 

@@ -12,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446092"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934631"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -139,13 +139,13 @@ ms.locfileid: "88446092"
 ##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> Обновление масштабного развертывания служб Reporting Services, работающих в собственном режиме  
  Ниже приводится сводка действий по обновлению развертывания служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме, которое масштабировано на использование более одного сервера отчетов. Этот процесс требует остановки развертывания [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
-1.  Создайте резервные копии ключей шифрования и баз данных сервера отчетов. Дополнительные сведения см. в статьях [Операции резервного копирования и восстановления для служб Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) и [Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
+1.  Создайте резервные копии ключей шифрования и баз данных сервера отчетов. Дополнительные сведения см. в статьях [Операции резервного копирования и восстановления для служб Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) и [Добавление и удаление ключей шифрования для развертывания с горизонтальным увеличением масштаба (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
-2.  Используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и удалите все серверы отчетов из масштабированного развертывания. Дополнительные сведения см. в разделе [Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+2.  Используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и удалите все серверы отчетов из масштабированного развертывания. Дополнительные сведения см. в разделе [Настройка развертывания с горизонтальным увеличением масштаба для сервера отчетов в собственном режиме (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 3.  Обновите один из серверов отчетов до служб SQL Server Reporting Services.  
   
-4.  Используйте диспетчер конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для добавления серверов отчетов обратно в развертывание. Дополнительные сведения см. в разделе [Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+4.  Используйте диспетчер конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для добавления серверов отчетов обратно в развертывание. Дополнительные сведения см. в разделе [Настройка развертывания с горизонтальным увеличением масштаба для сервера отчетов в собственном режиме (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      Для каждого сервера повторите шаги по обновлению и масштабированию.  
   

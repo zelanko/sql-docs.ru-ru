@@ -9,17 +9,17 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: d02217eaae3cf402a1ccb6e08780f4e9406d446f
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227268"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956396"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Установка настраиваемой среды выполнения Python для SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-В этой статье описывается, как установить настраиваемую среду выполнения для запуска скриптов Python с SQL Server. Настраиваемую среду выполнения Python можно использовать в следующих сценариях:
+В этой статье описывается, как установить настраиваемую среду выполнения для запуска скриптов Python с SQL Server. Настраиваемая среда выполнения использует технологию расширения языка, созданную на основе платформы расширяемости, для выполнения внешнего кода. Настраиваемую среду выполнения Python можно использовать в следующих сценариях:
 
 + Установка SQL Server с платформой расширяемости.
 
@@ -29,6 +29,8 @@ ms.locfileid: "91227268"
 
 > [!NOTE]
 > В этой статье описывается, как установить настраиваемую среду выполнения для Python в Windows. Об установке на Linux см. статью [Установка настраиваемой среды выполнения Python для SQL Server на Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+
+
 
 ## <a name="pre-install-checklist"></a>Контрольный список перед установкой
 
@@ -73,14 +75,14 @@ ms.locfileid: "91227268"
     + Службы ядра СУБД
     + Службы машинного обучения и расширения языка
 
-1. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Если после завершения установки будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 
 ## <a name="install-python-37"></a>установите Python 3.7; 
 
 Установите [Python 3.7]( https://www.python.org/downloads/release/python-379/) и добавьте его в переменную PATH.
 
-![Добавьте Python 3.7 в путь.](../install/media/python-379.png) **Обновление образа — примечание**
+![Добавьте Python 3.7 в путь.](../install/media/python-379.png) 
 
 
 #### <a name="install-pandas"></a>Установка Pandas
@@ -105,7 +107,7 @@ python.exe -m pip install pandas
 
 ## <a name="grant-access-to-the-custom-python-installation-folder"></a>Предоставление доступа к настраиваемой папке установки Python
 
-Выполните команды **icacls** из новой командной строки *с повышенными привилегиями*, чтобы предоставить разрешение на чтение и выполнение в PYTHONHOME для **имени пользователя службы панели запуска SQL Server** и идентификатора безопасности **S-1-15-2-1** (**ВСЕ ПАКЕТЫ ПРИЛОЖЕНИЙ**). Имя пользователя службы панели запуска имеет вид `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME`, где — имя экземпляра SQL Server. Эти команды будут рекурсивно предоставлять доступ ко всем файлам и папкам в указанном каталоге.
+Выполните команды **icacls** из новой командной строки *с повышенными привилегиями*, чтобы предоставить разрешение на чтение и выполнение в PYTHONHOME для **имени пользователя службы панели запуска SQL Server** и идентификатора безопасности **S-1-15-2-1** (**ВСЕ ПАКЕТЫ ПРИЛОЖЕНИЙ**). Имя пользователя службы панели запуска имеет вид `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` — это имя экземпляра SQL Server. Эти команды будут рекурсивно предоставлять доступ ко всем файлам и папкам в указанном каталоге.
 
 Добавьте имя экземпляра в `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). В этом примере INSTANCENAME — экземпляр по умолчанию `MSSQLSERVER`.
 
@@ -138,7 +140,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="register-external-language"></a>Регистрация внешнего языка
 
-С помощью команды [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) зарегистрируйте внешний язык для каждой базы данных, в которой необходимо использовать расширение языка Python. Используйте [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) для подключения к SQL Server и выполнения следующей команды T-SQL. Измените путь в этом операторе таким образом, чтобы он отражал расположение скачанного ZIP-файла расширения языка (python-lang-extension.zip).
+С помощью команды [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) зарегистрируйте внешний язык для каждой базы данных, в которой необходимо использовать расширение языка Python. Используйте [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) для подключения к SQL Server и выполнения следующей команды T-SQL. Измените путь в этом операторе таким образом, чтобы он отражал расположение скачанного ZIP-файла расширения языка (python-lang-extension.zip).
 
 > [!NOTE]
 > Python — зарезервированное слово. Используйте другое имя для внешнего языка, например "myPython".
@@ -284,7 +286,7 @@ sudo systemctl restart mssql-launchpadd
 
 ## <a name="register-external-language"></a>Регистрация внешнего языка
 
-С помощью команды [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) зарегистрируйте внешний язык для каждой базы данных, в которой необходимо использовать расширение языка Python. Используйте [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) для подключения к SQL Server и выполнения следующей команды T-SQL. 
+С помощью команды [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) зарегистрируйте внешний язык для каждой базы данных, в которой необходимо использовать расширение языка Python. Используйте [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) для подключения к SQL Server и выполнения следующей команды T-SQL. 
 Измените путь в этом операторе таким образом, чтобы он отражал расположение скачанного ZIP-файла расширения языка (python-lang-extension.zip).
 
 > [!NOTE]
@@ -302,7 +304,7 @@ GO
 
 Внешний скрипт в Python может быть выполнен с помощью хранимой процедуры [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), запускаемой на SQL Server. 
 
-Чтобы включить внешние скрипты, выполните следующие команды SQL с помощью [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), подключенного к SQL Server.
+Чтобы включить внешние скрипты, выполните следующие команды SQL с помощью [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), подключенного к SQL Server.
 
 ```sql
 sp_configure 'external scripts enabled', 1;

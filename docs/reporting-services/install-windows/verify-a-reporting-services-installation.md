@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6753c10c7fd753be5bf370c3c937d2d9dec1ad9f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7f8b963f2b46ec68d0306e29e487f6c59f537ae
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320940"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934482"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить в один из двух режимов — в собственном режиме или в режиме интеграции с SharePoint. Шаги, которые необходимо выполнить для проверки установки, зависят от выбранного режима сервера отчетов.  
@@ -89,7 +89,7 @@ ms.locfileid: "88320940"
   
 2.  Откройте приложения командной строки служб и убедитесь в том, что служба сервера отчетов запущена. Для просмотра состояния службы сервера отчетов нажмите кнопку **Пуск**, выберите **Панель управления**, дважды щелкните **Администрирование**и откройте оснастку **Службы**. Когда появится список служб, найдите службу **Сервер отчетов (MSSQLSERVER)**. Состояние службы должно быть **Работает**.  
   
-3.  Откройте браузер и в строке адреса введите URL-адрес сервера отчетов. Адрес должен состоять из имени сервера и имени виртуального каталога, которое было определено во время установки сервера отчетов. По умолчанию имя виртуального каталога сервера отчетов — **ReportServer**. Можно использовать следующий URL-адрес для проверки установки сервера отчетов: https:// *\<computer name>* /ReportServer *\<_instance name>* . URL-адрес будет другим, если сервер отчетов установлен как именованный экземпляр. Дополнительные сведения о формате URL-адресов см. в статье [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Если вы являетесь локальным администратором систем Windows Vista или Windows Server 2008, ознакомьтесь со статьей [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (службы SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Откройте браузер и в строке адреса введите URL-адрес сервера отчетов. Адрес должен состоять из имени сервера и имени виртуального каталога, которое было определено во время установки сервера отчетов. По умолчанию имя виртуального каталога сервера отчетов — **ReportServer**. Можно использовать следующий URL-адрес для проверки установки сервера отчетов: https:// *\<computer name>* /ReportServer *\<_instance name>* . URL-адрес будет другим, если сервер отчетов установлен как именованный экземпляр. Дополнительные сведения о формате URL-адресов см. в статье [Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Если вы являетесь локальным администратором систем Windows Vista или Windows Server 2008, ознакомьтесь со статьей [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (службы SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 4.  Запустите отчет, чтобы проверить работу сервера отчетов. Для выполнения этого шага можно создать образец отчета из учебника. Дополнительные сведения см. в статье [Создание простого табличного отчета (учебник по службам SSRS)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   

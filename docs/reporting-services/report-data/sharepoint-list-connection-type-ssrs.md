@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 369f8962752bcdc67c407b561400138f3c179abe
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396693"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935328"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Тип соединения список SharePoint (службы SSRS)
 
@@ -68,7 +68,7 @@ ms.locfileid: "87396693"
  Для технологии SharePoint, настроенной для работы без сервера отчетов (в локальном режиме), этот параметр не поддерживается. Дополнительные сведения о локальном режиме см. в разделе [Отчеты, созданные в локальном и подключенном режиме в средстве просмотра отчетов (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  **Учетные данные не требуются (не использовать учетные данные).**  
- Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в статье [Настройка учетной записи автоматического выполнения (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Дополнительные сведения о поддержке проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт см. в разделе [Использование проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   

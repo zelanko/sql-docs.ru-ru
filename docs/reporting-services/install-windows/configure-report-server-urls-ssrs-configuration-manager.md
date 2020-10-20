@@ -1,5 +1,5 @@
 ---
-description: Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
+description: Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)
 title: Настройка URL-адресов сервера отчетов (диспетчер конфигурации) | Документация Майкрософт
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f80b3232fa7631add5850777db4affc5d25a67d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70d112c5468929f41b6073c7f001edbad2f86eb7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463526"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934766"
 ---
-# <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
+# <a name="configure-report-server-urls--report-server-configuration-manager"></a>Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)
   В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL-адреса используются для доступа к веб-службам сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Прежде чем использовать любое приложение, необходимо настроить по крайней мере по одному URL-адресу для веб-службы и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для URL-адресов обоих приложений предоставляет значения по умолчанию, которые подходят для большинства сценариев развертывания, в том числе развертывания параллельно с другими веб-службами и приложениями.  
   
 -   При установке стандартной конфигурации URL-адреса создаются автоматически при помощи значений по умолчанию.  
   
--   Если URL-адреса создаются или изменяются при помощи программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , для них можно принять значения по умолчанию, либо указать пользовательские значения. При задании URL-адреса на странице появляется проверочная ссылка с URL-адресом; таким образом, можно убедиться, что указанные настройки приводят к допустимому соединению. Пошаговые инструкции по настройке и проверке URL-адресов см. в разделе [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+-   Если URL-адреса создаются или изменяются при помощи программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , для них можно принять значения по умолчанию, либо указать пользовательские значения. При задании URL-адреса на странице появляется проверочная ссылка с URL-адресом; таким образом, можно убедиться, что указанные настройки приводят к допустимому соединению. Пошаговые инструкции по настройке и проверке URL-адресов см. в разделе [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 ## <a name="defining-a-report-server-url"></a>Определение URL-адреса сервера отчетов  
  URL-адрес точно определяет расположение экземпляра приложения сервера отчетов в сети. При создании URL-адреса сервера отчетов необходимо указать следующие элементы.  
@@ -52,29 +52,29 @@ ms.locfileid: "88463526"
 |Виртуальный каталог|ReportServer|Обратите внимание, что в обоих URL-адресах в примере содержится имя виртуального каталога. Если определение URL-адреса не настроено соответствующим образом, имя виртуального каталога приложения всегда должно быть указано в URL-адресе.|  
   
 > [!NOTE]  
->  Базовое URL-резервирование позволяет использовать в URL-адресах любые допустимые имена узлов. Программой настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] создается резервирование URL-адреса в файле HTTP.SYS, используя синтаксис, допускающий переход к определенному экземпляру сервера отчетов по нескольким вариантам имени узла. Дополнительные сведения о резервировании URL-адреса см. в разделе [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+>  Базовое URL-резервирование позволяет использовать в URL-адресах любые допустимые имена узлов. Программой настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] создается резервирование URL-адреса в файле HTTP.SYS, используя синтаксис, допускающий переход к определенному экземпляру сервера отчетов по нескольким вариантам имени узла. Дополнительные сведения о резервировании URL-адреса см. в разделе [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## <a name="server-side-permissions-on-a-report-server-url"></a>Разрешения для URL-адресов сервера отчетов на стороне сервера  
- Разрешения для каждой конечной точки URL-адреса предоставляются исключительно учетной записи службы сервера отчетов. Только у этой учетной записи имеется право доступа к запросам, направленным к URL-адресам служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . При настройке идентификатора службы в программе установки или в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для этой учетной записи создаются и обрабатываются ограниченные списки управления доступом на уровне пользователей (DACL). Если учетная запись службы изменена, программой настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обновляются все резервирования URL-адресов, чтобы интегрировать новые сведения об учетной записи. Дополнительные сведения см. в разделе [Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
+ Разрешения для каждой конечной точки URL-адреса предоставляются исключительно учетной записи службы сервера отчетов. Только у этой учетной записи имеется право доступа к запросам, направленным к URL-адресам служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . При настройке идентификатора службы в программе установки или в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для этой учетной записи создаются и обрабатываются ограниченные списки управления доступом на уровне пользователей (DACL). Если учетная запись службы изменена, программой настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обновляются все резервирования URL-адресов, чтобы интегрировать новые сведения об учетной записи. Дополнительные сведения см. в разделе [Синтаксис резервирования URL-адресов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>Проверка подлинности клиентских запросов, отправленных на URL-адрес сервера отчетов  
  По умолчанию в конечных точках URL-адресов поддерживается проверка подлинности Windows. Это модуль безопасности, используемый по умолчанию. При реализации пользовательской проверки или поставщика проверки подлинности с помощью форм необходимо изменить параметры проверки подлинности на сервере отчетов. При необходимости параметры проверки подлинности Windows можно также изменить, чтобы они соответствовали подсистеме проверки подлинности, используемой в сети. Дополнительные сведения см. в статье [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  В этом разделе содержатся инструкции по настройке и изменению резервирования URL-адресов в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  Настройте URL-адресы, используемые для доступа к приложениям и отчетам. В этом разделе описаны URL-адреса приложений, URL-адреса по умолчанию и способы работы URL-резервирования и регистрации в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Синтаксис резервирования URL-адресов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
  Резервирования URL-адресов по умолчанию, используемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , действительны в большинстве сценариев. Однако при необходимости ограничить доступ или расширить развертывание с целью обеспечения доступа к Интернету или экстрасети может потребоваться настроить параметры в соответствии с собственными требованиями. В данном разделе описывается синтаксис резервирования URL-адреса, и содержатся рекомендации по созданию пользовательских резервирований для развертываний.  
   
- [URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [URL-адреса в файлах конфигурации (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)  
  Файл RSReportServer.config содержит несколько записей для резервирований URL-адресов, а также URL-адреса, используемые [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] и модулем доставки сообщений электронной почты сервера отчетов. В данном разделе описаны параметры конфигурации URL-адресов, позволяющее понять их сравнение.  
   
- [Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)  
+ [Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)  
  При установке нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере увеличивается вероятность дублирования URL-адресов во время их регистрации. Чтобы избежать таких ошибок, следует придерживаться приведенных в данном разделе рекомендаций по созданию резервирований URL-адресов, зависящих от экземпляров.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 
+ [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 

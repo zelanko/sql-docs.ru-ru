@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90a0f31355b5225533728efb25dfb5f6c96de16
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462171"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934965"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Руководство по Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
 
 В этом руководстве рассказывается о средствах, используемых для настройки сервера отчетов, управления содержимым и операциями сервера отчетов, а также создания и публикации отчетов с разбиением на страницы и мобильных отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Если вы уже знакомы с этими средствами, то можете перейти к другим руководствам, которые помогут научиться правильно использовать службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Другие учебные материалы см. в разделе [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md).
 
-## <a name="reporting-services-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> Использование диспетчера конфигурации служб Reporting Services (собственный режим)
+## <a name="report-server-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> Диспетчер конфигурации сервера отчетов (собственный режим)
 Используйте диспетчер конфигурации для работы в основном режиме, чтобы сделать следующее.
 
 - Укажите учетную запись службы.
@@ -43,15 +43,15 @@ ms.locfileid: "84462171"
 
 **Установка**. Диспетчер конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается при установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме. Дополнительные сведения см. в разделе [Установка сервера отчетов служб Reporting Services в собственном режиме](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md).
 
-### <a name="to-start-the-reporting-services-configuration-manager"></a>Запуск диспетчера конфигурации служб Reporting Services
+### <a name="to-start-the-report-server-configuration-manager"></a>Запуск диспетчера конфигурации сервера отчетов
 
-1. На начальном экране Windows введите **reporting** и в результатах поиска **Приложения** выберите **Диспетчер конфигурации служб Reporting Services**.
+1. На начальном экране Windows введите **отчет** и в результатах поиска **Приложения** выберите **Диспетчер конфигурации сервера отчетов**.
 
-    ![Диспетчер конфигурации служб Reporting Services после запуска](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Диспетчер конфигурации служб Reporting Services после запуска")
+    ![Диспетчер конфигурации сервера отчетов на начальном экране](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Диспетчер конфигурации сервера отчетов на начальном экране")
 
     **Or**
 
-    Нажмите кнопку **Пуск**, выберите пункт **Программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**, а затем **Диспетчер конфигурации служб Reporting Services**.
+    Нажмите кнопку **Пуск**, выберите пункт **Программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства конфигурации**, а затем **Диспетчер конфигурации сервера отчетов**.
 
     Появится диалоговое окно **Выбор экземпляра установки сервера отчетов** , в котором можно выбрать настраиваемый экземпляр сервера отчетов.
 
@@ -67,7 +67,7 @@ ms.locfileid: "84462171"
 
     ![Средство конфигурации служб Reporting Services](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "средство настройки служб Reporting Services")
 
- **Следующие шаги**. [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) и [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ **Следующие шаги**. [Настройка и администрирование сервера отчетов (собственный режим SSRS)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) и [Использование диспетчера конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ## <a name="web-portal-native-mode"></a>Веб-портал (основной режим служб SSRS)
 
@@ -81,7 +81,7 @@ ms.locfileid: "84462171"
 
 1. Откройте браузер. Сведения о поддерживаемых браузерах и версиях см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
-2. В адресной строке браузера введите URL-адрес веб-портала. URL-адрес по умолчанию — `https://<serverName>/reports`. Можно использовать программу настройки служб Reporting Services для подтверждения имени сервера и URL-адреса. Дополнительные сведения об URL-адресах, используемых в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
+2. В адресной строке браузера введите URL-адрес веб-портала. URL-адрес по умолчанию — `https://<serverName>/reports`. Можно использовать программу настройки служб Reporting Services для подтверждения имени сервера и URL-адреса. Дополнительные сведения об URL-адресах, используемых в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
 
 3. Веб-портал откроется в окне браузера. Стартовой страницей является корневая папка. В зависимости от разрешений на стартовой странице могут быть видны дополнительные папки, гиперссылки на отчеты и файлы ресурсов. На панели инструментов расположены дополнительные кнопки и команды.
 

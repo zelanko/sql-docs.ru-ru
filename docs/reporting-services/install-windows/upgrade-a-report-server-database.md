@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fcf80ef99c06487f25b65a928aab25a24bfccffe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446010"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891174"
 ---
 # <a name="upgrade-a-report-server-database"></a>Обновление базы данных сервера отчетов
 
@@ -61,16 +61,16 @@ ms.locfileid: "88446010"
   
  Однако, если разрешение **sysadmin** на изменение схемы на удаленном компьютере отсутствуют, в соединении будет отказано со следующей ошибкой.  
   
- `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Reporting Services Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
+ `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Report Server Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
   
  В этот момент произойдет обновление программных файлов сервера отчетов, однако версия формата базы данных сервера отчетов останется прежней. Сервер отчетов будет недоступен до тех пор, пока процесс обновления не будет завершен (для этого базу данных необходимо обновить вручную).  
   
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>Обновление базы данных в собственном режиме с помощью скриптов  
  Для обновления базы данных сервера отчетов можно использовать скрипты WMI. Дополнительные сведения см. в статье [Метод GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md).  
   
-## <a name="next-steps"></a>Дальнейшие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-[Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Диспетчер конфигурации сервера отчетов](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Создание базы данных сервера отчетов](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Перенос установки служб Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  

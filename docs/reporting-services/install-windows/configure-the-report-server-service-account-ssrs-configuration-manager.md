@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042855"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935451"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>Настройка учетной записи службы сервера отчетов (диспетчер конфигурации сервера отчетов)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] реализован в виде единой службы, состоящей из веб-службы сервера отчетов, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]и приложения фоновой обработки, которое предназначено для запланированной обработки отчетов и доставки подписки. В этом разделе описан процесс начальной настройки учетной записи службы, а также изменения учетной записи или пароля при помощи программы настройки служб Reporting Services.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "90042855"
   
 ## <a name="updating-an-expired-password"></a>Обновление пароля с истекшим сроком действия
 
- Если служба сервера отчетов запущена от имени учетной записи домена и срок действия пароля истек до его обновления в диспетчере конфигураций Reporting Services, служба не будет запускаться до тех пор, пока не будет задан новый пароль.  
+ Если служба сервера отчетов запущена от имени учетной записи домена и срок действия пароля истек до его обновления в диспетчере конфигураций сервера отчетов, служба не будет запускаться до тех пор, пока не будет задан новый пароль.  
   
  Если срок действия пароля учетной записи службы для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] истек, то при попытке подключиться к серверу отчетов возникает ошибка **rsReportServerDatabaseUnavailable** . Эта ошибка устраняется с помощью сброса пароля.  
   
@@ -115,5 +115,4 @@ ms.locfileid: "90042855"
   
 ## <a name="next-steps"></a>Next Steps
 
- [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

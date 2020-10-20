@@ -8,12 +8,12 @@ ms.technology: security
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf1db4f6e07609ce6da38569732f7dba333f86ff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 40ddab224d24e566ad346d64d5238ca5c81d9f48
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497208"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891594"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name-san"></a>Настройка использования альтернативного имени субъекта в Reporting Services (SAN)
 
@@ -33,11 +33,11 @@ URL-адреса в Reporting Services и Сервере отчетов Power B
   
 1.  Запустите диспетчер конфигурации Configuration Manager сервера отчетов.  
   
-     Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+     Дополнительные сведения см. в разделе [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Выберите на странице **URL-адрес веб-службы** порт TLS/SSL и TLS/SSL-сертификат.  
   
-     ![Диспетчер конфигурации служб Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Диспетчер конфигурации служб Reporting Services")  
+     ![Диспетчер конфигурации сервера отчетов](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Диспетчер конфигурации сервера отчетов")  
   
      Диспетчер конфигурации зарегистрирует TLS/SSL-сертификат для порта.  
   
@@ -155,7 +155,7 @@ URL-адреса в Reporting Services и Сервере отчетов Power B
 ## <a name="see-also"></a>См. также раздел
 
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Диспетчер конфигурации сервера отчетов](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Изменение файла конфигурации служб Reporting Services](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Настройка URL-адресов сервера отчетов](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

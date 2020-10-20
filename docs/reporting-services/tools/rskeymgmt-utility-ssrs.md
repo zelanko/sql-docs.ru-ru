@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38fe4c1a8b627b5a45e30254f8eeac62f4452ad
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916272"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988140"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Программа rskeymgmt (SSRS)
   Извлекает, восстанавливает, создает и удаляет симметричный ключ, используемый для защиты важных данных сервера отчетов от несанкционированного доступа. Эта программа также используется для соединения экземпляров сервера отчетов в конфигурацию с масштабным развертыванием. *Конфигурация сервера отчетов с масштабным развертыванием* означает множество экземпляров сервера отчетов, которые совместно используют одну базу данных сервера отчетов.  
@@ -129,7 +129,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### <a name="deleting-encryption-keys-and-encrypted-content"></a>Удаление ключей шифрования и зашифрованного содержимого  
- В этом примере показано, как удалить все ключи шифрования, сохраненные на сервере отчетов. Если сервер отчетов установлен в конфигурации с масштабным развертыванием, то будут удалены ключи шифрования для всех экземпляров сервера отчетов, включенных в конфигурацию. При удалении ключа шифрования удаляются также все зашифрованные значения, существующие в базе данных сервера отчетов. Дополнительные сведения о зашифрованном содержимом см. в разделе [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+ В этом примере показано, как удалить все ключи шифрования, сохраненные на сервере отчетов. Если сервер отчетов установлен в конфигурации с масштабным развертыванием, то будут удалены ключи шифрования для всех экземпляров сервера отчетов, включенных в конфигурацию. При удалении ключа шифрования удаляются также все зашифрованные значения, существующие в базе данных сервера отчетов. Дополнительные сведения о зашифрованном содержимом см. в разделе [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
 ```  
 rskeymgmt -d  
@@ -171,12 +171,11 @@ rskeymgmt -r <installationID>
   
  Программа **rskeymgmt** используется для управления набором ключей, указанным во время установки или при инициализации. Она подключается к локальной службе Windows сервера отчетов через конечную точку удаленного вызова процедур (RPC). Чтобы эта программа могла работать, должна быть запущена служба Windows сервера отчетов.  
   
- Дополнительные сведения о ключах шифрования см. в разделах [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) и [Инициализация сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Дополнительные сведения о ключах шифрования см. в разделах [Настройка ключей шифрования и управление ими (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) и [Инициализация сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Масштабное развертывание — основной режим служб Reporting Services (диспетчер конфигурации)](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
+ [Масштабное развертывание — основной режим служб Reporting Services (диспетчер конфигурации)](/previous-versions/sql/sql-server-2016/ms181357(v=sql.130))   
  [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Программы командной строки сервера отчетов (службы SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
+ [Настройка ключей шифрования и управление ими (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

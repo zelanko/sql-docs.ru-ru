@@ -1,5 +1,5 @@
 ---
-description: URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
+description: URL-адреса в файлах конфигурации (диспетчер конфигурации сервера отчетов)
 title: URL-адреса в файлах конфигурации (диспетчер конфигурации) | Документация Майкрософт
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3382a5d51a46d1fb2fdbe33f94ca56e398bfd3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17eaa59595b8a35fe1d9aa7fa3c69e6d0b39860f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472666"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934504"
 ---
-# <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
+# <a name="urls-in-configuration-files--report-server-configuration-manager"></a>URL-адреса в файлах конфигурации (диспетчер конфигурации сервера отчетов)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложений в файле RSReportServer.config. В этом файле содержатся как URL-адреса, так и резервирование URL-адресов. Эти параметры имеют различные предназначения и подчиняются различным правилам изменения. Пользователям, имеющим опыт изменения настройки системы через файлы конфигурации, этот раздел поможет узнать назначение каждого из параметров URL-адресов.  
   
 ## <a name="url-settings-in-rsreportserverconfig-file"></a>Параметры URL-адресов в файле RSReportServer.config  
@@ -28,9 +28,9 @@ ms.locfileid: "88472666"
   
 -   Описания каждого элемента в разделе **URLReservations** см. в статье [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
--   Дополнительные сведения о синтаксисе элемента **UrlString** см. в статье [Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
+-   Дополнительные сведения о синтаксисе элемента **UrlString** см. в статье [Синтаксис резервирования URL-адресов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
--   Инструкции по настройке URL-адресов для доступа к приложениям см. в статье [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+-   Инструкции по настройке URL-адресов для доступа к приложениям см. в статье [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 #### <a name="urls-for-report-access"></a>URL-адреса для доступа к отчетам  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включает модуль доставки по электронной почте, который можно использовать для рассылки отчетов в виде ссылок или вложений. Ссылка на отчет формируется в момент его доставки. Ее формирование производится модулем доставки электронной почты сервера отчетов в соответствии с параметром **UrlRoot** в файле конфигурации. Кроме того, параметр**UrlRoot** используется при разрешении ссылок в отчете, готовом для просмотра, созданном в процессе автоматической обработки.  
@@ -57,5 +57,5 @@ ms.locfileid: "88472666"
 |**ReportServerExternalUrl**|Необязательный параметр. Этот элемент отсутствует в файле конфигурации RSReportServer.config, его необходимо добавить вручную.<br /><br /> Этот элемент следует указывать только при использовании веб-частей SharePoint 2.0, если необходимо предоставлять пользователям возможность получения и открытия отчетов в новом окне браузера.<br /><br /> Внутри элемента \<**ReportServerUrl**> добавьте элемент \<**ReportServerExternalUrl**>, указав в нем полное имя сервера отчетов, которое разрешается до экземпляра сервера отчетов при обращении из отдельного окна браузера. Не удаляйте \<**ReportServerUrl**>.<br /><br /> В следующем примере показан синтаксис:<br /><br /> `<ReportServerExternalUrl>https://myserver/reportserver</ReportServerExternalUrl>`|Это значение используется веб-частями SharePoint 2.0.<br /><br /> В предыдущих версиях это значение рекомендовалось задавать при развертывании построителя отчетов на сервере отчетов, доступном из Интернета. Этот сценарий развертывания не тестировался. Если в прошлом этот параметр использовался для поддержки доступа к построителю отчетов через Интернет, следует рассмотреть альтернативную стратегию.|  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+ [Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)

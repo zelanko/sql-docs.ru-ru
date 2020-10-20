@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: e1dc0c59a6fbe96062e48e24e2f6b126770f0c84
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458960"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935149"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Обновление учетных данных в источниках данных отчетов с сайта SharePoint
   В этом разделе описывается процесс обновления источников данных, встроенных в отчеты, и совместно используемых источников данных, сохраненных в библиотеке документов SharePoint.  
@@ -43,7 +43,7 @@ ms.locfileid: "86458960"
   
      Вариант **Учетные данные не требуются** также можно использовать в определенных обстоятельствах.  
   
-     Для некоторых типов источников данных необходимо настроить на сервере отчетов учетную запись автоматического выполнения. Дополнительные сведения см. в подразделе по соответствующему типу источника данных: [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) и [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Для некоторых типов источников данных необходимо настроить на сервере отчетов учетную запись автоматического выполнения. Дополнительные сведения см. в подразделе по соответствующему типу источника данных: [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) и [Настройка учетной записи автоматического выполнения (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 7.  Введите имя пользователя и пароль.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "86458960"
   
      Вариант **Учетные данные не требуются** также можно использовать в определенных обстоятельствах. Этот вариант работает, только если источник данных не принимает учетные данные или если учетные данные передаются каким-то другим способом.  
   
-     Для некоторых типов источников данных необходимо настроить на сервере отчетов учетную запись автоматического выполнения. Дополнительные сведения см. в подразделе по соответствующему типу источника данных: [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) и [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Для некоторых типов источников данных необходимо настроить на сервере отчетов учетную запись автоматического выполнения. Дополнительные сведения см. в подразделе по соответствующему типу источника данных: [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) и [Настройка учетной записи автоматического выполнения (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 5.  Введите имя пользователя и пароль.  
   

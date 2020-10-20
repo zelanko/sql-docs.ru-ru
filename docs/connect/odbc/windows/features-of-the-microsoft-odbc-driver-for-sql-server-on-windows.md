@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 4a692483bc07ee6de0aa2a6793790ecf336f1f0a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 5fc07a171e42338ca76d51d66c04af187cb6beda
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922094"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005909"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Функции Microsoft ODBC Driver for SQL Server в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "82922094"
   
 Функция Always Encrypted позволяет клиентам шифровать конфиденциальные данные в клиентских приложениях, не раскрывая ключи шифрования для SQL Server. Драйвер с поддержкой Always Encrypted, установленный на клиентском компьютере, реализует это за счет автоматического шифрования и расшифровки конфиденциальных данных в клиентском приложении SQL Server. Драйвер шифрует данные из конфиденциальных столбцов перед их передачей в SQL Server и автоматически переписывает запросы, чтобы сохранить семантику приложения. Аналогичным образом драйвер прозрачно расшифровывает данные, хранящиеся в столбцах зашифрованной базы данных, которые содержатся в результатах запроса. Дополнительные сведения см. в статье [Использование функции Always Encrypted с драйвером ODBC](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
  
-Azure Active Directory позволяет пользователям, администраторам баз данных и приложениям использовать проверку подлинности Azure Active Directory в качестве механизма подключения к Базе данных SQL Microsoft Azure и Microsoft SQL Server 2016 с помощью удостоверений в Azure Active Directory (Azure AD). Дополнительные сведения см. в статьях [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md) (Использование Azure Active Directory с драйвером ODBC) и [Use Azure Active Directory Authentication for authentication with SQL](/azure/sql-database/sql-database-aad-authentication) (Использование аутентификации Azure Active Directory для аутентификации с помощью SQL).   
+Azure Active Directory позволяет пользователям, администраторам баз данных и приложениям использовать проверку подлинности Azure Active Directory в качестве механизма подключения к Базе данных SQL Microsoft Azure и Microsoft SQL Server 2016 с помощью удостоверений в Azure Active Directory (Azure AD). Дополнительные сведения см. в статьях [Использование Azure Active Directory с драйвером ODBC](../using-azure-active-directory.md) и [Подключение к Базе данных SQL или Azure Synapse Analytics с помощью проверки подлинности Azure Active Directory](/azure/sql-database/sql-database-aad-authentication).   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Драйвер Microsoft ODBC 11 для SQL Server в Windows  
 

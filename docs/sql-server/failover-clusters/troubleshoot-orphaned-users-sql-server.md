@@ -20,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e538c68882c1fc49a449767c51c39123ee222f6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 435cc59989b8a06ac651ccc93f73bdfebec3946d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115338"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006259"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Диагностика потерянных пользователей (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,9 +73,9 @@ WHERE sp.SID IS NULL
   
  Выходные данные содержат список пользователей проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и соответствующие идентификаторы безопасности в текущей базе данных, которые не связаны ни с одним именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-**Для базы данных SQL и хранилища данных SQL**
+**Для Базы данных SQL Azure и Azure Synapse Analytics**
 
-Таблица `sys.server_principals` недоступна в базе данных SQL или хранилище данных SQL. Чтобы определить пользователей, утративших связь с учетной записью, в этих средах, выполните указанные ниже действия.
+Таблица `sys.server_principals` недоступна в базе данных SQL или Azure Synapse Analytics. Чтобы определить пользователей, утративших связь с учетной записью, в этих средах, выполните указанные ниже действия.
 
 1. Подключитесь к базе данных `master` и выберите идентификаторы безопасности для имен входа с помощью следующего запроса:
     ```

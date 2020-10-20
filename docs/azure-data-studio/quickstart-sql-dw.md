@@ -1,6 +1,6 @@
 ---
-title: Подключение и отправка запроса к хранилищу данных SQL Azure
-description: В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к Хранилищу данных SQL Azure и выполнения запроса.
+title: Подключение и отправка запросов к Azure Synapse Analytics
+description: В этом кратком руководстве показано, как использовать Azure Data Studio для подключения с помощью выделенного пула SQL в Azure Synapse Analytics и выполнения запроса.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
@@ -9,30 +9,30 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2282220dff18a7f054cc5fd01b3670b6fd14d43
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766373"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005485"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Краткое руководство. Подключение к хранилищу данных SQL Azure и запрос данных с помощью Azure Data Studio
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>Краткое руководство. Использование Azure Data Studio для подключения и запроса данных с помощью выделенного пула SQL в Azure Synapse Analytics
 
-В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к хранилищу данных SQL Azure, а затем с помощью инструкций Transact-SQL создавать, вставлять и выбирать данные. 
+В этом кратком руководстве показано, как использовать Azure Data Studio для подключения с помощью выделенного пула SQL в Azure Synapse Analytics, а затем с помощью инструкций Transact-SQL создавать, вставлять и выбирать данные. 
 
 ## <a name="prerequisites"></a>Предварительные требования
-Для работы с этим кратким руководством потребуется Azure Data Studio и хранилище данных SQL Azure.
+Для работы с этим кратким руководством потребуется Azure Data Studio, выделенный пул SQL и Azure Synapse Analytics.
 
 - [Установите Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-Если у вас еще нет хранилища данных SQL, см. статью [Создание Хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Если у вас еще нет выделенного пула SQL, см. статью [Создание выделенного пула SQL](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Запомните имя сервера и учетные данные для входа.
 
 
-## <a name="connect-to-your-data-warehouse"></a>Подключение к хранилищу данных
+## <a name="connect-to-your-dedicated-sql-pool"></a>Подключение к выделенному пулу SQL
 
-С помощью Azure Data Studio установите подключение к серверу хранилища данных SQL Azure.
+С помощью Azure Data Studio установите подключение к Azure Synapse Analytics.
 
 1. При первом запуске Azure Data Studio должна открыться страница **подключения**. Если страница **Подключение** не появилась, щелкните **Добавить подключение** или значок **Новое подключение** на боковой панели **Серверы**.
    
@@ -58,7 +58,7 @@ ms.locfileid: "88766373"
 
 4. После успешного подключения сервер откроется на боковой панели *Серверы*.
 
-## <a name="create-the-tutorial-data-warehouse"></a>Создание учебного хранилища данных
+## <a name="create-the-tutorial-dedicated-sql-pool"></a>Создание выделенного пула SQL для учебника
 1. В обозревателе объектов щелкните сервер правой кнопкой мыши и выберите команду **Создать запрос**.
 
 1. Вставьте в редакторе запросов следующий фрагмент и нажмите кнопку **Выполнить**.
@@ -145,4 +145,4 @@ ms.locfileid: "88766373"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-После успешного подключения к хранилищу данных SQL Azure и выполнения запроса можно перейти к [руководству по редактору кода](tutorial-sql-editor.md).
+После успешного подключения к Azure Synapse Analytics и выполнения запроса можно перейти к [руководству по редактору кода](tutorial-sql-editor.md).

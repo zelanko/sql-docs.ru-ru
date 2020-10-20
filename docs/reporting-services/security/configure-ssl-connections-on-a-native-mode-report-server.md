@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6d978ab86f2e6f6a1ed85345685eb1da00928a6
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 15f8fddb50f1cc814c88cc721fd46ceba1581faf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603353"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934767"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Настройка TLS-соединений на сервере отчетов, работающем в собственном режиме
 
@@ -86,12 +86,12 @@ ms.locfileid: "91603353"
   
  Привязки TLS являются общими ресурсами в Microsoft Windows. Изменения, проведенные в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или других программах наподобие диспетчера IIS, могут отразиться на работе других приложений, работающих на этом же компьютере. Рекомендуется пользоваться для изменения привязок тем же средством, которое использовалось для их создания.  Например, если привязки TLS создавались с помощью Configuration Manager, рекомендуется работать с ними в той же программе в течение всего срока их службы. Если же для создания привязок использовался диспетчер IIS, рекомендуется выполнять все дальнейшие операции с этими привязками с помощью диспетчера IIS. Если службы IIS установлены на компьютере до установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], рекомендуется проверить конфигурацию TLS в IIS перед настройкой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Если удаление привязок TLS для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется с помощью диспетчера конфигурации служб Reporting Services, то может перестать работать TLS для веб-сайтов на сервере, где работают службы IIS, или на другом сервере HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager удаляет следующий раздел реестра: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Если этот раздел реестра удаляется, привязка TLS для IIS также удаляется. Без этой привязки TLS для протокола HTTPS не поддерживается. Чтобы определить проблему, используйте диспетчер IIS или программу командной строки HTTPCFG.exe. Чтобы устранить проблему, восстановите привязку TLS для веб-сайтов с помощью диспетчера IIS. Чтобы предотвратить возникновение этой проблемы в будущем, с помощью диспетчера IIS удалите привязки TLS, а затем восстановите привязку для нужных веб-сайтов. Дополнительные сведения см. в статье базы знаний [SSL перестает работать после удаления привязки SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Если удаление привязок TLS для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется с помощью диспетчера конфигурации сервера отчетов, то может перестать работать TLS для веб-сайтов на сервере, где работают службы IIS, или на другом сервере HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager удаляет следующий раздел реестра: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Если этот раздел реестра удаляется, привязка TLS для IIS также удаляется. Без этой привязки TLS для протокола HTTPS не поддерживается. Чтобы определить проблему, используйте диспетчер IIS или программу командной строки HTTPCFG.exe. Чтобы устранить проблему, восстановите привязку TLS для веб-сайтов с помощью диспетчера IIS. Чтобы предотвратить возникновение этой проблемы в будущем, с помощью диспетчера IIS удалите привязки TLS, а затем восстановите привязку для нужных веб-сайтов. Дополнительные сведения см. в статье базы знаний [SSL перестает работать после удаления привязки SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>См. также раздел  
  [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

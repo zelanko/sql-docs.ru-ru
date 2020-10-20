@@ -1,7 +1,7 @@
 ---
 title: Архитектура расширяемости в расширениях языка SQL Server
 titleSuffix: ''
-description: Сведения об архитектуре расширяемости, используемой для расширений языка SQL Server и позволяющей выполнять внешний код в SQL Server. В SQL Server 2019 поддерживается язык Java. Код выполняется в языковой среде как расширение основного ядра СУБД.
+description: Сведения об архитектуре расширяемости, используемой для расширений языка SQL Server и позволяющей выполнять внешний код в SQL Server. В SQL Server 2019 поддерживаются Java, R и Python. Код выполняется в языковой среде как расширение основного ядра СУБД.
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 40fd6b73bf28b6a201a1c0fedd1624a09d67b9c0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765694"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935375"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Архитектура расширяемости в расширениях языка SQL Server
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Сведения об архитектуре расширяемости, используемой для расширений языка SQL Server и позволяющей выполнять внешний код в SQL Server. В SQL Server 2019 поддерживается язык Java. Код выполняется в языковой среде как расширение основного ядра СУБД.
+Сведения об архитектуре расширяемости, используемой для расширений языка SQL Server и позволяющей выполнять внешний код в SQL Server. В SQL Server 2019 поддерживаются Java, R и Python. Код выполняется в языковой среде как расширение основного ядра СУБД.
 
 ## <a name="background"></a>Историческая справка
 
-Целью платформы расширяемости является предоставление интерфейса между SQL Server и внешними языками, такими как Java. Выполняя доверенный язык на безопасной платформе, управляемой SQL Server, администраторы баз данных могут поддерживать безопасность, обеспечивая анализаторам данных доступ к корпоративным данным.
+Целью платформы расширяемости является предоставление интерфейса между SQL Server и внешними языками. Выполняя доверенный язык на безопасной платформе, управляемой SQL Server, администраторы баз данных могут поддерживать безопасность, обеспечивая анализаторам данных доступ к корпоративным данным.
 
 <!-- We need to get a diagram like the one below.
 The following diagram visually describes opportunities and benefits of the extensible architecture.
@@ -53,10 +53,6 @@ The following diagram visually describes opportunities and benefits of the exten
 ## <a name="launchpad"></a>Панель запуска
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] — это служба, которая управляет временем жизни, ресурсами и границами безопасности внешнего процесса, отвечающего за выполнение скрипта. Это похоже на то, как служба полнотекстового индексирования и обработки запросов запускает отдельный узел для обработки полнотекстовых запросов. Служба панели запуска может запускать только доверенные средства запуска, опубликованные или сертифицированные корпорацией Майкрософт как соответствующие требованиям к управлению ресурсами и производительностью.
-
-| Доверенные средства запуска | Расширение | Версии SQL Server |
-|-------------------|-----------|---------------------|
-| JavaLauncher.dll для Java | Расширение Java | SQL Server 2019 |
 
 Служба [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] работает в **SQLRUserGroup**, которая использует [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) для изоляции выполнения.
 

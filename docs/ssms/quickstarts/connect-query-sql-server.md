@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: ba646353b0ded0a1cc4617c1b4c9ffc3c159662e
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: d44e59e8dfdd9ba38feb2c860348f44af325c768
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662840"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038392"
 ---
 # <a name="quickstart-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Краткое руководство. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio (SSMS)
 
@@ -35,12 +35,12 @@ ms.locfileid: "91662840"
 
 Для работы с этой статьей необходима среда SQL Server Management Studio и доступ к экземпляру SQL Server.
 
-* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Установите [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 Если у вас нет доступа к экземпляру SQL Server, выберите свою платформу в следующих ссылках. При выборе проверки подлинности SQL используйте учетные данные SQL Server.
 
 * **Windows**: [скачать выпуск SQL Server 2019 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-* **macOS**: [скачать SQL Server 2019 для Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+* **macOS**: [скачать SQL Server 2019 для Docker](../../linux/quickstart-install-connect-docker.md).
 
 ## <a name="connect-to-a-sql-server-instance"></a>Подключение к экземпляру SQL Server
 
@@ -54,7 +54,7 @@ ms.locfileid: "91662840"
 
     * В поле **Тип сервера** выберите **Ядро СУБД** (обычно это параметр по умолчанию).
     * В поле **Имя сервера** введите имя своего экземпляра SQL Server. (В этой статье используется имя экземпляра SQL2016ST и имя узла NODE5: NODE5\SQL2016ST.) Если вы не знаете, как определить имя экземпляра SQL Server, см. раздел [Дополнительные советы и рекомендации по использованию SSMS](../tutorials/ssms-tricks.md#find-sql-server-instance-name).
-    * В поле **Проверка подлинности** выберите **Проверка подлинности Windows**. В этой статье используется проверка подлинности Windows, но поддерживаются также и учетные данные SQL Server. При выборе **Учетных данных SQL** отобразится запрос на ввод имени пользователя и пароля. Дополнительные сведения о типах проверки подлинности см. в разделе [Подключение к серверу (ядро СУБД)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
+    * В поле **Проверка подлинности** выберите **Проверка подлинности Windows**. В этой статье используется проверка подлинности Windows, но поддерживаются также и учетные данные SQL Server. При выборе **Учетных данных SQL** отобразится запрос на ввод имени пользователя и пароля. Дополнительные сведения о типах проверки подлинности см. в разделе [Подключение к серверу (ядро СУБД)](../f1-help/connect-to-server-database-engine.md).
 
     ![Поле "Имя сервера" с возможностью использовать экземпляр SQL Server](media/connect-query-sql-server/connection-2.png)
 
@@ -71,7 +71,7 @@ ms.locfileid: "91662840"
 * Подключение к базе данных SQL Azure — msftestserver.database.windows.net: ![Подключение к базе данных SQL Azure](media/connect-query-sql-server/connect-sql-azure.png)
 
 > [!NOTE]
-> Ранее в этой статье вы подключились к локальному серверу SQL Server с помощью *проверки подлинности Windows*, но для базы данных SQL Azure этот способ не поддерживается. На этом рисунке показано подключение к базе данных SQL Azure с помощью проверки подлинности SQL. Дополнительные сведения см. в разделах, посвященных [локальной проверке подлинности SQL](../../relational-databases/security/choose-an-authentication-mode.md) и [проверке подлинности SQL в Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management).
+> Ранее в этой статье вы подключились к локальному серверу SQL Server с помощью *проверки подлинности Windows*, но для базы данных SQL Azure этот способ не поддерживается. На этом рисунке показано подключение к базе данных SQL Azure с помощью проверки подлинности SQL. Дополнительные сведения см. в разделах, посвященных [локальной проверке подлинности SQL](../../relational-databases/security/choose-an-authentication-mode.md) и [проверке подлинности SQL в Azure](/azure/sql-database/sql-database-security-overview#access-management).
 
 ## <a name="create-a-database"></a>Создание базы данных
 
@@ -198,7 +198,7 @@ ms.locfileid: "91662840"
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-Вы также можете с помощью Azure Data Studio выполнять подключения и запросы к [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Базе данных SQL Azure](../../azure-data-studio/quickstart-sql-database.md) и [хранилищу данных SQL Azure](../../azure-data-studio/quickstart-sql-dw.md).
+Также с помощью Azure Data Studio вы можете выполнять подключения и запросы к [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Базе данных SQL Azure](../../azure-data-studio/quickstart-sql-database.md) и [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

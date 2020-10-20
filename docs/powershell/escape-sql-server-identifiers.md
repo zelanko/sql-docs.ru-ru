@@ -1,50 +1,48 @@
 ---
-title: Экранирование идентификаторов SQL Server | Документация Майкрософт
+title: Применение escape-символов к идентификаторам SQL Server
 description: Некоторые символы, отображаемые в идентификаторах SQL Server с разделителями, не поддерживаются в путях Windows PowerShell. Узнайте, как можно экранировать некоторые из них с помощью символа обратной кавычки.
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7896c2f0368826698b29aab5d1f8d52ae9ad22d
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 4ad4bdc7720d0c405e3982b6b4533b55c2756490
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714042"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005499"
 ---
 # <a name="escape-sql-server-identifiers"></a>Применение escape-символов к идентификаторам SQL Server
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Часто можно использовать экранирующий символ обратной кавычки (`) для escape-символов, применение которых допускается в идентификаторах с разделителями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], но не в именах путей Windows PowerShell. Тем не менее экранирование некоторых символов невозможно. Например, в среде Windows PowerShell нельзя экранировать символ двоеточия (:). Идентификаторы с этим символом должны быть закодированы. Кодировка более надежна, чем экранирование, поскольку действует для всех символов.  
 
-> [!NOTE]
-> Существует два модуля SQL Server PowerShell — **SqlServer** и **SQLPS**. Модуль **SQLPS** входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется. Самым актуальным модулем PowerShell является модуль **SqlServer**. Модуль **SqlServer** содержит обновленные версии командлетов в **SQLPS**, а также новые командлеты для поддержки последних функций SQL.
-> Предыдущие версии модуля **SqlServer** *входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
-> Сведения об установке модуля **SqlServer** см. в статье [Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md).
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 Символ обратной кавычки (`) обычно расположен на клавише в верхнем левом углу клавиатуры, под клавишей ESC.  
-  
-## <a name="examples"></a>Примеры  
- Ниже приведен пример экранирования символа #:  
-  
-```  
+
+## <a name="examples"></a>Примеры
+
+Ниже приведен пример экранирования символа #:  
+
+```powershell
 cd SQLSERVER:\SQL\MyComputer\MyInstance\MyDatabase\MySchema\`#MyTempTable  
-```  
-  
- Это пример экранирования скобок при указании (local) в качестве имени компьютера:  
-  
-```  
+```
+
+Это пример экранирования скобок при указании (local) в качестве имени компьютера:  
+
+```powershell
 Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
-```  
-  
-## <a name="see-also"></a>См. также:  
- [Идентификаторы SQL Server в PowerShell](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
- [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  
+```
+
+## <a name="see-also"></a>См. также:
+
+- [Идентификаторы SQL Server в PowerShell](sql-server-identifiers-in-powershell.md)
+- [Поставщик SQL Server PowerShell](sql-server-powershell-provider.md)
+- [SQL Server PowerShell](sql-server-powershell.md)

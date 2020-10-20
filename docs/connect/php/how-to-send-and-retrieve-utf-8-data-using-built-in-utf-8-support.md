@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d62ab2a7715360b8cceeecccada01717d87471c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c7c914306258394bde91d64e5cb84665d62ab2b4
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726835"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081403"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Руководство. отправлять и извлекать данные UTF-8 с помощью встроенной поддержки UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91726835"
   
 Можно передавать UTF-8 или SQLSRV_ENC_CHAR в **CharacterSet**, но SQLSRV_ENC_BINARY передавать нельзя. Кодировка по умолчанию — SQLSRV_ENC_CHAR.  
   
-## <a name="example"></a>Пример  
+## <a name="connection-example"></a>Пример подключения  
 Следующий пример демонстрирует, как отправлять и получать данные в кодировке UTF-8 путем указания кодировки UTF-8 при установке соединения. Пример обновляет столбец Comments таблицы Production.ProductReview для определенного кода обзора. Кроме того, пример извлекает обновленные данные и отображает их. Обратите внимание, что столбец Comments имеет тип **nvarchar(3850)** . Обратите внимание и на то, что перед отправкой на сервер данные преобразуются в кодировку UTF-8 с помощью функции **utf8_encode** PHP. Это осуществляется исключительно для демонстрационных целей. В реальном приложении вы сразу начинаете работать с данными в кодировке UTF-8.  
   
 В примере предполагается, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и база данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
@@ -128,7 +128,7 @@ sqlsrv_close( $conn);
   
 Сведения о хранении данных в Юникоде см. в статье [Работа с данными в Юникоде](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105)).  
   
-## <a name="example"></a>Пример  
+## <a name="column-example"></a>Пример столбца  
 Следующий пример похож на первый, но вместо указания кодировки UTF-8 для соединения этот пример показывает, как указать кодировку UTF-8 для столбца.  
   
 ```  

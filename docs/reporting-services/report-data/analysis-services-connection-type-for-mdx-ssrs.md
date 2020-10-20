@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2aa39f932c0fed1a64155037f32cfc207bfede4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3f8b6fb8aa45357318c398773708ecd2c66dba30
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86459000"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935072"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Тип соединения служб Analysis Services для многомерных выражений (службы SSRS)
   Чтобы включить в отчет данные из куба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], необходимо иметь набор данных, основанный на источнике данных для отчета с типом [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Из куба служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно получать метаданные измерений, иерархий, уровней, ключевых показателей эффективности, мер и атрибутов и использовать их в качестве данных для отчета.  
@@ -46,7 +46,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   Выдавать приглашение пользователю на ввод учетных данных. Этот параметр поддерживает только схему встроенной безопасности Windows.  
   
--   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в статье [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).
+-   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в статье [Настройка учетной записи автоматического выполнения (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).
   
  Дополнительные сведения см. в статьях [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -78,7 +78,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="remarks"></a><a name="Remarks"></a> Замечания  
- Модуль обработки данных служб Analysis Services работает на основе протокола XMLA (XML для аналитики). Результирующие наборы из кубов извлекаются через протокол XMLA в виде плоского набора строк. Неоднородные иерархии не поддерживаются. Дополнительные сведения об иерархиях см. в разделе [Неоднородные иерархии](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
+ Модуль обработки данных служб Analysis Services работает на основе протокола XMLA (XML для аналитики). Результирующие наборы из кубов извлекаются через протокол XMLA в виде плоского набора строк. Неоднородные иерархии не поддерживаются. Дополнительные сведения об иерархиях см. в разделе [Неоднородные иерархии](/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  Данные из куба служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно также получать с помощью источника данных OLE DB. Дополнительные сведения см. в разделе [Тип соединения OLE DB (службы SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
@@ -111,5 +111,4 @@ data source=<server name>;initial catalog=<database name>
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866321"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933554"
 ---
-# <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)
+# <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>Настройка учетной записи автоматического выполнения (диспетчер конфигурации сервера отчетов)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предусматривает специальную учетную запись, предназначенную для автоматической обработки отчетов и отправки запросов на соединение по сети. Эти учетные записи используются для следующего.  
   
 -   Отправки запросов на соединение через сеть для отчетов, использующих проверку подлинности базы данных, либо для соединения с внешними источниками данных отчетов, на которых не требуется проверка подлинности. Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
@@ -41,7 +41,7 @@ ms.locfileid: "74866321"
   
  Указать эту учетную запись можно в средстве настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или с помощью программы **rsconfig** . Самый простой способ настроить учетную запись автоматического выполнения — запустить программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и указать учетные данные на странице «Учетная запись выполнения».  
   
-1.  Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к экземпляру сервера отчетов, который необходимо настроить. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к экземпляру сервера отчетов, который необходимо настроить. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  На странице "Учетная запись выполнения" выберите **Указать учетную запись выполнения**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74866321"
   
 3.  Введите следующую команду для настройки учетной записи в локальном экземпляре сервера отчетов:  
   
-     **rsconfig -e -u\<домен/имя_пользователя> -p\<пароль>**  
+     **rsconfig -e -u\<domain/username> -p\<password>**  
   
  Команда**rsconfig -e** поддерживает дополнительные аргументы. Дополнительные сведения о синтаксисе и примеры команд см. в статье [Программа rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
  
@@ -106,6 +106,6 @@ ms.locfileid: "74866321"
  Данные учетной записи удаляются из файла RSReportServer.config.  
   
 ## <a name="see-also"></a>См. также:  
- [Диспетчер конфигурации служб Reporting Services (службы Reporting Services в собственном режиме)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Диспетчер конфигурации сервера отчетов (собственный режим SSRS)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

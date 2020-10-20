@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9d710ef77a7555d4e9bbe16157469ceaa4b74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a268ef27e1f2e5337e2325fb464656e255b454c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480616"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005835"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Участие в работе над документацией по SQL Server
 
@@ -34,7 +34,7 @@ ms.locfileid: "88480616"
 
 ## <a name="edit-in-your-browser"></a><a id="githubui"></a> Редактирование в браузере
 
-Можно вносить простые изменения в содержимое в SQL Server через браузер и отправлять их в корпорацию Майкрософт. Дополнительные сведения см. в [обзоре руководства соавтора документации Майкрософт](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
+Можно вносить простые изменения в содержимое в SQL Server через браузер и отправлять их в корпорацию Майкрософт. Дополнительные сведения см. в [обзоре руководства соавтора документации Майкрософт](/contribute/#quick-edits-to-existing-documents). 
 
 Этот процесс состоит из следующих шагов. 
 
@@ -59,10 +59,10 @@ ms.locfileid: "88480616"
 
 Сведения об использовании этого метода см. в следующих статьях:
 
-- [Настройка учетной записи GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
-- [Установка средств для создания содержимого](https://docs.microsoft.com/contribute/get-started-setup-tools)
-- [Локальная настройка репозитория Git для документации](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Использование средств для внесения изменений](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
+- [Настройка учетной записи GitHub](/contribute/get-started-setup-github)
+- [Установка средств для создания содержимого](/contribute/get-started-setup-tools)
+- [Локальная настройка репозитория Git для документации](/contribute/get-started-setup-local)
+- [Использование средств для внесения изменений](/contribute/how-to-write-workflows-major)
 
 Если вы отправляете запрос на вытягивание со значительными изменениями, вы получите в GitHub комментарий с просьбой отправить **Лицензионное соглашение на участие (CLA)** . Прежде чем ваш запрос на вытягивание будет принят, необходимо заполнить веб-форму.
 
@@ -107,13 +107,13 @@ ms.locfileid: "88480616"
 - Список часто используемых включаемых файлов см. в разделе [Версии SQL Server и применяемые включаемые файлы](applies-to-includes.md).
 - Просмотрите другие статьи, посвященные той же функции или связанной задаче. Вы можете начать редактировать эту статью и скопировать разметку Markdown ссылки на включаемый файл applies-to (отменить редактирование можно, не отправляя изменений).
 - Выполните поиск файлов, содержащих текст "applies-to", в каталоге [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes). Чтобы быстро отфильтровать файлы, можно использовать кнопку **Find** (Найти) в GitHub. Щелкните файл, чтобы посмотреть, как он преобразовывается для просмотра.
-- Обратите внимание на соглашение об именовании. Если в имени есть символы "x", обычно они служат заполнителями, указывающими на то, что служба не поддерживается. Например, **appliesto-xx-xxxx-asdw-xxx-md.md** указывает на то, что поддерживается только хранилище данных SQL Azure, так как поле **asdw** указано, а остальные поля заполнены символами "x".
+- Обратите внимание на соглашение об именовании. Если в имени есть символы "x", обычно они служат заполнителями, указывающими на то, что служба не поддерживается. Например, **appliesto-xx-xxxx-asdw-xxx-md.md** указывает на то, что поддерживается только Azure Synapse Analytics, так как поле **asdw** указано, а остальные поля заполнены символами "x".
 - В некоторых включаемых файлах указывается номер версии, например **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Используйте такие включаемые файлы, только если вы знаете, что функция появилась в определенной версии SQL Server.
 
 ## <a name="contributor-resources"></a>Ресурсы для участников
 
-- [Руководство для участников docs.microsoft.com](https://docs.microsoft.com/contribute/)
-- [Руководство по стилю Майкрософт](https://docs.microsoft.com/teamblog/style-guide)
+- [Руководство для участников docs.microsoft.com](/contribute/)
+- [Руководство по стилю Майкрософт](/teamblog/style-guide)
 - [Основы Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

@@ -3,18 +3,18 @@ title: Развертывание кода на языке R в хранимых
 description: Внедрите код R в хранимую процедуру SQL Server, чтобы сделать его доступным для любого клиентского приложения, имеющего доступ к базе данных SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/28/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 81cc8f392275093f370a0dda12d1aaf1fca542e5
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 67176b65c8fe285d87bd56fff0b547b7bf5b8428
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288269"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956643"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Использование кода R с хранимыми процедурами в Службах машинного обучения SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "89288269"
 + [Создание и выполнение простых скриптов R в SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-Более полный пример развертывания кода R в рабочей среде с помощью хранимых процедур можно найти в [руководстве по аналитике данных R для разработчиков SQL](../../machine-learning/tutorials/r-taxi-classification-introduction.md).
+Более полный пример развертывания кода R в рабочей среде с помощью хранимых процедур можно найти в [руководстве по R: Прогнозирование стоимости поездки в нью-йоркском такси с использованием двоичной классификации](../tutorials/r-taxi-classification-introduction.md).
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Рекомендации по оптимизации кода R для SQL
 
@@ -39,7 +39,7 @@ ms.locfileid: "89288269"
 
 ## <a name="integrate-r-and-python-with-applications"></a>Интеграция кода R и Python с приложениями
 
-Так как код R или Python можно запускать из хранимой процедуры, скрипты можно выполнять из любого приложения, которое может отправить инструкцию T-SQL и обработать результаты. Например, можно переобучать модель по расписанию с помощью задачи [Выполнение скрипта T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) в Integration Services или с помощью другого планировщика заданий, который может выполнять хранимую процедуру.
+Так как код R или Python можно запускать из хранимой процедуры, скрипты можно выполнять из любого приложения, которое может отправить инструкцию T-SQL и обработать результаты. Например, можно переобучать модель по расписанию с помощью задачи [Выполнение скрипта T-SQL](../../integration-services/control-flow/execute-t-sql-statement-task.md) в Integration Services или с помощью другого планировщика заданий, который может выполнять хранимую процедуру.
 
 Оценка — одна из важных задач, которую можно легко автоматизировать или запускать из внешних приложений. Модель предварительно обучается с помощью кода R или Python либо хранимой процедуры, а затем [сохраняется в двоичном формате](../tutorials/walkthrough-build-and-save-the-model.md) в таблице. После этого модель можно загрузить в переменную в процессе вызова хранимой процедуры и использовать один из следующих способов оценки в T-SQL:
 
@@ -47,10 +47,15 @@ ms.locfileid: "89288269"
 + оценка одной строки для вызова из приложения;
 + [собственная оценка](../predictions/native-scoring-predict-transact-sql.md) для быстрого пакетного прогнозирования из SQL Server без вызова R.
 
-В этом пошаговом руководстве приведены примеры оценки с помощью хранимой процедуры как в пакетном, так и в построчном режиме:
+В этом учебнике приведены примеры оценки с помощью хранимой процедуры как в пакетном, так и в построчном режиме:
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Полное пошаговое руководство по обработке и анализу данных с помощью R в SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+::: moniker-end
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ [Учебник по R. Прогнозирование стоимости поездки в нью-йоркском такси с использованием двоичной классификации](../tutorials/r-taxi-classification-introduction.md)
+::: moniker-end
 
 ## <a name="boost-performance-and-scale"></a>Повышение производительности и масштабируемости
 
@@ -58,8 +63,12 @@ ms.locfileid: "89288269"
 
 Если решение R использует сложные агрегаты или включает в себя большие наборы данных, можно использовать высокоэффективные хранящиеся в памяти агрегаты и индексы columnstore SQL Server и переложить на код R обработку статистических вычислений и оценок.
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>Адаптация кода R для других платформ или контекстов вычисления
 
 Один и тот же код R, который применяется к данным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно использовать повторно для других источников данных, например Spark на базе HDFS, если выбрать [изолированный сервер](../install/sql-machine-learning-standalone-windows-install.md) в программе установки SQL Server или установить сервер Microsoft Machine Learning Server (прежнее название — **Microsoft R Server**):
 
-+ [Документация по Machine Learning Server](https://docs.microsoft.com/r-server/)
++ [Документация по Machine Learning Server](/r-server/)
+
+::: moniker-end

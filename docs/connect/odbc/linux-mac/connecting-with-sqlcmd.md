@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ab5cad910efcf73ab5b708f6a6a9bbf55c0df9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5d69f1a19e0494b7426eebbac7d8732794f90be8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727422"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987912"
 ---
 # <a name="connecting-with-sqlcmd"></a>Соединение с помощью sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -215,9 +215,13 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 Системные имена DSN хранятся в файле `odbc.ini` в каталоге ODBC SysConfigDir (`/etc/odbc.ini` в стандартных установках). Пользовательские имена DSN хранятся в `.odbc.ini` в домашнем каталоге пользователя (`~/.odbc.ini`).
 
+В системах Windows системные и пользовательские имена DSN хранятся в реестре и управляются через файл odbcad32.exe. Файловые DSN не поддерживаются bcp и sqlcmd.
+
 Список записей, поддерживаемых драйвером, см. в разделе [Ключевые слова и атрибуты строки подключения и имени DSN](../dsn-connection-string-attribute.md).
 
-В имени DSN только запись DRIVER является обязательной, но, чтобы подключиться к серверу, `sqlcmd` или `bcp` требуется значение в записи SERVER.  
+В имени DSN только запись DRIVER является обязательной, но, чтобы подключиться к удаленному серверу, `sqlcmd` или `bcp` требуется значение в элементе SERVER. Если элемент SERVER пуст или отсутствует в DSN, `sqlcmd` и `bcp` попытаются подключиться к экземпляру по умолчанию в локальной системе.
+
+При использовании bcp в системах Windows [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] и более ранних версий требуется драйвер SQL Native Client 11 (sqlncli11.dll), а для [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] и более поздних версий требуется драйвер Microsoft ODBC Driver 17 для драйвера SQL Server (msodbcsql17.dll).  
 
 Если указать один и тот же параметр и в имени DSN, и в командной строке `sqlcmd` или `bcp`, значение в командной строке имеет приоритет перед значением DSN. Например, если имя DSN содержит запись DATABASE, а командная строка `sqlcmd` включает параметр **-d**, используется значение, передаваемое в **-d**. Если в имени DSN указано **Trusted_Connection=yes**, используется проверка подлинности Kerberos, а имя пользователя ( **–U**) и пароль ( **–P**), если они заданы, игнорируются.
 

@@ -1,19 +1,19 @@
 ---
 title: Выверка DNS Active Directory и Kubernetes в развертываниях кластеров больших данных
-description: Управление доступом к кластеру больших данных
-author: mihaelablendea
-ms.author: mihaelab
+description: Настройка сверки DNS для кластера больших данных SQL Server в режиме Active Directory
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 411d713734db080b036a98bd18b0618326dbd70f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 63a5c53e64ece7650e65414fd24ddd82d6da5324
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279436"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892464"
 ---
 # <a name="active-directory-and-kubernetes-dns-reconciliation-in-big-data-clusters-deployments"></a>Выверка DNS Active Directory и Kubernetes в развертываниях кластеров больших данных
 
@@ -89,6 +89,6 @@ ms.locfileid: "86279436"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- [Развертывание кластера больших данных SQL Server в режиме Active Directory](deploy-active-directory.md)
+- [Развертывание кластера больших данных SQL Server в режиме Active Directory](active-directory-deploy.md)
 - [Управление доступом к кластеру больших данных в режиме AD DS](active-directory-objects.md)
 - [Развертывание нескольких кластеров больших данных SQL Server в одном домене Active Directory](active-directory-deployment-background.md)

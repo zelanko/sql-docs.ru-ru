@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5b7527f0af44931307acc930468df8d4d6404e1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 347ad41fb6165b3ab9364ee799aac3d3629ee78a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812230"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935471"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Тип соединения SQL Server (службы SSRS)
   Чтобы включить в отчет данные из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте этот тип источника данных для соединения и извлечения данных из баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] текущей версии и более ранних версий.  
@@ -47,7 +47,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   Выдавать приглашение пользователю на ввод учетных данных. Этот параметр поддерживает только встроенную безопасность Windows.  
   
--   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
+-   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в статье [Настройка учетной записи автоматического выполнения (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
  См. сведения о [создании строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [определении учетных данных и сведений о подключении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   

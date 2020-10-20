@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 62334a277bc169350af4db1c2961595178e733a6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634826"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081763"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Руководство. Подключение с помощью проверки подлинности Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "81634826"
   
 Если использование проверки подлинности Windows не является целесообразным, см. [практическое руководство по подключению с использованием проверки подлинности SQL Server](how-to-connect-using-sql-server-authentication.md).  
   
-## <a name="example"></a>Пример  
+## <a name="sqlsrv-example"></a>Пример SQLSRV  
 Благодаря драйверу SQLSRV [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]следующий пример использует проверку подлинности Windows для подключения к локальному экземпляру SQL Server. После установки соединения на сервер отправляет запрос имени входа пользователя, осуществляющего доступ к базе данных.  
   
 В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
@@ -81,7 +81,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Пример  
+## <a name="pdo_sqlsrv-example"></a>Пример PDO_SQLSRV  
 Следующий пример использует драйвер PDO_SQLSRV для выполнения той же задачи, что и в предыдущем примере.  
   
 ```  

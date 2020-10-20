@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fa55524aa371e65f747ee0f53d6ef2b666f8519
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 9d445092d609be13cca75c06e49f3ae76b51851b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458176"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935506"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Тип соединения с параллельным хранилищем данных SQL Server (SSRS)
 
@@ -49,7 +49,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Использовать сохраненные имя пользователя и пароль. Чтобы согласовать «двойной прыжок», который происходит в случае, если база данных, содержащая отчет, не является сервером отчетов, выберите в качестве учетных данных учетные данные Windows. Кроме того, после соединения с источником данных можно прибегнуть к олицетворению пользователя, прошедшего проверку подлинности.  
   
--   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
+-   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в статье [Настройка учетной записи автоматического выполнения (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
  См. сведения о [создании строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [определении учетных данных и сведений о подключении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -79,7 +79,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  В графическом конструкторе запросов, используемом [!INCLUDE[ssDW](../../includes/ssdw-md.md)] , предусмотрена встроенная поддержка группирования и агрегатов, помогающих писать запросы, которые получают только сводные данные. Далее приведены функции языка [!INCLUDE[DWsql](../../includes/dwsql-md.md)] : предложение GROUP BY, ключевое слово DISTINCT и агрегаты, например SUM и COUNT. В текстовом конструкторе запросов предусмотрена полная поддержка языка [!INCLUDE[DWsql](../../includes/dwsql-md.md)] , в том числе группирование и агрегаты.  
   
- Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в [Справочнике по Transact-SQL &#40;компонент Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+ Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в [Справочнике по Transact-SQL &#40;компонент Database Engine&#41;](../../t-sql/language-reference.md).  
   
 ###  <a name="using-query-type-text"></a><a name="QueryText"></a> Использование типа запроса Text  
  В текстовом конструкторе запросов вводятся команды на языке [!INCLUDE[DWsql](../../includes/dwsql-md.md)] , определяющие данные в наборе данных. Запросы, используемые для извлечения данных из [!INCLUDE[ssDW](../../includes/ssdw-md.md)] , не отличаются от запросов, используемых для извлечения данных из экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые не работают внутри приложения [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . Например, следующий запрос на языке [!INCLUDE[DWsql](../../includes/dwsql-md.md)] выбирает имена всех сотрудников отдела сбыта.  

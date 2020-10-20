@@ -9,12 +9,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b69bf8be4eef05ae8bb332afb4078eb1bca404
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 689d304798da13a8c8647598ac13d9ca232c6bfc
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418680"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934706"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88418680"
 > [!TIP]  
 >  Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не используется для добавления серверов и горизонтального увеличения масштаба серверов отчетов. Продукты SharePoint управляют масштабным развертыванием служб Reporting Services по мере добавления в ферму серверов SharePoint со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Сведения о масштабировании серверов отчетов в собственном режиме см. в разделе [Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ Сведения о горизонтальном увеличении масштаба серверов отчетов в собственном режиме см. в разделе [Настройка развертывания с горизонтальным увеличением масштаба сервера отчетов в собственном режиме (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> Балансировка нагрузки  
  Балансировка нагрузки для приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется автоматически SharePoint, если в среде не работает самостоятельно разработанное или предоставленное сторонними разработчиками решение по балансировке нагрузки. По умолчанию SharePoint балансирует нагрузку так, чтобы каждое приложение служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] распределялось по всем серверам приложений, где запущена служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Чтобы проверить, что служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] установлена и запущена, щелкните ссылку **Управление службами на сервере** в центре администрирования SharePoint.  
@@ -81,7 +81,7 @@ The Reporting Services Web Service is not enabled. Configure at least one instan
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-[Добавление сервера SharePoint в ферму в SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[Добавление сервера SharePoint в ферму в SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[Добавление сервера SharePoint в ферму в SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+[Добавление сервера SharePoint в ферму в SharePoint Server 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
