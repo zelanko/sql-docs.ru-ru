@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d62e20117bf23511a1d261142a3618dcbd5095a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349030"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195336"
 ---
 # <a name="sap-bw-source"></a>Источник SAP BW
 
@@ -119,7 +119,7 @@ ms.locfileid: "88349030"
   
  Если вы не знаете все значения, необходимые для настройки источника, может потребоваться связаться с администратором SAP.  
   
- Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
+ Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100)). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Использование конструктора служб SSIS для настройки источника  
  Дополнительные сведения о свойствах источника SAP BW, которые можно задать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из последующих разделов.  
@@ -144,5 +144,4 @@ ms.locfileid: "88349030"
   
 ## <a name="see-also"></a>См. также  
  [Компоненты Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

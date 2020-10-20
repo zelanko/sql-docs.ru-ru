@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d17bad386cc020be1a61696aec96a81b6126d8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 013fffc66c8e40ca2124b949f555e0638df7967e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393559"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194267"
 ---
 # <a name="ftp-task"></a>Задача «FTP»
 
@@ -77,7 +77,7 @@ ms.locfileid: "88393559"
 ## <a name="related-tasks"></a>Связанные задачи  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о настройке этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Дополнительные сведения о настройке этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
  Дополнительные сведения о настройке этих свойств программным путем см. в разделе <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88393559"
 > [!IMPORTANT]  
 >  Диспетчер FTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
   
- **См. также**: [Диспетчер FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **См. также**: [Диспетчер FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../connection-manager/ftp-connection-manager.md)  
   
  **StopOnFailure**  
  Укажите, следует ли завершить задачу «FTP» в случае ошибки операции с FTP.  
@@ -157,7 +157,7 @@ ms.locfileid: "88393559"
  **RemotePath**  
  Выберите существующий диспетчер подключений FTP или создайте его, щелкнув пункт \<**New connection...**>.  
   
- **См. также:** [Диспетчер FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **См. также:** [Диспетчер FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../connection-manager/ftp-connection-manager.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>Динамические параметры IsLocalPathVariable  
   
@@ -176,5 +176,4 @@ ms.locfileid: "88393559"
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
-  
   

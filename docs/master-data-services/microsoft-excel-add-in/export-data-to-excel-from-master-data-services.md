@@ -1,6 +1,7 @@
 ---
-title: Экспорт данных в Excel из Master Data Services | Документы Майкрософт
-ms.custom: microsoft-excel-add-in
+description: Export Data to Excel from Master Data Services
+title: Экспорт данных в Excel
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1ee11d62c5e8d38dda95577a08dff78024ac211b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af0b2a73189a52aa9725fef8672adb29993f1c2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257655"
 ---
 # <a name="export-data-to-excel-from-master-data-services"></a>Export Data to Excel from Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]для работы с данными необходимо сначала экспортировать их из репозитория MDS.  
   
@@ -51,12 +52,12 @@ ms.locfileid: "68092374"
     > [!NOTE]  
     >  Если при загрузке разделенных текстом данных с помощью надстройки для Microsoft Excel в 32-разрядную версию Excel свойствам **Число ячеек для загрузки** и **Число ячеек для публикации** присвоено максимальное значение 1000, возникнет ошибка нехватки памяти. Для использования максимальных значений свойств **Число ячеек для загрузки** и **Число ячеек для публикации**необходимо использовать 64-разрядную версию Excel.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  [Импорт данных из Excel в службы Master Data Services (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>См. также  
- [Обзор: Экспорт данных в Excel &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [Диалоговое окно "Фильтр" (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
- [Обзор: Импорт данных из Excel &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>См. также:  
+ [Обзор: экспорт данных в надстройка MDS для Excel &#40;Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [Диалоговое окно "фильтр" &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
+ [Обзор импорта данных из Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

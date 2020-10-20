@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57a1c38bff7d5b302de595226a74ea66ba4f80ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47cce068cada1a40ec3fda76013ec428ef5d7e11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495488"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195206"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Развертывание проекта служб SSIS с помощью SQL Server Management Studio (SSMS)
 
@@ -27,7 +27,7 @@ SQL Server Management Studio — это интегрированная сред�
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Прежде чем начать, убедитесь в наличии последней версии SQL Server Management Studio. Чтобы скачать среду SSMS, посетите страницу [Скачивание SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Прежде чем начать, убедитесь в наличии последней версии SQL Server Management Studio. Чтобы скачать среду SSMS, посетите страницу [Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 Проверка развертывания в базу данных SQL Azure, описанная в этой статье, производится с помощью SQL Server Data Tools (SSDT) версии 17.4 или более поздней версии. Чтобы получить последнюю версию SSDT, [скачайте SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
@@ -123,4 +123,4 @@ SQL Server Management Studio — это интегрированная сред�
     - [Выполнение пакета служб SSIS с помощью Transact-SQL (Visual Studio Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Выполнение пакета служб SSIS из командной строки](./ssis-quickstart-run-cmdline.md)
     - [Выполнение пакета служб SSIS с помощью PowerShell](ssis-quickstart-run-powershell.md)
-    - [Выполнение пакета служб SSIS с помощью C#](./ssis-quickstart-run-dotnet.md) 
+    - [Выполнение пакета служб SSIS с помощью C#](./ssis-quickstart-run-dotnet.md)

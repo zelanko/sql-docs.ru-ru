@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 893de2f02f6f10d5c4132864903f6b55495fbfdf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1987fae42f804e861c1f15e55deb60e273e0d3b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789581"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194407"
 ---
 # <a name="attach-a-database"></a>Присоединение базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85789581"
 Мы не рекомендуем использовать отсоединение и присоединение для резервного копирования и восстановления, так как резервные копии журналов транзакций отсутствуют, а файлы могут быть случайно удалены.
   
 ###  <a name="security"></a><a name="Security"></a> безопасность  
-Разрешения на доступ к файлам устанавливаются во время выполнения определенных операций с базами данных, включая отсоединение и присоединение баз данных. Дополнительные сведения о разрешениях на доступ к файлам, настраиваемых при отсоединении и присоединении базы данных см. в разделе [Защита данных и файлов журналов](https://technet.microsoft.com/library/ms189128.aspx) электронной документации по [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (документация актуальна). 
+Разрешения на доступ к файлам устанавливаются во время выполнения определенных операций с базами данных, включая отсоединение и присоединение баз данных. Дополнительные сведения о разрешениях на доступ к файлам, настраиваемых при отсоединении и присоединении базы данных см. в разделе [Защита данных и файлов журналов](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) электронной документации по [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (документация актуальна). 
   
 Не рекомендуется подключать или восстанавливать базы данных, полученные из неизвестных или ненадежных источников. В этих базах данных может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы или физической структуры базы данных. Перед тем как использовать базу данных, полученную из неизвестного или ненадежного источника, выполните на тестовом сервере инструкцию [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) для этой базы данных, а также изучите исходный код в базе данных, например хранимые процедуры и другой пользовательский код. Дополнительные сведения о присоединении баз данных и сведения об изменениях, вносимых при присоединении баз данных в метаданные, см. в статье [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
@@ -129,7 +129,7 @@ ms.locfileid: "85789581"
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Выполните инструкцию [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) с предложением `FOR ATTACH`.  
+3.  Выполните инструкцию [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) с предложением `FOR ATTACH`.  
   
      Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере производится присоединение файлов базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с ее последующим переименованием в `MyAdventureWorks`.  
   
@@ -157,8 +157,7 @@ EXEC sys.sp_cdc_vupgrade
 ``` 
  
 ## <a name="see-also"></a>См. также:  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 
  <br>[Управление метаданными при предоставлении доступа к базе данных на другом сервере](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Отсоединение базы данных](../../relational-databases/databases/detach-a-database.md)  
-  
   

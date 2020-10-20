@@ -1,5 +1,6 @@
 ---
-title: Файлы ярлыков запросов (надстройка MDS для Excel) | Документы Майкрософт
+description: Файлы ярлыков запросов (надстройка MDS для Excel)
+title: Файлы ярлыков запросов
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3028682669ae1a7e33cb85847fbf6e9456c11d42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 884e74db4cc6f8a3fd98d09757fc52245b275856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257901"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>Файлы ярлыков запросов (надстройка MDS для Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]файл ярлыка запроса позволяет быстро устанавливать соединение и загружать часто используемые данные. Они могут также использоваться в том случае, если необходим обмен данными MDS с другими пользователями. Вместо сохранения и отправки листа по электронной почте можно сохранить файл ярлыка запроса и отправить его. Это гарантирует, что и вы, и ваш адресат будете получать из репозитория MDS самые актуальные данные.  
   

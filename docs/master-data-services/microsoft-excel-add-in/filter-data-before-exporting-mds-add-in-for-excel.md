@@ -1,5 +1,6 @@
 ---
-title: Фильтрация данных перед экспортом (надстройка MDS для Excel) | Документы Майкрософт
+description: Фильтрация данных перед экспортом (надстройка MDS для Excel)
+title: Фильтрация данных перед экспортом
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 58887c2e1590631b4d80cad0191a2bb9158e5b68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37cf62c1a0a64e8e9ab09c216f053a4eef98e084
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257681"
 ---
 # <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>Фильтрация данных перед экспортом (надстройка MDS для Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] можно отфильтровать данные, если нужно ограничить объем данных, экспортируемых в Excel.  
   
@@ -50,12 +51,12 @@ ms.locfileid: "68092363"
     >  -   В Excel загружается только первый миллион элементов.  
     > -   В столбцах, которые являются ограниченными списками (атрибутами на основе домена), по умолчанию загружаются только первые 25 000 значений.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  [Импорт данных из Excel в службы Master Data Services (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>См. также  
- [Обзор: Экспорт данных в Excel &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [Диалоговое окно "Фильтр" (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>См. также:  
+ [Обзор: экспорт данных в надстройка MDS для Excel &#40;Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [Диалоговое окно "фильтр" &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
  [Переупорядочение столбцов (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)  
   
   

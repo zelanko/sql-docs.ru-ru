@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd306ce541f3fe4f6cf352421e0087afb595c41e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a61d85e961b2572ce60d9766e7df0c83d042e84e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430816"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195376"
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
 
@@ -34,7 +34,7 @@ ms.locfileid: "88430816"
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Для источника данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 потребуется поставщик данных, отличный от того, который использовался в предыдущих версиях Excel. Дополнительные сведения см. в разделе [Подключение к книге Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  Для источника данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 потребуется поставщик данных, отличный от того, который использовался в предыдущих версиях Excel. Дополнительные сведения см. в разделе [Подключение к книге Excel](../load-data-to-from-excel-with-ssis.md).  
   
  Источник OLE DB предоставляет четыре различных режима доступа к данным, используемые при извлечении данных:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88430816"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -122,9 +122,9 @@ ms.locfileid: "88430816"
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника OLE DB** для выбора диспетчера соединений OLE DB для источника. На этой странице также можно выбрать таблицу или представление базы данных.  
   
 > [!NOTE]  
->  Чтобы загрузить данные из источника данных, использующего [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, используйте источник OLE DB. Нельзя использовать источник Excel для загрузки данных из источника данных Excel 2007. Дополнительные сведения см. в разделе [Configure OLE DB Connection Manager](../../integration-services/connection-manager/configure-ole-db-connection-manager.md).  
+>  Чтобы загрузить данные из источника данных, использующего [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, используйте источник OLE DB. Нельзя использовать источник Excel для загрузки данных из источника данных Excel 2007. Дополнительные сведения см. в разделе [Configure OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
 >   
->  Чтобы загрузить данные из источника данных, использующего [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 или более раннюю версию, используйте источник Excel. Дополнительные сведения см. в разделе [Редактор источника Excel (страница "Диспетчер соединений")](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).  
+>  Чтобы загрузить данные из источника данных, использующего [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 или более раннюю версию, используйте источник Excel. Дополнительные сведения см. в разделе [Редактор источника Excel (страница "Диспетчер соединений")](./excel-source.md).  
   
 > [!NOTE]  
 >  Свойство **CommandTimeout** источника OLE DB недоступно в диалоговом окне **Редактор источника OLE DB**, но может быть установлено с помощью **расширенного редактора**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
@@ -150,7 +150,7 @@ ms.locfileid: "88430816"
 |Параметр|Описание|  
 |------------|-----------------|  
 |Таблица или представление|Получение данных из таблицы или представления в источнике данных OLE DB.|  
-|Переменная, содержащая имя таблицы или представления|Задайте переменную, содержащую имя таблицы или представления.<br /><br /> **Дополнительные сведения.** [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Переменная, содержащая имя таблицы или представления|Задайте переменную, содержащую имя таблицы или представления.<br /><br /> **Дополнительные сведения.** [Использование переменных в пакетах](../integration-services-ssis-variables.md)|  
 |Команда SQL|Получение данных из источника данных OLE DB с использованием SQL-запроса.|  
 |Команда SQL из переменной|Задайте текст SQL-запроса в переменную.|  
   
@@ -234,5 +234,4 @@ ms.locfileid: "88430816"
  [Назначение OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)   
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
-  
   

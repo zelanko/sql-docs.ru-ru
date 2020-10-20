@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fc0cfc790f933935de0f9aee96dd7c6e7b66425f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a039118dc0abe85b065d74b96f551c2991820333
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472556"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037073"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88472556"
   
  Отрицательный буфер удаляет все точки на указанном расстоянии от границы экземпляра **geometry**.  
   
- Ошибкой между теоретическим и вычисляемым буфером является max(tolerance, extents \* 1.E-7), где погрешность является значением параметра *tolerance*. Дополнительные сведения об экстентах см. в статье [Справочник по методам типа данных geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ Ошибкой между теоретическим и вычисляемым буфером является max(tolerance, extents \* 1.E-7), где погрешность является значением параметра *tolerance*. Дополнительные сведения об экстентах см. в статье [Справочник по методам типа данных geometry](./spatial-types-geometry-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `Point`, а метод `BufferWithTolerance()` получает приблизительный буфер вокруг этого экземпляра.  
@@ -98,5 +98,3 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
  [STBuffer (тип данных geometry)](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
-  
-

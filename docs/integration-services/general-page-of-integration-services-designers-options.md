@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a55d74c1f7f75065cafa560cf1c6cc0bc70e2f99
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391120"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195226"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Параметры конструкторов служб Integration Services: страница "Общие"
 
@@ -33,7 +33,7 @@ ms.locfileid: "88391120"
  **Проверка цифровой подписи при загрузке пакета**  
  Установите этот флажок, чтобы службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проверяли цифровую подпись при загрузке пакета [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проверяют только наличие цифровой подписи, ее правильность и надежность источника. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не проверяют, изменялся ли пакет с момента его подписания.  
   
- Если установлено значение реестра **BlockedSignatureStates** , оно переопределяет параметр **Проверять цифровую подпись при загрузке пакета** . Дополнительные сведения см. в разделе [Реализация политики подписывания путем задания параметра реестра](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md).  
+ Если установлено значение реестра **BlockedSignatureStates** , оно переопределяет параметр **Проверять цифровую подпись при загрузке пакета** . Дополнительные сведения см. в разделе [Реализация политики подписывания путем задания параметра реестра](./security/identify-the-source-of-packages-with-digital-signatures.md).  
   
  Дополнительные сведения о цифровых сертификатах и пакетах см. в разделе [Определение источника пакетов с помощью цифровых подписей](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
@@ -61,5 +61,4 @@ ms.locfileid: "88391120"
 ## <a name="see-also"></a>См. также  
  [Общие сведения о безопасности (службы Integration Services)](../integration-services/security/security-overview-integration-services.md)   
  [Расширение пакетов с помощью сценариев](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
-  
   

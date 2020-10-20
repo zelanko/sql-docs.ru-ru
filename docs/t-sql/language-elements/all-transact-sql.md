@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 009f153b3d6d6f205c69a564270efed969e1888e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8848a62320f33b2d55cae25b30375324df67af0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459482"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196958"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "88459482"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  
   
@@ -70,10 +69,10 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере показано создание хранимой процедуры, определяющей, могут ли в течение заданного количества дней быть выполнены все части заказа с указанным идентификатором `SalesOrderID` из базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. В этом примере вложенный запрос используется для создания списка числовых значений `DaysToManufacture` для всех компонентов с указанным идентификатором `SalesOrderID`, после чего происходит проверка того, что время производства всех заказов (`DaysToManufacture`) находится в пределах указанного числа дней.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE DaysToBuild @OrderID int, @NumberOfDays int  
+CREATE PROCEDURE DaysToBuild @OrderID INT, @NumberOfDays INT  
 AS  
 IF   
 @NumberOfDays >= ALL  
@@ -87,12 +86,11 @@ IF
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
 PRINT 'Some items for this order can''t be manufactured in specified number of days or less.' ;  
-  
 ```  
   
  Для проверки этой процедуры выполните ее, используя заказ `SalesOrderID 49080`. В него входит один компонент, производство которого занимает `2` дня, и два компонента, производство которых занимает 0 дней. Первая из нижеследующих инструкций отвечает этим критериям. Второй запрос — нет.  
   
-```  
+```sql  
 EXECUTE DaysToBuild 49080, 2 ;  
 ```  
   
@@ -100,7 +98,7 @@ EXECUTE DaysToBuild 49080, 2 ;
   
  `All items for this order can be manufactured in specified number of days or less.`  
   
-```  
+```sql  
 EXECUTE DaysToBuild 49080, 1 ;  
 ```  
   

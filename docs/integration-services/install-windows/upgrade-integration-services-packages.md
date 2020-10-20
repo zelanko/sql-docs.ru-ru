@@ -15,12 +15,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: dca0076160c9e21b991c444986d1b27162941f5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7353d02985194024c24319df5c6eca1100607d29
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346220"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195882"
 ---
 # <a name="upgrade-integration-services-packages"></a>Обновление пакетов служб Integration Services
 
@@ -62,7 +62,7 @@ ms.locfileid: "88346220"
   
  Чтобы проектировать в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] пакеты, в состав которых входят пользовательские компоненты [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], необходимо внести изменения в файл devenv.exe.config, который находится в каталоге *\<drive>* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE.  
   
- Чтобы эти пакеты работали с клиентскими приложениями, созданными для среды выполнения [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], включите правила переадресации в разделе файла *.exe.config для исполняемого файла. Правила перенаправляют сборки среды выполнения к версии 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Дополнительные сведения о перенаправлении версии сборки см. в разделе [Элемент \<assemblyBinding> для \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ Чтобы эти пакеты работали с клиентскими приложениями, созданными для среды выполнения [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], включите правила переадресации в разделе файла *.exe.config для исполняемого файла. Правила перенаправляют сборки среды выполнения к версии 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Дополнительные сведения о перенаправлении версии сборки см. в разделе [Элемент \<assemblyBinding> для \<runtime>](/dotnet/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime).  
   
 ### <a name="locating-the-assemblies"></a>Нахождение сборок  
  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]сборки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] были обновлены до .NET 4.0. Существует отдельный глобальный кэш сборок для .NET 4, расположенный в папке *\<drive>* :\Windows\Microsoft.NET\assembly. Там вы можете найти все сборки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , обычно в папке GAC_MSIL.  
@@ -81,5 +81,4 @@ ms.locfileid: "88346220"
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>Скрипты, зависящие от ADODB.dll  
  Скрипты задачи «Скрипт» и компонента «Скрипт», которые явно ссылаются на файл ADODB.dll, могут не выполняться или не обновляться на компьютерах, на которых не установлена среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Чтобы обновить эти скрипты задачи "Скрипт" и компонента скрипта, рекомендуется удалить зависимость от файла ADODB.dll.  Ado.Net — это рекомендуемая альтернатива для такого управляемого кода, как скрипты VB и C#.  
-  
   

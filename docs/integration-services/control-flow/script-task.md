@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425886"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197146"
 ---
 # <a name="script-task"></a>Задача «Скрипт»
 
@@ -79,15 +79,15 @@ ms.locfileid: "88425886"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Скрипт" (страница "Общие")](../../integration-services/control-flow/script-task-editor-general-page.md)  
+-   [Редактор задачи "Скрипт" (страница "Общие")]()  
   
--   [Редактор задачи "Скрипт" (страница "Скрипт")](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [Редактор задачи "Скрипт" (страница "Скрипт")]()  
   
 -   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>Программная настройка задачи «Скрипт»  
  Дополнительные сведения о программной установке этих свойств см. в следующем разделе:  
@@ -123,7 +123,7 @@ ms.locfileid: "88425886"
   
  Изменить значение свойства **ScriptLanguage** для задачи после создания скрипта нельзя.  
   
- Чтобы установить значение по умолчанию языка скрипта для задачи «Скрипт», воспользуйтесь параметром **Язык скрипта** страницы **Общие** диалогового окна **Параметры** . Дополнительные сведения см. в разделе [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
+ Чтобы установить значение по умолчанию языка скрипта для задачи «Скрипт», воспользуйтесь параметром **Язык скрипта** страницы **Общие** диалогового окна **Параметры** . Дополнительные сведения см. в разделе [General Page]().  
   
  **EntryPoint**  
  Укажите метод, вызываемый средой выполнения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , в качестве точки входа в код задачи "Скрипт". Этот метод должен быть членом класса ScriptMain проекта [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). ScriptMain является заданным по умолчанию классом, который создается в шаблонах скриптов.  
@@ -148,5 +148,4 @@ ms.locfileid: "88425886"
 ## <a name="related-content"></a>См. также  
   
 -   Техническая статья [oтправка электронной почты с уведомлением доставки в C#](https://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
-  
   

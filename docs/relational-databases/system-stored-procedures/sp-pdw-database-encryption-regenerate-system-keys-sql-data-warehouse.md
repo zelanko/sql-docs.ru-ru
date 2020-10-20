@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aa0f0f3afb40492e398e316095a3458169d03eaf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f432d19a558b82abd52bef2839c0887dff70f7ba
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059313"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92254761"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-azure-synapse-analytics"></a>sp_pdw_database_encryption_regenerate_system_keys (Azure синапсе Analytics)
 
@@ -38,7 +38,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Процедура не имеет параметров.  
   
  Эта процедура должна использоваться, если трафик на устройстве имеет низкий уровень.  
@@ -53,8 +53,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [sp_pdw_database_encryption &#40;Azure синапсе Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_log_user_data_masking &#40;Azure синапсе Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-  
   

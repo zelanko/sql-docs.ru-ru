@@ -19,19 +19,20 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 828963dabc79c53c831efd3c2acac797d109555d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f8148fa7d0a648bd7ad34ee766ff2a4488dceb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763556"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115749"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Копирование баз данных путем создания и восстановления резервных копий
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно создать новую базу данных, восстановив резервную копию пользовательской базы данных, созданной в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии. Однако резервные копии баз данных **master**, **model** и **msdb** , созданных в более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , восстановить на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]невозможно. Кроме того, резервные копии, созданные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , невозможно восстановить в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**ВАЖНО!** SQL Server 2016 использует путь по умолчанию, отличный от пути, использованного в предыдущих версиях. Поэтому для восстановления резервной копии базы данных, созданной в месте расположения по умолчанию для ранних версий, необходимо использовать параметр MOVE. Сведения о новом пути по умолчанию см. в разделе [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Дополнительные сведения о перемещении файлов баз данных см. в статье «Перемещение файлов баз данных» далее в этом подразделе.  
+> [!IMPORTANT]
+> SQL Server 2016 использует путь по умолчанию, отличный от пути, использованного в предыдущих версиях. Поэтому для восстановления резервной копии базы данных, созданной в месте расположения по умолчанию для ранних версий, необходимо использовать параметр MOVE. Сведения о новом пути по умолчанию см. в разделе [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Дополнительные сведения о перемещении файлов баз данных см. в статье «Перемещение файлов баз данных» далее в этом подразделе.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Основные этапы копирования базы данных, используя функции резервного копирования и восстановления  
  При использовании резервного копирования и восстановления для копирования базы данных на другой экземпляр SQL Server компьютер-источник и целевой компьютер могут быть любой платформой, на которой запускается SQL Server.  

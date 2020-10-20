@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 1d917c3f205f6b4b8d5872cf0b853316ed6e913d
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 8babcb8b849360ba4a025d62a8e89f5ad92175c2
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990137"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115949"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство. Установка SQL Server и создание базы данных в SUSE Linux Enterprise Server
 
@@ -54,12 +54,12 @@ ms.locfileid: "90990137"
 
 ::: moniker-end
 
-Чтобы установить SUSE Linux Enterprise Server на собственном компьютере, перейдите на страницу [https://www.suse.com/products/server](https://www.suse.com/products/server). Можно также создать виртуальные машины SLES в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) и используйте параметр `--image SLES` в вызове `az vm create`.
+Чтобы установить SUSE Linux Enterprise Server на собственном компьютере, перейдите на страницу [https://www.suse.com/products/server](https://www.suse.com/products/server). Можно также создать виртуальные машины SLES в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm) и используйте параметр `--image SLES` в вызове `az vm create`.
 
 Если вы ранее установили выпуск CTP или RC сервера SQL Server, необходимо удалить старый репозиторий, прежде чем выполнять эти действия. Дополнительные сведения см. в статье [Настройка репозиториев Linux для SQL Server 2017 и 2019](sql-server-linux-change-repo.md).
 
 > [!NOTE]
-> В настоящее время [подсистема Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве цели установки.
+> В настоящее время [подсистема Windows для Linux](/windows/wsl/about) для Windows 10 не поддерживается в качестве цели установки.
 
 Сведения о других требованиях к системе см. в статье [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 

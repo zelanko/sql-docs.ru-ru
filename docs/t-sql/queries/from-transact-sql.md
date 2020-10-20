@@ -35,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93397f5529a30cb0de1ac82ed36ea07fb0dd6c26
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 9cc3f414e9e771eb48734a2c8c188d28ac8bc321
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227238"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035867"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Предложение FROM и JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -204,7 +204,7 @@ FROM { <table_source> [ ,...n ] }
 **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, а также [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Указывает одну из функций набора строк, например OPENROWSET, возвращающую объект, который можно использовать вместо ссылки на таблицу. Дополнительные сведения о списке функций набора строк см. в разделе [Функции набора строк (Transact-SQL)](../../t-sql/functions/rowset-functions-transact-sql.md).  
+ Указывает одну из функций набора строк, например OPENROWSET, возвращающую объект, который можно использовать вместо ссылки на таблицу. Дополнительные сведения о списке функций набора строк см. в разделе [Функции набора строк (Transact-SQL)](../functions/opendatasource-transact-sql.md).  
   
  Использование функций OPENROWSET и OPENQUERY для задания удаленного объекта зависит от возможностей поставщика OLE DB, который обращается к удаленному объекту.  
   
@@ -899,4 +899,4 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
  [OPENQUERY (Transact-SQL)](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
- [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)

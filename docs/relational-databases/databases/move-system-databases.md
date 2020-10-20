@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 799a5d9aeed185700015fcf9527e57e295d61020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471266"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195022"
 ---
 # <a name="move-system-databases"></a>Перемещение системных баз данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "88471266"
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-     Дополнительные сведения об использовании программы **sqlcmd** см. в статье [Использование программы sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+     Дополнительные сведения об использовании программы **sqlcmd** см. в статье [Использование программы sqlcmd](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   
 4.  Завершите работу программы **sqlcmd** или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -270,5 +270,4 @@ ms.locfileid: "88471266"
  [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md)  
-  
   

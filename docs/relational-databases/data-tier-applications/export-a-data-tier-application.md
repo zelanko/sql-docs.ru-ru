@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8895f6198c6ed60430390bdf3275d0cc500bd85
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62166f813bee655bda939c1f230d02a1a5b0afbc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456696"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195687"
 ---
 # <a name="export-a-data-tier-application"></a>Экспорт приложения уровня данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88456696"
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения  
  Приложение уровня данных или база данных могут экспортироваться только из базы данных в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]или [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) и выше.  
   
- Если база данных содержит объекты, не поддерживаемые в приложениях уровня данных, или автономных пользователей, то экспортировать такую базу данных будет невозможно. Дополнительные сведения о типах объектов, поддерживаемых в DAC, см. в разделе [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
+ Если база данных содержит объекты, не поддерживаемые в приложениях уровня данных, или автономных пользователей, то экспортировать такую базу данных будет невозможно. Дополнительные сведения о типах объектов, поддерживаемых в DAC, см. в разделе [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)).  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для экспорта приложения уровня данных необходимы по крайней мере разрешения ALTER ANY LOGIN и VIEW DEFINITION на уровне базы данных, а также разрешение SELECT на представление каталога **sys.sql_expression_dependencies**. Экспорт приложения уровня данных может выполняться членами предопределенной роли сервера securityadmin, которые также входят в предопределенную роль базы данных database_owner для базы данных, из которой экспортируется приложение уровня данных. Экспортировать приложение уровня данных могут также члены предопределенной роли сервера sysadmin или встроенной роли системного администратора SQL Server с названием **sa** .
@@ -131,5 +131,4 @@ ms.locfileid: "88456696"
 ## <a name="see-also"></a>См. также:  
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Извлечение приложения уровня данных из базы данных](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
-  
   

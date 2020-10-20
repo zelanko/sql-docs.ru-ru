@@ -13,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227482"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038898"
 ---
 # <a name="transactions-azure-synapse-analytics"></a>Транзакции (Azure Synapse Analytics)
 
@@ -80,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Если ошибка делает невозможным успешное выполнение транзакции, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] автоматически выполняет ее откат и освобождает ресурсы, удерживаемые транзакцией. Это не относится к ошибкам во время выполнения инструкции. Например, если сетевое подключение клиента к экземпляру компонента [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] разорвано или клиент выходит из приложения, то после того, как экземпляр получит уведомление от сети о разрыве подключения, выполняется откат всех незафиксированных транзакций для этого подключения.  
   
- Если ошибка во время выполнения инструкции возникает в пакетном режиме, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ведет себя так, будто для параметра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** установлено значение **ON**, и выполняет откат всей транзакции. Дополнительные сведения о параметре **XACT_ABORT** см. в разделе [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Если ошибка во время выполнения инструкции возникает в пакетном режиме, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ведет себя так, будто для параметра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** установлено значение **ON**, и выполняет откат всей транзакции. Дополнительные сведения о параметре **XACT_ABORT** см. в разделе [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md).  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Сеанс может одновременно выполнять только одну транзакцию. Точки сохранения и вложенные транзакции не поддерживаются.  
@@ -94,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Нельзя произвести откат транзакции после вызова инструкции COMMIT, так как измененные данные уже стали частью базы данных.  
   
- Команды [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) и [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) недопустимо использовать в явной транзакции.  
+ Команды [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) и [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) недопустимо использовать в явной транзакции.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] не поддерживает механизм общего доступа к транзакциям. Это означает, что в любой момент времени только один сеанс может работать с транзакцией в системе.  
   
@@ -150,5 +150,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

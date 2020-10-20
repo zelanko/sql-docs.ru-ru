@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3333e8d26c6f79bc3f99298e2854f05789caac9f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f545d556069e31e349c0a8badf0fd9d95e6dcef
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541068"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257611"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,16 +63,17 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процесс Windows, порожденный **xp_cmdshell** , имеет те же права безопасности, что и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы.  
+ 
+> [!IMPORTANT]
+>  **xp_cmdshell** является очень мощным компонентом и отключен по умолчанию. **xp_cmdshell** можно включить и отключить, используя управление на основе политик или выполнив **sp_configure**. Дополнительные сведения см. в разделе Конфигурация [контактной зоны](../../relational-databases/security/surface-area-configuration.md) и [параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- **xp_cmdshell** работает синхронно. Управление не возвращается участнику до завершения команды ядра.  
-  
- **xp_cmdshell** можно включить и отключить, используя управление на основе политик или выполнив **sp_configure**. Дополнительные сведения см. в разделе Конфигурация [контактной зоны](../../relational-databases/security/surface-area-configuration.md) и [параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
-  
+ **xp_cmdshell** работает синхронно. Управление не возвращается участнику до завершения команды ядра. 
+ 
 > [!IMPORTANT]
 >  Если **xp_cmdshell** выполняется в пакете и возвращает ошибку, пакет завершится ошибкой. Это изменение поведения. В более ранних версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пакета будет продолжать выполняться.  
-  
+ 
 ## <a name="xp_cmdshell-proxy-account"></a>Учетная запись-посредник для процедуры xp_cmdshell  
  При вызове пользователем, который не является членом предопределенной роли сервера **sysadmin** , **xp_cmdshell** подключается к Windows, используя имя учетной записи и пароль, хранящиеся в учетных данных с именем **# #xp_cmdshell_proxy_account # #**. Если учетные данные прокси-сервера не существуют, **xp_cmdshell** завершится ошибкой.  
   
@@ -171,7 +172,7 @@ SET @cmd = @var + ' > dir_out.txt';
 EXEC master..xp_cmdshell @cmd;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [Настройка контактной зоны](../../relational-databases/security/surface-area-configuration.md)   

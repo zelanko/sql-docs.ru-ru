@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e2c7fb36708d615bd19dfb2c5854748081a9dbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 235bd7cd4a46441156b4e4d2b262daf76c6faa23
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449850"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193876"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Обработчики событий в службах Integration Services (SSIS)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88449850"
   
  Если вкладка **Обработчики событий** активна, узлы **Элементы потока управления** и **Задачи плана обслуживания** в области элементов конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] содержат задачу и контейнеры для построения потока управления в обработчике событий. Узлы **Источники потока данных**, **Преобразования**и **Назначения потока данных** содержат источники данных, преобразования и назначения для построения потоков данных в обработчике событий. Дополнительные сведения см. в разделах [Поток управления](../integration-services/control-flow/control-flow.md) и [Поток данных](../integration-services/data-flow/data-flow.md).  
   
- Вкладка **Обработчики событий** также включает зону диспетчеров **Соединения** , в которой можно создавать и изменять диспетчеры соединений, используемых обработчиками событий для соединения с серверами и источниками данных. Дополнительные сведения см. в разделе [Создание диспетчеров соединений](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Вкладка **Обработчики событий** также включает зону диспетчеров **Соединения** , в которой можно создавать и изменять диспетчеры соединений, используемых обработчиками событий для соединения с серверами и источниками данных. Дополнительные сведения см. в разделе [Создание диспетчеров соединений](./connection-manager/integration-services-ssis-connections.md).  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Добавление обработчика событий на вкладку "Обработчики событий"  
   
@@ -129,11 +129,10 @@ ms.locfileid: "88449850"
 ## <a name="set-the-properties-of-an-event-handler"></a>Задание свойств обработчика событий  
  Задать свойства можно в окне **Свойства** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или программными средствами.  
   
- Дополнительные сведения о настройке свойств этих свойств в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Дополнительные сведения о настройке свойств этих свойств в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [Задание свойств задач или контейнеров](./control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
  Дополнительные сведения о настройке этих свойств программными средствами см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- Сведения о том, как добавить обработчик событий в пакет, см. в разделе [Добавление к пакету обработчик событий](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
-  
+ Сведения о том, как добавить обработчик событий в пакет, см. в разделе [Добавление к пакету обработчик событий]().  
   

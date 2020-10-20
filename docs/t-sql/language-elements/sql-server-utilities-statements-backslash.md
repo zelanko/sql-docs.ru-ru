@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2437daed52cb8b4a79431465f8a27e5464185e23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e88c66f5f70845c1b6adbab669f44915afe85b8e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459286"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195444"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>Обратная косая черта (продолжение строки) (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "88459286"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 <first section of string> \  
 <continued section of string>  
 ```  
@@ -69,10 +69,9 @@ ms.locfileid: "88459286"
 
 В следующем примере использованы обратная косая черта и возврат каретки для разбиения строки символов на две строчки.  
   
-```  
+```sql  
 SELECT 'abc\  
 def' AS [ColumnResult];  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -87,10 +86,9 @@ def' AS [ColumnResult];
 
 В следующем примере использованы обратная косая черта и возврат каретки для разбиения двоичной строки на две строчки.  
 
-```  
+```sql  
 SELECT 0xabc\
 def AS [ColumnResult];  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

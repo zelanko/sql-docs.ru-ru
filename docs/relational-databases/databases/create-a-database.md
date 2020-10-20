@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 463f442c15fdd6bfa29e97c650d5b7d8ee95fe91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fddf58b0f7473ea2ae46812d9908dcbbafb7b66
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631032"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195729"
 ---
 # <a name="create-a-database"></a>Создание базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описывается создание базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 > [!NOTE]
-> Сведения о создании базы данных в службе Базы данных SQL Azure с помощью T-SQL см. в статье [CREATE DATABASE (база данных SQL Azure)](https://docs.microsoft.com/sql/t-sql/statements/create-database-azure-sql-database).
+> Сведения о создании базы данных в службе Базы данных SQL Azure с помощью T-SQL см. в статье [CREATE DATABASE (база данных SQL Azure)](../../t-sql/statements/create-database-transact-sql.md).
   
  **В этом разделе**  
   
@@ -134,12 +134,11 @@ LOG ON
 GO  
 ```  
   
- Дополнительные примеры см. в статье [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Дополнительные примеры см. в статье [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Добавление файлов данных или журналов в базу данных](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
-  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 136f2ec1b7bc795db2b95561f4fad31f8dfff42f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 81e34f795391ad53728f35c8fed6e6b2363b3f7a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901578"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115678"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство. Установка SQL Server и создание базы данных в Red Hat
 
@@ -53,7 +53,7 @@ ms.locfileid: "85901578"
 
 ::: moniker-end
 
-Чтобы установить Red Hat Enterprise Linux на собственном компьютере, перейдите на страницу [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Можно также создать виртуальные машины RHEL в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) и используйте параметр `--image RHEL` в вызове `az vm create`.
+Чтобы установить Red Hat Enterprise Linux на собственном компьютере, перейдите на страницу [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Можно также создать виртуальные машины RHEL в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm) и используйте параметр `--image RHEL` в вызове `az vm create`.
 
 Если вы ранее установили выпуск CTP или RC сервера SQL Server, необходимо удалить старый репозиторий, прежде чем выполнять эти действия. Дополнительные сведения см. в статье [Настройка репозиториев Linux для SQL Server 2017 и 2019](sql-server-linux-change-repo.md).
 

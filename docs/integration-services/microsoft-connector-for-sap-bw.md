@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05fefa983f3b58f8ca8be95772d3fbc49f3e9afb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430156"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194076"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Соединитель Microsoft Connector для SAP BW
 
@@ -45,7 +45,7 @@ ms.locfileid: "88430156"
   
 -   **Диспетчер соединений SAP BW** подключает источник SAP BW или назначение SAP BW к системе SAP Netweaver BW версии 7.  
   
- Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW см. в техническом документе [Использование службы SQL Server Integration Services с SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
+ Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW см. в техническом документе [Использование службы SQL Server Integration Services с SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100)). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
   
 ## <a name="documentation"></a>Документация  
  Файл справки по [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW содержит следующие разделы и подразделы:  
@@ -58,5 +58,4 @@ ms.locfileid: "88430156"
   
  [Справка F1 по Microsoft Connector для SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
  Описывает пользовательский интерфейс каждого компонента [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW.  
-  
   

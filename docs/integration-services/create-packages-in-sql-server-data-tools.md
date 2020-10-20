@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 521bc0dd4a454472586c18f108a42e4393498323
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72529ac177ddd069ca7e8412da375db45fe958e2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457570"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194916"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Создание пакетов в SQL Server Data Tools
 
@@ -48,9 +48,9 @@ ms.locfileid: "88457570"
   
      Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] создает готовый пакет для выполнения простого импорта и экспорта. В процессе работы мастера настраиваются все соединения, источник и назначение, а также добавляются преобразования данных, необходимые для немедленного импорта или экспорта. При необходимости можно сохранить пакет для последующего запуска или для доработки и расширения в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Однако после сохранения пакета его следует добавить в существующий проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , прежде чем он станет доступным для запуска и изменения в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- Пакет, созданный в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , сохраняется в файловой системе. Чтобы сохранить пакет в версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или в хранилище пакетов, необходимо сохранить копию пакета. Дополнительные сведения см. в разделе [Сохранение одной копии пакета](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
+ Пакет, созданный в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , сохраняется в файловой системе. Чтобы сохранить пакет в версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или в хранилище пакетов, необходимо сохранить копию пакета. Дополнительные сведения см. в разделе [Сохранение одной копии пакета](./save-packages.md).  
 
- Видеоматериалы, которые демонстрируют способ создания базового пакета с помощью шаблона пакетов по умолчанию, см. в статье [Создание базового пакета (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131023).  
+ Видеоматериалы, которые демонстрируют способ создания базового пакета с помощью шаблона пакетов по умолчанию, см. в статье [Создание базового пакета (SQL Server Video)](/previous-versions/sql/sql-server-2008/cc952921(v=sql.100)).  
 
 ## <a name="get-sql-server-data-tools"></a>Загрузка SQL Server Data Tools
 Инструкции по установке SQL Server Data Tools (SSDT) см. в разделе [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
@@ -77,5 +77,4 @@ ms.locfileid: "88457570"
      ![Свойство TargetServerVersion в диалоговом окне Свойства проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне Свойства проекта")  
   
  Можно создавать, обслуживать и выполнять пакеты, предназначенные для версий SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
-  
   

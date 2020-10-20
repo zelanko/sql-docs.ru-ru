@@ -1,5 +1,6 @@
 ---
-title: Построение модели (надстройка MDS для Excel) | Документы Майкрософт
+description: Построение модели (надстройка MDS для Excel)
+title: Построение модели
 ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a6f3f669f0f1699618399bbfdccaf33f6e4c13a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84dd1d79dc049baf5d1f993b6bd50a837ba56a87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258070"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Построение модели (надстройка MDS для Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут выполнять сокращенный набор административных функций, доступных в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68092496"
 ## <a name="related-tasks"></a>Связанные задачи  
  Однако большинство административных задач все равно необходимо выполнять в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] или с помощью веб-службы. В следующей таблице показаны средства, с помощью которых администраторы могут выполнять задачи в MDS.  
   
-|Описание задачи|Инструмент|Раздел|  
+|Описание задачи|Средство|Раздел|  
 |----------------------|----------|-----------|  
 |Создание моделей.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] или веб-служба|[Создание модели (службы Master Data Services)](../../master-data-services/create-a-model-master-data-services.md)|  
 |Создание сущности.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , веб-служба или [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Создание сущности (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)|  
@@ -61,7 +62,7 @@ ms.locfileid: "68092496"
   
 -   [Бизнес-правила (службы Master Data Services)](../../master-data-services/business-rules-master-data-services.md)  
   
--   [Обзор: экспорт данных (службы Master Data Services)](../../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [Обзор. Экспорт данных (службы Master Data Services)](../../master-data-services/overview-exporting-data-master-data-services.md)  
   
 -   [Иерархии (службы Master Data Services)](../../master-data-services/hierarchies-master-data-services.md)  
   

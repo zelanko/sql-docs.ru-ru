@@ -26,12 +26,12 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21ea1933bc37001040beb6007fb877fa8765a24c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e5b3519a18f8729920e307ddd895d34a2449d93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467696"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194974"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467696"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 EXISTS ( subquery )  
 ```  
   
@@ -63,7 +63,7 @@ EXISTS ( subquery )
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. Использование значения NULL во вложенном запросе для возвращения результирующего набора  
  В следующем примере возвращается результирующий набор со значением `NULL`, указанным во вложенном запросе, и устанавливается значение TRUE с помощью ключевого слова `EXISTS`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name   
@@ -75,7 +75,7 @@ ORDER BY Name ASC ;
 ### <a name="b-comparing-queries-by-using-exists-and-in"></a>Б. Сравнение запросов с помощью ключевых слов EXISTS и IN  
  В следующем примере сравниваются два семантически эквивалентных запроса. В первом запросе используется ключевое слово `EXISTS`, а во втором — ключевое слово `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -90,7 +90,7 @@ GO
   
  В следующем запросе используется ключевое слово `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -118,7 +118,7 @@ Willis                                             Johnson
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>В. Сравнение запросов с помощью ключевых слов EXISTS и = ANY  
  В следующем примере показаны два запроса для поиска магазинов, названия которых совпадают с названием поставщика. В первом запросе используется ключевое слово `EXISTS`, а во втором — ключевое слово `=``ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -132,7 +132,7 @@ GO
   
  В следующем запросе используется ключевое слово `= ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -146,7 +146,7 @@ GO
 ### <a name="d-comparing-queries-by-using-exists-and-in"></a>Г. Сравнение запросов с помощью ключевых слов EXISTS и IN  
  В следующем примере показаны запросы для поиска сотрудников подразделений, имена которых начинаются на `P`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -165,7 +165,7 @@ GO
   
  В следующем запросе используется ключевое слово `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -183,7 +183,7 @@ GO
 ### <a name="e-using-not-exists"></a>Д. Использование ключевого слова NOT EXISTS  
  Работа ключевого слова NOT EXISTS противоположна работе ключевого слова EXISTS. Предложение WHERE в ключевом слове NOT EXISTS удовлетворяется, если вложенный запрос не возвратил никаких строк. В следующем примере выполняется поиск сотрудников, не входящих в состав подразделений, имена которых начинаются на `P`.  
   
-```  
+```sql  
 SELECT p.FirstName, p.LastName, e.JobTitle  
 FROM Person.Person AS p   
 JOIN HumanResources.Employee AS e  
@@ -304,7 +304,7 @@ Peng                           Wu                             Quality Assurance 
 ### <a name="f-using-exists"></a>Е. Использование ключевого слова EXISTS  
  В следующем примере определяется, могут ли строки в таблице `ProspectiveBuyer` соответствовать строкам в таблице `DimCustomer`. Запрос будет возвращать строки, только при совпадении значений `LastName` и `BirthDate` в двух таблицах.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  
@@ -318,7 +318,7 @@ WHERE EXISTS
 ### <a name="g-using-not-exists"></a>Ж. Использование ключевого слова NOT EXISTS  
  Работа ключевого слова NOT EXISTS противоположна работе ключевого слова EXISTS. Предложение WHERE в ключевом слове NOT EXISTS удовлетворяется, если вложенный запрос не возвратил никаких строк. В следующем примере показан поиск всех строк в таблице `DimCustomer`, где `LastName` и `BirthDate` не соответствуют записям в таблице `ProspectiveBuyers`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  

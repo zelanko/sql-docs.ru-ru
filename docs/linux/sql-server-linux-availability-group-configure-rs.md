@@ -9,12 +9,12 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b1472c1cbe3bdb9611ffcb06ff3404c28c431545
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 4c0057327466773d759752ad6760b2e736b84ebb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784845"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115964"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Настройка группы доступности SQL Server для чтения и масштабирования в Linux
 
@@ -82,6 +82,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-* [Настройка распределенной группы доступности](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [Настройка распределенной группы доступности](../database-engine/availability-groups/windows/distributed-availability-groups.md)
 * [Дополнительные сведения о группах доступности](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [Выполнение принудительного перехода на другой ресурс вручную](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

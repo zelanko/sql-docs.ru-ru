@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df26e437d7c03510f7e634693296a928696a96b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab0e3826b20df90102bfc97d5d3730b4e83806dd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430686"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195950"
 ---
 # <a name="fuzzy-lookup-transformation"></a>преобразование «Нечеткий уточняющий запрос»
 
@@ -49,7 +49,7 @@ ms.locfileid: "88430686"
   Преобразование «Нечеткий уточняющий запрос» выполняет задачи по очистке данных, такие как стандартизация данных, исправление данных и предоставление отсутствующих значений.  
   
 > [!NOTE]  
->  Дополнительные сведения о преобразовании "Нечеткий уточняющий запрос", в том числе сведения об ограничениях производительности и памяти, см. в техническом документе [Преобразования "Нечеткий уточняющий запрос" и "Нечеткое группирование" в службах SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
+>  Дополнительные сведения о преобразовании "Нечеткий уточняющий запрос", в том числе сведения об ограничениях производительности и памяти, см. в техническом документе [Преобразования "Нечеткий уточняющий запрос" и "Нечеткое группирование" в службах SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90)).  
   
  Преобразование «Нечеткий уточняющий запрос» отличается от преобразования «Уточняющий запрос» использованием нечеткого соответствия. Преобразование «Уточняющий запрос» использует эквивалентное соединение для обнаружения совпадающих записей в ссылочной таблице. Возвращает записи хотя бы с одной совпадающей записью и возвращает записи без совпадающих записей. В то же время преобразование «Нечеткий уточняющий запрос» замечает и нечеткие соответствия, возвращая одну или несколько похожих записей из ссылочной таблицы.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "88430686"
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -222,5 +222,4 @@ ms.locfileid: "88430686"
  [Преобразование «Уточняющий запрос»](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [Преобразование «Нечеткое группирование»](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data Transformation Services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ab2ad7c0e824332d59f0c724c835b1f5fedfeb97
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 944d72fd82143a3d1f36fa57e9faaed0055d2a6e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570303"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195844"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -46,8 +46,8 @@ SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — эт
 См. дополнительные сведения об [установке MSSQL Integration Services с помощью SQL Server, а также о дополнительных скачиваемых компонентах, которые могут вам понадобиться](install-windows/install-integration-services.md).
 
 ##  <a name="info_tip-resources"></a>![info_tip](../sql-server/media/info-tip.png) Ресурсы
--   [Получить справку на форуме SSIS](https://docs.microsoft.com/answers/topics/sql-server-integration-services.html)
+-   [Получить справку на форуме SSIS](/answers/topics/sql-server-integration-services.html)
 -   [Получить справку на сайте Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
 -   [Читать блог группы разработки служб SSIS](https://blogs.msdn.microsoft.com/ssis/)
 -   [Сообщить о проблемах или запросить новые функции](https://feedback.azure.com/forums/908035-sql-server)
--   [Получить документы на ПК](../sql-server/sql-server-help-installation.md)
+-   [Получить документы на ПК](../sql-server/sql-server-offline-documentation.md)

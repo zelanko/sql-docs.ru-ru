@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3262135632cc10036bf03c93edd448de16fbbc79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ad0ccea1ed870f09b9d9fc15e12730ff67c6475
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484401"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195281"
 ---
 # <a name="syntax-ssis"></a>Синтаксис (службы SSIS)
 
@@ -81,12 +81,11 @@ ms.locfileid: "88484401"
  Дополнительные сведения см. в статье [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Использование выражения в компоненте потока данных](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Использование выражения в компоненте потока данных](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>См. также  
   
 -   Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=746575)на сайте pragmaticworks.com  
   
 -   Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
-  
   

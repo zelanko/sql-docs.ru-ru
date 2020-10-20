@@ -1,5 +1,6 @@
 ---
-title: Общие сведения. Экспорт данных в Excel (надстройка MDS для Excel) | Документация Майкрософт
+description: Общие сведения. Экспорт данных в Excel (надстройка MDS для Excel)
+title: Экспорт данных в Excel
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 75a23041a3e822ec103012aa18475a092b27b816
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14ebf23101358677f0c9f0afdf4ed069199614ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257656"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Общие сведения. Экспорт данных в Excel (надстройка MDS для Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]необходимо экспортировать данные из репозитория MDS в активный лист Excel, прежде чем можно будет работать с ними. Завершив работу с данными, импортируйте их в репозиторий MDS, чтобы они стали доступны другим пользователям.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68074499"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Фильтрация данных MDS перед их загрузкой в Excel.|[Фильтрация данных перед их экспортом (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)|  
-|Загрузка данных MDS в Excel.|[Экспорт данных в Excel из Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|Загрузка данных MDS в Excel.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |Изменение порядка столбцов перед загрузкой данных.|[Переупорядочение столбцов (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db38bcb37a0b7167a7d4c27b62a34438d77c343
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477296"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195893"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Создание базы данных (мастер импорта и экспорта SQL Server)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88477296"
 Диалоговое окно **Создание базы данных** в мастере содержит лишь базовые параметры, доступные для создания базы данных SQL Server. Чтобы просмотреть и настроить все параметры для новой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для создания базы данных или ее настройки после создания мастером. 
 
 > [!NOTE]
-> Если вам нужны сведения об инструкции CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)], а не о диалоговом окне **Создание базы данных** мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. раздел [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+> Если вам нужны сведения об инструкции CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)], а не о диалоговом окне **Создание базы данных** мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. раздел [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md).  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>Снимок экрана: страница "Создание базы данных"  
 На следующем снимке экрана показано диалоговое окно **Создание базы данных** в мастере.  
@@ -37,10 +37,10 @@ ms.locfileid: "88477296"
 ![Страница "Создание базы данных" в мастере импорта и экспорта](../../integration-services/import-export-data/media/create-database.png "Страница "Создание базы данных" в мастере импорта и экспорта")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>Ввод имени новой базы данных  
-**имя**;  
+**Имя**  
  Введите имя для целевой базы данных SQL Server.
  
-### <a name="naming-requirements"></a>Требования к именам
+### <a name="naming-requirements"></a>Требования к именованию
 При вводе имени обязательно следуйте соглашениям об именовании SQL Server.  
   
 -   Имя базы данных должно быть уникальным в рамках экземпляра SQL Server.  
@@ -89,8 +89,7 @@ ms.locfileid: "88477296"
  Задайте количество мегабайтов, на которое может возрастать файл журнала.  
 
 ### <a name="more-info"></a>Дополнительные сведения
-Дополнительные сведения о параметрах размера файла, отображаемых на этой странице, см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
+Дополнительные сведения о параметрах размера файла, отображаемых на этой странице, см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md). 
 
 ## <a name="whats-next"></a>Дальнейшие действия  
- После указания имени для новой базы данных и нажатия кнопки **ОК**в диалоговом окне **Создание базы данных** снова открывается страница **Выбор назначения** . Дополнительные сведения см. в разделе [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
-
+ После указания имени для новой базы данных и нажатия кнопки **ОК**в диалоговом окне **Создание базы данных** снова открывается страница **Выбор назначения** . Дополнительные сведения см. в разделе [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).

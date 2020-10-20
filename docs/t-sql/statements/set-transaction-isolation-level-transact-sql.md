@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88cbb1203595203af88cf9e9da6e122cc7db5322
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 6d8b590e304120015f6333546a08c8c78a26493c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227473"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038338"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   уровня изоляции READ COMMITTED с параметром базы данных READ_COMMITTED_SNAPSHOT, находящимся в состоянии ON;  
   
--   Уровень изоляции моментального снимка (SNAPSHOT). Дополнительные сведения об изоляции моментальных снимков см. в разделе [Изоляция снимков в SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
+-   Уровень изоляции моментального снимка (SNAPSHOT). Дополнительные сведения об изоляции моментальных снимков см. в разделе [Изоляция снимков в SQL Server](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
   
  READ COMMITTED  
  Указывает, что инструкции не могут считывать данные, которые были изменены другими транзакциями, но еще не были зафиксированы. Это предотвращает чтение«грязных» данных. Данные могут быть изменены другими транзакциями между отдельными инструкциями в текущей транзакции, результатом чего будет неповторяемое чтение или фантомные данные. Этот параметр в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен по умолчанию.  
@@ -90,7 +90,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   Если параметр READ_COMMITTED_SNAPSHOT находится в состоянии ON (значение по умолчанию в Базе данных SQL Azure), компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует управление версиями строк для предоставления каждой инструкции согласованного на уровне транзакций моментального снимка данных в том виде, который он имел на момент начала выполнения инструкции. Для защиты данных от обновления другими транзакциями блокировки не используются.
 
 > [!IMPORTANT]  
-> Выбор уровня изоляции транзакции не влияет на блокировки, примененные для защиты изменений данных. Транзакция всегда вызывает монопольную блокировку любых данных, которые она изменяет, и держит блокировку до тех пор, пока транзакция не завершится, независимо от уровня изоляции, установленного для транзакции. Кроме того, изменение на уровне изоляции READ_COMMITTED блокирует изменение выбранных строк данных, тогда как при изменении на уровне изоляции SNAPSHOT изменяемые строки выбираются в зависимости от версий. Для операций чтения уровни изоляции транзакций, в основном, определяют уровень защиты от эффектов изменений, сделанных другими транзакциями. Дополнительные сведения: [Руководство по блокировке и управлению версиями строк транзакций](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
+> Выбор уровня изоляции транзакции не влияет на блокировки, примененные для защиты изменений данных. Транзакция всегда вызывает монопольную блокировку любых данных, которые она изменяет, и держит блокировку до тех пор, пока транзакция не завершится, независимо от уровня изоляции, установленного для транзакции. Кроме того, изменение на уровне изоляции READ_COMMITTED блокирует изменение выбранных строк данных, тогда как при изменении на уровне изоляции SNAPSHOT изменяемые строки выбираются в зависимости от версий. Для операций чтения уровни изоляции транзакций, в основном, определяют уровень защиты от эффектов изменений, сделанных другими транзакциями. Дополнительные сведения: [Руководство по блокировке и управлению версиями строк транзакций](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md).
 
 > [!NOTE]  
 >  Изоляция моментальных снимков поддерживает данные FILESTREAM. В режиме изоляции моментальных снимков данные FILESTREAM, считанные любой инструкцией транзакции, будут согласованы на уровне транзакции с версией данных, существовавших на момент начала транзакции.  
@@ -197,5 +197,4 @@ GO
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  
-  
   

@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: b58763dc5bf126e164ada0c0d808a75270819171
-ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
+ms.openlocfilehash: 8e87ca7630fca5e72daf2a3e4eedfd38d50482fd
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614613"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115667"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Краткое руководство. Запуск образов контейнеров SQL Server в Docker
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -132,7 +132,7 @@ any changes to one section should be duplicated in the other-->
    > [!NOTE]
    > Пароль должен удовлетворять политике паролей SQL Server по умолчанию; в противном случае контейнер не сможет настроить SQL Server и прекратит работу. По умолчанию пароль должен состоять не менее чем из восьми символов и содержать символы как минимум трех из четырех наборов: прописные и строчные буквы, 10 основных цифр и специальные символы. Проверить журнал ошибок можно, выполнив команду [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
    >
-   > По умолчанию она создаст контейнер с выпуском SQL Server 2017 Developer. Процесс запуска контейнера с производственными выпусками немного отличается. Дополнительные сведения см. в разделе [Запуск образов контейнеров с производственными выпусками](sql-server-linux-configure-docker.md#production).
+   > По умолчанию она создаст контейнер с выпуском SQL Server 2017 Developer. Процесс запуска контейнера с производственными выпусками немного отличается. Дополнительные сведения см. в разделе [Запуск образов контейнеров с производственными выпусками](./sql-server-linux-docker-container-deployment.md#production).
 
    Следующая таблица содержит описание параметров запуска команды `docker run` из предыдущего примера.
 
@@ -171,7 +171,7 @@ any changes to one section should be duplicated in the other-->
 
    ![Вывод команды docker ps](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. Если в столбце **STATUS** (состояние) отображается состояние **Up** (запущен), то SQL Server выполняется в контейнере и прослушивает порт, указанный в столбце **PORTS** (порты). Если в столбце **STATUS** контейнера с SQL Server отображается **Exited** (завершен), см.руководство [Устранение неполадок конфигурации](sql-server-linux-configure-docker.md#troubleshooting).
+4. Если в столбце **STATUS** (состояние) отображается состояние **Up** (запущен), то SQL Server выполняется в контейнере и прослушивает порт, указанный в столбце **PORTS** (порты). Если в столбце **STATUS** контейнера с SQL Server отображается **Exited** (завершен), см.руководство [Устранение неполадок конфигурации](./sql-server-linux-docker-container-troubleshooting.md).
 
 Параметр `-h` (имя узла), как указано выше, позволяет изменить внутреннее имя контейнера на пользовательское значение. Это имя отображается при выполнении следующего запроса Transact-SQL.
 
@@ -223,7 +223,7 @@ SELECT @@SERVERNAME,
    > [!TIP]
    > В этом кратком руководстве используется образ Docker SQL Server 2019. Если вы хотите запустить образ SQL Server 2017, см. [вариант этой статьи для SQL Server 2017](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
 
-   Предыдущая команда извлекает образ контейнера SQL Server 2019 на основе Ubuntu. Чтобы вместо этого использовать образы контейнеров на основе RedHat, см. статью [Запуск образов контейнеров на базе RHEL](sql-server-linux-configure-docker.md#rhel). Список всех доступных образов см. на странице [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) центра Docker.
+   Предыдущая команда извлекает образ контейнера SQL Server 2019 на основе Ubuntu. Чтобы вместо этого использовать образы контейнеров на основе RedHat, см. статью [Запуск образов контейнеров на базе RHEL](./sql-server-linux-docker-container-deployment.md#rhel). Список всех доступных образов см. на странице [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) центра Docker.
 
    ::: zone pivot="cs1-bash"
    Для команд Bash в этой статье используется `sudo`. В macOS `sudo` может не потребоваться. В Linux, если вы не хотите использовать `sudo` для запуска Docker, можно настроить группу **docker** и добавить в нее пользователей. Дополнительные сведения см. в статье [Действия после установки для Linux](https://docs.docker.com/install/linux/linux-postinstall/).
@@ -500,7 +500,7 @@ SELECT @@SERVERNAME,
 
 Другие распространенные средства для подключения к SQL Server:
 
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) в Windows](sql-server-linux-manage-ssms.md);
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli (предварительная версия)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md).

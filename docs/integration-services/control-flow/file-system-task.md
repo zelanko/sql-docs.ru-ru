@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dea2596647ab9c5ac69befde2336ac126a84f2ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d686ed80120622c2a53cbb9cc52eb4637cfd3f2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393780"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196518"
 ---
 # <a name="file-system-task"></a>Задача "Файловая система"
 
@@ -68,13 +68,13 @@ ms.locfileid: "88393780"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Файловая система" (страница "Общие")](../../integration-services/control-flow/file-system-task-editor-general-page.md)  
+-   [Редактор задачи "Файловая система" (страница "Общие")]()  
   
 -   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "88393780"
 ## <a name="file-system-task-editor-general-page"></a>Редактор задачи «Файловая система» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Файловая система»** для настройки операции файловой системы, выполняемой задачей.  
   
- Необходимо указать диспетчер подключений к источнику и назначению, установив свойства SourceConnection и DestinationConnection. Можно задать либо имена диспетчеров подключения файлов, которые указывают на файлы, используемые задачей в качестве источника или назначения, либо, если пути к файлам хранятся в переменных, имена этих переменных. Чтобы использовать переменные для хранения путей к файлам, вначале необходимо задать значение **True**для параметра соединения с источником IsSourcePathVariable и параметра соединения с назначением IsDestinationPatheVariable. После этого можно выбрать существующие системные или определенные пользователем переменные либо можно создать новые переменные. В диалоговом окне **Добавить переменную** можно настроить переменные и указать область их действия. Областью действия должна быть задача «Файловая система» или родительский контейнер. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Необходимо указать диспетчер подключений к источнику и назначению, установив свойства SourceConnection и DestinationConnection. Можно задать либо имена диспетчеров подключения файлов, которые указывают на файлы, используемые задачей в качестве источника или назначения, либо, если пути к файлам хранятся в переменных, имена этих переменных. Чтобы использовать переменные для хранения путей к файлам, вначале необходимо задать значение **True**для параметра соединения с источником IsSourcePathVariable и параметра соединения с назначением IsDestinationPatheVariable. После этого можно выбрать существующие системные или определенные пользователем переменные либо можно создать новые переменные. В диалоговом окне **Добавить переменную** можно настроить переменные и указать область их действия. Областью действия должна быть задача «Файловая система» или родительский контейнер. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](../integration-services-ssis-variables.md).  
   
 > [!NOTE]  
 >  Чтобы переопределить переменные, выбранные для свойств **SourceConnection** и **DestinationConnection** , введите выражения для свойств **Source** и **Destination** . Эти выражения вводятся на странице **Выражения** редактора задачи **Файловая система**. Например, чтобы задать путь к файлам, которые задача будет использовать в качестве назначения, может потребоваться в одном случае использовать переменную A, а в другом — переменную B.  
@@ -147,13 +147,13 @@ ms.locfileid: "88393780"
  **DestinationVariable**  
  Выберите имя переменной из списка или нажмите кнопку \<**New variable...**> для создания новой переменной.  
   
- **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
  Выберите в списке диспетчер подключений файлов или щелкните \<**New connection...**>, чтобы создать диспетчер подключений.  
   
- **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../connection-manager/file-connection-manager.md).  
   
 ### <a name="issourcepathvariable-dynamic-options"></a>Динамические параметры IsSourcePathVariable  
   
@@ -161,7 +161,7 @@ ms.locfileid: "88393780"
  **SourceVariable**  
  Выберите имя переменной из списка или нажмите кнопку \<**New variable...**> для создания новой переменной.  
   
- **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
@@ -191,5 +191,4 @@ ms.locfileid: "88393780"
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
-  
   
