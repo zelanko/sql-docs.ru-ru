@@ -20,12 +20,12 @@ ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67977deba00a1df52a9264256b83f6e57bc49ed5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7cd3bfc9b136dac41352d2be594e7d1e3099bd37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116136"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035947"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Функции параметров сортировки — COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,8 +51,8 @@ COLLATIONPROPERTY( collation_name , property )
   
 |Имя свойства|Описание|  
 |---|---|
-|**CodePage**|Кодовая страница параметров сортировки не в Юникоде. Эта кодировка используется для данных типа **varchar**. Сведения о преобразовании этих значений и сопоставлении символов см. в разделах [Приложение Ж. Таблицы сопоставления DBCS и Юникода](https://msdn.microsoft.com/library/cc194886.aspx) и [Приложение З. Кодовые страницы](https://msdn.microsoft.com/library/cc195051.aspx).<br /><br />Базовый тип данных: **int**|  
-|**LCID**|Код языка Windows для параметров сортировки. Это язык и региональные параметры, используемые для правил сортировки и сравнения. Сведения о преобразовании этих значений см. в статье [Структура кода языка](https://msdn.microsoft.com/library/cc233968.aspx) (сначала их необходимо преобразовать в тип **varbinary**).<br /><br />Базовый тип данных: **int**|  
+|**CodePage**|Кодовая страница параметров сортировки не в Юникоде. Эта кодировка используется для данных типа **varchar**. Сведения о преобразовании этих значений и сопоставлении символов см. в разделах [Приложение Ж. Таблицы сопоставления DBCS и Юникода](/previous-versions/cc194886(v=msdn.10)) и [Приложение З. Кодовые страницы](/previous-versions/cc195051(v=msdn.10)).<br /><br />Базовый тип данных: **int**|  
+|**LCID**|Код языка Windows для параметров сортировки. Это язык и региональные параметры, используемые для правил сортировки и сравнения. Сведения о преобразовании этих значений см. в статье [Структура кода языка](/openspecs/windows_protocols/ms-lcid/63d3d639-7fd2-4afb-abbe-0d5b5551eef8) (сначала их необходимо преобразовать в тип **varbinary**).<br /><br />Базовый тип данных: **int**|  
 |**ComparisonStyle**|Стиль сравнения Windows для параметров сортировки. Возвращает значение 0 для двоичных параметров сортировки (как (\_BIN), так и (\_BIN2)), а также если учитываются все свойства ((\_CS\_AS\_KS\_WS), (\_CS\_AS\_KS\_WS\_SC) и (\_CS\_AS\_KS\_WS\_VSS)). Значения битовой маски:<br /><br /> Игнорировать регистр: 1<br /><br /> Не учитывать диакритические знаки: 2<br /><br /> Не учитывать тип японской азбуки: 65536<br /><br /> Не учитывать ширину: 131072<br /><br /> Примечание. Хотя параметр variation-selector-sensitive (\_VSS) влияет на то, как производится сравнение, он не представлен в этом значении.<br /><br />Базовый тип данных: **int**|  
 |**Version**|Версия параметров сортировки. Возвращает значение в диапазоне от 0 до 3.<br /><br /> Параметры сортировки, имя которых содержит "140", возвращают значение 3.<br /><br /> Параметры сортировки, имя которых содержит "100", возвращают значение 2.<br /><br /> Параметры сортировки, имя которых содержит "90", возвращают значение 1.<br /><br /> Все остальные параметры сортировки возвращают 0.<br /><br />Базовый тип данных: **tinyint**|  
   
@@ -86,5 +86,3 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 ## <a name="see-also"></a>См. также
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
   
-  
-

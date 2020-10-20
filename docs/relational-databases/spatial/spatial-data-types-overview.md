@@ -16,16 +16,16 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809550"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006216"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 Существует два типа пространственных данных. Тип данных **geometry** поддерживает планарные или эвклидовы данные (система координат для плоской Земли). Тип данных **geometry** соответствует *спецификации Simple Features for SQL Открытого геопространственного консорциума (OGC)* версии 1.1.0 и стандарту SQL MM (стандарт ISO).
 Кроме того, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает тип данных **geography**, который используется для хранения эллиптических данных, таких как координаты GPS широты и долготы.

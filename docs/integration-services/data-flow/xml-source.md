@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14aeae01cecd283ae480b337543fa0e1c4fe8bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425616"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194569"
 ---
 # <a name="xml-source"></a>XML-источник
 
@@ -83,7 +83,7 @@ ms.locfileid: "88425616"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства источника «XML»](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88425616"
 |Значение|Описание|  
 |-----------|-----------------|  
 |Расположение XML-файла|Извлечь данные из XML-файла.|  
-|XML-файл из переменной|Указать имя XML-файла в переменной.<br /><br /> **Дополнительные сведения** [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|XML-файл из переменной|Указать имя XML-файла в переменной.<br /><br /> **Дополнительные сведения** [Использование переменных в пакетах](../integration-services-ssis-variables.md)|  
 |XML-данные из переменной|Извлечь XML-данные из значения переменной.|  
   
  **Использовать встроенную схему**  
@@ -174,4 +174,4 @@ ms.locfileid: "88425616"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Извлечение данных с помощью XML-источника](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+ [Извлечение данных с помощью XML-источника](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)

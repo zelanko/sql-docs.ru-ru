@@ -32,12 +32,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c36813bee6c6b75d869bc4f04d47665c206cfcc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 604fbce3aebe8e6e902e2dc9292a24779471c86e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781607"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196228"
 ---
 # <a name="database-lifecycle-management"></a>Управление жизненным циклом базы данных
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85781607"
   
  Управление жизненным циклом баз данных начинается с обсуждения проекта и цели, разработки, тестирования, построения, развертывания, обслуживания, наблюдения и резервного копирования и заканчивается архивом данных. В этом разделе представлены общие сведения об этапах управления жизненным циклом базы данных, начиная с ее разработки и включая сборку, развертывание и мониторинг. В разделе также рассматриваются действия по управлению данными и операции, связанные с переносом данных, такие как импорт или экспорт, резервное копирование, миграция и синхронизация.  
   
- Полностью этот раздел можно прочитать по адресу: [Управление жизненным циклом баз данных](https://go.microsoft.com/fwlink/?LinkId=276949).  
+ Полностью этот раздел можно прочитать по адресу: [Управление жизненным циклом баз данных](/previous-versions/sql/sql-server-guides/jj907294(v=sql.110)).  
   
 ## <a name="see-also"></a>См. также:  
  [Домашняя страница Azure](https://www.windowsazure.com/)   
@@ -53,5 +53,4 @@ ms.locfileid: "85781607"
  [Центр управления Azure](https://www.windowsazure.com/manage/overview/)   
  [Блог группы разработки Azure](https://www.windowsazure.com/community/blog/)   
  [Варианты поддержки Azure](https://www.windowsazure.com/support/contact/)  
-  
   

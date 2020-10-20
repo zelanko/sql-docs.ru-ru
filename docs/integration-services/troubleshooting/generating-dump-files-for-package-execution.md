@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d213c8849c23ec1cb57e2628403542a31655a495
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913770"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193776"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Создание файлов дампа для выполнения пакетов
 
@@ -35,7 +35,7 @@ ms.locfileid: "86913770"
   
      Вызовите эту хранимую процедуру для приостановки выполняемого пакета и создания файла дампа.  
   
- Если вы используете модель развертывания пакетов, для указания параметра дампа отладки в командной строке создаются отладочные файлы дампа с помощью служебной программы **dtexec** или **dtutil** . Дополнительные сведения см. в статьях [Программа dtexec](../../integration-services/packages/dtexec-utility.md) и [Программа dtutil](../../integration-services/dtutil-utility.md). Дополнительные сведения о моделях развертывания пакетов см. в разделах [Развертывание проектов и пакетов служб Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213290.aspx) и [Устаревшее развертывание пакетов &#40;службы SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
+ Если вы используете модель развертывания пакетов, для указания параметра дампа отладки в командной строке создаются отладочные файлы дампа с помощью служебной программы **dtexec** или **dtutil** . Дополнительные сведения см. в статьях [Программа dtexec](../../integration-services/packages/dtexec-utility.md) и [Программа dtutil](../../integration-services/dtutil-utility.md). Дополнительные сведения о моделях развертывания пакетов см. в разделах [Развертывание проектов и пакетов служб Integration Services (SSIS)](../packages/deploy-integration-services-ssis-projects-and-packages.md) и [Устаревшее развертывание пакетов &#40;службы SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## <a name="debug-dump-file-format"></a>Формат отладочного файла дампа  
  Если указывается параметр создания дампа отладки, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают следующие отладочные файлы дампа:  
@@ -55,4 +55,4 @@ ms.locfileid: "86913770"
 |Последние сообщения|Последние сообщения, выданные системой. Содержат время, тип, описание и идентификатор потока для каждого сообщения.|[M:1]   Элемент кольцевого буфера:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Метка времени: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Идентификатор потока: 2368           (ThreadID)<br /><br /> [E:3]         Имя события: OnError                        (EventName)<br /><br /> [E:3]         Имя источника:                (SourceName)<br /><br /> [E:3]         Идентификатор источника:                        (SourceID)<br /><br /> [E:3]         Идентификатор выполнения:                 (ExecutionGUID)<br /><br /> [E:3]         Код данных: -1073446879              (DataCode)<br /><br /> [E:3]         Описание: Компонент не обнаружен, не зарегистрирован, не может быть обновлен, или в нем отсутствуют необходимые интерфейсы. Контактная информация для этого компонента: "".|  
   
 ## <a name="related-information"></a>Дополнительные сведения  
-[Диалоговое окно "Выполнение пакета"](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+[Диалоговое окно "Выполнение пакета"](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)

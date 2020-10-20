@@ -19,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425226"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196378"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Развертывание проектов и пакетов служб Integration Services (SSIS)
 
@@ -95,7 +95,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 
 Дополнительные сведения об этой ошибке и разрешениях, необходимых для учетной записи службы SSIS, см. в следующей записи блога.
  
-- [Ошибка "System.ComponentModel.Win32Exception. Клиент не обладает требуемыми правами" во время развертывания проекта служб SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [Ошибка "System.ComponentModel.Win32Exception. Клиент не обладает требуемыми правами" во время развертывания проекта служб SSIS](/archive/blogs/dataaccesstechnologies/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   В текущей версии служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]вы можете развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Сервер служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет управлять пакетами, выполнять пакеты и настраивать значения времени выполнения для пакетов с помощью сред.  
@@ -114,7 +114,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
     -   Если проект был создан в более раннем выпуске служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], то после открытия файла проекта в среде [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]необходимо преобразовать проект в модель развертывания проекта.  
   
         > [!NOTE]  
-        >  Если проект содержит один или более источников данных, то они будут удалены после завершения преобразования проекта. Для создания соединения с источником данных, который может совместно использоваться пакетами в проекте, добавьте диспетчер соединений на уровне проекта. Дополнительные сведения см. в статье [Добавление, удаление или совместное использование диспетчера соединений в пакете](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+        >  Если проект содержит один или более источников данных, то они будут удалены после завершения преобразования проекта. Для создания соединения с источником данных, который может совместно использоваться пакетами в проекте, добавьте диспетчер соединений на уровне проекта. Дополнительные сведения см. в статье [Добавление, удаление или совместное использование диспетчера соединений в пакете](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
          В зависимости от того, запускается ли **Мастер преобразования проекта служб Integration Services** из [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] или из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], он выполняет разные задачи по преобразованию.  
   
@@ -530,7 +530,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта.  
   
 > [!NOTE]  
->  Если проект содержит один или более источников данных, то они будут удалены после завершения преобразования проекта. Для создания соединения с источником данных, который может совместно использоваться пакетами в проекте, добавьте диспетчер соединений на уровне проекта. Дополнительные сведения см. в статье [Добавление, удаление или совместное использование диспетчера соединений в пакете](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+>  Если проект содержит один или более источников данных, то они будут удалены после завершения преобразования проекта. Для создания соединения с источником данных, который может совместно использоваться пакетами в проекте, добавьте диспетчер соединений на уровне проекта. Дополнительные сведения см. в статье [Добавление, удаление или совместное использование диспетчера соединений в пакете](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
  **Выбор действия**  
   
@@ -655,7 +655,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Введите необязательное описание проекта.  
   
 ###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> Задание параметров на странице «Обновление задачи выполнения пакета»  
- Обновление задачи «Выполнение пакета» содержится в пакетах для использования ссылки на основе проектов. Дополнительные сведения см. в разделе [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md).  
+ Обновление задачи «Выполнение пакета» содержится в пакетах для использования ссылки на основе проектов. Дополнительные сведения см. в разделе [Execute Package Task Editor](../control-flow/execute-package-task.md).  
   
  **Родительский пакет**  
  Выводит список имен пакета, который выполняет дочерний пакет с помощью задачи «Выполнение пакета».  
@@ -746,4 +746,4 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Преобразование проекта не сохраняется до тех пор, пока проект сохранен в [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **Сохранить отчет**  
- Нажмите эту кнопку, чтобы сохранить сводку по преобразованию проекта в XML-файл.  
+ Нажмите эту кнопку, чтобы сохранить сводку по преобразованию проекта в XML-файл.

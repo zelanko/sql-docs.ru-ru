@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 75974b57a139413f43b44deebeb0e1488cfd5155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430676"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194191"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»
 
@@ -108,11 +108,10 @@ ms.locfileid: "88430676"
     > [!NOTE]  
     >  Дополнительная инструкция SQL, которую можно указать на этой странице, заменяет имя таблицы, указанное на странице **Соединение****Редактора преобразования «Уточняющий запрос»**.  
   
-13. Чтобы настроить вывод ошибок, перейдите на страницу **Вывод ошибок** и задайте параметры обработки ошибок. Дополнительные сведения см. в разделе [Редактор преобразования "Уточняющий запрос" (страница "Вывод ошибок")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+13. Чтобы настроить вывод ошибок, перейдите на страницу **Вывод ошибок** и задайте параметры обработки ошибок. Дополнительные сведения см. в разделе [Редактор преобразования "Уточняющий запрос" (страница "Вывод ошибок")](./lookup-transformation.md).  
   
 14. Нажмите кнопку **ОК** , чтобы сохранить изменения в преобразовании «Уточняющий запрос», а затем запустите пакет.  
   
 ## <a name="see-also"></a>См. также  
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

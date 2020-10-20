@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a83bebf92ddbf4e14d08518283547cb35594c290
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cd88383577694d5bef248baea5004056d239136
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430186"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195213"
 ---
 # <a name="group-or-ungroup-components"></a>Группирование и разгруппирование компонентов
 
@@ -66,6 +66,5 @@ ms.locfileid: "88430186"
   
 ## <a name="see-also"></a>См. также:  
  [Добавление задачи или контейнера в поток управления или удалить их из него](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
-  
+ [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](./control-flow/precedence-constraints.md)  
   

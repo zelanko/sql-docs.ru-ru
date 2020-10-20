@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84e3e3593e2a3cbee72d6df5cc7565bb908a8b53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b825ff5cee4ceba526d59cc30dc0bb1205896171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430716"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194661"
 ---
 # <a name="character-map-transformation"></a>Преобразование «Таблица символов»
 
@@ -78,7 +78,7 @@ ms.locfileid: "88430716"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -126,6 +126,5 @@ ms.locfileid: "88430716"
  Введите псевдоним для каждого выходного столбца. Значением по умолчанию является **Copy of** , за которым следует имя входного столбца, однако можно выбрать любое уникальное описательное имя.  
   
  **Настройка вывода ошибок**  
- Диалоговое окно [Настройка вывода ошибок](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) для указания параметров обработки ошибок в этом преобразовании.  
-  
+ Диалоговое окно [Настройка вывода ошибок](../error-handling-in-data.md) для указания параметров обработки ошибок в этом преобразовании.  
   

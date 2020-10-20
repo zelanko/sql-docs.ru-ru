@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412440"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195598"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -122,8 +122,8 @@ ms.locfileid: "88412440"
   
  **Для Базы данных SQL Azure:**  
   
- - **[Импорт файла BACPAC для создания новой базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)** содержит пошаговые инструкции по использованию портала Azure, PowerShell, среды SSMS или SqlPackage.  
- - Обратитесь к разделу **[Параметры и производительность базы данных SQL: сведения о возможностях, доступных на каждом уровне служб](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** для получения подробных сведений о разных уровнях служб.  
+ - **[Импорт файла BACPAC для создания новой базы данных SQL Azure](/azure/azure-sql/database/database-import)** содержит пошаговые инструкции по использованию портала Azure, PowerShell, среды SSMS или SqlPackage.  
+ - Обратитесь к разделу **[Параметры и производительность базы данных SQL: сведения о возможностях, доступных на каждом уровне служб](/azure/azure-sql/database/purchasing-models)** для получения подробных сведений о разных уровнях служб.  
 
 ### <a name="validation-page"></a>Страница «Проверка»  
  Используйте эту страницу для поиска любых проблем, блокирующих операцию. Для продолжения устраните критические препятствия, приводящие к блокированию, и нажмите кнопку **Повторная проверка** для обеспечения успешного завершения проверки.  
@@ -144,8 +144,7 @@ ms.locfileid: "88412440"
  Нажмите кнопку **Закрыть**, чтобы завершить работу мастера.  
   
 ## <a name="see-also"></a>См. также  
-[Импорт файла BACPAC для создания новой базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[Импорт файла BACPAC для создания новой базы данных SQL Azure](/azure/azure-sql/database/database-import)  
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Экспорт приложения уровня данных](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

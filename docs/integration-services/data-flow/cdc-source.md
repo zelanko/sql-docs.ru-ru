@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e5bfae7baa757b2655e63470be427ea46bebed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bd7f2478a08b00d1eb970b80ca3e5fb9f168d21
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457447"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196474"
 ---
 # <a name="cdc-source"></a>CDC-источник
 
@@ -36,7 +36,7 @@ ms.locfileid: "88457447"
   
  Источник CDC использует следующие конфигурации.  
   
--   Диспетчер соединений ADO.NET [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для получения доступа к базе данных CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о настройке соединения с источником CDC см. в разделе [Редактор источника "CDC" (страница "Диспетчер соединений")](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).  
+-   Диспетчер соединений ADO.NET [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для получения доступа к базе данных CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о настройке соединения с источником CDC см. в разделе [Редактор источника "CDC" (страница "Диспетчер соединений")]().  
   
 -   Таблица, включенная для CDC.  
   
@@ -105,11 +105,11 @@ use <cdc-enabled-database-name>
   
  Дополнительные сведения см. в одном из следующих разделов:  
   
--   [Редактор источника "CDC" (страница "Диспетчер соединений")](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+-   [Редактор источника "CDC" (страница "Диспетчер соединений")]()  
   
--   [Редактор источника "CDC" (страница "Столбцы")](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Редактор источника "CDC" (страница "Столбцы")]()  
   
--   [Редактор источника "CDC" (страница "Вывод ошибок")](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [Редактор источника "CDC" (страница "Вывод ошибок")]()  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые могут быть заданы программным путем.  
   
@@ -251,5 +251,4 @@ use <cdc-enabled-database-name>
 ## <a name="related-content"></a>См. также  
   
 -   Запись в блоге [Режимы обработки для источника CDC](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)на сайте mattmasson.com.  
-  
   

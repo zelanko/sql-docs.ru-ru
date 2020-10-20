@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df2b88cc69b8f77a43ad6d1a26bfa706fed12eaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3265871cc1ddf221b3fb4090936d146f555dd3b5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393510"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194296"
 ---
 # <a name="foreach-loop-container"></a>Контейнер «цикл по каждому элементу»
 
@@ -115,9 +115,9 @@ ms.locfileid: "88393510"
   
 2.  Добавьте в контейнер «цикл по каждому элементу» задачи и контейнеры. Дополнительные сведения см. в разделе [Добавление задачи или контейнера в поток управления или удаление их из него](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-3.  Соедините задачи и контейнеры в контейнере «цикл по каждому элементу» с помощью объектов управления очередностью. Дополнительные сведения см. в разделе [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75).  
+3.  Соедините задачи и контейнеры в контейнере «цикл по каждому элементу» с помощью объектов управления очередностью. Дополнительные сведения см. в разделе [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](./precedence-constraints.md).  
   
-4.  Задайте параметры контейнера «цикл по каждому элементу». Дополнительные сведения см. в разделе [Настройка контейнера «цикл по каждому элементу»](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+4.  Задайте параметры контейнера «цикл по каждому элементу». Дополнительные сведения см. в разделе [Настройка контейнера «цикл по каждому элементу»]().  
 
 ## <a name="configure-a-foreach-loop-container"></a>Настройка контейнера "цикл по каждому элементу"
 Эта процедура описывает принципы настройки контейнера «цикл по каждому элементу», включая выражения свойств на уровнях перечислителя и контейнера.  
@@ -185,7 +185,7 @@ ms.locfileid: "88393510"
 ## <a name="general-page---foreach-loop-editor"></a>Страница "Общие" — редактор циклов по каждому элементу
 Страница **Общие** диалогового окна **Редактор циклов по каждому элементу** позволяет дать имя и описать контейнер «цикл по каждому элементу», использующий указанный перечислитель для повторения рабочего процесса для каждого элемента в коллекции.  
   
- Дополнительные сведения о контейнере "цикл по каждому элементу" и его настройке см. в разделах [Контейнер "цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md) и [Настройка контейнера "цикл по каждому элементу"](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Дополнительные сведения о контейнере "цикл по каждому элементу" и его настройке см. в разделах [Контейнер "цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md) и [Настройка контейнера "цикл по каждому элементу"]().  
   
 ### <a name="options"></a>Параметры  
  **имя**;  
@@ -200,7 +200,7 @@ ms.locfileid: "88393510"
 ## <a name="collection-page---foreach-loop-editor"></a>Страница "Коллекция" — редактор циклов по каждому элементу
  С помощью страницы **Коллекция** в диалоговом окне **Редактор циклов по каждому элементу** можно указать тип перечислителя и настроить его.  
   
- Дополнительные сведения о контейнере "цикл по каждому элементу" и его настройке см. в разделах [Контейнер "цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md) и [Настройка контейнера "цикл по каждому элементу"](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Дополнительные сведения о контейнере "цикл по каждому элементу" и его настройке см. в разделах [Контейнер "цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md) и [Настройка контейнера "цикл по каждому элементу"]().  
   
 ### <a name="static-options"></a>Статические параметры  
  **Перечислитель**  
@@ -289,7 +289,7 @@ ms.locfileid: "88393510"
  **Столбцы**  
  Нажмите, чтобы настроить тип данных столбца в элементе.  
   
- **См. также:** [Справочник по пользовательскому интерфейсу диалогового окна "Столбцы For Each Item"](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **См. также:** [Справочник по пользовательскому интерфейсу диалогового окна "Столбцы For Each Item"]()  
   
 #### <a name="enumerator--foreach-ado-enumerator"></a>Перечислитель = перечислитель ADO по каждой строке  
  Перечислитель ADO по каждой строке можно использовать для перечисления строк или таблиц в объекте ADO или ADO.NET, который хранится в переменной. Например: если цикл по каждому элементу включает задачу «Скрипт», которая записывает набор данных в переменную, можно использовать перечислитель ADO по каждой строке для перечисления строк в наборе данных. Если переменная содержит набор данных ADO.NET, то перечислитель может быть настроен на перечисление строк в нескольких таблицах или на перечисление самих таблиц.  
@@ -300,7 +300,7 @@ ms.locfileid: "88393510"
 > [!NOTE]  
 >  Переменная должна иметь тип данных Object; в противном случае возникнет ошибка.  
   
- **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
   
  **Строки в первой таблице**  
  Выберите для перечисления только строк в первой таблице.  
@@ -320,7 +320,7 @@ ms.locfileid: "88393510"
 > [!IMPORTANT]  
 >  Диспетчер соединений ADO.NET должен использовать поставщика данных .NET для OLE DB. При соединении с SQL Server рекомендуемым поставщиком данных является собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , находящийся в области **Поставщики .NET для OleDb** диалогового окна **Диспетчер соединений** .  
   
- **См. также:** подробные сведения о [диспетчере подключений ADO](../../integration-services/connection-manager/ado-connection-manager.md) и о [настройке диспетчера подключений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md).  
+ **См. также:** подробные сведения о [диспетчере подключений ADO](../../integration-services/connection-manager/ado-connection-manager.md) и о [настройке диспетчера подключений ADO.NET](../connection-manager/ado-net-connection-manager.md).  
   
  **Схема**  
  Выберите схему для перечисления.  
@@ -328,7 +328,7 @@ ms.locfileid: "88393510"
  **Задать ограничения**  
  Задайте ограничения, которые необходимо применить к указанной схеме.  
   
- **См. также:** [Диалоговое окно "Ограничения схемы"](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **См. также:** [Диалоговое окно "Ограничения схемы"]()  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>Перечислитель = перечислитель по объекту из переменной  
  Перечислитель по объекту из переменной можно использовать для перечисления перечисляемых объектов в указанной переменной. Например: если цикл по каждому элементу включает задачу «Выполнение SQL», которая запускает запрос и сохраняет результаты в переменной, то можно использовать перечислитель по объекту из переменной для перечисления результатов запросов.  
@@ -336,14 +336,14 @@ ms.locfileid: "88393510"
  **Переменная**  
  Выберите переменную в списке или щелкните \<**New variable...**> для создания переменной.  
   
- **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>Перечислитель = перечислитель по набору узлов  
  Перечислитель по набору узлов можно использовать для перечисления набора XML-узлов, которые являются результатом применения выражения XPath к XML-файлу. Например: если цикл по каждому элементу включает задачу «Скрипт», то перечислитель по набору узлов можно использовать для передачи от XML-файла к задаче «Скрипт» значения, которое удовлетворяет критерию выражения XPath.  
   
  Выражение XPath, применяемое к XML-файлу, является внешней операцией XPath, сохраненной в свойстве OuterXPathString. Если тип перечисления XPath установлен в значение **ElementCollection**, то перечислитель Foreach NodeList может применять внутреннее выражение XPath, сохраненное в свойстве InnerXPathString, к коллекции элементов.  
   
- Дополнительные сведения по работе с XML-документами и данными см. в разделе «[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)» в библиотеке MSDN.  
+ Дополнительные сведения по работе с XML-документами и данными см. в разделе «[Employing XML in the .NET Framework](/previous-versions/aa720019(v=vs.71))» в библиотеке MSDN.  
   
  **DocumentSourceType**  
  Выберите тип источника XML-документа. Параметры этого свойства приведены в следующей таблице.  
@@ -359,11 +359,11 @@ ms.locfileid: "88393510"
   
  Если **DocumentSourceType** имеет значение **Соединение с файлом**, выберите диспетчер подключения файлов или щелкните \<**New connection...**>, чтобы создать его.  
   
- **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../connection-manager/file-connection-manager.md).  
   
  Если **DocumentSourceType** имеет значение **Переменная**, выберите существующую переменную или щелкните \<**New variable...**>, чтобы создать ее.  
   
- **См. также:** подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
   
  **EnumerationType**  
  Выберите тип перечисления из списка. Параметры этого свойства приведены в следующей таблице.  
@@ -389,11 +389,11 @@ ms.locfileid: "88393510"
   
  Если **OuterXPathStringSourceType** имеет значение **Соединение с файлом**, выберите диспетчер подключения файлов или щелкните \<**New connection...**>, чтобы создать его.  
   
- **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../connection-manager/file-connection-manager.md).  
   
  Если **OuterXPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или щелкните \<**New variable...**>, чтобы создать ее.  
   
- **См. также:** подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
   
  **InnerElementType**  
  Если **EnumerationType** имеет значение **ElementCollection**, выберите из списка тип внутреннего элемента.  
@@ -412,11 +412,11 @@ ms.locfileid: "88393510"
   
  Если **InnerXPathStringSourceType** имеет значение **Соединение с файлом**, выберите диспетчер подключения файлов или щелкните \<**New connection...**>, чтобы создать его.  
   
- **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../connection-manager/file-connection-manager.md).  
   
  Если **InnerXPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или щелкните \<**New variable...**>, чтобы создать ее.  
   
- **См. также:** подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Перечислитель = перечислитель по объектам SMO  
  Перечислитель по объектам SMO используется для перечисления объектов SMO. Например: если цикл по каждому элементу включает задачу "Выполнение SQL", то перечислитель по объектам SMO можно использовать для перечисления таблиц в базе данных **AdventureWorks** и выполнения запросов, которые подсчитывают количество строк в каждой таблице.  
@@ -424,7 +424,7 @@ ms.locfileid: "88393510"
  **Соединение**  
  Выберите существующий диспетчер подключений ADO.NET или создайте его, щелкнув пункт \<**New connection...**>.  
   
- См. также подробные сведения о [диспетчере подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md) и о [настройке диспетчера подключений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md).  
+ См. также подробные сведения о [диспетчере подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md) и о [настройке диспетчера подключений ADO.NET](../connection-manager/ado-net-connection-manager.md).  
   
  **Перечислить**  
  Укажите объект SMO для перечисления.  
@@ -432,7 +432,7 @@ ms.locfileid: "88393510"
  **Обзор**  
  Выберите перечисление SMO.  
   
- **См. также:** [Диалоговое окно "Выбор перечисления SMO"](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
+ **См. также:** [Диалоговое окно "Выбор перечисления SMO"]()  
   
 ####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> Перечислитель — перечислитель с циклом по каждому файлу HDFS  
  **Перечислитель с циклом по каждому файлу HDFS** позволяет пакету служб SSIS перечислить файлы HDFS в указанном расположении HDFS. Имя каждого файла HDFS может храниться в переменной и использоваться в задачах внутри контейнера "цикла по каждому элементу".  
@@ -512,20 +512,20 @@ ms.locfileid: "88393510"
 
 ***Примечания о настройке разрешений для субъекта-службы***
 
-Разрешение Data Lake Storage 2-го поколения определяются как [управлением доступом на основе ролей (RBAC)](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal), так и [списками управления доступом (ACL)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
-Обратите внимание на то, что списки ACL настраиваются с помощью идентификатора объекта (OID) субъекта-службы для регистрации приложения, как описано [здесь](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Разрешение Data Lake Storage 2-го поколения определяются как [управлением доступом на основе ролей (RBAC)](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal), так и [списками управления доступом (ACL)](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Обратите внимание на то, что списки ACL настраиваются с помощью идентификатора объекта (OID) субъекта-службы для регистрации приложения, как описано [здесь](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
 Для конфигурации RBAC, напротив, используется идентификатор приложения (клиента).
 Когда субъекту безопасности предоставляются разрешения на данные RBAC посредством встроенной или пользовательской роли, эти разрешения сначала оцениваются при авторизации запроса.
 Если запрошенная операция разрешена в соответствии с назначенными субъекту безопасности ролями RBAC, авторизация происходит немедленно и дополнительные проверки ACL не проводятся.
 Если же субъекту безопасности роль RBAC не назначена или если запрошенная операция не соответствует предоставленному разрешению, проводятся проверки ACL, цель которых — определить, разрешено ли субъекту безопасности выполнять запрошенную операцию.
 Чтобы перечислитель работал, необходимо предоставить по крайней мере разрешение на **выполнение** начиная с корневой файловой системы, а также разрешение на **чтение** целевой папки.
 Можно также предоставить разрешение не ниже **чтения данных из хранилища BLOB-объектов** с помощью RBAC.
-Подробные сведения см. в [этой статье](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
+Подробные сведения см. в [этой статье](/azure/storage/blobs/data-lake-storage-access-control).
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Страница "Сопоставления переменных" — редактор циклов по каждому элементу
  Страница **Сопоставления переменных** диалогового окна **Редактор циклов по каждому элементу** используется для сопоставления переменных со значениями коллекции. Значение переменной обновляется значениями из коллекции при каждом повторе цикла.  
   
- Сведения об использовании контейнера "цикл по каждому элементу" в пакете служб Integration Services см. в разделе [Контейнер "цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md). Сведения о его настройке см. в разделе [Настройка контейнера "цикл по каждому элементу"](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Сведения об использовании контейнера "цикл по каждому элементу" в пакете служб Integration Services см. в разделе [Контейнер "цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md). Сведения о его настройке см. в разделе [Настройка контейнера "цикл по каждому элементу"]().  
   
  Учебник по службам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] "Создание простого учебного пакета ETL" содержит занятие, посвященное добавлению и настройке "цикла по каждому элементу".  
   
@@ -536,7 +536,7 @@ ms.locfileid: "88393510"
 > [!NOTE]  
 >  После установки сопоставления переменной новая строка автоматически добавится к списку **Переменная**.  
   
- **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
   
  **Index**  
  При использовании перечислителя по каждому элементу задайте индекс столбца в значении коллекции, чтобы установить сопоставление переменных. Для других типов перечислителей индекс доступен только для чтения.  
@@ -557,7 +557,7 @@ ms.locfileid: "88393510"
  **Переменная**  
  Используйте переменную для определения ограничений. Выберите переменную из списка или нажмите кнопку **Создать переменную...** , чтобы создать переменную.  
   
- **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
   
  **Текст**  
  Введите текст для определения ограничений.  
@@ -610,5 +610,4 @@ ms.locfileid: "88393510"
 ## <a name="see-also"></a>См. также:  
  [Поток управления](../../integration-services/control-flow/control-flow.md)   
  [Контейнеры служб Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
-  
   

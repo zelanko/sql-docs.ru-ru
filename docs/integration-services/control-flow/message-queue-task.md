@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e5eab167ddaa471ac0bddbd4b048b38e040b62e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484607"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194289"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -46,7 +46,7 @@ ms.locfileid: "88484607"
   
  При получении или отправке сообщений задача "Очередь сообщений" использует один из следующих типов сообщений: файл данных, строка, строковое сообщение в переменную или переменная. Тип сообщений строковое сообщение в переменную может использоваться только при получении сообщений.  
   
- Задача использует диспетчер соединений MSMQ для подключения к очереди сообщений. Дополнительные сведения см. в статье [Диспетчер соединений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md). Дополнительные сведения о службе очередей сообщений см. в [библиотеке MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ Задача использует диспетчер соединений MSMQ для подключения к очереди сообщений. Дополнительные сведения см. в статье [Диспетчер соединений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md). Дополнительные сведения о службе очередей сообщений см. в [библиотеке MSDN](../../sql-server/index.yml).  
   
  Задача «Очередь сообщений» требует установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Некоторые компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выбранные для установки на странице **Компоненты для установки** и **Выбор компонентов** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , производят установку не всех компонентов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Эти компоненты полезны для определенных задач, но функциональные возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будут ограничены. Например, параметр среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] устанавливает компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , необходимые для разработки пакета, но службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не будут установлены, следовательно, задача «Очередь сообщений» не будет работать. Для обеспечения полной установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]необходимо выбрать службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на странице **Компоненты для установки** . Дополнительные сведения об установке и запуске задачи "Очередь сообщений" см. в разделе [Установка служб Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88484607"
  Дополнительные сведения о задании этих свойств программными средствами см. в документации по классу **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** в руководстве для разработчиков.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Редактор задачи «Очередь сообщений» (страница «Общие»)
   **Страница «Общие»** диалогового окна **Редактор задачи «Очередь сообщений»** позволяет задавать имя и описывать задачу «Очередь сообщений», определять формат сообщений, а также указывать, будет ли задача отправлять или получать сообщения.  
@@ -123,7 +123,7 @@ ms.locfileid: "88484607"
  **MSMQConnection**  
  Выберите существующий диспетчер подключений MSMQ или создайте новый, щелкнув пункт \<**New connection...**>.  
   
- **См. также**: [Диспетчер FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager.md), [Редактор диспетчера FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager-editor.md).  
+ **См. также**: [Диспетчер FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager.md), [Редактор диспетчера FTP-соединений](../connection-manager/msmq-connection-manager.md).  
   
  **Сообщение**  
  Указывает, будет ли задача «Очередь сообщений» отправлять или получать сообщения. При выборе режима **Отправить сообщение**на левой панели диалогового окна появляется страница «Отправка», при выборе режима **Получить сообщение**появляется страница «Получение». По умолчанию, устанавливается режим **Отправить сообщение**.  
@@ -233,7 +233,7 @@ ms.locfileid: "88484607"
  **Переменная**  
  Введите имя переменной либо выберите пункт \<**New variable...**> и затем настройте новую переменную.  
   
- **См. также:** [Добавить переменную](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Добавить переменную](../integration-services-ssis-variables.md)  
   
 #### <a name="filter-dynamic-options"></a>Динамические параметры фильтра  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88484607"
  **Переменная**  
  Введите имя переменной, в которой должно храниться полученное сообщение, либо выберите пункт \<**New variable...**> и затем настройте новую переменную.  
   
- **См. также:** [Добавить переменную](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Добавить переменную](../integration-services-ssis-variables.md)  
   
 ## <a name="select-variables"></a>Выбор переменных
   Используйте диалоговое окно **Выбор переменных** для указания переменных, которые следует использовать при выполнении операции отправки сообщения в задаче «Очередь сообщений». Список **Доступные переменные** включает системные и пользовательские переменные, находящиеся в области действия задачи "Очередь сообщений" или ее родительского контейнера. Задача использует переменные, перечисленные в списке **Выбранные переменные** .  
@@ -299,9 +299,8 @@ ms.locfileid: "88484607"
  **Создать переменную**  
  Создать новую переменную.  
   
- **См. также:** [Добавить переменную](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Добавить переменную](../integration-services-ssis-variables.md)  
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
-  
   

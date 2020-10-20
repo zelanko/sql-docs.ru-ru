@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0c60e9fb687ffc4cc17626b75462c29a91cdb075
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 895940f1a0f53c010e7088d02cf12cbfc0a0ff63
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115942"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037737"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -532,7 +532,7 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > База данных SQL Azure поддерживает только чтение из хранилища BLOB-объектов Azure.
 
-Другой способ получить доступ к учетной записи хранения — с помощью [управляемого удостоверения](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). Для этого выполните [шаги с 1 по 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps), чтобы настроить базу данных SQL для доступа к хранилищу через управляемое удостоверение, после чего можно реализовать пример кода, как показано ниже
+Другой способ получить доступ к учетной записи хранения — с помощью [управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview). Для этого выполните [шаги с 1 по 3](/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json#steps), чтобы настроить базу данных SQL для доступа к хранилищу через управляемое удостоверение, после чего можно реализовать пример кода, как показано ниже
 ```sql
 --> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';

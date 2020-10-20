@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 064b6294a33b87e41a9439e2759be2461131e388
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: 8f872916b7b93a1aab3447bad6579dd672c915e1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89424424"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194804"
 ---
 # <a name="odata-source"></a>Источник OData
 
@@ -42,7 +42,7 @@ ms.locfileid: "89424424"
 
 Источник OData поддерживает следующие источники данных:
 -   Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online.
--   Списки SharePoint. Увидеть все списки на сервере SharePoint можно по следующему URL-адресу: `https://<server>/_vti_bin/ListData.svc`. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
+-   Списки SharePoint. Увидеть все списки на сервере SharePoint можно по следующему URL-адресу: `https://<server>/_vti_bin/ListData.svc`. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)).
 
 ## <a name="supported-data-types"></a>Поддерживаемые типы данных
 
@@ -159,5 +159,4 @@ ms.locfileid: "89424424"
   
 ## <a name="see-also"></a>См. также:  
  [Диспетчер соединений OData](../../integration-services/connection-manager/odata-connection-manager.md)  
-  
   

@@ -17,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: c86a5f51e1d78b15a85a2063530bfb9ac4183a7d
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 95ffd6eb4e200139f653d3c051b6106c5f472497
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480625"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193916"
 ---
 # <a name="upgrade-integration-services"></a>Обновление служб Integration Services
 
@@ -51,14 +51,14 @@ ms.locfileid: "89480625"
 > -   Задача «Выполнение пакета служб DTS 2000»  
 > -   Сканирование пакетов DTS, выполняемое помощником по обновлению.  
 > 
->  Дополнительные сведения о других нерекомендуемых функциях см. в разделе [Нерекомендуемые возможности служб Integration Services в SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
+>  Дополнительные сведения о других нерекомендуемых функциях см. в разделе [Нерекомендуемые возможности служб Integration Services в SQL Server 2016](/previous-versions/sql/sql-server-2016/bb500429(v=sql.130)).  
   
 ## <a name="upgrading-integration-services"></a>обновление служб Integration Services  
  Обновление можно выполнить одним из следующих способов.  
   
 -   Запустите программу установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выберите параметр **Обновление с SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
--   Из командной строки запустите программу установки **setup.exe** , указав параметр **/ACTION=upgrade** . Дополнительные сведения см. в подразделе "Скрипты установки для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]" раздела [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+-   Из командной строки запустите программу установки **setup.exe** , указав параметр **/ACTION=upgrade** . Дополнительные сведения см. в подразделе "Скрипты установки для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]" раздела [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
  Обновление не следует применять для выполнения следующих действий.  
   
@@ -151,5 +151,4 @@ ms.locfileid: "89480625"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись в блоге [Использование существующих пользовательских расширений служб SSIS и приложений в Denali](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951)на blogs.msdn.com.  
-  
   

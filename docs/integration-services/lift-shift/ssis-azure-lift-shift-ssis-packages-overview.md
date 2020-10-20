@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 8b3e01fbded713f59832c30eb8cd9d8149e5b469
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 7a962b29d6af2caf48f32eec5bc7e77bef3b126f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864601"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194062"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Перенос рабочих нагрузок SQL Server Integration Services в облако
 
@@ -33,7 +33,7 @@ ms.locfileid: "87864601"
 ## <a name="architecture-of-ssis-on-azure"></a>Архитектура MSSQL Integration Services в Azure
 В приведенной ниже таблице представлены различия между локальными службами SSIS и службами SSIS в Azure.
 
-Главное различие заключается в разделении хранилища и среды выполнения. В фабрике данных Azure размещается подсистема среды выполнения для пакетов SSIS в Azure. Подсистема среды выполнения называется Azure-SSIS Integration Runtime (Azure-SSIS IR). Дополнительные сведения: [Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
+Главное различие заключается в разделении хранилища и среды выполнения. В фабрике данных Azure размещается подсистема среды выполнения для пакетов SSIS в Azure. Подсистема среды выполнения называется Azure-SSIS Integration Runtime (Azure-SSIS IR). Дополнительные сведения: [Azure-SSIS Integration Runtime](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
 
 | Расположение | Память | Параметры выполнения | Масштабируемость |
 |---|---|---|---|
@@ -45,9 +45,9 @@ ms.locfileid: "87864601"
 
 **Подготовка**. Перед тем как развертывать и выполнять пакеты SSIS в Azure, необходимо подготовить каталог SSIS (SSISDB) и среду Azure-SSIS Integration Runtime.
 
--   Чтобы подготовить SSIS в Azure на портале Azure, выполните инструкции из этой статьи: [Подготовка Azure-SSIS Integration Runtime в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+-   Чтобы подготовить SSIS в Azure на портале Azure, выполните инструкции из этой статьи: [Подготовка Azure-SSIS Integration Runtime в Фабрике данных Azure](/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
 
--   Чтобы подготовить SSIS в Azure с помощью PowerShell, выполните инструкции из этой статьи: [Подготовка Azure-SSIS Integration Runtime в Фабрике данных Azure с помощью PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
+-   Чтобы подготовить SSIS в Azure с помощью PowerShell, выполните инструкции из этой статьи: [Подготовка Azure-SSIS Integration Runtime в Фабрике данных Azure с помощью PowerShell](/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
 
 Azure-SSIS IR достаточно подготовить только один раз. После этого можно использовать знакомые средства, такие как SQL Server Data Tools (SSDT) и SQL Server Management Studio (SSMS) для развертывания, настройки, запуска, мониторинга, планирования пакетов и управления ими.
 
@@ -59,9 +59,9 @@ Azure-SSIS IR достаточно подготовить только один 
 -   существующий экземпляр базы данных SQL Azure для размещения базы данных каталога SSIS (SSISDB) и уровень обслуживания базы данных;
 -   максимальное число параллельных выполнений в каждом узле.
 
-**Повышение производительности**. Дополнительные сведения см. в статье [Настройка высокого уровня производительности в Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
+**Повышение производительности**. Дополнительные сведения см. в статье [Настройка высокого уровня производительности в Azure-SSIS Integration Runtime](/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
 
-**Сокращение затрат**. Чтобы снизить затраты, запускайте среду Integration Services Azure — SSI только тогда, когда она нужна. См. дополнительные сведения о [запуске и остановке среды выполнения интеграции Azure – SSI по расписанию](https://docs.microsoft.com/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime).
+**Сокращение затрат**. Чтобы снизить затраты, запускайте среду Integration Services Azure — SSI только тогда, когда она нужна. См. дополнительные сведения о [запуске и остановке среды выполнения интеграции Azure – SSI по расписанию](/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime).
 
 ## <a name="design-packages"></a>Проектирование пакетов
 
@@ -69,9 +69,9 @@ Azure-SSIS IR достаточно подготовить только один 
 
 ### <a name="connect-to-data-sources"></a>Подключение к источникам данных
 
-Чтобы подключиться к локальным источникам данных из облака с использованием **проверки подлинности Windows**, см. статьей [Подключение к источникам данных и общим папкам с помощью проверки подлинности Windows в пакетах SQL Server Integration Services в Azure](ssis-azure-connect-with-windows-auth.md).
+Чтобы подключиться к локальным источникам данных из облака с использованием **проверки подлинности Windows**, см. статьей [Подключение к источникам данных и общим папкам с помощью проверки подлинности Windows в пакетах SQL Server Integration Services в Azure](/azure/data-factory/ssis-azure-connect-with-windows-auth).
 
-Сведения о подключении к файлам и общим папкам см. в статье [Открытие и сохранение файлов в локальной среде и в Azure с помощью пакетов SSI, развернутых в Azure](ssis-azure-files-file-shares.md).
+Сведения о подключении к файлам и общим папкам см. в статье [Открытие и сохранение файлов в локальной среде и в Azure с помощью пакетов SSI, развернутых в Azure](/azure/data-factory/ssis-azure-files-file-shares).
 
 ### <a name="available-ssis-components"></a>Доступные компоненты SSIS
 
@@ -79,15 +79,15 @@ Azure-SSIS IR достаточно подготовить только один 
 
 Можно также установить дополнительные компоненты. Например, можно установить драйвер, который не устанавливается по умолчанию. Дополнительные сведения см. в статье [Customize setup for the Azure-SSIS integration runtime](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) (Настройка установки для среды выполнения интеграции Azure — SSIS).
 
-Владельцам лицензия Enterprise Edition доступны дополнительные компоненты. Дополнительные сведения см. в статье [Подготовка выпуска Enterprise Edition для среды выполнения интеграции Azure Integration Services](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition).
+Владельцам лицензия Enterprise Edition доступны дополнительные компоненты. Дополнительные сведения см. в статье [Подготовка выпуска Enterprise Edition для среды выполнения интеграции Azure Integration Services](/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition).
 
-Если вы независимый поставщик программного обеспечения, вы можете обновить установку лицензированных компонентов, чтобы сделать их доступными в Azure. Дополнительные сведения: [Установка платных или лицензионных пользовательских компонентов для среды выполнения интеграции Azure – SSI](https://docs.microsoft.com/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components).
+Если вы независимый поставщик программного обеспечения, вы можете обновить установку лицензированных компонентов, чтобы сделать их доступными в Azure. Дополнительные сведения: [Установка платных или лицензионных пользовательских компонентов для среды выполнения интеграции Azure – SSI](/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components).
 
 ### <a name="transaction-support"></a>Поддержка транзакций
 
-При использовании локальных виртуальных машин SQL Server и виртуальных машин Azure вы можете применять транзакции из координатора распределенных транзакций (Майкрософт) — MSDTC. Чтобы настроить MSDTC на каждом узле Azure-SSIS Integration Runtime, используйте функцию пользовательской настройки. Дополнительные сведения см. в разделе [Выборочная установка среды выполнения интеграции Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+При использовании локальных виртуальных машин SQL Server и виртуальных машин Azure вы можете применять транзакции из координатора распределенных транзакций (Майкрософт) — MSDTC. Чтобы настроить MSDTC на каждом узле Azure-SSIS Integration Runtime, используйте функцию пользовательской настройки. Дополнительные сведения см. в разделе [Выборочная установка среды выполнения интеграции Azure-SSIS](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
-При использовании базы данных SQL Azure вы можете применять только эластичные транзакции. Дополнительные сведения см. в статье [Распределенные транзакции по облачным базам данных](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview).
+При использовании базы данных SQL Azure вы можете применять только эластичные транзакции. Дополнительные сведения см. в статье [Распределенные транзакции по облачным базам данных](/azure/sql-database/sql-database-elastic-transactions-overview).
 
 ## <a name="deploy-and-run-packages"></a>Развертывание и запуск пакетов
 
@@ -127,7 +127,7 @@ Azure-SSIS IR достаточно подготовить только один 
 
 ### <a name="run-packages-in-an-azure-data-factory-pipeline"></a>Выполнение пакетов в конвейере фабрики данных Azure
 
-Чтобы выполнить пакет MSSQL Integration Services в конвейере Фабрики данных Azure, используйте действие "Выполнение пакета служб SSI". Дополнительные сведения см. в статье [Выполнение пакета служб SSIS с помощью действия "Выполнение пакета служб SSIS" в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+Чтобы выполнить пакет MSSQL Integration Services в конвейере Фабрики данных Azure, используйте действие "Выполнение пакета служб SSI". Дополнительные сведения см. в статье [Выполнение пакета служб SSIS с помощью действия "Выполнение пакета служб SSIS" в фабрике данных Azure](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
 Если вы запускаете пакет в конвейере фабрики данных с помощью действия "Выполнение пакета служб SSI", вы можете передать значения в пакет во время выполнения. Чтобы передать одно или несколько значений во время выполнения, создайте среды выполнения служб MSSQL Integration Services в SSISDB с помощью SQL Server Management Studio (SSM). В каждой среде создайте переменные и присвойте значения, которые соответствуют параметрам для проектов или пакетов. Настройте пакеты служб SSIS в среде SSMS, чтобы связать эти переменные среды с параметрами проекта или пакета. Если пакеты выполняются в конвейере, переключайтесь между средами, указывая пути к разным средам на вкладке "Параметры" пользовательского интерфейса действия "Выполнение пакета служб SSI". Дополнительные сведения о средах SSI см. в статье [Создание и сопоставление серверной среды](../packages/deploy-integration-services-ssis-projects-and-packages.md#create-and-map-a-server-environment).
 
@@ -137,7 +137,7 @@ Azure-SSIS IR достаточно подготовить только один 
 -   Щелкните базу данных **SSISDB** правой кнопкой мыши и выберите пункт **Активные операции**, чтобы открыть диалоговое окно **Активные операции**.
 -   Выберите пакет в обозревателе объектов, щелкните его правой кнопкой мыши, выберите пункт **Отчеты**, затем — **Стандартные отчеты** и **Все выполнения**.
 
-Сведения о мониторинге Azure-SSIS Integration Runtime: [Мониторинг Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+Сведения о мониторинге Azure-SSIS Integration Runtime: [Мониторинг Azure-SSIS Integration Runtime](/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ## <a name="schedule-packages"></a>Планирование выполнения пакетов
 Запланировать запуск пакетов, развернутых в Azure, можно разными средствами. Подробнее см. в статье [Планирование выполнения пакетов служб SQL Server Integration Services (SSI), развернутых в Azure](ssis-azure-schedule-packages.md).
@@ -145,4 +145,4 @@ Azure-SSIS IR достаточно подготовить только один 
 ## <a name="next-steps"></a>Дальнейшие действия
 Чтобы приступить к работе с рабочими нагрузками служб SSIS в Azure, ознакомьтесь со следующими статьями:
 -   [Руководство. Развертывание и выполнение пакета служб SQL Server Integration Services (SSI) в Azure](ssis-azure-deploy-run-monitor-tutorial.md)
--   [Подготовка Integration Runtime Azure – SSI в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [Подготовка Integration Runtime Azure – SSI в Фабрике данных Azure](/azure/data-factory/tutorial-deploy-ssis-packages-azure)

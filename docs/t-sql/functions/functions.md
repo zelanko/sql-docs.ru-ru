@@ -21,12 +21,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e15d2d46f6bf1d7c922b11a210825cf78509ebe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889e473669093646ae7c976025ed4032c17beeff
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468056"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038355"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Функции, используемых в базах данных SQL
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88468056"
 |[Строковые функции](string-functions-transact-sql.md)|Выполняют операции со строковым (**char** или **varchar**) входным значением и возвращают строковое или числовое значение.|  
 |[Системные функции](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Выполняют операции над значениями, объектами и параметрами экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и возвращают сведения о них.|  
 |[Системные статистические функции](system-statistical-functions-transact-sql.md)|Возвращают статистические сведения о системе.|  
-|[Функции обработки текста и изображений](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Выполняют операции над текстовыми или графическими исходными значениями или столбцами и возвращают сведения о значении.|  
+|[Функции обработки текста и изображений](./text-and-image-functions-textptr-transact-sql.md)|Выполняют операции над текстовыми или графическими исходными значениями или столбцами и возвращают сведения о значении.|  
   
 ## <a name="function-determinism"></a>Детерминизм функций  
  Различаются детерминированные и недетерминированные встроенные функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция является детерминированной, если для определенных входных значений она каждый раз возвращает один и тот же результат. Функция является недетерминированной, если она возвращает различные результаты даже для одних и тех же исходных значений. Дополнительные сведения см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -83,5 +83,4 @@ ms.locfileid: "88468056"
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   
  [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [Использование хранимых процедур (MDX)](../../mdx/using-stored-procedures-mdx.md)  
-  
   

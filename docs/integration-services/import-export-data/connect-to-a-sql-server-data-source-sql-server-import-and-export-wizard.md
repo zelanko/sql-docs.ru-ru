@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87d7a1a9132d4a41bdc73100b4f86d51de5c6d08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5238049681cfb8ec71ea27a444a4e41bf7c64703
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495587"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196409"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных SQL Server (мастер импорта и экспорта SQL Server)
 
@@ -68,7 +68,7 @@ ms.locfileid: "88495587"
 Драйверы ODBC не приводятся в раскрывающемся списке источников данных. Чтобы подключиться с помощью драйвера ODBC, сначала выберите **поставщик данных .NET Framework для ODBC** в качестве источника данных. Этот поставщик служит оболочкой для драйвера ODBC.
 
 > [!TIP]
-> **Получите последнюю версию драйвера**. Скачайте [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql).
+> **Получите последнюю версию драйвера**. Скачайте [Microsoft ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).
 
 Ниже показан экран, который появляется сразу после выбора поставщика данных .NET Framework для ODBC.
 
@@ -120,8 +120,8 @@ ms.locfileid: "88495587"
 
 > [!IMPORTANT]
 > Поставщик OLE DB для SQL Server (Майкрософт) и клиент SQL Server Native Client не поддерживаются в версиях SQL Server после SQL Server 2012. Используйте вместо этого драйвер ODBC. Дополнительные сведения о переходе на драйвер ODBC см. в следующих записях блога:
->   -   [Майкрософт переводит ODBC на собственный доступ к реляционным данным](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)
->   -   [Общие сведения о драйверах Microsoft ODBC Driver for SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/)
+>   -   [Майкрософт переводит ODBC на собственный доступ к реляционным данным](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access)
+>   -   [Общие сведения о драйверах Microsoft ODBC Driver for SQL Server](/archive/blogs/sqlnativeclient/introducing-the-new-microsoft-odbc-drivers-for-sql-server)
 
 ## <a name="other-data-providers-and-more-info"></a>Другие поставщики данных и дополнительные сведения
 Сведения о подключении к SQL Server с помощью поставщика данных, который не указан в этой статье, см. на странице [Строки подключения к SQL Server](https://www.connectionstrings.com/sql-server/). Этот сторонний сайт также содержит дополнительные сведения о поставщиках данных и параметрах подключения, описанных на этой странице.
@@ -129,4 +129,3 @@ ms.locfileid: "88495587"
 ## <a name="see-also"></a>См. также раздел
 [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
