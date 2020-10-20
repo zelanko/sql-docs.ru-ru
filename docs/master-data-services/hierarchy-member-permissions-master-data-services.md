@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 32b74832ff779ed01cb6821512187cd79d7af896
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e80ec1e7ffaa4f3bbce87363de109aa85132f74d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480676"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194073"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Разрешения на элементы иерархии (службы Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "89480676"
 |----------------|-----------------|  
 |**Чтение**|Элементы отображаются.<br /><br /> <br /><br /> Примечание. При назначении только разрешения **Чтение** уровню **Корневой**элементы на более низких уровнях, чем **Корневой** , будут доступны только для чтения. Однако в явных иерархиях и коллекциях пользователь может перемещать элементы на уровень **Корневой** и добавлять новые элементы к уровню **Корневой**.|  
 |**Создание**|Разрешение "Создание" недоступно в разрешении элемента иерархии.|  
-|**Update**|Элементы отображаются, и пользователь может их изменять. Пользователь также может перемещать элементы в явных иерархиях или коллекциях, к которым принадлежат элементы.|  
+|**Обновление**|Элементы отображаются, и пользователь может их изменять. Пользователь также может перемещать элементы в явных иерархиях или коллекциях, к которым принадлежат элементы.|  
 |**Удаление**|Элементы отображаются, и пользователь может их удалять.|  
 |**Запретить**|Элементы не отображаются.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "89480676"
 -   Если одному узлу иерархии назначено любое сочетание разрешений **Создание** / , чтение и удаление для**чтения**, / **Update** / **Delete** а другому узлу назначены разрешения **Deny** , доступ к членам узла будет запрещен.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись блога [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)(Улучшения безопасности) на портале msdn.com.  
+ Запись блога [Security Improvements](/archive/blogs/e7/improvements-to-autoplay)(Улучшения безопасности) на портале msdn.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Назначение разрешений элемента иерархии &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
@@ -72,5 +72,4 @@ ms.locfileid: "89480676"
  [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)   
  [Иерархии &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
  [Срочное применение разрешения для элемента (службы Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
-  
   

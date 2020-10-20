@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 85c24fa7acc66a824e47a8ce0c8139a1ae23cc61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab574af9a9074b2c541553b5d960a41e9823676e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494817"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194356"
 ---
 # <a name="odbc-data-source-administrator"></a>Администратор источников данных ODBC
 Администратор источников данных Microsoft® ODBC управляет драйверами баз данных и источниками данных. Это приложение находится в панели управления Windows в разделе " **Администрирование**". Начиная с Windows 8, значок называется **Источники данных ODBC**, а в 64-разрядных операционных системах существует 32-и 64-разрядная версия.  
   
- Для получения сведений о подробных процедурах администрирования ODBC откройте диалоговое окно [Администратор источников данных ODBC](https://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) и нажмите кнопку **Справка**.  
+ Для получения сведений о подробных процедурах администрирования ODBC откройте диалоговое окно [Администратор источников данных ODBC](/previous-versions//ms716327(v=vs.85)) и нажмите кнопку **Справка**.  
   
- Для управления драйверами и источниками данных можно использовать команды PowerShell. Дополнительные сведения об этих командах PowerShell см. в разделе [Windows Data Access Components Commands PowerShell](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ Для управления драйверами и источниками данных можно использовать команды PowerShell. Дополнительные сведения об этих командах PowerShell см. в разделе [Windows Data Access Components Commands PowerShell](/previous-versions/windows/desktop/jj134064(v=vs.85)).  
   
  Этот раздел содержит следующие подразделы.  
   

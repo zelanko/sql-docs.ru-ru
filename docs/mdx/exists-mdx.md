@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e025449634106003ea6e5d624f0d4a621ef3b93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c879d9091c692cfa7a93490b34c70ad84fa81c4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494917"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193976"
 ---
 # <a name="exists-mdx"></a>Exists (многомерные выражения)
 
 
-  Возвращает набор кортежей первого указанного набора, которые один или более раз встречаются во втором наборе. Эта функция вручную выполняет операцию автоматической проверки. Дополнительные сведения о параметре Auto EXISTS см. в разделе Основные [понятия в многомерных выражениях &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+  Возвращает набор кортежей первого указанного набора, которые один или более раз встречаются во втором наборе. Эта функция вручную выполняет операцию автоматической проверки. Дополнительные сведения о параметре Auto EXISTS см. в разделе Основные [понятия в многомерных выражениях &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
  Если указан необязательный параметр \<Measure Group Name> , функция возвращает кортежи, которые существуют с одним или несколькими кортежами из второго набора и эти кортежи со связанными строками в таблице фактов указанной группы мер.  
   
@@ -40,7 +40,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  Допустимое строковое выражение, обозначающее имя группы мер.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 1.  Строки группы мер с мерами, содержащими значения **null, применяют, если указан** аргумент MeasureGroupName. Это разница между этой формой EXISTS и непустой функцией: Если свойство NullProcessing этих мер установлено в значение preserve, это означает, что меры будут показывать значения NULL при выполнении запросов к этой части куба. Непустое значение всегда удаляет кортежи из набора, имеющего значения меры null, тогда как существует с аргументом MeasureGroupName, не будет фильтровать кортежи, имеющие связанные строки группы мер, даже если значения мер равны NULL.  
   
@@ -93,11 +93,10 @@ EXISTS(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-function-reference-mdx.md)   
  [Перекрестное &#40;&#41;многомерных выражений ](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin &#40;&#41;многомерных выражений ](../mdx/nonemptycrossjoin-mdx.md)   
  [Непустое &#40;&#41;многомерных выражений ](../mdx/nonempty-mdx.md)   
  [&#40;&#41;многомерных выражений ](../mdx/isempty-mdx.md)  
-  
   

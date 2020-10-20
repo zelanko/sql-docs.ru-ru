@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e833d8d579841a3fc15aad89612a1d25b71fd0f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ea5e8c9d70a63c4ab935083606f6d4084713e77
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494832"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194368"
 ---
 # <a name="using-member-expressions"></a>Выражения элементов
 
 
   Выражение элемента включает в себя идентификатор элемента, функцию элемента либо выражение, которое может быть преобразовано в элемент.  
   
- Идентификаторы элементов могут иметь много различных форматов. Самая простая форма идентификатора элемента состоит из имени элемента. Например:  
+ Идентификаторы элементов могут иметь много различных форматов. Самая простая форма идентификатора элемента состоит из имени элемента. Пример:  
   
 ```  
 SELECT Amount ON 0  
@@ -60,9 +60,8 @@ Dimension_Name
  Существует много функций многомерных выражений, которые возвращают элементы. Полный список см. в разделе [Справочник по функциям многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  Дополнительные сведения об именах членов и ключах элементов см. в разделах [Работа с элементами, кортежами и наборами &#40;&#41;многомерных выражений ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+>  Дополнительные сведения об именах членов и ключах элементов см. в разделах [Работа с элементами, кортежами и наборами &#40;&#41;многомерных выражений ](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>См. также:  
  [Выражения &#40;&#41;многомерных выражений ](../mdx/expressions-mdx.md)  
-  
   

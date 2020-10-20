@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc5169c81b53f45ca036b064b47d370f21ec2e32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c307172d7bf8b258cbd56b4ef4abfe6704750358
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885926"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192364"
 ---
 # <a name="getting-started-with-clr-integration"></a>Приступая к работе с интеграцией со средой CLR
 
@@ -90,7 +90,7 @@ End Class
   
 ```  
   
-Эта простая программа содержит единственный статический метод общего класса. Этот метод использует два новых класса, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** и **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, для создания управляемых объектов базы данных для вывода простого текстового сообщения. Метод также назначает строку "Hello World!" в качестве значения параметра out. Этот метод можно объявить как хранимую процедуру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а затем выполнить так же, как и любую хранимую процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+Эта простая программа содержит единственный статический метод общего класса. Этот метод использует два новых класса, **[SqlContext](/dotnet/api/microsoft.sqlserver.server.sqlcontext)** и **[SqlPipe](/dotnet/api/microsoft.sqlserver.server.sqlpipe)**, для создания управляемых объектов базы данных для вывода простого текстового сообщения. Метод также назначает строку "Hello World!" в качестве значения параметра out. Этот метод можно объявить как хранимую процедуру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а затем выполнить так же, как и любую хранимую процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 Скомпилируйте эту программу как библиотеку, загрузите ее в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и запустите ее как хранимую процедуру.  
   
@@ -175,7 +175,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
 
 Дополнительные сведения об интеграции со средой CLR в SQL Server см. в следующих статьях:
 
-- [Хранимые процедуры CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)
+- [Хранимые процедуры CLR](/dotnet/framework/data/adonet/sql/clr-stored-procedures)
 - [Внутрипроцессные расширения SQL Server для ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)
 - [Отладка объектов базы данных среды CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)
 - [Безопасность интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)

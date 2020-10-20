@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 052d533e503f5b82f506ec119684acbbfe7cdd5f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480612"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192354"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Определение данных многомерных выражений — ALTER CUBE
 
 
-  Изменяет структуру указанного куба. Обычно используется для поддержки обратной записи в измерении. Дополнительные сведения об использовании обратной записи в приложении см. в этой записи блога: [Создание приложения обратной записи с помощью Analysis Services (блог)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)  
+  Изменяет структуру указанного куба. Обычно используется для поддержки обратной записи в измерении. Дополнительные сведения об использовании обратной записи в приложении см. в этой записи блога: [Создание приложения обратной записи с помощью Analysis Services (блог)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)  
   
  Обратите внимание, что результатом параллельной обратной записи в измерении является взаимоблокировка, когда фиксация первой обратной записи блокируется из-за совмещаемой блокировки, удерживаемой второй обратной записью. В этой ситуации не выдается никакого сообщения об ошибке, при этом продолжение ни одной из операций невозможно. Впоследствии истекает время ожидания обеих операций и выполняется их откат.  
   
@@ -166,5 +166,4 @@ CELL CALCULATION Calculation_Name
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823767"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195818"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
 
@@ -110,12 +110,12 @@ ms.locfileid: "87823767"
   
  Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью программы установки см. в разделе [Установка SQL Server 2016 с помощью мастера установки (программа установки)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
- Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью командной строки см. в разделе [Установка SQL Server 2016 из командной строки](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). При использовании командной строки компонент [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] доступен в виде параметра компонента.  
+ Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью командной строки см. в разделе [Установка SQL Server 2016 из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). При использовании командной строки компонент [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] доступен в виде параметра компонента.  
   
  Краткое описание со ссылками на дополнительные сведения о предварительных задачах перед установкой см. в разделе [Установка служб Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
 ##  <a name="setting-up-the-database-and-website"></a><a name="SetUpWeb"></a> Настройка базы данных и веб-сайта  
- **Настройка базы данных и веб-сайта с помощью[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
+ **Настройка базы данных и веб-сайта с помощью [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
 > [!WARNING]
@@ -130,7 +130,7 @@ ms.locfileid: "87823767"
   
 3.  На странице **сервер базы данных** укажите экземпляр SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]добавляет поддержку Управляемый экземпляр SQL Server. Установите значение **SQL Server экземпляра** на узел управляемого экземпляра. Например, `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] добавляет поддержку Управляемый экземпляр SQL Server. Установите значение **SQL Server экземпляра** на узел управляемого экземпляра. Например, `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Выберите **тип проверки подлинности** и нажмите кнопку **проверить подключение** , чтобы убедиться, что можно подключиться к базе данных, используя учетные данные для выбранного типа проверки подлинности. Щелкните **Далее**.
 
@@ -204,7 +204,7 @@ ms.locfileid: "87823767"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Щелкните **Применить**. Появится сообщение о **завершении настройки**. Нажмите кнопку **ОК** в окне сообщения, чтобы запустить веб-приложение. Адрес веб-сайта — HTTPS://*Server Name* / *Web Application*/. 
+15. Нажмите кнопку **Применить**. Появится сообщение о **завершении настройки**. Нажмите кнопку **ОК** в окне сообщения, чтобы запустить веб-приложение. Адрес веб-сайта — HTTPS://*Server Name* / *Web Application*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -294,5 +294,4 @@ ms.locfileid: "87823767"
  [Веб-приложение диспетчер основных данных](../master-data-services/master-data-manager-web-application.md)   
  [Страница конфигурации базы данных &#40;диспетчер конфигурации Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Новые возможности Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

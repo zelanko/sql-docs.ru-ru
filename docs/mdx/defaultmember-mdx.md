@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6037d5089b9d0fa67599728ce35082432b0a570c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7363d650073b301eba6b29d509590e22dee5661a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456674"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196028"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (многомерные выражения)
 
@@ -47,6 +47,5 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>См. также:  
  [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-function-reference-mdx.md)   
- [Определение элемента по умолчанию](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
-  
+ [Определение элемента по умолчанию](/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e00435741516fd1ed1942506084c26192b6d47da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b55a416a14d0b837d134e7f9d8520d77cc13e375
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413100"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192334"
 ---
 # <a name="this-mdx"></a>This (многомерные выражения)
 
@@ -76,6 +76,5 @@ This
   
 ## <a name="see-also"></a>См. также:  
  [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-function-reference-mdx.md)   
- [Вычисления](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
-  
+ [Вычисления](/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
   

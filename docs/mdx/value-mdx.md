@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d6bf8edd7cbeefefa723c1acc374daa8d2c9407
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 52224625f5e2e6fc70ca9a76f750ed374108c52c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449616"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196732"
 ---
 # <a name="value-mdx"></a>Value (многомерные выражения)
 
@@ -33,7 +33,7 @@ Member_Expression[.Value]
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ## <a name="remarks"></a>Remarks  
- Функция **value** возвращает значение указанного элемента в виде строки. Аргумент **value** является необязательным, так как значение элемента является свойством по умолчанию элемента и является значением, возвращаемым для элемента, если другое значение не указано. Дополнительные сведения о свойствах элементов см. в разделе [внутренние свойства элементов &#40;&#41;многомерных выражений ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) и [определяемые пользователем свойства элементов &#40;&#41;многомерных выражений ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
+ Функция **value** возвращает значение указанного элемента в виде строки. Аргумент **value** является необязательным, так как значение элемента является свойством по умолчанию элемента и является значением, возвращаемым для элемента, если другое значение не указано. Дополнительные сведения о свойствах элементов см. в разделе [внутренние свойства элементов &#40;&#41;многомерных выражений ](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) и [определяемые пользователем свойства элементов &#40;&#41;многомерных выражений ](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере явно возвращается имя элемента и его значение.  
@@ -59,5 +59,4 @@ from [Adventure Works]
  [Имя &#40;&#41;многомерных выражений ](../mdx/name-mdx.md)   
  [Уникальное &#40;&#41;многомерных выражений ](../mdx/uniquename-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
-  
   

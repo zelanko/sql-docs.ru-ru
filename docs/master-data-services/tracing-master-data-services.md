@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eda1a559e9936deae31a5511dacd695e8ec6f24e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480456"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195043"
 ---
 # <a name="tracing-master-data-services"></a>Трассировка (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "89480456"
   
 -   Трассировка включена для сообщений уровня Warning и ActivityTracing.  
   
-     Дополнительные сведения см. в разделе [SourceLevels — перечисление](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels).  
+     Дополнительные сведения см. в разделе [SourceLevels — перечисление](/dotnet/api/system.diagnostics.sourcelevels).  
   
 -   Журналы сохраняются в папке Logs, находящейся в папке WebApplication. Расположение по умолчанию: C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   
@@ -71,5 +71,4 @@ ms.locfileid: "89480456"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)(Улучшенное ведение журнала устранения неполадок) на портале msdn.com.  
-  
   

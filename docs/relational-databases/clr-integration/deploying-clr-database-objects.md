@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c69f0ed73b638fd17183c5efba1c1f5e8e3c74f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88f297829a13c1b7d132230aebab76b9f546704d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756300"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192614"
 ---
 # <a name="deploying-clr-database-objects"></a>Развертывание объектов базы данных CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "85756300"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Дополнительные сведения о создании различных типов управляемых объектов базы данных в см [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . в разделе [определяемые пользователем функции CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [статистические выражения](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)CLR, [определяемые пользователем типы CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [хранимые процедуры CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)и [триггеры CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Дополнительные сведения о создании различных типов управляемых объектов базы данных в см [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . в разделе [функции CLR User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [CLR User-Defined агрегаты](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [типы CLR User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [хранимые процедуры CLR](/dotnet/framework/data/adonet/sql/clr-stored-procedures)и [триггеры CLR](/dotnet/framework/data/adonet/sql/clr-triggers).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Развертывание сборки на рабочих серверах  
  После тестирования и проверки CLR-объектов базы данных на тестовом сервере их можно распространить на рабочих серверах с помощью сценария развертывания. Дополнительные сведения об отладке объектов управляемой базы данных см. в разделе [Отладка объектов базы данных CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
@@ -106,7 +106,6 @@ ms.locfileid: "85756300"
   
  При выполнении развертывания среда Visual Studio запустит данный скрипт после развертывания проекта.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия о программировании интеграции со средой (CLR)](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

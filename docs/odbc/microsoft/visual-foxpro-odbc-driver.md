@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c5e7e9ccd0e71b8fe798b1b8f1cca7a7c3097d1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f47c2dd34b6a94ae8e3e777aa2ff8f1878849d5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466276"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196884"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Драйвер ODBC для Visual FoxPro
 Microsoft Visual FoxPro — это мощная объектно-ориентированная среда для создания баз данных и разработки приложений. Драйвер ODBC для Microsoft Visual FoxPro позволяет приложениям открывать, запрашивать и обновлять данные в Visual FoxPro и более ранних версиях FoxPro через интерфейс ODBC.  
@@ -45,4 +45,4 @@ Microsoft Visual FoxPro — это мощная объектно-ориенти�
 |Просмотр простого примера с помощью Visual C++ для доступа к данным Visual FoxPro|[Использование драйвера ODBC для Visual FoxPro с приложением C или C++](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
 |См. список поддерживаемых аппаратных и программных продуктов|[Требования к системе](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
- Сведения о скачивании и установке драйвера ODBC для Visual FoxPro см. в статье Загрузка [драйверов ODBC для Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318) на сайте MSDN.
+ Сведения о скачивании и установке драйвера ODBC для Visual FoxPro см. в статье Загрузка [драйверов ODBC для Visual FoxPro](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)) на сайте MSDN.

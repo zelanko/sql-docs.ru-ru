@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d0bb64acad5e29ff6eed5570e8764fd6a76a7547
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af0ecdd3e53df131793f4703e154f96c51efc4e1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500517"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194006"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (многомерные выражения)
 
@@ -52,7 +52,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
   
  Функция **DrilldownLevelTop** похожа на функцию [DrilldownLevel](../mdx/drilldownlevel-mdx.md) , но вместо включения всех дочерних элементов для каждого элемента на указанном уровне функция **DrilldownLevelTop** Возвращает самое верхнее количество дочерних элементов.  
   
- Запрос свойства XMLA Мдпропмдксдриллфунктионс позволяет проверить уровень поддержки, предоставляемый сервером для функций сверления; Дополнительные сведения см. в разделе [Поддерживаемые свойства xmla &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Запрос свойства XMLA Мдпропмдксдриллфунктионс позволяет проверить уровень поддержки, предоставляемый сервером для функций сверления; Дополнительные сведения см. в разделе [Поддерживаемые свойства xmla &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются три верхних потомка уровня категории продуктов согласно мере по умолчанию. В примере куба Adventure Works три верхних потомка для Accessories являются Bike Racks, Bike Stands и Bottles and Cages. В Management Studio в окне запроса MDX можно перейти в раздел Продукты | Категории продуктов | Элементы | Все продукты | Аксессуары, чтобы просмотреть весь список. Вы можете увеличить аргумент счетчика, чтобы вернуть больше элементов.  
@@ -86,5 +86,4 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>См. также:  
  [DrilldownLevel &#40;&#41;многомерных выражений ](../mdx/drilldownlevel-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
-  
   

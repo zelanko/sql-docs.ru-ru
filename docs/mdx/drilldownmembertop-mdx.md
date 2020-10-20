@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fe58cf1c2793206c3217f4a0f7ea132d13a242ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d90c382ca34316225760c1a25288034ba26ab726
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421918"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193507"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (многомерные выражения)
 
@@ -50,7 +50,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Include_Calc_Members*  
  Ключевое слово, позволяющее включать вычисляемые элементы в результаты углубленной детализации.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Если числовое выражение указано, функция **DrilldownMemberTop** сортирует в убывающем порядке дочерние элементы каждого элемента в первом наборе в соответствии со значением числового выражения, вычисленным по набору дочерних элементов. Если числовое выражение не указано, функция сортирует в порядке убывания потомки каждого элемента в первом наборе согласно значениям ячеек, представленных набором элементов-потомков, как определено контекстом запроса. Это поведение аналогично функциям многомерных выражений TopCount и Head (MDX), которые возвращают набор элементов в естественном порядке без какой-либо сортировки.  
   
  После сортировки функция **DrilldownMemberTop** возвращает набор, содержащий родительские элементы и количество дочерних элементов, указанное в *Count,* с наибольшим значением и содержащиеся в обоих наборах.  
@@ -61,7 +61,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  Функция **DrilldownMemberTop** похожа на функцию [DrilldownMember](../mdx/drilldownmember-mdx.md) , но вместо включения всех дочерних элементов для каждого элемента в первом наборе, который также имеется во втором наборе, функция **DrilldownMemberTop** Возвращает самое верхнее количество дочерних элементов для каждого элемента.  
   
- Запрос свойства XMLA Мдпропмдксдриллфунктионс позволяет проверить уровень поддержки, предоставляемый сервером для функций сверления; Дополнительные сведения см. в разделе [Поддерживаемые свойства xmla &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Запрос свойства XMLA Мдпропмдксдриллфунктионс позволяет проверить уровень поддержки, предоставляемый сервером для функций сверления; Дополнительные сведения см. в разделе [Поддерживаемые свойства xmla &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="example"></a>Пример  
  В следующем примере детализируется углублением категория одежды и возвращаются три подкатегории одежды с наибольшим числом заказов на поставку.  
@@ -79,7 +79,6 @@ WHERE [Measures].[Reseller Order Quantity]
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
-  
   

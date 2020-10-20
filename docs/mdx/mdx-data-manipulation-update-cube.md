@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e4ee6d69057745486ed72f00721f9ab38833ca2e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480674"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196979"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Операции с данными многомерных выражений — UPDATE CUBE
 
 
-  Инструкция UPDATE CUBE используется для обратной записи данных в любую ячейку куба, которая суммируется с родительским элементом с помощью агрегатного выражения SUM. Дополнительные сведения и пример см. в подразделе «общее представление о выделении» этой записи блога: [Создание приложения обратной записи с Analysis Services (блог)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
+  Инструкция UPDATE CUBE используется для обратной записи данных в любую ячейку куба, которая суммируется с родительским элементом с помощью агрегатного выражения SUM. Дополнительные сведения и пример см. в подразделе «общее представление о выделении» этой записи блога: [Создание приложения обратной записи с Analysis Services (блог)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -110,5 +110,4 @@ Weight_Expression = <leaf cell value> / <existing value>
 ## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Инструкции обработки данных многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

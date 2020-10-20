@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2c9bd8f20ffae61656dd30f139ce12665ff57f4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 095a4ab1b3acd4ec5a238f19c27446b7cebe27b2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476976"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196933"
 ---
 # <a name="using-stored-procedures-mdx"></a>Использование хранимых процедур (многомерные выражения)
 
 
-  Возможности служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и многомерных выражений можно расширить путем записи хранимых процедур платформы .NET или определяемых пользователем функций. Дополнительные сведения см. в разделе [ADOMD.NET Server Programming](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming) .  
+  Возможности служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и многомерных выражений можно расширить путем записи хранимых процедур платформы .NET или определяемых пользователем функций. Дополнительные сведения см. в разделе [ADOMD.NET Server Programming](/analysis-services/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming) .  
   
  При обращении или вызове хранимой процедуры необходимо указать имя функции и круглые скобки. Внутри скобок можно указать выражения (или аргументы), представляющие собой данные, передаваемые в виде параметров. Вызывая функцию, необходимо указать значения аргументов для всех параметров, причем в той последовательности, в которой параметры перечислены в определении пользовательской функции.  
   
@@ -43,5 +43,4 @@ WHERE [Measures].[Reseller Freight Cost]
   
 ## <a name="see-also"></a>См. также:  
  [Функции &#40;синтаксиса многомерных выражений&#41;](../mdx/functions-mdx-syntax.md)  
-  
   

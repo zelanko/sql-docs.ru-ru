@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ae6b7f-f53b-48a7-8fe5-4bbd6e0e414b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b7c00e511674ae29556371132805085b0fdcc574
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a102c5275f5b9271b34b8ebe75052710682f18d2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499657"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195998"
 ---
 # <a name="sample-odbc-program"></a>Образец программы ODBC
-В [примере кода ODBC](https://go.microsoft.com/fwlink/?LinkId=244831) запрашивается имя источника данных ODBC.  После этого будет предложено ввести запрос, и в примере отобразятся результаты запроса.
+В [примере кода ODBC](../../connect/odbc/cpp-code-example-app-connect-access-sql-db.md) запрашивается имя источника данных ODBC.  После этого будет предложено ввести запрос, и в примере отобразятся результаты запроса.

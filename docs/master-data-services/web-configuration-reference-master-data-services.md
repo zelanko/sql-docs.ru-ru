@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34e3e849a86cb23c3974b32b9d3d8c0721601274
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f4baf9f3ef626f5e2dcdc62092afaf1e586df33
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456768"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196098"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Раздел «Веб-конфигурация» (службы Master Data Services)
 
@@ -32,16 +32,16 @@ ms.locfileid: "88456768"
 |Элемент настройки|Описание|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Пользовательский элемент. Соединяет веб-службу [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] с базой данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
-|**connectionStrings**|Элемент ASP.NET. Дополнительные сведения см. в статье MSDN, посвященной [элементу connectionStrings в схеме параметров ASP.NET](https://go.microsoft.com/fwlink/?LinkId=178347) .|  
-|**System. Web**|Элемент ASP.NET. Дополнительные сведения см. в статье MSDN, посвященной [элементу system.web в схеме параметров ASP.NET](https://go.microsoft.com/fwlink/?LinkId=178348) .|  
-|**запуска**|Элемент .NET Framework. Дополнительные сведения см. в разделе [ \<startup> элемент](https://go.microsoft.com/fwlink/?LinkId=178349) в библиотеке MSDN.|  
-|**этапе**|Элемент .NET Framework. Дополнительные сведения см. в разделе [ \<runtime> элемент](https://go.microsoft.com/fwlink/?LinkId=178350) в библиотеке MSDN.|  
-|**system.codedom**|Элемент .NET Framework. Дополнительные сведения см. в разделе [ \<system.codedom> элемент](https://go.microsoft.com/fwlink/?LinkId=178351) в библиотеке MSDN.|  
-|**System. Web. Extensions**|Элемент ASP.NET. Дополнительные сведения см. в статье MSDN, посвященной [элементу system.web.extensions в схеме параметров ASP.NET](https://go.microsoft.com/fwlink/?LinkId=178352) .|  
-|**system.webServer**|Группа разделов, содержащая элементы IIS. Дополнительные сведения см. в статье MSDN, посвященной [группе разделов system.webServer в \[схеме параметров IIS 7\]](https://go.microsoft.com/fwlink/?LinkId=178353).|  
-|**system.serviceModel**|Элемент WCF-адреса. Дополнительные сведения см [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354) . в разделе библиотеки MSDN.|  
-|**system.diagnostics**|Элемент .NET Framework. Дополнительные сведения см. в разделе [ \<system.diagnostics> элемент](https://go.microsoft.com/fwlink/?LinkId=178355) в библиотеке MSDN.|  
-|**appSettings**|Элемент ASP.NET. Дополнительные сведения см. в статье MSDN, посвященной [элементу appSettings в схеме общих параметров](https://go.microsoft.com/fwlink/?LinkId=178356) .|  
+|**connectionStrings**|Элемент ASP.NET. Дополнительные сведения см. в статье MSDN, посвященной [элементу connectionStrings в схеме параметров ASP.NET](/previous-versions/dotnet/netframework-4.0/bf7sd233(v=vs.100)) .|  
+|**System. Web**|Элемент ASP.NET. Дополнительные сведения см. в статье MSDN, посвященной [элементу system.web в схеме параметров ASP.NET](/previous-versions/dotnet/netframework-4.0/dayb112d(v=vs.100)) .|  
+|**запуска**|Элемент .NET Framework. Дополнительные сведения см. в разделе [ \<startup> элемент](/dotnet/framework/configure-apps/file-schema/startup/startup-element) в библиотеке MSDN.|  
+|**Среда выполнения**|Элемент .NET Framework. Дополнительные сведения см. в разделе [ \<runtime> элемент](/dotnet/framework/configure-apps/file-schema/runtime/runtime-element) в библиотеке MSDN.|  
+|**system.codedom**|Элемент .NET Framework. Дополнительные сведения см. в разделе [ \<system.codedom> элемент](/dotnet/framework/configure-apps/file-schema/compiler/system-codedom-element) в библиотеке MSDN.|  
+|**System. Web. Extensions**|Элемент ASP.NET. Дополнительные сведения см. в статье MSDN, посвященной [элементу system.web.extensions в схеме параметров ASP.NET](/previous-versions/dotnet/netframework-4.0/bb546044(v=vs.100)) .|  
+|**system.webServer**|Группа разделов, содержащая элементы IIS. Дополнительные сведения см. в статье MSDN, посвященной [группе разделов system.webServer в \[схеме параметров IIS 7\]](/previous-versions/iis/settings-schema/ms689429(v=vs.90)).|  
+|**system.serviceModel**|Элемент WCF-адреса. Дополнительные сведения см [\<system.serviceModel>](/dotnet/framework/configure-apps/file-schema/wcf/system-servicemodel) . в разделе библиотеки MSDN.|  
+|**system.diagnostics**|Элемент .NET Framework. Дополнительные сведения см. в разделе [ \<system.diagnostics> элемент](/dotnet/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element) в библиотеке MSDN.|  
+|**appSettings**|Элемент ASP.NET. Дополнительные сведения см. в статье MSDN, посвященной [элементу appSettings в схеме общих параметров](/previous-versions/dotnet/netframework-4.0/ms228154(v=vs.100)) .|  
   
 ## <a name="masterdataservices-element"></a>Элемент masterDataServices  
  **\<masterDataServices>** Элемент является пользовательским элементом, который используется для подключения [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] веб-службы к [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базе данных.  
@@ -72,5 +72,4 @@ ms.locfileid: "88456768"
    <instance virtualPath="/MDS" siteName="Contoso" connectionName="MDSDB" serviceName="MDS1" />  
 </masterDataServices>  
 ```  
-  
   

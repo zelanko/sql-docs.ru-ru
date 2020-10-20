@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07917cbe056b38be42e4697fcef52935bae3efe3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15033816b953df764126853ada353452f00650d6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449296"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196178"
 ---
 # <a name="reserved-keyword-limitations"></a>Ограничения зарезервированных ключевых слов
 
@@ -29,7 +29,6 @@ ms.locfileid: "88449296"
 
 Список зарезервированных ключевых слов ODBC можно найти по адресу:
 
-- [Зарезервированные ключевые слова ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+- [Зарезервированные ключевые слова ODBC](../reference/appendixes/reserved-keywords.md).
 
-- В *справочном руководстве программиста по ODBC*см. [Приложение C: грамматика SQL](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
-
+- В *справочном руководстве программиста по ODBC*см. [Приложение C: грамматика SQL](../reference/appendixes/appendix-c-sql-grammar.md).

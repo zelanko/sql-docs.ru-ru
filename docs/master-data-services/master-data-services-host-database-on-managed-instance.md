@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 671ae0d9578c81d56c3324f73a4240152594dd49
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87878948"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194436"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Размещение базы данных MDS на управляемом экземпляре
 
@@ -31,15 +31,15 @@ ms.locfileid: "87878948"
 
 ### <a name="create-and-configure-the-database"></a>Создание и настройка базы данных
 
-1. Создание управляемого экземпляра с виртуальной сетью. Дополнительные сведения см. [в разделе Краткое руководство. создание управляемый экземпляр SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
+1. Создание управляемого экземпляра с виртуальной сетью. Дополнительные сведения см. [в разделе Краткое руководство. создание управляемый экземпляр SQL](/azure/sql-database/sql-database-managed-instance-get-started) .
 
-1. Настройте подключение типа "точка — сеть". Инструкции см. в статье [Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности Azure Certificate: портал Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
+1. Настройте подключение типа "точка — сеть". Инструкции см. в статье [Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности Azure Certificate: портал Azure](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
-1. Настройка проверки подлинности Azure Active Directory с помощью Управляемый экземпляр SQL. Дополнительные сведения см. [в разделе Настройка проверки подлинности Azure Active Directory и управление ею с помощью SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
+1. Настройка проверки подлинности Azure Active Directory с помощью Управляемый экземпляр SQL. Дополнительные сведения см. [в разделе Настройка проверки подлинности Azure Active Directory и управление ею с помощью SQL](/azure/sql-database/sql-database-aad-authentication-configure) .
 
 ### <a name="configure-web-application-machine"></a>Настройка компьютера веб-приложения
 
-1. Установите сертификат подключения типа "точка — сеть" и VPN, чтобы убедиться, что компьютер может получить доступ к управляемому экземпляру. Дополнительные сведения см. в разделе [Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности сертификата Azure: портал Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
+1. Установите сертификат подключения типа "точка — сеть" и VPN, чтобы убедиться, что компьютер может получить доступ к управляемому экземпляру. Дополнительные сведения см. в разделе [Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности сертификата Azure: портал Azure](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
 1. Установите следующие роли и компоненты:
    - Роли:
@@ -56,11 +56,11 @@ ms.locfileid: "87878948"
      - Фильтры ISAPI
      - Общие функции HTTP
      - Документ по умолчанию
-     - Обзор каталога
+     - Просмотр каталогов
      - Ошибки HTTP
      - Статическое содержимое
      - Исправность и диагностика
-     - Ведение журнала служб HTTP
+     - Ведение журнала HTTP
      - Монитор запросов
      - Производительность
      - Сжатие статического содержимого
@@ -131,7 +131,7 @@ ms.locfileid: "87878948"
 
    ![MDS-SQLServer2019-config-MI-Креатедбусернаме](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
 
-1. Нажмите кнопку **Далее** , чтобы просмотреть сводку параметров для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базы данных. Нажмите кнопку **Далее** еще раз, чтобы создать базу данных. Вы увидите страницу **ход выполнения и завершение** .
+1. Нажмите кнопку **Далее** , чтобы просмотреть сводку параметров для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базы данных. Нажмите кнопку  **Далее** еще раз, чтобы создать базу данных. Вы увидите страницу **ход выполнения и завершение** .
 
 1. После создания и настройки базы данных нажмите кнопку **Готово**.
 
@@ -163,7 +163,7 @@ ms.locfileid: "87878948"
 
 1. В области **веб-конфигурация** в окне **веб-приложение** выберите созданное приложение и нажмите кнопку **выбрать** в разделе **связать приложение с базой данных** .
 
-1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Нажмите кнопку **OK**.
+1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Щелкните **ОК**.
 
    Настройка веб-сайта завершена. Теперь на странице **веб-конфигурация** отображается выбранный веб-сайт, созданное веб-приложение и [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] база данных, связанная с приложением.
 
@@ -199,9 +199,9 @@ MDS также поддерживает проверку подлинности 
 
 ## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>Обновление [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] и версия базы данных SQL
 
-### <a name="upgrade-ssmdsshort_md"></a>Обновления[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>Обновления [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
-Установите **накопительное обновление SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]будет обновлен автоматически.
+Установите **накопительное обновление SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] будет обновлен автоматически.
 
 ### <a name="upgrade-sql-server"></a>Обновление SQL Server
 
@@ -210,7 +210,7 @@ MDS также поддерживает проверку подлинности 
 
 Чтобы устранить эту проблему, необходимо обновить версию базы данных:
 
-1. Откройте [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , а затем выберите **Конфигурация базы данных** в левой области.
+1. Откройте [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , а затем выберите  **Конфигурация базы данных** в левой области.
 
 1. На странице **Конфигурация базы данных** в выберите [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **выбрать базу данных**.
 
@@ -222,13 +222,13 @@ MDS также поддерживает проверку подлинности 
 
    ![MDS-SQLServer2019-config-MI-Селектупградедб](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "MDS-SQLServer2019-config-MI_SelectUpgradeDB")
 
-1. В мастере обновления базы данных нажмите кнопку **Далее** на странице **Приветствие** и на странице **Проверка обновления** .
+1. В мастере обновления базы данных нажмите кнопку **Далее** на странице **Приветствие** и на странице  **Проверка обновления** .
 
    ![MDS-SQLServer2019-config-MI-Упградедбвизард](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "MDS-SQLServer2019-config-MI_UpgradeDBWizard")
 
 1. По завершении всех задач нажмите кнопку **Готово** .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [База данных служб Master Data Services](../master-data-services/master-data-services-database.md)
 - [Веб-приложение диспетчера основных данных](../master-data-services/master-data-manager-web-application.md)

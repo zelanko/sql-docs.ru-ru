@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 893fdf2398788b318cd9f4f1e75ed833ea7bd4e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f3e21ddbcf4d3599548a827e169f2c0d63f114e8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883857"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194428"
 ---
 # <a name="database-requirements-master-data-services"></a>Требования к базе данных (службы Master Data Services)
 
@@ -56,7 +56,7 @@ ms.locfileid: "85883857"
   
 -   Microsoft SQL Server 2008 R2 Developer x64 (64-разрядная версия)  
   
- Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
+ Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). 
   
 ### <a name="operating-system"></a>Операционная система  
  Дополнительные сведения о поддерживаемых операционных системах Windows и других требованиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] см. в статье [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -71,11 +71,10 @@ ms.locfileid: "85883857"
 ### <a name="database-backup"></a>Резервное копирование базы данных  
  Рекомендуется выполнять резервное копирование базы данных ежедневно в периоды низкой активности, а резервные копии журнала транзакций следует делать чаще в соответствии с требованиями среды. Дополнительные сведения о резервных копиях см. в статье [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
  [Создание базы данных Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [База данных Master Data Services](../../master-data-services/master-data-services-database.md)   
  [Диалоговое окно «Подключение к Master Data Services базе данных»](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
  [Мастер создания базы данных (диспетчер конфигурации служб Master Data Services)](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
-  
   

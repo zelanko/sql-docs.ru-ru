@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e10c62742e28b69545efac51f70bf9628b43e08d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd716e631adc3ded77f81278c20f754b28199b49
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412919"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192324"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (многомерные выражения)
 
@@ -36,17 +36,17 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  Допустимое многомерное выражение, возвращающее набор.  
   
  *Рекурсивного*  
- (необязательно). Ключевое слово, которое обозначает рекурсивное сравнение наборов. Функция **ToggleDrillState** представляет собой сочетание функций **DrillupMember** и **DrilldownMember** . Рекурсия применяется только в том случае, если элемент находится в состоянии **DrilldownMember** .  
+ (Необязательно). Ключевое слово, которое обозначает рекурсивное сравнение наборов. Функция **ToggleDrillState** представляет собой сочетание функций **DrillupMember** и **DrilldownMember** . Рекурсия применяется только в том случае, если элемент находится в состоянии **DrilldownMember** .  
   
  *Include_calc_members*  
- (необязательно). Флажок, указывающий, следует ли включать вычисленные элементы и должны ли они существовать на уровне детализации углублением.  
+ (Необязательно). Флажок, указывающий, следует ли включать вычисленные элементы и должны ли они существовать на уровне детализации углублением.  
   
 ## <a name="remarks"></a>Remarks  
  Функция **ToggleDrillState** переключает состояние детализации каждого элемента второго набора, присутствующего в первом наборе. Первый набор может содержать кортежи любой размерности, однако второй набор должен содержать элементы одного измерения. Функция **ToggleDrillState** представляет собой сочетание функций **DrillupMember** и **DrilldownMember** . Если элемент *m*второго набора представлен в первом наборе, а этот элемент детализирован вниз (то есть он содержит потомка, сразу после него), то `DrillupMember(Set_Expression1, {m})` применяется к элементу или кортежу в первом наборе. Если элемент *m* детализирован вверх (то есть нет потомка *m* , которая сразу после *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` применяется к первому набору.  
   
  Если используется дополнительный **рекурсивный** флаг, детализация и детализация применяются рекурсивно. Дополнительные сведения о рекурсивном флаге см. в разделе функции [DrillupMember](../mdx/drillupmember-mdx.md) и [DrilldownMember](../mdx/drilldownmember-mdx.md) .  
   
- Запрос свойства XMLA Мдпропмдксдриллфунктионс позволяет проверить уровень поддержки, предоставляемый сервером для функций сверления; Дополнительные сведения см. в разделе [Поддерживаемые свойства xmla &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Запрос свойства XMLA Мдпропмдксдриллфунктионс позволяет проверить уровень поддержки, предоставляемый сервером для функций сверления; Дополнительные сведения см. в разделе [Поддерживаемые свойства xmla &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
  См. раздел [Журнал базы данных: функции наборов многомерных выражений: Функция ToggleDrillState ()](https://go.microsoft.com/fwlink/?LinkId=517759) для сценариев и примеров, использующих эту функцию.  
   
@@ -66,5 +66,4 @@ SELECT ToggleDrillState
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
-  
   

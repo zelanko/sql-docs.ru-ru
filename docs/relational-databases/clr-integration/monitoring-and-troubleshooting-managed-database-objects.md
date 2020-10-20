@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cdf362f2b45df7cb419d5dc5161cb3428de7e7bb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948455"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192609"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Наблюдение и устранение неполадок в управляемых объектах базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "87948455"
   
 |Событие|Описание|  
 |-----------|-----------------|  
-|[Класс событий Assembly Load](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|Используется для наблюдения за запросами на загрузку сборок (успех или неудача).|  
+|[Класс событий Assembly Load](../event-classes/sql-server-event-class-reference.md)|Используется для наблюдения за запросами на загрузку сборок (успех или неудача).|  
 |[SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), класс событий [SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Предоставляет сведения о пакетах [!INCLUDE[tsql](../../includes/tsql-md.md)], которые начали или завершили работу.|  
 |Класс событий [SP: Starting](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed](../../relational-databases/event-classes/sp-completed-event-class.md)|Используется для наблюдения за выполнением хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[SQL: StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), класс событий [SQL: StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Используется для наблюдения за выполнением процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR.|  
@@ -58,16 +58,16 @@ ms.locfileid: "87948455"
   
 |Представление каталога|Описание|  
 |------------------|-----------------|  
-|[sys. assemblies &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Возвращает сведения о сборках, зарегистрированных в базе данных.|  
-|[sys. assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Указывает сборки, которые содержат ссылки на другие сборки.|  
+|[sys. assemblies &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Возвращает сведения о сборках, зарегистрированных в базе данных.|  
+|[sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Указывает сборки, которые содержат ссылки на другие сборки.|  
 |[sys.assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Возвращает информацию обо всех функциях, хранимых процедурах и триггерах, определенных в сборке.|  
-|[sys. assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|Возвращает сведения о файлах сборок, зарегистрированных в базе данных.|  
-|[sys. assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|Указывает определяемые пользователем типы (UDT), определенные в сборке.|  
-|[sys. module_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|Указывает сборки, в которых определены модули CLR.|  
+|[sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|Возвращает сведения о файлах сборок, зарегистрированных в базе данных.|  
+|[sys.assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|Указывает определяемые пользователем типы (UDT), определенные в сборке.|  
+|[sys.module_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|Указывает сборки, в которых определены модули CLR.|  
 |[sys.parameter_type_usages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|Возвращает информацию о параметрах, которые представляют собой определяемые пользователем типы.|  
 |[sys.server_assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)|Указывает сборки, в которых определен триггер CLR.|  
 |[sys.server_triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)|Указывает триггеры DDL уровня сервера на сервере, в том числе триггеры CLR.|  
-|[sys. type_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|Указывает сборки, в которых определены определяемые пользователем типы.|  
+|[sys.type_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|Указывает сборки, в которых определены определяемые пользователем типы.|  
 |[sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|Возвращает системные типы и определяемые пользователем типы, зарегистрированные в базе данных.|  
   
 ## <a name="dynamic-management-views"></a>Динамические административные представления  
@@ -75,16 +75,15 @@ ms.locfileid: "87948455"
   
 |DMV|Описание|  
 |---------|-----------------|  
-|[sys. dm_clr_appdomains &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|Возвращает сведения о каждом домене приложения на сервере.|  
-|[sys. dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|Указывает все управляемые сборки, зарегистрированные на сервере.|  
-|[sys. dm_clr_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|Возвращает сведения о внутрипроцессной среде CLR.|  
-|[sys. dm_clr_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|Указывает общее число задач CLR, выполняющихся в настоящий момент.|  
+|[sys.dm_clr_appdomains &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|Возвращает сведения о каждом домене приложения на сервере.|  
+|[sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|Указывает все управляемые сборки, зарегистрированные на сервере.|  
+|[sys.dm_clr_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|Возвращает сведения о внутрипроцессной среде CLR.|  
+|[sys.dm_clr_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|Указывает общее число задач CLR, выполняющихся в настоящий момент.|  
 |[sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|Возвращает сведения о планах выполнения запросов, кэшируемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для более быстрого выполнения запросов.|  
 |[sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)|Возвращает суммарную статистику производительности для кэшированных планов запросов.|  
 |[sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|Возвращает сведения о каждом из запросов, выполняющихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|Возвращает все клерки памяти, активные в настоящее время в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в том числе клерки памяти CLR.|  
+|[sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|Возвращает все клерки памяти, активные в настоящее время в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в том числе клерки памяти CLR.|  
   
 ## <a name="see-also"></a>См. также:  
  [Основные понятия о программировании интеграции со средой (CLR)](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

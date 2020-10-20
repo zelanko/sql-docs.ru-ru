@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e04dd1146bc55d8d68475770a9077fc8d962b56d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5778a8b1d56fa568fe97dba104c1b46da1a005cf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471876"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196048"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (многомерные выражения)
 
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- Изменяется текущий элемент иерархии, используемой по оси в запросе. Таким образом, текущий элемент в других иерархиях в том же измерении, который не используется на оси, также может измениться. Это поведение называется "автоматическое существование", и дополнительные сведения можно найти в [разделе Основные понятия многомерных выражений &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Например, приведенный ниже запрос показывает, как текущий элемент иерархии «Календарный год» измерения «Дата» изменяется вместе с текущим элементом иерархии «Календарь», когда последняя отображается по оси строк:  
+ Изменяется текущий элемент иерархии, используемой по оси в запросе. Таким образом, текущий элемент в других иерархиях в том же измерении, который не используется на оси, также может измениться. Это поведение называется "автоматическое существование", и дополнительные сведения можно найти в [разделе Основные понятия многомерных выражений &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Например, приведенный ниже запрос показывает, как текущий элемент иерархии «Календарный год» измерения «Дата» изменяется вместе с текущим элементом иерархии «Календарь», когда последняя отображается по оси строк:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -119,5 +119,4 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
-  
   

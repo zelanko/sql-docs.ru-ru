@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 78e1bc6056906130422db0aa69aff60977af1d0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b0943d8e493edf60cc491ca8fa7af1447b59ee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387530"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196016"
 ---
 # <a name="expressions-mdx"></a>Выражения (многомерные выражения)
 
@@ -86,6 +86,5 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по языку многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-language-reference-mdx.md)   
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
-  
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   

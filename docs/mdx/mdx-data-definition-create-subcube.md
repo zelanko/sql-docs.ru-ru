@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34da0a8cc7f2b6aa069a45e0366d361b06102feb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477026"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193946"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Определение данных многомерных выражений — CREATE SUBCUBE
 
@@ -38,7 +38,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Подробное описание синтаксиса инструкций SELECT и **НЕвизуального** предложения см. в разделе [инструкция SELECT &#40;&#41;многомерных выражений](../mdx/mdx-data-manipulation-select.md) .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Если элементы по умолчанию исключаются из определения вложенного куба, то координаты изменяются соответствующим образом. Для атрибутов, которые могут быть статистически вычислены, элемент по умолчанию перемещается в элемент [Все]. Для атрибутов, которые не могут быть статистически вычислены, элемент по умолчанию перемещается в элемент, существующий во вложенном кубе. В следующей таблице приведен пример вложенного куба и комбинаций элемента по умолчанию.  
   
 |Исходный элемент по умолчанию|Статистически вычисляемый|Подзапрос выборки|Измененный элемент по умолчанию|  
@@ -53,7 +53,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Объекты сеанса, созданные в контексте вложенного куба, сбрасываются при сбрасывании вложенного куба.  
   
- Дополнительные сведения о вложенных кубах см. [в разделе Создание вложенных кубов в многомерных выражениях &#40;многомерных выражениях&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
+ Дополнительные сведения о вложенных кубах см. [в разделе Создание вложенных кубов в многомерных выражениях &#40;многомерных выражениях&#41;](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается вложенный куб, ограничивающий видимое пространство куба до элементов со страной Canada. Затем она использует функцию **Members** для возврата всех элементов уровня Country определяемой пользователем иерархии Geography — возврат только страны Канады.  
@@ -126,10 +126,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  [All Products] и [All Resellers], столбец и строка соответственно, содержат итоги всех элементов, а не только тех, что видимы.  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+## <a name="see-also"></a>См. также:  
+ [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Инструкции скриптов многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [Инструкция DROP CUBE &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-drop-subcube.md)   
  [Инструкция SELECT (многомерные выражения)](../mdx/mdx-data-manipulation-select.md)  
-  
   

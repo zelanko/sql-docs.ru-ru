@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37f23c75d8a947e52daf47ef9648ccbd1587b9a8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88341130"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192304"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Выражения куба и вложенного куба
 
@@ -70,10 +70,9 @@ ms.locfileid: "88341130"
  Идентификатор вложенного куба отображается как *Subcube_Name*. в описаниях инструкций многомерных выражений в форме Бэкуса-Наура.  
   
 ## <a name="see-also"></a>См. также:  
- [Базовый запрос многомерных выражений &#40;многомерные выражения&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
- [Создание вложенных кубов в многомерных выражениях &#40;многомерных выражениях&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [Базовый запрос многомерных выражений &#40;многомерные выражения&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [Создание вложенных кубов в многомерных выражениях &#40;многомерных выражениях&#41;](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [Инструкция CREATE CUBE &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-create-subcube.md)   
  [Выражения &#40;&#41;многомерных выражений ](../mdx/expressions-mdx.md)   
  [Инструкция SCOPE (многомерные выражения)](../mdx/mdx-scripting-scope.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fe8494558f7026355cb25e1415f9269fbeb1bed3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 489829468d9f30d54c7b76c0d1d10cce9142d9d1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387500"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194388"
 ---
 # <a name="identifiers-mdx"></a>Идентификаторы (многомерные выражения)
 
@@ -125,7 +125,6 @@ ms.locfileid: "88387500"
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по языку многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-language-reference-mdx.md)   
- [Основные принципы запросов многомерных выражений &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [Основные принципы запросов многомерных выражений &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
  [Синтаксические элементы в многомерных выражениях (многомерные выражения)](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

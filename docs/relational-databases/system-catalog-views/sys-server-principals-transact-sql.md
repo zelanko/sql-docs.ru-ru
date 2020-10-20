@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 41147a1b5a644c5af7a155635c0e7c690f2e4916
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809340"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196718"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,9 +38,8 @@ ms.locfileid: "91809340"
 |**name**|**sysname**|Имя участника. Уникален в пределах сервера.|  
 |**principal_id**|**int**|Идентификатор участника. Уникален в пределах сервера.|  
 |**трансляцию**|**varbinary(85)**|Идентификатор SID (Security-IDentifier, идентификатор защиты) участника. Для участника Windows соответствует идентификатору SID Windows.|  
-|**type**|**char(1)**|Тип участника:<br /><br /> S = имя входа SQL<br /><br /> U = имя входа Windows<br /><br /> G = группа Windows<br /><br /> R = роль сервера<br /><br /> C = имя входа, сопоставленное сертификату<br /><br /> E = внешнее имя входа из Azure Active Directory<br /><br /> X = Внешняя группа из группы или приложений Azure Active Directory
-<br /><br /> K = имя входа, сопоставленное асимметричному ключу|  
-|**type_desc**|**nvarchar(60)**|Описание типа участника:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type**|**char(1)**|Тип участника:<br /><br /> S = имя входа SQL<br /><br /> U = имя входа Windows<br /><br /> G = группа Windows<br /><br /> R = роль сервера<br /><br /> C = имя входа, сопоставленное сертификату<br /><br /> E = внешнее имя входа из Azure Active Directory<br /><br /> X = Внешняя группа из группы или приложений Azure Active Directory<br /><br /> K = имя входа, сопоставленное асимметричному ключу|  
+|**type_desc**|**nvarchar(60)**|Описание типа участника:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> EXTERNAL_LOGIN<br /><br /> EXTERNAL_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = имя входа отключено.|  
 |**create_date**|**datetime**|Время создания участника.|  
 |**modify_date**|**datetime**|Время последнего изменения определения участника.|  

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddcdee57bd708bc8eb4c3c07d8e86a70705e01e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491388"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193470"
 ---
 # <a name="using-set-expressions"></a>Выражения наборов
 
@@ -58,9 +58,8 @@ ms.locfileid: "88491388"
   
  состоит из трех кортежей, каждый из которых содержит две явные ссылки на элементы в иерархии «Категории продуктов» измерения «Продукт» и иерархии «Календарь» измерения «Дата».  
   
- Примеры функций, которые возвращают наборы, см. [в разделе Работа с элементами, кортежами и наборами &#40;&#41;многомерных выражений ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+ Примеры функций, которые возвращают наборы, см. [в разделе Работа с элементами, кортежами и наборами &#40;&#41;многомерных выражений ](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения &#40;&#41;многомерных выражений ](../mdx/expressions-mdx.md)  
-  
   

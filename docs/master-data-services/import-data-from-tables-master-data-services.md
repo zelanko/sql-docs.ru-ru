@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 119ee04be796eb58e0661f02e001ac0b1a2e7a85
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f4b7f610ca23940c676befc107331b406c124cb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812970"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197028"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Импорт данных из таблиц (службы Master Data Services)
 
@@ -24,11 +24,11 @@ ms.locfileid: "85812970"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]поддерживает массовое добавление данных в модель и их изменение.  
   
- **Предварительные условия**  
+ **Предварительные требования**  
   
 -   Необходимо иметь разрешение на вставку данных в STG. \<name> _Leaf STG. \<name> _Consolidated, stg. \<name> _Relationship таблицу в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базе данных.  
   
--   Необходимо иметь разрешения на выполнение хранимой процедуры STG. udp_ \<name> _Leaf, stg. udp \_ \<name> _Consolidated или stg. UDP \_ \<name> _Relationship в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базе данных.  
+-   Необходимо иметь разрешения на выполнение \<name> хранимой процедуры stg.udp_ _Leaf, stg. udp \_ \<name> _Consolidated или stg. UDP \_ \<name> _Relationship в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базе данных.  
   
 -   Эта модель не должна иметь состояние **Зафиксирована**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85812970"
   
 2.  Откройте среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и подключитесь к экземпляру ядра базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-     Дополнительные сведения см. в разделе [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
+     Дополнительные сведения см. в разделе [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md).  
   
 3.  Импортируйте данные в промежуточные таблицы с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
@@ -77,5 +77,4 @@ ms.locfileid: "85812970"
      В диспетчере основных данных перейдите к функциональной области **Обозреватель** и примените бизнес-правила для проверки данных. Дополнительные сведения см. в разделе [Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md). Для проверки данных также можно использовать хранимую процедуру. Дополнительные сведения см. в разделе [Проверка хранимых процедур (службы Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
      При загрузке из промежуточных таблиц данные не проверяются автоматически с помощью бизнес-правил. Дополнительные сведения о том, что такое проверка и когда она выполняется, см. в разделе [Проверка (службы Master Data Services)](../master-data-services/validation-master-data-services.md).  
-  
   
