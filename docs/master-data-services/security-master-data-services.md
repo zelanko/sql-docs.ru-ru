@@ -1,5 +1,6 @@
 ---
-title: Безопасность (службы Master Data Services) | Документы Майкрософт
+title: Безопасность
+description: Сведения о безопасности в Master Data Services, в том числе о типах пользователей, настройке безопасности, безопасности в надстройке для Excel и связанных задачах.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9501014be6fdd311c37fd8f446ae01f0f2939f90
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257831"
 ---
 # <a name="security-master-data-services"></a>Безопасность (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Используйте систему безопасности в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], чтобы пользователи имели доступ к определенным основным данным, необходимым для их работы, и не имели доступа к данным, которые не должны быть им открыты.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68085674"
   
 -   [Разрешения элементов иерархии](../master-data-services/hierarchy-member-permissions-master-data-services.md)(необязательны), определяющие элементы, к которым имеет доступ пользователь, и тип доступа (чтение, изменение и удаление) к этим элементам.  
   
- При назначении разрешений для атрибутов и элементов приоритет разрешений определяется пересечением разрешений и правилами. Дополнительные сведения см. в разделе [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
+ При назначении разрешений для атрибутов и элементов приоритет разрешений определяется пересечением разрешений и правилами. Дополнительные сведения см. в разделе [Способ определения разрешений (службы Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md).  
   
 ## <a name="security-in-the-add-in-for-excel"></a>Безопасность для надстройки Excel  
  Набор безопасности для веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] также применяется и для [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Пользователи могут просматривать и работать только с данными, на которые имеют разрешение. Администраторы выполняют административные задачи.  
@@ -62,12 +63,12 @@ ms.locfileid: "68085674"
 |Назначение разрешения для значений атрибутов путем назначения разрешения для объектов модели.|[Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |Назначение разрешения для значений элементов путем назначения разрешений для узлов иерархии.|[Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
-## <a name="see-also"></a>См. также  
- [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)   
- [Пользователи и группы (службы Master Data Services)](../master-data-services/users-and-groups-master-data-services.md)   
- [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)   
- [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
- [Разрешения на элементы иерархии (службы Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Администраторы &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
+ [Пользователи и группы &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
+ [Разрешения функциональной области &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [Разрешения объекта модели &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Разрешения элемента иерархии &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [Способ определения разрешений (службы Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

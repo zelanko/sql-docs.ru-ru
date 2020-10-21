@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e029637f90afbb27e4b27c79c8a515a2e3aad823
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430786"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195366"
 ---
 # <a name="oracle-destination"></a>Назначение Oracle
 
@@ -200,7 +200,7 @@ ms.locfileid: "88430786"
 **Действия при ошибке**
 
 Выберите способ обработки ошибок в потоке источником Oracle: пропустить ошибку, перенаправить строку или вызвать сбой компонента.
-**Дополнительные сведения см. в статье** [Обработка ошибок в данных](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Дополнительные сведения см. в статье** [Обработка ошибок в данных](./error-handling-in-data.md?view=sql-server-2017)
 
 **Усечение**
 

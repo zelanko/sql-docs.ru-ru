@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: b4bcae3e857fd6dfa7a64acd828529bf9a599552
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3be7312cceacd7d6cef6c60fbe54515c7577c5f2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990037"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194106"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Руководство по Развертывание и выполнение пакета служб SQL Server Integration Services (SSI) в Azure
 
@@ -26,9 +26,9 @@ ms.locfileid: "90990037"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Прежде чем начать, убедитесь в наличии SQL Server Management Studio версии 17.2 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Прежде чем начать, убедитесь в наличии SQL Server Management Studio версии 17.2 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-Вы также должны настроить базу данных SSISDB в Azure и подготовить среду Azure-SSIS Integration Runtime. Дополнительные сведения о подготовке служб SSIS в Azure: [Развертывание пакетов SQL Server Integration Services в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Вы также должны настроить базу данных SSISDB в Azure и подготовить среду Azure-SSIS Integration Runtime. Дополнительные сведения о подготовке служб SSIS в Azure: [Развертывание пакетов SQL Server Integration Services в Azure](/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Получение сведений о подключении для базы данных SQL Azure
 
@@ -192,7 +192,7 @@ Write-Host "All done."
 
 Вы также можете выбрать пакет в обозревателе объектов, щелкнуть его правой кнопкой мыши, выбрать пункт **Отчеты**, а затем **Стандартные отчеты** и **Все выполнения**.
 
-Дополнительные сведения о том, как отслеживать выполнение запущенных пакетов в SSMS, см. в разделе [Наблюдение за выполнением пакетов и других операций](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
+Дополнительные сведения о том, как отслеживать выполнение запущенных пакетов в SSMS, см. в разделе [Наблюдение за выполнением пакетов и других операций](../performance/monitor-running-packages-and-other-operations.md).
 
 ## <a name="monitor-the-execute-ssis-package-activity"></a>Отслеживание действия "Выполнение пакета служб SSIS"
 
@@ -204,7 +204,7 @@ Write-Host "All done."
 
 Чтобы получить сведения о состоянии среды Azure-SSIS Integration Runtime, где запускаются пакеты, используйте следующие команды PowerShell. Для каждой команды предоставьте имена фабрики данных, среды Azure-SSIS Integration Runtime и группы ресурсов.
 
-См. дополнительные сведения о [Мониторинге среды выполнения интеграции Azure-SSIS](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+См. дополнительные сведения о [Мониторинге среды выполнения интеграции Azure-SSIS](/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Получение метаданных о среде Integration Runtime для Azure-SSIS
 

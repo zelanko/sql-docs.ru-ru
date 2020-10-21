@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ccfa786e538ba6e38ad47e5e61aacc89c1bfb318
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7830dbd1bcb5daf81234a6948b13effc37a3b46b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495668"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195938"
 ---
 # <a name="sort-transformation"></a>преобразование «Сортировка»
 
@@ -51,7 +51,7 @@ ms.locfileid: "88495668"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -95,5 +95,4 @@ ms.locfileid: "88495668"
 ## <a name="see-also"></a>См. также:  
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

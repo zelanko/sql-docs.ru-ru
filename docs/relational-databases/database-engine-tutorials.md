@@ -12,12 +12,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4814fe709fb28141d00fd5302feab845d39d5331
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: f58faca8cb3e83057cef9c2e214ffcccabf9dd9f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458534"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196198"
 ---
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "86458534"
 [Руководство. Начало работы с ядром СУБД](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 В этом учебнике описывается установление подключения к экземпляру [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
-[Руководство. SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+[Руководство. SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
 В этом учебнике описывается интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Такая среда также позволяет развертывать, наблюдать и обновлять компоненты уровня данных, используемых приложениями, например базами и хранилищами данных. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   
 [Руководство. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
@@ -58,5 +58,3 @@ ms.locfileid: "86458534"
 [TechNet WIKI: образцы SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   
-  
-

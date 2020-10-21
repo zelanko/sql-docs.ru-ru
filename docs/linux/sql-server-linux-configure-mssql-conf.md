@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 2e21b8f811af5887147ddb71b211e3a876b728d2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b30229e584cce79d73018aa0540c9bdaf328830d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180016"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115707"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server на Linux с помощью средства mssql-conf
 
@@ -178,7 +178,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
    sudo systemctl restart mssql-server
    ```
 
-Дополнительные сведения см. в статье [Отзывы пользователей об SQL Server на Linux](sql-server-linux-customer-feedback.md) и в [Заявлении о конфиденциальности SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
+Дополнительные сведения см. в статье [Отзывы пользователей об SQL Server на Linux](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md) и в [Заявлении о конфиденциальности SQL Server](../sql-server/sql-server-privacy.md).
 
 ## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> Изменение каталога по умолчанию для данных или журналов
 
@@ -476,7 +476,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-Дополнительные сведения см. в статье [Отзывы пользователей об SQL Server на Linux](sql-server-linux-customer-feedback.md).
+Дополнительные сведения см. в статье [Отзывы пользователей об SQL Server на Linux](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
 ## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> Изменение языкового стандарта SQL Server
 
@@ -728,7 +728,7 @@ sudo cat /var/opt/mssql/mssql.conf
 
 ## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> Формат файла mssql.conf
 
-В приведенном ниже файле **/var/opt/mssql/mssql.conf** представлен пример каждого параметра. Вы можете использовать этот формат, чтобы вносить изменения в файл **mssql.conf** вручную по мере необходимости. Чтобы внесенные вручную изменения вступили в силу, необходимо перезапустить SQL Server. Для использования файла **mssql.conf** с Docker необходимо настроить в Docker [сохранение данных](sql-server-linux-configure-docker.md). Сначала добавьте полный файл **mssql.conf** в каталог узла, а затем запустите контейнер. Пример см. в статье [Отзывы пользователей](sql-server-linux-customer-feedback.md).
+В приведенном ниже файле **/var/opt/mssql/mssql.conf** представлен пример каждого параметра. Вы можете использовать этот формат, чтобы вносить изменения в файл **mssql.conf** вручную по мере необходимости. Чтобы внесенные вручную изменения вступили в силу, необходимо перезапустить SQL Server. Для использования файла **mssql.conf** с Docker необходимо настроить в Docker [сохранение данных](./sql-server-linux-docker-container-deployment.md). Сначала добавьте полный файл **mssql.conf** в каталог узла, а затем запустите контейнер. Пример см. в статье [Отзывы пользователей](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

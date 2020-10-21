@@ -12,12 +12,12 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 87c151558a290f3c06a605de72931c5ee6990f60
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: c014f76aac1544e16ec693277a034779f75883cd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059362"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255618"
 ---
 # <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure синапсе Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -40,7 +40,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-  
+
 #### <a name="parameters"></a>Параметры  
 `[ @masking_mode = ] masking_mode` Определяет, включено ли маскирование прозрачных данных пользователя журнала шифрования данных. *masking_mode* имеет **тип int**и может принимать одно из следующих значений:  
   
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  При **sp_pdw_ log_user_data_masking** без параметров возвращается текущее состояние маскировки данных пользователя журнала TDE на устройстве в качестве скалярного результирующего набора.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий позволяет заменить литералы предопределенными константными значениями в инструкциях **SELECT** и DML, так как они могут содержать пользовательские данные. Установка *masking_mode* в значение 1 не маскирует метаданные, такие как имена столбцов или имена таблиц. Если присвоить параметру *masking_mode* значение 2, то инструкции с метаданными, например имена столбцов или имена таблиц, удаляются.  
   
  Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий реализуется следующим образом:  
@@ -75,7 +75,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 EXEC sp_pdw_log_user_data_masking 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_pdw_database_encryption &#40;Azure синапсе Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_database_encryption_regenerate_system_keys &#40;Azure синапсе Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   

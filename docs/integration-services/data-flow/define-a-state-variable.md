@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f72f8f6aff6b5861a9bf4ba91ff77ef6e80719b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbb4b442c50e8a40c0c0db20dd45073339ea48b8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349350"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195409"
 ---
 # <a name="define-a-state-variable"></a>Определение переменной состояния
 
@@ -85,12 +85,11 @@ ms.locfileid: "88349350"
   
  Не присваивайте переменной значение в составе ее определения. Значение должно быть задано задачей «Управление CDC».  
   
- Если намечено использовать задачу «Управление CDC» с параметром **Автоматическое сохранение состояния**, то переменная состояния CDC будет считываться из указанной таблицы состояния в базе данных и после обновления снова записываться в ту же таблицу при изменении ее значения. Дополнительные сведения о таблице состояния см. в разделах [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)и [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ Если намечено использовать задачу «Управление CDC» с параметром **Автоматическое сохранение состояния**, то переменная состояния CDC будет считываться из указанной таблицы состояния в базе данных и после обновления снова записываться в ту же таблицу при изменении ее значения. Дополнительные сведения о таблице состояния см. в разделах [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)и [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  Если не используется задача «Управление CDC» с параметром автоматического сохранения состояния, то необходимо загружать значение переменной из постоянного хранилища, в котором это значение было сохранено в последний раз при прогоне пакета, а затем снова записывать его в постоянное хранилище после завершения работы с текущим диапазоном обработки.  
   
 ## <a name="see-also"></a>См. также:  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
-  
+ [CDC Control Task Editor](../control-flow/cdc-control-task.md)  
   

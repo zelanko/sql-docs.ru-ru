@@ -1,5 +1,6 @@
 ---
-title: Создание конечного элемента (службы Master Data Services) | Документы Майкрософт
+description: Создание конечного элемента (службы Master Data Services)
+title: Создание конечного элемента
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a7204fb8183ed84390bd3eaec38b16833dd8eb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f5436cf2d553209a80ae5f9bb9f32b3df1c7d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257821"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Создание конечного элемента (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]создайте конечный элемент, если вам нужно добавить в систему основные данные. Если нужно добавить данные в массовом режиме, следует использовать промежуточные таблицы. Дополнительные сведения см. в разделе [Импорт данных из таблиц (службы Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md).  
+  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]создайте конечный элемент, если вам нужно добавить в систему основные данные. Если нужно добавить данные в массовом режиме, следует использовать промежуточные таблицы. Дополнительные сведения см. в разделе  [Импорт данных из таблиц &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  Также для импорта данных можно использовать [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -48,7 +49,7 @@ ms.locfileid: "67906746"
   
 4.  В строке меню наведите указатель на пункт **Сущности** и щелкните имя сущности, к которой нужно добавить элемент.  
   
-5.  Нажмите кнопку **Добавить элемент**.  
+5.  Нажмите кнопку **Добавить участника**.  
   
 6.  Заполните поля в области **Сведения** .  
   
@@ -56,12 +57,12 @@ ms.locfileid: "67906746"
   
      Дополнительные сведения о родительских атрибутах фильтров и атрибутах на основе домена см. в разделе [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md).  
   
-7.  Необязательный. В поле **Заметки** введите комментарий о том, для чего добавлен элемент. Заметку могут просматривать все пользователи, которые имеют доступ к элементу.  
+7.  Необязательный элемент. В поле **Заметки** введите комментарий о том, для чего добавлен элемент. Заметку могут просматривать все пользователи, которые имеют доступ к элементу.  
   
 8.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Создание объединенного элемента (службы Master Data Services)](../master-data-services/create-a-consolidated-member-master-data-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание &#40;объединенного элемента Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
   
   

@@ -39,12 +39,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8bde11240927cc7f20581c1f9a9fd7655b38f19
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 56eaaeb3dfc90ee9de1f5ee769417eb75c232e4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115929"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035821"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ UPDATE
 ```  
   
 ```syntaxsql 
--- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
+-- Syntax for Azure Synapse Analysis
 
 [ WITH <common_table_expression> [ ,...n ] ]
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
@@ -785,7 +785,7 @@ GO
 ```  
   
 ###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> Обновление строк в удаленной таблице  
- В примерах в этом разделе описаны способы обновления строк в удаленной целевой таблице с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../../t-sql/functions/rowset-functions-transact-sql.md).  
+ В примерах в этом разделе описаны способы обновления строк в удаленной целевой таблице с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../functions/opendatasource-transact-sql.md).  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>П. Обновление данных в удаленной таблице с использованием связанного сервера  
  В следующем примере обновляется таблица на удаленном сервере. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Затем имя связанного сервера `MyLinkedServer` указывается в качестве одного из четырех компонентов имени объекта в формате сервер.каталог.схема.объект. Обратите внимание, что необходимо указать действительное имя сервера для `@datasrc`.  
@@ -1190,9 +1190,8 @@ GO
  [Курсоры (Transact-SQL)](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
- [Функции для работы с изображениями и текстом (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Функции для работы с изображениями и текстом (Transact-SQL)](../functions/text-and-image-functions-textptr-transact-sql.md)   
  [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
  [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)    
- [Однобайтовые и многобайтовые кодировки](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
- 
+ [Однобайтовые и многобайтовые кодировки](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  

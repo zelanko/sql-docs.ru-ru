@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1056cfe7d80bdf97c97c344d3b9f3dfc4dc6fdcd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 754aff825e0da8fd888deafb927936599a4d8631
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494718"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196768"
 ---
 # <a name="manage-data-collection"></a>Управление сбором данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88494718"
   
 >**ВАЖНО!** В отличие от обычных хранимых процедур, в хранимых процедурах сборщика данных используются жестко типизированные параметры и не поддерживается автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет создавать и выполнять представленные образцы кода. Дополнительные сведения см. в статье [Семантический поиск](../../ssms/object/object-explorer.md). В качестве альтернативы можно создать запрос в любом редакторе и сохранить его в текстовом файле с расширением SQL. Выполнить запрос из командной строки Windows можно с помощью программы **sqlcmd** . Дополнительные сведения см. в статье [Программа sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет создавать и выполнять представленные образцы кода. Дополнительные сведения см. в статье [Семантический поиск](../../ssms/object/object-explorer.md). В качестве альтернативы можно создать запрос в любом редакторе и сохранить его в текстовом файле с расширением SQL. Выполнить запрос из командной строки Windows можно с помощью программы **sqlcmd** . Дополнительные сведения см. в статье [Программа sqlcmd](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Хранимые процедуры и представления  
  **Работа со сборщиком данных**  
@@ -174,7 +174,6 @@ ms.locfileid: "88494718"
   
 ## <a name="see-also"></a>См. также  
  [Выполнение хранимой процедуры](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Использование среды SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [Использование среды SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
-  
   

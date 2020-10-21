@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be188a87a06a91467a16862ea0a0d572e4f71b93
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: e3662722ae800aa078fe5ba58567d2c55efbb613
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227416"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187688"
 ---
 # <a name="case-transact-sql"></a>Выражение CASE (Transact-SQL)
 
@@ -51,12 +51,13 @@ ms.locfileid: "91227416"
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
-Simple CASE expression:   
+--Simple CASE expression:   
 CASE input_expression   
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
 END   
-Searched CASE expression:  
+
+--Searched CASE expression:  
 CASE  
      WHEN Boolean_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
@@ -197,7 +198,7 @@ SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
-         ELSE CountryRegionName END; 
+         ELSE CountryRegionName END;  
 ```  
   
 ### <a name="d-using-case-in-an-update-statement"></a>Г. Использование выражения CASE в инструкции UPDATE  
@@ -215,13 +216,13 @@ SET VacationHours =
     )  
 OUTPUT Deleted.BusinessEntityID, Deleted.VacationHours AS BeforeValue,   
        Inserted.VacationHours AS AfterValue  
-WHERE SalariedFlag = 0;  
+WHERE SalariedFlag = 0;   
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>Д. Использование выражения CASE в инструкции SET  
  В следующем примере выражение CASE используется в инструкции SET для функции `dbo.GetContactInfo` с табличным значением. В базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] все данные, связанные с людьми, хранятся в таблице `Person.Person`. Например, человек может быть сотрудником, представителем поставщика или заказчиком. Функция возвращает имя и фамилию человека с заданным `BusinessEntityID` и соответствующий тип контакта для этого пользователя. Выражение CASE в инструкции SET определяет отображаемое значение для столбца `ContactType` в зависимости от наличия столбца `BusinessEntityID` в таблицах `Employee`, `Vendor` или `Customer`.  
   
-```sql   
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID INT)  
@@ -287,13 +288,13 @@ SELECT BusinessEntityID, FirstName, LastName, ContactType
 FROM dbo.GetContactInformation(2200);  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, ContactType  
-FROM dbo.GetContactInformation(5);
+FROM dbo.GetContactInformation(5);  
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>Е. Использование выражения CASE в предложении HAVING  
  В следующем примере выражение CASE используется в предложении HAVING, чтобы ограничить строки, возвращаемые инструкцией SELECT. Инструкция возвращает максимальную почасовую ставку для каждой должности в таблице `HumanResources.Employee`. Предложение HAVING ограничивает должности, оставляя только те, которые заняты мужчинами с максимальной почасовой ставкой более 40 долларов или женщинами с максимальной почасовой ставкой более 42 долларов.  
   
-```sql  
+```sql 
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, MAX(ph1.Rate)AS MaximumRate  
@@ -306,7 +307,7 @@ HAVING (MAX(CASE WHEN Gender = 'M'
      OR MAX(CASE WHEN Gender  = 'F'   
         THEN ph1.Rate    
         ELSE NULL END) > 42.00)  
-ORDER BY MaximumRate DESC; 
+ORDER BY MaximumRate DESC;  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -333,7 +334,7 @@ ORDER BY ProductKey;
 ### <a name="h-using-case-in-an-update-statement"></a>З. Использование выражения CASE в инструкции UPDATE  
  В следующем примере выражение CASE используется в инструкции UPDATE, чтобы определить значение, установленное в столбце `VacationHours` для сотрудников, у которых столбец `SalariedFlag` имеет значение 0. Если при вычитании 10 часов из `VacationHours` получается отрицательное значение, `VacationHours` увеличивается на 40 часов. В противном случае значение `VacationHours` увеличивается на 20 часов.  
   
-```sql  
+```sql 
 -- Uses AdventureWorks   
   
 UPDATE dbo.DimEmployee  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 4539ce49614004d9187d8f503fe165eb14bee2b0
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 89f048ea2caf80412d3b8d607582016d8a88f8b7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088884"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115639"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Использование PowerShell в Windows для управления SQL Server на Linux
 
@@ -92,7 +92,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>Использование поставщика SQL Server для PowerShell
 
-В качестве альтернативы для подключения к экземпляру SQL Server можно использовать [поставщик SQL Server PowerShell](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  Этот поставщик позволяет работать с экземпляром SQL Server из командной строки так же, как с древовидной структурой в обозревателе объектов.  По умолчанию этот поставщик представлен в виде диска PSDrive с именем `SQLSERVER:\`, который может использоваться для подключения к экземплярам SQL Server, доступным вашей учетной записи домена, и работы с ними.  Дополнительные сведения о настройке проверки подлинности Active Directory для SQL Server на Linux см. в разделе [Шаги настройки](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps).
+В качестве альтернативы для подключения к экземпляру SQL Server можно использовать [поставщик SQL Server PowerShell](../powershell/sql-server-powershell-provider.md).  Этот поставщик позволяет работать с экземпляром SQL Server из командной строки так же, как с древовидной структурой в обозревателе объектов.  По умолчанию этот поставщик представлен в виде диска PSDrive с именем `SQLSERVER:\`, который может использоваться для подключения к экземплярам SQL Server, доступным вашей учетной записи домена, и работы с ними.  Дополнительные сведения о настройке проверки подлинности Active Directory для SQL Server на Linux см. в разделе [Шаги настройки](./sql-server-linux-active-directory-auth-overview.md#configuration-steps).
 
 Также вы можете использовать проверку подлинности SQL в поставщике SQL Server PowerShell. Для этого с помощью командлета `New-PSDrive` создайте новый диск PSDrive и укажите учетные данные для подключения.
 
@@ -128,7 +128,7 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-Чтобы просмотреть все базы данных в вашем экземпляре, можно использовать командлет [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase).
+Чтобы просмотреть все базы данных в вашем экземпляре, можно использовать командлет [Get-SqlDatabase](/powershell/module/sqlserver/Get-SqlDatabase).
 
 ## <a name="examine-sql-server-error-logs"></a>Проверка журналов ошибок SQL Server
 
@@ -152,5 +152,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>См. также раздел
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
-- [Командлеты SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)
+- [Командлеты SqlServer](/powershell/module/sqlserver)

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484491"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194706"
 ---
 # <a name="connect-to-the-teradata-source"></a>Подключение к источнику Teradata
 
@@ -31,7 +31,7 @@ ms.locfileid: "88484491"
 
 Вы можете регистрировать вызовы, которые источник Teradata передает в API-интерфейс Teradata Parallel Transporter (TPT). Для этого включите ведение журнала пакета, а затем выберите **диагностическое** событие на уровне пакета.
 
-Можно зарегистрировать вызовы ODBC, которые источник Teradata передает в драйвер ODBC Teradata, включив трассировку диспетчера драйверов ODBC. Дополнительные сведения см. в разделе [Создание трассировки ODBC с помощью Администратора источников данных ODBC](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
+Можно зарегистрировать вызовы ODBC, которые источник Teradata передает в драйвер ODBC Teradata, включив трассировку диспетчера драйверов ODBC. Дополнительные сведения см. в разделе [Создание трассировки ODBC с помощью Администратора источников данных ODBC](../../odbc/admin/setting-tracing-options.md).
 
 ## <a name="parallelism"></a>Parallelism
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e1c63721be4575f49a6f72e2eeb8d6520cda9af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbc245edb977a2d499f82c6a4dcaa066b0c9259e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457030"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195863"
 ---
 # <a name="set-package-properties"></a>Установка свойств пакета
 
@@ -64,7 +64,7 @@ ms.locfileid: "88457030"
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>Установка свойств пакета в окне «Свойства»  
   
--   [Установка свойств переменной пакета](https://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
+-   [Установка свойств переменной пакета]()  
   
 ## <a name="properties-by-category"></a>Свойства, упорядоченные по категориям  
  В следующих таблицах перечислены свойства пакета, упорядоченные по категориям.  
@@ -172,4 +172,3 @@ ms.locfileid: "88457030"
 4.  Отредактируйте свойства пакета в окне **Свойства** .  
   
 5.  В меню **Файл** выберите пункт **Сохранить выбранные элементы** для сохранения измененного пакета.  
-  

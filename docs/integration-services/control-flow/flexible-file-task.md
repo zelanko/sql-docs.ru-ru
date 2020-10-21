@@ -13,12 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a84bfa9b7aa9fc50d16268005ac02868f11784b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93cecf5b261a888375ead03aac1eec07b76c63d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393558"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196498"
 ---
 # <a name="flexible-file-task"></a>Задача "Гибкая работа с файлами"
 
@@ -29,7 +29,7 @@ ms.locfileid: "88393558"
 
 - Локальная файловая система
 - [Хранилище BLOB-объектов Azure](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage 2-го поколения](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage 2-го поколения](/azure/storage/blobs/data-lake-storage-introduction)
 
 Задача "Гибкая работа с файлами" входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -62,12 +62,12 @@ ms.locfileid: "88393558"
 ***Примечания о настройке разрешений для субъекта-службы***
 
 Для работы **тестового подключения** (к хранилищу BLOB-объектов или Data Lake Storage 2-го поколения) субъекту-службе следует назначить по крайней мере роль **Читатель данных в хранилище BLOB-объектов** в учетной записи хранения.
-Это осуществляется посредством [управление доступом на основе ролей (RBAC)](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+Это осуществляется посредством [управление доступом на основе ролей (RBAC)](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
 Для хранилища BLOB-объектов разрешения на чтение и запись предоставляются путем назначения по крайней мере ролей **Читатель данных в хранилище BLOB-объектов** и **Участник данных в хранилище BLOB-объектов** соответственно.
 
-Для Data Lake Storage 2-го поколения разрешение определяется как посредством управления доступом на основе ролей (RBAC), так и с помощью [списков управления доступом (ACL)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
-Обратите внимание на то, что списки ACL настраиваются с помощью идентификатора объекта (OID) субъекта-службы для регистрации приложения, как описано [здесь](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Для Data Lake Storage 2-го поколения разрешение определяется как посредством управления доступом на основе ролей (RBAC), так и с помощью [списков управления доступом (ACL)](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Обратите внимание на то, что списки ACL настраиваются с помощью идентификатора объекта (OID) субъекта-службы для регистрации приложения, как описано [здесь](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
 Для конфигурации RBAC, напротив, используется идентификатор приложения (клиента).
 Когда субъекту безопасности предоставляются разрешения на данные RBAC посредством встроенной или пользовательской роли, эти разрешения сначала оцениваются при авторизации запроса.
 Если запрошенная операция разрешена в соответствии с назначенными субъекту безопасности ролями RBAC, авторизация происходит немедленно и дополнительные проверки ACL не проводятся.
@@ -76,4 +76,4 @@ ms.locfileid: "88393558"
 - Для разрешения на чтение необходимо предоставить по крайней мере разрешение на **выполнение** начиная с исходной файловой системы, а также разрешение на **чтение** копируемых файлов. Можно также предоставить разрешение не ниже **чтения данных из хранилища BLOB-объектов** с помощью RBAC.
 - Для разрешения на запись необходимо предоставить по крайней мере разрешение на **выполнение** начиная с файловой системы приемника, а также разрешение на **запись** в папку приемника. Можно также предоставить разрешение не ниже **участника данных в хранилище BLOB-объектов** с помощью RBAC.
 
-Подробные сведения см. в [этой статье](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
+Подробные сведения см. в [этой статье](/azure/storage/blobs/data-lake-storage-access-control).

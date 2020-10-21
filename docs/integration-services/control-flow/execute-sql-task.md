@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6138e30bf4794fff847dd7a0750d59c8d8fb884a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8155db361eeffd3b84ba1aadf313ecef4652e9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394170"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196546"
 ---
 # <a name="execute-sql-task"></a>Задача "Выполнение SQL"
 
@@ -69,7 +69,7 @@ ms.locfileid: "88394170"
 >  Задача «Выполнение SQL» не может провести синтаксический анализ допустимых инструкций SQL, созданных за ее пределами.  
   
 > [!NOTE]  
->  Задача «Выполнение SQL» использует значение перечисления **RecognizeAll** ParseMode. Дополнительные сведения см. в разделе [Пространство имен ManagedBatchParser](https://go.microsoft.com/fwlink/?LinkId=223617).  
+>  Задача «Выполнение SQL» использует значение перечисления **RecognizeAll** ParseMode. Дополнительные сведения см. в разделе [Пространство имен ManagedBatchParser](/dotnet/api/managedbatchparser).  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>Отправка нескольких инструкций в пакете  
  Если в задачу «Выполнение SQL» включить несколько инструкций, их можно сгруппировать и запускать как пакет. Для обозначения окончания пакета используется команда GO. Все инструкции SQL, находящиеся между двумя командами GO, отправляются в одном пакете поставщику OLE DB для выполнения. Команда SQL может содержать несколько пакетов, разделенных командами GO.  
@@ -115,7 +115,7 @@ ms.locfileid: "88394170"
 ## <a name="general-page---execute-sql-task-editor"></a>Страница "Общие" — редактор задачи "Выполнение SQL"
  Используйте страницу **Общие** диалогового окна **Редактор задачи «Выполнение SQL»** для настройки задачи «Выполнение SQL» и формирования инструкции SQL, которую запускает задача.  
 
-Дополнительные сведения о языке Transact-SQL см. в [Справочнике по Transact-SQL (компонент Database Engine)](../../t-sql/transact-sql-reference-database-engine.md).  
+Дополнительные сведения о языке Transact-SQL см. в [Справочнике по Transact-SQL (компонент Database Engine)](../../t-sql/language-reference.md).  
   
 ### <a name="static-options"></a>Статические параметры  
  **имя**;  
@@ -186,19 +186,19 @@ ms.locfileid: "88394170"
  **SQLStatement**  
  Введите инструкцию SQL для выполнения в окне параметров или нажмите кнопку обзора (...) для ввода инструкции SQL в диалоговом окне **Ввод SQL-запроса**, либо нажмите кнопку **Создать запрос** для составления инструкции при помощи диалогового окна **Построитель запросов**.  
   
- **См. также:** [Построитель запросов](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **См. также:** [Построитель запросов](../integration-services-ssis-queries.md)  
   
 #### <a name="sqlsourcetype--file-connection"></a>WQLQuerySource = Подключение файла  
  **FileConnection**  
  Выберите существующий диспетчер подключений файлов или создайте его, щелкнув пункт \<**New connection...**>.  
   
- **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../connection-manager/file-connection-manager.md).  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Переменная  
  **SourceVariable**  
  Выберите существующую переменную или щелкните \<**New variable...**>, чтобы создать новую.  
   
- **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Страница "Сопоставление параметров" — редактор задачи "Выполнение SQL"
 Используйте страницу **Сопоставление параметров** диалогового окна **Редактор задачи «Выполнение SQL»** для сопоставления переменных с параметрами в инструкции SQL.  
@@ -385,7 +385,7 @@ ms.locfileid: "88394170"
 |Тип соединений|Синтаксис EXEC|  
 |---------------------|-----------------|  
 |EXCEL и OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](../../odbc/reference/develop-app/procedure-parameters.md)справочника по программированию ODBC в библиотеке MSDN.|  
 |ADO|Если для параметра IsQueryStoredProcedure задано значение **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Если для параметра IsQueryStoredProcedure задано значение **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Если для параметра IsQueryStoredProcedure задано значение **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Если для параметра IsQueryStoredProcedure задано значение **True**, `uspGetBillOfMaterials`|  
   
@@ -448,7 +448,7 @@ ms.locfileid: "88394170"
     |ODBC|1, 2, 3, ...|  
     |EXCEL и OLE DB|0, 1, 2, 3, ...|  
   
-10. Выберите переменную из списка **Имя переменной** . Дополнительные сведения см. в разделе [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+10. Выберите переменную из списка **Имя переменной** . Дополнительные сведения см. в разделе [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](../integration-services-ssis-variables.md).  
   
 11. В списке **Направление** укажите, является ли параметр входом, выходом или возвращаемым значением.  
   
@@ -474,7 +474,7 @@ ms.locfileid: "88394170"
 |Тип соединений|Синтаксис EXEC|  
 |---------------------|-----------------|  
 |EXCEL и OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](../../odbc/reference/develop-app/procedure-parameters.md)справочника по программированию ODBC в библиотеке MSDN.|  
 |ADO|Если для параметра IsQueryStoreProcedure задано значение **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Если для параметра IsQueryStoreProcedure задано значение **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Для параметра IsQueryStoreProcedure задано значение **True**.<br /><br /> `myStoredProcedure`|  
   
@@ -557,7 +557,7 @@ ms.locfileid: "88394170"
   
 8.  Чтобы добавить сопоставление результирующего набора, щелкните **Добавить**.  
   
-9. В списке **Имя переменной** выберите переменную либо создайте новую переменную. Дополнительные сведения см. в разделе [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+9. В списке **Имя переменной** выберите переменную либо создайте новую переменную. Дополнительные сведения см. в разделе [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](../integration-services-ssis-variables.md).  
   
 10. В списке **Имя результата** при необходимости измените имя результирующего набора.  
   
@@ -579,5 +579,4 @@ ms.locfileid: "88394170"
   
 |Запись журнала|Описание|  
 |---------------|-----------------|  
-|**ExecuteSQLExecutingQuery**|Предоставляет сведения об этапах выполнения инструкции SQL. Записи журнала формируются в тот момент, когда задача устанавливает соединение с базой данных, когда задача приступает к подготовке инструкции SQL, и после того, как завершается выполнение инструкции SQL. Запись журнала для этапа подготовки содержит инструкцию SQL, которая используется задачей.|  
-
+|**ExecuteSQLExecutingQuery**|Предоставляет сведения об этапах выполнения инструкции SQL. Записи журнала формируются в тот момент, когда задача устанавливает соединение с базой данных, когда задача приступает к подготовке инструкции SQL, и после того, как завершается выполнение инструкции SQL. Запись журнала для этапа подготовки содержит инструкцию SQL, которая используется задачей.|

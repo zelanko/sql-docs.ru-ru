@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088760"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115805"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Устранение неполадок в SQL Server на Linux
 
@@ -42,11 +42,11 @@ ms.locfileid: "88088760"
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Исключение из этой методики связано с виртуальными машинами Azure. Для виртуальных машин Azure [найдите общедоступный IP-адрес для виртуальной машины на портале Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > Исключение из этой методики связано с виртуальными машинами Azure. Для виртуальных машин Azure [найдите общедоступный IP-адрес для виртуальной машины на портале Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - Если это применимо, убедитесь, что открыт порт SQL Server (по умолчанию 1433) в брандмауэре.
 
-- Для виртуальных машин Azure убедитесь в наличии [правила группы безопасности сети для порта SQL Server по умолчанию](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
+- Для виртуальных машин Azure убедитесь в наличии [правила группы безопасности сети для порта SQL Server по умолчанию](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Убедитесь, что имя пользователя и пароль не содержат опечатки, лишние пробелы или неверный регистр.
 
@@ -90,7 +90,7 @@ ms.locfileid: "88088760"
    ```
 
 > [!TIP]
-> Дополнительные советы по устранению неполадок в Docker см. в статье [Устранение неполадок с контейнерами Docker в SQL Server](sql-server-linux-configure-docker.md#troubleshooting).
+> Дополнительные советы по устранению неполадок в Docker см. в статье [Устранение неполадок с контейнерами Docker в SQL Server](./sql-server-linux-docker-container-troubleshooting.md).
 
 ## <a name="access-the-log-files"></a>Доступ к файлам журнала
    
@@ -109,7 +109,7 @@ ms.locfileid: "88088760"
    ```
 ## <a name="extended-events"></a>Расширенные события
 
-Расширенные события можно запрашивать с помощью команды SQL.  Дополнительные сведения о расширенных событиях см. [здесь](https://technet.microsoft.com/library/bb630282.aspx).
+Расширенные события можно запрашивать с помощью команды SQL.  Дополнительные сведения о расширенных событиях см. [здесь](../relational-databases/extended-events/extended-events.md).
 
 ## <a name="crash-dumps"></a>Аварийные дампы 
 
@@ -197,7 +197,7 @@ ms.locfileid: "88088760"
 
 - [Хранилище запросов](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Динамические административные представления системы](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Панель мониторинга производительности в SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+- [Панель мониторинга производительности в SQL Server Management Studio](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## <a name="common-issues"></a>Распространенные проблемы
 

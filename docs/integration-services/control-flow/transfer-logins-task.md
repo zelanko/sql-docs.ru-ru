@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ff8e4b35d30e9b2504dd128ca9694007647f5eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7aa2c4e59ced60c31467b13a4de154887c84f52
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477935"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195416"
 ---
 # <a name="transfer-logins-task"></a>Задача «Передача имен входа»
 
@@ -40,7 +40,7 @@ ms.locfileid: "88477935"
  Задача «Передача имен входа» не сообщает о ходе выполнения передачи имен; она сообщает лишь о выполнении 0% и 100%.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, определяемое свойством **ExecutionValue** задачи, возвращает число переданных имен входа. Назначив пользовательскую переменную в качестве свойства **ExecValueVariable** задачи "Передача имен входа", можно сделать сведения о передаче имен входа доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Значение выполнения, определяемое свойством **ExecutionValue** задачи, возвращает число переданных имен входа. Назначив пользовательскую переменную в качестве свойства **ExecValueVariable** задачи "Передача имен входа", можно сделать сведения о передаче имен входа доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача имен входа» позволяет настраивать запись в журнал следующих событий:  
@@ -79,7 +79,7 @@ ms.locfileid: "88477935"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-logins-task"></a>Программная настройка задачи «Передача имен входа»  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  
@@ -140,4 +140,3 @@ ms.locfileid: "88477935"
   
  **CopySids**  
  Определяет, будут ли скопированы на целевой сервер идентификаторы безопасности, связанные с именами входа. Параметр**CopySids** должен иметь значение **True** , если задача «Передача имен входа» используется вместе с задачей «Передача базы данных». В противном случае скопированные имена входа не будут распознаны переданными базами данных.  
-  

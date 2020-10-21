@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f2d241fa54c59eed331c1377f828aec980691e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d9e438aaef2df393a73e7050265b3f24ecf2d5b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430206"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196414"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Приступая к работе с простым примером мастера импорта и экспорта
 
@@ -25,7 +25,7 @@ ms.locfileid: "88430206"
 Сведения о том, что следует ожидать от мастера экспорта и импорта SQL Server, на примере типичного сценария — импорта данных из электронной таблицы Excel в базу данных SQL Server. Даже если вы планируете использовать другой источник и другое назначение, в этом разделе вы найдете основную часть сведений о работе с мастером.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Предварительное требование — у вас на компьютере установлен этот мастер?
-Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Исходные данные для этого примера Excel
 Это исходные данные, которые вы собираетесь скопировать, — небольшая таблица из двух столбцов на листе WizardWalkthrough в книге WizardWalkthrough.xlsx Excel.

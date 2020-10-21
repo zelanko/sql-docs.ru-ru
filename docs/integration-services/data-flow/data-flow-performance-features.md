@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf9cc8d20f6cf8c380524806700373229cf22995
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480886"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196445"
 ---
 # <a name="data-flow-performance-features"></a>Возможности для повышения производительности потока данных
 
@@ -139,7 +139,7 @@ ms.locfileid: "89480886"
  Если в потоке данных необходимо создать несколько статистических выражений, попробуйте использовать одно преобразование «Статистическая обработка» вместо создания нескольких преобразований. Такой подход, в частности, повысит производительность, если статистическая обработка является подмножеством другой статистической обработки, поскольку преобразование сможет оптимизировать внутреннее хранилище и просматривать входящие данные только один раз. Например, если статистическое выражение использует предложение GROUP BY и статистическое выражение AVG, объединение их в одно преобразование может повысить производительность. Однако выполнение нескольких статистических выражений в пределах одного преобразования «Агрегатная обработка» сериализует операции статистической обработки, и таким образом производительность может не повышаться при независимом вычислении нескольких статистических выражений.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Преобразования «Нечеткий уточняющий запрос» и «Нечеткое группирование»  
- Сведения по оптимизации производительности преобразований «Нечеткий уточняющий запрос» и «Нечеткое группирование» см. в технической документации [Преобразования «Нечеткий уточняющий запрос» и «Нечеткое группирование» в службах SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
+ Сведения по оптимизации производительности преобразований «Нечеткий уточняющий запрос» и «Нечеткое группирование» см. в технической документации [Преобразования «Нечеткий уточняющий запрос» и «Нечеткое группирование» в службах SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90)).  
   
 #### <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»  
  Сделайте минимальным объем ссылочных данных в памяти. Для этого введите инструкцию SELECT, которая запрашивает только нужные столбцы. В этом случае производительность будет выше, чем при выборе целой таблицы или представления, поскольку в последнем случае возвращается большой объем ненужных данных.  
@@ -175,15 +175,15 @@ ms.locfileid: "89480886"
 ## <a name="related-content"></a>См. также  
  **Статьи и сообщения в блогах**  
   
--   Техническая статья [Службы SQL Server 2005 Integration Services: стратегия повышения производительности](https://go.microsoft.com/fwlink/?LinkId=98899)на сайте technet.microsoft.com  
+-   Техническая статья [Службы SQL Server 2005 Integration Services: стратегия повышения производительности](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10))на сайте technet.microsoft.com  
   
--   Техническая статья [Службы Integration Services: методы настройки производительности](https://go.microsoft.com/fwlink/?LinkId=98900)на сайте technet.microsoft.com  
+-   Техническая статья [Службы Integration Services: методы настройки производительности](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10))на сайте technet.microsoft.com  
   
 -   Техническая статья [Повышение пропускной способности конвейеров путем разделения синхронных преобразований на несколько задач](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) в _руководстве SQLCAT по бизнес-аналитике и анализу_
   
--   Техническая статья [Руководство по производительности загрузки данных](https://go.microsoft.com/fwlink/?LinkId=220816)на сайте msdn.microsoft.com.  
+-   Техническая статья [Руководство по производительности загрузки данных](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))на сайте msdn.microsoft.com.  
   
--   Техническая статья [We Loaded 1TB in 30 Minutes with SSIS, and So Can You (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=220817)на сайте msdn.microsoft.com.  
+-   Техническая статья [We Loaded 1TB in 30 Minutes with SSIS, and So Can You (на английском языке)](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100))на сайте msdn.microsoft.com.  
   
 -   Техническая статья [Top 10 SQL Server Integration Services Best Practices (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=220818)на сайте sqlcat.com.  
   
@@ -195,18 +195,17 @@ ms.locfileid: "89480886"
   
 -   Серия видеоматериалов [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)(Проектирование и настройка для повышения производительности пакетов служб SSIS на предприятии (видеоматериалы по SQL Server))  
   
--   Видеоматериал [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686901.aspx)(Настройка потока данных пакетов служб SSIS в выпуске Enterprise (видеоматериал по SQL Server)) на сайте technet.microsoft.com  
+-   Видеоматериал [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](/previous-versions/ff686901(v=msdn.10))(Настройка потока данных пакетов служб SSIS в выпуске Enterprise (видеоматериал по SQL Server)) на сайте technet.microsoft.com  
   
--   Видеоматериал [Understanding SSIS Data Flow Buffers (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686905.aspx)(Основные сведения о буферах потока данных служб SSIS (видеоматериал по SQL Server)) на сайте technet.microsoft.com  
+-   Видеоматериал [Understanding SSIS Data Flow Buffers (SQL Server Video)](/previous-versions/ff686905(v=msdn.10))(Основные сведения о буферах потока данных служб SSIS (видеоматериал по SQL Server)) на сайте technet.microsoft.com  
   
 -   Видеоматериал [Microsoft SQL Server Integration Services Performance Design Patterns](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)на сайте channel9.msdn.com.  
   
 -   Презентация [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=217660)на сайте sqlcat.com.  
   
--   Видеоматериал [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)на сайте technet.microsoft.com.  
+-   Видеоматериал [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10))на сайте technet.microsoft.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Инструменты устранения неполадок при разработке пакета](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Устранение неполадок инструментов с помощью отчетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
   

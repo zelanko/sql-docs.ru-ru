@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: cfe799e9a0abb8731642ee8b2d8d293c8a8851a2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784851"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115942"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Настройка группы доступности Always On SQL Server для обеспечения высокой доступности в Linux
 
@@ -80,7 +80,7 @@ ms.locfileid: "91784851"
 >[!NOTE]
 >Группы доступности могут содержать вторичные синхронные или асинхронные реплики. 
 
-Создайте группу доступности для обеспечения высокой доступности в Linux. Используйте инструкцию [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql) с `CLUSTER_TYPE = EXTERNAL`. 
+Создайте группу доступности для обеспечения высокой доступности в Linux. Используйте инструкцию [CREATE AVAILABILITY GROUP](../t-sql/statements/create-availability-group-transact-sql.md) с `CLUSTER_TYPE = EXTERNAL`. 
 
 * Группа доступности — `CLUSTER_TYPE = EXTERNAL`. Указывает, что группой доступности управляет сущность внешнего кластера. Примером сущности внешнего кластера является Pacemaker. Если тип кластера группы доступности является внешним, 
 

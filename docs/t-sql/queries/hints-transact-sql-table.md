@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 830b03042589ac1e9f03e94b134a48d510a37c31
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288256"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035840"
 ---
 # <a name="hints-transact-sql---table"></a>Табличные указания (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -398,7 +398,7 @@ GO
 Оптимизатор запросов не учитывает указание индекса, если в параметрах SET нет требуемых значений для отфильтрованных индексов. Дополнительные сведения см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="using-noexpand"></a>Использование NOEXPAND  
-Аргумент NOEXPAND применяется только для *индексированных представлений*. Индексированное представление — это представление с созданным на нем уникальным кластеризованным индексом. Если запрос содержит ссылки на столбцы, присутствующие как в индексированном представлении, так и в базовых таблицах, а оптимизатор запросов определяет, что использование индексированного представления является лучшим методом выполнения запроса, оптимизатор будет использовать индекс представления. Эта функциональная возможность называется *сопоставлением индексированного представления*. До [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) автоматическое использование индексированного представления оптимизатором запросов поддерживали только определенные выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. См. сведения о выпусках и поддерживаемых функциях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), [2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md) и [2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
+Аргумент NOEXPAND применяется только для *индексированных представлений*. Индексированное представление — это представление с созданным на нем уникальным кластеризованным индексом. Если запрос содержит ссылки на столбцы, присутствующие как в индексированном представлении, так и в базовых таблицах, а оптимизатор запросов определяет, что использование индексированного представления является лучшим методом выполнения запроса, оптимизатор будет использовать индекс представления. Эта функциональная возможность называется *сопоставлением индексированного представления*. До [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) автоматическое использование индексированного представления оптимизатором запросов поддерживали только определенные выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. См. сведения о выпусках и поддерживаемых функциях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [2016](../../sql-server/editions-and-components-of-sql-server-2016.md), [2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md) и [2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
 Чтобы оптимизатор запросов учитывал индексированные представления для сопоставления или применял индексированное представление, обращение к которому производится с использованием указания NOEXPAND, нужно задать для следующих параметров SET значение ON.  
 
@@ -482,5 +482,4 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [Указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)   
  [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)  
-  
   

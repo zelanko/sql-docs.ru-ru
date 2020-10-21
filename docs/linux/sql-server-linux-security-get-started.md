@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 031005dcb6a5353e9e4f0b73a7a45d667d2212e7
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 4a9137ad71947d222d246df046c6ab573fb4500d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088811"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115817"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Пошаговое руководство по функциям обеспечения безопасности в SQL Server на Linux
 
@@ -250,7 +250,7 @@ SET ENCRYPTION ON;
 > [!WARNING]
 >  Файлы резервных копий баз данных, в которых включено TDE, также шифруются с помощью ключа шифрования базы данных. Поэтому для восстановления таких резервных копий необходимо иметь сертификат, защищающий ключ шифрования базы данных. Это значит, что помимо резервного копирования базы данных обязательно необходимо сохранять резервные копии сертификатов серверов, чтобы не допустить потери данных. Если сертификат станет недоступным, это приведет к потере данных. Дополнительные сведения см. в статье [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-Дополнительные сведения о TDE см. в статье [Прозрачное шифрование данных (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
+Дополнительные сведения о TDE см. в статье [Прозрачное шифрование данных (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md).   
 
 
 ## <a name="configure-backup-encryption"></a>Настройка шифрования резервных копий

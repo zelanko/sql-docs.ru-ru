@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 422ab559997e5dc33a0d8155c198cb23cba5698b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076669"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035897"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Справочник по Transact-SQL (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "90076669"
 В этом разделе приводится общее описание поиска и использования разделов справки по Microsoft [!INCLUDE[tsql](../includes/tsql-md.md)] (T-SQL). T-SQL является ключом к использованию продуктов и служб Microsoft SQL. Все средства и приложения, которые взаимодействуют с базами данных SQL, делают это путем отправки команд T-SQL.  
 
 ## <a name="t-sql-compliance-to-sql-standard"></a>Соответствие T-SQL стандарту SQL
-Подробные технические документы о реализации определенных стандартов в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] см. в [документации по поддержке стандартов Microsoft SQL Server](https://docs.microsoft.com/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2).
+Подробные технические документы о реализации определенных стандартов в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] см. в [документации по поддержке стандартов Microsoft SQL Server](/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2).
 
 ## <a name="tools-that-use-t-sql"></a>Средства, использующие T-SQL
 Ниже приведены лишь некоторые средства Майкрософт, использующие команды T-SQL.
@@ -43,7 +43,7 @@ ms.locfileid: "90076669"
 Чтобы найти разделы T-SQL, воспользуйтесь полем поиска в верхней правой части или оглавлением в левой части этой страницы. Можно также ввести ключевое слово T-SQL в окне редактора запросов среды Management Studio и нажать клавишу F1. 
   
 ## <a name="find-system-views"></a>Поиск системных представлений
-Чтобы найти системные таблицы, представления, функции и процедуры, см. ссылки в разделе [Использование реляционных баз данных](../relational-databases/database-features.md) в документации по SQL.
+Чтобы найти системные таблицы, представления, функции и процедуры, см. ссылки в разделе [Использование реляционных баз данных](../relational-databases/databases/databases.md) в документации по SQL.
 
 - [Представления системного каталога](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [Представления совместимости системы](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
@@ -67,7 +67,7 @@ ms.locfileid: "90076669"
 В некоторых случаях функциональность раздела используется продуктом или службой, но поддерживаются не все аргументы. В этом случае дополнительные разделы **относится к** вставляются в описания соответствующих аргументов в теле раздела.  
  
 ## <a name="get-help-from-microsoft-q--a"></a>Получение помощи на странице вопросов и ответов на сайте Майкрософт  
-Справку в Интернете ищите на [сайте Майкрософт на странице вопросов и ответов на форуме по Transact-SQL](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
+Справку в Интернете ищите на [сайте Майкрософт на странице вопросов и ответов на форуме по Transact-SQL](/answers/topics/sql-server-transact-sql.html).  
  
 ## <a name="see-other-language-references"></a>Справочники по другим языкам
 Документация по SQL включает и другие справочники по языкам.
@@ -75,7 +75,7 @@ ms.locfileid: "90076669"
 - [Справочник по языку XQuery](../xquery/xquery-language-reference-sql-server.md)
 - [Справочник по языку служб Integration Services](../integration-services/integration-services-language-reference.md)
 - [Справочник по языку репликации](../relational-databases/replication/replication-language-reference.md)
-- [Справочник по языку служб Analysis Services](../mdx/analysis-services-language-reference.md)  
+- [Справочник по языку служб Analysis Services](../mdx/multidimensional-expressions-mdx-reference.md)  
 
 ## <a name="next-steps"></a>Дальнейшие действия
 Теперь, когда вы знаете, как найти справочные разделы T-SQL, можно:
@@ -83,5 +83,4 @@ ms.locfileid: "90076669"
 - пройти краткий учебник по разработке на T-SQL в разделе [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
 - См. раздел [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
-  
   

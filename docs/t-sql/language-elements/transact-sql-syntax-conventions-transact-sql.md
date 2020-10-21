@@ -29,12 +29,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 427310d9693e4845290b1cbb06dba13a3d3101d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6525a5ba3352a2d841cea556bcaffc40c1ce5472
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467629"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037116"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Синтаксические обозначения в Transact-SQL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -118,10 +118,8 @@ _object\_name_
 К продукту относится общая тема статьи, но в некоторых случаях не все аргументы поддерживаются. Например, пользователи автономной базы данных впервые появились в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Инструкцию **CREATE USER** можно применять в любом продукте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако синтаксис **WITH PASSWORD** не может использоваться с более ранними версиями. Дополнительные разделы **Область применения** вставляются в описания соответствующих аргументов в статье.  
   
 ## <a name="see-also"></a>См. также:  
-[Справочник по Transact-SQL &#40;ядро СУБД&#41;](../../t-sql/transact-sql-reference-database-engine.md)    
+[Справочник по Transact-SQL &#40;ядро СУБД&#41;](../language-reference.md)    
 [Зарезервированные ключевые слова &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
-[Проблемы проектирования Transact-SQL](https://msdn.microsoft.com/library/dd193411.aspx)    
-[Проблемы именования Transact-SQL](https://msdn.microsoft.com/library/dd193246.aspx)        
-[Проблемы производительности Transact-SQL](https://msdn.microsoft.com/library/dd172117.aspx)    
-
-
+[Проблемы проектирования Transact-SQL](/previous-versions/visualstudio/visual-studio-2010/dd193411(v=vs.100))    
+[Проблемы именования Transact-SQL](/previous-versions/visualstudio/visual-studio-2010/dd193246(v=vs.100))        
+[Проблемы производительности Transact-SQL](/previous-versions/visualstudio/visual-studio-2010/dd172117(v=vs.100))

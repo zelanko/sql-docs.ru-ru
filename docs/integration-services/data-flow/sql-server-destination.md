@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2e7bc60bcfd7578d70528d92ef025370c28134e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425806"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194763"
 ---
 # <a name="sql-server-destination"></a>назначение «SQL Server»
 
@@ -99,7 +99,7 @@ ms.locfileid: "88425806"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства назначения «SQL Server»](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88425806"
   
 -   Техническая статья [В системах, поддерживающих контроль учетных записей, может быть получена ошибка «Не удалось подготовить массовую вставку данных служб SSIS»](https://go.microsoft.com/fwlink/?LinkId=199482)на сайте support.microsoft.com.  
   
--   Техническая статья [Руководство по производительности загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233700)на сайте msdn.microsoft.com.  
+-   Техническая статья [Руководство по производительности загрузки данных](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))на сайте msdn.microsoft.com.  
   
 -   Техническая статья [Использование служб SQL Server Integration Services для массовой загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233701)размещена на сайте simple-talk.com.  
   
@@ -206,5 +206,4 @@ ms.locfileid: "88425806"
   
 ## <a name="see-also"></a>См. также:  
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
-  
   

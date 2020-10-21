@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5696075b36f09a57e4de06bebdd4f228ee8e4364
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392280"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194679"
 ---
 # <a name="audit-transformation"></a>преобразование «Аудит»
 
@@ -55,7 +55,7 @@ ms.locfileid: "88392280"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -82,5 +82,4 @@ ms.locfileid: "88392280"
 |**User name**|Укажите имя входа пользователя, который запустил пакет.|  
 |**Имя задачи**|Укажите имя задачи потока данных, с которой связано преобразование «Аудит».|  
 |**Идентификатор задачи**|Укажите идентификатор GUID, который уникально идентифицирует задачу потока данных, с которой связано преобразование «Аудит».|  
-  
   

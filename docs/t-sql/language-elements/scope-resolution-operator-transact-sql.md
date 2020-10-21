@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1372950c3262f86ca1b0d85ca7026d6560f4afb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c319d0e7e67605f09954e88434842be9b8ae1df
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459279"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195467"
 ---
 # <a name="-scope-resolution-transact-sql"></a>:: (разрешение области) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88459279"
 ## <a name="examples"></a>Примеры  
  В следующем примере показано, как применять оператор разрешения области для доступа к элементу `GetRoot()` типа данных `hierarchyid`.  
   
-```  
+```sql  
 DECLARE @hid hierarchyid;  
 SELECT @hid = hierarchyid::GetRoot();  
 PRINT @hid.ToString();  

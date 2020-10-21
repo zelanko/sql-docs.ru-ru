@@ -1,6 +1,7 @@
 ---
-title: Надстройка Master Data Services для Microsoft Excel | Документы Майкрософт
-ms.custom: microsoft-excel-add-in
+title: Обзор
+description: Узнайте, как загружать данные из Master Data Services в Excel и публиковать их обратно в Master Data Services с помощью надстройка Master Data Services для Excel.
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec72b2bd94d1ac7fbf68943be3081f39ed2d3e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec0059471e10db953db26cfdd4c7b620a3378316
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074588"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "92257801"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Надстройка Master Data Services для Microsoft Excel
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Благодаря [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]вы можете загружать отфильтрованные списки данных из Master Data Services (MDS) в Excel, где с ними можно работать так же, как и с любыми другими данными. Завершив работу, можно снова опубликовать данные в MDS, где они централизованно хранятся. Система безопасности определяет, какие именно данные вы можете просматривать и изменять.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "68074588"
 ## <a name="downloads"></a>Файлы для загрузки 
 >*  Скачайте надстройку служб Master Data Services для Excel для пакета обновления 2 (SP2) SQL Server 2016 с [этой страницы Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=56838). 
 >* Скачайте [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] для SQL Server 2017 с [этой страницы Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=836867).
->*  Скачайте надстройку служб Master Data Services для Excel для SQL Server CTP 2019 из [этой страницы центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=2086948). 
+>*  Скачайте надстройка Master Data Services для Excel для SQL Server 2019 CTP на [этой странице центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=2086948). 
  
   
 ## <a name="terms"></a>Термины  
@@ -46,7 +47,7 @@ ms.locfileid: "68074588"
   
 -   *Элемент* — это строка данных (запись). Каждая сущность содержит элементы. Пример элемента — **Blue**. Дополнительные сведения см. в разделе [Элементы (службы Master Data Services)](../../master-data-services/members-master-data-services.md).  
   
--   *attribute* — столбец данных. Каждый элемент имеет атрибуты. Например, атрибутом **Code** для элемента **Blue** будет **B**. Дополнительные сведения об атрибутах см. в разделе [Атрибуты (службы Master Data Services)](../../master-data-services/attributes-master-data-services.md).  
+-   *attribute* — столбец данных. Каждый элемент имеет атрибуты. Например, атрибут **Code** для **синего** элемента имеет значение **B**. Дополнительные сведения об атрибутах см. в разделе [attributes &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
@@ -67,13 +68,13 @@ ms.locfileid: "68074588"
   
 -   [Соединения (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [Обзор: экспорт данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [Обзор экспорта данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Файлы ярлыков запросов (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Обновление данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [Обзор: Импорт данных из Excel &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Обзор импорта данных из Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [Проверка данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

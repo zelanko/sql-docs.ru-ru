@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 6554acf46da19a9833cf649bce34a455cbc92e5b
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 9492b8fcdbcd4ddf930d9f5d1d5ee43415fb2a1c
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088814"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115777"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Установка агента SQL Server в Linux
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088814"
 
 В этой статье описывается включение или установка агента SQL Server в Linux.
 
-[Агент SQL Server](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) выполняет запланированные задания SQL Server. Начиная с версии SQL Server 2017 с накопительным пакетом обновления 4, агент SQL Server включается в пакет **mssql-server** и по умолчанию отключен. Сведения о функциях, поддерживаемых в этом выпуске агента SQL Server, а также сведения о версии см. в [заметках о выпуске](sql-server-linux-release-notes.md).
+[Агент SQL Server](../ssms/agent/sql-server-agent.md) выполняет запланированные задания SQL Server. Начиная с версии SQL Server 2017 с накопительным пакетом обновления 4, агент SQL Server включается в пакет **mssql-server** и по умолчанию отключен. Сведения о функциях, поддерживаемых в этом выпуске агента SQL Server, а также сведения о версии см. в [заметках о выпуске](sql-server-linux-release-notes.md).
 
 ## <a name="instructions"></a>Instructions
 

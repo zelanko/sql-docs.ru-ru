@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cecf1f8803b0180ef6127cde203659be26f3c6c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ff964cda9e4e9687a61d50db7c7d53c6e9e24ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477906"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196018"
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
 
@@ -52,7 +52,7 @@ ms.locfileid: "88477906"
   
  WSDL-файл перечисляет методы, предлагаемые веб-службой; входные параметры, запрашиваемые методами; ответы, возвращаемые методами; а также метод обмена данными с веб-службой.  
   
- Если метод использует входные параметры, то задача «Веб-служба» запрашивает значения параметров. Например, метод веб-службы рекомендует длину приобретаемых лыж, основываясь на росте покупателя, поэтому требует, чтобы рост был записан во входном параметре. Значения параметра можно задать строками, определенными в задаче, или переменными, определенными в области видимости задачи или родительского контейнера. Преимущество использования переменных в том, что они позволяют динамически обновлять значения параметров с помощью конфигураций пакетов или скриптов. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Конфигурации пакета](../../integration-services/packages/package-configurations.md).  
+ Если метод использует входные параметры, то задача «Веб-служба» запрашивает значения параметров. Например, метод веб-службы рекомендует длину приобретаемых лыж, основываясь на росте покупателя, поэтому требует, чтобы рост был записан во входном параметре. Значения параметра можно задать строками, определенными в задаче, или переменными, определенными в области видимости задачи или родительского контейнера. Преимущество использования переменных в том, что они позволяют динамически обновлять значения параметров с помощью конфигураций пакетов или скриптов. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Конфигурации пакета](../packages/legacy-package-deployment-ssis.md).  
   
  Многие методы веб-службы не используют входные параметры. Например, метод веб-службы, выдающий имена сотрудников, рожденных в текущем месяце, не запрашивает входного параметра, потому что веб-служба может определить текущий месяц локально.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88477906"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Программная настройка задачи «Веб-служба»  
  Дополнительные сведения о программной настройке этих свойств см. в следующих разделах:  
@@ -93,7 +93,7 @@ ms.locfileid: "88477906"
 > [!IMPORTANT]  
 >  Диспетчер HTTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
   
- **См. также:**  подробные сведения о [диспетчере HTTP-подключений](../../integration-services/connection-manager/http-connection-manager.md) и о [редакторе диспетчера HTTP-подключений &#40;страница "Сервер"&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md).  
+ **См. также:**  подробные сведения о [диспетчере HTTP-подключений](../../integration-services/connection-manager/http-connection-manager.md) и о [редакторе диспетчера HTTP-подключений &#40;страница "Сервер"&#41;](../connection-manager/http-connection-manager.md).  
   
  **WSDLFile**  
  Введите полный путь к локальному WSDL-файлу на компьютере или нажмите кнопку обзора **(...)** и выберите файл.  
@@ -176,13 +176,13 @@ ms.locfileid: "88477906"
  **Файл**  
  Выберите в списке диспетчер подключений файлов или щелкните \<**New Connection...**>, чтобы создать диспетчер подключений.  
   
- **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../connection-manager/file-connection-manager.md).  
   
 #### <a name="outputtype--variable"></a>OutputType = Переменная  
  **Переменная**  
  Выберите переменную в списке или щелкните \<**New Variable...**> для создания переменной.  
   
- **См. также:**  подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:**  подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](../integration-services-ssis-variables.md).  
   
 ## <a name="related-content"></a>См. также  
- Видео с руководством по [ вызвать веб-службу с помощью задачи "Веб-служба" (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) на портале technet.microsoft.com.  
+ Видео с руководством по [ вызвать веб-службу с помощью задачи "Веб-служба" (видеоматериал по SQL Server)](/previous-versions/dn912438(v=msdn.10)) на портале technet.microsoft.com.

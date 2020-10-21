@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1b1398c6884fd154d4f142f10a6d14844a3e7875
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d46d3598bb309029319c1b74b467983e681b96ac
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495801"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197059"
 ---
 # <a name="sap-bw-destination"></a>Назначение SAP BW
 
@@ -88,7 +88,7 @@ ms.locfileid: "88495801"
   
  Если вы не знаете все значения, необходимые для настройки назначения, может потребоваться связаться с администратором SAP.  
   
- Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
+ Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100)). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Использование конструктора служб SSIS для настройки целевого объекта  
  Дополнительные сведения о свойствах целевого объекта SAP BW, который можно задать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из следующих разделов.  
@@ -121,5 +121,4 @@ ms.locfileid: "88495801"
   
 ## <a name="see-also"></a>См. также  
  [Компоненты Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

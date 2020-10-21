@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495657"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195198"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных "Неструктурированный файл" (мастер импорта и экспорта SQL Server)
 
@@ -261,7 +261,7 @@ Page|Рекомендация  |Тип
  **Обновить**  
  Просмотрите эффект от изменения числа пропускаемых строк, нажав кнопку **Обновить**. Эта кнопка становится видимой только после изменения других параметров соединения.  
  
-Дополнительные сведения о странице **Предварительный просмотр** см. на следующей странице справочника по службам Integration Services: [Редактор диспетчера соединений с неструктурированными файлами (страница "Предварительный просмотр")](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md).
+Дополнительные сведения о странице **Предварительный просмотр** см. на следующей странице справочника по службам Integration Services: [Редактор диспетчера соединений с неструктурированными файлами (страница "Предварительный просмотр")](../connection-manager/flat-file-connection-manager.md).
 
 ## <a name="connect-to-a-flat-file-destination"></a>Подключение к назначению "Неструктурированный файл"
 Для назначения неструктурированного файла доступна всего одна страница с параметрами, как показано на следующем снимке экрана. Найдите и выберите файл, а затем проверьте параметры в разделе **Формат**.
@@ -303,4 +303,3 @@ Page|Рекомендация  |Тип
 ## <a name="see-also"></a>См. также раздел
 [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

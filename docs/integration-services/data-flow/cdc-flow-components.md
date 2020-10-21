@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb7897aa3f14a043eef6f983daafe8121a07c8bf
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480896"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196488"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
 
@@ -86,7 +86,7 @@ ms.locfileid: "89480896"
   
  Этот поток данных служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержит две задачи "Управление CDC" и задачу потока данных. Первая задача, которая называется **Получить диапазон обработки CDC** , устанавливает диапазон номеров LSN для изменений, которые обрабатываются в задаче потока данных, которая называется **Обработка изменений**. Этот диапазон определяется на основании данных, обработанных при последнем выполнении пакета и сохраненных в постоянном хранилище.  
   
- Дополнительные сведения об использовании задачи «Управление CDC» см. в разделах [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) и [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ Дополнительные сведения об использовании задачи «Управление CDC» см. в разделах [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) и [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  На следующем рисунке показан поток данных **Обработка изменений** , задающий общий порядок обработки изменений.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "89480896"
   
  [CDC-источник](../../integration-services/data-flow/cdc-source.md)  
   
- [Редактор источника "CDC" (страница "Диспетчер соединений")](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [Редактор источника "CDC" (страница "Диспетчер соединений")](./cdc-source.md)  
   
- [Редактор источника "CDC" (страница "Столбцы")](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [Редактор источника "CDC" (страница "Столбцы")](./cdc-source.md)  
   
- [Редактор источника "CDC" (страница "Вывод ошибок")](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [Редактор источника "CDC" (страница "Вывод ошибок")](./cdc-source.md)  
   
  Дополнительные сведения о разделителе CDC см. в разделе  
   
@@ -217,9 +217,8 @@ ms.locfileid: "89480896"
   
 -   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)см. на сайте social.technet.microsoft.com.  
   
--   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)на сайте technet.microsoft.com.  
+-   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](/previous-versions/dn912438(v=msdn.10))на сайте technet.microsoft.com.  
   
 ## <a name="see-also"></a>См. также  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

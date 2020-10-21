@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c319ec2d8deca78787ca0cec80e2afc7947eaa41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b68f0dc3ac5b5591dc556c81bc083a62aa8d4606
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430216"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195242"
 ---
 # <a name="using-variables-in-the-script-task"></a>Использование переменных в задаче «Скрипт»
 
@@ -121,6 +121,5 @@ public class ScriptMain
   
 ## <a name="see-also"></a>См. также:  
  [Переменные в службах Integration Services (SSIS)](../../../integration-services/integration-services-ssis-variables.md)   
- [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [Использование переменных в пакетах](../../integration-services-ssis-variables.md)  
   

@@ -9,12 +9,12 @@ ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 95581e7cfd8fbddd80aff1f4086d7f44e5812159
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438116"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115967"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство. Установка SQL Server и создание базы данных в Ubuntu
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -47,17 +47,17 @@ ms.locfileid: "86438116"
 
 Требуется компьютер, на котором установлена ОС Ubuntu 16.04 или 18.04 и имеется **по крайней мере 2 ГБ** памяти.
 
-Чтобы установить Ubuntu 18.04 на собственный компьютер, перейдите на страницу <http://releases.ubuntu.com/bionic/>. Можно также создать виртуальные машины Ubuntu в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Чтобы установить Ubuntu 18.04 на собственный компьютер, перейдите на страницу <http://releases.ubuntu.com/bionic/>. Можно также создать виртуальные машины Ubuntu в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> В настоящее время [подсистема Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве цели установки.
+> В настоящее время [подсистема Windows для Linux](/windows/wsl/about) для Windows 10 не поддерживается в качестве цели установки.
 
 Сведения о других требованиях к системе см. в статье [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 
 > [!NOTE]
 > Ubuntu 18.04 поддерживается, начиная с SQL Server 2017 с накопительным пакетом обновления 20 (CU20). Если вы хотите использовать инструкции, приведенные в этой статье, с Ubuntu 18.04, убедитесь, что используется правильный [путь к репозиторию](sql-server-linux-change-repo.md) `18.04` вместо `16.04`.
 >
-> Если вы используете SQL Server с более ранней версией, конфигурация возможна с [изменениями](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/).
+> Если вы используете SQL Server с более ранней версией, конфигурация возможна с [изменениями](/archive/blogs/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts).
 
 ::: moniker-end
 
@@ -66,10 +66,10 @@ ms.locfileid: "86438116"
 
 Требуется компьютер, на котором установлена ОС Ubuntu 16.04 или 18.04 и имеется **по крайней мере 2 ГБ** памяти.
 
-Чтобы установить Ubuntu 18.04 на собственный компьютер, перейдите на страницу <http://releases.ubuntu.com/bionic/>. Можно также создать виртуальные машины Ubuntu в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Чтобы установить Ubuntu 18.04 на собственный компьютер, перейдите на страницу <http://releases.ubuntu.com/bionic/>. Можно также создать виртуальные машины Ubuntu в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> В настоящее время [подсистема Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве цели установки.
+> В настоящее время [подсистема Windows для Linux](/windows/wsl/about) для Windows 10 не поддерживается в качестве цели установки.
 
 Сведения о других требованиях к системе см. в статье [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 

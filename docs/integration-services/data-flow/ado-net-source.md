@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94a94ba7bcd71510f82769ebb1517caef7e5a0fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b10ca4ddff49785c1b5b6e33d7510985fd801c85
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425856"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194866"
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
 
@@ -36,12 +36,12 @@ ms.locfileid: "88425856"
 
   Источник ADO NET использует данные поставщика .NET и делает данные доступными для потока данных.  
   
- Вы можете использовать источник ADO NET для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в статье об [общих рекомендациях и ограничениях Базы данных SQL Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Вы можете использовать источник ADO NET для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в статье об [общих рекомендациях и ограничениях Базы данных SQL Azure](/previous-versions/azure/ee336245(v=azure.100)).  
   
 ## <a name="data-type-support"></a>Поддержка типов данных  
  Источник преобразует все типы данных, которые не сопоставлены с конкретными типами данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_NTEXT. Преобразованию подвергаются даже данные типа **System.Object**.  
   
- Тип данных DT_NTEXT можно изменить на тип DT_WSTR, а DT_WSTR на DT_NTEXT. Типы данных меняются установкой свойства **DataType** в диалоговом окне **Расширенный редактор** источника ADO NET. Дополнительные сведения см. в статье [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Тип данных DT_NTEXT можно изменить на тип DT_WSTR, а DT_WSTR на DT_NTEXT. Типы данных меняются установкой свойства **DataType** в диалоговом окне **Расширенный редактор** источника ADO NET. Дополнительные сведения см. в статье [Common Properties](./set-the-properties-of-a-data-flow-component.md).  
   
  Тип данных DT_NTEXT можно также преобразовать в типы DT_BYTES и DT_STR с помощью преобразования «Конвертация данных» после источника ADO NET. Дополнительные сведения см. в статье [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "88425856"
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -207,5 +207,4 @@ ms.locfileid: "88425856"
  [Назначение DataReader](../../integration-services/data-flow/datareader-destination.md)   
  [Назначение "ADO.NET"](../../integration-services/data-flow/ado-net-destination.md)   
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
-  
   

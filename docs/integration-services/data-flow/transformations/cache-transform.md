@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fddf4562e1d2899e667f245b32309617c4147b29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495759"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194686"
 ---
 # <a name="cache-transform"></a>преобразование кэша
 
@@ -33,7 +33,7 @@ ms.locfileid: "88495759"
   
  Диспетчер соединений с кэшем можно использовать, если нужно, чтобы преобразование «Подстановка» работало в режиме полного кэширования. В этом режиме ссылочный набор данных загружается в кэш еще до запуска преобразования «Уточняющий запрос».  
   
- Инструкции по настройке преобразования "Подстановка" в режиме полного кэширования с помощью диспетчера соединений с кэшем и преобразования "Преобразование кэша" см. в разделе [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
+ Инструкции по настройке преобразования "Подстановка" в режиме полного кэширования с помощью диспетчера соединений с кэшем и преобразования "Преобразование кэша" см. в разделе [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера соединений с кэшем](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
   
  Дополнительные сведения о кэшировании ссылочного набора данных см. в разделе [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88495759"
   
  В пределах одного пакета только одно преобразование «Преобразование кэша» может производить запись в один диспетчер соединений с кэшем. Если в пакете содержится несколько преобразований «Преобразование кэша», запись в диспетчер соединений будет производить первое преобразование, вызванное при запуске пакета. Операции записи последующих преобразований «Преобразование кэша» завершатся ошибкой.  
   
- Дополнительные сведения см. в разделе [Редактор диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Дополнительные сведения см. в разделе [Редактор диспетчера соединений с кэшем](../../connection-manager/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Настройка преобразования кэша  
  Диспетчер соединений с кэшем можно настроить на сохранение данных в файлы кэша (CAW).  
@@ -65,7 +65,7 @@ ms.locfileid: "88495759"
 ## <a name="cache-transformation-editor-connection-manager-page"></a>Редактор преобразования «Кэш» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор преобразования «Кэш»** , чтобы выбрать существующий диспетчер соединений с кэшем или создать новый.  
   
- Дополнительные сведения о диспетчере соединений с кэшем см. в разделе [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Дополнительные сведения о диспетчере соединений с кэшем см. в разделе [Cache Connection Manager](../../connection-manager/cache-connection-manager.md).  
   
 ### <a name="options"></a>Параметры  
  **Диспетчер соединений с кэшем**  
@@ -80,5 +80,4 @@ ms.locfileid: "88495759"
 ## <a name="see-also"></a>См. также:  
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)  
-  
   
