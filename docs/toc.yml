@@ -352,6 +352,14 @@
               href: big-data-cluster/change-azdata-password.md
             - name: Некорневые контейнеры
               href: big-data-cluster/non-root-containers.md
+            - name: Шифрование при хранении
+              items:
+                - name: Основные понятия и конфигурация
+                  href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+                - name: Прозрачное шифрование данных SQL Server
+                  href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+                - name: Зоны шифрования HDFS
+                  href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
         - name: Задания Spark
           items:
             - name: Отправка заданий Spark в Azure Data Studio
