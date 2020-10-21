@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7d8ed9805a62095f732f3f4621d3c133793ac7bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a04463a998cec2903fb11c530144a103d296a6a9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477641"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193194"
 ---
 # <a name="merge-transformation"></a>преобразование «Слияние»
 
@@ -64,7 +64,7 @@ ms.locfileid: "88477641"
   
  Дополнительные сведения о параметрах, задаваемых программно, см. в следующих разделах:  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "88477641"
 > [!IMPORTANT]  
 >  Преобразованию «Слияние» необходимы отсортированные входные данные. Дополнительные сведения об этом важном требовании см. в статье [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
-### <a name="options"></a>Параметры  
+### <a name="options"></a>Варианты  
  **Имя выходного столбца**  
  Позволяет указать имя выходного столбца.  
   
@@ -91,10 +91,9 @@ ms.locfileid: "88477641"
  **Вход слияния 2**  
  Позволяет выбрать столбец в качестве входа слияния 2.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразование «Соединение слиянием»](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Преобразование «Объединить все»](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   
