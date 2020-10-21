@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: cdf54622b3db05b661f5c71c3f3b6a2e67fbd1ff
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987664"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195386"
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
 
@@ -39,7 +39,7 @@ ms.locfileid: "91987664"
   Назначение «OLE DB» загружает данные в различные OLE DB-совместимые базы данных при помощи таблицы базы данных или представления, или команды SQL. Например, источник OLE DB может загрузить данные в таблицы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access и базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Для источника данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 потребуется поставщик данных, отличный от того, который использовался в предыдущих версиях Excel. Дополнительные сведения см. в разделе [Подключение к книге Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  Для источника данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 потребуется поставщик данных, отличный от того, который использовался в предыдущих версиях Excel. Дополнительные сведения см. в разделе [Подключение к книге Excel](../load-data-to-from-excel-with-ssis.md).  
   
  Назначение «OLE DB» предусматривает пять различных режимов доступа для загружаемых данных:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "91987664"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -126,7 +126,7 @@ ms.locfileid: "91987664"
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения «OLE DB»** используется для выбора подключения OLE DB для назначения. На этой странице также можно выбрать таблицу или представление базы данных.  
   
 > [!NOTE]  
->  Для источника данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 потребуется поставщик данных, отличный от того, который использовался в предыдущих версиях Excel. Дополнительные сведения см. в разделе [Подключение к книге Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  Для источника данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 потребуется поставщик данных, отличный от того, который использовался в предыдущих версиях Excel. Дополнительные сведения см. в разделе [Подключение к книге Excel](../load-data-to-from-excel-with-ssis.md).  
   
 > [!NOTE]  
 >  Свойство **CommandTimeout** назначения «OLE DB» недоступно в **Редакторе назначения «OLE DB»** , однако может быть задано в **Расширенном редакторе**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенном редакторе**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "OLE DB"» раздела [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
@@ -147,7 +147,7 @@ ms.locfileid: "91987664"
 |------------|-----------------|  
 |Таблица или представление|Загрузка данных в таблицу или представление назначения «OLE DB».|  
 |Быстрая загрузка таблицы или представления|Загрузка данных в таблицу или представление назначения «OLE DB» и использование параметра быстрой загрузки. Дополнительные сведения о режимах доступа для быстрой загрузки данных, оптимизированных для массовой вставки, см. в разделе [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
-|Переменная, содержащая имя таблицы или представления|Задайте переменную, содержащую имя таблицы или представления.<br /><br /> **Дополнительные сведения** [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Переменная, содержащая имя таблицы или представления|Задайте переменную, содержащую имя таблицы или представления.<br /><br /> **Дополнительные сведения** [Использование переменных в пакетах](../integration-services-ssis-variables.md)|  
 |Быстрая загрузка переменной имени представления или имени таблицы|Укажите переменную, содержащую имя таблицы или представления, и используйте для загрузки данных параметр быстрой загрузки. Дополнительные сведения о режимах доступа для быстрой загрузки данных, оптимизированных для массовой вставки, см. в разделе [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
 |Команда SQL|Загрузка данных в назначение «OLE DB» при помощи SQL-запроса.|  
   
@@ -309,5 +309,4 @@ ms.locfileid: "91987664"
  [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)  
   
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
-  
   

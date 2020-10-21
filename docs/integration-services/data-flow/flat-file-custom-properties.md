@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c20e9a830439e8065a1bbccfe7d25540c9ae639
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06e9cacfa5514648fc69bff0148a4448af536de0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430856"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194214"
 ---
 # <a name="flat-file-custom-properties"></a>Пользовательские свойства неструктурированного файла
 
@@ -40,7 +40,7 @@ ms.locfileid: "88430856"
   
 |Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
-|FastParse|Логическое|Указывает, используются для столбца более быстрые, но независимые от локали процедуры синтаксического анализа, предоставляемые службами DTS, либо стандартные процедуры, зависимые от локали. Дополнительные сведения см. в разделах [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) и [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). Это свойство имеет значение по умолчанию **False**.<br /><br /> Примечание. Это свойство недоступно в диалоговом окне **Редактор источника "Неструктурированный файл"**, однако его можно установить с помощью окна **Расширенный редактор**.|  
+|FastParse|Логическое|Указывает, используются для столбца более быстрые, но независимые от локали процедуры синтаксического анализа, предоставляемые службами DTS, либо стандартные процедуры, зависимые от локали. Дополнительные сведения см. в разделах [Fast Parse](./parsing-data.md) и [Standard Parse](./parsing-data.md). Это свойство имеет значение по умолчанию **False**.<br /><br /> Примечание. Это свойство недоступно в диалоговом окне **Редактор источника "Неструктурированный файл"**, однако его можно установить с помощью окна **Расширенный редактор**.|  
   
  Дополнительные сведения см. в статье [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
@@ -60,6 +60,5 @@ ms.locfileid: "88430856"
  Дополнительные сведения см. в статье [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md).  
   
 ## <a name="see-also"></a>См. также  
- [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Общие свойства](./set-the-properties-of-a-data-flow-component.md)  
   

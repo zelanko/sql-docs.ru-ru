@@ -13,12 +13,12 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 318ba0af0be327cbe938fd9498dcbce9e418650d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385810"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192584"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Настройка почты агента SQL Server на использование компонента Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88385810"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
   > [!NOTE]
-  > Агент SQL в Управляемом экземпляре всегда настроен для использования компонента Database Mail, поэтому это содержимое неприменимо к Управляемому экземпляру. В Управляемом экземпляре должен быть профиль с именем **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** для привязки агента SQL Server к Database Mail. 
+  > Агент SQL в Управляемом экземпляре всегда настроен для использования компонента Database Mail, поэтому это содержимое неприменимо к Управляемому экземпляру. В Управляемом экземпляре должен быть профиль с именем **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** для привязки агента SQL Server к Database Mail. 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
@@ -81,5 +81,4 @@ ms.locfileid: "88385810"
 -   [Операторы](../../ssms/agent/operators.md)  
   
      Операторы — это псевдонимы для людей или групп, которые могут получать электронные уведомления.  
-  
   

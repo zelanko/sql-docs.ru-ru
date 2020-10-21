@@ -19,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b89c02db6622381f8f8104068e85004b6cd0d94
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b5f27289f3363ea503e365c9398d387dcb71222b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227368"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195511"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -194,8 +194,8 @@ READ ONLY
 ### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. Отображение значения переменной, инициализированной при помощи инструкции SET  
 Следующий пример создает переменную `@myvar`, записывает строковое значение в переменную и печатает значение переменной `@myvar`.  
   
-```  
-DECLARE @myvar char(20);  
+```sql  
+DECLARE @myvar CHAR(20);  
 SET @myvar = 'This is a test';  
 SELECT @myvar;  
 GO  
@@ -204,10 +204,10 @@ GO
 ### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>Б. Использование локальной переменной, значение которой назначено при помощи инструкции SET в инструкции SELECT  
 В следующем примере создается локальная переменная с именем `@state`. Она используется в инструкции `SELECT` для поиска имен и фамилий всех работников, которые живут в штате `Oregon`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @state char(25);  
+DECLARE @state CHAR(25);  
 SET @state = N'Oregon';  
 SELECT RTRIM(FirstName) + ' ' + RTRIM(LastName) AS Name, City  
 FROM HumanResources.vEmployee  
@@ -217,15 +217,15 @@ WHERE StateProvinceName = @state;
 ### <a name="c-using-a-compound-assignment-for-a-local-variable"></a>В. Использование составного оператора присваивания для локальной переменной  
 Следующие два примера позволяют получить один и тот же результат. Они создают локальную переменную с именем `@NewBalance`, умножают ее на 10 и отображают новое значение локальной переменной в инструкции `SELECT`. Во втором примере используется составной оператор присваивания.  
   
-```  
+```sql  
 /* Example one */  
-DECLARE  @NewBalance  int ;  
+DECLARE  @NewBalance  INT ;  
 SET  @NewBalance  =  10;  
 SET  @NewBalance  =  @NewBalance  *  10;  
 SELECT  @NewBalance;  
   
 /* Example Two */  
-DECLARE @NewBalance int = 10;  
+DECLARE @NewBalance INT = 10;  
 SET @NewBalance *= 10;  
 SELECT @NewBalance;  
 ```  
@@ -233,7 +233,7 @@ SELECT @NewBalance;
 ### <a name="d-using-set-with-a-global-cursor"></a>Г. Использование инструкции SET с глобальным курсором  
 Следующий пример создает локальную переменную и устанавливает переменную курсора в значение имени глобального курсора.  
   
-```  
+```sql  
 DECLARE my_cursor CURSOR GLOBAL   
 FOR SELECT * FROM Purchasing.ShipMethod  
 DECLARE @my_variable CURSOR ;  
@@ -248,7 +248,7 @@ DEALLOCATE my_cursor;
 ### <a name="e-defining-a-cursor-by-using-set"></a>Д. Определение курсора при помощи инструкции SET  
 Следующий пример использует инструкцию `SET` для определения курсора.  
   
-```  
+```sql  
 DECLARE @CursorVar CURSOR;  
   
 SET @CursorVar = CURSOR SCROLL DYNAMIC  
@@ -272,10 +272,10 @@ DEALLOCATE @CursorVar;
 ### <a name="f-assigning-a-value-from-a-query"></a>Е. Присваивание значения из запроса  
 Следующий пример использует запрос для присваивания значения переменной.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @rows int;  
+DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM Sales.Customer);  
 SELECT @rows;  
 ```  
@@ -283,7 +283,7 @@ SELECT @rows;
 ### <a name="g-assigning-a-value-to-a-user-defined-type-variable-by-modifying-a-property-of-the-type"></a>Ж. Присваивание значения переменной определяемого пользователем типа путем изменения свойства типа  
 Следующий пример устанавливает значение для определяемого пользователем типа `Point` путем изменения значения свойства типа `X`.  
   
-```  
+```sql  
 DECLARE @p Point;  
 SET @p.X = @p.X + 1.1;  
 SELECT @p;  
@@ -293,7 +293,7 @@ GO
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>З. Присваивание значения переменной определяемого пользователем типа путем вызова метода типа  
 Следующий пример устанавливает значение определяемого пользователем типа **point** путем вызова метода `SetXY` типа.  
   
-```  
+```sql  
 DECLARE @p Point;  
 SET @p=point.SetXY(23.5, 23.5);  
 ```  
@@ -301,8 +301,8 @@ SET @p=point.SetXY(23.5, 23.5);
 ### <a name="i-creating-a-variable-for-a-clr-type-and-calling-a-mutator-method"></a>И. Создание переменной для типа CLR и вызов метода мутатора  
 В следующем примере создается переменная для типа `Point`, а затем выполняется метод мутатора в `Point`.  
   
-```  
-CREATE ASSEMBLY mytest from 'c:\test.dll' WITH PERMISSION_SET = SAFE  
+```sql  
+CREATE ASSEMBLY mytest FROM 'c:\test.dll' WITH PERMISSION_SET = SAFE  
 CREATE TYPE Point EXTERNAL NAME mytest.Point  
 GO  
 DECLARE @p Point = CONVERT(Point, '')  
@@ -314,20 +314,19 @@ SET @p.SetXY(22, 23);
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>К. Отображение значения переменной, инициализированной при помощи инструкции SET  
 Следующий пример создает переменную `@myvar`, записывает строковое значение в переменную и печатает значение переменной `@myvar`.  
   
-```  
-DECLARE @myvar char(20);  
+```sql  
+DECLARE @myvar CHAR(20);  
 SET @myvar = 'This is a test';  
-SELECT top 1 @myvar FROM sys.databases;  
-  
+SELECT TOP 1 @myvar FROM sys.databases;
 ```  
   
 ### <a name="k-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>Л. Использование локальной переменной, значение которой назначено при помощи инструкции SET в инструкции SELECT  
 Следующий пример создает локальную переменную с именем `@dept` и использует ее в инструкции `SELECT` для нахождения имен и фамилий всех работников, которые живут в штате `Marketing`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @dept char(25);  
+DECLARE @dept CHAR(25);  
 SET @dept = N'Marketing';  
 SELECT RTRIM(FirstName) + ' ' + RTRIM(LastName) AS Name  
 FROM DimEmployee   
@@ -337,15 +336,15 @@ WHERE DepartmentName = @dept;
 ### <a name="l-using-a-compound-assignment-for-a-local-variable"></a>М. Использование составного оператора присваивания для локальной переменной  
 Следующие два примера позволяют получить один и тот же результат. Они создают локальную переменную с именем `@NewBalance`, умножают ее на `10` и отображают новое значение локальной переменной в инструкции `SELECT`. Во втором примере используется составной оператор присваивания.  
   
-```  
+```sql  
 /* Example one */  
-DECLARE  @NewBalance  int ;  
+DECLARE  @NewBalance INT;  
 SET  @NewBalance  =  10;  
 SET  @NewBalance  =  @NewBalance  *  10;  
-SELECT  TOP 1 @NewBalance FROM sys.tables;  
+SELECT TOP 1 @NewBalance FROM sys.tables;  
   
 /* Example Two */  
-DECLARE @NewBalance int = 10;  
+DECLARE @NewBalance INT = 10;  
 SET @NewBalance *= 10;  
 SELECT TOP 1 @NewBalance FROM sys.tables;  
 ```  
@@ -353,10 +352,10 @@ SELECT TOP 1 @NewBalance FROM sys.tables;
 ### <a name="m-assigning-a-value-from-a-query"></a>Н. Присваивание значения из запроса  
 Следующий пример использует запрос для присваивания значения переменной.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @rows int;  
+DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);  
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  

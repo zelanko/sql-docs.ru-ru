@@ -40,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421088"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192601"
 ---
 # <a name="configure-database-mail"></a>Настройка компонента Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -440,7 +440,7 @@ ms.locfileid: "88421088"
  Идентификатор **mailitem_id** тестового электронного сообщения.  
   
  **Устранение проблем**  
- Щелкните ссылку, чтобы открыть раздел [Устранение неполадок компонента Database Mail](https://msdn.microsoft.com/library/ms188663.aspx)электронной документации.  
+ Щелкните ссылку, чтобы открыть раздел [Устранение неполадок компонента Database Mail](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105))электронной документации.  
   
  [Мастера настройки компонента Database Mail](#DBWizard)  
   
@@ -460,5 +460,4 @@ ms.locfileid: "88421088"
 6.  Запустите скрипт, создающий конфигурацию.  
   
 7.  При выполнении скрипта не обязательно предоставляется доступ к профилю для всех пользователей базы данных. По умолчанию право на использование профиля предоставляется только членам фиксированной роли безопасности **sysadmin** . Дополнительные сведения о предоставлении прав доступа к профилям см. в разделе [sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6bf07a7c949c76ebeae0d17b632d47e4a87fce1b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 128510b920e171b39bddacebca89624289d67213
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178248"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115753"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Установка Служб машинного обучения SQL Server (Python, R) в Docker
 
@@ -93,7 +93,7 @@ ms.locfileid: "88178248"
    ```
   
    > [!NOTE]
-   > Процесс запуска контейнера с рабочими выпусками SQL Server немного отличается. Дополнительные сведения см. в статье [Настройка образов контейнеров SQL Server в Docker](sql-server-linux-configure-docker.md). Если вы используете те же имена и порты контейнеров, действия в оставшейся части этого руководства будут актуальны и для рабочих контейнеров.
+   > Процесс запуска контейнера с рабочими выпусками SQL Server немного отличается. Дополнительные сведения см. в статье [Настройка образов контейнеров SQL Server в Docker](./sql-server-linux-docker-container-deployment.md). Если вы используете те же имена и порты контейнеров, действия в оставшейся части этого руководства будут актуальны и для рабочих контейнеров.
 
 2. Чтобы просмотреть контейнеры Docker, выполните команду `docker ps`:
 
@@ -101,7 +101,7 @@ ms.locfileid: "88178248"
    sudo docker ps -a
    ```
 
-3. Если в столбце **STATUS** (Состояние) отображается значение **Up** (Работает), SQL Server выполняется в контейнере и прослушивает порт, указанный в столбце **PORTS** (Порты). Если в столбце **STATUS** контейнера с SQL Server отображается **Exited** (завершен), см.руководство [Устранение неполадок конфигурации](sql-server-linux-configure-docker.md#troubleshooting).
+3. Если в столбце **STATUS** (Состояние) отображается значение **Up** (Работает), SQL Server выполняется в контейнере и прослушивает порт, указанный в столбце **PORTS** (Порты). Если в столбце **STATUS** контейнера с SQL Server отображается **Exited** (завершен), см.руководство [Устранение неполадок конфигурации](./sql-server-linux-docker-container-troubleshooting.md).
 
  
     Выходные данные:
@@ -130,4 +130,4 @@ RECONFIGURE WITH OVERRIDE
 Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
 + [Краткое руководство. Запуск R в T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Руководство. Аналитические функции в базе данных для разработчиков R](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков R](../machine-learning/tutorials/r-taxi-classification-introduction.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d663d75f7588ad91973f3bce5f416136bc5583e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487689"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193791"
 ---
 # <a name="security-overview-integration-services"></a>Общие сведения о безопасности (службы Integration Services)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88487689"
   
  Если конфигурация хранится в файловой системе вместо базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], убедитесь в безопасности папок, содержащих файлы конфигурации пакетов.  
   
- Дополнительные сведения о конфигурациях см. в разделе [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ Дополнительные сведения о конфигурациях см. в разделе [Package Configurations](../packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Управление доступом к службе Integration Services  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы запретить неавторизованным пользователям просмотр сведений о пакетах, сохраненных на локальных и удаленных компьютерах, и тем самым овладеть личными сведениями, нужно ограничить доступ к компьютерам, на которых выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -121,7 +121,7 @@ ms.locfileid: "88487689"
 ### <a name="configuration-files"></a>Файлы конфигурации  
  Если в файле конфигурации хранятся конфиденциальные сведения, такие как данные об имени входа и пароле, то следует сохранить файл в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или использовать список управления доступом (ACL), чтобы защитить расположение или папку, где хранится этот файл, и разрешить доступ только для определенных учетных записей. Обычно предоставляется доступ для тех учетных записей, которым разрешено запускать пакеты, управлять пакетами и разрешать проблемы, связанные с пакетами, в том числе проверять содержимое файла настройки, контрольные точки и файлы журнала. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает более безопасное хранение, так как предлагает защиту на уровне сервера и базы данных. Чтобы сохранить конфигурации в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует использовать тип конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы сохранить в файловую систему, следует использовать тип конфигурации XML.  
   
- Дополнительные сведения см. в разделах [Конфигурации пакетов](../../integration-services/packages/package-configurations.md), [Создание конфигураций пакетов](../../integration-services/packages/create-package-configurations.md)и [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+ Дополнительные сведения см. в разделах [Конфигурации пакетов](../packages/legacy-package-deployment-ssis.md), [Создание конфигураций пакетов](../packages/legacy-package-deployment-ssis.md)и [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ### <a name="checkpoint-files"></a>файлы контрольных точек  
  Таким же образом, если используемый пакетом файл контрольных точек содержит конфиденциальные сведения, то следует использовать список управления доступом (ACL) для защиты расположения или папки, где хранится этот файл. Файлы контрольных точек сохраняют данные как о текущем состоянии пакета, так и о текущих значениях переменных. Например, пакет может включать в себя пользовательскую переменную, содержащую номер телефона. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
@@ -147,4 +147,4 @@ ms.locfileid: "88487689"
   
 -   [Подписание пакета цифровым сертификатом](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [Установка и изменение уровня защиты пакетов](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [Установка и изменение уровня защиты пакетов](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

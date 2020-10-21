@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6efa57a482943b6dbef2ebecdc0668dac017a01a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178261"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115770"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Установка Служб машинного обучения SQL Server (Python, R) в Linux
 
@@ -47,7 +47,7 @@ ms.locfileid: "88178261"
 
 * У вас должно быть средство для выполнения команд T-SQL. 
 
-  * Вы можете использовать [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), бесплатное средство для работы с базами данных, которое работает в Linux, Windows и macOS.
+  * Вы можете использовать [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), бесплатное средство для работы с базами данных, которое работает в Linux, Windows и macOS.
 
 ## <a name="package-list"></a>Список пакетов
 
@@ -439,4 +439,4 @@ mssql-mlservices-mlm-py-9.4.7.64
 Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
 + [Краткое руководство. Запуск R в T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Руководство. Аналитические функции в базе данных для разработчиков R](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков R](../machine-learning/tutorials/r-taxi-classification-introduction.md)

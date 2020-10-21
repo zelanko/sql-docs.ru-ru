@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2cd15daac2c287c2dc750e1f79032f855d5640d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7162d2eb4c718330fb3fec38dceddc4f0bf8e04e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349170"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192774"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Задача «Передача объектов SQL Server»
 
@@ -86,7 +86,7 @@ ms.locfileid: "88349170"
  Задача передачи объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сообщает о ходе выполнения передачи, сигнализируя только о 0 % и 100 % готовности.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, определяемое свойством **ExecutionValue** задачи, возвращает число перенесенных объектов. При присвоении свойству **ExecValueVariable** задачи "Передача объектов SQL Server" пользовательской переменной сведения о передаче объектов можно сделать доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Значение выполнения, определяемое свойством **ExecutionValue** задачи, возвращает число перенесенных объектов. При присвоении свойству **ExecValueVariable** задачи "Передача объектов SQL Server" пользовательской переменной сведения о передаче объектов можно сделать доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача объектов SQL Server» включает следующие записи журнала:  
@@ -117,7 +117,7 @@ ms.locfileid: "88349170"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>Настройка задачи «Передача объектов SQL Server» программными средствами  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  
@@ -331,7 +331,7 @@ ms.locfileid: "88349170"
 ## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Редактор задачи "Передача объектов SQL Server" (страница "Общие")](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Редактор задачи "Передача объектов SQL Server" (страница "Общие")]()   
  [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)   
  [Форматы данных для массового экспорта или импорта (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+ [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)

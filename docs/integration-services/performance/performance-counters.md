@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8cb194e8da7b64bef3cf6f33e65a5a5ee1ab136c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 481f534c719d188d108ee1d9edd0776ee8b2bc9d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457102"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192458"
 ---
 # <a name="performance-counters"></a>Счетчики производительности
 
@@ -76,7 +76,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Средство [Визуализация производительности служб SSIS Performance для Business Intelligence Development Studio (проект CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146626)на узле codeplex.com.  
   
--   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497)на сайте msdn.microsoft.com.  
+-   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100))на сайте msdn.microsoft.com.  
   
 -   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319)на узле support.microsoft.com.  
 
@@ -122,4 +122,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  Необходимо запустить службу «Журналы и оповещения производительности» с помощью локальной учетной записи или учетной записи домена, входящей в группу «Администраторы».  
 
 ## <a name="see-also"></a>См. также:  
- [Запуск проектов и пакетов](../packages/run-integration-services-ssis-packages.md) [Регистрация событий в пакете служб Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [Запуск проектов и пакетов](../packages/run-integration-services-ssis-packages.md) [Регистрация событий в пакете служб Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)

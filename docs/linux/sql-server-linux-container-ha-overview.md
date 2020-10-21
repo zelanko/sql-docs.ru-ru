@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c4d14e0b7f76aaebd0a0bdac00c93267b91d0ab8
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: d7e15c070b17fd0a3682f5572c9b7cd3ce2c1dee
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785115"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115657"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Высокий уровень доступности для контейнеров SQL Server
 
@@ -43,5 +43,5 @@ SQL Server 2017 и более поздних версий поддержива�
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Информацию о развертывании контейнеров SQL Server в службе Azure Kubernetes (AKS) см. в описании следующих примеров:
-* [Развертывание SQL Server в контейнере Docker](sql-server-linux-configure-docker.md)
+* [Развертывание SQL Server в контейнере Docker](./sql-server-linux-docker-container-deployment.md)
 * [Развертывание контейнера SQL Server в Kubernetes](tutorial-sql-server-containers-kubernetes.md)

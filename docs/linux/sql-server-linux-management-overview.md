@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: 51feab9c5cc38f1e9b67b3de68ce29c597cdb83a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 899d215abe7d0308c4fd0c42ed992defa3b198da
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883911"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115567"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Выбор подходящего средства для управления SQL Server на Linux
 
@@ -27,7 +27,7 @@ ms.locfileid: "85883911"
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Почти все, что можно делать в клиентском средстве, можно выполнять и с помощью инструкций Transact-SQL. SQL Server предоставляет [динамические административные представления](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md), которые позволяют запрашивать состояние и конфигурацию SQL Server. Существуют также [команды Transact-SQL](../t-sql/language-reference.md) для задач управления базами данных. Эти команды можно выполнять в любом клиентском средстве, которое поддерживает подключение к SQL Server и выполнение запросов Transact-SQL, например [sqlcmd](sql-server-linux-setup-tools.md) или [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+Почти все, что можно делать в клиентском средстве, можно выполнять и с помощью инструкций Transact-SQL. SQL Server предоставляет [динамические административные представления](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md), которые позволяют запрашивать состояние и конфигурацию SQL Server. Существуют также [команды Transact-SQL](../t-sql/language-reference.md) для задач управления базами данных. Эти команды можно выполнять в любом клиентском средстве, которое поддерживает подключение к SQL Server и выполнение запросов Transact-SQL, например [sqlcmd](sql-server-linux-setup-tools.md) или [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md).
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 

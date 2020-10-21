@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 2681515e691478d095149a7dc4a8a578c6a89bf3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864611"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192534"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Планирование выполнения пакетов SQL Server Integration Services, развернутых в Azure, с помощью SQL Server Management Studio (SSMS)
 
@@ -75,5 +75,5 @@ ms.locfileid: "87864611"
 Сведения о других способах запланировать выполнение пакета SQL Server Integration Services см. в статье [Планирование выполнения пакета служб SSIS в Azure](ssis-azure-schedule-packages.md).
 
 Дополнительные сведения о конвейерах, действиях и триггерах фабрики данных Azure см. в следующих статьях:
--   [Конвейеры и действия в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Выполнение конвейера и триггеры в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Конвейеры и действия в Фабрике данных Azure](/azure/data-factory/concepts-pipelines-activities)
+-   [Выполнение конвейера и триггеры в Фабрике данных Azure](/azure/data-factory/concepts-pipeline-execution-triggers)

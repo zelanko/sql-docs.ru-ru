@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1e9234e6d429dcd95fa9556426871a4726f4f7f9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808710"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155107"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью служб Azure Kubernetes (AKS)
 
@@ -52,7 +52,7 @@ ms.locfileid: "91808710"
 * **Кластер Kubernetes**
    - Для работы с этим руководством требуется кластер Kubernetes. В шагах для управления кластером используется [kubectl](https://kubernetes.io/docs/user-guide/kubectl/). 
 
-   - См. раздел [Развертывание кластера службы Azure Kubernetes (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) для создания кластера Kubernetes с одним узлом в AKS с помощью `kubectl`. 
+   - См. раздел [Развертывание кластера службы Azure Kubernetes (AKS)](/azure/aks/tutorial-kubernetes-deploy-cluster) для создания кластера Kubernetes с одним узлом в AKS с помощью `kubectl`. 
 
    >[!NOTE]
    >Для защиты от сбоя узла кластер Kubernetes требует наличия нескольких узлов.
@@ -175,6 +175,7 @@ ms.locfileid: "91808710"
            app: mssql
        spec:
          terminationGracePeriodSeconds: 30
+         hostname: mssqlinst
          securityContext:
            fsGroup: 10001
          containers:
@@ -296,9 +297,9 @@ ms.locfileid: "91808710"
 
 Затем можно использовать следующие приложения для подключения к экземпляру SQL Server. 
 
-* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](./sql-server-linux-manage-ssms.md)
 
-* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](./sql-server-linux-develop-use-ssdt.md)
 
 * sqlcmd
 
@@ -349,4 +350,4 @@ Kubernetes автоматически повторно создает Pod для
 ## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
->[Введение в Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Введение в Kubernetes](/azure/aks/intro-kubernetes)

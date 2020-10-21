@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4c2ec582a2900986906ee127ad48462dcb43c58
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 1696a1fdcf2e27b8c13b24cbc5ae5b7a43cb1eec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227234"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196830"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -141,7 +141,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Можно указать -1, чтобы получить степень серьезности, связанную с ошибкой, как показано в следующем примере.  
   
-```  
+```sql  
 RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');  
 ```  
   
@@ -186,7 +186,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  Обычно последовательные аргументы заменяют последовательные спецификации преобразования; первый аргумент заменяет первую спецификацию преобразования, второй аргумент заменяет вторую спецификацию преобразования и так далее. Например, в следующей инструкции `RAISERROR` первый аргумент `N'number'` подставляется на место первой спецификации преобразования `%s`, а второй аргумент `5` — на место второй спецификации преобразования `%d.`.  
   
-```  
+```sql  
 RAISERROR (N'This is message %s %d.', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -200,7 +200,7 @@ GO
   
  Например, каждая из следующих инструкций `RAISERROR` возвращает одну и ту же строку. Одна определяет значения ширины и точности в списке аргументов, другая определяет их в спецификации преобразования.  
   
-```  
+```sql  
 RAISERROR (N'<\<%*.*s>>', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -225,7 +225,7 @@ GO
 > [!NOTE]  
 >  Инструкция RAISERROR может формировать только ошибки с состоянием от 1 до 127 включительно. Так как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может вызывать ошибки с состоянием 0, рекомендуется проверять состояние ошибки, возвращаемое функцией ERROR_STATE, перед передачей его по значению в виде параметра состояния для инструкции RAISERROR.  
   
-```  
+```sql  
 BEGIN TRY  
     -- RAISERROR with severity 11-19 will cause execution to   
     -- jump to the CATCH block.  
@@ -257,7 +257,7 @@ END CATCH;
 ### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>Б. Создание нерегламентированного сообщения в представлении каталога sys.messages  
  В следующем примере показано, как инициировать сообщение, хранящееся в представлении каталога sys.messages. Это сообщение было добавлено в представление каталога sys.messages при помощи системной хранимой процедуры `sp_addmessage` как сообщение с номером `50005`.  
   
-```  
+```sql  
 sp_addmessage @msgnum = 50005,  
               @severity = 10,  
               @msgtext = N'<\<%7.3s>>';  
@@ -275,7 +275,7 @@ GO
 ### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>В. Использование локальной переменной для предоставления текста сообщения  
  В следующем примере кода показано, как использовать локальную переменную для предоставления текста сообщения для инструкции `RAISERROR`.  
   
-```  
+```sql  
 DECLARE @StringVariable NVARCHAR(50);  
 SET @StringVariable = N'<\<%7.3s>>';  
   

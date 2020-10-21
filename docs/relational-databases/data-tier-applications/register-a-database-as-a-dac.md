@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b328f2fc32cf784caef1192bc8143b3ed9d1ffbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b528471bdba9125950cc885e91ee2194e446d851
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494787"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196266"
 ---
 # <a name="register-a-database-as-a-dac"></a>Регистрация базы данных в качестве приложения уровня данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88494787"
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения  
  Регистрация приложения уровня данных может быть выполнена только для базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)]или [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) или более поздней версии. Регистрация DAC не может быть выполнена, если приложение DAC уже зарегистрировано для базы данных. Например, если база данных создана при помощи развертывания DAC, нельзя запустить **Мастер регистрации приложения уровня данных**.  
   
- Приложение DAC нельзя зарегистрировать, если база данных содержит объекты, которые не поддерживаются в DAC, или содержат пользователей. Дополнительные сведения о типах объектов, поддерживаемых в DAC, см. в разделе [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
+ Приложение DAC нельзя зарегистрировать, если база данных содержит объекты, которые не поддерживаются в DAC, или содержат пользователей. Дополнительные сведения о типах объектов, поддерживаемых в DAC, см. в разделе [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)).  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для регистрации приложения уровня данных в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] требуются по меньшей мере разрешения ALTER ANY LOGIN, разрешения области базы данных VIEW DEFINITION, разрешения SELECT на представление каталога **sys.sql_expression_dependencies**и членство в предопределенной роли сервера **dbcreator** . Члены предопределенной роли сервера **sysadmin** и встроенной учетной записи системного администратора SQL Server (с именем **sa** ) также могут регистрировать приложения уровня данных. Для регистрации приложения уровня данных, не содержащего имен входа, в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] требуется членство в ролях **dbmanager** или **serveradmin** . Для регистрации приложения уровня данных, содержащего имена входа, в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] требуется членство в ролях **loginmanager** или **serveradmin** .  
@@ -178,5 +178,4 @@ $registerunit.Register()
   
 ## <a name="see-also"></a>См. также:  
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
   

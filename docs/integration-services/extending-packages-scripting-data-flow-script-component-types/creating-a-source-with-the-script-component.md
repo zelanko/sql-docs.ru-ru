@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e1d40b856409ab1e4d7859c818f1259133dc60b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19fe9c40aa87d4ee1cdc7b719e06911de9a1f167
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477273"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193144"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Создание источника с помощью компонента скрипта
 
@@ -55,7 +55,7 @@ ms.locfileid: "88477273"
   
  Общие сведения об использовании диспетчеров соединений в компоненте скрипта см. в разделе [Соединение с источниками данных в компоненте скрипта](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
   
- Дополнительные сведения о странице **Диспетчеры соединений** окна **Редактор преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Диспетчеры соединений")](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ Дополнительные сведения о странице **Диспетчеры соединений** окна **Редактор преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Диспетчеры соединений")](../data-flow/transformations/script-component.md).  
   
 ### <a name="configuring-outputs-and-output-columns"></a>Настройка выходов и выходных столбцов  
  Компонент источника не имеет входов и поддерживает один или несколько выходов. На странице **Входы и выходы** окна **Редактор преобразования "скрипт"** по умолчанию был создан один выход, но не созданы какие-либо выходные столбцы. На этой странице редактора может понадобиться настроить следующие элементы.  
@@ -71,7 +71,7 @@ ms.locfileid: "88477273"
   
 -   Обычно несколько выходов в одной и той же группе **ExclusionGroup** имеют одинаковые выходные столбцы. Однако, если создается моделируемый вывод ошибок, может потребоваться добавить дополнительные столбцы для хранения сведений об ошибках. Сведения об обработке ошибочных строк в подсистеме обработки потока данных см. в разделе [Использование выводов ошибок в компоненте потока данных](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md). Тем не менее в компоненте скрипта необходимо написать собственный код, чтобы заполнить дополнительные столбцы соответствующими сведениями об ошибках. Дополнительные сведения см. в разделе [Имитация вывода ошибок для компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
   
- Дополнительные сведения о странице **Входы и выходы** **редактора преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Входы и выходы")](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
+ Дополнительные сведения о странице **Входы и выходы** **редактора преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Входы и выходы")](../data-flow/transformations/script-component.md).  
   
 ### <a name="adding-variables"></a>Добавление переменных  
  Если нужно использовать в скрипте значения существующих переменных, их можно добавить в поля свойств **ReadOnlyVariables** и **ReadWriteVariables** на странице **Скрипт** в **редакторе преобразования "скрипт"** .  
@@ -80,7 +80,7 @@ ms.locfileid: "88477273"
   
  Общие сведения об использовании переменных в компоненте скрипта см. в разделе [Использование переменных в компоненте скрипта](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
- Дополнительные сведения о странице **Скрипт** в окне **Редактор преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Скрипт")](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Дополнительные сведения о странице **Скрипт** в окне **Редактор преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Скрипт")](../data-flow/transformations/script-component.md).  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>Сценарная поддержка компонента источника в режиме конструктора кода  
  После настройки метаданных для компонента откройте интегрированную среду разработки средств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для приложений (VSTA), чтобы написать код пользовательского скрипта. Чтобы открыть среду VSTA, щелкните **Изменить скрипт** на странице **Скрипт** окна **Редактор преобразования "скрипт"** . Можно написать скрипт на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# в зависимости от того, какой язык скриптов выбран в качестве значения свойства **ScriptLanguage**.  
@@ -394,5 +394,4 @@ ms.locfileid: "88477273"
 ## <a name="see-also"></a>См. также:  
  [Создание назначения с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [Разработка пользовательского компонента источника](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
-  
   

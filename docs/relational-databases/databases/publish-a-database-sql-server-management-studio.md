@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 503fe13d4f2d24c1795993bea84f2e04fb4ba0e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7865180ffd1bcf090e51eafd1542e12c97d17ac
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471183"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195013"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Публикация базы данных (среда SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,6 @@ ms.locfileid: "88471183"
 5.  На странице **Сохранение или публикация скриптов** можно наблюдать ход выполнения публикации.  
 
 ## <a name="see-also"></a>См. также  
- [Формирование скриптов (среда SQL Server Management Studio)](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
+ [Формирование скриптов (среда SQL Server Management Studio)](../../ssms/scripting/generate-scripts-sql-server-management-studio.md)   
  [Копирование баз данных на другие серверы](../../relational-databases/databases/copy-databases-to-other-servers.md)  
-  
   

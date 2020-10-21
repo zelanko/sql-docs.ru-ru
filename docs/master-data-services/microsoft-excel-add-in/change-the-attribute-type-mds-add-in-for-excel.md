@@ -1,5 +1,6 @@
 ---
-title: Изменение типа атрибута (надстройка MDS для Excel) | Документы Майкрософт
+description: Изменение типа атрибута (надстройка MDS для Excel)
+title: Изменение типа атрибута
 ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 785d65d17f1f14cc7fb2e7b7ec80b609d2950fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fd0e7f0acbe6792a5d303d50ef66014ebc5c1cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257585"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Изменение типа атрибута (надстройка MDS для Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут изменить тип атрибута, если тип данных или количество допустимых символов являются неверными.  
   
@@ -33,7 +34,7 @@ ms.locfileid: "68092484"
   
 -   необходимо иметь разрешение на доступ к функциональным областям **Администрирование системы** и **Обозреватель** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../../master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
   
 -   должны быть существующие модель, сущность и атрибут.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68092484"
 -   Создает копию атрибута с суффиксом _old, которая содержит предыдущие значения. Такой атрибут называется устаревшим.  
   
 ## <a name="see-also"></a>См. также:  
- [Атрибуты (службы Master Data Services)](../../master-data-services/attributes-master-data-services.md)   
+ [Master Data Services &#40;атрибутов&#41;](../../master-data-services/attributes-master-data-services.md)   
  [Построение модели (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

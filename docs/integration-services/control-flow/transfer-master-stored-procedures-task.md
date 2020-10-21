@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b4fccce21cd319049a4e313c27da6c4202a72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a053581c9f6ca8f9592aef42c1649511ecc51a02
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495970"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194226"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Задача «Передача главных хранимых процедур»
 
@@ -52,7 +52,7 @@ ms.locfileid: "88495970"
  Задача «Передача главных хранимых процедур» не сообщает о прогрессе перемещения; она сообщает только о степени выполнения 0% и 100%.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, определенное в свойстве **ExecutionValue** задачи, возвращает количество перемещенных хранимых процедур. После назначения пользовательской переменной свойству **ExecValueVariable** задачи "Передача главных хранимых процедур" сведения о перемещении хранимой процедуры могут стать доступными другим объектам в пакете. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Значение выполнения, определенное в свойстве **ExecutionValue** задачи, возвращает количество перемещенных хранимых процедур. После назначения пользовательской переменной свойству **ExecValueVariable** задачи "Передача главных хранимых процедур" сведения о перемещении хранимой процедуры могут стать доступными другим объектам в пакете. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача главных хранимых процедур» содержит следующие пользовательские записи журнала:  
@@ -82,7 +82,7 @@ ms.locfileid: "88495970"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Редактор задачи «Передача главных хранимых процедур» (страница «Общие»)
   Используйте страницу **Общие** в диалоговом окне **Редактор задачи «Передача главных хранимых процедур»** , чтобы назвать и описать задачу переноса главных хранимых процедур.  
@@ -139,5 +139,4 @@ ms.locfileid: "88495970"
  [Задача «Передача объектов SQL Server»](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
-  
   

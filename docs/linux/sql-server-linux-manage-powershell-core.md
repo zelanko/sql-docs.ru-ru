@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: fed5ca919a78f3051ba7677f46f786b7c62f9b27
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: d9df9281926008ddac99b6827c41a0b6e73b2290
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088857"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115602"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Управление SQL Server на Linux с помощью PowerShell Core
 
@@ -21,16 +21,16 @@ ms.locfileid: "88088857"
 
 ## <a name="cross-platform-editor-options"></a>Параметры кроссплатформенного редактора
 
-Все инструкции, приведенные ниже для PowerShell Core, будут работать и в обычном терминале. Их также можно выполнять из терминала в VS Code или Azure Data Studio.  Как VS Code, так и Azure Data Studio доступны в macOS и Linux.  Дополнительные сведения об Azure Data Studio см. в [этом кратком руководстве](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server).  Кроме того, можно использовать [расширение PowerShell](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension).
+Все инструкции, приведенные ниже для PowerShell Core, будут работать и в обычном терминале. Их также можно выполнять из терминала в VS Code или Azure Data Studio.  Как VS Code, так и Azure Data Studio доступны в macOS и Linux.  Дополнительные сведения об Azure Data Studio см. в [этом кратком руководстве](../azure-data-studio/quickstart-sql-server.md).  Кроме того, можно использовать [расширение PowerShell](../azure-data-studio/extensions/powershell-extension.md).
 
 ## <a name="installing-powershell-core"></a>Установка PowerShell Core
 
 Дополнительные сведения об установке PowerShell Core на различных поддерживаемых и экспериментальных платформах см. в следующих статьях:
 
-- [Установка PowerShell Core в Windows](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
-- [Установка PowerShell Core в Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Установка PowerShell Core в macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
-- [Установка PowerShell Core в ARM](https://docs.microsoft.com/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
+- [Установка PowerShell Core в Windows](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
+- [Установка PowerShell Core в Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [Установка PowerShell Core в macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Установка PowerShell Core в ARM](/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
 
 ## <a name="install-the-sqlserver-module"></a>Установка модуля SqlServer
 
@@ -108,7 +108,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>Использование поставщика SQL Server для PowerShell
 
-В качестве альтернативы для подключения к экземпляру SQL Server можно использовать [поставщик SQL Server PowerShell](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  Он позволяет работать с экземпляром SQL Server из командной строки так же, как с древовидной структурой в обозревателе объектов.  По умолчанию этот поставщик представлен в виде диска PSDrive с именем `SQLSERVER:\`, который может использоваться для подключения к экземплярам SQL Server, доступным вашей учетной записи домена, и работы с ними.  Дополнительные сведения о настройке проверки подлинности Active Directory для SQL Server на Linux см. в разделе [Шаги настройки](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps).
+В качестве альтернативы для подключения к экземпляру SQL Server можно использовать [поставщик SQL Server PowerShell](../powershell/sql-server-powershell-provider.md).  Он позволяет работать с экземпляром SQL Server из командной строки так же, как с древовидной структурой в обозревателе объектов.  По умолчанию этот поставщик представлен в виде диска PSDrive с именем `SQLSERVER:\`, который может использоваться для подключения к экземплярам SQL Server, доступным вашей учетной записи домена, и работы с ними.  Дополнительные сведения о настройке проверки подлинности Active Directory для SQL Server на Linux см. в разделе [Шаги настройки](./sql-server-linux-active-directory-auth-overview.md#configuration-steps).
 
 Также вы можете использовать проверку подлинности SQL в поставщике SQL Server PowerShell. Для этого с помощью командлета `New-PSDrive` создайте новый диск PSDrive и укажите учетные данные для подключения.
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>Командлеты, доступные в настоящее время в PowerShell Core
-Хотя модуль SqlServer сейчас содержит 109 командлетов Windows PowerShell, только 62 из них доступны в PowerShell Core. Ниже приведен их полный список.  Подробную документацию по всем командлетам модуля SqlServer см. в [справочнике по командлетам SqlServer](https://docs.microsoft.com/powershell/module/sqlserver/).
+Хотя модуль SqlServer сейчас содержит 109 командлетов Windows PowerShell, только 62 из них доступны в PowerShell Core. Ниже приведен их полный список.  Подробную документацию по всем командлетам модуля SqlServer см. в [справочнике по командлетам SqlServer](/powershell/module/sqlserver/).
 
 Приведенная ниже команда выводит все командлеты, доступные в используемой версии PowerShell.
 
@@ -272,4 +272,4 @@ SELECT Name
 - Convert-UrnToPath
 
 ## <a name="see-also"></a>См. также раздел
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)

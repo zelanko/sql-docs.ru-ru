@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: c49e89d9ed81950d0c8781d39c57eef3e408482b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024346"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195563"
 ---
 # <a name="tempdb-database"></a>tempdb, база данных
 
@@ -40,9 +40,9 @@ ms.locfileid: "91024346"
   > [!IMPORTANT]
   > Отдельные базы данных и эластичные пулы Базы данных SQL Azure поддерживают глобальные временные таблицы и глобальные временные хранимые процедуры, которые хранятся в `tempdb` и имеют область действия на уровне базы данных. 
   >
-  > Глобальные временные таблицы и глобальные временные хранимые процедуры являются общими для всех сеансов пользователей в рамках одной базы данных SQL. Сеансы пользователей, связанные с другими базами данных SQL, не имеют доступа к глобальным временным таблицам. Дополнительные сведения см. в разделе [Глобальные временные таблицы (база данных SQL Azure) в области базы данных](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Управляемый экземпляр SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживает те же временные объекты, что и SQL Server.
+  > Глобальные временные таблицы и глобальные временные хранимые процедуры являются общими для всех сеансов пользователей в рамках одной базы данных SQL. Сеансы пользователей, связанные с другими базами данных SQL, не имеют доступа к глобальным временным таблицам. Дополнительные сведения см. в разделе [Глобальные временные таблицы (база данных SQL Azure) в области базы данных](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Управляемый экземпляр SQL Azure](/azure/sql-database/sql-database-managed-instance) поддерживает те же временные объекты, что и SQL Server.
   >
-  > Для эластичных пулов и отдельных баз данных Базы данных SQL Azure применяются только базы master и `tempdb`. Дополнительные сведения см. в статье [Что являет собою сервер Базы данных SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Описание `tempdb` в контексте эластичных пулов и отдельных баз данных Базы данных SQL Azure см. в разделе [База данных tempdb в Базе данных SQL Azure](#tempdb-database-in-sql-database). 
+  > Для эластичных пулов и отдельных баз данных Базы данных SQL Azure применяются только базы master и `tempdb`. Дополнительные сведения см. в статье [Что являет собою сервер Базы данных SQL Azure?](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Описание `tempdb` в контексте эластичных пулов и отдельных баз данных Базы данных SQL Azure см. в разделе [База данных tempdb в Базе данных SQL Azure](#tempdb-database-in-sql-database). 
   >
   > Для Управляемого экземпляра SQL Azure применяются все системные базы данных.
 
@@ -149,7 +149,7 @@ ms.locfileid: "91024346"
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Размеры базы данных tempdb для уровней служб на основе виртуальных ядер
 
-См. сведения об [ограничениях ресурсов на основе виртуальных ядер](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits).
+См. сведения об [ограничениях ресурсов на основе виртуальных ядер](/azure/sql-database/sql-database-vcore-resource-limits).
 
 ## <a name="restrictions"></a>Ограничения
 
@@ -223,7 +223,7 @@ GO
 - Для всех операций распределения в `tempdb` используются единообразные экстенты. [Флаг трассировки 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) больше не требуется.  
 - Для первичной файловой группы свойство `AUTOGROW_ALL_FILES` включено и не может быть изменено.
 
-Дополнительные сведения об улучшениях производительности в `tempdb` см. в статье блога [TEMPDB — Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/) (TEMPDB — файлы, флаги трассировки и обновления).
+Дополнительные сведения об улучшениях производительности в `tempdb` см. в статье блога [TEMPDB — Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my) (TEMPDB — файлы, флаги трассировки и обновления).
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Оптимизированные для памяти метаданные tempdb
 Состязание метаданных `tempdb` всегда было узким местом для масштабируемости многих рабочих нагрузок, выполняющихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] появилась новая функция оптимизированных для памяти метаданных tempdb, входящая в семейство функций [выполняющейся в памяти базы данных](../in-memory-database.md). 
@@ -355,4 +355,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
 [Перемещение файлов базы данных](../../relational-databases/databases/move-database-files.md)    
-  

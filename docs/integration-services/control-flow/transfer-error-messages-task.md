@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9eb09d094ff5ce907479dacd848ca2a6010cee92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa0bf307931b25b72a56e069e9f1c45b9e6c8b5d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392920"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192786"
 ---
 # <a name="transfer-error-messages-task"></a>Задача «Передача сообщений об ошибках»
 
@@ -53,7 +53,7 @@ ms.locfileid: "88392920"
  В ходе выполнения задачи «Передача сообщений об ошибках» сведения о состоянии передачи не отображаются, появляются только сообщения о 0% и 100% выполнении.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, определенное свойством задачи **ExecutionValue** , возвращает количество переданных сообщений об ошибках. С помощью выделения пользовательской переменной для свойства **ExecValueVariable** задачи "Передача сообщений об ошибках" сведения об ошибках передачи становятся доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Значение выполнения, определенное свойством задачи **ExecutionValue** , возвращает количество переданных сообщений об ошибках. С помощью выделения пользовательской переменной для свойства **ExecValueVariable** задачи "Передача сообщений об ошибках" сведения об ошибках передачи становятся доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача сообщений об ошибках» включает в себя следующие пользовательские записи журнала.  
@@ -81,7 +81,7 @@ ms.locfileid: "88392920"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-error-messages-task-editor-general-page"></a>Редактор задачи «Передача сообщений об ошибках» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Передача сообщений об ошибках»** , чтобы задать имя и описание для задачи «Передача сообщений об ошибках». Задача "Передача сообщений об ошибках" передает одно или несколько пользовательских сообщений об ошибках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
@@ -134,5 +134,4 @@ ms.locfileid: "88392920"
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
-  
   

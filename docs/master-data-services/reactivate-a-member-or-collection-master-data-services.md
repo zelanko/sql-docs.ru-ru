@@ -1,5 +1,6 @@
 ---
-title: Повторная активация элемента или коллекции (службы Master Data Services) | Документы Майкрософт
+description: Повторная активация элемента или коллекции (службы Master Data Services)
+title: Повторная активация элемента или коллекции
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b07555b2c770cb1a4c9a6ad81348baac8f75114c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dce90b3bf8b151ec5ea24dda8ea3628852a8dcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257941"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>Повторная активация элемента или коллекции (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно повторно активировать элемент, который был:  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68093116"
   
 -   В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]необходимо иметь разрешение на доступ к функциональной области **Управление версиями** .  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>Повторная активация элемента или коллекции  
   
@@ -66,8 +67,8 @@ ms.locfileid: "68093116"
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**. Будет добавлена новая транзакция со значением **Активный** в столбце **Новое значение** .  
   
 ## <a name="see-also"></a>См. также:  
- [Удаление элемента или коллекции (службы Master Data Services)](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)   
+ [Удаление элемента или коллекции &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)   
  [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   

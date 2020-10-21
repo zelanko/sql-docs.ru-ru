@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8d4425da7d337a6628ae6197bedbe03d84897910
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386940"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193054"
 ---
 # <a name="data-tier-applications"></a>Приложения уровня данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "88386940"
 -   **ОБНОВЛЕНИЕ** — база данных может быть обновлена с помощью DACPAC. Обновление обеспечивается даже для базы данных, которая не зарегистрирована ранее в качестве приложения уровня данных, но по мере выполнения обновления база данных будет зарегистрирована явным образом.  
   
 ## <a name="bacpac"></a>Пакет BAC  
- Пакет BAC (BACPAC) — это файл Windows с расширением BACPAC, который инкапсулирует схему базы данных и данные. В основном файлы BACPAC используются для перемещения базы данных с одного сервера на другой или [с локального сервера на облачный](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/), а также для архивации существующих баз данных в открытом формате.  
+ Пакет BAC (BACPAC) — это файл Windows с расширением BACPAC, который инкапсулирует схему базы данных и данные. В основном файлы BACPAC используются для перемещения базы данных с одного сервера на другой или [с локального сервера на облачный](/azure/azure-sql/database/migrate-to-database-from-sql-server), а также для архивации существующих баз данных в открытом формате.  
  Подобно DACPAC, формат файла BACPAC является открытым — содержимое схемы BACPAC идентично содержимому схемы DACPAC. Данные в BACPAC хранятся в формате JSON.  
   
  Пакеты DAC и BAC похожи, но предназначены для разных сценариев. Пакет DAC осуществляет захват и развертывание схемы, включая обновление существующей базы данных. В основном файлы DACPAC используются для развертывания четко определенной схемы сперва в средах проектирования и тестирования, а затем в рабочих средах. Справедливо и обратное: захват рабочей схемы и применение ее в средах тестирования и разработки.  
@@ -130,6 +130,5 @@ ms.locfileid: "88386940"
 |Описывает использование мастера для развертывания существующей базы данных. Для выполнения развертывания мастер использует приложения уровня данных.|[Развертывание базы данных с помощью приложения уровня данных](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>См. также раздел  
- [Поддержка приложений уровня данных для объектов и версий SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
-  
+ [Поддержка приложений уровня данных для объектов и версий SQL Server](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
   

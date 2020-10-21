@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7d32d85ef52ac5e6dc687ed32e7283540240ce2b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897203"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115807"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Начало работы с доставкой журналов в Linux
 
@@ -30,7 +30,7 @@ ms.locfileid: "85897203"
 - восстановление файла резервной копии журнала транзакций в экземплярах-получателях SQL Server.
 
 ## <a name="prerequisites"></a>предварительные требования
-- [Установка агента SQL Server в Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+- [Установка агента SQL Server в Linux](./sql-server-linux-setup-sql-agent.md)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Настройка сетевой папки для доставки журналов с помощью CIFS 
 
@@ -319,5 +319,3 @@ ms.locfileid: "85897203"
     ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
-

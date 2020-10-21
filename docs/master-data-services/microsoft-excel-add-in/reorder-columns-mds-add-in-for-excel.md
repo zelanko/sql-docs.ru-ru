@@ -1,5 +1,6 @@
 ---
-title: Переупорядочение столбцов (надстройка MDS для Excel) | Документы Майкрософт
+description: Переупорядочение порядка столбцов (надстройка MDS для Excel)
+title: Переупорядочение порядка столбцов
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6002b634c38d40f9446bb7facc087fb0eef462ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fba50da832a2c09ac576862804ef96bd57a3943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258106"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>Переупорядочение порядка столбцов (надстройка MDS для Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В службах [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно переупорядочить столбцы, отфильтровав список перед загрузкой.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "68074432"
   
 8.  Нажмите кнопку **Загрузить данные**. Лист заполняется данными, управляемыми MDS, а столбцы отображаются в указанном вами порядке.  
   
-## <a name="see-also"></a>См. также  
- [Обзор: экспорт данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>См. также:  
+ [Обзор экспорта данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

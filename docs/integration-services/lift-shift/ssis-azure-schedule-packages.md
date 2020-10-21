@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989977"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195176"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Планирование выполнения пакетов служб SQL Server Integration Services (SSIS), развернутых в Azure
 
@@ -44,13 +44,13 @@ ms.locfileid: "90989977"
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Планирование пакета с использованием заданий обработки эластичных баз данных SQL
 
-Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>предварительные требования
 
 Прежде чем использовать задания обработки эластичных баз данных для планирования пакетов SSIS, хранящихся в каталоге базы данных SSISDB на сервере базы данных SQL Azure, необходимо выполнить следующие действия:
 
-1.  Установить и настроить компоненты для заданий обработки эластичных баз данных. Дополнительные сведения см. в разделе [Общие сведения об установке заданий обработки эластичных баз данных](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Установить и настроить компоненты для заданий обработки эластичных баз данных. Дополнительные сведения см. в разделе [Общие сведения об установке заданий обработки эластичных баз данных](/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Создать учетные данные уровня базы данных, которые задания смогут использовать для отправки команд в базу данных каталога SSIS. Дополнительные сведения см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -166,17 +166,17 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
 
 Чтобы запланировать запуск конвейера фабрики данных, используйте один из следующих триггеров:
 
-- [триггер расписания](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger);
+- [триггер расписания](/azure/data-factory/how-to-create-schedule-trigger);
 
-- [триггер "переворачивающегося" окна](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger);
+- [триггер "переворачивающегося" окна](/azure/data-factory/how-to-create-tumbling-window-trigger);
 
-- [триггер на основе событий](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger).
+- [триггер на основе событий](/azure/data-factory/how-to-create-event-trigger).
 
 Чтобы выполнить пакет служб SSIS в составе конвейера фабрики данных, используйте одно из следующих действий:
 
-- [действие "Выполнение пакета служб SSIS"](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity);
+- [действие "Выполнение пакета служб SSIS"](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity);
 
-- [действие хранимой процедуры](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+- [действие хранимой процедуры](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

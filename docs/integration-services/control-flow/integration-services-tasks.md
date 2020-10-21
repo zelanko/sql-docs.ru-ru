@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d54d80276714bdc1427c2c01be0f9620acc32c8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0136b994f064a01a66d4c0884499172b1dab894b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392650"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197214"
 ---
 # <a name="integration-services-tasks"></a>Задачи служб Integration Services
 
@@ -79,7 +79,7 @@ ms.locfileid: "88392650"
   
  Дополнительные сведения о программном добавлении задач в пакет см. в разделе [Программное добавление задач](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md).  
   
- Каждая задача может быть настроена отдельно с помощью собственных диалоговых окон, предоставляемых конструктором служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в окне «Свойства» среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. В пакете может храниться несколько задач одного типа (например, шесть задач "Выполнение SQL"), и каждая из них может быть настроена по-разному. Дополнительные сведения см. в разделе [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Каждая задача может быть настроена отдельно с помощью собственных диалоговых окон, предоставляемых конструктором служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в окне «Свойства» среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. В пакете может храниться несколько задач одного типа (например, шесть задач "Выполнение SQL"), и каждая из них может быть настроена по-разному. Дополнительные сведения см. в разделе [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## <a name="tasks-connections-and-groups"></a>Подключения и группы задач  
  Если задача содержит несколько задач, они связаны и упорядочены в потоке управления с помощью ограничений очередностью. Дополнительные сведения см. в статье [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
@@ -88,5 +88,4 @@ ms.locfileid: "88392650"
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Добавление задачи или контейнера в поток управления или удалить их из него](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f77a63b11636f2be16e3d7c81c5b902a95b2a84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8aa4a0c94f0728162230c5a282cbac7410643a4b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425596"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194563"
 ---
 # <a name="xml-source-custom-properties"></a>Пользовательские свойства источника «XML»
 
@@ -30,7 +30,7 @@ ms.locfileid: "88425596"
 |Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Целое число|Режим, используемый для доступа к XML-данным.|  
-|UseInlineSchema|Логическое значение|Указывает, следует ли использовать в источнике «XML» определение встроенной схемы. Это свойство имеет значение по умолчанию **False**.|  
+|UseInlineSchema|Логическое|Указывает, следует ли использовать в источнике «XML» определение встроенной схемы. Это свойство имеет значение по умолчанию **False**.|  
 |XMLData|Строка|Файл или переменные, из которых следует получить XML-данные.<br /><br /> Значение этого свойства можно задать с помощью выражения свойства.|  
 |XMLSchemaDefinition|Строка|Полный путь и имя файла определения схемы (XSD).<br /><br /> Значение этого свойства можно задать с помощью выражения свойства.|  
   
@@ -44,7 +44,6 @@ ms.locfileid: "88425596"
   
  Дополнительные сведения см. в статье [XML Source](../../integration-services/data-flow/xml-source.md).  
   
-## <a name="see-also"></a>См. также  
- [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+## <a name="see-also"></a>См. также:  
+ [Общие свойства](./set-the-properties-of-a-data-flow-component.md)  
   

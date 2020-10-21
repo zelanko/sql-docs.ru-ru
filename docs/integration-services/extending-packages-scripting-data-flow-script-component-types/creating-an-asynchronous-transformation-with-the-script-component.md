@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05d28638ebb8981c0ccce4e6bb38ab7179565d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d271139edbde0f1c67467b6fe880f916fb6c5142
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495624"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193118"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Создание асинхронного преобразования с помощью компонента скрипта
 
@@ -53,7 +53,7 @@ ms.locfileid: "88495624"
   
  На странице **Входные столбцы** в окне **Редактор преобразования "скрипт"** в списке показаны доступные столбцы из выходных данных вышестоящего компонента в потоке данных. Выделите столбцы, которые хотите преобразовать или передать. Пометьте все столбцы, участвующие в преобразовании, как доступные для чтения и записи.  
   
- Дополнительные сведения о странице **Входные столбцы** **редактора преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Входные столбцы")](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md).  
+ Дополнительные сведения о странице **Входные столбцы** **редактора преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Входные столбцы")](../data-flow/transformations/script-component.md).  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>Настройка входов, выходов и выходных столбцов  
  Компонент преобразования поддерживает один или несколько выходов.  
@@ -70,7 +70,7 @@ ms.locfileid: "88495624"
   
 -   Можно добавить дополнительные столбцы для дополнительной информации. Чтобы дополнительные столбцы заполнялись данными, необходимо написать собственный код. Сведения о воспроизведении поведения стандартного вывода ошибок см. в разделе [Имитация вывода ошибок для компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
   
- Дополнительные сведения о странице **Входы и выходы** **редактора преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Входы и выходы")](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
+ Дополнительные сведения о странице **Входы и выходы** **редактора преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Входы и выходы")](../data-flow/transformations/script-component.md).  
   
 ### <a name="adding-variables"></a>Добавление переменных  
  Если нужно использовать в скрипте значения существующих переменных, их можно добавить в поля свойств ReadOnlyVariables и ReadWriteVariables на странице **Скрипт** в **редакторе преобразования "скрипт"** .  
@@ -79,7 +79,7 @@ ms.locfileid: "88495624"
   
  Общие сведения об использовании переменных в компоненте скрипта см. в разделе [Использование переменных в компоненте скрипта](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
- Дополнительные сведения о странице **Скрипт** в окне **Редактор преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Скрипт")](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Дополнительные сведения о странице **Скрипт** в окне **Редактор преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Скрипт")](../data-flow/transformations/script-component.md).  
   
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>Создание скрипта компонента асинхронного преобразования в режиме конструктора кода  
  После настройки всех метаданных компонента можно написать пользовательский скрипт. В **редакторе преобразования "Скрипт"** на странице **Скрипт** нажмите кнопку **Изменить скрипт**, чтобы открыть интегрированную среду разработки средств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для приложений (VSTA), где можно добавить пользовательский скрипт. Используемый язык скриптов зависит от значения свойства **ScriptLanguage**, указанного на странице **Скрипт**. В качестве значения можно выбрать язык [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
@@ -238,5 +238,4 @@ public class ScriptMain:
  [Основные сведения о синхронных и асинхронных преобразованиях](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [Создание синхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [Разработка пользовательского компонента преобразования с асинхронными выходами](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
-  
   

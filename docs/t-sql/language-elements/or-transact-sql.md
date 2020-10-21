@@ -21,12 +21,12 @@ ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11dbf45f7376a1a5557331dbd0466443bbd92739
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4924d983b55592cbc7a6be5794e0fd32fc10748
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422498"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191524"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ boolean_expression OR boolean_expression
 ## <a name="examples"></a>Примеры  
  В следующем примере представление `vEmployeeDepartmentHistory` используется для извлечения имен персонала `Quality Assurance`, работающего либо в вечернюю, либо в ночную смену. Если скобки не указаны, запрос возвращает сотрудников фирмы `Quality Assurance`, работающих в вечернюю смену, и всех сотрудников, работающих в ночную смену.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Shift   
@@ -86,7 +86,7 @@ WHERE Department = 'Quality Assurance'
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В приведенном ниже примере извлекаются имена сотрудников со значением `BaseRate` меньше 20 или значением `HireDate` не раньше 1 января 2001 г.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, BaseRate, HireDate   
