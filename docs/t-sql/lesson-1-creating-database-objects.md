@@ -11,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6405d6be70477297fb9ca02637c92b9e458144a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459180"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035887"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Урок 1. Создание объектов базы данных и отправка запросов к ним
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "88459180"
 ## <a name="prerequisites"></a>Предварительные требования
 Для работы с этим руководством необходима среда SQL Server Management Studio и доступ к экземпляру SQL Server. 
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 
 Если у вас нет экземпляра SQL Server, создайте его. Чтобы создать экземпляр, выберите свою платформу по следующим ссылкам. При выборе проверки подлинности SQL используйте учетные данные SQL Server.
 - **Windows**: [скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [скачать SQL Server 2017 для Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **macOS**: [скачать SQL Server 2017 для Docker](../linux/quickstart-install-connect-docker.md).
 
 ## <a name="create-a-database"></a>Создание базы данных
 Как и у многих инструкций языка [!INCLUDE[tsql](../includes/tsql-md.md)], у инструкции [`CREATE DATABASE`](statements/create-database-transact-sql.md) имеется обязательный параметр: имя базы данных.` CREATE DATABASE` Кроме этого, у инструкции имеется ряд необязательных параметров, таких как расположение на диске, где требуется хранить файлы базы данных. При выполнении инструкции `CREATE DATABASE` без дополнительных параметров для многих из них [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует значения по умолчанию.
@@ -241,7 +241,7 @@ ms.locfileid: "88459180"
         [Математические функции (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)
     :::column-end:::
     :::column:::
-        [Функции для работы с изображениями и текстом (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
+        [Функции для работы с изображениями и текстом (Transact-SQL)](./functions/text-and-image-functions-textptr-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
@@ -304,6 +304,5 @@ ms.locfileid: "88459180"
 Дополнительные сведения см. в следующей статье:
 > [!div class="nextstepaction"]
 > [Следующие шаги](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   
   

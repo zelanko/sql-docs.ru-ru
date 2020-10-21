@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9eb0bd04dc50aac286b72983ee4b3d196f04c60c
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006541"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175915"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86006541"
  
  Чтобы определить, что препятствует усечению журнала транзакций в конкретном случае, используйте столбцы **log_reuse_wait** и **log_reuse_wait_desc** представления каталога **sys.database**. Дополнительные сведения см. в разделе [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Описание причин, которые могут задержать усечение журнала, см. в разделе [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-> **ВАЖНО!**  
+> [!IMPORTANT]  
 >  Если при возникновении ошибки 9002 база данных находилась в состоянии восстановления, то после устранения проблемы восстановите базу данных с помощью инструкции [ALTER DATABASE *имя_базы_данных* SET ONLINE.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
  При переполнении журнала транзакций предусмотрены следующие ответные действия:  
@@ -61,8 +61,8 @@ ms.locfileid: "86006541"
   
  **Создание резервной копии журнала транзакций**  
   
-> **ВАЖНО**  
->  Если база данных повреждена, см. раздел [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+> [!IMPORTANT]  
+> Если база данных повреждена, см. раздел [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 -   [Создание резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -74,7 +74,8 @@ ms.locfileid: "86006541"
 ### <a name="move-the-log-file-to-a-different-disk"></a>Перемещение файла журнала на другой диск  
  Если на текущем диске невозможно освободить достаточное количество места, следует переместить файл на другой диск, где места достаточно.  
   
-> **ВАЖНО!** Файлы журнала ни в коем случае не следует размещать в файловых системах со сжатием.  
+> [!IMPORTANT]
+> Файлы журнала ни в коем случае не следует размещать в файловых системах со сжатием.  
   
  **Перемещение файла журнала**  
   
@@ -91,7 +92,8 @@ ms.locfileid: "86006541"
   
 -   Включить свойство автоматического увеличения при помощи инструкции ALTER DATABASE, чтобы установить отличное от нуля значение шага роста для параметра FILEGROWTH.  
   
-> **ПРИМЕЧАНИЕ.** В любом случае, если достигнут текущий предел размера файла, увеличьте значение MAXSIZE.  
+> [!NOTE]
+> В любом случае, если достигнут текущий предел размера файла, увеличьте значение MAXSIZE.  
   
 ### <a name="add-a-log-file-on-a-different-disk"></a>Добавление файла журнала на другой диск  
  Добавьте новый файл журнала базы данных на другом диске, где достаточно места, с помощью инструкции ALTER DATABASE <имя_базы_данных> ADD LOG FILE.  

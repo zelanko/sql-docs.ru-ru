@@ -1,5 +1,6 @@
 ---
-title: Общие сведения. Импорт данных из таблиц (службы Master Data Services) | Документация Майкрософт
+title: Импорт данных из таблиц
+description: Импортируйте данные из таблиц и внесите изменения в данные после создания модели для данных в Master Data Services.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45dcf3f21a87d81289d6445014f4157db4ab8e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 232900f14580db1e09fe0b54c4dfcd77e5310283
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257575"
 ---
-# <a name="overview-importing-data-from-tables-master-data-services"></a>Общие сведения. Импорт данных из таблиц (службы Master Data Services)
+# <a name="overview-importing-data-from-tables-master-data-services"></a>Обзор: импорт данных из таблиц (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   После создания модели для данных в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно добавлять данные и вносить в них изменения.   Используются промежуточные таблицы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и диспетчер основных данных.  
   
  Дополнительные сведения о добавлении и изменении данных см. в разделе [Импорт данных из таблиц (службы Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md).  
   
 > [!NOTE]
->  Также можно использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]для добавления данных в репозиторий MDS (база данных[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) из Excel. Дополнительные сведения см. в статье [Обзор: импорт данных из Excel (надстройка MDS для Excel)](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+>  Также можно использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]для добавления данных в репозиторий MDS (база данных[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) из Excel. Дополнительные сведения см. в разделе [Обзор импорта данных из Excel (надстройка MDS для Excel)](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  При добавлении или изменении данных можно выполнять следующие действия.  
   
@@ -89,11 +90,11 @@ ms.locfileid: "68097384"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие типы промежуточных хранимых процедур.  
   
--   stg.udp_\<имя>_Leaf  
+-   stg.udp_ \<name> _Leaf  
   
--   stg.udp_\<имя>_Consolidated  
+-   stg.udp_ \<name> _Consolidated  
   
--   stg.udp_\<имя>_Relationship  
+-   stg.udp_ \<name> _Relationship  
   
  Для каждой сущности в модели есть три хранимые процедуры, которые соответствуют конечному элементу, объединенному элементу и промежуточным таблицам связей.  На следующем изображении показаны промежуточные хранимые процедуры для сущностей валюты, клиента и продукта.  
   

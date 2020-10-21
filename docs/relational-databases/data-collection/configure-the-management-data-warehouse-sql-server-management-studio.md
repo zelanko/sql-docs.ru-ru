@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6dc0705d65cf77dc0aa1f334fee2d78d2ca2e400
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733875"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193452"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Настройка хранилища данных управления (среда SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85733875"
  На этой странице выберите сервер базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и хранилище данных управления. Хранилище управляющих данных — это реляционная база данных, содержащая собранные данные.  
   
 > [!NOTE]  
->  Необходим соответствующий уровень разрешений, чтобы создать на сервере хранилище управляющих данных. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md). Необходим также соответствующий уровень разрешений, чтобы создать имена входа для хранилища управляющих данных.  
+>  Необходим соответствующий уровень разрешений, чтобы создать на сервере хранилище управляющих данных. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md). Необходим также соответствующий уровень разрешений, чтобы создать имена входа для хранилища управляющих данных.  
   
  **Имя сервера**  
  Указывает имя сервера, на котором будет размещено хранилище управляющих данных.  
@@ -139,5 +139,4 @@ ms.locfileid: "85733875"
  [sp_syscollector_disable_collector (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md)  
-  
   

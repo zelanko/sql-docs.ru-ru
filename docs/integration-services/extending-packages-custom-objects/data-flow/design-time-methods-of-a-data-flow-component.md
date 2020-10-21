@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6eaaacea73d119961f7db31e75ba7089387674c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd3951ce785fc8444009a0af9442a85a41b0fbfa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484257"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193166"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Методы времени разработки для компонента потока данных
 
@@ -105,7 +105,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- Дополнительные сведения см. в разделах "Преобразование обобщенного типа" и "Реализация преобразователя типов" [библиотеки MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ Дополнительные сведения см. в разделах "Преобразование обобщенного типа" и "Реализация преобразователя типов" [библиотеки MSDN](../../../sql-server/index.yml).  
   
  С помощью свойства <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> в качестве значения пользовательского свойства можно указать диалоговое окно пользовательского редактора, как показано в следующем примере. Сначала нужно создать пользовательский редактор типов, наследующий от **System.Drawing.Design.UITypeEditor**, если не удается найти существующий класс редактора типов пользовательских интерфейсов, отвечающий потребностям пользователя.  
   
@@ -139,9 +139,8 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- Дополнительные сведения см. в разделе "Реализация редактора типов пользовательских интерфейсов" [библиотеки MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ Дополнительные сведения см. в разделе "Реализация редактора типов пользовательских интерфейсов" [библиотеки MSDN](../../../sql-server/index.yml).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы времени выполнения для компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
-  
   

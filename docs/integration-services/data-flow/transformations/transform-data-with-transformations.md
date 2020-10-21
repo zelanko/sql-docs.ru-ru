@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d9422574f80febefc6458b389f04b4b1625b22c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5189cda62a168db3cedff0d57666df7e15a0d65c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425656"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193179"
 ---
 # <a name="transform-data-with-transformations"></a>Преобразование данных с помощью преобразований
 
@@ -49,7 +49,7 @@ ms.locfileid: "88425656"
   
  Также можно создавать пользовательские преобразования. Дополнительные сведения см. в разделах [Разработка пользовательского компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) и [Разработка компонентов потока данных определенных типов](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- После добавления преобразования к конструктору потока данных, но до настройки преобразования нужно подключить преобразование к потоку данных путем подключения к входу данного преобразования выхода другого преобразования или источника в потоке данных. Соединитель компонентов потока данных называется путем. Дополнительные сведения о соединении компонентов и работе с путями см. в разделе [Соединение компонентов с путями](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ После добавления преобразования к конструктору потока данных, но до настройки преобразования нужно подключить преобразование к потоку данных путем подключения к входу данного преобразования выхода другого преобразования или источника в потоке данных. Соединитель компонентов потока данных называется путем. Дополнительные сведения о соединении компонентов и работе с путями см. в разделе [Соединение компонентов с путями](../connect-components-in-a-data-flow.md).  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>Добавление преобразования к потоку данных  
   
@@ -66,8 +66,7 @@ ms.locfileid: "88425656"
 ## <a name="see-also"></a>См. также:  
  [Задача потока данных](../../../integration-services/control-flow/data-flow-task.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
- [Соединение компонентов с путями](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Соединение компонентов с путями](../connect-components-in-a-data-flow.md)   
  [Обработка ошибок в данных](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)  
-  
   

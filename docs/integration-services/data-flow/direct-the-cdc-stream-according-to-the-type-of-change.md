@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fc9b1025bc4b3d4399203d12253a1aa9caa38883
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4d6f406aa50176e60cabd72e348f1daeb0c56d3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477891"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197141"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Выбор направления потока CDC в соответствии с типом изменения
 
@@ -25,7 +25,7 @@ ms.locfileid: "88477891"
 
   Чтобы можно было добавить и настроить преобразование «Разделитель CDC», пакет должен содержать по крайней мере одну задачу «Поток данных» и источник CDC.  
   
- Для источника CDC, добавленного к пакету, должен быть выбран режим обработки NetCDC. Дополнительные сведения о выборе режимов обработки см. в разделе [Редактор источника "CDC" (страница "Диспетчер соединений")](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).  
+ Для источника CDC, добавленного к пакету, должен быть выбран режим обработки NetCDC. Дополнительные сведения о выборе режимов обработки см. в разделе [Редактор источника "CDC" (страница "Диспетчер соединений")](./cdc-source.md).  
   
 ### <a name="to-direct-the-cdc-stream-according-to-the-type-of-change"></a>Выбор направления потока CDC в соответствии с типом изменения  
   
@@ -57,7 +57,6 @@ ms.locfileid: "88477891"
   
      Дополнительные сведения об использовании разделителя CDC см. в разделе «Компоненты CDC для служб Microsoft SQL Server Integration Services».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разделитель CDC](../../integration-services/data-flow/cdc-splitter.md)  
-  
   

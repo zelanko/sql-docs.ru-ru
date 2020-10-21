@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f833aeaa63838281eaff92c0dfe1e9fed799cdb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47df12a85a22251a9cd962834e8e2a97170a4528
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360330"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038330"
 ---
 # <a name="point-geography-data-type"></a>Point (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ Point ( Lat, Long, SRID )
  Выражение **float**, представляющее координату по оси X создаваемого экземпляра **Point**. Дополнительные сведения о допустимых значениях широты и долготы см. в разделе [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- Выражение типа **int**, представляющее [идентификатор пространственной ссылки](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) возвращаемого экземпляра **geography**.  
+ Выражение типа **int**, представляющее [идентификатор пространственной ссылки](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) возвращаемого экземпляра **geography**.  
   
 > [!NOTE]  
 >  Аргументы для метода точки (тип данных geography) имеют обратные координаты по сравнению с WKT.  
@@ -68,4 +68,4 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aabae9ce08729c5dab6a0ea57c5e75900c9aaff8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8ff797225d3a97673bf0f1b108ce15eb6e8bd52
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430406"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193104"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Составление списка для цикла по каждому элементу в задаче «Скрипт»
 
@@ -252,6 +252,5 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ## <a name="see-also"></a>См. также:  
  [Контейнер "Цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md)   
- [Настройка контейнера «цикл по каждому элементу»](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
-  
+ [Настройка контейнера «цикл по каждому элементу»](../control-flow/foreach-loop-container.md)  
   

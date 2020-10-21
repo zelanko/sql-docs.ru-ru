@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d884f38d93d7e79094fd1e2074e92e37050ddfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beb9a1e1dcb25f42e2d9a49c1e0e5c1a77a3f0ea
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477277"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193064"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Выполнение пакета служб SSIS с помощью SQL Server Management Studio (SSMS)
 
@@ -27,7 +27,7 @@ SQL Server Management Studio — это интегрированная сред�
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Прежде чем начать, убедитесь в наличии последней версии SQL Server Management Studio (SSMS). Чтобы скачать среду SSMS, посетите страницу [Скачивание SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Прежде чем начать, убедитесь в наличии последней версии SQL Server Management Studio (SSMS). Чтобы скачать среду SSMS, посетите страницу [Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 Сервер Базы данных SQL Azure прослушивает порт 1433. Если вы пытаетесь подключиться к серверу базы данных SQL Azure изнутри корпоративного брандмауэра, для успешного подключения в этом брандмауэре должен быть открыт данный порт.
 
@@ -86,4 +86,4 @@ SQL Server Management Studio — это интегрированная сред�
     - [Выполнение пакета служб SSIS с помощью Transact-SQL (Visual Studio Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Выполнение пакета служб SSIS из командной строки](./ssis-quickstart-run-cmdline.md)
     - [Выполнение пакета служб SSIS с помощью PowerShell](ssis-quickstart-run-powershell.md)
-    - [Выполнение пакета служб SSIS с помощью C#](./ssis-quickstart-run-dotnet.md) 
+    - [Выполнение пакета служб SSIS с помощью C#](./ssis-quickstart-run-dotnet.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6ae5739b4309c9f56d2f67a17573722f141ec5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb1fc17be92259e0fe642c90f760c375e5eacb0f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430886"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192756"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Извлечение информации об изменениях данных с помощью источника CDC
 
@@ -76,8 +76,7 @@ ms.locfileid: "88430886"
 15. Нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также:  
- [Редактор источника "CDC" (страница "Диспетчер соединений")](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [Редактор источника "CDC" (страница "Столбцы")](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [Редактор источника "CDC" (страница "Вывод ошибок")](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
-  
+ [Редактор источника "CDC" (страница "Диспетчер соединений")](./cdc-source.md)   
+ [Редактор источника "CDC" (страница "Столбцы")](./cdc-source.md)   
+ [Редактор источника "CDC" (страница "Вывод ошибок")](./cdc-source.md)  
   

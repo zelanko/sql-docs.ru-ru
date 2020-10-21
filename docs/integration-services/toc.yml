@@ -50,9 +50,9 @@
     - name: Руководство. Развертывание и запуск пакетов в Azure
       href: ../integration-services/lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
     - name: Подключение к данным с проверкой подлинности Windows
-      href: ../integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md
+      href: /azure/data-factory/ssis-azure-connect-with-windows-auth
     - name: Сохранение файлов и подключение к общим папкам
-      href: ../integration-services/lift-shift/ssis-azure-files-file-shares.md
+      href: /azure/data-factory/ssis-azure-files-file-shares
     - name: Подключение к каталогу служб SSIS в Azure
       href: ../integration-services/lift-shift/ssis-azure-connect-to-catalog-database.md
     - name: 'Проверка пакетов, развертываемых в Azure'
@@ -327,7 +327,7 @@
           href: ../integration-services/control-flow/message-queue-task.md
           items:
             - name: Выбор переменных
-              href: ../integration-services/control-flow/select-variables.md
+              href: ./control-flow/message-queue-task.md
             - name: Выбор пакета
               href: ../integration-services/control-flow/select-a-package.md
         - name: задача «Уведомление оператора»
@@ -630,7 +630,7 @@
       href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
       items:
         - name: Диспетчер соединений «Очистка DQS»
-          href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+          href: ./connection-manager/dqs-cleansing-connection-manager.md
         - name: Применение правил качества данных к источнику данных
           href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
         - name: Сопоставление столбцов с составными доменами
@@ -657,9 +657,9 @@
         - name: Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»
           href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
         - name: Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем
-          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+          href: ./connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
         - name: Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB
-          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+          href: ./connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
         - name: Создание или развертывание кэша для преобразования «Уточняющий запрос»
           href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
         - name: Создание связей
@@ -668,7 +668,7 @@
           href: ../integration-services/data-flow/transformations/cache-transform.md
           items:
             - name: диспетчер соединений с кэшем
-              href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+              href: ./connection-manager/cache-connection-manager.md
     - name: преобразование «Слияние»
       href: ../integration-services/data-flow/transformations/merge-transformation.md
     - name: Merge Join Transformation
@@ -1846,7 +1846,7 @@
 - name: Ресурсы
   items:
     - name: Форум по службам SSIS >>
-      href: 'https://docs.microsoft.com/answers/topics/sql-server-integration-services.html'
+      href: /answers/topics/sql-server-integration-services.html
     - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
     - name: Блог по службам SSIS >>

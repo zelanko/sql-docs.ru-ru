@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b7d0f0a75c924151b2548a71a2f52389abc95577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456916"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193731"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Новые возможности служб Integration Services в SQL Server 2017
 
@@ -78,7 +78,7 @@ ms.locfileid: "88456916"
 -   Повышена производительность записи данных журналов, связанных с выполнением пакетов в Scale Out, в базу данных SSISDB. Журналы сообщений о событиях и контексте сообщений теперь записываются в базу данных SSISDB в пакетном режиме, а не по отдельности. Примечания касательно этого улучшения:        
     - В некоторых отчетах в текущей версии SQL Server Management Studio (SSMS) эти журналы, связанные с выполнениями в развертывании с горизонтальным увеличением масштаба, в настоящее время не приводятся. Предполагается, что они будут поддерживаться в следующем выпуске SSMS. Это касается отчета *Все соединения*, отчета *Контекст ошибки* и раздела *Сведения о подключении* на панели мониторинга службы Integration Service.
     - Добавлен новый столбец **event_message_guid**. Этот столбец можно использовать для объединения представлений [catalog].[event_message_context] и [catalog].[event_messages] вместо использования **event_message_id** при запросе журналов выполнений в Scale Out.
--   Чтобы получить приложение для управления компонентом SSIS Scale Out, [скачайте SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 или более поздней версии.
+-   Чтобы получить приложение для управления компонентом SSIS Scale Out, [скачайте SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 или более поздней версии.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>Новые возможности служб SQL Server Integration Services в SQL Server 2017 CTP 2.0
 
@@ -113,4 +113,3 @@ ms.locfileid: "88456916"
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Поддержка ресурсов Microsoft Dynamics Online
 
 Источник OData и диспетчер подключений OData теперь поддерживают подключение к каналам OData в Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online.
-

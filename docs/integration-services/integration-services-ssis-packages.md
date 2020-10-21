@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449828"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193862"
 ---
 # <a name="integration-services-ssis-packages"></a>Пакеты служб Integration Services (SSIS)
 
@@ -61,7 +61,7 @@ ms.locfileid: "88449828"
 ### <a name="configurations"></a>Конфигурации  
  Конфигурация — это набор пар вида "свойство-значение", определяющий свойства пакета и его задачи, контейнеры, переменные, соединения, а также обработчики событий при запуске пакета. Конфигурации позволяют обновлять свойства без изменения пакета. При запуске пакета загружаются данные конфигурации, обновляя значения свойств. Например, конфигурация может обновлять строку соединения для соединения.  
   
- Конфигурация сохраняется, а затем развертывается вместе с пакетом при установке пакета на другом компьютере. Для поддержки пакета в другой среде значения его конфигурации можно обновлять при установке пакета. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](../integration-services/packages/create-package-configurations.md).  
+ Конфигурация сохраняется, а затем развертывается вместе с пакетом при установке пакета на другом компьютере. Для поддержки пакета в другой среде значения его конфигурации можно обновлять при установке пакета. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](./packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="logging-and-log-providers"></a>Ведение журналов и регистраторы  
  Журнал — это коллекция данных о пакете, собираемых во время работы пакета. Например, в журнале может быть записано время начала и окончания работы пакета. Регистратор определяет целевой тип и формат, который пакет с его контейнерами и задачами применяет для записи сведений о выполнении. Журналы связаны с пакетом, но задачи и контейнеры в пакете могут сохранять данные в журнале любого пакета. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают в себя различные встроенные регистраторы. Например, в состав служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] входят регистраторы для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и текстовых файлов. Кроме того, можно создавать пользовательские регистраторы и применять их для ведения журналов. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../integration-services/performance/integration-services-ssis-logging.md).  
@@ -117,5 +117,4 @@ ms.locfileid: "88449828"
 -   [Создание пакетов в SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   См. раздел [Программное построение пакетов](../integration-services/building-packages-programmatically/building-packages-programmatically.md) руководства разработчика. 
-  
   

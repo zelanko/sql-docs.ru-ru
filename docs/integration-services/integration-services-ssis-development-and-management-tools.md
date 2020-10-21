@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a84ff3b6f655ee0c0e797f7cfcda541ee6e964c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa32eb175339d3fa02afdf41e0c90471a7ef8ee5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449856"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193886"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Средства разработки и управления Integration Services (SSIS)
 
@@ -52,7 +52,7 @@ ms.locfileid: "88449856"
   
 -   Сохранять копии пакетов в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, в хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и в файловой системе.  
   
- Дополнительные сведения о [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/hh272686.aspx).  
+ Дополнительные сведения о [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [SQL Server Data Tools (SSDT)](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103)).  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Среда[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предоставляет службу [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , применяемую для управления пакетами и контроля за выполнением пакетов, а также для определения влияния и преобразования данных для объектов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -65,4 +65,4 @@ ms.locfileid: "88449856"
   
 -   Запустите программу выполнения пакетов для создания командной строки, которую можно использовать в программе командной строки **dtexec** (dtexec.exe).  
   
--   Проводить операции импорта и экспорта пакетов с базой данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, хранилищами пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] и с файловой системой.  
+-   Проводить операции импорта и экспорта пакетов с базой данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, хранилищами пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] и с файловой системой.

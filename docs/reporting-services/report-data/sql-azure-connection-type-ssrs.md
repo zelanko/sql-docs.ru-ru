@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988476"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935194"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Тип подключения к SQL Azure (SSRS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "87988476"
 > [!NOTE]  
 > При открытии соединения с [!INCLUDE[ssSDS](../../includes/sssds-md.md)]задайте время ожидания соединения равным 30 секундам.
   
-Дополнительные сведения см. в разделе о [базе данных SQL Microsoft Azure на сайте docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/).  
+Дополнительные сведения см. в разделе о [базе данных SQL Microsoft Azure на сайте docs.microsoft.com](/azure/sql-database/).  
   
 Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -55,7 +55,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 - Использовать сохраненные имя пользователя и пароль. Чтобы согласовать «двойной прыжок», который происходит в случае, если база данных, содержащая отчет, не является сервером отчетов, выберите в качестве учетных данных учетные данные Windows. Кроме того, после подключения к источнику данных можно прибегнуть к олицетворению пользователя, прошедшего проверку подлинности.  
   
-- Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+- Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в статье [Настройка учетной записи автоматического выполнения (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 Дополнительные сведения см. в статьях [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -79,7 +79,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 Дополнительные сведения см. в разделах [Пользовательский интерфейс конструктора реляционных запросов (построитель отчетов)](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) и [Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-В графическом конструкторе запросов, используемом [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , предусмотрена встроенная поддержка группирования и агрегатов, помогающих писать запросы, которые получают только сводку данных. Далее приведены функции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] : предложение GROUP BY, ключевое слово DISTINCT и агрегаты, например SUM и COUNT. В текстовом конструкторе запросов предусмотрена полная поддержка языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , в том числе группирование и агрегаты. Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в [Справочнике по Transact-SQL &#40;компонент Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+В графическом конструкторе запросов, используемом [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , предусмотрена встроенная поддержка группирования и агрегатов, помогающих писать запросы, которые получают только сводку данных. Далее приведены функции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] : предложение GROUP BY, ключевое слово DISTINCT и агрегаты, например SUM и COUNT. В текстовом конструкторе запросов предусмотрена полная поддержка языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , в том числе группирование и агрегаты. Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в [Справочнике по Transact-SQL &#40;компонент Database Engine&#41;](../../t-sql/language-reference.md).  
   
 ### <a name="using-query-type-text"></a><a name="QueryText"></a> Использование типа запроса Text
 
@@ -161,9 +161,9 @@ WHERE EmployeeID = (@EmpID)
 Такой сценарий поддерживается при правильной настройке следующих элементов:
 
 - [Библиотека проверки подлинности Active Directory для SQL Server (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742) установлена на сервере отчетов.
-- [Службы федерации Active Directory (AD FS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) настроены для создания федерации между локальной службой Active Directory (AD) и AAD.
-- Настроено [ограниченное делегирование Kerberos (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) с сервера отчетов на сервер AD FS.
-- Настройте для отчета и источника данных выполнение проверки подлинности в [Базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) от имени пользователя, просматривающего отчет.
+- [Службы федерации Active Directory (AD FS)](/windows-server/identity/active-directory-federation-services) настроены для создания федерации между локальной службой Active Directory (AD) и AAD.
+- Настроено [ограниченное делегирование Kerberos (KCD)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) с сервера отчетов на сервер AD FS.
+- Настройте для отчета и источника данных выполнение проверки подлинности в [Базе данных SQL Azure](/azure/sql-database/sql-database-technical-overview) от имени пользователя, просматривающего отчет.
 
 ::: moniker-end
 
@@ -198,8 +198,7 @@ WHERE EmployeeID = (@EmpID)
   
 ## <a name="see-also"></a>См. также:
 
-[База данных SQL Microsoft Azure на сайте docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/)  
+[База данных SQL Microsoft Azure на сайте docs.microsoft.com](/azure/sql-database/)  
 [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-
+[Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

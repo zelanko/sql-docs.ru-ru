@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: e28b690a6231a77b09664b1c8680522f426e5e92
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 125e1b8fdadc04a7d3ba08807a72ef594b42388e
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785059"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115857"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Перенос базы данных SQL Server из Windows в Linux с помощью резервного копирования и восстановления
 
@@ -37,7 +37,7 @@ ms.locfileid: "91785059"
 
 * Компьютер Windows со следующими компонентами:
   * установленный экземпляр [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads);
-  * установленная среда [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms);
+  * установленная среда [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md);
   * целевая база данных для переноса.
 
 * Компьютер Linux со следующими компонентами:
@@ -78,7 +78,7 @@ ms.locfileid: "91785059"
 
 1. Установите оболочку Bash на компьютере Windows, который поддерживает команды **scp** (безопасное копирование) и **ssh** (удаленный вход в систему). Вот два примера:
 
-   * [подсистема Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10);
+   * [подсистема Windows для Linux](/windows/wsl/about) (Windows 10);
    * оболочка Bash GIT ([https://git-scm.com/downloads](https://git-scm.com/downloads)).
 
 1. Откройте сеанс Bash в Windows.

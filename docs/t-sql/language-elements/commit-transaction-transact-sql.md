@@ -30,12 +30,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e890507e66f328d513a270e0f9f6258d626d9aa
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 252fdfd8accd33d8081b7f0770eec3264391a278
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227258"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196698"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -102,7 +102,7 @@ COMMIT [ TRAN | TRANSACTION ]
 
 В следующем примере удаляется кандидат на вакансию. В нем используется база данных AdventureWorks. 
   
-```   
+```sql   
 BEGIN TRANSACTION;   
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;   
@@ -114,17 +114,17 @@ COMMIT TRANSACTION;
 
 В следующем примере создается таблица и формируется три уровня вложенных транзакций, которые затем фиксируются. Хотя каждая инструкция `COMMIT TRANSACTION` имеет параметр *transaction_name*, связи между инструкциями `COMMIT TRANSACTION` и `BEGIN TRANSACTION` не существует. Параметры *transaction_name* позволяют программисту удостовериться в том, что закодировано правильное количество фиксаций, необходимое для того, чтобы уменьшить значение `@@TRANCOUNT` до 0 и таким образом зафиксировать внешнюю транзакцию. 
   
-```   
+```sql   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
     DROP TABLE TestTran;  
 GO  
-CREATE TABLE TestTran (Cola int PRIMARY KEY, Colb char(3));  
+CREATE TABLE TestTran (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 -- This statement sets @@TRANCOUNT to 1.  
 BEGIN TRANSACTION OuterTran;  
   
 PRINT N'Transaction count after BEGIN OuterTran = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
  
 INSERT INTO TestTran VALUES (1, 'aaa');  
  
@@ -132,7 +132,7 @@ INSERT INTO TestTran VALUES (1, 'aaa');
 BEGIN TRANSACTION Inner1;  
  
 PRINT N'Transaction count after BEGIN Inner1 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 INSERT INTO TestTran VALUES (2, 'bbb');  
   
@@ -140,7 +140,7 @@ INSERT INTO TestTran VALUES (2, 'bbb');
 BEGIN TRANSACTION Inner2;  
   
 PRINT N'Transaction count after BEGIN Inner2 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 INSERT INTO TestTran VALUES (3, 'ccc');  
   
@@ -149,21 +149,21 @@ INSERT INTO TestTran VALUES (3, 'ccc');
 COMMIT TRANSACTION Inner2;  
  
 PRINT N'Transaction count after COMMIT Inner2 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
  
 -- This statement decrements @@TRANCOUNT to 1.  
 -- Nothing is committed.  
 COMMIT TRANSACTION Inner1;  
  
 PRINT N'Transaction count after COMMIT Inner1 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 -- This statement decrements @@TRANCOUNT to 0 and  
 -- commits outer transaction OuterTran.  
 COMMIT TRANSACTION OuterTran;  
   
 PRINT N'Transaction count after COMMIT OuterTran = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 ```  
   
 ## <a name="see-also"></a>См. также:  

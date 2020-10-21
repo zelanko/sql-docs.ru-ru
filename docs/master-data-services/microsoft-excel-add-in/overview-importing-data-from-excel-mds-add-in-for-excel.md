@@ -1,5 +1,6 @@
 ---
-title: Общие сведения. Импорт данных из Excel (надстройка MDS для Excel) | Документация Майкрософт
+description: Общие сведения. Импорт данных из Excel (надстройка MDS для Excel)
+title: Импорт данных из Excel
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1da9e1876995f81fd2b40b9ef1bb4b509b4c848d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df78497bc65d383a3dc44225971ab1df742f32b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257797"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Общие сведения. Импорт данных из Excel (надстройка MDS для Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно опубликовать данные в репозитории MDS, если их необходимо передать другим пользователям. После публикации они станут доступными для загрузки другим пользователям надстройки.  
   

@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa7cd3bd09f71555c826622030e3183d269abb4a
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 7b6583ce7fb4ae2d0b37d898b549a385cfc09763
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088907"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115466"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Часто задаваемые вопросы об SQL Server на Linux
 
@@ -95,7 +95,7 @@ ms.locfileid: "88088907"
 
 1. **Можно ли выполнить автоматическую установку SQL Server на Linux?**
 
-   Да. Сведения об автоматической установке см. в [руководстве по установке SQL Server на Linux](sql-server-linux-setup.md#unattended). Ознакомьтесь с примерами скриптов для [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md) и [Ubuntu](sample-unattended-install-ubuntu.md). Вы также можете ознакомиться с [этим примером скрипта](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/), созданным группой консультантов по SQL Server.
+   Да. Сведения об автоматической установке см. в [руководстве по установке SQL Server на Linux](sql-server-linux-setup.md#unattended). Ознакомьтесь с примерами скриптов для [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md) и [Ubuntu](sample-unattended-install-ubuntu.md). Вы также можете ознакомиться с [этим примером скрипта](/archive/blogs/sqlcat/unattended-install-and-configuration-for-sql-server-2017-on-linux), созданным группой консультантов по SQL Server.
 
 ## <a name="tools"></a>Инструменты
 
@@ -117,7 +117,7 @@ ms.locfileid: "88088907"
 
 1. **Какие средства доступны для наблюдения за производительностью SQL Server в Linux?**
 
-   Вы можете использовать [системные динамические административные представления](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) для сбора различных сведений об SQL Server, включая сведения о процессах Linux. Для повышения производительности запросов можно использовать [хранилище запросов](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md). Другие средства, такие как встроенная [панель мониторинга производительности](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), работают удаленно в SQL Server Management Studio (SSMS) из Windows.
+   Вы можете использовать [системные динамические административные представления](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) для сбора различных сведений об SQL Server, включая сведения о процессах Linux. Для повышения производительности запросов можно использовать [хранилище запросов](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md). Другие средства, такие как встроенная [панель мониторинга производительности](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in), работают удаленно в SQL Server Management Studio (SSMS) из Windows.
 
    > [!TIP]
    > Одним из способов повышения производительности является правильная настройка операционной системы Linux и экземпляра SQL Server. Дополнительные сведения см. в статье [Рекомендации по производительности и конфигурации для SQL Server на Linux](sql-server-linux-performance-best-practices.md).
@@ -130,7 +130,7 @@ ms.locfileid: "88088907"
 
 1. **Поддерживает ли SQL Server на Linux несколько экземпляров в одном узле?**
 
-   Несколько экземпляров в узле рекомендуется запускать в отдельных контейнерах. Это можно легко сделать с помощью Docker, но каждый контейнер должен ожидать передачи данных через отдельный порт. Дополнительные сведения см. в статье [Запуск нескольких контейнеров SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   Несколько экземпляров в узле рекомендуется запускать в отдельных контейнерах. Это можно легко сделать с помощью Docker, но каждый контейнер должен ожидать передачи данных через отдельный порт. Дополнительные сведения см. в статье [Запуск нескольких контейнеров SQL Server](./sql-server-linux-docker-container-deployment.md#multiple).
 
 1. **Поддерживается ли проверка подлинности Active Directory в Linux?**
 

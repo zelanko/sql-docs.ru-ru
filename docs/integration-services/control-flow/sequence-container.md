@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82e34adab1dc0f732f96d5e248b98ff8fc7186c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7951c07be9159162c31572933a17e7af27fcc951
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425896"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192834"
 ---
 # <a name="sequence-container"></a>контейнер последовательности
 
@@ -58,11 +58,10 @@ ms.locfileid: "88425896"
  Дополнительные сведения о задании этих свойств программными средствами см. в документации по классу **T:Microsoft.SqlServer.Dts.Runtime.Sequence** в руководстве для разработчиков.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- Дополнительные сведения о настройке свойств этого компонента [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]см. в разделе [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Дополнительные сведения о настройке свойств этого компонента [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]см. в разделе [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Добавление задачи или контейнера в поток управления или удалить их из него](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
+ [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](./precedence-constraints.md)   
  [Контейнеры служб Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
-  
   

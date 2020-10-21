@@ -24,12 +24,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a642ad617c1c466306f5beb3f11d41f9181b8458
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0751b396deef4a8617b18e9555aae50fdb835010
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459390"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193384"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +85,7 @@ test_expression [ NOT ] IN
 ### <a name="a-comparing-or-and-in"></a>A. Сравнение OR и IN  
  В следующем примере осуществляется выборка списка имен сотрудников на должностях инженеров-разработчиков, разработчиков средств и сотрудников отдела сбыта.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -100,7 +100,7 @@ GO
   
  Этот же результат можно получить при помощи оператора IN.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -131,7 +131,7 @@ Mary        Dempsey     Marketing Assistant
 ### <a name="b-using-in-with-a-subquery"></a>Б. Применение IN с вложенным запросом  
  В следующем примере осуществляется поиск идентификаторов менеджеров по продажам в таблице `SalesPerson`, имеющих объем продаж более 250 000 долларов в год, а затем выборка из таблицы `Employee` имен и фамилий всех сотрудников, идентификаторы `EmployeeID` которых совпадают с результатами вложенного запроса `SELECT`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -160,7 +160,7 @@ Tete         Mensa-Annan
 ### <a name="c-using-not-in-with-a-subquery"></a>В. Применение NOT IN с вложенным запросом  
  В следующем примере производится поиск торговцев, квота которых не выше 250 000 долларов США. С помощью `NOT IN` можно найти торговцев, которые не соответствуют списку значений.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -179,7 +179,7 @@ GO
 ### <a name="d-using-in-and-not-in"></a>Г. Использование IN и NOT IN  
  В следующем примере показан поиск всех записей в таблице `FactInternetSales`, которые соответствуют значениям `SalesReasonKey` в таблице `DimSalesReason`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -189,7 +189,7 @@ IN (SELECT SalesReasonKey FROM DimSalesReason);
   
  В следующем примере показан поиск всех записей в таблице `FactInternetSalesReason`, которые не соответствуют значениям `SalesReasonKey` в таблице `DimSalesReason`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -200,7 +200,7 @@ NOT IN (SELECT SalesReasonKey FROM DimSalesReason);
 ### <a name="e-using-in-with-an-expression-list"></a>Д. Использование IN в списке выражений  
  В следующем примере осуществляется поиск всех идентификаторов продавцов в таблице `DimEmployee` сотрудников с именами `Mike` или `Michael`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName  

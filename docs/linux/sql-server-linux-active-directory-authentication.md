@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7c93711eae4a6a2eea397940811089f366e47829
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896962"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115933"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Руководство по Использование проверки подлинности Active Directory с SQL Server на Linux
 
@@ -53,9 +53,9 @@ ms.locfileid: "85896962"
 ## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a> Создание пользователя Active Directory (или управляемой учетной записи службы) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задание имени субъекта-службы
 
 > [!NOTE]
-> В следующих инструкциях применяется [полное доменное имя](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы используете **Azure**, необходимо **[создать это имя](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** , прежде чем продолжить.
+> В следующих инструкциях применяется [полное доменное имя](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы используете **Azure**, необходимо **[создать это имя](/azure/virtual-machines/linux/portal-create-fqdn)** , прежде чем продолжить.
 
-1. В контроллере домена выполните команду PowerShell [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx), чтобы создать пользователя Active Directory с бессрочным паролем. В приведенном ниже примере используется имя учетной записи `mssql`, однако оно может быть любым. Вы получите запрос на ввод нового пароля для учетной записи.
+1. В контроллере домена выполните команду PowerShell [New-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617253(v=technet.10)), чтобы создать пользователя Active Directory с бессрочным паролем. В приведенном ниже примере используется имя учетной записи `mssql`, однако оно может быть любым. Вы получите запрос на ввод нового пароля для учетной записи.
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -69,8 +69,8 @@ ms.locfileid: "85896962"
 2. Укажите значение ServicePrincipalName (имя субъекта-службы) для этой учетной записи с помощью средства **setspn.exe**. Формат имени субъекта-службы должен быть в точности таким же, как в приведенном ниже примере. Чтобы определить полное доменное имя хост-компьютера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выполните команду `hostname --all-fqdns` в узле [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. TCP-портом должен быть порт 1433, если вы не настроили для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] другой номер порта.
 
    ```PowerShell
-   setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
-   setspn -A MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>** mssql
+   setspn -A MSSQLSvc/<fully qualified domain name of host machine>:<tcp port> mssql
+   setspn -A MSSQLSvc/<netbios name of the host machine>:<tcp port> mssql
    ```
 
    > [!NOTE]
@@ -96,11 +96,11 @@ ms.locfileid: "85896962"
    ```bash
    kinit user@CONTOSO.COM
    kvno user@CONTOSO.COM
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
+   kvno MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM
    ```
 
    > [!NOTE]
-   > Распространение имен субъектов-служб в домене может занять несколько минут, особенно если домен большой. Если возникнет ошибка `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`, подождите несколько минут и повторите попытку.</br></br> Приведенные выше команды будут работать только в том случае, если сервер присоединен к домену AD, который был рассмотрен в предыдущем разделе.
+   > Распространение имен субъектов-служб в домене может занять несколько минут, особенно если домен большой. Если возникнет ошибка `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM`, подождите несколько минут и повторите попытку.</br></br> Приведенные выше команды будут работать только в том случае, если сервер присоединен к домену AD, который был рассмотрен в предыдущем разделе.
 
 1. С помощью [**ktpass**](/windows-server/administration/windows-commands/ktpass)добавьте записи KEYTAB для каждого имени субъекта-службы с помощью следующих команд в командной строке компьютера Windows:
 

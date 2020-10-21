@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 146ab5788e29045a55e6251be01e061f52d7bbb8
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: c6f791cf96520f46c37bb061f30ac7df962695e5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088941"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115693"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
 
@@ -87,7 +87,7 @@ mount -o dax,noatime /dev/pmem0 /mnt/dax
 
 После настройки устройства с помощью `ndctl`, его создания и подключения можно поместить в него файлы базы данных или создать новую базу данных.
 
-Так как устройства PMEM поддерживают безопасный O_DIRECT, можно включить флаг трассировки 3979, чтобы отключить механизм принудительной записи на диск. Дополнительные сведения см. на странице [Поддержка FUA](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Внутренние методы принудительного доступа к модулям рассматриваются здесь: [Внутренности FUA](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/).
+Так как устройства PMEM поддерживают безопасный O_DIRECT, можно включить флаг трассировки 3979, чтобы отключить механизм принудительной записи на диск. Дополнительные сведения см. на странице [Поддержка FUA](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Внутренние методы принудительного доступа к модулям рассматриваются здесь: [Внутренности FUA](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

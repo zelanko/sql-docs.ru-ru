@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: def15673fbc8c92148fa8ab025d6e1769b2ee236
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e24e9006219d659a6a3700c8b922a8e0745166a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425506"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92190864"
 ---
 # <a name="integration-services-ssis-expressions"></a>Выражения служб Integration Services (SSIS)
 
@@ -68,12 +68,11 @@ ms.locfileid: "88425506"
  У переменных есть область действия, и папка **Переменные** в списке построителя выражений содержит только те переменные, которые находятся в данной области и доступны для использования. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Использование выражения в компоненте потока данных](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Использование выражения в компоненте потока данных](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>См. также  
  Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
 ## <a name="see-also"></a>См. также  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
   

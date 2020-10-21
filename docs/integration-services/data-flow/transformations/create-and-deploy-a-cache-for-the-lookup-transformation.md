@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d212a870d0b66108cb1b905249fc8ba2a611a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26f08ee42a1fae6ac5a5d3a50d8b32282c2a2fde
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477768"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192701"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Создание или развертывание кэша для преобразования «Уточняющий запрос»
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477768"
   
  Преобразование «Уточняющий запрос» выполняет уточняющие запросы, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в эталонном наборе данных.  
   
- Файл кэша создается с помощью диспетчера соединений с кэшем и преобразования «Преобразование кэша». Дополнительные сведения см. в разделах [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) и [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md).  
+ Файл кэша создается с помощью диспетчера соединений с кэшем и преобразования «Преобразование кэша». Дополнительные сведения см. в разделах [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) и [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md).  
   
  Дополнительные сведения о преобразовании «Уточняющий запрос» и файлах кэша см. в разделе [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -65,11 +65,11 @@ ms.locfileid: "88477768"
     > [!NOTE]  
     >  Если преобразование «Уточняющий запрос» настроено для использования диспетчера соединений с кэшем, то только индексированные столбцы в ссылочном наборе данных могут быть сопоставлены с входными столбцами. Кроме того, все столбцы индекса должны быть сопоставлены.  
   
-     Дополнительные сведения см. в разделе [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+     Дополнительные сведения см. в разделе [Cache Connection Manager Editor](../../connection-manager/cache-connection-manager.md).  
   
 7.  При необходимости настройте преобразование кэша.  
   
-     Дополнительные сведения см. в разделах [Редактор преобразования "Кэш" (страница "Диспетчер соединений")](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) и [Редактор преобразования "Кэш" (страница "Сопоставления")](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+     Дополнительные сведения см. в разделах [Редактор преобразования "Кэш" (страница "Диспетчер соединений")](./cache-transform.md) и [Редактор преобразования "Кэш" (страница "Сопоставления")](./cache-transform.md).  
   
 8.  Запустите пакет.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88477768"
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]откройте проект [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет, и затем откройте пакет.  
   
-2.  При необходимости создайте конфигурацию пакета. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](../../../integration-services/packages/create-package-configurations.md).  
+2.  При необходимости создайте конфигурацию пакета. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](../../packages/legacy-package-deployment-ssis.md).  
   
 3.  Добавьте файл кэша к проекту, выполнив следующие действия.  
   
@@ -89,13 +89,12 @@ ms.locfileid: "88477768"
   
      Файл появится в папке **Разное** в обозревателе решений.  
   
-4.  Настройте проект для создания программы развертывания, а затем постройте проект. Дополнительные сведения см. в статье [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md).  
+4.  Настройте проект для создания программы развертывания, а затем постройте проект. Дополнительные сведения см. в статье [Create a Deployment Utility](../../packages/legacy-package-deployment-ssis.md).  
   
      Создается файл манифеста \<*project name*>.SSISDeploymentManifest.xml, в котором перечисляются различные файлы в проекте, пакеты и конфигурации пакетов.  
   
-5.  Развертывание пакета в файловой системе. Дополнительные сведения см. в статье [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
+5.  Развертывание пакета в файловой системе. Дополнительные сведения см. в статье [Deploy Packages by Using the Deployment Utility](../../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Создание программы развертывания](../../../integration-services/packages/create-a-deployment-utility.md)  
-  
+ [Создание программы развертывания](../../packages/legacy-package-deployment-ssis.md)  
   

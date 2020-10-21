@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fbcb0fa1f7618a7cf6d2a78b18d9193e09f81f02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ea049a657b5d0392841f8bd6e44954d2774c13c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495852"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193234"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Загрузка данных с помощью назначения ODBС
 
@@ -56,8 +56,7 @@ ms.locfileid: "88495852"
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также:  
- [Редактор назначения ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [Редактор назначения ODBC (страница "Сопоставления")](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [Редактор источника ODBC (страница "Вывод ошибок")](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [Редактор назначения ODBC (страница "Диспетчер соединений")](./odbc-destination.md)   
+ [Редактор назначения ODBC (страница "Сопоставления")](./odbc-destination.md)   
+ [Редактор источника ODBC (страница "Вывод ошибок")](./odbc-source.md)  
   

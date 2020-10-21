@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e91be4a96d91117448def702a617d9e44acc70a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 230ada5b116e5789b008a1562ba5e2ba9325a9e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477857"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197088"
 ---
 # <a name="flexible-file-source"></a>Источник "Гибкая работа с файлами"
 
@@ -28,7 +28,7 @@ ms.locfileid: "88477857"
 Сейчас поддерживаются службы хранилища
 
 - [Хранилище BLOB-объектов Azure](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage 2-го поколения](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage 2-го поколения](/azure/storage/blobs/data-lake-storage-introduction)
   
 Чтобы отобразить редактор источника "Гибкая работа с файлами", перетащите источник **Гибкая работа с файлами** в конструктор потока данных и дважды щелкните его, чтобы открыть редактор.
   
@@ -51,7 +51,7 @@ ms.locfileid: "88477857"
 - **escapeChar:** Специальный символ, используемый для экранирования разделителя столбцов в содержимом входного файла. Не следует указывать escapeChar и quoteChar для таблицы одновременно. Допускается только один знак. Нет значения по умолчанию.
 - **quoteChar:** Символ, используемый для заключения строкового значения в кавычки. Разделители столбцов и строк внутри знаков кавычек будут рассматриваться как часть строкового значения. Это свойство применяется к входному и выходному наборам данных. Не следует указывать escapeChar и quoteChar для таблицы одновременно. Допускается только один знак. Нет значения по умолчанию.
 - **nullValue:** один или несколько символов, используемых для представления значения NULL. Значением **по умолчанию** является \N.
-- **encodingName:** задает имя кодировки. См. раздел [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8).
+- **encodingName:** задает имя кодировки. См. раздел [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8).
 - **skipLineCount:**  указывает количество непустых строк, которые нужно пропустить при чтении данных из входных файлов. Если указаны skipLineCount и firstRowAsHeader, то сначала пропускаются строки, а затем считываются данные заголовка из входного файла.
 - **treatEmptyAsNull:** Указывает, следует ли интерпретировать NULL или пустую строку как значение NULL при считывании данных из входного файла. Значение **по умолчанию** — true.
 
@@ -60,16 +60,16 @@ ms.locfileid: "88477857"
 **Примечания о настройке разрешений для субъекта-службы**
 
 Для работы **тестового подключения** (к хранилищу BLOB-объектов или Data Lake Storage 2-го поколения) субъекту-службе следует назначить по крайней мере роль **Читатель данных в хранилище BLOB-объектов** в учетной записи хранения.
-Это осуществляется посредством [управление доступом на основе ролей (RBAC)](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+Это осуществляется посредством [управление доступом на основе ролей (RBAC)](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
 Для хранилища BLOB-объектов разрешение на чтение предоставляется путем назначения по крайней мере роли **Читатель данных в хранилище BLOB-объектов**.
 
-Для Data Lake Storage 2-го поколения разрешение определяется как посредством управления доступом на основе ролей (RBAC), так и с помощью [списков управления доступом (ACL)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
-Обратите внимание на то, что списки ACL настраиваются с помощью идентификатора объекта (OID) субъекта-службы для регистрации приложения, как описано [здесь](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Для Data Lake Storage 2-го поколения разрешение определяется как посредством управления доступом на основе ролей (RBAC), так и с помощью [списков управления доступом (ACL)](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Обратите внимание на то, что списки ACL настраиваются с помощью идентификатора объекта (OID) субъекта-службы для регистрации приложения, как описано [здесь](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
 Для конфигурации RBAC, напротив, используется идентификатор приложения (клиента).
 Когда субъекту безопасности предоставляются разрешения на данные RBAC посредством встроенной или пользовательской роли, эти разрешения сначала оцениваются при авторизации запроса.
 Если запрошенная операция разрешена в соответствии с назначенными субъекту безопасности ролями RBAC, авторизация происходит немедленно и дополнительные проверки ACL не проводятся.
 Если же субъекту безопасности роль RBAC не назначена или если запрошенная операция не соответствует предоставленному разрешению, проводятся проверки ACL, цель которых — определить, разрешено ли субъекту безопасности выполнять запрошенную операцию.
 Для разрешения на чтение необходимо предоставить по крайней мере разрешение на **выполнение** начиная с исходной файловой системы, а также разрешение на **чтение** целевых файлов.
 Можно также предоставить разрешение не ниже **чтения данных из хранилища BLOB-объектов** с помощью RBAC.
-Подробные сведения см. в [этой статье](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
+Подробные сведения см. в [этой статье](/azure/storage/blobs/data-lake-storage-access-control).

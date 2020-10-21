@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866337"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934754"
 ---
-# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)
+# <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации сервера отчетов)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "74866337"
  Создание или настройка базы данных сервера отчетов представляет собой многошаговый процесс. Перед созданием базы данных сервера отчетов необходимо продумать, какие параметры будут заданы на перечисленных ниже этапах.  
   
  **Выбор сервера базы данных**  
- Изучите поддерживаемые версии [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и поддерживаемые выпуски в разделе [Создание базы данных сервера отчетов (диспетчер конфигураций SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+ Изучите поддерживаемые версии [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и поддерживаемые выпуски в разделе [Создание базы данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
   
  **Включение соединений TCP/IP**  
  Включите соединения TCP/IP для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. В некоторых выпусках компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] средства TCP/IP не активированы по умолчанию. Инструкции на этот случай приведены в этом разделе.  
@@ -47,7 +47,7 @@ ms.locfileid: "74866337"
  **Определение учетных данных сервера отчетов**  
  Определите, каким образом сервер отчетов будет подключаться к базам данных сервера отчетов. К типам учетных данных относятся учетная запись пользователя домена, учетная запись пользователя базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или учетная запись сервера отчетов.  
   
- Эти учетные записи зашифрованы и хранятся в файле конфигурации RSReportServer.config. Сервер отчетов использует эти учетные данные для осуществления текущих соединений с базой данных сервера отчетов. Если возникает необходимость использовать учетную запись пользователя Windows или учетную запись пользователя базы данных, следует указывать только уже существующую учетную запись. Хотя диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] автоматически создает имя входа и задает необходимые разрешения, он не создает учетную запись для пользователя. Дополнительные сведения см. в разделе [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Эти учетные записи зашифрованы и хранятся в файле конфигурации RSReportServer.config. Сервер отчетов использует эти учетные данные для осуществления текущих соединений с базой данных сервера отчетов. Если возникает необходимость использовать учетную запись пользователя Windows или учетную запись пользователя базы данных, следует указывать только уже существующую учетную запись. Хотя диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] автоматически создает имя входа и задает необходимые разрешения, он не создает учетную запись для пользователя. Дополнительные сведения см. в разделе [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Определение языка сервера отчетов**  
  Выберите язык для указания в качестве языка сервера отчетов. Стандартные имена ролей, описания и папки «Мои отчеты» не отображаются на разных языках, когда с сервером соединяются пользователи, работающие с различными языковыми версиями браузера.  
@@ -73,7 +73,7 @@ ms.locfileid: "74866337"
   
 ### <a name="to-create-a-local-report-server-database"></a>Создание базы данных локального сервера отчетов  
   
-1.  Запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и установите соединение с экземпляром сервера отчетов, для которого создается база данных. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и установите соединение с экземпляром сервера отчетов, для которого создается база данных. Дополнительные сведения см. в разделе [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  На странице "База данных" нажмите кнопку **Изменить базу данных**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74866337"
   
 4.  Соединитесь с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который будет использоваться для создания и размещения базы данных сервера отчетов.  
   
-    1.  Введите имя экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Мастер отобразит локальный компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] , выполняемый в качестве экземпляра по умолчанию, если таковой имеется. Если же такого экземпляра нет, необходимо ввести имена сервера и экземпляра, которые будут использоваться. Именованные экземпляры указываются в формате \<имя_сервера>\\<имя_экземпляра\>.  
+    1.  Введите имя экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Мастер отобразит локальный компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] , выполняемый в качестве экземпляра по умолчанию, если таковой имеется. Если же такого экземпляра нет, необходимо ввести имена сервера и экземпляра, которые будут использоваться. Именованные экземпляры указываются в формате \<servername>\\<имя_экземпляра\>.  
   
     2.  Введите учетные данные, используемые для одноразового соединения с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] с целью создания баз данных сервера отчетов. Дополнительные сведения о методах использования этих учетных данных см. в подразделе [Перед началом работы](#rsdbrequirements) настоящего раздела.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "74866337"
 
 В диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] имеется мастер изменения учетных данных, помогающий выполнить шаги по изменению учетной записи, используемой сервером отчетов для подключения к базе данных сервера отчетов. Когда учетные данные изменены, диспетчер конфигурации обновляет на сервере баз данных все разрешения и сведения о регистрации в базе данных для базы данных сервера отчетов, активно используемой сервером отчетов. 
 
-1.  Запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и установите соединение с экземпляром сервера отчетов, для которого создается база данных. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и установите соединение с экземпляром сервера отчетов, для которого создается база данных. Дополнительные сведения см. в разделе [Диспетчер конфигурации сервера отчетов (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  На странице "База данных" нажмите кнопку **Изменить учетные данные**. 
 
@@ -151,6 +151,6 @@ ms.locfileid: "74866337"
 
 [Настройка подключения к базе данных сервера отчетов](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Диспетчер конфигурации сервера отчетов](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

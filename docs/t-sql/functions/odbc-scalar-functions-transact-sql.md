@@ -53,12 +53,12 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6cc9b1df996d063a79f19982185950e52c4b059
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: d54867712e48662ebb35d4d278710d06f06732a3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116618"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192264"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Скалярные функции ODBC (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "91116618"
   В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать [скалярные функции ODBC](https://go.microsoft.com/fwlink/?LinkID=88579). Эти инструкции интерпретируются средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они могут использоваться в хранимых процедурах и других определяемых пользователем функциях. Они включают строковые, числовые и системные функции, а также функции даты, времени и интервалов.  
   
 ## <a name="usage"></a>Использование  
- `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
+ ```syntaxsql
+ SELECT {fn <function_name> [ (<argument>,....n) ] }
+ ```
   
 ## <a name="functions"></a>Функции  
  В следующих таблицах приводится список скалярных функций ODBC, не дублируемых в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -108,7 +110,8 @@ ms.locfileid: "91116618"
 ### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. Использование функции ODBC в хранимой процедуре  
  В следующем примере функция ODBC используется в хранимой процедуре.  
   
-```sql  
+
+```sql 
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -135,7 +138,6 @@ END ;
   
 SELECT dbo.ODBCudf('Returns the length.');  
 --Returns 38  
-  
 ```  
   
 ### <a name="c-using-an-odbc-functions-in-select-statements"></a>В. Использование функций ODBC в инструкциях SELECT  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bbd5718a5c57bdb874af00ba57dafedc9dd8654
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430966"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195975"
 ---
 # <a name="data-flow"></a>Поток данных
 
@@ -37,7 +37,7 @@ ms.locfileid: "88430966"
   
  Кроме того, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют пути, соединяющие выход одного компонента со входом другого. Пути определяют последовательность компонентов и дают возможность добавлять заметки к потоку данных или просматривать источник столбца.  
   
- Соединение компонентов потока данных осуществляется путем соединения выходов источников и преобразований с входами преобразований и целевых объектов. При создании потока данных обычно соединяются второй и последующие компоненты — так же, как их добавляли к потоку данных. После соединения компонента входные столбцы могут быть использованы при настройке компонента. Когда нет доступных входных столбцов, настройка компонента завершится после его подсоединения к потоку данных. Дополнительные сведения см. в статьях [Пути служб Integration Services](../../integration-services/data-flow/integration-services-paths.md) и [Соединение компонентов с путями](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ Соединение компонентов потока данных осуществляется путем соединения выходов источников и преобразований с входами преобразований и целевых объектов. При создании потока данных обычно соединяются второй и последующие компоненты — так же, как их добавляли к потоку данных. После соединения компонента входные столбцы могут быть использованы при настройке компонента. Когда нет доступных входных столбцов, настройка компонента завершится после его подсоединения к потоку данных. Дополнительные сведения см. в статьях [Пути служб Integration Services](../../integration-services/data-flow/integration-services-paths.md) и [Соединение компонентов с путями](./connect-components-in-a-data-flow.md).  
   
  На следующей диаграмме показан поток данных с источником, преобразованием с одним входом и одним выходом и целевым объектом. На диаграмме присутствуют входы, выходы, выходы ошибок, а также входные, выходные и внешние столбцы.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "88430966"
 |Источник SAP BI|Источник SAP BI — это компонент-источник соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Кроме того, в состав соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft SQL Server).|  
 |Источник Teradata|Источник Teradata — это компонент-источник соединителя для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(на английском языке).|  
   
- Демонстрация использования средств повышения производительности соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity приведена в видеоролике [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server).  
+ Демонстрация использования средств повышения производительности соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity приведена в видеоролике [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server).  
   
 ## <a name="transformations"></a>Преобразования  
  Возможности преобразований очень разнообразны. Преобразования могут выполнять такие задачи, как обновление, очистка, слияние и распространение данных и сбор статистики о них. Можно изменять значения в столбцах, выполнять поиск значений в таблицах, очищать данные и выполнять статистические вычисления по значениям столбцов.  
@@ -169,10 +169,10 @@ ms.locfileid: "88430966"
 |Назначение SAP BI|Назначение SAP BI — компонент назначения соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Соединитель для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) также включает диспетчер подключений и источник. Дополнительные сведения см. на странице скачивания [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft SQL Server).|  
 |Назначение Teradata|Назначение Teradata — компонент назначения соединителя для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Соединитель для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity также включает диспетчер подключений и источник. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(на английском языке).|  
   
- Демонстрация использования средств повышения производительности соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity приведена в видеоролике [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server).  
+ Демонстрация использования средств повышения производительности соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity приведена в видеоролике [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server).  
   
 ## <a name="connection-managers"></a>Диспетчеры соединений  
- Многие компоненты потока данных подключаются к источниками данных. Добавить диспетчеры соединений, необходимые для компонентов пакета, следует до того, как компонент будет правильно настроен. Диспетчеры соединений можно добавить при создании потока данных или до начала его создания. Дополнительные сведения см. в разделах [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md) и [Создание диспетчеров соединений](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Многие компоненты потока данных подключаются к источниками данных. Добавить диспетчеры соединений, необходимые для компонентов пакета, следует до того, как компонент будет правильно настроен. Диспетчеры соединений можно добавить при создании потока данных или до начала его создания. Дополнительные сведения см. в разделах [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md) и [Создание диспетчеров соединений](../connection-manager/integration-services-ssis-connections.md).  
   
 ## <a name="external-metadata"></a>Внешние метаданные  
  При создании потока данных в пакете с помощью конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , метаданные из источников и целевых объектов копируются во внешние столбцы источников и целевых объектов и играют роль моментального снимка схемы. Когда службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проверяют правильность пакета, конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] сравнивает этот снимок со схемой источника или назначения и в зависимости от найденных изменений выдает ошибки и предупреждения.  
@@ -220,4 +220,4 @@ ms.locfileid: "88430966"
  [Соединение компонентов в потоке данных](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>См. также  
- Видеоролик [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server) на сайте technet.microsoft.com.  
+ Видеоролик [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server) на сайте technet.microsoft.com.

@@ -1,5 +1,6 @@
 ---
-title: Проверка данных (надстройка MDS для Excel) | Документы Майкрософт
+description: Проверка данных (надстройка MDS для Excel)
+title: Проверка данных
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 48124bf61c39a24f07ede4a184db70a85b040b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b878dcc17cf5ea23b1c5eccca58cdab39cfb7524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257897"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Проверка данных (надстройка MDS для Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]при публикации данных происходят проверки двух типов:  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68074380"
   
 |Состояние|Описание|  
 |------------|-----------------|  
-|Ошибка|Одно или несколько значений в строке не соответствуют системным требованиям, таким как длина или тип данных. Значение не обновляется в репозитории MDS.|  
+|Error|Одно или несколько значений в строке не соответствуют системным требованиям, таким как длина или тип данных. Значение не обновляется в репозитории MDS.|  
 |Новая строка|Значения в строке еще не опубликованы в репозитории MDS.|  
 |Только для чтения|Вошедший в систему пользователь имеет разрешения «Только для чтения» на одно или несколько значений в строке, и значения нельзя обновить.|  
 |Без изменений|Ни одно значение в строке на листе не было изменено. Это не означает, что значения в хранилище не изменились. Чтобы получить последние данные на листе, в группе **Подключение и загрузка** нажмите кнопку **Загрузить или обновить**.<br /><br /> Это параметр по умолчанию для каждой строки.|  
@@ -63,6 +64,6 @@ ms.locfileid: "68074380"
   
 ## <a name="related-content"></a>См. также  
   
--   [Обзор: Импорт данных из Excel &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Обзор импорта данных из Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 19db6aeab39dc93c2dcfd6a869d3b54e0a1ceaa6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522896"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192481"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Поддержка горизонтального увеличения масштаба для обеспечения высокого уровня доступности
 
@@ -98,9 +98,9 @@ ms.locfileid: "87522896"
 
 Для этого шага на виртуальных машинах Azure нужны дополнительные действия. Полное описание этих основных понятий и шагов выходит за рамки данной статьи.
 
-1.  Необходимо настроить домен Azure. Для работы отказоустойчивой кластеризации Windows Server нужно, чтобы все компьютеры в кластере входили в состав одного домена. Дополнительные сведения см. в статье [Включение доменных служб Azure Active Directory с помощью портала Azure](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
+1.  Необходимо настроить домен Azure. Для работы отказоустойчивой кластеризации Windows Server нужно, чтобы все компьютеры в кластере входили в состав одного домена. Дополнительные сведения см. в статье [Включение доменных служб Azure Active Directory с помощью портала Azure](/azure/active-directory-domain-services/create-instance).
 
-2. Необходимо настроить балансировщик нагрузки Azure. Это требование для прослушивателя группы доступности. Дополнительные сведения см. в статье [Руководство по балансировке нагрузки внутреннего трафика на виртуальных машинах с помощью балансировщика нагрузки уровня "Базовый" на портале Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
+2. Необходимо настроить балансировщик нагрузки Azure. Это требование для прослушивателя группы доступности. Дополнительные сведения см. в статье [Руководство по балансировке нагрузки внутреннего трафика на виртуальных машинах с помощью балансировщика нагрузки уровня "Базовый" на портале Azure](/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Обновление адреса мастера горизонтального увеличения масштаба в SSISDB
 

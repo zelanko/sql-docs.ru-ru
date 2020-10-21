@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fdad63c6b5d97d9b6b8193babc67ad8a57a32f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a694df5f4920ecd70e4aa27def778712fbbf953
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425746"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195306"
 ---
 # <a name="script-component"></a>Компонент скрипта
 
@@ -66,7 +66,7 @@ ms.locfileid: "88425746"
  В конструкторе [!INCLUDE[ssIS](../../../includes/ssis-md.md)] у компонента скрипта есть два режима: режим конструирования метаданных и режим конструирования кода. В режиме редактирования метаданных можно добавлять и изменять входы и выходы компонента скрипта, но нельзя писать код. После того как все входы и выходы настроены, переключаетесь в режим редактирования кода, чтобы написать скрипт. Компонент скрипта автоматически создает базовый код из метаданных входов и выходов. Если пользователь изменил метаданные после того, как компонент скрипта создал базовый код, то пользовательский код больше не может быть откомпилированным, потому что измененный базовый код может быть несовместим с пользовательским кодом.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Разработка скрипта, используемого компонентом  
- Компонент скрипта использует для создания скриптов среду [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA). Доступ к VSTA осуществляется из **Редактора преобразования «Скрипт»** . Дополнительные сведения см. в разделе [Редактор преобразования "Скрипт" (страница "Скрипт")](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Компонент скрипта использует для создания скриптов среду [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA). Доступ к VSTA осуществляется из **Редактора преобразования «Скрипт»** . Дополнительные сведения см. в разделе [Редактор преобразования "Скрипт" (страница "Скрипт")]().  
   
  Компонент скрипта содержит проект VSTA, который включает автоматически создающийся класс, называемый ScriptMain, представляющий метаданные компонента. Например, если компонент скрипта используется как преобразование, имеющее три выхода, ScriptMain содержит метод для каждого выхода. ScriptMain — это точка входа в скрипт.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88425746"
 ### <a name="configuring-the-script-component-programmatically"></a>Программная настройка компонента скрипта  
  Дополнительные сведения о свойствах, которые можно установить в окне **Свойства** или программно, см. в следующих разделах:  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -181,7 +181,7 @@ ms.locfileid: "88425746"
  **Inputs and outputs**  
  Выберите вход или вывод слева, чтобы посмотреть его свойства в таблице справа. Свойства, доступные для редактирования, варьируются в зависимости от выбора. Многие отображаемые параметры доступны только для чтения. Дополнительные сведения об индивидуальных свойствах см. в следующих разделах:  
   
- [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Общие свойства](../set-the-properties-of-a-data-flow-component.md)  
   
  [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -224,5 +224,4 @@ ms.locfileid: "88425746"
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
  [Расширение потока данных с помощью компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
-  
   

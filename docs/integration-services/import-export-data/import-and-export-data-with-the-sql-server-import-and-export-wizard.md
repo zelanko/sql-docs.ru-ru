@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cdb761ce5ea9b0a64b21880ef2945c0ff85876ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b1b9ea05c6b27010fa7928e36bfdf3f9975fc70
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457201"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196376"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server
 
@@ -39,7 +39,7 @@ ms.locfileid: "88457201"
  Мастер импорта и экспорта[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет простой способ копирования данных из источника в целевой объект. В этой статье описываются источники данных, которые мастер может использовать в качестве источников и назначений, а также необходимые для запуска мастера разрешения.
 
 ## <a name="get-the-wizard"></a>Получение мастера
-Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>Что происходит при запуске мастера?
 -    **См. список шагов.** Описание шагов, выполняемых в мастере, см. в разделе [Шаги в мастере импорта и экспорта SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Каждой странице мастера соответствует отдельная страница документации.  
@@ -103,5 +103,3 @@ ms.locfileid: "88457201"
 ## <a name="see-also"></a>См. также раздел
 [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
 [Сопоставление типов данных в мастере импорта и экспорта SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
-
-

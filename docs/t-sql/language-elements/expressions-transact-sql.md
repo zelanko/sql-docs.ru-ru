@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: a9e762c88291deb0643acef0db3bfc7c4e79e8a1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227231"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192039"
 ---
 # <a name="expressions-transact-sql"></a>Выражения (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "91227231"
   
  В языке программирования, таком как C или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], вычисление выражения всегда приводит к получению единственного результата. Выражения в списке [!INCLUDE[tsql](../../includes/tsql-md.md)] подчиняются правилу: выражение вычисляется отдельно для каждой строки в результирующем наборе. У отдельных выражений могут быть различные значения в каждой строке результирующего набора, но у каждой строки имеется только одно значение для выражения. Например, в следующей инструкции `SELECT` выражениями являются как ссылка на `ProductID`, так и значение `1+2` в списке выбора:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, 1+2  
