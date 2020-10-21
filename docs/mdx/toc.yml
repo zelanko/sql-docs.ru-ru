@@ -169,7 +169,7 @@
           href: ../mdx/less-than-or-equal-to-mdx.md
         - name: <> (не равно)
           href: ../mdx/not-equal-to-mdx.md
-        - name: = (Равно)
+        - name: '= (Равно)'
           href: ../mdx/equal-to-mdx.md
         - name: '> (больше)'
           href: ../mdx/greater-than-mdx.md

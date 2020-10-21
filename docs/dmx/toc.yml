@@ -177,7 +177,7 @@
               href: ../dmx/less-than-dmx.md
             - name: '> (больше)'
               href: ../dmx/greater-than-dmx.md
-            - name: = (Равно)
+            - name: '= (Равно)'
               href: ../dmx/equal-to-dmx.md
             - name: <> (не равно)
               href: ../dmx/not-equal-to-dmx.md
