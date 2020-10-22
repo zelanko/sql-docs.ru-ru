@@ -1,1 +1,0 @@
-<Token>**применимо к:** ![ Да ](media/yes-icon.png) SQL Server ![ Да ](media/yes-icon.png) sql Azure ![ не управляемый экземпляр ](media/no-icon.png) Azure СИНАПСЕ Analytics (хранилище данных SQL) ![ нет ](media/no-icon.png) Parallel Data Warehouse</Token>

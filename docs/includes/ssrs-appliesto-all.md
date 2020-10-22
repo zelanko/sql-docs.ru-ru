@@ -1,1 +1,0 @@
-**Эта статья относится к:**![нет](media/yes.png)SQL Server 2016![да](media/yes.png)SQL Server 2017![да](media/yes.png)Сервер отчетов Power BI

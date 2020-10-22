@@ -1,1 +1,0 @@
-**ОБЛАСТЬ ПРИМЕНЕНИЯ ЭТОЙ СТАТЬИ:**![да](media/yes.png)SQL Server 2016![нет](media/no.png)SQL Server 2017![нет](media/no.png)Сервер отчетов Power BI
