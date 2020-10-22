@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570296"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194526"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Устранение проблем со службой панели запуска и выполнением внешних скриптов в SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "89570296"
 
 ## <a name="determine-whether-launchpad-is-running"></a>Определение того, выполняется панель запуска
 
-1. Откройте панель **Службы**  (Services.msc). Или введите **SQLServerManager13.msc** или **SQLServerManager14.msc** в командной строке, чтобы открыть [Диспетчер конфигурации SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
+1. Откройте панель **Службы**  (Services.msc). Или введите **SQLServerManager13.msc** или **SQLServerManager14.msc** в командной строке, чтобы открыть [Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md).
 
 2. Запишите учетную запись службы, под которой выполняется панель запуска. Каждый экземпляр, где включен R или Python, должен иметь собственный экземпляр службы панели запуска. Например, служба для именованного экземпляра может иметь вид _MSSQLLaunchpad$имя_экземпляра_.
 
@@ -121,7 +121,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 Если вы установили и затем включили машинное обучение, но эта ошибка возникает при попытке запуска скрипта R или Python, возможно, была остановлена служба панели запуска для этого экземпляра.
 
-1. Запустите диспетчер конфигурации SQL Server из командной строки Windows. Дополнительные сведения см. в разделе [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
+1. Запустите диспетчер конфигурации SQL Server из командной строки Windows. Дополнительные сведения см. в разделе [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 2. Щелкните правой кнопкой мыши панель запуска SQL Server для этого экземпляра и выберите пункт **Свойства**.
 
@@ -223,7 +223,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 В качестве обходного решения можно включить нотацию 8dot3 в томе, где установлен SQL Server со службами R Services. Затем необходимо указать короткое имя для рабочего каталога в файле конфигурации служб R.
 
-1. Чтобы включить нотацию 8dot3, запустите служебную программу fsutil с аргументом *8dot3name*, как описано в следующем разделе: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
+1. Чтобы включить нотацию 8dot3, запустите служебную программу fsutil с аргументом *8dot3name*, как описано в следующем разделе: [fsutil 8dot3name](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff621566(v=ws.11)).
 
 2. После включения нотации 8dot3 откройте файл RLauncher.config и запишите значение свойства `WORKING_DIRECTORY`. Сведения о том, как найти этот файл, см. в разделе [Сбор данных для устранения неполадок машинного обучения](data-collection-ml-troubleshooting-process.md).
 

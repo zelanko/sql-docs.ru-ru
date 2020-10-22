@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04c84a81b61d0c8bb5e377dcd2c282495886fd02
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7c6236befd5ba532c1ed80de0da9c67072526d2b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173459"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195126"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>Перенос данных между SQL Server и файлом XDF (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Эта часть 13 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 13 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
 В этом учебнике вы узнаете, как использовать XDF-файл для передачи данных между удаленным и локальным контекстами вычисления. Хранение данных в файле XDF позволяет выполнять их преобразование.
 
-По завершении этой процедуры вы используете данные в файле для создания таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) может применять преобразования к данным и преобразовывать кадры данных в файлы XDF и наоборот.
+По завершении этой процедуры вы используете данные в файле для создания таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) может применять преобразования к данным и преобразовывать кадры данных в файлы XDF и наоборот.
   
 ## <a name="create-a-sql-server-table-from-an-xdf-file"></a>Создание таблицы SQL Server на основе файла XDF
 
@@ -65,7 +65,7 @@ ms.locfileid: "88173459"
     rxSetComputeContext("local")
     ```
     
-    Функция [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) позволяет импортировать данные из любого поддерживаемого источника данных в локальный XDF-файл. Использовать локальную копию данных удобно, если требуется проанализировать данные множеством различных способов и вы хотите избежать многократного выполнения одного и того же запроса.
+    Функция [rxImport](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) позволяет импортировать данные из любого поддерживаемого источника данных в локальный XDF-файл. Использовать локальную копию данных удобно, если требуется проанализировать данные множеством различных способов и вы хотите избежать многократного выполнения одного и того же запроса.
 
 5. Создайте объект-источник данных, передав ранее определенные переменные в качестве аргументов функции **RxSqlServerData**.
   
@@ -86,7 +86,7 @@ ms.locfileid: "88173459"
   
     Объект `localDs`, возвращенный функцией **rxImport**, является облегченным объектом-источником данных **RxXdfData**, который представляет локально сохраненный на диске файл данных `ccFraud.xdf`.
   
-7. Вызовите функцию [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf), указав в качестве цели XDF-файл, чтобы убедиться, что схема данных такая же.
+7. Вызовите функцию [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf), указав в качестве цели XDF-файл, чтобы убедиться, что схема данных такая же.
   
     ```R
     rxGetVarInfo(data = localDS)
@@ -115,4 +115,4 @@ ms.locfileid: "88173459"
 Чтобы углубить знания о **RevoScaleR**, можно вернуться к списку учебников по R и пройти упражнения, которые вы могли пропустить. Кроме того, можно обратиться к практическим руководствам в содержании, чтобы получить сведения об общих задачах.
 
 > [!div class="nextstepaction"]
-> [Учебные материалы по R в SQL Server](sql-server-r-tutorials.md)
+> [Учебные материалы по R в SQL Server](./r-tutorials.md)

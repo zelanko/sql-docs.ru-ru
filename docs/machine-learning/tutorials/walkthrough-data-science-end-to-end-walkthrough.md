@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7dbb9e32c1b5f68334ae1ccab17a85c23c069112
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179779"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192624"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Руководство по SQL-разработка на языке R для специалистов по анализу данных
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88179779"
 
 + [Разрешения для базы данных](../security/user-permission.md) и имя пользователя для входа в базу данных SQL Server
 
-+ [Среда SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [Среда SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)
 
 + [Демонстрационная база данных такси Нью-Йорка](demo-data-nyctaxi-in-sql.md)
 
@@ -47,7 +47,7 @@ ms.locfileid: "88179779"
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 > [!NOTE]
-> Если вы используете [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/) или [Виртуальную машину для обработки и анализа данных](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/), RevoScaleR должна располагаться не в папке клиента R, а в папке C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR
+> Если вы используете [Machine Learning Server](/machine-learning-server/) или [Виртуальную машину для обработки и анализа данных](/azure/machine-learning/data-science-virtual-machine/), RevoScaleR должна располагаться не в папке клиента R, а в папке C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR
 
 <a name="add-packages"></a>
 

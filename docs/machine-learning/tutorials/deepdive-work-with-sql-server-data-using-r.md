@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fa8f5eab0c6d86f843d0f0c90ad49276e659171
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7223e1b1289d3cb2ea87763e693f65c3479afcdd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178651"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194506"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Создание базы данных и разрешений (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Эта часть 1 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 1 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-В этом учебнике описано, как создать базу данных SQL Server и установить разрешения, необходимые для выполнения других учебников в этой серии. Используйте [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) или другой редактор запросов для выполнения следующих задач.
+В этом учебнике описано, как создать базу данных SQL Server и установить разрешения, необходимые для выполнения других учебников в этой серии. Используйте [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) или другой редактор запросов для выполнения следующих задач.
 
 > [!div class="checklist"]
 > * Создание базы данных, в которой будут храниться данные для обучения и оценки двух моделей R
@@ -94,11 +94,11 @@ GO
 
 - **Как проверить подключение к базе данных и запросы SQL?**
   
-    Перед выполнением кода на языке R с помощью сервера может потребоваться проверить, доступна ли база данных из среды разработки R. [Обозреватель сервера Visual Studio](https://docs.microsoft.com/previous-versions/x603htbk(v=vs.140)) и [среда SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) являются бесплатными средствами с эффективными возможностями подключения к базам данных и функциями управления.
+    Перед выполнением кода на языке R с помощью сервера может потребоваться проверить, доступна ли база данных из среды разработки R. [Обозреватель сервера Visual Studio](/previous-versions/x603htbk(v=vs.140)) и [среда SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) являются бесплатными средствами с эффективными возможностями подключения к базам данных и функциями управления.
   
-    Если вы не хотите устанавливать дополнительные средства управления базами данных, то можете создать тестовое подключение к экземпляру SQL Server с помощью компонента [Администратор источников данных ODBC](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) на панели управления. Если база данных настроена правильно и вы ввели верные имя пользователя и пароль, то вы увидите созданную базу данных и сможете выбрать ее в качестве базы данных по умолчанию.
+    Если вы не хотите устанавливать дополнительные средства управления базами данных, то можете создать тестовое подключение к экземпляру SQL Server с помощью компонента [Администратор источников данных ODBC](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) на панели управления. Если база данных настроена правильно и вы ввели верные имя пользователя и пароль, то вы увидите созданную базу данных и сможете выбрать ее в качестве базы данных по умолчанию.
   
-    Распространенные причины ошибок подключения — то, что удаленные подключения не включены для сервера или не включен протокол именованных каналов. Дополнительные советы по устранению неполадок можно найти в этой статье: [Устранение неполадок при соединении с ядром СУБД SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Распространенные причины ошибок подключения — то, что удаленные подключения не включены для сервера или не включен протокол именованных каналов. Дополнительные советы по устранению неполадок можно найти в этой статье: [Устранение неполадок при соединении с ядром СУБД SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
   
 - **Почему имя таблицы имеет префикс datareader?**
   

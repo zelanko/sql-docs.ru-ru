@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee2a12b8b45169d43b9dc86077fb0879c7413226
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e3204c5ba30831f0355113f7882727decad08866
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178632"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195089"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Оценка новых данных (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Эта часть 8 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 8 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
 В этом учебнике вы будете использовать модель логистической регрессии, созданную в предыдущем учебнике, для оценки еще одного набора данных с теми же независимыми переменными в качестве входных данных.
 
@@ -59,7 +59,7 @@ ms.locfileid: "88178632"
   
 4. В качестве меры предосторожности проверьте наличие выходной таблицы. Если она уже существует с тем же именем, при попытке записи новой таблицы возникнет ошибка.
   
-    Для этого вызовите функции [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) и [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable), передав имя таблицы в качестве входных данных.
+    Для этого вызовите функции [rxSqlServerTableExists](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) и [rxSqlServerDropTable](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable), передав имя таблицы в качестве входных данных.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
@@ -68,7 +68,7 @@ ms.locfileid: "88178632"
     + Функция **rxSqlServerTableExists** запрашивает драйвер ODBC и возвращает значение TRUE, если таблица существует, или значение FALSE в противном случае.
     + Функция **rxSqlServerDropTable** выполняет DDL и возвращает значение TRUE, если таблица успешно удалена, или FALSE в противном случае.
 
-5. Выполните функцию [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) для создания оценок и их сохранения в новой таблице, определенной в источнике данных sqlScoreDS.
+5. Выполните функцию [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) для создания оценок и их сохранения в новой таблице, определенной в источнике данных sqlScoreDS.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -80,7 +80,7 @@ ms.locfileid: "88178632"
         overwrite = TRUE)
     ```
   
-    Функция **RxPredict** является еще одной функцией, поддерживающей выполнение в удаленных контекстах вычисления. Функцию **rxPredict** можно использовать для создания оценок из моделей на основе [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) или [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
+    Функция **RxPredict** является еще одной функцией, поддерживающей выполнение в удаленных контекстах вычисления. Функцию **rxPredict** можно использовать для создания оценок из моделей на основе [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) или [rxGlm](/machine-learning-server/r-reference/revoscaler/rxglm).
   
     - В этом случае параметру *writeModelVars* присвоено значение **TRUE** . Это означает, что переменные, которые использовались для оценки, будут включены в новую таблицу.
   
@@ -118,7 +118,7 @@ ms.locfileid: "88178632"
 
      В этом примере можно увидеть, насколько просто использовать объекты источника данных **RxSqlServerData** для определения произвольных наборов данных на основе запросов SQL, функций или хранимых процедур, а затем использовать их в коде R. Переменная не хранит фактические значения, а только определение источника данных. Запрос выполняется для создания значений только при его использовании в функции наподобие **rxImport**.
       
-2. Вызовите функцию [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport), чтобы поместить значения в кадр данных, который можно использовать совместно в разных контекстах вычисления.
+2. Вызовите функцию [rxImport](/machine-learning-server/r-reference/revoscaler/rximport), чтобы поместить значения в кадр данных, который можно использовать совместно в разных контекстах вычисления.
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)

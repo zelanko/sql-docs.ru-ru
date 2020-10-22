@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a1dd8b47f7a251918eb87db9a8ec2dfd9d412a10
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c636a33632a44e9cc5d1510bb73b5967a68f21ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179903"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195118"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Выполнение фрагментирующего анализа с помощью rxDataStep (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Эта часть 12 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 12 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
 В этом учебнике вы примените функцию **rxDataStep** для обработки данных блоками, вместо того чтобы загружать в память и сразу обрабатывать весь набор данных, как в традиционных системах R. Функции **rxDataStep** считывают данные блоками, а функции R используются для последовательной обработки каждого блока данных. Затем сводные результаты для каждого блока сохраняются в единый источник данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После считывания всех данных результаты объединяются.
 
@@ -118,4 +118,4 @@ ms.locfileid: "88179903"
 ## <a name="next-steps"></a>Дальнейшие шаги
 
 > [!div class="nextstepaction"]
-> [Учебные материалы по R в SQL Server](sql-server-r-tutorials.md)
+> [Учебные материалы по R в SQL Server](./r-tutorials.md)

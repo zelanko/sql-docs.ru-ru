@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ffebcaa9afc8f2caa8717170d9746787c17593b3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173657"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196282"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>Учебник по R. Запуск прогнозов в хранимых процедурах SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + Инструкция SELECT получает сериализованную модель из базы данных и сохраняет ее в переменной R `mod` для дальнейшей обработки с помощью языка R.
 
-+ Новые варианты для оценки получаются из запроса [!INCLUDE[tsql](../../includes/tsql-md.md)], указанного в `@inquery`, первом параметре хранимой процедуры. По мере считывания данных запроса строки сохраняются в кадре данных по умолчанию `InputDataSet`. Этот кадр данных передается в функцию [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) в [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), которая формирует оценки.
++ Новые варианты для оценки получаются из запроса [!INCLUDE[tsql](../../includes/tsql-md.md)], указанного в `@inquery`, первом параметре хранимой процедуры. По мере считывания данных запроса строки сохраняются в кадре данных по умолчанию `InputDataSet`. Этот кадр данных передается в функцию [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) в [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler), которая формирует оценки.
   
   `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -193,7 +193,7 @@ GO
    @dropoff_longitude = -73.977303
    ```
 
-   Можно также использовать более короткую форму, поддерживаемую для [параметров хранимой процедуры](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
+   Можно также использовать более короткую форму, поддерживаемую для [параметров хранимой процедуры](../../relational-databases/stored-procedures/specify-parameters.md):
   
    ```sql
    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

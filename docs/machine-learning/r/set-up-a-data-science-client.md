@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95390a1eb5418a43883a9605c7498e6a86876e7e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7d3b2da6c649c514dff31225253292642212cd41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178901"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195796"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Настройка клиента обработки и анализа данных для разработки на R в SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Интеграция R доступна в SQL Server 2016 и более поздних версиях, если включить параметр для языка R во время установки [служб SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) и [служб машинного обучения SQL Server (в базе данных)](../install/sql-machine-learning-services-windows-install.md). 
 
-Чтобы разрабатывать и развертывать решения R для SQL Server, установите [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) на рабочей станции разработки для получения библиотеки [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) и других библиотек R. Библиотека RevoScaleR, которая также требуется на удаленном экземпляре SQL Server, координирует вычислительные запросы между обеими системами. 
+Чтобы разрабатывать и развертывать решения R для SQL Server, установите [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client) на рабочей станции разработки для получения библиотеки [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) и других библиотек R. Библиотека RevoScaleR, которая также требуется на удаленном экземпляре SQL Server, координирует вычислительные запросы между обеими системами. 
 
 Из этой статьи вы узнаете, как настроить рабочую станцию разработки для клиента R, чтобы взаимодействовать с удаленным сервером SQL Server, на котором включены машинное обучение и интеграция R. После выполнения действий, описанных в этой статье, у вас будут те же библиотеки R, что и на сервере SQL Server. Вы также узнаете, как отправлять вычисления из локального сеанса R в удаленный сеанс R на сервере SQL Server.
 
@@ -34,7 +34,7 @@ ms.locfileid: "88178901"
 
 ## <a name="commonly-used-tools"></a>Часто используемые инструменты
 
-Независимо от того, являетесь ли вы разработчиком на R, который мало знаком с SQL, или разработчиком на SQL, который мало знаком с R и анализом в базе данных, для использования всех возможностей анализа в базе данных вам потребуется как средство разработки R, так и редактор запросов T-SQL, например [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Независимо от того, являетесь ли вы разработчиком на R, который мало знаком с SQL, или разработчиком на SQL, который мало знаком с R и анализом в базе данных, для использования всех возможностей анализа в базе данных вам потребуется как средство разработки R, так и редактор запросов T-SQL, например [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Для простых сценариев разработки R можно использовать исполняемый файл RGUI, входящий в базовый дистрибутив R в MRO и SQL Server. В этой статье приводятся инструкции по использованию RGUI как для локальных, так и для удаленных сеансов R. Для повышения производительности следует использовать полнофункциональную интегрированную среду разработки, например [RStudio или Visual Studio](#install-ide).
 
@@ -42,7 +42,7 @@ ms.locfileid: "88178901"
 
 ## <a name="1---install-r-packages"></a>1\. Установка пакетов R
 
-Пакеты R Microsoft доступны в нескольких продуктах и службах. На локальной рабочей станции рекомендуется установить Microsoft R Client. R Client предоставляет [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), [SQLRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) и другие пакеты R.
+Пакеты R Microsoft доступны в нескольких продуктах и службах. На локальной рабочей станции рекомендуется установить Microsoft R Client. R Client предоставляет [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler), [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package), [SQLRUtils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) и другие пакеты R.
 
 1. [Скачайте Microsoft R Client](https://aka.ms/rclient/download).
 
@@ -103,7 +103,7 @@ ms.locfileid: "88178901"
 
 ## <a name="5---test-connections"></a>5\. Проверка подключения
 
-Для проверки подключения к удаленному серверу используйте **RGUI** и RevoScaleR. SQL Server должен быть включен для [удаленных подключений](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server), а вам требуются разрешения, в том числе имя входа пользователя и база данных для подключения. 
+Для проверки подключения к удаленному серверу используйте **RGUI** и RevoScaleR. SQL Server должен быть включен для [удаленных подключений](../../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md), а вам требуются разрешения, в том числе имя входа пользователя и база данных для подключения. 
 
 При выполнений следующих действий используется демонстрационная база данных [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) и проверка подлинности Windows.
 
@@ -219,8 +219,8 @@ ms.locfileid: "88178901"
 Если у вас еще нет предпочтительной интегрированной среды разработки для R, рекомендуется воспользоваться **инструментами R для Visual Studio**.
 
 + [Скачивание инструментов R для Visual Studio (RTVS)](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)
-+ [Инструкции по установке](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) — инструменты RTVS доступны в нескольких версиях Visual Studio.
-+ [Начало работы с инструментами R для Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
++ [Инструкции по установке](/visualstudio/rtvs/installing-r-tools-for-visual-studio) — инструменты RTVS доступны в нескольких версиях Visual Studio.
++ [Начало работы с инструментами R для Visual Studio](/visualstudio/rtvs/getting-started-with-r)
 
 ### <a name="connect-to-sql-server-from-rtvs"></a>Подключение к SQL Server из RTVS
 

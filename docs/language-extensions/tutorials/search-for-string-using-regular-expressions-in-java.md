@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9de0a8e595cca3009be4a44b63ce268d673b6dff
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: bc69f01a3cc05f1f1b128ac7ed9fd99d84c7e757
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765742"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155049"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Руководство по Поиск строки с использованием регулярных выражений (regex) в Java
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91765742"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-+ Экземпляр ядра СУБД SQL Server 2019 с платформой расширяемости и расширением программирования Java [в Windows](../install/install-sql-server-language-extensions-on-windows.md) или [в Linux](../../linux/sql-server-linux-setup-language-extensions.md). Дополнительные сведения см. в статье [Расширения языка в SQL Server 2019](../language-extensions-overview.md). Дополнительные сведения о требованиях к программированию см. в разделе [Как вызывать Java в SQL Server](../how-to/call-java-from-sql.md).
++ Экземпляр ядра СУБД SQL Server 2019 с платформой расширяемости и расширением программирования Java [в Windows](../install/windows-java.md) или [в Linux](../../linux/sql-server-linux-setup-language-extensions-java.md). Дополнительные сведения см. в статье [Расширения языка в SQL Server 2019](../language-extensions-overview.md). Дополнительные сведения о требованиях к программированию см. в разделе [Как вызывать Java в SQL Server](../how-to/call-java-from-sql.md).
 
 + SQL Server Management Studio или Azure Data Studio для выполнения T-SQL.
 
@@ -255,7 +255,7 @@ GO
 > [!NOTE]
 > Пропустите этот шаг, если на предыдущем этапе вы использовали внешние библиотеки. Рекомендуемый способ — создать внешнюю библиотеку из файла `.jar`.
 
-Если вы не хотите использовать внешние библиотеки, нужно будет задать необходимые разрешения. Скрипты выполняются успешно, только если удостоверения процессов имеют доступ к вашему коду. Дополнительные сведения о настройке разрешений см. в [руководстве по установке](../install/install-sql-server-language-extensions-on-windows.md).
+Если вы не хотите использовать внешние библиотеки, нужно будет задать необходимые разрешения. Скрипты выполняются успешно, только если удостоверения процессов имеют доступ к вашему коду. Дополнительные сведения о настройке разрешений см. в [руководстве по установке](../install/windows-java.md).
 
 ### <a name="on-linux"></a>В Linux
 

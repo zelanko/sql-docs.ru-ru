@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 38b00fd3a5f300a4038c6c302c1311a2f135d97b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f9a089bb123698a8a06c92bb1a95e8b2c3956907
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180411"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193044"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Конфигурация службы панели запуска SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,16 +27,16 @@ ms.locfileid: "88180411"
 
 По умолчанию панель запуска SQL Server настроена для работы под учетной записью **NT Service\MSSQLLaunchpad**, имеющей все необходимые разрешения на выполнение внешних скриптов. Удаление разрешений этой учетной записи может привести к тому, что панель запуска не сможет запуститься или получить доступ к экземпляру SQL Server, где должны выполняться внешние скрипты.
 
-При изменении этой учетной записи службы обязательно используйте [консоль локальной политики безопасности](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
+При изменении этой учетной записи службы обязательно используйте [консоль локальной политики безопасности](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
 
 Разрешения, необходимые для этой учетной записи, перечислены в следующей таблице.
 
 | Параметр групповой политики | Имя константы |
 |----------------------|---------------|
-| [Назначение квот памяти процессам](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
-| [Обход проходной проверки](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
-| [Вход в систему в качестве службы](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
-| [Замена токена уровня процесса](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
+| [Назначение квот памяти процессам](/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [Обход проходной проверки](/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [Вход в систему в качестве службы](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [Замена токена уровня процесса](/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 Дополнительные сведения о разрешениях, необходимых для запуска служб SQL Server, см. в разделе [Права доступа и права Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 

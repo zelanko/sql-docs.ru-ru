@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e2f21808bcd45224027ae7ddc28c8a07f0d85db
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6e4b05970efde3519e29e51cfb3925ba1bbf4c16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173655"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192634"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Создание признаков данных с помощью R и SQL Server (пошаговое руководство)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88173655"
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) может принимать либо запрос, состоящий из допустимого запроса SELECT, предоставленный в качестве аргумента для параметра _sqlQuery_, либо имя объекта таблицы, предоставленное в качестве параметра _table_.
+    - [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) может принимать либо запрос, состоящий из допустимого запроса SELECT, предоставленный в качестве аргумента для параметра _sqlQuery_, либо имя объекта таблицы, предоставленное в качестве параметра _table_.
     
     - Если необходимо выполнить выборку данных из таблицы, используйте параметр _sqlQuery_, определите параметры выборки с помощью предложения T-SQL TABLESAMPLE и задайте для аргумента _rowBuffering_ значение FALSE.
 
@@ -91,7 +91,7 @@ ms.locfileid: "88173655"
     rxSetComputeContext("local");
     ```
 
-5. Вызовите функцию [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep), чтобы получить данные о проектировании признаков, и примените функцию `env$ComputeDist` к данным в памяти.
+5. Вызовите функцию [rxDataStep](/r-server/r-reference/revoscaler/rxdatastep), чтобы получить данные о проектировании признаков, и примените функцию `env$ComputeDist` к данным в памяти.
 
     ```R
     start.time <- proc.time();
@@ -109,7 +109,7 @@ ms.locfileid: "88173655"
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + Функция rxDataStep поддерживает различные методы изменения данных на месте. Дополнительные сведения см. в следующей статье:  [Преобразование и подмножества данных в Microsft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + Функция rxDataStep поддерживает различные методы изменения данных на месте. Дополнительные сведения см. в следующей статье:  [Преобразование и подмножества данных в Microsft R](/r-server/r/how-to-revoscaler-data-transform)
     
     Однако стоит отметить несколько моментов, касающихся rxDataStep. 
     
@@ -117,7 +117,7 @@ ms.locfileid: "88173655"
 
     Приведенный выше код может также выдавать предупреждающее сообщение при выполнении в больших наборах данных. Если произведение создаваемых строк и столбцов превышает заданное значение (по умолчанию — 3 000 000), rxDataStep возвращает предупреждение, а число строк в возвращенном кадре данных будет обрезано. Чтобы устранить это предупреждение, можно изменить аргумент _maxRowsByCols_ в функции rxDataStep. Однако если значение _maxRowsByCols_ слишком большое, могут возникнуть проблемы при загрузке кадра данных в память.
 
-7. Кроме того, вы можете вызвать функцию [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo), чтобы проверить схему преобразованного нового источника данных.
+7. Кроме того, вы можете вызвать функцию [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo), чтобы проверить схему преобразованного нового источника данных.
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -127,7 +127,7 @@ ms.locfileid: "88173655"
 
 В этом упражнении вы узнаете, как выполнить ту же задачу с помощью функций SQL, а не пользовательских функций R. 
 
-Для запуска скрипта T-SQL перейдите в [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) или другой редактор запросов.
+Для запуска скрипта T-SQL перейдите в [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) или другой редактор запросов.
 
 1. Используйте функцию SQL с именем *fnCalculateDistance*. Функция уже должна существовать в базе данных NYCTaxi_Sample. В обозревателе объектов убедитесь, что функция существует, перейдя по этому пути: Базы данных > NYCTaxi_Sample > Программируемость > Функции > Функции с одиночным значением > dbo.fnCalculateDistance.
 
@@ -252,4 +252,3 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 
 > [!div class="nextstepaction"]
 > [Создание модели R и ее сохранение в SQL](walkthrough-build-and-save-the-model.md)
-

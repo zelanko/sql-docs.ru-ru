@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 43453738d9351a18e4ed6e9887fdf75bb2e9521a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834051"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194476"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>Краткое руководство. Создание и оценка прогнозной модели в Python с помощью машинного обучения SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "91834051"
 
 На этом шаге выполняется процедура запуска внедренного кода с созданием обученной и сериализованной модели в качестве выходных данных. 
 
-Модели, хранимые для повторного использования в базе данных, сериализуются как поток байтов и хранятся в столбце VARBINARY(MAX) в таблице базы данных. После того как модель создана, обучена, сериализована и сохранена в базе данных, она может быть вызвана другими процедурами или функцией [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) для оценки рабочих нагрузок.
+Модели, хранимые для повторного использования в базе данных, сериализуются как поток байтов и хранятся в столбце VARBINARY(MAX) в таблице базы данных. После того как модель создана, обучена, сериализована и сохранена в базе данных, она может быть вызвана другими процедурами или функцией [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) для оценки рабочих нагрузок.
 
 1. Чтобы выполнить процедуру, выполните следующий скрипт. Конкретная инструкция для исполнения хранимой процедуры — `EXECUTE` в четвертой строке.
 

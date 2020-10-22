@@ -9,19 +9,19 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85ab092eb606fcc6896fa6a084a2cef0e5f018df
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec0323d35c05c34de763fbdece37546f7c8252df
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179735"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193667"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Руководство по Создание моделей на основе секций в R в SQL Server
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 В SQL Server 2019 моделирование на основе секций — это возможность создания и обучения моделей по секционированным данным. Для стратифицированных данных, которые естественным образом сегментируются в определенную классификационную схему, например по географическим регионам, дате и времени, возрасту или полу, вы можете выполнить скрипт для всего набора данных с возможностью моделирования, обучения и оценки по секциям, которые не затрагиваются всеми этими операциями. 
 
-Моделирование на основе секций включается с помощью следующих двух новых параметров в [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+Моделирование на основе секций включается с помощью следующих двух новых параметров в [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 + Параметр **input_data_1_partition_by_columns** задает столбец для секционирования.
 + Параметр **input_data_1_order_by_columns** указывает, какие столбцы следует упорядочить. 
@@ -39,7 +39,7 @@ ms.locfileid: "88179735"
 
 + Достаточное количество системных ресурсов. Так как работа выполняется на большом наборе данных, операции обучения требуют много ресурсов. По возможности используйте систему с ОЗУ не менее 8 ГБ. Можно также попробовать использовать меньшие наборы данных, чтобы обойти ресурсные ограничения. Следуйте встроенным инструкциям по сокращению набора данных. 
 
-+ Средство выполнения запросов T-SQL, например [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
++ Средство выполнения запросов T-SQL, например [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 
 + Файл [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), который можно [скачать и восстановить](demo-data-nyctaxi-in-sql.md) в локальном экземпляре ядра СУБД. Размер файла составляет приблизительно 90 МБ.
 
@@ -105,7 +105,7 @@ GO
 
 В этом учебнике сценарий R заключается в хранимую процедуру. На этом шаге создается хранимая процедура, которая с использованием R создает входной набор данных, строит модель классификации для прогнозирования результатов, а затем сохраняет эту модель в базе данных.
 
-В качестве входных параметров, используемых этим скриптом, вы увидите **input_data_1_partition_by_columns** и **input_data_1_order_by_columns**. Напомним, что эти параметры и есть механизм, с помощью которого создается секционированное моделирование. Эти параметры передаются в качестве входных данных в [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) для обработки секций с помощью данного внешнего скрипта, который выполняется один раз для каждой секции. 
+В качестве входных параметров, используемых этим скриптом, вы увидите **input_data_1_partition_by_columns** и **input_data_1_order_by_columns**. Напомним, что эти параметры и есть механизм, с помощью которого создается секционированное моделирование. Эти параметры передаются в качестве входных данных в [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для обработки секций с помощью данного внешнего скрипта, который выполняется один раз для каждой секции. 
 
 Чтобы эта хранимая процедура выполнялась быстрее, [используйте параллелизм](#parallel).
 
@@ -169,7 +169,7 @@ GO
 
 ### <a name="parallel-execution"></a>Параллельное выполнение
 
-Обратите внимание, что среди входных данных для скрипта [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) имеется параметр `@parallel=1`. Он используется для включения параллельной обработки. В отличие от предыдущих выпусков, в SQL Server 2019 параметр `@parallel=1` обеспечивает более строгое указание оптимизатору запросов, что делает параллельное выполнение гораздо более вероятным результатом.
+Обратите внимание, что среди входных данных для скрипта [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) имеется параметр `@parallel=1`. Он используется для включения параллельной обработки. В отличие от предыдущих выпусков, в SQL Server 2019 параметр `@parallel=1` обеспечивает более строгое указание оптимизатору запросов, что делает параллельное выполнение гораздо более вероятным результатом.
 
 По умолчанию в рамках `@parallel=1` оптимизатор запросов стремится работать в таблицах, имеющих более 256 строк, но это можно задать явно, установив `@parallel=1`, как показано в данном скрипте.
 
@@ -336,8 +336,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-В этом руководстве вы использовали скрипт [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) для выполнения цикла операций по секционированным данным. Более подробно вызов внешних скриптов в хранимых процедурах и использование функций RevoScaleR рассматривается в следующем учебнике.
+В этом руководстве вы использовали скрипт [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения цикла операций по секционированным данным. Более подробно вызов внешних скриптов в хранимых процедурах и использование функций RevoScaleR рассматривается в следующем учебнике.
 
 > [!div class="nextstepaction"]
 > [Пошаговое руководство для R и SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
-

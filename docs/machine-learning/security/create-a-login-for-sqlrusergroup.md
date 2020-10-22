@@ -8,17 +8,17 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8273250360c9e60aae8ac1ae19ccebf4d76d8598
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180434"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92195758"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Создание учетных данных для SQLRUserGroup
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Создайте [имя входа в SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) для [SQLRUserGroup](../concepts/security.md#sqlrusergroup), когда [соединение с замыканием на себя](../../machine-learning/concepts/security.md#implied-authentication) в скрипте указывает *доверенное подключение* и удостоверение, используемое для выполнения объекта, содержит код учетной записи пользователя Windows.
+Создайте [имя входа в SQL Server](../../relational-databases/security/authentication-access/create-a-login.md) для [SQLRUserGroup](../concepts/security.md#sqlrusergroup), когда [соединение с замыканием на себя](../../machine-learning/concepts/security.md#implied-authentication) в скрипте указывает *доверенное подключение* и удостоверение, используемое для выполнения объекта, содержит код учетной записи пользователя Windows.
 
 Доверенные соединения — это те, которые имеют `Trusted_Connection=True` в строке подключения. Когда SQL Server получает запрос, указывающий на доверенное соединение, он проверяет, имеет ли удостоверение текущего пользователя Windows имя входа. Для внешних процессов, выполняющихся в качестве учетной записи рабочей роли (например, MSSQLSERVER01 из **SQLRUserGroup**), запрос завершается сбоем, так как по умолчанию у этих учетных записей нет имени входа.
 

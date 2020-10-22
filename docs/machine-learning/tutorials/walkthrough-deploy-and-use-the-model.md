@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179770"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193650"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Развертывание модели R и ее использование в SQL Server (пошаговое руководство)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -216,7 +216,7 @@ ms.locfileid: "88179770"
     ```
 
     >[!TIP]
-    > Инструменты R для Visual Studio (RTVS) обеспечивают превосходную интеграцию с SQL Server и R. Дополнительные примеры использования RODBC с подключением к SQL Server см. в этой статье: [Работа с SQL Server и R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > Инструменты R для Visual Studio (RTVS) обеспечивают превосходную интеграцию с SQL Server и R. Дополнительные примеры использования RODBC с подключением к SQL Server см. в этой статье: [Работа с SQL Server и R](/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -229,5 +229,5 @@ ms.locfileid: "88179770"
 
 + [Сценарии и шаблоны решений для обработки и анализа данных](data-science-scenarios-and-solution-templates.md)
 + [Дополнительные аналитические функции в базе данных для разработчиков SQL (руководство)](r-taxi-classification-introduction.md)
-+ [Руководства по Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
-+ [Дополнительные ресурсы по Machine Learning Server](https://docs.microsoft.com//machine-learning-server/resources-more)
++ [Руководства по Machine Learning Server](/machine-learning-server/r/how-to-introduction)
++ [Дополнительные ресурсы по Machine Learning Server](//machine-learning-server/resources-more)

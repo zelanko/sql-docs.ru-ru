@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178431"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196238"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Создание диаграмм и графиков с использованием SQL и R (пошаговое руководство)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88178431"
 
 ## <a name="create-a-histogram"></a>Создание гистограммы
 
-1. Создайте первую диаграмму с помощью функции [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).  Функция rxHistogram предоставляет возможности, аналогичные возможностям пакетов R с открытым исходным кодом, однако она может работать в контексте удаленного выполнения.
+1. Создайте первую диаграмму с помощью функции [rxHistogram](/r-server/r-reference/revoscaler/rxdatasource).  Функция rxHistogram предоставляет возможности, аналогичные возможностям пакетов R с открытым исходным кодом, однако она может работать в контексте удаленного выполнения.
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -73,7 +73,7 @@ ms.locfileid: "88178431"
 
     + Функция *mapPlot* принимает два аргумента: имеющийся объект данных, который вы определили ранее с помощью функции RxSqlServerData, и представление карты, переданное из клиента.
     + В строке, начинающейся с переменной *ds*, функция rxImport используется для загрузки в память данных из ранее созданного источника *inDataSource*. (Этот источник содержит только 1000 строк; если вы хотите создать карту с использованием большего количества точек данных, выберите другой источник.)
-    + При использовании функций R с открытым исходным кодом данные должны быть загружены в кадры данных в локальной памяти. Тем не менее, вызов функции [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) позволяет осуществлять выполнение в контексте удаленных вычислений.
+    + При использовании функций R с открытым исходным кодом данные должны быть загружены в кадры данных в локальной памяти. Тем не менее, вызов функции [rxImport](/r-server/r-reference/revoscaler/rximport) позволяет осуществлять выполнение в контексте удаленных вычислений.
 
 2. Измените контекст вычислений на локальный и загрузите библиотеки, необходимые для создания карт.
 
@@ -89,7 +89,7 @@ ms.locfileid: "88178431"
 
     + Строка, начинающаяся с `googmap` , создает карту с указанными координатами в центре.
 
-3. Перейдите в контекст вычислений SQL Server и преобразуйте результаты для просмотра. Для этого необходимо упаковать функцию построения графика в [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec), как показано ниже. Функция rxExec входит в состав пакета **RevoScaleR** и поддерживает выполнение произвольных функций R в удаленном контексте вычислений.
+3. Перейдите в контекст вычислений SQL Server и преобразуйте результаты для просмотра. Для этого необходимо упаковать функцию построения графика в [rxExec](/r-server/r-reference/revoscaler/rxexec), как показано ниже. Функция rxExec входит в состав пакета **RevoScaleR** и поддерживает выполнение произвольных функций R в удаленном контексте вычислений.
 
     ```R
     rxSetComputeContext(sqlcc)

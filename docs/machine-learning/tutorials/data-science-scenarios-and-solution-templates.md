@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 241affaea232fcc916456b96ff724655b9289618
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 82c949647cf670c0e335b2c4446c248fea86581d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178837"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196331"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Сценарии и шаблоны решений для обработки и анализа данных
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -110,5 +110,5 @@ ms.locfileid: "88178837"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-+ [Учебники по Python](sql-server-python-tutorials.md)
-+ [Учебники по R](sql-server-r-tutorials.md)
++ [Учебники по Python](./python-tutorials.md)
++ [Учебники по R](./r-tutorials.md)

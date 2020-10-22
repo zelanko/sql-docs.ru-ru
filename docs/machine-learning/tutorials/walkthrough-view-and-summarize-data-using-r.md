@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bff067202bccf585cce43c35443d466c033eff7d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7e48e25444acc2f84794afc487c95bdd5af64f30
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179786"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195076"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Просмотр и сведение данных SQL Server с помощью R (пошаговое руководство)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -69,11 +69,11 @@ ms.locfileid: "88179786"
 
     - R использует временный каталог при сериализации объектов R между рабочей станцией и компьютером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Вы можете указать локальный каталог, используемый в качестве *sqlShareDir*, или принять значение по умолчанию.
   
-    - С помощью *sqlWait* можно указать, следует ли R ожидать результаты с сервера.  Обсуждение заданий с ожиданием и без ожидания см. в статье [Распределенные и параллельные вычисления с помощью RevoScaleR в Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
+    - С помощью *sqlWait* можно указать, следует ли R ожидать результаты с сервера.  Обсуждение заданий с ожиданием и без ожидания см. в статье [Распределенные и параллельные вычисления с помощью RevoScaleR в Microsoft R](/r-server/r/how-to-revoscaler-distributed-computing).
   
     - С помощью аргумента *sqlConsoleOutput* укажите, что не нужно выводить результаты на консоли R.
 
-4. Далее вызывается конструктор [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) для создания объекта контекста вычислений с уже заданными переменными и строками подключения, и этот новый объект сохраняется в переменной R *sqlcc*.
+4. Далее вызывается конструктор [RxInSqlServer](/r-server/r-reference/revoscaler/rxinsqlserver) для создания объекта контекста вычислений с уже заданными переменными и строками подключения, и этот новый объект сохраняется в переменной R *sqlcc*.
   
     ```R
     sqlcc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -85,14 +85,14 @@ ms.locfileid: "88179786"
     rxSetComputeContext(sqlcc)
     ```
 
-    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) скрыто возвращает предыдущий активный контекст вычислений для дальнейшего использования;
-    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) возвращает активный контекст вычислений.
+    + [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) скрыто возвращает предыдущий активный контекст вычислений для дальнейшего использования;
+    + [rxGetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) возвращает активный контекст вычислений.
     
     Обратите внимание, что задание контекста вычислений влияет только на операции, использующие функции из пакета **RevoScaleR**. Контекст вычислений не влияет на то, как выполняются операции R с открытым исходным кодом.
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>Создание источника данных с помощью RxSqlServer
 
-При использовании таких библиотек Microsoft R, как RevoScaleR и MicrosoftML, *источник данных*  является объектом, создаваемым с помощью функций RevoScaleR. Объект источника данных определяет некоторый набор данных, который требуется использовать для задачи, например, для обучения модели или извлечения функций. Вы можете получать данные из множества разных источников, включая SQL Server. Список поддерживаемых в настоящее время источников см. в разделе [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).
+При использовании таких библиотек Microsoft R, как RevoScaleR и MicrosoftML, *источник данных*  является объектом, создаваемым с помощью функций RevoScaleR. Объект источника данных определяет некоторый набор данных, который требуется использовать для задачи, например, для обучения модели или извлечения функций. Вы можете получать данные из множества разных источников, включая SQL Server. Список поддерживаемых в настоящее время источников см. в разделе [RxDataSource](/r-server/r-reference/revoscaler/rxdatasource).
 
 Ранее вы определили строку подключения и сохранили эту информацию в переменной R. Эти сведения о подключении можно использовать многократно для указания данных, которые требуется получить.
 
@@ -104,7 +104,7 @@ ms.locfileid: "88179786"
 
     Здесь используется предложение TOP, чтобы ускорить выполнение, но фактические строки, возвращаемые запросом, могут отличаться в зависимости от порядка. Таким образом, сводные результаты тоже могут отличаться от приведенных ниже. При желании предложение TOP можно удалить.
 
-2. Передайте определение запроса в качестве аргумента в функцию [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata).
+2. Передайте определение запроса в качестве аргумента в функцию [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata).
 
     ```R
     inDataSource <- RxSqlServerData(
@@ -120,7 +120,7 @@ ms.locfileid: "88179786"
   
     + Аргумент *rowsPerRead* важен для управления использованием памяти и обеспечения эффективных вычислений.  Большинство расширенных аналитических функций в[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] обрабатывают данные блоками и накапливают промежуточные результаты, возвращая итоговые результаты вычислений после считывания всех данных.  С помощью параметра *rowsPerRead* можно управлять количеством строк данных, считываемых в каждый блок для обработки.  Если значение этого параметра слишком велико, доступ к данным может замедлиться из-за нехватки памяти для эффективной обработки такого большого блока данных.  В некоторых системах слишком низкое значение параметра *rowsPerRead* также может снизить производительность.
 
-3. На данном этапе объект *inDataSource* создан, но в нем отсутствуют какие-либо данные. Данные не переносятся из SQL-запроса в локальную среду, пока не будут выполнены такие функции, как [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) или [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary).
+3. На данном этапе объект *inDataSource* создан, но в нем отсутствуют какие-либо данные. Данные не переносятся из SQL-запроса в локальную среду, пока не будут выполнены такие функции, как [rxImport](/r-server/r-reference/revoscaler/rxdatastep) или [rxSummary](/r-server/r-reference/revoscaler/rxsummary).
 
     Однако теперь, когда объект данных определен, его можно использовать в качестве аргумента в других функциях.
 
@@ -128,7 +128,7 @@ ms.locfileid: "88179786"
 
 В этом разделе вы попробуете использовать несколько функций, имеющихся в [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], которые поддерживают удаленные контексты вычислений. Применяя функции R к источнику данных, можно исследовать данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], формировать сводки и строить диаграммы на их основе.
 
-1. Вызовите функцию [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo), чтобы получить список переменных в источнике данных и их типы данных.
+1. Вызовите функцию [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo), чтобы получить список переменных в источнике данных и их типы данных.
 
     Функция **rxGetVarInfo** очень удобна; ее можно вызывать с любым кадром или набором данных в удаленном объекте данных для получения таких сведений, как максимальные и минимальные значения, тип данных и число уровней в столбцах факторов.
     
@@ -153,7 +153,7 @@ ms.locfileid: "88179786"
     Var 10: dropoff_longitude, Type: numeric
     ```
 
-2. Теперь вызовите функцию [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary) из пакета RevoScaleR для получения более подробной статистики по отдельным переменным.
+2. Теперь вызовите функцию [rxSummary](/r-server/r-reference/revoscaler/rxsummary) из пакета RevoScaleR для получения более подробной статистики по отдельным переменным.
 
     Функция rxSummary построена на функции R `summary`, но имеет некоторые дополнительные возможности и преимущества. rxSummary работает в нескольких контекстах вычислений и поддерживает фрагментирование.  Можно также использовать rxSummary для преобразования значений или подведения итогов на основе уровней коэффициентов.
     
@@ -205,7 +205,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 ```
 
 > [!TIP]
-> Пока это выполняется, вы можете использовать такой инструмент, как [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) или SQL Profiler, чтобы с помощью служб SQL Server увидеть, как устанавливается соединение, и как выполняется код R.
+> Пока это выполняется, вы можете использовать такой инструмент, как [Process Explorer](/sysinternals/downloads/process-explorer) или SQL Profiler, чтобы с помощью служб SQL Server увидеть, как устанавливается соединение, и как выполняется код R.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

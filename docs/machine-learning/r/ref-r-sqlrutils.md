@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d006c3e9662e8e2d4d6486b991d8543ef96b7565
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8a458b1eadff2cd4ef36c73a75eb90a3d25530fa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179943"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195815"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (пакет R в Службах машинного обучения SQL Server)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88179943"
   
 ## <a name="full-reference-documentation"></a>Полная справочная документация
 
-Пакет **sqlrutils** распространяется в нескольких продуктах Майкрософт, но его использование не зависит от того, получили ли вы его в SQL Server или в другом продукте. Благодаря сходству функций [документация по отдельным функциям sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) опубликована только в одном разделе в [справочнике по R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
+Пакет **sqlrutils** распространяется в нескольких продуктах Майкрософт, но его использование не зависит от того, получили ли вы его в SQL Server или в другом продукте. Благодаря сходству функций [документация по отдельным функциям sqlrutils](/machine-learning-server/r-reference/revoscaler/revoscaler) опубликована только в одном разделе в [справочнике по R](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
 
 ## <a name="functions-list"></a>Список функций
 
@@ -43,16 +43,16 @@ ms.locfileid: "88179943"
 
 |Функция | Описание |
 |------|-------------|
-|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Выполнение хранимой процедуры SQL.|
-|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Получение списка входных параметров в хранимой процедуре.| 
-|[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| Определяет источник данных в SQL Server, который будет использоваться в кадре данных R. Укажите имя data.frame для хранения входных данных и запрос для получения данных или значение по умолчанию. Поддерживаются только простые запросы SELECT. | 
-|[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| Определяет отдельный входной параметр, который будет внедрен в скрипт T-SQL. Необходимо указать имя параметра и его тип данных R.| 
-|[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| Cоздает объект промежуточных данных, который требуется, когда функция R возвращает список, содержащий data.frame. Объект *OutputData* используется для хранения имени отдельного data.frame, полученного из списка.| 
-|[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | Cоздает объект промежуточных данных, который требуется, когда функция R возвращает список. Объект *OutputParameter* хранит имя и тип данных для одного элемента списка при условии, что он **не** является кадром данных. |
-|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Регистрация хранимой процедуры в базе данных.|
-|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Назначение запроса параметру входных данных хранимой процедуры.| 
-|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Назначение значения входному параметру хранимой процедуры.| 
-|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Объект хранимой процедуры.|
+|[executeStoredProcedure](/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Выполнение хранимой процедуры SQL.|
+|[getInputParameters](/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Получение списка входных параметров в хранимой процедуре.| 
+|[InputData](/machine-learning-server/r-reference/sqlrutils/inputdata)| Определяет источник данных в SQL Server, который будет использоваться в кадре данных R. Укажите имя data.frame для хранения входных данных и запрос для получения данных или значение по умолчанию. Поддерживаются только простые запросы SELECT. | 
+|[InputParameter](/machine-learning-server/r-reference/sqlrutils/inputparameter)| Определяет отдельный входной параметр, который будет внедрен в скрипт T-SQL. Необходимо указать имя параметра и его тип данных R.| 
+|[OutputData](/machine-learning-server/r-reference/sqlrutils/outputdata)| Cоздает объект промежуточных данных, который требуется, когда функция R возвращает список, содержащий data.frame. Объект *OutputData* используется для хранения имени отдельного data.frame, полученного из списка.| 
+|[OutputParameter](/machine-learning-server/r-reference/sqlrutils/outputparameter) | Cоздает объект промежуточных данных, который требуется, когда функция R возвращает список. Объект *OutputParameter* хранит имя и тип данных для одного элемента списка при условии, что он **не** является кадром данных. |
+|[registerStoredProcedure](/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Регистрация хранимой процедуры в базе данных.|
+|[setInputDataQuery](/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Назначение запроса параметру входных данных хранимой процедуры.| 
+|[setInputParameterValue](/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Назначение значения входному параметру хранимой процедуры.| 
+|[StoredProcedure](/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Объект хранимой процедуры.|
 
 
 ## <a name="how-to-use-sqlrutils"></a>Как использовать sqlrutils
@@ -107,4 +107,3 @@ ms.locfileid: "88179943"
 ## <a name="see-also"></a>См. также раздел
 
 [Создание хранимой процедуры с помощью sqlrutils](how-to-create-a-stored-procedure-using-sqlrutils.md)
-

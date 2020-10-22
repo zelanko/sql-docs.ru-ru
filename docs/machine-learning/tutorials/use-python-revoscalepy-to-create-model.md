@@ -9,25 +9,25 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f5cebd0fa6f45530ea5853cf365ea60a4c535ad
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 02b30a427865774a313b999c62376fd83aa4e632
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179719"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193636"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Использование Python с revoscalepy для создания модели, которая выполняется удаленно на SQL Server
 [!INCLUDE [SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
-Библиотека [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python от корпорации Майкрософт предоставляет алгоритмы обработки и анализа данных для просмотра, визуализации, преобразования и анализа данных. Эта библиотека имеет стратегическое значение в сценариях интеграции Python в SQL Server. На многоядерном сервере **функции** revoscalepy могут выполняться параллельно. В распределенной архитектуре с центральным сервером и клиентскими рабочими станциями (разными физическими компьютерами, на каждом из которых установлена библиотека **revoscalepy**) можно написать код Python, который запускается локально, но затем его выполнение перемещается на удаленный экземпляр SQL Server, в котором находятся данные.
+Библиотека [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python от корпорации Майкрософт предоставляет алгоритмы обработки и анализа данных для просмотра, визуализации, преобразования и анализа данных. Эта библиотека имеет стратегическое значение в сценариях интеграции Python в SQL Server. На многоядерном сервере **функции** revoscalepy могут выполняться параллельно. В распределенной архитектуре с центральным сервером и клиентскими рабочими станциями (разными физическими компьютерами, на каждом из которых установлена библиотека **revoscalepy**) можно написать код Python, который запускается локально, но затем его выполнение перемещается на удаленный экземпляр SQL Server, в котором находятся данные.
 
 Библиотеку **revoscalepy** можно найти в составе следующих продуктов и дистрибутивов Майкрософт:
 
 + [Службы машинного обучения SQL Server (в базе данных)](../install/sql-machine-learning-services-windows-install.md)
-+ [Сервер машинного обучения Microsoft (отличный от SQL, изолированный сервер)](https://docs.microsoft.com/machine-learning-server/index)
-+ [Клиентские библиотеки Python (для рабочих станций разработки)](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) 
++ [Сервер машинного обучения Microsoft (отличный от SQL, изолированный сервер)](/machine-learning-server/index)
++ [Клиентские библиотеки Python (для рабочих станций разработки)](/machine-learning-server/install/python-libraries-interpreter) 
 
-В этом упражнении показано, как создать модель линейной регрессии на основе [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), одного из алгоритмов **revoscalepy**, принимающего контекст вычислений в качестве входных данных. Код, который вы будете использовать в этом упражнении, перемещает выполнение кода из локальной среды в удаленную вычислительную среду. Эта среда активируется благодаря функциям **revoscalepy**, которые позволяют использовать удаленный контекст вычислений.
+В этом упражнении показано, как создать модель линейной регрессии на основе [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), одного из алгоритмов **revoscalepy**, принимающего контекст вычислений в качестве входных данных. Код, который вы будете использовать в этом упражнении, перемещает выполнение кода из локальной среды в удаленную вычислительную среду. Эта среда активируется благодаря функциям **revoscalepy**, которые позволяют использовать удаленный контекст вычислений.
 
 Выполнив инструкции из этого учебника, вы научитесь:
 
@@ -50,11 +50,11 @@ ms.locfileid: "88179719"
 
 В этом примере демонстрируется процесс создания модели Python в удаленном контексте вычислений, что позволяет работать с клиентом, но выбрать удаленную среду, например, SQL Server, Spark или Machine Learning Server, в которой будут фактически выполняться операции. Цель удаленного контекста вычислений заключается в том, чтобы перенести вычисления в место, где находятся данные.
 
-Для выполнения кода Python в SQL Server требуется пакет **revoscalepy**. Это специальный пакет Python, предоставляемый корпорацией Майкрософт. Он аналогичен пакету **RevoScaleR** для языка R. Пакет **revoscalepy** поддерживает создание контекстов вычислений и предоставляет инфраструктуру для передачи данных и моделей между локальной рабочей станцией и удаленным сервером. Функция **revoscalepy**, которая поддерживает выполнение кода в базе данных — [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
+Для выполнения кода Python в SQL Server требуется пакет **revoscalepy**. Это специальный пакет Python, предоставляемый корпорацией Майкрософт. Он аналогичен пакету **RevoScaleR** для языка R. Пакет **revoscalepy** поддерживает создание контекстов вычислений и предоставляет инфраструктуру для передачи данных и моделей между локальной рабочей станцией и удаленным сервером. Функция **revoscalepy**, которая поддерживает выполнение кода в базе данных — [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
 
-На этом занятии вы используете данные в SQL Server для обучения линейной модели на основе [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), функции **revoscalepy**, которая поддерживает регрессию для очень больших наборов данных. 
+На этом занятии вы используете данные в SQL Server для обучения линейной модели на основе [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), функции **revoscalepy**, которая поддерживает регрессию для очень больших наборов данных. 
 
-На этом занятии также показаны основные действия по настройке и последующему использованию **контекста вычислений SQL Server** в Python. Обсуждение того, как контексты вычислений взаимодействуют с другими платформами и какие контексты вычислений поддерживаются, см. в разделе [Контекст вычислений для выполнения сценариев в Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
+На этом занятии также показаны основные действия по настройке и последующему использованию **контекста вычислений SQL Server** в Python. Обсуждение того, как контексты вычислений взаимодействуют с другими платформами и какие контексты вычислений поддерживаются, см. в разделе [Контекст вычислений для выполнения сценариев в Machine Learning Server](/machine-learning-server/r/concept-what-is-compute-context).
 
 
 ## <a name="run-the-sample-code"></a>Запуск примера кода
@@ -129,9 +129,9 @@ def test_linmod_sql():
 
 + Переменные Python, такие как `sql_query` и `sql_connection_string`, определяют источник данных. 
 
-    Передайте эти переменные в конструктор [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata), чтобы реализовать **объект источника данных** с именем `data_source`.
+    Передайте эти переменные в конструктор [RxSqlServerData](/r-server/python-reference/revoscalepy/rxsqlserverdata), чтобы реализовать **объект источника данных** с именем `data_source`.
 
-+ Вы создаете **объект контекста вычислений** с помощью конструктора [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver). Результирующий **объект контекста вычислений** называется `sql_cc`.
++ Вы создаете **объект контекста вычислений** с помощью конструктора [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver). Результирующий **объект контекста вычислений** называется `sql_cc`.
 
     В этом примере повторно используется та же строка подключения, которая использовалась в источнике данных, исходя из предположения, что данные находятся на том же экземпляре SQL Server, который будет использоваться в качестве контекста вычислений. 
     
@@ -153,13 +153,13 @@ def test_linmod_sql():
     
 `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
 
-Этот контекст вычислений повторно используется в вызове метода [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary):
+Этот контекст вычислений повторно используется в вызове метода [rxsummary](/machine-learning-server/python-reference/revoscalepy/rx-summary):
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
 #### <a name="set-a-compute-context-explicitly-using-rx_set_compute_context"></a>Установка контекста вычислений явным образом с помощью rx_set_compute_context
 
-Функция [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) позволяет переключаться между контекстами вычислений, которые уже определены.
+Функция [rx_set_compute_context](/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) позволяет переключаться между контекстами вычислений, которые уже определены.
 
 После установки активного контекста вычислений он будет оставаться активным, пока вы не измените его.
 

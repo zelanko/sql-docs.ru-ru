@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c31650525934b14bf31135264d9b86c52d85119
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5be5c314cf50add1c215bbe52b5cf0d94a77a237
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179953"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195136"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>Загрузка данных в память с помощью rxImport (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Эта часть 10 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 10 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
 В этом учебнике вы узнаете, как получить данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем использовать функцию **rxImport**, чтобы поместить интересующие вас данные в локальный файл. Таким образом, их можно будет повторно анализировать в локальном контексте вычисления, не выполняя запрос к базе данных еще раз.
 
-Функцию [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) можно использовать для передачи данных из источника данных в кадр данных в памяти сеанса или в файл XDF на диске. Если не указать файл в качестве назначения, данные помещаются в память как кадр данных.
+Функцию [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) можно использовать для передачи данных из источника данных в кадр данных в памяти сеанса или в файл XDF на диске. Если не указать файл в качестве назначения, данные помещаются в память как кадр данных.
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Извлечение подмножества данных из SQL Server в локальную память
 
@@ -44,7 +44,7 @@ ms.locfileid: "88179953"
         connectionString = sqlConnString)
     ```
 
-3. Вызовите функцию [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) для считывания данных в кадр данных в локальном сеансе R.
+3. Вызовите функцию [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) для считывания данных в кадр данных в локальном сеансе R.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)

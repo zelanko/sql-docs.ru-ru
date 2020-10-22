@@ -9,15 +9,15 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 31d95c5881c68e6e897c18a935e4fa85799be60c
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 8113b373c328bac5a6ba95b7f4f40e5ab583503d
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892134"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098823"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Что такое службы машинного обучения SQL Server (Python и R)?
-[!INCLUDE [SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Службы машинного обучения — это компонент SQL Server, который дает возможность выполнять скрипты Python и R с реляционными данными. Вы можете использовать платформы и пакеты с открытым кодом и [пакеты Microsoft Python и R](#packages) для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети. В этой статье объясняются основы Служб машинного обучения SQL Server и описывается, как приступить к работе с ними.
 

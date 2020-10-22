@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9371d2f988642a5f5ab0e7b715130772a693bb52
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173721"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192648"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные по работе такси в Нью-Йорке для учебников по Python и R в SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 В этой статье объясняется, как настроить демонстрационную базу данных, состоящую из общедоступных данных [Комиссии по такси и лимузинам Нью-Йорка](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Эти данные используются в нескольких учебниках по R и Python для аналитики в базе данных в SQL Server. Чтобы пример кода выполнялся быстрее, была создана репрезентативная выборка в объеме 1 % данных. В вашей системе файл резервной копии базы данных немного превышает 90 МБ и представляет 1,7 млн строк в основной таблице данных.
 
-Для выполнения этого упражнения потребуется [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) или другое средство, которое может восстанавливать файл резервной копии базы данных и выполнять запросы T-SQL.
+Для выполнения этого упражнения потребуется [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) или другое средство, которое может восстанавливать файл резервной копии базы данных и выполнять запросы T-SQL.
 
 Этот набор данных используется в следующих учебниках и кратких руководствах:
 

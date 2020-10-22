@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8da3642d0a650ea10c54b7ed8e46a54fba2971
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 547337ea7573429bcccc1eb9b9c36914f286a2a5
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898742"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257311"
 ---
 # <a name="connect-big-data-clusters-2019-active-directory-mode"></a>Подключение [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. Режим Active Directory
 
@@ -57,7 +57,7 @@ sqlcmd -S <DNS name for master instance>,31433 -E
 
 ### <a name="connect-to-controller-with-ad-authentication-from-linuxmac"></a>Подключение к контроллеру с помощью проверки подлинности AD из Linux или Mac
 
-Существует два варианта подключения к конечной точке контроллера, используя `azdata` и проверку подлинности AD. Можно использовать параметр *--endpoint/-e*.
+Существует два варианта подключения к конечной точке контроллера, используя [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] и проверку подлинности AD. Можно использовать параметр *--endpoint/-e*.
 
 ```bash
 kinit <username>@<domain name>

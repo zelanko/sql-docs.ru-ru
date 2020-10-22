@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b18fbdd0a4c59b8458b2bc1f757ef189db5de3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7bf4385405c227fb337dda910c3f1ef158eff223
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178781"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195146"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>Определение и использование контекстов вычислений (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Эта часть 4 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 4 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-В предыдущем учебнике вы использовали функции **RevoScaleR** для проверки объектов данных. В этом учебнике представлена функция [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver), которая позволяет определить контекст вычислений для удаленного экземпляра SQL Server. С помощью удаленного контекста вычислений можно переместить выполнение R из локального сеанса в удаленный сеанс на сервере. 
+В предыдущем учебнике вы использовали функции **RevoScaleR** для проверки объектов данных. В этом учебнике представлена функция [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver), которая позволяет определить контекст вычислений для удаленного экземпляра SQL Server. С помощью удаленного контекста вычислений можно переместить выполнение R из локального сеанса в удаленный сеанс на сервере. 
 
 > [!div class="checklist"]
 > * Элементы удаленного контекста вычислений SQL Server
@@ -63,7 +63,7 @@ ms.locfileid: "88178781"
   
     Аргумент *wait* функции **RxInSqlServer** может иметь перечисленные ниже значения.
   
-    -   **TRUE**. Задание будет блокироваться и не вернет результат, пока его выполнение не завершится успешно или с ошибкой.  Дополнительные сведения см. в разделе [Распределенные и параллельные вычисления в Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing).
+    -   **TRUE**. Задание будет блокироваться и не вернет результат, пока его выполнение не завершится успешно или с ошибкой.  Дополнительные сведения см. в разделе [Распределенные и параллельные вычисления в Machine Learning Server](/machine-learning-server/r/how-to-revoscaler-distributed-computing).
   
     -   **FALSE**. Задания не будут блокироваться и вернут результат немедленно, что позволит продолжать выполнять другой код на языке R. Однако даже в режиме без блокировки подключение клиента к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должно сохраняться, пока задание выполняется.
 
@@ -90,9 +90,9 @@ ms.locfileid: "88178781"
     
     Синтаксис **RxInSqlServer** почти идентичен синтаксису функции **RxSqlServerData**, которая ранее использовалась для определения источника данных. Однако есть несколько важных различий.
       
-    - Объект источника данных, определенный с помощью функции [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)указывает, где хранятся данные.
+    - Объект источника данных, определенный с помощью функции [RxSqlServerData](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)указывает, где хранятся данные.
     
-    - Напротив, контекст вычислений (определенный с помощью функции [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)) указывает, где должно производиться агрегирование и другие вычисления.
+    - Напротив, контекст вычислений (определенный с помощью функции [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver)) указывает, где должно производиться агрегирование и другие вычисления.
     
     Определение контекста вычислений не влияет на другие обычные вычисления R, которые могут выполняться на рабочей станции, и не изменяет источник данных. Например, можно определить в качестве источника данных локальный текстовый файл, но изменить контекст вычислений на SQL Server и выполнять все операции чтения и обобщения данных на компьютере SQL Server.
 
@@ -135,7 +135,7 @@ ms.locfileid: "88178781"
   
    В этом примере свойству *traceLevel* присваивается значение 7, что означает "показывать все данные трассировки".
 
-2. Используйте функцию [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) и указывайте контекст с включенной трассировкой по имени.
+2. Используйте функцию [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) и указывайте контекст с включенной трассировкой по имени.
 
     ```R
     rxSetComputeContext(sqlComputeTrace)

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 870ff07f771f06acfb24e9883477b177af36d425
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725875"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257214"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes
 
@@ -23,7 +23,7 @@ ms.locfileid: "91725875"
 Кластер больших данных SQL Server развертывается в виде контейнеров Docker в кластере Kubernetes. Здесь описаны этапы настройки.
 
 - Настройте кластер Kubernetes на одной виртуальной машине, в кластере виртуальных машин, в службе Azure Kubernetes (AKS), в Red Hat OpenShift или в Azure Red Hat OpenShift (ARO).
-- Установите средство настройки кластера `azdata` на клиентском компьютере.
+- Установите средство настройки кластера [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] на клиентском компьютере.
 - Разверните кластер больших данных SQL Server в кластере Kubernetes.
 
 ## <a name="supported-platforms"></a>Поддерживаемые платформы
@@ -77,7 +77,7 @@ kubectl config view
 
 Перед развертыванием кластера больших данных SQL Server 2019 [установите средства для работы с большими данными](deploy-big-data-tools.md).
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - Azure Data Studio
 - [Расширение Data Virtualization](../azure-data-studio/extensions/data-virtualization-extension.md) для Azure Data Studio
@@ -91,10 +91,10 @@ kubectl config view
 
 ## <a name="default-configurations"></a><a id="configfile"></a> Конфигурации по умолчанию
 
-Параметры развертывания кластера больших данных определяются в файлах конфигурации JSON. Можно начать пользовательскую настройку развертывания кластеров с встроенных профилей развертывания, которые доступны в `azdata`. 
+Параметры развертывания кластера больших данных определяются в файлах конфигурации JSON. Можно начать пользовательскую настройку развертывания кластеров с встроенных профилей развертывания, которые доступны в [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
 
 > [!NOTE]
-> Образы контейнеров, необходимые для развертывания кластера больших данных, размещаются в реестре контейнеров Microsoft (`mcr.microsoft.com`) в репозитории `mssql/bdc`. По умолчанию эти параметры уже включены в файл конфигурации `control.json` в каждом из профилей развертывания, включенных в `azdata`. Кроме того, тег образа контейнера для каждого выпуска также предварительно заполняется в том же файле конфигурации. Если необходимо извлечь образы контейнеров в собственный частный реестр контейнеров и изменить параметры реестра контейнеров или репозитория, следуйте инструкциям в статье [Автономная установка](deploy-offline.md).
+> Образы контейнеров, необходимые для развертывания кластера больших данных, размещаются в реестре контейнеров Microsoft (`mcr.microsoft.com`) в репозитории `mssql/bdc`. По умолчанию эти параметры уже включены в файл конфигурации `control.json` в каждом из профилей развертывания, включенных в [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Кроме того, тег образа контейнера для каждого выпуска также предварительно заполняется в том же файле конфигурации. Если необходимо извлечь образы контейнеров в собственный частный реестр контейнеров и изменить параметры реестра контейнеров или репозитория, следуйте инструкциям в статье [Автономная установка](deploy-offline.md).
 
 Выполните следующую команду, чтобы найти доступные шаблоны:
 
@@ -117,7 +117,7 @@ azdata bdc config list -o table
 
 Кластер больших данных можно развернуть, выполнив команду `azdata bdc create`. Вам будет предложено выбрать одну из конфигураций по умолчанию, а затем выполнить развертывание, следуя указаниям.
 
-При первом запуске `azdata` нужно включить `--accept-eula=yes`, чтобы принять условия лицензионного соглашения (EULA).
+При первом запуске [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] нужно включить `--accept-eula=yes`, чтобы принять условия лицензионного соглашения (EULA).
 
 ```bash
 azdata bdc create --accept-eula=yes
@@ -176,7 +176,7 @@ azdata bdc create --accept-eula=yes
 |---|---|---|
 | `AZDATA_USERNAME` | Обязательное значение |Имя пользователя администратора кластера больших данных SQL Server. Данные для входа sysadmin с тем же именем создаются в основном экземпляре SQL Server. В целях безопасности учетная запись `sa` отключена. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
 | `AZDATA_PASSWORD` | Обязательно |Пароль для учетной записи пользователя, созданной выше. В кластерах, развернутых до версии SQL Server 2019 CU5, один и тот же пароль используется для пользователя `root`, для защиты шлюза Knox и HDFS. |
-| `ACCEPT_EULA`| Требуется для первого использования `azdata`.| Выберите "Да". При задании в качестве переменной среды применяет лицензионное соглашение как к SQL Server, так и к `azdata`. Если параметр не задан в качестве переменной среды, можно включить `--accept-eula=yes` при первом использовании команды `azdata`.|
+| `ACCEPT_EULA`| Требуется для первого использования [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].| Выберите "Да". При задании в качестве переменной среды применяет лицензионное соглашение как к SQL Server, так и к [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Если параметр не задан в качестве переменной среды, можно включить `--accept-eula=yes` при первом использовании команды [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].|
 | `DOCKER_USERNAME` | Необязательно | Имя пользователя для доступа к образам контейнера в случае, если они хранятся в частном репозитории. Дополнительные сведения о том, как использовать частный репозиторий Docker для развертывания кластеров больших данных, см. в разделе [Автономные развертывания](deploy-offline.md).|
 | `DOCKER_PASSWORD` | Необязательно |Пароль для доступа к указанному выше частному репозиторию. |
 
@@ -424,7 +424,7 @@ Sql: ready                                                                      
 > [!IMPORTANT]
 > При использовании параметра `--all` выходные данные этих команд содержат URL-адреса панелей мониторинга Kibana и Grafana для более подробного анализа.
 
-В дополнение к использованию `azdata` можно также использовать Azure Data Studio для поиска конечных точек и сведений о состоянии. Дополнительные сведения о просмотре состояния кластера с помощью `azdata` и Azure Data Studio см. в статье [Просмотр состояния кластера больших данных](view-cluster-status.md).
+В дополнение к использованию [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] можно также использовать Azure Data Studio для поиска конечных точек и сведений о состоянии. Дополнительные сведения о просмотре состояния кластера с помощью [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] и Azure Data Studio см. в статье [Просмотр состояния кластера больших данных](view-cluster-status.md).
 
 ## <a name="connect-to-the-cluster"></a><a id="connect"></a> Подключение к кластеру
 

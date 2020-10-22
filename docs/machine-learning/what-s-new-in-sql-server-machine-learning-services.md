@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f5cd84574a5e1a009c96863808e3cdaaf8818c5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 287b0fd536e5d3a6c76e8ef3760702da061a90ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179703"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195066"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Новые возможности служб машинного обучения SQL Server
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
@@ -25,17 +25,17 @@ ms.locfileid: "88179703"
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>Новые возможности в SQL Server 2019
 
-В этом выпуске добавляются наиболее востребованные возможности для операций машинного обучения Python и R в SQL Server. Дополнительные сведения обо всех возможностях этого выпуска см. в статьях [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) и [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
+В этом выпуске добавляются наиболее востребованные возможности для операций машинного обучения Python и R в SQL Server. Дополнительные сведения обо всех возможностях этого выпуска см. в статьях [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) и [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
 
 > [!NOTE]
-> Документацию с описанием новых возможностей Java в SQL Server 2019 см. в статье [Новые возможности расширений языка SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new).
+> Документацию с описанием новых возможностей Java в SQL Server 2019 см. в статье [Новые возможности расширений языка SQL Server](../language-extensions/language-extensions-whats-new.md).
 
 Ниже описаны новые возможности Служб машинного обучения SQL Server, доступные в **Windows** и **Linux**.
 
 - В Службы машинного обучения для Python и R была добавлена поддержка платформы Linux. Начните работу с [установки Служб машинного обучения SQL Server в Linux](../linux/sql-server-linux-setup-machine-learning.md).
 - [Подключение к SQL Server из скрипта Python или R с замыканием на себя](connect/loopback-connection.md). 
 - [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) для Python и R.
-- [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) вводит два новых параметра, которые позволяют легко создавать несколько моделей на основе секционированных данных. Дополнительные сведения см. в учебнике [Создание моделей на основе секций в R](tutorials/r-tutorial-create-models-per-partition.md).
+- [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) вводит два новых параметра, которые позволяют легко создавать несколько моделей на основе секционированных данных. Дополнительные сведения см. в учебнике [Создание моделей на основе секций в R](tutorials/r-tutorial-create-models-per-partition.md).
 - Поддержка отказоустойчивого кластера доступна для службы панели запуска, если служба панели запуска SQL Server запущена на всех узлах. Дополнительные сведения см. в статье [Установка отказоустойчивого кластера SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md).
 - Изменения в механизме изоляции для Служб машинного обучения. Дополнительные сведения см. в статье [SQL Server 2019 в Windows: изменения в изоляции в Службах машинного обучения](install/sql-server-machine-learning-services-2019.md).
 
@@ -55,7 +55,7 @@ ms.locfileid: "88179703"
 Новые возможности для R включают [**управление пакетами**](package-management/install-r-packages-with-tsql.md) со следующими особенностями: 
 
 + Роли базы данных помогают администраторам баз данных управлять пакетами и назначать разрешения для установки пакетов.
-+ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) помогает администраторам баз данных управлять пакетами на знакомом языке T-SQL.
++ [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) помогает администраторам баз данных управлять пакетами на знакомом языке T-SQL.
 + Функции [RevoScaleR](package-management/install-r-packages-with-revoscaler.md) позволяют устанавливать, удалять и просматривать пакеты, принадлежащие пользователям. Дополнительные сведения см. в статье [Использование функций RevoScaleR для поиска или установки пакетов R в SQL Server](package-management/install-r-packages-with-revoscaler.md).
 
 ### <a name="r-libraries"></a>Библиотеки R
@@ -70,7 +70,7 @@ Python — это язык, обеспечивающий превосходну
 
 Поскольку Python интегрирован с ядром СУБД, аналитику можно приблизить к самим данным, избежав затрат и рисков, связанных с их перемещением. Вы можете развертывать решения для машинного обучения на основе Python с помощью таких средств, как Visual Studio. Рабочие приложения могут получать прогнозы, модели или визуальные элементы из среды выполнения Python 3.5 с помощью методов доступа к данным SQL Server.
 
-Интеграция T-SQL и Python поддерживается с помощью системной хранимой процедуры [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). С помощью этой хранимой процедуры можно вызвать любой код Python. Код выполняется в безопасной двойной архитектуре, которая позволяет развертывать модели и сценарии Python корпоративного класса, вызываемые из приложения с помощью простой хранимой процедуры. Повышение производительности осуществляется с помощью потоковой передачи данных из SQL в процессы Python и параллелизации кольца MPI.
+Интеграция T-SQL и Python поддерживается с помощью системной хранимой процедуры [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). С помощью этой хранимой процедуры можно вызвать любой код Python. Код выполняется в безопасной двойной архитектуре, которая позволяет развертывать модели и сценарии Python корпоративного класса, вызываемые из приложения с помощью простой хранимой процедуры. Повышение производительности осуществляется с помощью потоковой передачи данных из SQL в процессы Python и параллелизации кольца MPI.
 
 Вы можете использовать функцию T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), чтобы выполнить [собственную оценку](predictions/native-scoring-predict-transact-sql.md) в предварительно обученной модели, которая ранее сохранялась в требуемом двоичном формате.
 
@@ -95,14 +95,14 @@ Python — это язык, обеспечивающий превосходну
 
 В этом выпуске появились возможности машинного обучения в SQL Server с помощью **SQL Server 2016 R Services** — модуля аналитики в базе данных для обработки скрипта R в данных, хранящихся в экземпляре ядра СУБД.
 
-Кроме того, был выпущен **SQL Server 2016 R Server (изолированный)** как способ установки R Server на Windows Server. Изначально установка SQL Server предоставляла только один способ установки R Server для Windows. В более поздних выпусках разработчики и специалисты по обработке и анализу данных, которым требовался R Server в Windows, могли использовать другой изолированный установщик для достижения той же цели. Изолированный сервер в SQL Server функционально эквивалентен изолированному серверному продукту, [Microsoft R Server для Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
+Кроме того, был выпущен **SQL Server 2016 R Server (изолированный)** как способ установки R Server на Windows Server. Изначально установка SQL Server предоставляла только один способ установки R Server для Windows. В более поздних выпусках разработчики и специалисты по обработке и анализу данных, которым требовался R Server в Windows, могли использовать другой изолированный установщик для достижения той же цели. Изолированный сервер в SQL Server функционально эквивалентен изолированному серверному продукту, [Microsoft R Server для Windows](/machine-learning-server/install/r-server-install-windows).
 
 Объявления о возможностях см. в статье [Новые возможности SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
 | Release |Обновление компонента |
 |---------|----------------|
 | Добавление единиц емкости | [**Оценка в реальном времени**](predictions/real-time-scoring.md) использует собственные библиотеки C++ для чтения модели, хранящейся в оптимизированном двоичном формате, а затем создает прогнозы без вызова среды выполнения R. Это значительно ускоряет операции оценки. С помощью оценки в реальном времени можно запустить хранимую процедуру или выполнить оценку в реальном времени в коде R. Оценка в реальном времени также доступна для SQL Server 2016, если экземпляр обновлен до последней версии [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
-| Начальный выпуск | [**Интеграция R для аналитики в базе данных**](r/sql-server-r-services.md). <br/><br/> Пакеты R для вызова функций R в T-SQL и наоборот. Функции RevoScaleR предоставляют аналитику R в масштабе путем разделения данных на части компонентов, координации и управления распределенной обработкой, а затем агрегирования результатов. В SQL Server 2016 R Services (в базе данных) подсистема RevoScaleR интегрирована с экземпляром ядра СУБД, объединяя данные и аналитику в одном контексте обработки. <br/><br/>Интеграция T-SQL и R с помощью [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). С помощью этой хранимой процедуры можно вызвать любой код R. Эта безопасная инфраструктура позволяет развертывать модели и сценарии R корпоративного класса, вызываемые из приложения с помощью простой хранимой процедуры. Повышение производительности осуществляется с помощью потоковой передачи данных из SQL в процессы R и параллелизации кольца MPI. <br/><br/>Вы можете использовать функцию T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), чтобы выполнить [собственную оценку](predictions/native-scoring-predict-transact-sql.md) в предварительно обученной модели, которая ранее сохранялась в требуемом двоичном формате.|
+| Начальный выпуск | [**Интеграция R для аналитики в базе данных**](r/sql-server-r-services.md). <br/><br/> Пакеты R для вызова функций R в T-SQL и наоборот. Функции RevoScaleR предоставляют аналитику R в масштабе путем разделения данных на части компонентов, координации и управления распределенной обработкой, а затем агрегирования результатов. В SQL Server 2016 R Services (в базе данных) подсистема RevoScaleR интегрирована с экземпляром ядра СУБД, объединяя данные и аналитику в одном контексте обработки. <br/><br/>Интеграция T-SQL и R с помощью [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). С помощью этой хранимой процедуры можно вызвать любой код R. Эта безопасная инфраструктура позволяет развертывать модели и сценарии R корпоративного класса, вызываемые из приложения с помощью простой хранимой процедуры. Повышение производительности осуществляется с помощью потоковой передачи данных из SQL в процессы R и параллелизации кольца MPI. <br/><br/>Вы можете использовать функцию T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), чтобы выполнить [собственную оценку](predictions/native-scoring-predict-transact-sql.md) в предварительно обученной модели, которая ранее сохранялась в требуемом двоичном формате.|
 
 ::: moniker-end
 
