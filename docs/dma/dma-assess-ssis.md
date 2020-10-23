@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726317"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439408"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Выполнение оценки миграции службы интеграции SQL Server с Помощник по миграции данных
 
@@ -55,12 +55,12 @@ DMA необходимо запустить с **правами админист
 1. Используемых Введите путь к папке, содержащей пакеты служб SSIS.
 1. Используемых Введите пароль шифрования пакета, если это применимо.
 1. Щелкните **Подключиться** к ИСХОДНОМу экземпляру SQL Server.
-  ![Добавить источник](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+  ![Снимок экрана, показывающий панель "подключение к серверу" с параметром введите путь к папке, содержащей пакеты служб SSIS, и введите пароль шифрования пакета, если применимый параметр — out.](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## <a name="add-sources-to-assess"></a>Добавление источников для оценки
 
 1. Выберите типы хранилища пакетов служб SSIS для оценки, а затем нажмите кнопку **Добавить**.
-![Добавить источник](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+![Снимок экрана, показывающий панель добавления источников.](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. Выберите **Добавить источники** , чтобы открыть всплывающее меню подключения, если требуется оценка нескольких папок.
 1. Нажмите кнопку **Start Assessment** (Запустить оценку).
   ![Начать оценку](media/dma-assess-ssis/dma-assess-ssis-assess.png)
