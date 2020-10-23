@@ -10,19 +10,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12f964b71bd7dee79eeb3287efc7b67273abb65e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a0cacd4beee72cef845fa161d1a1bcd0263a7e6b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180379"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193692"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>Учебник по R. Изучение и визуализация данных
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Во второй части этой серии руководств вы изучите образец данных и создадите несколько графиков. Далее вы узнаете, как сериализовать графические объекты на Python, а затем десериализовать эти объекты и создать графики.
 
-Во второй части из этой серии руководств вы изучите образец данных, а затем создаете несколько графиков с помощью [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) из [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) и универсальной функции [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) в базовом R.
+Во второй части из этой серии руководств вы изучите образец данных, а затем создаете несколько графиков с помощью [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) из [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) и универсальной функции [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) в базовом R.
 
 Цель этой статьи — показать, как вызывать функции R из [!INCLUDE[tsql](../../includes/tsql-md.md)] в хранимые процедуры и сохранять результаты в форматах файлов приложения.
 
@@ -83,7 +83,7 @@ ms.locfileid: "88180379"
 > Начиная с SQL Server 2019, механизм изоляции требует предоставления соответствующих разрешений каталогу, в котором хранится файл графика. Дополнительные сведения о настройке этих разрешений см. в разделе [Разрешения для файлов программы | SQL Server 2019 в Windows: изменения в изоляции в Службах машинного обучения](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-Чтобы создать диаграмму, используйте [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), одну из улучшенных функций R, доступных в [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). На этом шаге выполняется построение гистограммы на основе данных, полученных из запроса [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эту функцию можно включить в хранимую процедуру **RxPlotHistogram**.
+Чтобы создать диаграмму, используйте [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram), одну из улучшенных функций R, доступных в [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler). На этом шаге выполняется построение гистограммы на основе данных, полученных из запроса [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эту функцию можно включить в хранимую процедуру **RxPlotHistogram**.
 
 1. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в обозревателе объектов щелкните правой кнопкой мыши базу данных **NYCTaxi_Sample** и выберите пункт **Создать запрос**.
 
@@ -114,7 +114,7 @@ ms.locfileid: "88180379"
 
 В этом скрипте необходимо обратить внимание на следующие ключевые моменты.
   
-+ Переменная `@query` определяет текст запроса (`'SELECT tipped FROM nyctaxi_sample'`), который передается в скрипт R в качестве аргумента входной переменной `@input_data_1`. Для скриптов R, которые выполняются в виде внешних процессов, требуется сопоставление "один-к-одному" между входными данными скрипта и входными данными системной хранимой процедуры [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), запускающей сеанс R на SQL Server.
++ Переменная `@query` определяет текст запроса (`'SELECT tipped FROM nyctaxi_sample'`), который передается в скрипт R в качестве аргумента входной переменной `@input_data_1`. Для скриптов R, которые выполняются в виде внешних процессов, требуется сопоставление "один-к-одному" между входными данными скрипта и входными данными системной хранимой процедуры [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), запускающей сеанс R на SQL Server.
   
 + В скрипте R переменная (`image_file`) определяется для хранения изображения.
 
