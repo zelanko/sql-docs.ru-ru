@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: fa517d2ee19d4adc5a6d9acff56ed6f240acc1ee
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818193"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005781"
 ---
 # <a name="what-is-polybase"></a>Что такое PolyBase?
 
@@ -60,11 +60,11 @@ PolyBase предоставляет одинаковые функции для �
 
 - SQL Server 2016 и более поздние версии (только Windows);
 - Analytics Platform System (прежнее название — Parallel Data Warehouse);
-- Хранилище данных SQL Azure
+- Azure Synapse Analytics
 
 ### <a name="azure-integration"></a>Интеграция с Azure
 
-Запросы T-SQL на основе PolyBase также можно использовать для импорта данных из хранилища BLOB-объектов Azure и экспорта данных в него. Кроме того, PolyBase позволяет Хранилищу данных SQL Azure импортировать данные из хранилища BLOB-объектов Azure и Azure Data Lake Store, а также экспортировать в них данные.
+Запросы T-SQL на основе PolyBase также можно использовать для импорта данных из хранилища BLOB-объектов Azure и экспорта данных в него. Кроме того, PolyBase позволяет Azure Synapse Analytics импортировать данные из Хранилища BLOB-объектов Azure и Azure Data Lake Store, а также экспортировать в них данные.
 
 ## <a name="why-use-polybase"></a>Зачем нужна технология PolyBase
 

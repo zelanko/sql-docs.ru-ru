@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e513f6783e827617a8c0cc4a1fa0ea4644dcb6e7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088874"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115847"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088874"
 
 В этой статье приводятся инструкции по запуску пакетов служб SQL Server Integration Services (SSIS) в Linux. Службы SSIS позволяют решать сложные проблемы интеграции данных путем извлечения данных из нескольких источников и форматов, преобразования и очистки данных, а также загрузки данных в несколько назначений. 
 
-Пакеты SSIS, запущенные в Linux, могут подключаться к Microsoft SQL Server, работающему в локальной среде Windows или в облаке, в Linux или в Docker. Они также могут подключаться к базе данных SQL Azure, хранилищу данных SQL Azure, источникам данных ODBC, неструктурированным файлам и другим источникам данных, включая источники ADO.NET, XML-файлы и службы OData.
+Пакеты SSIS, запущенные в Linux, могут подключаться к Microsoft SQL Server, работающему в локальной среде Windows или в облаке, в Linux или в Docker. Они также могут подключаться к Базе данных SQL Azure, Azure Synapse Analytics, источникам данных ODBC, неструктурированным файлам и другим источникам данных, включая источники ADO.NET, XML-файлы и службы OData.
 
 Дополнительные сведения о возможностях служб SSIS см. в статье [Службы SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
@@ -94,7 +94,7 @@ ms.locfileid: "88088874"
 
 ## <a name="more-info-about-ssis"></a>Дополнительные сведения о службах SSIS
 
-Службы Microsoft SQL Server Integration Services (SSIS) представляют собой платформу для создания высокопроизводительных решений интеграции данных, включая пакеты ETL для хранения данных. Дополнительные сведения о службах SSIS см. в разделе [Службы SQL Server Integration Services](/sql/integration-services/sql-server-integration-services).
+Службы Microsoft SQL Server Integration Services (SSIS) представляют собой платформу для создания высокопроизводительных решений интеграции данных, включая пакеты ETL для хранения данных. Дополнительные сведения о службах SSIS см. в разделе [Службы SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
 Службы SSIS включают в себя следующие компоненты.
 - Графические инструменты и мастеры для создания и отладки пакетов в Windows

@@ -23,18 +23,18 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+author: XiaoyuMSFT
+ms.author: XiaoyuL
+ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227311"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098853"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 Выполняет операции вставки, обновления или удаления для целевой таблицы на основе результатов соединения с исходной таблицей. Например, можно синхронизировать две таблицы путем вставки, обновления или удаления строк в одной таблице на основании отличий, найденных в другой таблице.  
   
@@ -52,6 +52,8 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
+
+-- SQL Server and Azure SQL Database
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
@@ -96,9 +98,25 @@ MERGE
 <clause_search_condition> ::=  
     <search_condition> 
 ```  
-  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+```syntaxsql
+-- MERGE (Preview) for Azure Synapse Analytics 
+[ WITH <common_table_expression> [,...n] ]  
+MERGE
+    [ INTO ] <target_table> [ [ AS ] table_alias ]  
+    USING <table_source> [ [ AS ] table_alias ]
+    ON <merge_search_condition>  
+    [ WHEN MATCHED [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]  
+    [ WHEN NOT MATCHED [ BY TARGET ] [ AND <clause_search_condition> ]  
+        THEN <merge_not_matched> ]  
+    [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
+;  -- The semi-colon is required, or the query will return syntax  error. 
+```
+ 
 ## <a name="arguments"></a>Аргументы
 
 WITH \<common_table_expression>  
@@ -212,6 +230,16 @@ DEFAULT VALUES
 Определяет шаблон сопоставления графов. Дополнительные сведения об аргументах этого предложения см. в статье [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
   
 ## <a name="remarks"></a>Remarks
+>[!NOTE]
+> В Azure Synapse Analytics команда MERGE (предварительная версия) отличается от команд SQL Server и базы данных SQL Azure следующим образом.  
+> - Обновление при использовании команды MERGE реализуется как пара операций удаления и вставки. Количество затронутых строк при таком обновлении включает удаленные и вставленные строки. 
+> - В следующей таблице описываются поддерживаемые таблицы с разными типами распределения:
+
+>|MERGE CLAUSE в Azure Synapse Analytics|Поддерживаемая таблица распределения TARGET| Поддерживаемая таблица распределения SOURCE|Комментировать|  
+>|-----------------|---------------|-----------------|-----------|  
+>|**WHEN MATCHED**| HASH, ROUND_ROBIN, REPLICATE |Все типы распределения||  
+>|**NOT MATCHED BY TARGET**|HASH |Все типы распределения|Используйте UPDATE/DELETE FROM…JOIN для синхронизации двух таблиц. |
+>|**NOT MATCHED BY SOURCE**|Все типы распределения|Все типы распределения|Используйте UPDATE/DELETE FROM…JOIN для синхронизации двух таблиц.||  
 
 Должно быть указано по крайней мере одно из трех предложений MATCHED, но они могут быть указаны в любом порядке. В одном предложении MATCHED переменная не может быть обновлена больше одного раза.  
   
@@ -224,7 +252,8 @@ DEFAULT VALUES
 Ключевое слово MERGE полностью резервируется, если установлен уровень совместимости базы данных 100 или выше. Инструкция MERGE доступна при уровнях совместимости базы данных 90 и 100, но это ключевое слово не полностью зарезервировано при уровне совместимости 90.  
   
 Не используйте инструкцию **MERGE** при репликации, обновляемой посредством очередей. Инструкция **MERGE** и обновляемый посредством очередей триггер несовместимы. Замените инструкцию **MERGE** на инструкцию вставки или обновления.  
-  
+
+
 ## <a name="trigger-implementation"></a>Реализация триггера
 
 Для каждой операции вставки, обновления или удаления, указанной в инструкции MERGE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускает все соответствующие триггеры AFTER, определенные для целевой таблицы, но не гарантирует определенного порядка их запуска. Триггеры, которые определены для одного и того же действия, реализуются в порядке, указанном пользователем. Дополнительные сведения о настройке порядка выполнения триггеров см. в разделе [Указание первого и последнего триггеров](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
@@ -483,9 +512,6 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>Д. Выполнение инструкций INSERT или UPDATE в целевой таблице ребер в графовой базе данных с помощью MERGE
 
 В этом примере мы создадим таблицы узлов `Person` и `City`, а также таблицу ребер `livesIn`. Если ребро между таблицами `Person` и `City` не существует, мы добавляем новую строку в таблицу ребер `livesIn` с помощью инструкции MERGE. Если ребро уже существует, мы только обновим атрибут StreetAddress в таблице ребер `livesIn`.
-
-> [!NOTE]
-> Следующий пример действует для SQL Server начиная с версии 2019.
 
 ```sql
 -- CREATE node and edge tables

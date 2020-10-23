@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6cd4c4988b07e19c04d72efe2fc19200313f355
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: edb5d6b73305b9acc840c2f34461c3056a3b9cbd
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866640"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006475"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
 
@@ -52,7 +52,7 @@ ms.locfileid: "91866640"
 >**См. также:**
 >
 > - [Прозрачное шифрование данных в Базе данных SQL Azure](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
-> - [Начало работы с прозрачным шифрованием данных (TDE) в хранилище данных SQL](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
+> - [Начало работы с прозрачным шифрованием данных (TDE) в Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 > - [Перемещение базы данных, защищаемой прозрачным шифрованием, в другой экземпляр SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
 > - [Включение прозрачного шифрования данных в SQL Server с помощью расширенного управления ключами](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [Использование соединителя SQL Server с компонентами шифрования SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
@@ -325,7 +325,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 ## <a name="related-content"></a>См. также
 
 [Прозрачное шифрование данных в Базе данных SQL Azure](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
-[Начало работы с прозрачным шифрованием данных (TDE) в хранилище данных SQL](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
+[Начало работы с прозрачным шифрованием данных (TDE) в Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
 [Шифрование SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [Ключи шифрования базы данных и SQL Server (компонент Database Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 

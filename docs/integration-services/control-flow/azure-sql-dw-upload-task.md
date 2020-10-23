@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725989"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006211"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Задача отправки информации в хранилище данных SQL Azure
 
@@ -27,8 +27,8 @@ ms.locfileid: "91725989"
 
 
 
-**Задача отправки информации в хранилище данных SQL Azure** позволяет пакету служб SSIS копировать табличные данные в хранилище данных SQL Azure из файловой системы или хранилища BLOB-объектов Azure.
-Для повышения производительности в задаче используется подход PolyBase, описанный в статье [Azure SQL Data Warehouse Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)(Стратегии и шаблоны загрузки хранилища данных SQL Azure).
+**Задача отправки в хранилище данных SQL Azure** позволяет пакету служб SSIS копировать табличные данные в Azure Synapse Analytics из файловой системы или Хранилища BLOB-объектов Azure.
+Для повышения производительности в задаче используется подход PolyBase, описанный в статье [Стратегии и шаблоны загрузки хранилища данных SQL Azure](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies).
 В настоящее время в качестве формата исходного файла данных поддерживается текст с разделителями в кодировке UTF-8.
 В процессе копирования из файловой системы данные сначала будут переданы на промежуточное хранение в хранилище BLOB-объектов Azure, а затем в хранилище данных SQL Azure. Поэтому требуется учетная запись хранилища BLOB-объектов Azure.
 

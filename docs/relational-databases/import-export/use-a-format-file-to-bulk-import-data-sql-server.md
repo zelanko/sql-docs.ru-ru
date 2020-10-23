@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: dcad505d75528f17c65263f3b3a68defdcb6fb30
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868053"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005575"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Использование файла форматирования для массового импорта данных (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "91868053"
   * SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или кодовой странице, определенной параметрами сортировки);
   * SQLNCHAR или SQLNVARCHAR (данные отправляются в Юникоде);
   * SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).
-* База данных SQL Azure и хранилище данных SQL Azure поддерживают только [bcp](../../tools/bcp-utility.md).  Дополнительные сведения см. в следующих источниках:
-  * [Загрузка данных в хранилище данных SQL Azure](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
-  * [Загрузка данных из SQL Server в хранилище данных SQL Azure (неструктурированные файлы)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+* База данных SQL Azure и Azure Synapse Analytics поддерживают только [bcp](../../tools/bcp-utility.md).  Дополнительные сведения см. в следующих источниках:
+  * [Загрузка данных в Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Загрузка данных из SQL Server в Azure Synapse Analytics (неструктурированные файлы)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [Перенос данных](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>Пример условий теста

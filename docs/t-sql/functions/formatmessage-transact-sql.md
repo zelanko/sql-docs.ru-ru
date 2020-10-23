@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47eb4bb9e66f7f4fa9a84b694ebd8915f0c60d31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 510c39bb15235b37a23894a4ff5e3bef9c2f51f5
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459729"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081793"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88459729"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )  
+FORMATMESSAGE ( { msg_number  | ' msg_string ' | @msg_variable} , [ param_value [ ,...n ] ] )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -52,6 +52,11 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Строка, заключенная в одинарные кавычки и содержащая заполнители значений параметров. Это сообщение об ошибке не должно содержать более 2 047 символов. Если сообщение содержит 2 048 и более символов, то отображаются только первые 2 044, а за ними появляется знак многоточия, показывающий, что сообщение было усечено. Обратите внимание, что параметры подстановки содержат больше символов, чем видно на выходе из-за внутренней структуры хранения.  Сведения о структуре сообщения и использовании параметров в строке см. в описании аргумента *msg_str* в статье [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md).  
+
+ *@msg_variable*  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+  
+ Переменная типа nvarchar или varchar, которая содержит строку, удовлетворяющую критериям для *msg_string* выше.  
   
  *param_value*  
  Значение параметра для включения в текст сообщения. Может быть указано несколько значений, при этом они должны быть перечислены в том же порядке, в котором заполнители присутствуют в сообщении. Допускается не более 20 значений.  

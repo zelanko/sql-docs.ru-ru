@@ -14,15 +14,15 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1a16547649ce07eadf15942da8cb548e8e10bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea951183f9689597436b693e1238dab1a30c1c1c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455396"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006307"
 ---
 # <a name="linestring"></a>LineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **LineString** является одномерным объектом, представляющим последовательность точек и соединяющих их линейных сегментов.  
   
 ## <a name="linestring-instances"></a>Экземпляры LineString  
@@ -58,10 +58,10 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### <a name="valid-instances"></a>Допустимые экземпляры  
-Чтобы экземпляр **LineString** был действителен, он должен соответствовать следующим критериям.  
+Чтобы экземпляр LineString был действительным, он должен соответствовать следующим критериям.  
   
 1.  Экземпляр **LineString** должен быть принят.  
-2.  Если экземпляр **LineString** не является пустым, он должен содержать по меньшей мере две различные точки.  
+2.  Если экземпляр LineString не является пустым, он должен содержать по меньшей мере две разные точки.  
 3.  Экземпляр **LineString** не может перекрывать сам себя на интервале из двух или более последовательных точек.  
   
 Следующие экземпляры **LineString** являются действительными.  

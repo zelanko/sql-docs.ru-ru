@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866672"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005676"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Обзор начальных областей в выполняющейся в памяти OLTP
 
@@ -72,8 +72,8 @@ SQL Server позволяет использовать функции выпол
 Вот два основных сценария:  
   
 - В*пакетной операционной аналитике* используются процессы статистической обработки, которые выполняются либо по окончании рабочего дня, либо на дополнительном оборудовании, где имеются копии данных транзакций.  
-  - К пакетной операционной аналитике относится также[хранилище данных SQL Azure](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) .  
-- В*операционной аналитике в режиме реального времени* используются процессы статистической обработки, которые выполняются в рабочее время и на том оборудовании, где обрабатываются транзакции.  
+  - К пакетной операционной аналитике относится также[Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is).  
+- В *операционной аналитике в реальном времени* используются процессы статистической обработки, которые выполняются в рабочее время на том оборудовании, где выполняются рабочие нагрузки транзакции.  
   
   
 В этой статье основное внимание уделяется OLTP, а не аналитике. Сведения о том, как индексы columnstore обеспечивают аналитику в SQL, см. в разделе:  

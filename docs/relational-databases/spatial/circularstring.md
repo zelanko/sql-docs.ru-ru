@@ -12,21 +12,21 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d7aada1fca725dde6247e621a1ed6ca190c99f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 759d76a49f095c9ba28a1a1a5b6503442ccaef88
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455468"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006377"
 ---
 # <a name="circularstring"></a>CircularString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Объект **CircularString** — это коллекция, состоящая из нуля или большего количества непрерывных круговых сегментов дуги. Сегмент дуги — это сегмент кривой, определяемый тремя точками на двумерной плоскости; первая точка не может совпадать с третьей. Если все три точки сегмента дуги лежат на одной прямой, сегмент дуги считается линейным сегментом.  
   
 ## <a name="circularstring-instances"></a>Экземпляры CircularString  
  На следующем рисунке показаны допустимые экземпляры **CircularString** .  
   
- ![5ff17e34-b578-4873-9d33-79500940d0bc](../../relational-databases/spatial/media/5ff17e34-b578-4873-9d33-79500940d0bc.gif)
+ ![Примеры CircularString](../../relational-databases/spatial/media/5ff17e34-b578-4873-9d33-79500940d0bc.gif)
   
 ### <a name="accepted-instances"></a>Правильные экземпляры  
  Экземпляр **CircularString** принимается, если он пуст или содержит нечетное количество точек, n, где n > 1. Следующие экземпляры **CircularString** правильные.  

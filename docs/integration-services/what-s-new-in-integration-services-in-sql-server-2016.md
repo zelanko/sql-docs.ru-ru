@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480836"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193742"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 
@@ -112,7 +112,7 @@ ms.locfileid: "89480836"
         
         -   [Выпуск пакета поддержки для Azure Data Lake Store](#datalakestore)
         
-        -   [Выпуск пакета поддержки для хранилища данных SQL Azure](#sqldwupload)
+        -   [Реализована поддержка Azure Synapse Analytics](#sqldwupload)
   
 -   **Удобство использования и производительность**  
   
@@ -309,7 +309,7 @@ ms.locfileid: "89480836"
 
 Последняя версия пакета дополнительных компонентов Azure включает диспетчер подключений, а также источник и место назначения для перемещения данных из Azure Data Lake Store и обратно. Дополнительные сведения см. в статье [Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-#### <a name="support-for-azure-sql-data-warehouse-released"></a><a name="sqldwupload"></a> Выпуск пакета поддержки для хранилища данных SQL Azure
+#### <a name="support-for-azure-synapse-analytics-released"></a><a name="sqldwupload"></a> Реализована поддержка Azure Synapse Analytics
 
 Последняя версия пакета дополнительных компонентов Azure включает задачу отправки информации в хранилище данных SQL Azure, позволяющую заполнить это хранилище данными. Дополнительные сведения см. в статье [Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -376,4 +376,4 @@ ms.locfileid: "89480836"
 
 ## <a name="see-also"></a>См. также:  
  [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Возможности, поддерживаемые различными выпусками SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Возможности, поддерживаемые различными выпусками SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)

@@ -9,18 +9,18 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823486"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194087"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools"></a>Средства DevOps для служб SQL Server Integration Services (SSIS)
+# <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>Средства DevOps для служб SQL Server Integration Services (SSIS) (расширение Azure DevOps)
 
 Расширение [Средства DevOps для служб SSIS](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) доступно в магазине **Azure DevOps**.
 
-Если у вас нет организации **Azure DevOps**, сначала зарегистрируйтесь для получения [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops), а затем добавьте расширение **Средства DevOps для служб SSIS** согласно [инструкциям](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension).
+Если у вас нет организации **Azure DevOps**, сначала зарегистрируйтесь для получения [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops), а затем добавьте расширение **Средства DevOps для служб SSIS** согласно [инструкциям](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension).
 
 **Средства DevOps для служб SSIS** включают задачу **Сборка SSIS**, задачу выпуска **Развертывание SSIS** и **задачу конфигурации каталога SSIS**.
 
@@ -58,13 +58,13 @@ ms.locfileid: "87823486"
 
 #### <a name="output-path"></a>Путь вывода
 
-Путь к отдельной папке, в которой следует сохранить результаты сборки и которую можно опубликовать как артефакт сборки с помощью [задачи публикации артефактов сборки](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops).
+Путь к отдельной папке, в которой следует сохранить результаты сборки и которую можно опубликовать как артефакт сборки с помощью [задачи публикации артефактов сборки](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops).
 
 ### <a name="limitations-and-known-issues"></a>Ограничения и известные проблемы
 
 - Задача сборки SSIS использует Visual Studio и конструктор служб SSIS, которые должны быть установлены на агентах сборки. Поэтому, чтобы запустить задачу сборки SSIS в конвейере, необходимо выбрать **vs2017-win2016** для агентов, размещенных в Майкрософт, или установить Visual Studio и конструктор служб SSIS (расширение Visual Studio 2017 с SSDT 2017 или Visual Studio 2019 со службами SSIS) на локальных агентах.
 
-- Для сборки проектов служб SSIS с использованием любых готовых компонентов (включая пакет дополнительных компонентов Azure для служб SSIS и другие компоненты сторонних производителей) эти компоненты должны быть установлены на компьютере, где работает агент конвейера.  Для размещенного агента Майкрософт пользователь может добавить [задачу скрипта PowerShell](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) или [задачу скрипта командной строки](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops), чтобы скачать и установить компоненты перед выполнением задачи сборки SSIS. Ниже приведен пример скрипта PowerShell для установки пакета дополнительных компонентов Azure. 
+- Для сборки проектов служб SSIS с использованием любых готовых компонентов (включая пакет дополнительных компонентов Azure для служб SSIS и другие компоненты сторонних производителей) эти компоненты должны быть установлены на компьютере, где работает агент конвейера.  Для размещенного агента Майкрософт пользователь может добавить [задачу скрипта PowerShell](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) или [задачу скрипта командной строки](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops), чтобы скачать и установить компоненты перед выполнением задачи сборки SSIS. Ниже приведен пример скрипта PowerShell для установки пакета дополнительных компонентов Azure. 
 
 ```powershell
 wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
@@ -172,7 +172,7 @@ cat log.txt
 
 Путь файла конфигурации JSON каталога SSIS. Это свойство отображается только при выборе варианта "Путь к файлу" в качестве источника файла конфигурации.
 
-Чтобы использовать [переменные конвейера](/azure/devops/pipelines/process/variables) в файле конфигурации JSON, необходимо добавить [задачу преобразования файлов](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) до этой задачи, чтобы заменить значения конфигурации переменными конвейера. Дополнительные сведения см. в разделе [Подстановка переменных JSON](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
+Чтобы использовать [переменные конвейера](/azure/devops/pipelines/process/variables) в файле конфигурации JSON, необходимо добавить [задачу преобразования файлов](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) до этой задачи, чтобы заменить значения конфигурации переменными конвейера. Дополнительные сведения см. в разделе [Подстановка переменных JSON](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops#json-variable-substitution).
 
 #### <a name="inline-configuration-json"></a>Встроенная конфигурация JSON
 

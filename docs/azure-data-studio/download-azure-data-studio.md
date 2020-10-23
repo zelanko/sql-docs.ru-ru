@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: f61e8a9cfab2de97ba21860833843609b50d934d
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 10/20/2020
+ms.openlocfilehash: b3363e9b5b8872d3a78d7c5c0fa7f70a80c8d6f9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059250"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257373"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачивание и установка Azure Data Studio
 
@@ -35,39 +35,41 @@ Azure Data Studio выполняется в Windows, macOS и Linux.
 
 ## <a name="get-azure-data-studio-for-windows"></a>Получение Azure Data Studio для Windows
 
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+
 Этот выпуск Azure Data Studio включает стандартные средства установщика Windows и ZIP-файл.
 
-Рекомендуется использовать *пользовательский установщик*, так как он не требует прав администратора, что упрощает установку и обновление. Он не требует прав администратора, так как расположение находится в пользовательской локальной папке AppData (LOCALAPPDATA). Пользовательский установщик также обеспечивает более гладкую фоновую работу по обновлению. Дополнительные сведения см. в статье [Пользовательская настройка в Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+Рекомендуем *пользовательский установщик*, так как он не требует прав администратора, что упрощает установку и обновление. Пользовательскому установщику не нужны права администратора, так как он размещается в пользовательской локальной папке AppData (LOCALAPPDATA). Пользовательский установщик также обеспечивает более гладкую фоновую работу по обновлению. Дополнительные сведения см. в статье [Пользовательская настройка в Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
 
 **Пользовательский установщик** (рекомендуется)
 
-1. Скачайте и запустите [*пользовательский* установщик [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Windows](https://go.microsoft.com/fwlink/?linkid=2145989).
-2. Запустите приложение [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
+1. Скачайте и запустите [*пользовательский* установщик Azure Data Studio для Windows](https://go.microsoft.com/fwlink/?linkid=2145989).
+2. Запустите приложение Azure Data Studio.
 
 **Системный установщик**
 
-1. Скачайте и запустите [*системный* установщик [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Windows](https://go.microsoft.com/fwlink/?linkid=2145990).
-2. Запустите приложение [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
+1. Скачайте и запустите [*системный* установщик Azure Data Studio для Windows](https://go.microsoft.com/fwlink/?linkid=2145990).
+2. Запустите приложение Azure Data Studio.
 
 **ZIP-файл**
 
-1. Скачайте [ZIP-файл [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Windows](https://go.microsoft.com/fwlink/?linkid=2145864).
+1. Скачайте [ZIP-файл Azure Data Studio для Windows](https://go.microsoft.com/fwlink/?linkid=2145864).
 2. Перейдите к скачанному файлу и извлеките его содержимое.
 3. Выполнить `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## <a name="get-azure-data-studio-for-macos"></a>Получение Azure Data Studio для macOS
 
-1. Скачайте [[!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=2145865).
+1. Скачайте[Azure Data Studio для macOS](https://go.microsoft.com/fwlink/?linkid=2145865).
 2. Чтобы извлечь содержимое ZIP-файла, дважды щелкните его.
 3. Чтобы сделать Azure Data Studio доступным на *панели запуска*, перетащите *Azure Data Studio.app* в папку *Приложения*.
 
 ## <a name="get-azure-data-studio-for-linux"></a>Получение Azure Data Studio для Linux
 
-1. Скачайте [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux с помощью одного из установщиков или архива tar.gz:
+1. Скачайте Azure Data Studio для Linux с помощью одного из установщиков или архива tar.gz:
     - [.deb](https://go.microsoft.com/fwlink/?linkid=2146016)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2146015)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2145866)
-1. Чтобы извлечь файл и запустить [!INCLUDE[name-sos](../includes/name-sos-short.md)], откройте новое окно терминала и введите следующие команды:
+1. Чтобы извлечь файл и запустить Azure Data Studio, откройте новое окно Терминала и введите следующие команды:
 
    **Установка в Debian:**
 
@@ -125,13 +127,7 @@ Azure Data Studio выполняется в Windows, macOS и Linux.
 
 ## <a name="download-insiders-build-of-azure-data-studio"></a>Скачивание сборки Azure Data Studio для инсайдеров
 
-Как правило, пользователям следует скачивать стабильный выпуск Azure Data Studio выше. Однако если вы хотите испытать наши бета-версии функций и поделиться своими отзывами, вы можете скачать [сборку для участников программы предварительной оценки Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
-
-## <a name="uninstall-azure-data-studio"></a>Удаление Azure Data Studio
-
-Если вы установили [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] с помощью установщика Windows, удаление выполняется так же, как и для любого приложения Windows.
-
-Если вы установили [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] с помощью ZIP-файла или другого архива, просто удалите файлы.
+Как правило, пользователям следует скачивать стабильный выпуск Azure Data Studio выше. Однако если вы хотите испытать бета-версии функций и отправить свой отзыв, вы можете скачать [сборку Azure Data Studio для предварительной оценки](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
@@ -172,31 +168,25 @@ Azure Data Studio выполняется в Windows, macOS и Linux, а такж
 
 ## <a name="check-for-updates"></a>Проверка обновлений
 
-Чтобы проверить наличие последних обновлений, щелкните значок шестеренки в левом нижнем углу окна и нажмите кнопку **Проверить наличие обновлений**.
+Чтобы проверить наличие обновлений, щелкните значок шестеренки в левом нижнем углу окна и выберите **Проверка обновлений**.
 
-Чтобы применить обновления в автономной среде, вы можете [установить последнюю версию](#download-and-install-azure-data-studio) непосредственно поверх ранее установленной версии.  Удалять предыдущие версии Azure Data Studio не нужно, так как установщик обновляет установленное приложение, если оно есть.
+Чтобы применить обновления в автономной среде, вы можете [установить последнюю версию](#download-and-install-azure-data-studio) непосредственно поверх установленной ранее. Удалять предыдущие версии Azure Data Studio не требуется. Установщик обновит текущее установленное приложение при его наличии.
 
 ## <a name="supported-sql-offerings"></a>Поддерживаемые предложения SQL
 
 - Эта версия Azure Data Studio работает со всеми [поддерживаемыми версиями SQL Server 2014 — [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) и обеспечивает поддержку новейших облачных функций базы данных SQL Azure и Azure Synapse Analytics. Azure Data Studio также предоставляет предварительную поддержку для управляемых экземпляров SQL Azure.
 
-## <a name="upgrade-from-sql-operations-studio"></a>Обновление с SQL Operations Studio
-
-Если вы по-прежнему используете SQL Operations Studio, необходимо выполнить обновление до Azure Data Studio. SQL Operations Studio — это предварительное имя предварительной версии Azure Data Studio. В сентябре 2018 г. мы [изменили имя на Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) и выпустили общедоступную версию. Поскольку SQL Operations Studio больше не обновляется и не поддерживается, мы просим всех пользователей SQL Operations Studio скачать последнюю версию Azure Data Studio, чтобы получить новейшие функции, обновления для системы безопасности и исправления.
-
-При обновлении старой предварительной версии до последней Azure Data Studio будут потеряны текущие параметры и расширения. Чтобы переместить параметры, следуйте инструкциям в разделе *Перемещение параметров пользователя*.
-
 ## <a name="move-user-settings"></a>Перемещение параметров пользователя
 
-Если вы хотите переместить пользовательские параметры, сочетания клавиш или фрагменты кода, выполните следующие действия. Это важно при обновлении с SQL Operations Studio до Azure Data Studio.
+Если вы хотите переместить пользовательские параметры, сочетания клавиш или фрагменты кода, выполните следующие действия. Это важно при переходе на Azure Data Studio с версии SQL Operations Studio.
 
 *Если у вас уже есть Azure Data Studio или вы никогда не устанавливали или не настраивали SQL Operations Studio, этот раздел можно пропустить*.
 
-1. Откройте параметры, щелкнув шестеренку в левом нижнем углу и выбрав **Параметры**.
+1. Откройте параметры, щелкнув значок шестеренки в левом нижнем углу и выбрав **Параметры**.
 
    ![Измените параметры в Azure Data Studio](./media/download/open-settings.png)
 
-2. Щелкните правой кнопкой мыши вкладку **Параметры пользователя** вверху и выберите пункт **Показать в проводнике**.
+2. Щелкните правой кнопкой мыши вкладку **Параметры пользователя** вверху и выберите пункт **Отобразить в проводнике**.
 
    ![Запустите обозреватель для перехода к локальной файловой системе](./media/download/reveal-in-explorer.png)
 
@@ -204,9 +194,46 @@ Azure Data Studio выполняется в Windows, macOS и Linux, а такж
 
    ![Скопируйте нужные файлы в свое расположение](./media/download/copy-settings.png)
 
-4. В новой версии Azure Data Studio выполните шаги 1–2, а затем на шаге 3 вставьте сохраненное содержимое в папку. Вы также можете вручную скопировать параметры, сочетания клавиш или фрагменты в соответствующие места.
+4. В новой версии Azure Data Studio выполните шаги 1–2, а затем на шаге 3 вставьте сохраненное содержимое в папку. Вы также можете вручную скопировать параметры, сочетания клавиш или фрагменты в соответствующие расположения.
 
 5. При замене существующей установки удалите старый каталог установки перед установкой, чтобы избежать ошибок при подключении к учетной записи Azure для обозревателя ресурсов.
+
+## <a name="unattended-install-for-windows"></a>Автоматическая установка для Windows
+
+Вы также можете установить Azure Data Studio с помощью скрипта командной строки.
+
+Чтобы установить Azure Data Studio на платформе Windows в фоновом режиме без каких-либо запросов графического пользовательского интерфейса, выполните действия ниже.
+
+1. Откройте командную строку с повышенными привилегиями.
+
+2. Введите в командной строке следующую команду.
+
+    ```console
+    <path where the azuredatastudio-windows-user-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+    ```
+
+    Пример
+
+    ```console
+    %systemdrive%\azuredatastudio-windows-user-setup-1.23.0.exe /VERYSILENT /MERGETASKS=!runcode
+    ```
+
+    > [!Note]
+    > Пример также работает с файлом системного установщика.
+    > 
+    > ```console
+    > <path where the azuredatastudio-windows-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+    > ```
+
+    Вы также можете передать */SILENT* вместо */VERYSILENT*, чтобы увидеть пользовательский интерфейс установки.
+
+3. Если все сработает правильно, вы увидите установленную среду Azure Data Studio.
+
+## <a name="uninstall-azure-data-studio"></a>Удаление Azure Data Studio
+
+Если вы установили Azure Data Studio с помощью установщика Windows, удаление выполняется так же, как для любого приложения Windows.
+
+Если вы установили Azure Data Studio с помощью ZIP-файла или другого архива, то файлы нужно удалить.
 
 ## <a name="next-steps"></a>Next Steps
 

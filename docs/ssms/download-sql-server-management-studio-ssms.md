@@ -21,16 +21,15 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dzsquared
 ms.author: drskwier
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 09/28/2020
-ms.openlocfilehash: 3919719b19cadb63e54a54dc5786f955a11ab5f5
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.date: 10/20/2020
+ms.openlocfilehash: 02526928d102dd9dba8a0f19b7a05f36a7de3bcc
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115767"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257986"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -40,23 +39,21 @@ SQL Server Management Studio (SSMS) — это интегрированная с
 
 Используйте SSMS для создания запросов к базам данных и хранилищам данных, их проектирования и управления ими, где бы они ни находились: на локальном компьютере или в облаке.
 
-SSMS распространяется бесплатно!
-
 ## <a name="download-ssms"></a>Скачать SSMS
 
 :::image type="icon" source="media/download-icon.png" border="false"::: **[Скачать SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.6 является новейшей общедоступной (GA) версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.6 она будет обновлена.
+SSMS 18.7 является новейшей общедоступной (GA) версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.7 она будет обновлена.
 
-### <a name="version-information"></a>Сведения о версии
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-- Номер выпуска: 18.6
-- Номер сборки: 15.0.18338.0
-- Дата выпуска: 22 июля 2020 г.
+- Номер выпуска: 18.7
+- Номер сборки: 15.0.18357.0
+- Дата выпуска: 20 октября 2020 г.
 
 Если у вас есть замечания и предложения или вы хотите сообщить о проблемах, обратитесь к команде разработчиков SSMS через [пользовательские отзывы на SQL Server](https://aka.ms/sqlfeedback).
 
-При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, поэтому обе версии остаются доступными для использования. Но если у вас установлена *предварительная версия* SSMS 18.x, перед установкой SSMS 18.6 ее необходимо удалить. Чтобы узнать, установлена ли у вас предварительная версия, перейдите в окно **Справка > О программе**.
+При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, поэтому обе версии остаются доступными для использования. Но если у вас установлена *предварительная версия* SSMS 18.x, перед установкой SSMS 18.7 ее необходимо удалить. Чтобы узнать, установлена ли у вас предварительная версия, перейдите в окно **Справка > О программе**.
 
 Если на компьютере есть несколько параллельных установок SSMS, всегда проверяйте, правильную ли версию вы запускаете. Последняя версия называется **Microsoft SQL Server Management Studio 18**.
 
@@ -67,8 +64,8 @@ SSMS 18.6 является новейшей общедоступной (GA) в
 
 Этот выпуск SSMS можно установить на следующих языках.
 
-SQL Server Management Studio 18.6:  
-[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
+SQL Server Management Studio 18.7:  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40a)
 
 > [!NOTE]
 > Модуль SQL Server PowerShell устанавливается отдельно из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
@@ -77,7 +74,7 @@ SQL Server Management Studio 18.6:
 
 Дополнительные сведения о новых возможностях в этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
 
-В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-186).
+В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-187).
 
 ## <a name="previous-versions"></a>Предыдущие версии
 
@@ -115,6 +112,7 @@ SQL Server Management Studio 18.6:
 
 Сюда входят следующие компоненты:
 
+- Azure Data Studio
 - Microsoft .NET Framework 4.7.2
 - Драйвер Microsoft OLE DB для SQL Server
 - Microsoft ODBC Driver for SQL Server версии 17
@@ -158,11 +156,11 @@ SQL Server Management Studio 18.6:
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- [Руководство. SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [Средства SQL](../tools/overview-sql-tools.md)
 - [Документация по SQL Server Management Studio](sql-server-management-studio-ssms.md)
-- [Последние обновления](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 - [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Последние обновления](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Руководство по архитектуре данных Azure](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

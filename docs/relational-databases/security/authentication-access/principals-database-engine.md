@@ -30,17 +30,17 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a6beec87891408ef34039675dd4a2b9ede5758
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 0ae2f5840120a24cbb0a1c0426c70e36084bd407
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869060"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004807"
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  *Субъекты* — это сущности, которые могут запрашивать ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния субъекта зависит от области его определения: Windows, сервер, база данных, — а также от того, неделимый это субъект или коллекция. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID). Эта статья относится ко всем версиям SQL Server, однако в базе данных SQL или хранилище данных SQL существуют некоторые ограничения для субъектов на уровне сервера. 
+  *Субъекты* — это сущности, которые могут запрашивать ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния субъекта зависит от области его определения: Windows, сервер, база данных, — а также от того, неделимый это субъект или коллекция. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID). Эта статья относится ко всем версиям SQL Server, но в Базе данных SQL или Azure Synapse Analytics существуют некоторые ограничения для субъектов серверного уровня. 
   
 ## <a name="sql-server-level-principals"></a>Субъекты уровня SQL Server:  
   

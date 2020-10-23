@@ -15,12 +15,12 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e3c6120613ee79acb8219f35678f17fd9239962a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005622"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006596"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Определение действующих разрешений для ядра СУБД
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "86005622"
 
 Для предопределенных ролей сервера и предопределенных ролей базы данных предварительно настроены разрешения, которые не могут быть изменены. Чтобы определить, кто является участником предопределенной роли сервера, выполните указанный ниже запрос.    
 > [!NOTE]
->  Не относится к базе данных SQL или хранилищу данных SQL, где разрешение на уровне сервера недоступно. Столбец `is_fixed_role` таблицы `sys.server_principals` был добавлен в SQL Server 2012. Он не требуется для более старых версий SQL Server.  
+>  Не применимо к Базе данных SQL или Azure Synapse Analytics, где разрешение уровня сервера недоступно. Столбец `is_fixed_role` таблицы `sys.server_principals` был добавлен в SQL Server 2012. Он не требуется для более старых версий SQL Server.  
 > ```sql
 > SELECT SP1.name AS ServerRoleName, 
 >  isnull (SP2.name, 'No members') AS LoginName   
@@ -107,7 +107,7 @@ SELECT DP1.name AS DatabaseRoleName,
 
 Следующий запрос возвращает список разрешений, которые были предоставлены или запрещены на уровне сервера. Этот запрос должен быть выполнен в базе данных master.   
 > [!NOTE]
->  Разрешения уровня сервера нельзя предоставлять и запрашивать в базе данных SQL или в хранилище данных SQL.   
+>  Разрешения уровня сервера нельзя предоставлять и запрашивать в Базе данных SQL или Azure Synapse Analytics.   
 > ```sql
 > SELECT pr.type_desc, pr.name, 
 >  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

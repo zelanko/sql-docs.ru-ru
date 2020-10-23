@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5f00ffc9ce946c3c6116ba85af0c4ff7c82405b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645803"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006123"
 ---
 # <a name="rename-tables-database-engine"></a>Переименование таблиц (компонент Database Engine)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88645803"
 
 Переименование таблицы в SQL Server или базе данных SQL Azure.
 
-Чтобы переименовать таблицу в хранилище данных SQL Azure или в Parallel Data Warehouse, используйте инструкцию [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md). 
+Чтобы переименовать таблицу в Azure Synapse Analytics или Parallel Data Warehouse, используйте инструкцию [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md). 
   
 > [!CAUTION]  
 >  Каждое переименование таблицы следует тщательно планировать. Если существующие запросы, представления, определяемые пользователем функции, хранимые процедуры или программы ссылаются на таблицу, изменение имени таблицы сделает эти объекты недействительными.  

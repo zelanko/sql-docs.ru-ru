@@ -1,4 +1,5 @@
 ---
+description: Метод GetReportServerUrls (WMI MSReportServer_Instance)
 title: Метод GetReportServerUrls (WMI MSReportServer_Instance) | Документы Майкрософт
 ms.date: 06/09/2016
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3b3e0f7e521cd2a105a3cf093c0a179bd7306d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257527"
 ---
 # <a name="msreportserver_instance-methods---getreportserverurls"></a>Методы MSReportServer_Instance — GetReportServerUrls
   Возвращает список URL-адресов, которые пользователи могут использовать для доступа к серверу отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].  
@@ -47,7 +48,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>Возвращаемые значения  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Методы, доступные в управляющих объектах WMI, вызываются с помощью функции InvokeMethod. Дополнительные сведения см. в разделе «Выполнение методов в управляющих объектах» документации по инструментарию WMI платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ## <a name="requirements"></a>Требования  

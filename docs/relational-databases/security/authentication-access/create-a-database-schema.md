@@ -19,12 +19,12 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faa0ea1e841edfde76cdfeb4f3285116a47a50fd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 72b1c23ddc584f909661b07058e519347be045fa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005701"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005401"
 ---
 # <a name="create-a-database-schema"></a>Создание схемы базы данных
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "86005701"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 > [!NOTE]
-> Диалоговое окно не будет отображаться, если вы создаете схему с помощью SSMS для **базы данных SQL Azure** или **хранилища данных SQL Azure**. Потребуется создать схему шаблона T-SQL.
+> Диалоговое окно не будет отображаться, если вы создаете схему с помощью SSMS для **Базы данных SQL Azure** или **Azure Synapse Analytics**. Потребуется создать схему шаблона T-SQL.
   
 ### <a name="additional-options"></a>Дополнительные параметры  
  Диалоговое окно **Схема — создать** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  

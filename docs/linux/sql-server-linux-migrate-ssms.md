@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f83f95fa17e99c20754bbde9d1d4a7fb388df74b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f0e1d76ae7977eac4d761c76a27e10619f300ca1
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887840"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115697"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Экспорт и импорт базы данных в Linux с помощью SSMS или SqlPackage.exe в Windows
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-В этой статье показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) и [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) для экспорта и импорта базы данных в SQL Server на базе Linux. SSMA и SqlPackage.exe — это приложения Windows, поэтому используйте эту методику при наличии компьютера Windows, который может подключаться к удаленному экземпляру SQL Server в Linux.
+В этой статье показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) и [SqlPackage.exe](../tools/sqlpackage.md) для экспорта и импорта базы данных в SQL Server на базе Linux. SSMA и SqlPackage.exe — это приложения Windows, поэтому используйте эту методику при наличии компьютера Windows, который может подключаться к удаленному экземпляру SQL Server в Linux.
 
 Всегда следует устанавливать и использовать самую последнюю версию SQL Server Management Studio (SSMS), как описано в статье [Использование SSMS в Windows для подключения к SQL Server на Linux](sql-server-linux-manage-ssms.md).
 
@@ -32,7 +32,7 @@ ms.locfileid: "85887840"
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. Подключитесь к базе данных-источнику в обозревателе объектов. База данных-источник может находиться в Microsoft SQL Server, запущенном локально или в облаке, в Linux, Windows или Docker, а также в базе данных SQL Azure или хранилище данных SQL Azure.
+2. Подключитесь к базе данных-источнику в обозревателе объектов. База данных-источник может находиться в экземпляре Microsoft SQL Server, запущенном локально или в облаке, в Linux, Windows или Docker, а также в Базе данных SQL Azure или Azure Synapse Analytics.
 
 3. Щелкните правой кнопкой мыши базу данных-источник в обозревателе объектов, наведите указатель на пункт **Задачи** и выберите пункт **Экспорт приложения уровня данных...**
 
@@ -50,7 +50,7 @@ BACPAC-файл успешно создается в выбранном расп
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. Подключитесь к целевому серверу в обозревателе объектов. Целевой сервер может находиться в Microsoft SQL Server, запущенном локально или в облаке, в Linux, Windows или Docker, а также в базе данных SQL Azure или хранилище данных SQL Azure.
+2. Подключитесь к целевому серверу в обозревателе объектов. Целевой сервер может быть экземпляром Microsoft SQL Server, запущенным локально или в облаке, в Linux, Windows или Docker, а также в Базе данных SQL Azure или Azure Synapse Analytics.
 
 3. Щелкните правой кнопкой мыши папку **Базы данных** в обозревателе объектов и выберите пункт **Импорт приложения уровня данных...**
 
@@ -64,7 +64,7 @@ BACPAC-файл импортируется для создания базы да
 
 ## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> Параметр командной строки SqlPackage
 
-Для экспорта и импорта BACPAC-файлов также можно использовать программу командной строки SQL Server Data Tools (SSDT) — [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx).
+Для экспорта и импорта BACPAC-файлов также можно использовать программу командной строки SQL Server Data Tools (SSDT) — [SqlPackage.exe](../tools/sqlpackage.md).
 
 В следующем примере команда экспортирует BACPAC-файл.
 
@@ -80,4 +80,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>См. также раздел
-Дополнительные сведения об использовании SSMS см. в разделе [Использование SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx). Дополнительные сведения о SqlPackage.exe см. в [справочной документации по SqlPackage](https://msdn.microsoft.com/library/hh550080.aspx).
+Дополнительные сведения об использовании SSMS см. в разделе [Использование SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md). Дополнительные сведения о SqlPackage.exe см. в [справочной документации по SqlPackage](../tools/sqlpackage.md).

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86ef2c561979d7f2578863f35366ee33cb21dcdc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915888"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197052"
 ---
 # <a name="install-integration-services-ssis"></a>Установка служб Integration Services (SSIS)
 
@@ -115,7 +115,7 @@ ms.locfileid: "86915888"
 
 - **SQL Server Data Tools (SSDT)** . Поддержка автономного установщика SSDT для Visual Studio 2019 прекращена. Для Visual Studio 2019 теперь можно получить расширение конструктора служб SSIS из [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
-- **Пакет дополнительных компонентов служб Integration Services для Azure**. Чтобы скачать и установить пакет дополнительных компонентов, перейдите на страницу [пакета дополнительных компонентов служб Microsoft SQL Server 2017 Integration Services для Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017). Установка пакета дополнительных компонентов позволяет пакетам подключаться к службам хранения и анализа данных в облаке Azure, включая следующие службы:
+- **Пакет дополнительных компонентов служб Integration Services для Azure**. Чтобы скачать и установить пакет дополнительных компонентов, перейдите на страницу [пакета дополнительных компонентов служб Microsoft SQL Server 2017 Integration Services для Azure](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017). Установка пакета дополнительных компонентов позволяет пакетам подключаться к службам хранения и анализа данных в облаке Azure, включая следующие службы:
 
   - хранилище BLOB-объектов Azure.
 
@@ -123,7 +123,7 @@ ms.locfileid: "86915888"
 
   - Azure Data Lake Store;
 
-  - хранилище данных SQL Azure.
+  - Azure Synapse Analytics.
 
   - Azure Data Lake Storage 2-го поколения.
 

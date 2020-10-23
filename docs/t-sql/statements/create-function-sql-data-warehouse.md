@@ -2,7 +2,7 @@
 description: CREATE FUNCTION (Azure Synapse Analytics)
 title: CREATE FUNCTION (Azure Synapse Analytics) | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,17 +14,17 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4dbe21949a1912eef8aad4de122a8b0a263eec7c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671167"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037057"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Создает определяемую пользователем функцию в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Определяемая пользователем функция представляет собой подпрограмму [!INCLUDE[tsql](../../includes/tsql-md.md)], которая принимает параметры, выполняет действие, например сложное вычисление, а затем возвращает результат этого действия в виде значения. Возвращаемое значение должно быть скалярным (единичным). При помощи этой инструкции можно создать подпрограмму, которую можно повторно использовать следующими способами.  
+  Создает определяемую пользователем функцию в [!INCLUDE[ssSDW](../../includes/ssazuresynapse_md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Определяемая пользователем функция представляет собой подпрограмму [!INCLUDE[tsql](../../includes/tsql-md.md)], которая принимает параметры, выполняет действие, например сложное вычисление, а затем возвращает результат этого действия в виде значения. В [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] возвращаемое значение должно быть скалярным (одиночным). В [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] оператор CREATE FUNCTION может возвращать таблицу, если используется синтаксис встроенных функций с табличным значением (предварительная версия), или одиночное значение, если используется синтаксис для скалярных функций. При помощи этой инструкции можно создать подпрограмму, которую можно повторно использовать следующими способами.  
   
 -   В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)], например SELECT.  
   
@@ -36,12 +36,14 @@ ms.locfileid: "91671167"
   
 -   Для замены хранимой процедуры.  
   
+-   Использование встроенной функции в качестве предиката фильтра для политики безопасности  
+  
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
---Transact-SQL Scalar Function Syntax  
+-- Transact-SQL Scalar Function Syntax  (in Azure Synapse Analytics and Parallel Data Warehouse)
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -62,10 +64,24 @@ RETURNS return_data_type
     [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
-  
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+```syntaxsql
+-- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
+CREATE FUNCTION [ schema_name. ] function_name
+( [ { @parameter_name [ AS ] parameter_data_type
+    [ = default ] }
+    [ ,...n ]
+  ]
+)
+RETURNS TABLE
+    [ WITH SCHEMABINDING ]
+    [ AS ]
+    RETURN [ ( ] select_stmt [ ) ]
+[ ; ]
+```
   
 ## <a name="arguments"></a>Аргументы  
  *schema_name*  
@@ -105,6 +121,14 @@ RETURNS return_data_type
   
  *scalar_expression*  
  Указывает скалярное значение, возвращаемое скалярной функцией.  
+
+ *select_stmt* **Область применения**: Azure Synapse Analytics  
+ Единственная инструкция SELECT, которая определяет возвращаемое значение встроенной функции с табличным значением (предварительная версия).
+
+ TABLE **Область применения**: Azure Synapse Analytics  
+ Указывает, что возвращаемым значением функции с табличным значением (TVF) является таблица. Функциям с табличным значением могут передаваться только константы и @*local_variables*.
+
+ Во встроенных функциях с табличным значением (предварительная версия) возвращаемое значение TABLE определяется единственной инструкцией SELECT. Встроенные функции не имеют соответствующих возвращаемых переменных.
   
  **\<function_option>::=** 
   
@@ -140,15 +164,17 @@ RETURNS return_data_type
 -   Укажите при создании функции предложение WITH SCHEMABINDING. Это обеспечит невозможность изменения объектов, на которые ссылается определение функции, если при этом не изменяется сама функция.  
   
 ## <a name="interoperability"></a>Совместимость  
- В функциях допустимы следующие инструкции.  
+ В скалярных функциях допустимы следующие инструкции с одиночным значением.  
   
 -   Инструкции присваивания.  
   
 -   Инструкции управления потоком, за исключением инструкций TRY...CATCH.  
   
 -   Инструкции DECLARE, объявляющие локальные переменные.  
+
+Во встроенной функции с табличным значением (предварительная версия) допускается только одна инструкция SELECT.
   
-## <a name="limitations-and-restrictions"></a>Ограничения  
+## <a name="limitations-and-restrictions"></a>ограничения  
  Определяемые пользователем функции не могут выполнять действия, изменяющие состояние базы данных.  
   
  Определяемые пользователем функции могут быть вложенными, то есть из одной функции может быть вызвана другая. Уровень вложенности увеличивается на единицу каждый раз, когда начинается выполнение вызванной функции и уменьшается на единицу, когда ее выполнение завершается. Вложенность определяемых пользователем функций не может превышать 32 уровней. Превышение максимального уровня вложенности приводит к ошибке выполнения для всей цепочки вызываемых функций.   
@@ -193,8 +219,47 @@ GO
   
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
+
+## <a name="examples-sssdwfull"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+
+### <a name="a-creating-an-inline-table-valued-function-preview"></a>A. Создание встроенной функции с табличным значением (предварительная версия)
+ В следующем примере создается встроенная функция с табличным значением, которая возвращает важные сведения о модулях, отфильтрованных по параметру `objectType`. По умолчанию эта функция возвращает все модули, если вызов осуществлялся с параметром DEFAULT. В этом примере используются некоторые представления системного каталога, упомянутые в [описании метаданных](#metadata).
+
+```sql
+CREATE FUNCTION dbo.ModulesByType(@objectType CHAR(2) = '%%')
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        sm.object_id AS 'Object Id',
+        o.create_date AS 'Date Created',
+        OBJECT_NAME(sm.object_id) AS 'Name',
+        o.type AS 'Type',
+        o.type_desc AS 'Type Description', 
+        sm.definition AS 'Module Description'
+    FROM sys.sql_modules AS sm  
+    JOIN sys.objects AS o ON sm.object_id = o.object_id
+    WHERE o.type like '%' + @objectType + '%'
+);
+GO
+```
+Эту функцию можно вызвать, чтобы получить все объекты представления (**V**), следующим образом:
+```sql
+select * from dbo.ModulesByType('V');
+```
+
+### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>Б. Объединение результатов встроенной функции с табличным значением (предварительная версия)
+ В этом простом примере используется ранее созданная встроенная функция и показано объединение ее результатов с другими таблицами с помощью инструкции CROSS APPLY. Здесь мы выберем все столбцы из sys.objects и результатов выполнения `ModulesByType`, отбирая строки по совпадению значений столбца *type*. Дополнительные сведения об использовании инструкции APPLY см. в статье [Предложение FROM и JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).
+
+```sql
+SELECT * 
+FROM sys.objects o
+CROSS APPLY dbo.ModulesByType(o.type);
+GO
+```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
  [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   

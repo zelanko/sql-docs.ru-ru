@@ -20,19 +20,20 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009391"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081953"
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 С каждым защищаемым объектом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связаны разрешения, которые могут быть предоставлены участнику. Управление разрешениями в [!INCLUDE[ssDE](../../includes/ssde-md.md)] осуществляется на уровне сервера (назначение разрешений именам входа и ролям сервера) и на уровне базы данных (назначение разрешений пользователям и ролям базы данных). Модель для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] использует ту же систему для разрешений базы данных, однако разрешения на уровне сервера недоступны. Здесь содержится полный список разрешений. Советы по проектированию системы разрешений см. в статье [Начало работы с разрешениями ядра СУБД](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-Общее количество разрешений для [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] составляет 237. Большинство разрешений применяются ко всем платформам, но некоторые из них — только к определенным. Например, разрешения на уровне сервера нельзя предоставить в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], а некоторые разрешения действуют только в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставлены 230 разрешений. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предоставлены 219 разрешений. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] предоставлены 214 разрешений. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] предоставлены 195 разрешений. В разделе [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) описаны нововведения последних версий.
+Общее количество разрешений для [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] составляет 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] предоставляет 254 разрешений. Большинство разрешений применяются ко всем платформам, но некоторые из них — только к определенным. Например, разрешения на уровне сервера нельзя предоставить в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], а некоторые разрешения действуют только в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] предоставляет 238 разрешений. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставлены 230 разрешений. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предоставлены 219 разрешений. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] предоставлены 214 разрешений. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] предоставлены 195 разрешений. В разделе [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) описаны нововведения последних версий.
 
 Если вы знаете, как применять разрешения, примените их на уровне сервера к именам для входа и пользователям разрешений на уровне базы данных, используя инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)и [DENY](../../t-sql/statements/deny-transact-sql.md) . Пример:   
 ```sql

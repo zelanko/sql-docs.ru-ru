@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 976bfdb47aae7037e3a7636299ff98e4a1424944
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869027"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004281"
 ---
 # <a name="server-level-roles"></a>Роли уровня сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91869027"
   
  В роли уровня сервера можно добавлять субъекты уровня сервера (имена входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], учетные записи Windows и группы Windows). Каждый член предопределенной роли сервера может добавлять другие имена входа к той же роли. Члены пользовательских ролей сервера не могут добавлять других участников на уровне сервера в роль.  
 > [!NOTE]
->  Разрешения уровня сервера недоступны в базе данных SQL или хранилище данных SQL. Дополнительные сведения о базе данных SQL см. в статье [Предоставление доступа к базе данных и управление им](/azure/sql-database/sql-database-manage-logins).
+>  Разрешения уровня сервера недоступны в Базе данных SQL или Azure Synapse Analytics. Дополнительные сведения о базе данных SQL см. в статье [Предоставление доступа к базе данных и управление им](/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Предопределенные роли уровня сервера  
  В следующей таблице представлены предопределенные роли уровня сервера и их возможности.  

@@ -1,6 +1,6 @@
 ---
-title: Загрузка данных в Хранилище данных SQL Azure с помощью SQL Server Integration Services (SSIS) | Документация Майкрософт
-description: Демонстрация создания пакета SQL Server Integration Services (SSIS) для перемещения данных из разнообразных источников в Хранилище данных SQL Azure.
+title: Загрузка данных в Azure Synapse Analytics с помощью SQL Server Integration Services (SSIS) | Документация Майкрософт
+description: Узнайте, как создать пакет SQL Server Integration Services (SSIS) для перемещения данных из разных источников в Azure Synapse Analytics
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,20 +10,20 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 317a17d667c9c09009c3fcbd9bab6565108110ad
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3cd591bd087170e6f5a6329c4411b2674d19b4f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943206"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192504"
 ---
-# <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Загрузка данных в Хранилище данных SQL Azure с помощью SQL Server Integration Services (SSIS)
+# <a name="load-data-into-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>Загрузка данных в Azure Synapse Analytics с помощью SQL Server Integration Services (SSIS)
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
-Вы можете создать пакет служб SQL Server Integration Services (SSIS) для загрузки данных в [Хранилище данных SQL Azure](/azure/sql-data-warehouse/index). При необходимости можно реструктуризировать, преобразовать и очистить данные по мере их прохождения через поток данных SSIS.
+Вы можете создать пакет служб SQL Server Integration Services (SSIS) для загрузки данных в [Azure Synapse Analytics](/azure/sql-data-warehouse/index). При необходимости можно реструктуризировать, преобразовать и очистить данные по мере их прохождения через поток данных SSIS.
 
 В этой статье показано следующее:
 
@@ -46,7 +46,7 @@ ms.locfileid: "86943206"
 
 1. Предпочтительный и самый эффективный метод — создать пакет, где загрузка выполняется с помощью [задачи отправки информации в Хранилище данных SQL Azure](control-flow/azure-sql-dw-upload-task.md). Эта задача включает сведения как об источнике, так и о получателе. Она предполагает, что исходные данные хранятся локально в текстовых файлах с разделителями.
 
-2. Как альтернативный вариант, вы можете создать пакет, где используется задача потока данных, содержащая источник и получатель. Этот подход поддерживает обширный ряд источников данных, включая SQL Server и Хранилище данных SQL Azure.
+2. Как альтернативный вариант, вы можете создать пакет, где используется задача потока данных, содержащая источник и получатель. Этот подход позволяет использовать самые разные источники данных, включая SQL Server и Azure Synapse Analytics.
 
 ## <a name="prerequisites"></a>предварительные требования
 Для прохождения этого руководства потребуется следующее.
@@ -54,7 +54,7 @@ ms.locfileid: "86943206"
 1. **SQL Server Integration Services (SSIS)** . Службы SSIS — это компонент SQL Server, которому для работы нужна лицензионная версия, версия для разработчиков или ознакомительная версия SQL Server. [Получить ознакомительную версию SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (необязательно). Для получения бесплатного выпуска Visual Studio Community см. раздел [Visual Studio Community][Visual Studio Community]. Если вы не хотите устанавливать Visual Studio, вы можете установить только SQL Server Data Tools (SSDT). Установка SSDT включает версию Visual Studio с ограниченной функциональностью.
 3. **SQL Server Data Tools для Visual Studio (SSDT)** . Чтобы получить SQL Server Data Tools для Visual Studio, см. раздел [Скачивание SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **База данных и разрешения Хранилища данных SQL Azure**. Этот учебник подключается к экземпляру хранилища данных SQL и загружает в него данные. У вас должны быть разрешения на подключение, создание таблицы и загрузку данных.
+4. **База данных и разрешения Azure Synapse Analytics**. Этот учебник подключается к экземпляру хранилища данных SQL и загружает в него данные. У вас должны быть разрешения на подключение, создание таблицы и загрузку данных.
 
 ## <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services
 1. Запустите Visual Studio.
@@ -80,7 +80,7 @@ Visual Studio открывает и создает проект служб Integ
 
 - [Пакет дополнительных компонентов Microsoft SQL Server Integration Services для Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. Задача отправки информации в хранилище данных SQL входит в пакет дополнительных компонентов.
 
-- Учетная запись [хранилища BLOB-объектов Azure](https://docs.microsoft.com/azure/storage/). Задача отправки информации в хранилище данных SQL загружает данные из хранилища BLOB-объектов Azure в Хранилище данных SQL Azure. Вы можете загружать файлы, которые уже есть в хранилище BLOB-объектов, или файлы с компьютера. При выборе файлов с компьютера задача отправки информации в хранилище данных SQL сначала отправит файлы в хранилище BLOB-объектов для промежуточной обработки, а затем отправит их в Хранилище данных SQL.
+- Учетная запись [хранилища BLOB-объектов Azure](/azure/storage/). Задача отправки в хранилище данных SQL загружает данные из Хранилища BLOB-объектов Azure в Azure Synapse Analytics. Вы можете загружать файлы, которые уже есть в хранилище BLOB-объектов, или файлы с компьютера. При выборе файлов с компьютера задача отправки информации в хранилище данных SQL сначала отправит файлы в хранилище BLOB-объектов для промежуточной обработки, а затем отправит их в Хранилище данных SQL.
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>Добавление и настройка задачи отправки информации в хранилище данных SQL
 
@@ -98,11 +98,11 @@ Visual Studio открывает и создает проект служб Integ
 
 1. Используйте задачу передачи BLOB-объектов Azure для размещения данных в хранилище BLOB-объектов Azure. Чтобы получить задачу отправки больших двоичных объектов Azure, скачайте [Пакет дополнительных компонентов Microsoft SQL Server Integration Services для Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. После этого используйте задачу "Выполнить SQL" служб SSIS, чтобы запустить скрипт PolyBase, который загружает данные в хранилище данных SQL. Пример, который загружает данные из хранилища BLOB-объектов Azure в Хранилище данных SQL (но без использования SSIS), см. в [Руководстве по загрузке данных в Хранилище данных SQL Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+2. После этого используйте задачу "Выполнить SQL" служб SSIS, чтобы запустить скрипт PolyBase, который загружает данные в хранилище данных SQL. Пример, который загружает данные из хранилища BLOB-объектов Azure в хранилище данных SQL (но без использования SSIS), см. в разделе [Учебник. Загрузка данных в Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Вариант 2. Использование источника и получателя
 
-Во втором подходе применяется обычный пакет с задачей потока данных, содержащей источник и получатель. Этот подход поддерживает обширный ряд источников данных, включая SQL Server и Хранилище данных SQL Azure.
+Во втором подходе применяется обычный пакет с задачей потока данных, содержащей источник и получатель. Этот подход позволяет использовать самые разные источники данных, включая SQL Server и Azure Synapse Analytics.
 
 В этом учебнике в качестве источника данных используется SQL Server. SQL Server запускается на локальном компьютере или в виртуальной машине Azure.
 
@@ -171,7 +171,7 @@ Visual Studio открывает и создает проект служб Integ
 1. Дважды щелкните адаптер загрузки данных, чтобы открыть **Редактор назначения ADO.NET**.
    
     ![Снимок экрана: редактор назначения ADO.NET. Вкладка "Диспетчер подключений" видима и содержит элементы управления для настройки свойств потока данных.][11]
-2. На вкладке **Диспетчер соединений** окна **Редактор назначения ADO.NET** нажмите кнопку **Создать** рядом со списком **Диспетчер соединений ADO.NET**, чтобы открыть диалоговое окно **Настройка диспетчера соединений ADO.NET** и создать параметры подключения для базы данных хранилища данных SQL Azure, куда этот учебник загружает данные.
+2. На вкладке **Диспетчер подключений** окна **Редактор назначения ADO.NET** нажмите кнопку **Создать** рядом со списком **Диспетчер подключений**, чтобы открыть диалоговое окно **Настройка диспетчера подключений ADO.NET** и создать параметры подключения для Azure Synapse Analytics, куда будут загружены данные.
 3. В диалоговом окне **Настройка диспетчера соединений ADO.NET** нажмите кнопку **Создать**, чтобы открыть диалоговое окно **Диспетчер соединений** и создать подключение к данным.
 4. В диалоговом окне **Диспетчер соединений** сделайте следующее:
    1. В поле **Поставщик** выберите поставщик данных SqlClient.
@@ -189,7 +189,7 @@ Visual Studio открывает и создает проект служб Integ
    
    1. Измените имя целевой таблицы на **SalesOrderDetail**.
    2. Удалите столбец **rowguid**. Тип данных **Uniqueidentifier** в хранилище данных SQL не поддерживается.
-   3. Измените тип данных столбца **LineTotal** на **money**. Тип данных **decimal** в хранилище данных SQL не поддерживается. Сведения о поддерживаемых типах данных см. в разделе [CREATE TABLE (Хранилище данных SQL Azure или Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)].
+   3. Измените тип данных столбца **LineTotal** на **money**. Тип данных **decimal** в хранилище данных SQL не поддерживается. Сведения о поддерживаемых типах данных см. в разделе [CREATE TABLE (Azure Synapse Analytics или Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
       
        ![Снимок экрана: диалоговое окно "Создание таблицы" с кодом для создания таблицы SalesOrderDetail с LineTotal в качестве денежного столбца и без столбца rowguid.][12b]
    4. Нажмите кнопку **ОК**, чтобы создать таблицу и вернуться в **Редактор назначения ADO.NET**.
@@ -211,7 +211,7 @@ Visual Studio открывает и создает проект служб Integ
 
 ![Снимок экрана: адаптер источника данных и адаптер загрузки данных. На каждом адаптере стоят зеленые галочки, а между ними находится текст "121317 rows" (121317 строк).][15]
 
-Поздравляем! Вы успешно использовали службы SQL Server Integration Services для загрузки данных в хранилище данных SQL Azure.
+Поздравляем! Вы успешно загрузили данные в Azure Synapse Analytics, используя службы SQL Server Integration Services.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -242,7 +242,7 @@ Visual Studio открывает и создает проект служб Integ
 <!-- MSDN references -->
 [PolyBase Guide]: ../relational-databases/polybase/polybase-guide.md
 [Download SQL Server Data Tools (SSDT)]: ../ssdt/download-sql-server-data-tools-ssdt.md
-[CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
+[CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
 [Data Flow]: ./data-flow/data-flow.md
 [Troubleshooting Tools for Package Development]: ./troubleshooting/troubleshooting-tools-for-package-development.md
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md

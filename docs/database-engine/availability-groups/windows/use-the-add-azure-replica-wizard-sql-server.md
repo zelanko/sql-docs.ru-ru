@@ -12,17 +12,19 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e712528cc3716f054b498e4f322c64ea4873918d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 590c559b283a91a7b6c4ecde7b455287d2f3b3bb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670670"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005800"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Настройка виртуальной машины Azure в качестве вторичной реплики в группе доступности
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Мастер добавления реплики Azure упрощает создание виртуальной машины Azure в гибридной среде и ее настройку в качестве вторичной реплики для новой или существующей группы доступности AlwaysOn.  
-  
+
+>  [!IMPORTANT]  
+>  В Azure предлагаются две модели развертывания для создания ресурсов и работы с ними: модель Resource Manager и классическая модель. В этой статье рассматривается использование классической модели развертывания. Для большинства новых развертываний Майкрософт рекомендует использовать модель диспетчера ресурсов. Действия, описанные в этой статье, неприменимы при развертывании виртуальной машины Azure с помощью модели Resource Manager.   
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Если вам еще не приходилось добавлять реплики доступности в группу доступности, см. подразделы "Экземпляры сервера" и "Группы доступности и реплики" в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -47,6 +49,12 @@ ms.locfileid: "91670670"
  Кроме того, требуется разрешение CONTROL ON ENDPOINT, если мастер добавления реплики в группу доступности должен иметь возможность управлять конечной точкой зеркального отображения базы данных.  
   
 ##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Работа с мастером добавления реплики Azure (SQL Server Management Studio)  
+
+>  [!IMPORTANT]  
+>  Мастер добавления реплик Azure поддерживает только виртуальные машины, созданные при помощи классической модели развертывания. Для новых развертываний виртуальных машин следует использовать более новую модель Resource Manager. Если вы используете виртуальные машины с Resource Manager, необходимо вручную добавить вторичную реплику Azure, выполнив определенные команды Transact-SQL (не показаны в этой статье). Данный мастер не будет работать в сценарии с Resource Manager. 
+>
+>  Мастер добавления реплик Azure недоступен в последних выпусках (версии 18.x и 17.x) SQL Server Management Studio.
+        
  Мастер добавления реплики Azure можно запустить на странице [Выбор реплик](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). На эту страницу можно перейти двумя способами.  
   
 -   [Использование мастера групп доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
