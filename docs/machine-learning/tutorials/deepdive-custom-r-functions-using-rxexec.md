@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6c8fab6b5ecc6a548c5213f4401494f6803acc42
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f03c64dc86e6d23113f3a35ae669f216b66489
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178791"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195156"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>Выполнение пользовательских функций R в SQL Server с помощью rxExec (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Эта часть 14 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 14 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
 В этом учебнике с помощью смоделированных данных демонстрируется выполнение пользовательской функции R на удаленном сервере.
 
-Пользовательские функции R можно выполнять в контексте SQL Server путем передачи через [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) при условии, что все библиотеки, необходимые для скрипта, также установлены на сервере и совместимы с базовым дистрибутивом R. 
+Пользовательские функции R можно выполнять в контексте SQL Server путем передачи через [rxExec](/machine-learning-server/r-reference/revoscaler/rxexec) при условии, что все библиотеки, необходимые для скрипта, также установлены на сервере и совместимы с базовым дистрибутивом R. 
 
 Функция **rxExec** в **RevoScaleR** обеспечивает механизм для выполнения любого требуемого скрипта R. Кроме того, функция **rxExec** позволяет явно распределять нагрузку по нескольким ядрам на одном сервере, повышая масштабируемость скриптов, которые в противном случае были бы ограничены лимитами ресурсов собственной подсистемы R.
 

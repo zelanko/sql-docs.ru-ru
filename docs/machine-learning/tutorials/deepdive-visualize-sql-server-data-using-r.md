@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 23f3eb157a76a9a197cf0f15a72ae0e51f7cf13b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180391"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196276"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Визуализация данных SQL Server с помощью языка R (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Эта часть 6 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 6 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
 В этом учебнике вы примените функции R для просмотра распределения значений по полу в столбце *creditLine*.
 
@@ -84,13 +84,13 @@ ms.locfileid: "88180391"
 
 ## <a name="visualize-data-using-rxhistogram"></a>Визуализация данных с помощью функций rxHistogram
 
-1. Используйте следующий код R, чтобы вызвать функцию [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) и передать формулу и источник данных. Сначала эту операцию можно выполнить локально, чтобы оценить результаты и продолжительность.
+1. Используйте следующий код R, чтобы вызвать функцию [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) и передать формулу и источник данных. Сначала эту операцию можно выполнить локально, чтобы оценить результаты и продолжительность.
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    Сама по себе функция **rxHistogram** вызывает функцию [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) , которая включена в пакет **RevoScaleR** . Функция **rxCube** выводит единый список (или кадр данных), который содержит по одному столбцу для каждой переменной, указанной в формуле, а также столбец counts.
+    Сама по себе функция **rxHistogram** вызывает функцию [rxCube](/machine-learning-server/r-reference/revoscaler/rxcube) , которая включена в пакет **RevoScaleR** . Функция **rxCube** выводит единый список (или кадр данных), который содержит по одному столбцу для каждой переменной, указанной в формуле, а также столбец counts.
     
 2. Теперь задайте в качестве контекста вычисления удаленный компьютер SQL Server и выполните **rxHistogram** еще раз.
   
@@ -108,7 +108,7 @@ ms.locfileid: "88180391"
 
 Точечные диаграммы часто используются при исследовании данных для представления взаимосвязи между двумя переменными. Для этой цели можно использовать встроенные пакеты R с входными данными, предоставляемыми функциями **RevoScaleR**.
 
-1. Вызовите функцию [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) для вычисления среднего значения *fraudRisk* для каждого сочетания значений *numTrans* и *numIntlTrans*:
+1. Вызовите функцию [rxCube](/machine-learning-server/r-reference/revoscaler/rxcrosstabs) для вычисления среднего значения *fraudRisk* для каждого сочетания значений *numTrans* и *numIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -118,7 +118,7 @@ ms.locfileid: "88180391"
   
     Возвращаемое значение **rxCube** по умолчанию является объектом *rxCube*, представляющим перекрестное табулирование. 
   
-2. Вызовите функцию [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf), чтобы преобразовать результаты в кадр данных, который можно легко использовать в одной из стандартных функций формирования диаграмм языка R.
+2. Вызовите функцию [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf), чтобы преобразовать результаты в кадр данных, который можно легко использовать в одной из стандартных функций формирования диаграмм языка R.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -142,7 +142,7 @@ ms.locfileid: "88180391"
   
 Выполнив такой быстрый анализ, можно заметить, что риск мошенничества растет с увеличением числа как обычных, так и международных транзакций.
 
-Дополнительные сведения о функции **rxCube** и перекрестных таблицах в целом см. в статье [Сведение данных с помощью RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+Дополнительные сведения о функции **rxCube** и перекрестных таблицах в целом см. в статье [Сведение данных с помощью RevoScaleR](/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

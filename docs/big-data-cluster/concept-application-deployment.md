@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 65a7c0afc57cc29d8ec5df7beb4c3107470e2d31
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765333"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257264"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Развертывание приложения в кластере больших данных
 
@@ -78,7 +78,7 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>Работа с развертыванием приложения
 
 Развертывание приложения имеет два основных интерфейса: 
-- [интерфейс командной строки `azdata`;](app-create.md)
+- [интерфейс командной строки [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)];](app-create.md)
 - [расширение для Visual Studio Code и Azure Data Studio.](app-deployment-extension.md)
 
 Приложение может также выполняться с помощью веб-службы RESTful. Дополнительные сведения см. в статье [Использование приложений в кластерах больших данных](app-consume.md).

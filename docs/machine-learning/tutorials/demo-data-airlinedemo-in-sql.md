@@ -10,19 +10,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e00d3814b20f774568da007ba1e60f6784b1c9fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ec47525a79738eafc2746808a669ee50df0363a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484077"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194496"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные по прибытию авиарейсов для учебников по SQL Server Python и R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 В этом упражнении мы создадим базу данных SQL Server для хранения данных, импортированных из встроенных демонстрационных наборов данных по авиарейсам R или Python. В дистрибутивах для R и Python представлены одинаковые данные, которые можно импортировать в базу данных SQL Server с помощью Management Studio.
 
-Для выполнения этого упражнения вам потребуется [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) или другое средство, поддерживающее выполнение запросов T-SQL.
+Для выполнения этого упражнения вам потребуется [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) или другое средство, поддерживающее выполнение запросов T-SQL.
 
 Этот набор данных используется в следующих учебниках и кратких руководствах:
 

@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c37608146b0ebf75cd0042f12ffc004f1273960
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c17b74aff83412dd7f74d3c9a9cb1fb7ec711b19
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178821"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196308"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Создание моделей R (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Эта часть 7 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
+Эта часть 7 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
 Вы обогатили обучающие данные. В этом учебнике вы проанализируете их с помощью регрессионного моделирования. Линейные модели — важный инструмент в области прогнозной аналитики. Пакет **RevoScaleR** содержит алгоритмы регрессии, которые позволяют разделить рабочую нагрузку на несколько частей и выполнять их параллельно.
 
@@ -31,7 +31,7 @@ ms.locfileid: "88178821"
 
 На этом шаге вы создадите простую линейную модель, которая оценивает баланс держателя кредитной карты, используя значения в столбцах *gender* и *creditLine* как независимые переменные.
   
-Для этого используйте функцию [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), которая поддерживает удаленные контексты вычисления.
+Для этого используйте функцию [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod), которая поддерживает удаленные контексты вычисления.
   
 1. Создайте переменную R для хранения готовой модели и вызовите функцию **rxLinMod**, передав соответствующую формулу.
   
@@ -75,7 +75,7 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>создание модели логистической регрессии;
 
-Далее создайте модель логистической регрессии, которая указывает, связан ли риск мошенничества с определенным заказчиком. Вы будете использовать функцию [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) из пакета **RevoScaleR**, которая поддерживает размещение моделей логистической регрессии в удаленных контекстах вычисления.
+Далее создайте модель логистической регрессии, которая указывает, связан ли риск мошенничества с определенным заказчиком. Вы будете использовать функцию [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) из пакета **RevoScaleR**, которая поддерживает размещение моделей логистической регрессии в удаленных контекстах вычисления.
 
 Не меняйте контекст вычисления. Кроме того, по-прежнему будет использоваться тот же источник данных.
 

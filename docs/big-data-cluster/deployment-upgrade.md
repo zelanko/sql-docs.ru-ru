@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 058012d828dd9f6f327354809be4dfe67021744b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725855"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257194"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Обновление [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -57,16 +57,16 @@ ms.locfileid: "91725855"
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-1. Обновите `azdata`.
+1. Обновите [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
-   Следуйте инструкциям по установке `azdata`. 
+   Следуйте инструкциям по установке [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
    - [Установщик Windows](../azdata/install/deploy-install-azdata-installer.md)
    - [Linux — apt](../azdata/install/deploy-install-azdata-linux-package.md)
    - [Linux — yum](../azdata/install/deploy-install-azdata-yum.md)
    - [Linux — zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
-   >Если `azdata` был установлен с помощью `pip`, необходимо вручную удалить его перед установкой с помощью установщика Windows или диспетчера пакетов Linux.
+   >Если [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] был установлен с помощью `pip`, необходимо вручную удалить его перед установкой с помощью установщика Windows или диспетчера пакетов Linux.
 
 1. Обновите Кластер больших данных.
 
@@ -131,7 +131,7 @@ ms.locfileid: "91725855"
 
 ### <a name="backup-and-delete-the-old-cluster"></a>Резервное копирование и удаление старого кластера
 
-Обновление на месте для кластеров больших данных, развернутых до версии SQL Server 2019 GDR1, не поддерживается. Единственный способ обновить до нового выпуска — вручную удалить и повторно создать кластер. Каждый выпуск имеет уникальную версию `azdata`, которая не совместима с предыдущей версией. Кроме того, если новый образ контейнера скачивается в кластер, развернутый с помощью другой более старой версии, последний образ может быть несовместим со старыми образами в кластере. Новый образ извлекается при использовании тега образа `latest` в файле конфигурации развертывания для параметров контейнера. По умолчанию каждый выпуск имеет определенный тег образа, соответствующий версии выпуска SQL Server. Для обновления до последнего выпуска сделайте следующее.
+Обновление на месте для кластеров больших данных, развернутых до версии SQL Server 2019 GDR1, не поддерживается. Единственный способ обновить до нового выпуска — вручную удалить и повторно создать кластер. Каждый выпуск имеет уникальную версию [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], которая не совместима с предыдущей версией. Кроме того, если новый образ контейнера скачивается в кластер, развернутый с помощью другой более старой версии, последний образ может быть несовместим со старыми образами в кластере. Новый образ извлекается при использовании тега образа `latest` в файле конфигурации развертывания для параметров контейнера. По умолчанию каждый выпуск имеет определенный тег образа, соответствующий версии выпуска SQL Server. Для обновления до последнего выпуска сделайте следующее.
 
 1. Перед удалением старого кластера выполните резервное копирование данных в основном экземпляре SQL Server и в HDFS. Для основного экземпляра SQL Server можно использовать [резервное копирование и восстановление SQL Server](data-ingestion-restore-database.md). Для HDFS можно [скопировать данные с помощью `curl`](data-ingestion-curl.md).
 
@@ -142,18 +142,18 @@ ms.locfileid: "91725855"
    ```
 
    > [!Important]
-   > Используйте версию `azdata`, соответствующую вашему кластеру. Не удаляйте старый кластер с более новой версией `azdata`.
+   > Используйте версию [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], соответствующую вашему кластеру. Не удаляйте старый кластер с более новой версией [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    > [!Note]
    > Выполнение команды `azdata bdc delete` приведет к тому, что все объекты, созданные в пространстве имен с именем кластера больших данных, будут удалены, однако само пространство имен удалено не будет. Пространство имен можно повторно использовать для последующих развертываний, если оно пусто и в нем не созданы другие приложения.
 
-1. Удалите старую версию `azdata`.
+1. Удалите старую версию [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. Установка последней версии `azdata`. Следующие команды устанавливают `azdata` из последнего выпуска:
+1. Установка последней версии [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Следующие команды устанавливают [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] из последнего выпуска:
 
    **Windows:**
 
@@ -168,11 +168,11 @@ ms.locfileid: "91725855"
    ```
 
    > [!IMPORTANT]
-   > В каждом выпуске путь к версии `azdata``n-1` изменяется. Даже если вы ранее устанавливали `azdata`, перед созданием кластера нужно выполнить переустановку из актуального пути.
+   > В каждом выпуске путь к версии [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]`n-1` изменяется. Даже если вы ранее устанавливали [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], перед созданием кластера нужно выполнить переустановку из актуального пути.
 
 ### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> Проверка версии azdata
 
-Перед развертыванием нового кластера больших данных убедитесь, что вы используете последнюю версию `azdata` с параметром `--version`.
+Перед развертыванием нового кластера больших данных убедитесь, что вы используете последнюю версию [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] с параметром `--version`.
 
 ```bash
 azdata --version
@@ -180,7 +180,7 @@ azdata --version
 
 ### <a name="install-the-new-release"></a>Установка нового выпуска
 
-После удаления предыдущего кластера больших данных и установки последней версии `azdata` разверните новый кластер больших данных с помощью актуальных инструкций по развертыванию. Дополнительные сведения см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md). Затем восстановите все необходимые базы данных или файлы.
+После удаления предыдущего кластера больших данных и установки последней версии [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] разверните новый кластер больших данных с помощью актуальных инструкций по развертыванию. Дополнительные сведения см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md). Затем восстановите все необходимые базы данных или файлы.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

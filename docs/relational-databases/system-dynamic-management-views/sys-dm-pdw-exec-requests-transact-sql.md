@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fbd7b7f6c286a3d782ed8a40441260f3faea248e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035367"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412510"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -46,9 +46,10 @@ ms.locfileid: "92035367"
 |classifier_name|**sysname**|Для запросов, использующих ресурсы, имя классификатора, используемого для назначения ресурсов и важности.||
 |resource_allocation_percentage|**Decimal (5, 2)**|Процентный объем ресурсов, выделенных для запроса.</br>Область применения: Azure Synapse Analytics|
 |result_cache_hit|**int**|Сведения о том, использовался ли завершенный запрос к кэшу результирующего набора.  </br>Область применения: Azure Synapse Analytics| 1 = попадание в кэш результирующего набора </br> 0 = промах кэша результирующего набора </br> Отрицательные целочисленные значения = причины, по которым кэширование результирующего набора не использовалось.  Дополнительные сведения см. в разделе "Примечания".|
+|команда2|**nvarchar9max)**|Содержит полный текст запроса, отправленный пользователем. Содержит запросы, длина которых превышает 4000 символов.|Любой допустимый запрос или текст запроса. NULL = запросы длиной не более 4000 символов для этих запросов. полный текст можно найти в столбце команд.|
 ||||
   
-## <a name="remarks"></a>Комментарии 
+## <a name="remarks"></a>Remarks 
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
 Отрицательное целочисленное значение в result_cache_hit столбце является битовым значением всех примененных причин, по которым результирующий набор запроса не может быть кэширован.  Этот столбец может быть [| (Побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) произведение одного или нескольких из следующих значений:  
@@ -79,6 +80,6 @@ ms.locfileid: "92035367"
 >[!WARNING]  
 >Злоумышленник может использовать sys.dm_pdw_exec_requests для получения сведений о конкретных объектах базы данных, просто выполнив разрешение VIEW SERVER STATE и не имея разрешения для конкретной базы данных.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

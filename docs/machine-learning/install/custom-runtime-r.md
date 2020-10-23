@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8f3ee552c2e58fa295d4a0094430bfca4ef3dcac
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956394"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155081"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Установка настраиваемой среды выполнения R для SQL Server
 
@@ -37,7 +37,7 @@ ms.locfileid: "91956394"
 
 + [SQL Server 2019 для Windows (накопительное обновление 3 или более поздней версии)](../../database-engine/install-windows/install-sql-server.md).
 
-+ [Расширения языка SQL Server для Windows с платформой расширяемости](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
++ [Расширения языка SQL Server для Windows с платформой расширяемости](../../language-extensions/install/windows-java.md).
 
 + [R версии 3.3 или более поздней](https://cran.r-project.org/).
 
@@ -196,7 +196,7 @@ GO
 + [SQL Server 2019 для Linux (накопительное обновление 3 или более поздней версии)](../../linux/sql-server-linux-setup.md).
 Перед установкой SQL Server на Linux необходимо настроить репозиторий Майкрософт. Дополнительные сведения см. в статье [настройка репозиториев](../../linux/sql-server-linux-change-repo.md).
 
-+ [Расширения языка SQL Server на Linux с платформой расширяемости](../../linux/sql-server-linux-setup-language-extensions.md).
++ [Расширения языка SQL Server на Linux с платформой расширяемости](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 + [R версии 3.3 или более поздней](https://cran.r-project.org/).
 

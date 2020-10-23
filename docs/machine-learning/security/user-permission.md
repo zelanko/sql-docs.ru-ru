@@ -3,21 +3,21 @@ title: Предоставление разрешений на выполнени
 description: Узнайте, как предоставлять пользователям разрешения на выполнение внешних скриптов Python и R в Службах машинного обучения SQL Server и предоставление разрешений на чтение, запись или инструкции на языке описания данных (DDL) для баз данных.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 10/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019, contperfq4
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5c961c2c4df15fdff7b1e2f3d5b1815c50d69771
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7c7fa9d7702fb93fd4fe8334f873eb1b66c0f61d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180409"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115282"
 ---
 # <a name="grant-users-permission-to-execute-python-and-r-scripts-with-sql-server-machine-learning-services"></a>Предоставление пользователям разрешения на выполнение скриптов Python и R с помощью Службы машинного обучения SQL Server
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Узнайте, как предоставлять пользователям разрешения на выполнение внешних скриптов Python и R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) и предоставление разрешений на чтение, запись или инструкции на языке описания данных (DDL) для баз данных.
 

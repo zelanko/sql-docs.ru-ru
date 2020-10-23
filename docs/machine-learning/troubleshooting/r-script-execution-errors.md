@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569934"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196338"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Распространенные ошибки скриптов R в SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89569934"
 
 2. Просмотрите сообщения, чтобы узнать, есть ли во входных или выходных данных столбцы с несовместимыми или неподдерживаемыми типами данных. Например, запросы к базе данных SQL часто возвращают идентификаторы GUID или RowGUID, которые не поддерживаются. Дополнительные сведения см. в разделе [Библиотеки R и типы данных](../r/r-libraries-and-data-types.md).
 
-3. Просмотрите страницы справки по отдельным функциям R, чтобы определить, все ли параметры поддерживаются для контекста вычисления SQL Server. Для получения справки по ScaleR используйте встроенные команды справки R или обратитесь к [справочнику по пакету](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+3. Просмотрите страницы справки по отдельным функциям R, чтобы определить, все ли параметры поддерживаются для контекста вычисления SQL Server. Для получения справки по ScaleR используйте встроенные команды справки R или обратитесь к [справочнику по пакету](/r-server/r-reference/revoscaler/revoscaler).
 
 Если среда выполнения R работает, но скрипт возвращает ошибки, рекомендуем попробовать отладить скрипт в выделенной среде разработки R, такой как Инструменты R для Visual Studio.
 

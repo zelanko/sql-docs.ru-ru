@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 98c7f5b8c7cc634212769f910152322a94054d66
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 18cd0c279493dcb41d043d3f76d6debe71eb402c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178561"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194485"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Учебник по Python. Обучение и сохранение модели Python с помощью T-SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -145,7 +145,7 @@ ms.locfileid: "88178561"
 
 В этой хранимой процедуре используется пакет **revoscalepy**, который является новым пакетом для Python. Он содержит объекты, преобразования и алгоритмы, аналогичные тем, которые содержатся в пакете **RevoScaleR** для языка R. 
 
-С помощью **revoscalepy** можно создавать удаленные контексты вычислений, перемещать данные между контекстами вычислений, преобразовывать данные и обучать прогнозные модели с помощью популярных алгоритмов, таких как логистическая и линейная регрессия, деревья принятия решений и др. Дополнительные сведения см. в статьях [Модуль revoscalepy в SQL Server](../python/ref-py-revoscalepy.md) и [Справочник по функции revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+С помощью **revoscalepy** можно создавать удаленные контексты вычислений, перемещать данные между контекстами вычислений, преобразовывать данные и обучать прогнозные модели с помощью популярных алгоритмов, таких как логистическая и линейная регрессия, деревья принятия решений и др. Дополнительные сведения см. в статьях [Модуль revoscalepy в SQL Server](../python/ref-py-revoscalepy.md) и [Справочник по функции revoscalepy](/r-server/python-reference/revoscalepy/revoscalepy-package).
 
 1. В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] откройте новое окно **Запрос** и выполните приведенную ниже инструкцию, чтобы создать хранимую процедуру _TrainTipPredictionModelRxPy_.  Поскольку хранимая процедура уже включает в себя определение входных данных, указывать входной запрос не требуется.
 

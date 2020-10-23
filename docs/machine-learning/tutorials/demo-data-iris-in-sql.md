@@ -11,12 +11,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22695214f9f3b375d285a8b3bb03bc1471535b17
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495007"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192381"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Демонстрационные данные ирисов Фишера для учебников по Python и R при использовании со Службой машинного обучения SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "88495007"
     EXEC dbo.get_iris_dataset;
     ```
 
-    Если вы не знакомы с T-SQL, учтите, что инструкция INSERT только добавляет новые данные. Она не проверяет существующие данные и не выполняет удаление или перестроение таблицы. Чтобы исключить многократное копирование одних и тех же данных в таблицу, можно сначала выполнить следующую инструкцию: `TRUNCATE TABLE iris_data`. Инструкция T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) удаляет существующие данные, сохраняя при этом структуру таблицы в неизменном виде.
+    Если вы не знакомы с T-SQL, учтите, что инструкция INSERT только добавляет новые данные. Она не проверяет существующие данные и не выполняет удаление или перестроение таблицы. Чтобы исключить многократное копирование одних и тех же данных в таблицу, можно сначала выполнить следующую инструкцию: `TRUNCATE TABLE iris_data`. Инструкция T-SQL [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md) удаляет существующие данные, сохраняя при этом структуру таблицы в неизменном виде.
 
 ## <a name="query-the-data"></a>Запрос данных
 

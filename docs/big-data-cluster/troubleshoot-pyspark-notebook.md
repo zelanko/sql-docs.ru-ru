@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2de422caf8567f1473d1436a27a094fef9144085
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206048"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257082"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>Устранение неполадок с записной книжкой `pyspark`
 
@@ -30,7 +30,7 @@ Azure Data Studio взаимодействует с конечной точк�
 
 Для выполнения действий по устранению неполадок необходимо следующее.
 
-1. Установленная программа командной строки `azdata` с конфигурацией для вашего кластера.
+1. Установленная программа командной строки [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] с конфигурацией для вашего кластера.
 2. Знакомство с выполнением команд Linux и навыки устранения неполадок с помощью журналов.
 
 ## <a name="troubleshooting-steps"></a>Действия по устранению неполадок
@@ -127,7 +127,7 @@ Azure Data Studio взаимодействует с конечной точк�
 
 1. Проверьте идентификатор приложения и отдельные журналы application_master и журналы контейнеров.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Проверка идентификатора приложения":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Ошибка в ячейке":::
 
 1. Просмотрите журналы приложения YARN.
 
@@ -165,7 +165,7 @@ Azure Data Studio взаимодействует с конечной точк�
 
 1. Изучите пользовательский интерфейс SPARK.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Пользовательский интерфейс Spark":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Ошибка в ячейке":::
 
    Детализируйте задачи этапов в поисках ошибок.
 

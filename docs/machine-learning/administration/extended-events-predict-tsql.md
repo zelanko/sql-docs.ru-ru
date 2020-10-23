@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: bbe54a44113ebadc07c837887f0d92e7bfb44cb4
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956850"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115405"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Мониторинг инструкций T-SQL PREDICT с использованием расширенных событий в Службах машинного обучения SQL Server
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Сведения о том, как использовать расширенные события для мониторинга инструкций T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) в Службах машинного обучения SQL Server, а также устранять связанные с ними неполадки.
 
@@ -25,22 +25,22 @@ ms.locfileid: "91956850"
 
 Приведенные ниже расширенные события доступны во всех версиях SQL Server, поддерживающих инструкцию T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md). 
 
-|name |object_type|description| 
-|----|----|----|
-|predict_function_completed |event  |Встроенное разбиение времени выполнения|
-|predict_model_cache_hit |event|Происходит при извлечении модели из кэша моделей функции PREDICT. Используйте это событие вместе с другими событиями predict_model_cache_* для решения проблем, вызванных кэшем моделей функции PREDICT.|
-|predict_model_cache_insert |event  |   Происходит при вставке модели в кэш моделей функции PREDICT. Используйте это событие вместе с другими событиями predict_model_cache_* для решения проблем, вызванных кэшем моделей функции PREDICT.    |
-|predict_model_cache_miss   |event|Происходит, если модель не найдена в кэше моделей функции PREDICT. Если это событие возникает часто, это может указывать на то, что для SQL Server требуется больше памяти. Используйте это событие вместе с другими событиями predict_model_cache_* для решения проблем, вызванных кэшем моделей функции PREDICT.|
-|predict_model_cache_remove |event| Происходит при удалении модели из кэша моделей функции PREDICT. Используйте это событие вместе с другими событиями predict_model_cache_* для решения проблем, вызванных кэшем моделей функции PREDICT.|
+| name                       | object_type | description |
+|----------------------------|-------------|-------------|
+| predict_function_completed | event       | Встроенное разбиение времени выполнения|
+| predict_model_cache_hit    | event       | Происходит при извлечении модели из кэша моделей функции PREDICT. Используйте это событие вместе с другими событиями predict_model_cache_* для решения проблем, вызванных кэшем моделей функции PREDICT.|
+| predict_model_cache_insert | event       | Происходит при вставке модели в кэш моделей функции PREDICT. Используйте это событие вместе с другими событиями predict_model_cache_* для решения проблем, вызванных кэшем моделей функции PREDICT.   |
+| predict_model_cache_miss   | event       | Происходит, если модель не найдена в кэше моделей функции PREDICT. Если это событие возникает часто, это может указывать на то, что для SQL Server требуется больше памяти. Используйте это событие вместе с другими событиями predict_model_cache_* для решения проблем, вызванных кэшем моделей функции PREDICT.|
+| predict_model_cache_remove | event       | Происходит при удалении модели из кэша моделей функции PREDICT. Используйте это событие вместе с другими событиями predict_model_cache_* для решения проблем, вызванных кэшем моделей функции PREDICT.|
 
 ## <a name="query-for-related-events"></a>Запрос связанных событий
 
 Чтобы просмотреть список столбцов, возвращенных для этих событий, выполните следующий запрос в SQL Server Management Studio:
 
 ```sql
-SELECT * 
-FROM sys.dm_xe_object_columns 
-WHERE object_name LIKE `predict%'
+SELECT *
+FROM sys.dm_xe_object_columns
+WHERE object_name LIKE 'predict%'
 ```
 
 ## <a name="examples"></a>Примеры

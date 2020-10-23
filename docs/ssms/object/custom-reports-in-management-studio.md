@@ -1,8 +1,6 @@
 ---
 description: Пользовательские отчеты в среде Management Studio
 title: Пользовательские отчеты в среде Management Studio
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,17 +8,20 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.summary.new.custom.report.f1
+- sql13.swb.summary.render.custom.report.f1
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: def361352b3d8938ec0d263a97e3206d237ef55b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 3ace61294d7cfff1079638f260f88aaa8f7d0034
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463009"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300785"
 ---
 # <a name="custom-reports-in-management-studio"></a>Пользовательские отчеты в среде Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "88463009"
   
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Добавление пользовательского отчета в среду Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Отмена подавления предупреждений для пользовательских отчетов](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [Использование пользовательских отчетов для свойств узлов обозревателя объектов](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  

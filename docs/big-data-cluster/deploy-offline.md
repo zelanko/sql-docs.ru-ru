@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: 0437880dbcf3bef50184daa9e52f8eba2a7e31b4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875563"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257184"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Выполнение автономного развертывания кластера больших данных SQL Server
 
@@ -77,7 +77,6 @@ ms.locfileid: "89875563"
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server-controller**
@@ -121,7 +120,7 @@ ms.locfileid: "89875563"
 
 ## <a name="install-tools-offline"></a>Автономная установка средств
 
-Для развертывания кластеров больших данных нужно несколько средств, включая **Python**, `azdata` и **kubectl**. Чтобы установить эти средства на автономном сервере, выполните указанные ниже действия.
+Для развертывания кластеров больших данных нужно несколько средств, включая **Python**, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] и **kubectl**. Чтобы установить эти средства на автономном сервере, выполните указанные ниже действия.
 
 ### <a name="install-python-offline"></a><a id="python"></a> Автономная установка Python
 
@@ -143,7 +142,7 @@ ms.locfileid: "89875563"
 
 ### <a name="install-azdata-offline"></a><a id="azdata"></a> Автономная установка azdata
 
-1. На компьютере с доступом в Интернет и [Python](https://wiki.python.org/moin/BeginnersGuide/Download) выполните приведенную ниже команду, чтобы скачать все пакеты `azdata` в текущую папку.
+1. На компьютере с доступом в Интернет и [Python](https://wiki.python.org/moin/BeginnersGuide/Download) выполните приведенную ниже команду, чтобы скачать все пакеты [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] в текущую папку.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -167,7 +166,7 @@ ms.locfileid: "89875563"
 
 ## <a name="deploy-from-private-repository"></a>Развертывание из частного репозитория
 
-Для развертывания из частного репозитория выполните действия, описанные в [руководстве по развертыванию](deployment-guidance.md), но используйте пользовательский файл конфигурации развертывания, в котором указаны сведения о вашем частном репозитории Docker. Следующие команды `azdata` демонстрируют, как изменить параметры Docker в пользовательском файле конфигурации развертывания с именем `control.json`.
+Для развертывания из частного репозитория выполните действия, описанные в [руководстве по развертыванию](deployment-guidance.md), но используйте пользовательский файл конфигурации развертывания, в котором указаны сведения о вашем частном репозитории Docker. Следующие команды [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] демонстрируют, как изменить параметры Docker в пользовательском файле конфигурации развертывания с именем `control.json`.
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

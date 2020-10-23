@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178714"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196254"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Создание модели R и ее сохранение в SQL Server (пошаговое руководство)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-На этом шаге вы узнаете, как создать модель машинного обучения и сохранить ее в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После сохранения модели ее можно вызвать непосредственно из кода [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью системной хранимой процедуры [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) или [функции PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
+На этом шаге вы узнаете, как создать модель машинного обучения и сохранить ее в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После сохранения модели ее можно вызвать непосредственно из кода [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью системной хранимой процедуры [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) или [функции PREDICT (T-SQL)](../../t-sql/queries/predict-transact-sql.md).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -67,7 +67,7 @@ GO
 
 Эта модель представляет собой двоичный классификатор, который прогнозирует, получит ли таксист чаевые за определенную поездку. Вы используете источник данных, созданный на предыдущем занятии, для обучения классификатора с помощью логистической регрессии.
 
-1. Вызовите функцию [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) , входящую в пакет **RevoScaleR** , чтобы создать модель логистической регрессии. 
+1. Вызовите функцию [rxLogit](/r-server/r-reference/revoscaler/rxlogit) , входящую в пакет **RevoScaleR** , чтобы создать модель логистической регрессии. 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -109,7 +109,7 @@ GO
 
 Теперь, когда модель создана, ее можно использовать для прогнозирования того, получит ли таксист чаевые за определенную поездку.
 
-1. Сначала используйте функцию [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata), чтобы определить объект источника данных для хранения результатов оценки.
+1. Сначала используйте функцию [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata), чтобы определить объект источника данных для хранения результатов оценки.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -123,7 +123,7 @@ GO
   
     + Для создания таблицы, в которой будут храниться прогнозируемые значения, у имени входа SQL, с помощью которого выполняется функция данных rxSqlServer, должны быть права DDL в базе данных. Если имя входа не имеет права на создание таблиц, выполнение инструкции завершается сбоем.
 
-2. Вызовите функцию [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) , чтобы создать результаты.
+2. Вызовите функцию [rxPredict](/r-server/r-reference/revoscaler/rxpredict) , чтобы создать результаты.
 
     ```R
     rxPredict(modelObject = logitObj,
@@ -138,7 +138,7 @@ GO
 
 ## <a name="plot-model-accuracy"></a>Построение диаграммы точности модели
 
-Чтобы получить представление о точности модели, можно воспользоваться функцией [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) для построения графика зависимости чувствительности от частоты ложно положительных заключений. Так как rxRoc — это одна из новых функций, входящих в состав пакета RevoScaleR и поддерживающих контексты удаленных вычислений, у вас есть два варианта:
+Чтобы получить представление о точности модели, можно воспользоваться функцией [rxRoc](/r-server/r-reference/revoscaler/rxroc) для построения графика зависимости чувствительности от частоты ложно положительных заключений. Так как rxRoc — это одна из новых функций, входящих в состав пакета RevoScaleR и поддерживающих контексты удаленных вычислений, у вас есть два варианта:
 
 + Вы можете использовать функцию rxRoc для построения графика в контексте удаленных вычислений с последующим возвращением графика в локальный клиент.
 
@@ -173,7 +173,7 @@ GO
 
 Чтобы убедиться, что используется локальный контекст вычислений, выполните команду `rxGetComputeContext()` в командной строке. Она должна возвращать значение "RxLocalSeq Compute Context".
 
-1. Для контекста локальных вычислений этот процесс во многом схож с описываемым. Используйте функцию [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) для переноса указанных данных в локальную среду R.
+1. Для контекста локальных вычислений этот процесс во многом схож с описываемым. Используйте функцию [rxImport](/r-server/r-reference/revoscaler/rximport) для переноса указанных данных в локальную среду R.
 
     ```R
     scoredOutput = rxImport(scoredOutput)
