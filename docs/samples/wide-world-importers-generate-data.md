@@ -1,7 +1,7 @@
 ---
 title: Создание данных в примерах SQL WideWorldImporters
 description: Используйте эти инструкции SQL для создания и импорта демонстрационных данных до текущей даты для образцов баз данных WideWorldImporters.
-ms.date: 04/04/2018
+ms.date: 10/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f60ad250ea68f58a98fb93da9f3c5853ad68bd47
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942195"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523939"
 ---
 # <a name="wideworldimporters-data-generation"></a>Создание данных WideWorldImporters
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,12 @@ ms.locfileid: "86942195"
             @AreDatesPrinted = 1;
     ```
 
-    Эта инструкция добавляет пример данных о продажах и покупках в базу данных вплоть до текущей даты. В нем отображается ход создания данных по дням. Создание данных может занять около 10 минут каждый год, требующий данных. Из-за случайного коэффициента в создании данных существуют некоторые различия в данных, создаваемых между запусками.
+    Эта инструкция добавляет пример данных о продажах и покупках в базу данных вплоть до текущей даты. В нем отображается ход создания данных по дням. Из-за случайного коэффициента в создании данных существуют некоторые различия в данных, создаваемых между запусками.
 
     Чтобы увеличить или уменьшить объем данных, создаваемых для заказов в день, измените значение параметра `@AverageNumberOfCustomerOrdersPerDay` . Используйте параметры `@SaturdayPercentageOfNormalWorkDay` и, `@SundayPercentageOfNormalWorkDay` чтобы определить объем заказа для выходных дней.
+
+> [!TIP]
+> Принудительное применение [отложенной устойчивости](../relational-databases/logs/control-transaction-durability.md) к базе данных может повысить скорость создания данных, особенно если журнал транзакций базы данных находится в подсистеме хранения с высокой задержкой. Учитывайте потенциальные последствия [потери данных](../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) при использовании отложенной устойчивости и рассмотрите возможность включения отложенной устойчивости на время создания данных.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Импорт созданных данных в WideWorldImportersDW
 

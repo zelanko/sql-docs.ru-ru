@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726345"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523881"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Оценка готовности SQL Serverного пространства данных для переноса в базу данных SQL Azure с помощью Помощник по миграции данных
 
@@ -35,7 +35,7 @@ ms.locfileid: "91726345"
 
 Настройте новый проект службы "миграция Azure" в подписке Azure, а затем добавьте средство.
 
-Проект службы "миграция Azure" используется для хранения метаданных обнаружения, оценки и миграции, собранных из среды, для которой выполняется оценка или миграция. Кроме того, вы можете использовать проект для мониторинга обнаруженных ресурсов, а также для оркестрации оценки и миграции.
+Проект Миграции Azure используется для хранения метаданных обнаружения, оценки и миграции, собранных из среды, для которой выполняется оценка или миграция. Кроме того, вы можете использовать проект для мониторинга обнаруженных ресурсов, а также для оркестрации оценки и миграции.
 
 1. Войдите в портал Azure, выберите **все службы**, а затем выполните поиск по запросу "миграция Azure".
 2. В разделе **Службы** выберите **Миграция Azure**.
@@ -101,7 +101,7 @@ ms.locfileid: "91726345"
 
     Если вы обновляете локальный экземпляр SQL Server до более поздней версии SQL Server или для SQL Server, размещенного на виртуальной машине Azure, задайте для параметра Тип исходного и целевого сервера значение **SQL Server**. Задайте тип целевого сервера **Azure sql управляемый экземпляр** для оценки готовности целевой базы данных SQL Azure (PaaS).
 
-3. Нажмите кнопку **создания**.
+3. Нажмите кнопку **Создать**.
 
    ![Интерфейс Помощник по миграции данных службы "миграция Azure"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -132,11 +132,11 @@ ms.locfileid: "91726345"
 
 5. После завершения оценки выберите **отправить в службу "миграция Azure**".
 
-   ![Экран "миграция Azure — Помощник по миграции данных" — "результаты проверки"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
+   ![Снимок экрана, показывающий Помощник по миграции данных с вызываемым параметром "отправить в Azure для миграции".](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
 6. Войдите на портал Azure.
 
-   ![Экран "миграция Azure — Помощник по миграции данных" — "результаты проверки"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
+   ![Снимок экрана Помощник по миграции данных отображения окна входа портал Azure.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
 7. Выберите подписку и проект службы "миграция Azure", в которые необходимо отправить результаты оценки, а затем нажмите кнопку **Отправить**.
 

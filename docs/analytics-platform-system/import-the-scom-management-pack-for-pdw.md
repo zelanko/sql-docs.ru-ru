@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 770359a9ddb04eb8aaf45af7dd5b95447c30f264
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401084"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523871"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Импорт пакета управления SCOM — система платформы аналитики
 Выполните следующие действия, чтобы импортировать пакеты управления System Center Operations Manager (SCOM) для системы аналитики (ТД). Пакеты управления необходимы для мониторинга параллельного хранилища данных из SCOM. 
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Перед началом  
-**Предварительные условия**  
+**Предварительные требования**  
   
 Необходимо установить и запустить System Center Operations Manager 2007 R2.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "74401084"
   
 7.  Щелкните **Install**(Установить).  
   
-    ![Нажмите кнопку установить.](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
+    ![Снимок экрана с мастером импорта пакетов управления на шаге "Выбор пакетов управления" с параметром установки, обозначенным красным цветом.](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
 8.  После завершения нажмите кнопку **Закрыть**.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "74401084"
   
 4.  Щелкните **Install**(Установить).  
   
-    ![Нажмите кнопку установить.](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![Еще один снимок экрана мастера импорта пакетов управления на шаге Select Management Packs с параметром установки, обозначенным красным цветом.](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
-5.  Нажмите кнопку **Закрыть**.  
+5.  Щелкните **Закрыть**.  
   
     ![Нажмите кнопку Закрыть.](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   

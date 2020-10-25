@@ -14,18 +14,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727805"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523921"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединение оценки с помощью DMA
 
 Следующие пошаговые инструкции помогут вам использовать Помощник по миграции данных для успешной масштабируемой оценки обновления локальной SQL Server или SQL Server, выполняющихся на виртуальных машинах Azure, или для миграции в базу данных SQL Azure.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Обязательные условия
 
 - Укажите компьютер средств в сети, с которого будет инициирован канал DMA. Убедитесь, что этот компьютер подключен к SQL Serverным целям.
 - Скачайте и установите следующие компоненты:
@@ -96,7 +96,7 @@ ms.locfileid: "91727805"
 - имя_базы_данных
 - ассессментфлаг
 
-![SQL Server содержимого таблицы](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![Снимок экрана SQL Server содержимого таблицы, если вы используете SQL Server таблицу.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 Если эта база данных не находится на компьютере со средствами, убедитесь, что компьютер с инструментами имеет сетевое подключение к этому экземпляру SQL Server.
 
@@ -110,10 +110,10 @@ ms.locfileid: "91727805"
 
 - ServerName
 - InstanceName
-- Port
+- Порт
 - ассессментфлаг
 
-![SQL Server содержимого таблицы](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![Снимок экрана SQL Server содержимого таблицы при использовании инвентаризации экземпляра.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## <a name="running-a-scaled-assessment"></a>Выполнение масштабируемой оценки
 

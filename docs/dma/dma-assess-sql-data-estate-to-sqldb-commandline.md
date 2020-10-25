@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867692"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496817"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>ДМАКМД: Оценка готовности SQL Serverного пространства данных для переноса в Azure SQL 
 
@@ -28,9 +28,14 @@ ms.locfileid: "91867692"
 
 [Помощник по миграции данных (DMA)](dma-overview.md) помогает оценить экземпляр SQL Server для конкретного целевого объекта SQL Azure и оценить готовность баз данных SQL Server к миграции в Azure SQL. Отправка результатов оценки DMA в центр миграции Azure для централизованного представления готовности к работе с данными. 
 
-В этой статье описывается, как выполнять оценку в масштабе и отправлять результаты в центр миграции Azure с помощью интерфейса командной строки DMA (ДМАКМД). Кроме того, для выполнения оценки можно использовать [графический интерфейс DMA](dma-assess-sql-data-estate-to-sqldb.md) . 
+В этой статье описывается, как выполнять оценку в масштабе и отправлять результаты в центр миграции Azure с помощью интерфейса командной строки DMA (ДМАКМД). Кроме того, для выполнения оценки можно использовать [графический интерфейс DMA](dma-assess-sql-data-estate-to-sqldb.md) .
 
-## <a name="prerequisites"></a>Предварительные требования 
+Дополнительные сведения см. в следующем видео Channel9:
+
+>
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
+
+## <a name="prerequisites"></a>Обязательные условия 
 
 Чтобы использовать ДМАКМД для выполнения оценки и передачи результатов в центр миграции Azure, вам потребуется следующее: 
 
@@ -93,7 +98,7 @@ XML-элементы, передаваемые в ДМАКМД, определя
 |`AssessmentResultDma` </br> `AssessmentResultJson` </br> `AssessmentResultCsv` | Задает формат файла результатов. `.DMA`, `.JSON` и `.CSV` соответственно. Дважды щелкните, `.DMA` чтобы открыть в пользовательском интерфейсе DMA. <br> `AssessmentResultDma` требуется для отправки результатов оценки в центр миграции Azure.  |
 |`AssessmentOverwriteResult`| Указывает, следует ли перезаписывать существующий файл результатов оценки с тем же путем, что и `AssessmentResultJson` , `AssessmentResultDma` или `AssessmentResultCsv` .|
 |`AssessmentEvaluateCompatibilityIssues` </br> `AssessmentEvaluateFeatureParity` |Выполните оценку, чтобы оценить проблемы совместимости и нарушения четности компонентов соответственно.|
-|`AzureCloudEnvironment`|Облачная среда Azure для подключения. значение по умолчанию — общедоступное облако Azure. </br></br> Поддерживаемые значения </br>`Azure (default)`, `AzureChina`, `AzureGermany`, `AzureUSGovernment`.|
+|`AzureCloudEnvironment`|Облачная среда Azure для подключения. значение по умолчанию — общедоступное облако Azure. </br></br> Поддерживаемые значения: </br>`Azure (default)`, `AzureChina`, `AzureGermany`, `AzureUSGovernment`.|
 |`SubscriptionId`|Идентификатор подписки Azure.|
 |`AzureMigrateProjectName`|Имя проекта службы "миграция Azure" для отправки результатов оценки.|
 |`ResourceGroupName`|Имя группы ресурсов для миграции Azure.|
@@ -125,7 +130,7 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 
 Просмотрите отправленные результаты в [службе "миграция Azure](dma-assess-sql-data-estate-to-sqldb.md#view-target-readiness-assessment-results) ", чтобы получить централизованное представление о всей области данных. . 
 
-## <a name="best-practices"></a>Рекомендации 
+## <a name="best-practices"></a>Советы и рекомендации 
 
 При использовании ДМАКМД учитывайте следующие рекомендации: 
 
@@ -139,3 +144,4 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 * [Помощник по миграции данных (DMA)](../dma/dma-overview.md)
 * [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)
 * [Помощник по миграции данных: рекомендации](../dma/dma-bestpractices.md)
+
