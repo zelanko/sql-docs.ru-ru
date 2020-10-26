@@ -128,6 +128,8 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: Безопасность
           href: big-data-cluster/concept-security.md
+        - name: Ресурсы для администрирования
+          href: big-data-cluster/view-cluster-status.md
         - name: Режим Active Directory
           items:
             - name: Предварительные требования
@@ -332,14 +334,30 @@
           items:
             - name: Подключение
               href: big-data-cluster/connect-to-big-data-cluster.md
-            - name: Просмотр состояния кластера
-              href: big-data-cluster/view-cluster-status.md
             - name: Управление с помощью панели мониторинга контроллера
               href: big-data-cluster/manage-with-controller-dashboard.md
             - name: Управление существующими записными книжками
               href: big-data-cluster/notebooks-manage-bdc.md
             - name: "Запуск записной книжки на базе\_Spark"
               href: big-data-cluster/notebooks-tutorial-spark.md
+            - name: Список записных книжек для определенных операций
+              href: big-data-cluster/cluster-manage-notebooks.md
+        - name: Azure Monitor
+          items:
+            - name: Выполнение мониторинга с помощью Azure Data Studio
+              href: big-data-cluster/cluster-monitor-ads.md
+            - name: Выполнение мониторинга с помощью командлета
+              href: big-data-cluster/cluster-monitor-cmdlet.md
+            - name: Выполнение мониторинга с помощью записных книжек
+              href: big-data-cluster/cluster-common-notebooks.md
+            - name: "Мониторинг\_— Grafana"
+              href: big-data-cluster/cluster-monitor-grafana.md
+            - name: "Ведение журнала\_— Kibana"
+              href: big-data-cluster/cluster-logging-kibana.md
+            - name: Список записных книжек для операций мониторинга
+              href: big-data-cluster/cluster-monitor-notebooks.md
+            - name: Список записных книжек для ведения журнала
+              href: big-data-cluster/cluster-logging-notebooks.md
         - name: Производительность
           items:
             - name: Руководство по настройке
@@ -388,6 +406,8 @@
                   href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
             - name: Устранение неполадок разрешений администратора HDFS
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
+            - name: Использование записных книжек для устранения неполадок с кластером
+              href: big-data-cluster/cluster-troubleshooter-notebooks.md
     - name: Справочник
       items:
         - name: Партнеры BDC
@@ -1849,7 +1869,7 @@
           items:
             - name: Создание
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: Удалить
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Изменить
               href: relational-databases/tables/modify-edge-constraint.md
@@ -8301,10 +8321,10 @@
           href: ssdt/release-notes-ssdt.md
         - name: Предыдущие выпуски SSDT и SSDT-BI
           href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+        - name: SQL Server Data Tools
+          href: ssdt/sql-server-data-tools.md
         - name: Поддержка Azure Active Directory
           href: ssdt/azure-active-directory.md
-        - name: Средства SQL Server
-          href: ssdt/sql-server-tools.md
         - name: Разработка базы данных вне сети с учетом проекта
           href: ssdt/project-oriented-offline-database-development.md
           items:
