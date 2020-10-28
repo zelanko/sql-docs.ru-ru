@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33d1b9e1369128bc3eeae3df1ca48c4dbbb69e8
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227098"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300838"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ SET ANSI_WARNINGS ON
   
 -   Если значения NULL появляются в агрегатных функциях, таких как SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP или COUNT, то при установке значения ON формируется предупреждающее сообщение. При установке значения OFF предупреждения не формируются.  
   
--   Если задано значение ON, то для инструкции, выполнение которой привело к ошибке деления на ноль или арифметического переполнения, будет выполнен откат и сформировано сообщение об ошибке. Если установлено значение OFF, то ошибки деления на ноль и арифметического переполнения приведут к возврату значений NULL. Ошибки деления на нуль и арифметического переполнения приводят к возврату значений NULL, если инструкции INSERT или UPDATE применяются к столбцу типа **character**, Unicode или **binary** и длина нового значения превышает максимальный размер для этого столбца. Если значение SET ANSI_WARNINGS установлено в ON, то выполнение инструкции INSERT или UPDATE прекращается в соответствии со стандартом ISO. Конечные пробелы игнорируются для символьных столбцов, а конечные значения NULL игнорируются для бинарных столбцов. Если указано значение OFF, то данные усекаются до размера столбца, и инструкция успешно завершается.  
+-   Если задано значение ON, то для инструкции, выполнение которой привело к ошибке деления на ноль или арифметического переполнения, будет выполнен откат и сформировано сообщение об ошибке. Если установлено значение OFF, то ошибки деления на ноль и арифметического переполнения приведут к возврату значений NULL. Ошибки деления на нуль и арифметического переполнения приводят к возврату значений NULL, если инструкции INSERT или UPDATE применяются к столбцу типа **character** , Unicode или **binary** и длина нового значения превышает максимальный размер для этого столбца. Если значение SET ANSI_WARNINGS установлено в ON, то выполнение инструкции INSERT или UPDATE прекращается в соответствии со стандартом ISO. Конечные пробелы игнорируются для символьных столбцов, а конечные значения NULL игнорируются для бинарных столбцов. Если указано значение OFF, то данные усекаются до размера столбца, и инструкция успешно завершается.  
   
 > [!NOTE]  
 > Если усечение возникает во время преобразования в тип данных **binary** или **varbinary** или из этих типов данных, то не возникает ошибок или предупреждений, несмотря на значения параметров SET.  
@@ -76,7 +76,7 @@ SET ANSI_WARNINGS ON
 > [!IMPORTANT]
 > Параметр ANSI_WARNINGS должен быть установлен в ON для выполнения распределенных запросов.  
   
-Клиенты, например драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поставщик собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и драйвер Microsoft JDBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], автоматически устанавливают ANSI_WARNINGS в значение ON с флагом подключения. Его можно настроить в источниках данных ODBC, в атрибутах соединения ODBC или в приложении перед сеансом связи. Для соединений от приложений DB-Library значение по умолчанию для параметра SET ANSI_WARNINGS равно значению OFF. Дополнительные сведения см. в разделе [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) в спецификациях протокола потока табличных данных (TDS). 
+Клиенты, например драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поставщик собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и драйвер Microsoft JDBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], автоматически устанавливают ANSI_WARNINGS в значение ON с флагом подключения. Его можно настроить в источниках данных ODBC, в атрибутах соединения ODBC или в приложении перед сеансом связи. Для соединений от приложений DB-Library значение по умолчанию для параметра SET ANSI_WARNINGS равно значению OFF. Дополнительные сведения см. в разделе [LOGIN7](/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) в спецификациях протокола потока табличных данных (TDS). 
 
 Если параметр ANSI_DEFAULTS установлен в значение ON, параметр SET ANSI_WARNINGS включен.  
   
@@ -93,7 +93,7 @@ SELECT @ANSI_WARN AS ANSI_WARNINGS;
 ```  
   
 ## <a name="permissions"></a>Разрешения  
-Необходимо быть членом роли **public**.  
+Необходимо быть членом роли **public** .  
   
 ## <a name="examples"></a>Примеры  
 Следующий пример демонстрирует три рассмотренные ситуации со значениями ON и OFF для параметра SET ANSI_WARNINGS.  
@@ -188,5 +188,4 @@ DROP TABLE T1;
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_DEFAULTS (Transact-SQL)](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [SESSIONPROPERTY (Transact-SQL)](../../t-sql/functions/sessionproperty-transact-sql.md)  
-  
   

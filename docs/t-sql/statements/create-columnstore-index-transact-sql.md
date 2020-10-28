@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d879b6a7be0b279ab34dfa9a66bf3a8cbe58330e
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024388"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300437"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 Если таблица уже является кластеризованным индексом columnstore, вы можете указать то же имя, что у существующего индекса, или задать новое имя с помощью параметра DROP EXISTING.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*
 
 Задает одно-, двух- или трехкомпонентное имя таблицы, которая должна быть сохранена как кластеризованный индекс columnstore. Если таблица является кучей или кластеризованным индексом, она преобразуется из rowstore в columnstore. Если таблица уже columnstore, эта инструкция перестраивает кластеризованный индекс columnstore. Для преобразования в упорядоченный кластеризованный индекс columnstore существующий индекс должен быть кластеризованным индексом columnstore.
   
@@ -203,7 +203,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    *имя_схемы_секционирования* **(** _имя_столбца_ **)**  
    Задает схему секционирования для таблицы. Эта схема секционирования должна уже существовать в базе данных. Описание создания схемы секционирования см. в разделе [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
-   *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*.  
+   *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name* .  
 
    *filegroup_name*  
    Указывает файловую группу для хранения кластеризованного индекса columnstore. Если местоположение не указано и таблица не секционирована, индекс использует ту же файловую группу, что и базовая таблица или представление. Файловая группа должна существовать.  
@@ -219,11 +219,11 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 *index_name*  
    Указывает имя индекса. Значение *index_name* должно быть уникальным в пределах таблицы, но необязательно должно быть уникальным в пределах базы данных. Имена индексов должны удовлетворять правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
- **(** _столбец_  [ **,** ...*n* ] **)**  
+ **(** _столбец_  [ **,** ... *n* ] **)**  
     Задает столбцы для хранения. Некластеризованный индекс columnstore может включать не более 1024 столбцов.  
    Каждый столбец должен иметь поддерживаемый тип данных для индексов columnstore. В разделе [Ограничения](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) приводится список поддерживаемых типов данных.  
 
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
    Указывает одно-, двух- или трехкомпонентное имя таблицы, которая содержит индекс.  
 
 #### <a name="with-options"></a>Параметры WITH
@@ -243,7 +243,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    Дополнительные сведения см. в статье [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
 - Значение `ON` указывает, что индекс columnstore остается в сети и доступен во время создания новой копии индекса.
@@ -282,7 +282,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 *имя_схемы_секционирования* **(** _имя_столбца_ **)**  
    Задает схему секционирования, определяющую файловые группы, по которым сопоставляются секции секционированного индекса. Схема секционирования должна быть создана в базе данных путем выполнения инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
-   *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*. Аргумент *column_name* необязательно должен соответствовать столбцам из определения индекса. При секционировании индекса columnstore компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] добавляет столбец секционирования как столбец индекса, если этого столбца еще нет в списке.  
+   *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name* . Аргумент *column_name* необязательно должен соответствовать столбцам из определения индекса. При секционировании индекса columnstore компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] добавляет столбец секционирования как столбец индекса, если этого столбца еще нет в списке.  
    Если аргумент *partition_scheme_name* или *filegroup* не задан и таблица секционирована, индекс помещается в ту же схему секционирования и с тем же столбцом секционирования, что и для базовой таблицы.  
    Индекс columnstore для секционированной таблицы должен быть выровнен по секциям.  
    Дополнительные сведения о секционировании индексов см. в разделе [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
@@ -380,8 +380,8 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   Не более 1024 столбцов.
 -   Невозможно создать как индексы на основе ограничений. Таблица с индексом columnstore может иметь ограничения уникальности, ограничения первичного ключа и ограничения внешнего ключа. Ограничения всегда применяются с помощью индекса row-store. Ограничения невозможно применить с помощью индекса columnstore (кластеризованного или некластеризованного).
 -   Не может содержать разреженный столбец.  
--   Не может быть изменено с использованием инструкции **ALTER INDEX**. Чтобы изменить некластеризованный индекс, следует удалить и повторно создать индекс columnstore. Инструкция **ALTER INDEX** позволяет отключить и перестроить индекс columnstore.  
--   Не может быть создано с использованием ключевого слова **INCLUDE**.  
+-   Не может быть изменено с использованием инструкции **ALTER INDEX** . Чтобы изменить некластеризованный индекс, следует удалить и повторно создать индекс columnstore. Инструкция **ALTER INDEX** позволяет отключить и перестроить индекс columnstore.  
+-   Не может быть создано с использованием ключевого слова **INCLUDE** .  
 -   Нельзя включать ключевые слова **ASC** и **DESC** для сортировки индексов. Индексы columnstore упорядочены в соответствии с алгоритмами сжатия. В результате сортировки можно потерять многие преимущества в производительности.  
 -   Нельзя включать столбцы больших объектов (LOB) типа nvarchar(max), varchar(max) и varbinary(max) в некластеризованные индексы columnstore. Только кластеризованные индексы columnstore поддерживают типы больших объектов, начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и базы данных SQL Azure на уровне "Премиум", уровне "Стандартный" (S3 и выше) и всех уровнях предложений виртуальных ядер. Обратите внимание, что предыдущие версии не поддерживают типы больших объектов в кластеризованных и некластеризованных индексах columnstore.
 
@@ -782,5 +782,3 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( PRODUCTKEY,SHIPDATE );
 WITH (DROP_EXISTING = ON)
 ```
-
-

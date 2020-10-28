@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f9db43b930baffc31529a3e36fb014225957a39
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529395"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255781"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -87,6 +87,9 @@ WITH (
     }  
     [ , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec' ]);
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### <a name="orc"></a>[ORC](#tab/orc)
 ```syntaxsql  
 --Create an external file format for ORC file.  
@@ -98,6 +101,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'      }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### <a name="parquet"></a>[Parquet](#tab/parquet)
 ```syntaxsql
 --Create an external file format for PARQUET files.  
@@ -121,6 +127,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ---
   
 ## <a name="arguments"></a>Аргументы  
@@ -137,7 +146,7 @@ WITH (
 - ORC  
   Задает формат ORC. Для использования этого параметра во внешнем кластере Hadoop требуется Hive версии 0.11 или выше. В Hadoop формат файла ORC обеспечивает более качественное сжатие и более высокую производительность, чем формат файла RCFILE.
 
-- RCFILE (в сочетании с SERDE_METHOD = *SERDE_method*) Задает формат файла RcFile. Этот параметр требует задания метода сериализации и десериализации куч (SerDe). То же требование действует при использовании Hive/HiveQL в Hadoop для отправки запросов файлам RC. Обратите внимание, что метод SerDe учитывает регистр.
+- RCFILE (в сочетании с SERDE_METHOD = *SERDE_method* ) Задает формат файла RcFile. Этот параметр требует задания метода сериализации и десериализации куч (SerDe). То же требование действует при использовании Hive/HiveQL в Hadoop для отправки запросов файлам RC. Обратите внимание, что метод SerDe учитывает регистр.
 
   Примеры задания RCFile с двумя методами SerDe, которые поддерживаются PolyBase.
 
@@ -248,7 +257,7 @@ WITH (
   
 Примечания об этой таблице:  
   
--   Год, месяц и день могут иметь различные форматы и порядок. В таблице показан только формат **ymd**. Месяц может обозначаться одной или двумя цифрами или тремя символами. День может обозначаться одной или двумя цифрами. Год может обозначаться двумя или четырьмя цифрами.
+-   Год, месяц и день могут иметь различные форматы и порядок. В таблице показан только формат **ymd** . Месяц может обозначаться одной или двумя цифрами или тремя символами. День может обозначаться одной или двумя цифрами. Год может обозначаться двумя или четырьмя цифрами.
   
 -   Миллисекунды (fffffff) не требуются.
   

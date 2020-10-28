@@ -14,12 +14,12 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 571771403d665bd6d668fcce7037e06db6ffa33d
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037057"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300646"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,8 +106,8 @@ RETURNS TABLE
  *parameter_data_type*  
  Тип данных параметра. Для функций [!INCLUDE[tsql](../../includes/tsql-md.md)] допускаются все скалярные типы данных, которые поддерживаются в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Тип данных timestamp (rowversion) не поддерживается.  
   
- [ =*default* ]  
- Значение по умолчанию для аргумента. Если определено значение *default*, то функция выполняется даже в том случае, если для данного параметра значение не указано.  
+ [ = *default* ]  
+ Значение по умолчанию для аргумента. Если определено значение *default* , то функция выполняется даже в том случае, если для данного параметра значение не указано.  
   
  Если параметр функции имеет значение по умолчанию, то для него должно быть указано ключевое слово DEFAULT для получения функцией значения по умолчанию. Применение ключевого слова DEFAULT следует отличать от использования аргументов со значениями по умолчанию в хранимых процедурах, когда не указанный аргумент неявно принимает значение по умолчанию.  
   
@@ -122,11 +122,11 @@ RETURNS TABLE
  *scalar_expression*  
  Указывает скалярное значение, возвращаемое скалярной функцией.  
 
- *select_stmt* **Область применения**: Azure Synapse Analytics  
+ *select_stmt* **Область применения** : Azure Synapse Analytics  
  Единственная инструкция SELECT, которая определяет возвращаемое значение встроенной функции с табличным значением (предварительная версия).
 
- TABLE **Область применения**: Azure Synapse Analytics  
- Указывает, что возвращаемым значением функции с табличным значением (TVF) является таблица. Функциям с табличным значением могут передаваться только константы и @*local_variables*.
+ TABLE **Область применения** : Azure Synapse Analytics  
+ Указывает, что возвращаемым значением функции с табличным значением (TVF) является таблица. Функциям с табличным значением могут передаваться только константы и @ *local_variables* .
 
  Во встроенных функциях с табличным значением (предварительная версия) возвращаемое значение TABLE определяется единственной инструкцией SELECT. Встроенные функции не имеют соответствующих возвращаемых переменных.
   
@@ -244,13 +244,13 @@ RETURN
 );
 GO
 ```
-Эту функцию можно вызвать, чтобы получить все объекты представления (**V**), следующим образом:
+Эту функцию можно вызвать, чтобы получить все объекты представления ( **V** ), следующим образом:
 ```sql
 select * from dbo.ModulesByType('V');
 ```
 
 ### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>Б. Объединение результатов встроенной функции с табличным значением (предварительная версия)
- В этом простом примере используется ранее созданная встроенная функция и показано объединение ее результатов с другими таблицами с помощью инструкции CROSS APPLY. Здесь мы выберем все столбцы из sys.objects и результатов выполнения `ModulesByType`, отбирая строки по совпадению значений столбца *type*. Дополнительные сведения об использовании инструкции APPLY см. в статье [Предложение FROM и JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).
+ В этом простом примере используется ранее созданная встроенная функция и показано объединение ее результатов с другими таблицами с помощью инструкции CROSS APPLY. Здесь мы выберем все столбцы из sys.objects и результатов выполнения `ModulesByType`, отбирая строки по совпадению значений столбца *type* . Дополнительные сведения об использовании инструкции APPLY см. в статье [Предложение FROM и JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).
 
 ```sql
 SELECT * 
@@ -260,8 +260,8 @@ GO
 ```
   
 ## <a name="see-also"></a>См. также раздел  
- [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [ALTER FUNCTION (SQL Server PDW)](/previous-versions/sql/)   
+ [DROP FUNCTION (SQL Server PDW)](/previous-versions/sql/)  
   
   
 

@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7d731d320c51b70bf73ea76361f9dba283ea38c
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 7cae0c24080a5905cc5ed249c8c3be431bf96f78
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024493"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300312"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -194,12 +194,12 @@ ALTER INDEX { index_name | ALL }
 |REORGANIZE PARTITION = *partition_number*|Несекционированный, пространственный, отключенный индекс или XML-индекс|  
 |IGNORE_DUP_KEY = ON|XML-индекс<br /><br /> Пространственный индекс<br /><br /> Индекс columnstore: **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |ONLINE = ON|XML-индекс<br /><br /> Пространственный индекс<br /><br /> Индекс columnstore: **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|RESUMABLE = ON| Возобновляемые индексы не поддерживаются с ключевым словом **All**. <br /><br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |   
+|RESUMABLE = ON| Возобновляемые индексы не поддерживаются с ключевым словом **All** . <br /><br /> **Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |   
   
 > [!WARNING]
 > Более подробные сведения об операциях с индексами, которые можно выполнить в сети, см. в разделе [Рекомендации по операциям с индексами в сети](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
- Если ключевое слово ALL указывается вместе с PARTITION = *partition_number*, то все индексы должны быть выровнены. Следовательно, они секционируются на основе эквивалентных функций секционирования. При использовании ключевого слова ALL вместе с PARTITION все индексные секции с одинаковым аргументом *partition_number* будут перестроены или реорганизованы. Дополнительные сведения о секционированных индексах см. в разделе [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Если ключевое слово ALL указывается вместе с PARTITION = *partition_number* , то все индексы должны быть выровнены. Следовательно, они секционируются на основе эквивалентных функций секционирования. При использовании ключевого слова ALL вместе с PARTITION все индексные секции с одинаковым аргументом *partition_number* будут перестроены или реорганизованы. Дополнительные сведения о секционированных индексах см. в разделе [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  *database_name*  
  Имя базы данных.  
@@ -212,11 +212,11 @@ ALTER INDEX { index_name | ALL }
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] поддерживает трехкомпонентный формат имени database_name.[schema_name].table_or_view_name, где database_name — текущая база данных или база данных tempdb, а имя таблицы или представления table_or_view_name начинается с #.  
   
- REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n* ] **)** ]  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
 
-Указывает, что индекс будет перестроен с использованием тех же столбцов, типов индекса, атрибута уникальности и порядка сортировки. Это предложение эквивалентно [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD включает отключенный индекс. При перестройке кластеризованного индекса не перестраиваются ассоциированные некластеризованные индексы, если только не указано ключевое слово ALL. Если параметры индекса не заданы, то применяется существующий параметр индекса, который хранится в таблице [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Для любого параметра индекса, значение которого не хранится в таблице **sys.indexes**, применяется значение по умолчанию, указанное в определении аргумента.  
+Указывает, что индекс будет перестроен с использованием тех же столбцов, типов индекса, атрибута уникальности и порядка сортировки. Это предложение эквивалентно [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD включает отключенный индекс. При перестройке кластеризованного индекса не перестраиваются ассоциированные некластеризованные индексы, если только не указано ключевое слово ALL. Если параметры индекса не заданы, то применяется существующий параметр индекса, который хранится в таблице [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Для любого параметра индекса, значение которого не хранится в таблице **sys.indexes** , применяется значение по умолчанию, указанное в определении аргумента.  
   
  Если указано ключевое слово ALL, а базовая таблица реализована в виде кучи, операция перестроения не воздействует на таблицу. Перестраиваются все некластеризованные индексы, ассоциированные с таблицей.  
   
@@ -235,7 +235,7 @@ ALTER INDEX { index_name | ALL }
   
 PARTITION  
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Указывает, что только одна секция индекса будет перестроена или реорганизована. PARTITION не может быть указана, если аргумент *index_name* — несекционированный индекс.  
   
@@ -246,15 +246,15 @@ PARTITION
   
  *partition_number*  
    
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
- Количество секций секционированного индекса, который необходимо перестроить или реорганизовать. Аргумент *partition_number* является постоянным выражением, которое может обращаться к переменным. К ним относятся переменные определяемых пользователем типов или функции и определяемые пользователем функции, но не ссылки на инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. *partition_number*должен существовать, или выполнение инструкции завершится с ошибкой.  
+ Количество секций секционированного индекса, который необходимо перестроить или реорганизовать. Аргумент *partition_number* является постоянным выражением, которое может обращаться к переменным. К ним относятся переменные определяемых пользователем типов или функции и определяемые пользователем функции, но не ссылки на инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. *partition_number* должен существовать, или выполнение инструкции завершится с ошибкой.  
   
  WITH **(** \<single_partition_rebuild_index_option> **)**  
    
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- `SORT_IN_TEMPDB`, `MAXDOP` и `DATA_COMPRESSION` — это параметры, которые могут быть указаны при перестроении одиночной секции (PARTITION = *номер_секции*). XML-индексы не могут быть указаны в операции перестроения одиночной секции.  
+ `SORT_IN_TEMPDB`, `MAXDOP` и `DATA_COMPRESSION` — это параметры, которые могут быть указаны при перестроении одиночной секции (PARTITION = *номер_секции* ). XML-индексы не могут быть указаны в операции перестроения одиночной секции.  
   
  DISABLE  
  Помечает индекс как отключенный и недоступный для использования компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Любой индекс может быть отключен. Определение отключенного индекса остается в системном каталоге без базовых индексных данных. Отключение кластеризованного индекса блокирует доступ пользователя к данным базовой таблицы. Чтобы активировать индекс, следует использовать инструкцию ALTER INDEX REBUILD или CREATE INDEX WITH DROP_EXISTING. Дополнительные сведения см. в разделах [Отключение индексов и ограничений](../../relational-databases/indexes/disable-indexes-and-constraints.md) и [Включение индексов и ограничений](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
@@ -313,12 +313,12 @@ COMPRESS_ALL_ROW_GROUPS позволяет принудительно отпра
 
 Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 
-SET **(** \<set_index option> [ **,** ... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n* ] **)**  
  Указывает параметры индекса без перестройки или реорганизации индекса. SET нельзя указать для отключенного индекса.  
   
 PAD_INDEX = { ON | OFF }  
    
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
  Определяет разреженность индекса. Значение по умолчанию — OFF.  
   
@@ -332,25 +332,25 @@ PAD_INDEX = { ON | OFF }
   
 FILLFACTOR = *fillfactor*  
  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ **Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Определяет величину в процентах, показывающую насколько должен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] заполнять конечный уровень каждой страницы индекса во время его создания и изменения. Значение *fillfactor* должно быть целым числом от 1 до 100. Значение по умолчанию равно 0. Значения коэффициентов заполнения 0 и 100 идентичны.  
   
  Явный параметр FILLFACTOR применяется, только если индекс создается впервые или перестраивается. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не сохраняет динамически указанный процентный объем свободного места на страницах. Дополнительные сведения см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
   
- Увидеть коэффициент заполнения можно в таблице **sys.indexes**.  
+ Увидеть коэффициент заполнения можно в таблице **sys.indexes** .  
   
 > [!IMPORTANT]
 > Создание или замена кластеризованного индекса со значением FILLFACTOR влияет на пространство памяти, занимаемое данными, так как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] перераспределяет данные при создании кластеризованного индекса.  
   
  SORT_IN_TEMPDB = { ON | **OFF** }  
  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Указывает, следует ли сохранять результаты сортировки в базе данных **tempdb**. Значение по умолчанию — OFF, за исключением функции гипермасштабирования базы данных SQL Azure. Для всех операций построения индекса в режиме гипермасштабирования параметр SORT_IN_TEMPDB всегда включен независимо от указанного параметра, если не используется возобновляемое перестроение индекса.  
+ Указывает, следует ли сохранять результаты сортировки в базе данных **tempdb** . Значение по умолчанию — OFF, за исключением функции гипермасштабирования базы данных SQL Azure. Для всех операций построения индекса в режиме гипермасштабирования параметр SORT_IN_TEMPDB всегда включен независимо от указанного параметра, если не используется возобновляемое перестроение индекса.  
   
  ON  
- Промежуточные результаты сортировки, которые используются при индексировании, хранятся в базе данных **tempdb**. Это может сократить время, требуемое для создания индекса, если база данных **tempdb** размещена на иных дисках, нежели пользовательская база данных. Однако это увеличивает использование места на диске, которое используется при индексировании.  
+ Промежуточные результаты сортировки, которые используются при индексировании, хранятся в базе данных **tempdb** . Это может сократить время, требуемое для создания индекса, если база данных **tempdb** размещена на иных дисках, нежели пользовательская база данных. Однако это увеличивает использование места на диске, которое используется при индексировании.  
   
  OFF  
  Промежуточные результаты сортировки хранятся в той же базе данных, где и индекс.  
@@ -390,9 +390,9 @@ FILLFACTOR = *fillfactor*
   
 STATISTICS_INCREMENTAL = { ON | **OFF** }  
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-При значении **ON** статистики создаются как статистики отдельно по секциям. При значении **OFF** дерево статистик удаляется и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повторно вычисляет статистики. Значение по умолчанию — **OFF**.  
+При значении **ON** статистики создаются как статистики отдельно по секциям. При значении **OFF** дерево статистик удаляется и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повторно вычисляет статистики. Значение по умолчанию — **OFF** .  
   
  Если статистики по секциям не поддерживаются, параметр пропускается и выводится предупреждение. Добавочные статистики не поддерживаются для следующих типов статистических данных.  
   
@@ -425,14 +425,14 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
 - Индекс локальной временной таблицы
 - Исходные уникальные кластеризованные индексы представлений.
 - Индексы columnstore
-- Кластеризованные индексы, если базовая таблица содержит типы данных LOB: **image**, **ntext**, **text** и пространственные типы данных.
-- Столбцы **varchar(max)** и **varbinary(max)** не могут быть частью индекса. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], если таблица содержит столбец **varchar(max)** или **varbinary(max)** , кластеризованный индекс, содержащий другие столбцы, можно построить или перестроить с использованием параметра **ONLINE**. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не разрешает использовать параметр **ONLINE**, если базовая таблица содержит столбец **varchar(max)** или **varbinary(max)** .
+- Кластеризованные индексы, если базовая таблица содержит типы данных LOB: **image** , **ntext** , **text** и пространственные типы данных.
+- Столбцы **varchar(max)** и **varbinary(max)** не могут быть частью индекса. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], если таблица содержит столбец **varchar(max)** или **varbinary(max)** , кластеризованный индекс, содержащий другие столбцы, можно построить или перестроить с использованием параметра **ONLINE** . [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не разрешает использовать параметр **ONLINE** , если базовая таблица содержит столбец **varchar(max)** или **varbinary(max)** .
 
 Дополнительные сведения см. в разделе [Об операциях с индексами в режиме "в сети"](../../relational-databases/indexes/how-online-index-operations-work.md).
 
-RESUMABLE **=** { ON | **OFF**}
+RESUMABLE **=** { ON | **OFF** }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
  Указывает, является ли операция с индексами в режиме "в сети" возобновляемой.
 
@@ -440,9 +440,9 @@ RESUMABLE **=** { ON | **OFF**}
 
  Операция OFF с индексами является невозобновляемой.
 
-MAX_DURATION **=** *time* [**MINUTES**] используется с **RESUMABLE = ON** (требуется **ONLINE = ON**).
+MAX_DURATION **=** *time* [ **MINUTES** ] используется с **RESUMABLE = ON** (требуется **ONLINE = ON** ).
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
 
 Указывает время (целочисленное значение минутах), в течение которого выполняется возобновляемая операция с индексами в сети до приостановки. 
 
@@ -454,7 +454,7 @@ MAX_DURATION **=** *time* [**MINUTES**] используется с **RESUMABLE 
 
 ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Указывает, разрешена ли блокировка строк. Значение по умолчанию — ON.  
   
@@ -466,7 +466,7 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }
   
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Указывает, разрешена ли блокировка страниц. Значение по умолчанию — ON.  
   
@@ -481,13 +481,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Определяет, следует ли выполнять оптимизацию, связанную с состязанием при операциях вставки на последнюю страницу. Значение по умолчанию — OFF. См. подробнее раздел о [последовательных ключах](./create-index-transact-sql.md#sequential-keys) в документации по CREATE INDEX.
 
  MAXDOP **=** max_degree_of_parallelism  
  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции с индексами. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   
@@ -508,7 +508,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  Дополнительные сведения см. в статье [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
-> Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
 
@@ -534,13 +534,13 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
   
  COLUMNSTORE  
    
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Применяется только к индексам columnstore, включая некластеризованные и кластеризованные индексы columnstore. COLUMNSTORE указывает, что должны быть распакованы индекс или конкретные секции, которые были упакованы с помощью параметра COLUMNSTORE_ARCHIVE. При восстановлении данных сжатие будет продолжаться с применением сжатия columnstore, предусмотренного для всех индексов columnstore.  
   
  COLUMNSTORE_ARCHIVE  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Применяется только к индексам columnstore, включая некластеризованные и кластеризованные индексы columnstore. Параметр COLUMNSTORE_ARCHIVE обеспечивает дальнейшее сжатие указанной секции до еще меньшего размера. Это может использоваться для архивации или в других ситуациях, где требуется уменьшение объема пространства и допускается увеличение затрат времени на сохранение и выборку  
   
@@ -548,7 +548,7 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
   
  ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Указывает секции, к которым применяется параметр DATA_COMPRESSION. Если индекс не секционирован, аргумент ON PARTITIONS создаст ошибку. Если не указано предложение ON PARTITIONS, то параметр DATA_COMPRESSION применяется ко всем секциям секционированного индекса.  
   
@@ -572,32 +572,32 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 ```  
   
  ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
- Указывает, может ли быть перестроен индекс или секция индекса базовой таблицы в режиме "в сети" или "вне сети". Если **REBUILD** выполняется в режиме "в сети" (**ON**), то данные таблицы доступны для запросов и изменения данных во время операций с индексами.  Значение по умолчанию — **OFF**.  
+ Указывает, может ли быть перестроен индекс или секция индекса базовой таблицы в режиме "в сети" или "вне сети". Если **REBUILD** выполняется в режиме "в сети" ( **ON** ), то данные таблицы доступны для запросов и изменения данных во время операций с индексами.  Значение по умолчанию — **OFF** .  
   
  ON  
  Долгосрочные блокировки таблицы не поддерживаются во время операций с индексами. Во время главной фазы операций с индексами только блокировка с намерением совмещаемого доступа (IS) удерживается в исходной таблице. Необходимо наличие S-блокировки таблицы в начале перестройки индекса и блокировки Sch-M на таблице в конце перестроения индекса в режиме "в сети". Обе блокировки являются короткими блокировками метаданных, но при этом блокировка изменения схемы (Sch-M) должна ожидать завершения всех блокирующих транзакций. Во время ожидания Sch-M блокирует все другие транзакции, ожидающие за этой блокировкой доступа к одной таблице.  
   
 > [!NOTE]
->  Перестроение индекса в режиме "в сети" может задать параметры *low_priority_lock_wait*, описанные ниже в этом разделе.  
+>  Перестроение индекса в режиме "в сети" может задать параметры *low_priority_lock_wait* , описанные ниже в этом разделе.  
   
  OFF  
  Блокировки таблиц применяются во время выполнения операций с индексами. Это предотвращает доступ к базовой таблице всех пользователей во время операции.  
   
- WAIT_AT_LOW_PRIORITY используется только с **ONLINE=ON**.  
+ WAIT_AT_LOW_PRIORITY используется только с **ONLINE=ON** .  
  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Перестроение индекса в режиме «в сети» должно ожидать операции блокировки в этой таблице. **WAIT_AT_LOW_PRIORITY** указывает, что операция перестроения индекса в режиме "в сети" будет ожидать блокировки с низким приоритетом, позволяя выполняться другим операциям, пока операция перестроения индекса в режиме "в сети" находится в состоянии ожидания. Пропуск параметра **WAIT AT LOW PRIORITY** равнозначен использованию параметра WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE). Дополнительные сведения см. в разделе [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
- MAX_DURATION = *time* [**MINUTES**]  
+ MAX_DURATION = *time* [ **MINUTES** ]  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
- Время ожидания (целочисленное значение, указанное в минутах) в течение которого блокировки для операции перестроения индекса в режиме «в сети» будут ожидать с низким приоритетом при выполнении команды DDL. Если операция будет заблокирована на время **MAX_DURATION**, будет выполнено одно из действий **ABORT_AFTER_WAIT**. Время **MAX_DURATION** всегда указывается в минутах, и слово **MINUTES** можно опустить.  
+ Время ожидания (целочисленное значение, указанное в минутах) в течение которого блокировки для операции перестроения индекса в режиме «в сети» будут ожидать с низким приоритетом при выполнении команды DDL. Если операция будет заблокирована на время **MAX_DURATION** , будет выполнено одно из действий **ABORT_AFTER_WAIT** . Время **MAX_DURATION** всегда указывается в минутах, и слово **MINUTES** можно опустить.  
  
- ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
+ ABORT_AFTER_WAIT = [ **NONE** | **SELF** | **BLOCKERS** } ]  
    
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  None  
  Продолжить ожидание блокировки с обычным приоритетом.  
@@ -606,37 +606,37 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Прекратить операцию DDL по перестроению индекса в режиме «в сети», выполняемую в данный момент без выполнения какого-либо действия.  
   
  BLOCKERS  
- Остановить все пользовательские транзакции, в данный момент блокирующие операцию DDL по перестроению индекса в режиме «в сети», чтобы можно было продолжить данную операцию. Параметр **BLOCKERS** требует, чтобы у имени входа было разрешение **ALTER ANY CONNECTION**.  
+ Остановить все пользовательские транзакции, в данный момент блокирующие операцию DDL по перестроению индекса в режиме «в сети», чтобы можно было продолжить данную операцию. Параметр **BLOCKERS** требует, чтобы у имени входа было разрешение **ALTER ANY CONNECTION** .  
  
  RESUME 
  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
 Возобновить операцию с индексами, приостановленную вручную или из-за сбоя.
 
 MAX_DURATION используется с **RESUMABLE=ON**
  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Время (целочисленное значение минутах), в течение которого выполняется возобновляемая операция с индексами с подключением к сети после приостановки. После истечения этого времени возобновляемая операция приостанавливается, если она все еще выполнялась.
 
-WAIT_AT_LOW_PRIORITY используется с **RESUMABLE=ON** и **ONLINE = ON**.  
+WAIT_AT_LOW_PRIORITY используется с **RESUMABLE=ON** и **ONLINE = ON** .  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Возобновление перестроения индекса в режиме "в сети" после приостановки должно ожидать операции блокировки в этой таблице. **WAIT_AT_LOW_PRIORITY** указывает, что операция перестроения индекса в режиме "в сети" будет ожидать блокировки с низким приоритетом, позволяя выполняться другим операциям, пока операция перестроения индекса в режиме "в сети" находится в состоянии ожидания. Пропуск параметра **WAIT AT LOW PRIORITY** равнозначен использованию параметра WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE). Дополнительные сведения см. в разделе [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 PAUSE
  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
 Приостановить возобновляемую операцию перестроения индексов в режиме "в сети".
 
 ABORT
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
-Прервать выполняющуюся или приостановленную операцию с индексами, объявленную как возобновляемая. Чтобы прекратить возобновляемую операцию перестроения индексов, необходимо явно выполнить команду **ABORT**. Сбой или приостановка возобновляемой операции с индексами не прекращает ее выполнение. Операция остается в неопределенном состоянии приостановки.
+Прервать выполняющуюся или приостановленную операцию с индексами, объявленную как возобновляемая. Чтобы прекратить возобновляемую операцию перестроения индексов, необходимо явно выполнить команду **ABORT** . Сбой или приостановка возобновляемой операции с индексами не прекращает ее выполнение. Операция остается в неопределенном состоянии приостановки.
   
 ## <a name="remarks"></a>Remarks  
 Инструкция ALTER INDEX не может использоваться для повторного секционирования индекса или его перемещения в другую файловую группу. Эта инструкция не может использоваться для изменения определения индекса, в том числе добавления или удаления столбцов или изменения порядка столбцов. Для выполнения этих операций следует использовать инструкцию CREATE INDEX с предложением DROP_EXISTING.  
@@ -666,14 +666,14 @@ ABORT
 > Для таблицы [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] с упорядоченным кластеризованным индексом columnstore `ALTER INDEX REORGANIZE` не будет выполнять повторную сортировку данных. Для повторной сортировки данных используйте `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Отключение индексов  
-Отключение индексов предотвращает доступ пользователя к индексам в случае использования кластеризованных индексов к данным базовой таблицы. Определение индекса остается в системном каталоге. Отключение некластеризованных индексов или кластеризованных индексов в представлении физически удаляет данные индекса. При отключении кластеризованного индекса блокируется доступ к данным, но данные остаются необслуживаемыми в сбалансированном дереве до тех пор, пока индекс не будет удален или перестроен. Для просмотра состояния включенного или отключенного индекса следует направить запрос в столбец **is_disabled** в представлении каталога **sys.indexes**.  
+Отключение индексов предотвращает доступ пользователя к индексам в случае использования кластеризованных индексов к данным базовой таблицы. Определение индекса остается в системном каталоге. Отключение некластеризованных индексов или кластеризованных индексов в представлении физически удаляет данные индекса. При отключении кластеризованного индекса блокируется доступ к данным, но данные остаются необслуживаемыми в сбалансированном дереве до тех пор, пока индекс не будет удален или перестроен. Для просмотра состояния включенного или отключенного индекса следует направить запрос в столбец **is_disabled** в представлении каталога **sys.indexes** .  
   
 Если таблица входит в публикацию репликации транзакций, то нельзя отключить никакие индексы, связанные с первичными ключевыми столбцами. Эти индексы необходимы для репликации. Чтобы отключить индексы, сначала необходимо удалить таблицу из публикации. Дополнительные сведения см. в статье [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 С помощью инструкции `ALTER INDEX REBUILD` или `CREATE INDEX WITH DROP_EXISTING` включите индекс. Перестроить отключенный кластеризованный индекс нельзя, если параметр ONLINE установлен в ON. Дополнительные сведения см. в статье [Отключение индексов и ограничений](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
   
 ## <a name="setting-options"></a>Настройка параметров  
-Вы можете задать параметры `ALLOW_ROW_LOCKS`, `ALLOW_PAGE_LOCKS`, `OPTIMIZE_FOR_SEQUENTIAL_KEY`, `IGNORE_DUP_KEY` и `STATISTICS_NORECOMPUTE` для определенного индекса без перестройки или реорганизации этого индекса. Измененные значения немедленно применяются к индексу. Для просмотра этих установок следует использовать таблицу **sys.indexes**. Дополнительные сведения см. в разделе [Установка параметров индекса](../../relational-databases/indexes/set-index-options.md).  
+Вы можете задать параметры `ALLOW_ROW_LOCKS`, `ALLOW_PAGE_LOCKS`, `OPTIMIZE_FOR_SEQUENTIAL_KEY`, `IGNORE_DUP_KEY` и `STATISTICS_NORECOMPUTE` для определенного индекса без перестройки или реорганизации этого индекса. Измененные значения немедленно применяются к индексу. Для просмотра этих установок следует использовать таблицу **sys.indexes** . Дополнительные сведения см. в разделе [Установка параметров индекса](../../relational-databases/indexes/set-index-options.md).  
   
 ### <a name="row-and-page-locks-options"></a>Параметры блокировок строк и страниц  
 Когда присвоены значения `ALLOW_ROW_LOCKS = ON` и `ALLOW_PAGE_LOCK = ON`, при доступе к индексу допустимы блокировки на уровне строк, страниц и таблиц. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выбирает соответствующую блокировку и может повышать уровень с блокировки строки или страницы до блокировки таблицы.  
@@ -703,11 +703,11 @@ ABORT
 
 ### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> Возобновляемые операции с индексами
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
 
 Операция ONLINE INDEX REBUILD указывается как возобновляемая с помощью параметра RESUMABLE = ON. 
 -  Параметр RESUMABLE не сохраняется в метаданных для указанного индекса и применяется только на время выполнения текущей инструкции DDL. Таким образом, для включения возобновляемости предложение RESUMABLE=ON должно быть указано явным образом.
--  Параметр MAX_DURATION поддерживается для параметра RESUMABLE=ON или параметра аргумента **low_priority_lock_wait**. 
+-  Параметр MAX_DURATION поддерживается для параметра RESUMABLE=ON или параметра аргумента **low_priority_lock_wait** . 
    -  Параметр MAX_DURATION для RESUMABLE задает временной интервал для перестраиваемого индекса. После окончания этого времени операция перестроения индекса приостанавливается или завершает выполнение. Пользователь решает, когда можно возобновить перестроение приостановленного индекса. Значение **time** в минутах для MAX_DURATION должно быть больше 0 минут и меньше или равно 1 неделе (7 \* 24 \* 60 = 10 080 минут). Длинная пауза в операции с индексами может повлиять на производительность DML в конкретной таблице, а также на емкость диска базы данных, поскольку они оба индексируют исходное и только что созданное требуемое место на диске и должны быть обновлены во время операций DML. Если параметр MAX_DURATION пропускается, операция с индексами будет продолжаться вплоть до ее завершения или до момента возникновения сбоя. 
    -  Параметр аргумента \<low_priority_lock_wait> позволяет решить, каким образом будет продолжена операция с индексами при SCH-M-блокировке.
  
@@ -716,7 +716,7 @@ ABORT
 -  Команду DDL с параметром RESUMABLE=ON невозможно выполнить внутри явной транзакции (она не может быть частью блока BEGIN TRAN ... COMMIT).
 -  Возобновляемыми являются только приостановленные операции с индексами.
 -  При возобновлении приостановленной операции с индексами можно изменить значение MAXDOP на новое.  Если параметр MAXDOP не указан при возобновлении приостановленной операции с индексами, берется последнее значение MAXDOP. Если параметр MAXDOP вообще не указан для операции перестроения индексов, берется значение по умолчанию.
-- Чтобы немедленно приостановить операцию с индексами, можно остановить текущую команду (CTRL+C) либо выполнить команду ALTER INDEX PAUSE INDEX или KILL *session_id*. После приостановки команду можно возобновить с помощью параметра RESUME.
+- Чтобы немедленно приостановить операцию с индексами, можно остановить текущую команду (CTRL+C) либо выполнить команду ALTER INDEX PAUSE INDEX или KILL *session_id* . После приостановки команду можно возобновить с помощью параметра RESUME.
 -  Команда ABORT разрывает сеанс, размещающий исходное перестроение индекса, и прерывает выполнение операции с индексами.  
 -  Для возобновляемого перестроения индекса не требуются дополнительные ресурсы, за исключением перечисленных ниже.
    -    Дополнительное место для хранения создаваемого индекса, включая время, когда индекс будет приостановлен.
@@ -944,7 +944,7 @@ SELECT * FROM sys.column_store_row_groups;
  Результаты инструкции SELECT показывают, что группа строк имеет атрибут COMPRESSED, а это означает, что сегменты столбца этой группы строк теперь упакованы и хранятся в columnstore.  
   
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>Е. Перестроение секции кластеризованного индекса columnstore в режиме "вне сети"  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+ **Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
  
  Для перестроения секции большого кластеризованного индекса columnstore используйте инструкцию ALTER INDEX REBUILD с параметром секции. В этом примере перестраивается секция 12. Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], рекомендуется заменить REBUILD на REORGANIZE.  
   
@@ -1000,7 +1000,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>Б. Перестроение всех индексов по таблице и указание параметров  
  В следующем примере указывается ключевое слово ALL. Это приводит к перестроению всех индексов, связанных с таблицей Production.Product базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Указываются три параметра.  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 ALTER INDEX ALL ON Production.Product  
@@ -1009,7 +1009,7 @@ REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON)
   
 В следующем примере добавляется параметр ONLINE, содержащий параметры блокировки с низким приоритетом, и добавляется параметр сжатия строк.  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 ALTER INDEX ALL ON Production.Product  
@@ -1033,7 +1033,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
 ### <a name="d-setting-options-on-an-index"></a>Г. Установка параметров для индекса  
  В следующем примере задается несколько параметров индекса `AK_SalesOrderHeader_SalesOrderNumber` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
@@ -1088,7 +1088,7 @@ GO
 ### <a name="h-rebuilding-a-partitioned-index"></a>З. Перестроение секционированного индекса  
  В следующем примере перестраивается единственная секция с номером `5` секционированного индекса `IX_TransactionHistory_TransactionDate` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Секция 5 перестраивается в сети, 10 минут времени ожидания для блокировки с низким приоритетом применяется отдельно к каждой полученной блокировке операции перестроения индекса. Если в течение этого времени не удается получить блокировку для завершения перестроения индекса, инструкция по перестроению прерывается.  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 -- Verify the partitioned indexes.  
@@ -1118,7 +1118,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>К. Возобновляемое перестроение индексов в режиме "в сети"
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
  В следующих примерах показано использование возобновляемого перестроения индексов в режиме "в сети". 
 
@@ -1170,4 +1170,3 @@ GO
 [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)   
 [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
 [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)    
-  

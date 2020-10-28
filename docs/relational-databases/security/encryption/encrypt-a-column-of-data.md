@@ -2,6 +2,7 @@
 title: Шифрование столбца данных | Документация Майкрософт
 description: Сведения о том, как зашифровать столбец данных с помощью симметричного шифрования в SQL Server, используя Transact-SQL, что иногда называют шифрованием на уровне столбцов или ячеек.
 ms.custom: ''
+titleSuffix: SQL Server & Azure Synapse Analytics & Azure SQL Database & SQL Managed Instance
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,14 +18,15 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 90987ec581d734116f386e1a0f3bfd72e4bf15b6
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091752"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439338"
 ---
 # <a name="encrypt-a-column-of-data"></a>Шифрование столбца данных
+
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
   В этой статье описывается шифрование столбца данных симметричным шифрованием в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Иногда это называется шифрованием на уровне столбца или ячейки. Эта функция доступна в виде предварительной версии для Azure Synapse Analytics (SQL DW).
@@ -55,11 +57,11 @@ PASSWORD = '<some strong password>';
 
 ### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Шифрование столбца данных с помощью симметричного шифрования, включающего структуру проверки подлинности  
   
-1. В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. На стандартной панели выберите пункт **Создать запрос**.  
+2. На стандартной панели выберите пункт **Создать запрос** .  
   
-3. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
+3. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить** .  
 
     ```sql
     USE AdventureWorks2012;  
@@ -113,11 +115,11 @@ PASSWORD = '<some strong password>';
   
 ### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Шифрование столбца данных с помощью простого симметричного шифрования  
   
-1. В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. На стандартной панели выберите пункт **Создать запрос**.  
+2. На стандартной панели выберите пункт **Создать запрос** .  
   
-3. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
+3. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить** .  
   
     ```sql
     USE AdventureWorks2012;  

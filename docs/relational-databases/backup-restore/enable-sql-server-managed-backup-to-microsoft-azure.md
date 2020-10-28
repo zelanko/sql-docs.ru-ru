@@ -1,7 +1,7 @@
 ---
 title: Использование управляемого резервного копирования в Azure
 description: Узнайте, как включить управляемое резервное копирование SQL Server в Microsoft Azure на уровне базы данных и экземпляра, а также включить уведомления и отслеживать действия по резервному копированию.
-ms.custom: seo-lt-2019
+ms.custom: seo-lt-2019, devx-track-azurecli
 ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9dcbab028ec47adcf569554d464634a4813e5914
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 30c53bedf4f5946088e35c94e8902554c6da0049
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810180"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439474"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Включение управляемого резервного копирования SQL Server в Azure
 
@@ -110,7 +110,7 @@ ms.locfileid: "91810180"
   
 ## <a name="enable-managed-backup-to-azure"></a>Включение управляемого резервного копирования в Azure
   
-1.  **Создайте учетные данные SQL для URL-адреса SAS**. Используйте маркер SAS, чтобы создать учетные данные SQL для URL-адреса контейнера больших двоичных объектов. В SQL Server Management Studio с помощью указанного ниже запроса Transact-SQL создайте учетные данные для URL-адреса контейнера BLOB-объектов, основываясь на следующем примере:  
+1.  **Создайте учетные данные SQL для URL-адреса SAS** . Используйте маркер SAS, чтобы создать учетные данные SQL для URL-адреса контейнера больших двоичных объектов. В SQL Server Management Studio с помощью указанного ниже запроса Transact-SQL создайте учетные данные для URL-адреса контейнера BLOB-объектов, основываясь на следующем примере:  
   
     ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
@@ -154,7 +154,7 @@ ms.locfileid: "91810180"
   
     2.  Настройте уведомления агента SQL Server для использования компонента Database Mail. Дополнительные сведения см. в статье [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Включите уведомления по электронной почте для получения ошибок и предупреждений, связанных с резервными копиями**. В окне запроса выполните следующие инструкции Transact-SQL:  
+    3.  **Включите уведомления по электронной почте для получения ошибок и предупреждений, связанных с резервными копиями** . В окне запроса выполните следующие инструкции Transact-SQL:  
   
         ```sql
         EXEC msdb.managed_backup.sp_set_parameter  
@@ -164,7 +164,7 @@ ms.locfileid: "91810180"
   
 7.  **Просмотр файлов резервных копий в учетной записи хранения Azure** Подключитесь к учетной записи хранения из SQL Server Management Studio либо с портала Azure. Все файлы резервных копий отобразятся в указанном контейнере. Обратите внимание, что база данных и резервная копия журнала могут отобразиться в течение 5 минут после включения [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных.  
   
-8.  **Мониторинг состояния работоспособности**.  Можно вести мониторинг с помощью настроенных ранее уведомлений по электронной почте либо активно просматривать события в журнале. Ниже приведены примеры инструкций Transact-SQL, которые используются для просмотра событий.  
+8.  **Мониторинг состояния работоспособности** .  Можно вести мониторинг с помощью настроенных ранее уведомлений по электронной почте либо активно просматривать события в журнале. Ниже приведены примеры инструкций Transact-SQL, которые используются для просмотра событий.  
   
     ```sql  
     --  view all admin events  

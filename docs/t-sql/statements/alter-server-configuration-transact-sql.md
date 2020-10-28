@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34fd954475d308d8989be17063e9122bf821c3da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d3381300671d2303f8766351e19018d8122c861f
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547821"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300922"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -131,7 +131,7 @@ AUTO
 Указывает ЦП или диапазон процессоров, которым будут назначаться потоки.  
   
 { CPU_ID | CPU_ID  TO  CPU_ID } [ ,...n ]  
-Список из одного или нескольких процессоров. Идентификаторы ЦП начинаются с 0 и имеют **целочисленное значение**.  
+Список из одного или нескольких процессоров. Идентификаторы ЦП начинаются с 0 и имеют **целочисленное значение** .  
   
 NUMANODE = \<NUMA_node_range_spec>  
 Назначает потоки всем процессорам, принадлежащим заданному узлу NUMA или диапазону узлов.  
@@ -140,11 +140,11 @@ NUMANODE = \<NUMA_node_range_spec>
 Указывает номер узла NUMA или диапазон узлов NUMA.  
   
 { NUMA_node_ID | NUMA_node_ID  TO NUMA_node_ID } [ ,...n ]  
-Это список из одного или нескольких узлов NUMA. Идентификаторы NUMA начинаются с 0 и имеют **целочисленное значение**.  
+Это список из одного или нескольких узлов NUMA. Идентификаторы NUMA начинаются с 0 и имеют **целочисленное значение** .  
   
 **\<diagnostic_log> ::=**  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).  
+**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).  
 
   
 DIAGNOSTICS LOG  
@@ -167,7 +167,7 @@ MAX_FILES = { 'max_file_count' | DEFAULT }
   
 **\<failover_cluster_property> ::=**  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
+**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
 FAILOVER CLUSTER PROPERTY  
 Изменяет свойства закрытого ресурса отказоустойчивого кластера SQL Server.  
@@ -200,7 +200,7 @@ HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }
   
 **\<hadr_cluster_context> ::=**  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
+**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
 HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
 Переключает контекст кластера HADR экземпляра сервера на указанный отказоустойчивый кластер Windows Server (WSFC). *Контекст кластера HADR* определяет кластер WSFC, который управляет метаданными для реплик доступности, размещенных в экземпляре сервера. Используйте параметр SET HADR CLUSTER CONTEXT только во время миграции с кластера [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] или более новой версии в новом кластере WSFC.  
@@ -224,10 +224,10 @@ LOCAL
   
 **\<buffer_pool_extension>::=**  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
+**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
 ON  
-Обеспечивает возможность расширения буферного пула. Этот параметр расширяет размер буферного пула за счет использования энергонезависимого хранилища. Энергонезависимое хранилище, такое как твердотельные накопители (SSD), сохраняет чистые страницы данных в пуле. Дополнительные сведения об этой возможности см. в статье [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md). Расширение буферного пула поддерживается не во всех выпусках SQL Server. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+Обеспечивает возможность расширения буферного пула. Этот параметр расширяет размер буферного пула за счет использования энергонезависимого хранилища. Энергонезависимое хранилище, такое как твердотельные накопители (SSD), сохраняет чистые страницы данных в пуле. Дополнительные сведения об этой возможности см. в статье [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md). Расширение буферного пула поддерживается не во всех выпусках SQL Server. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
 Определяет путь к каталогу и имя файла кэша расширения буферного пула. Файл должен иметь расширение BPE. Отключите BUFFER POOL EXTENSION, прежде чем изменить FILENAME.  
@@ -245,7 +245,7 @@ OFF
   
 **\<soft_numa>**  
 
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
+**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
   
 ON  
 Включает автоматическое секционирование для разбиения крупных аппаратных узлов NUMA на более мелкие узлы NUMA. При изменении текущего значения потребуется перезапустить ядро СУБД.  
@@ -264,7 +264,7 @@ OFF
 
 **\<memory_optimized> ::=**
 
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
 ON <br>
 Включает все функции уровня экземпляра, которые являются частью семейства функций [выполняющейся в памяти базы данных](../../relational-databases/in-memory-database.md). Сейчас к ним относятся [оптимизированные для памяти метаданные tempdb](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) и [гибридный буферный пул](../../database-engine/configure-windows/hybrid-buffer-pool.md). Для вступления в силу требуется перезагрузка.
@@ -359,7 +359,7 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 ###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
+**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
 В примерах этого раздела показана установка значений параметра журнала диагностики.  
   
@@ -395,7 +395,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 ###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> Установка свойств отказоустойчивого кластера  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
+**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
 В следующем примере показана установка свойств ресурса отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -418,7 +418,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. Установка параметра расширения буферного пула  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
+**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
 В следующем примере выполняется включение параметра расширения буферного пула и задается имя и размер файла.  
   
@@ -447,7 +447,7 @@ GO
 
 ### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> Настройка параметров выполняющейся в памяти базы данных
 
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
 #### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Включение всех функций выполняющейся в памяти базы данных с параметрами по умолчанию
 
@@ -484,5 +484,4 @@ GO
 [sys.dm_os_memory_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
 [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
 [Расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md)  
-  
   

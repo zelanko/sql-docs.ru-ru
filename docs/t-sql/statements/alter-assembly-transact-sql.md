@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9edfba19ad84a0334f85e6990f0e3cd1c2ccee81
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 781d61c5cde33ae51b7ecb94d56a8c3cadff1595
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688683"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300215"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -95,7 +95,7 @@ ALTER ASSEMBLY assembly_name
 >  Параметры EXTERNAL_ACCESS и UNSAFE недоступны в автономной базе данных.  
   
  VISIBILITY = { ON | OFF }  
- Указывает, видима ли сборка для создания на ее основе функций среды CLR, хранимых процедур, триггеров, определяемых пользователем типов и определяемых пользователем агрегатных функций. При установке OFF сборка может быть вызвана только при помощи других сборок. Если имеются объекты базы данных среды CLR, уже созданные с помощью сборки, ее видимость не может быть изменена. Сборки, на которые ссылается аргумент *assembly_name*, передаются по умолчанию как невидимые.  
+ Указывает, видима ли сборка для создания на ее основе функций среды CLR, хранимых процедур, триггеров, определяемых пользователем типов и определяемых пользователем агрегатных функций. При установке OFF сборка может быть вызвана только при помощи других сборок. Если имеются объекты базы данных среды CLR, уже созданные с помощью сборки, ее видимость не может быть изменена. Сборки, на которые ссылается аргумент *assembly_name* , передаются по умолчанию как невидимые.  
   
  UNCHECKED DATA  
  По умолчанию инструкция ALTER ASSEMBLY не выполняется в том случае, если она должна проверять согласованность отдельных строк таблицы. Этот параметр позволяет впоследствии провести позже при помощи инструкции DBCC CHECKTABLE. Если данный параметр указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкцию ALTER ASSEMBLY даже в случае, если в базе данных имеются таблицы, содержащие:  
@@ -104,26 +104,26 @@ ALTER ASSEMBLY assembly_name
   
 -   ограничения CHECK, которые непосредственно или косвенно ссылаются на методы в сборке;  
   
--   зависящие от сборки столбцы определяемого пользователем типа данных CLR и типа, реализующего сериализацию формата **UserDefined** (не **собственного**);  
+-   зависящие от сборки столбцы определяемого пользователем типа данных CLR и типа, реализующего сериализацию формата **UserDefined** (не **собственного** );  
   
 -   столбцы определяемого пользователем типа данных CLR, ссылающиеся на представления, созданные при помощи ключевого слова WITH SCHEMABINDING.  
   
  Любые имеющиеся ограничения CHECK отключаются и помечаются как ненадежные. Таблицы, содержащие столбцы, зависящие от сборки, помечаются как содержащие непроверенные данные, и сохраняют эту метку до тех пор, пока не будут проверены явно.  
   
- Указывать этот параметр могут только члены предопределенных ролей базы данных **db_owner** и **db_ddlowner**.  
+ Указывать этот параметр могут только члены предопределенных ролей базы данных **db_owner** и **db_ddlowner** .  
   
- Для указания этого параметра требуется разрешение **ALTER ANY SCHEMA**.  
+ Для указания этого параметра требуется разрешение **ALTER ANY SCHEMA** .  
   
  Дополнительные сведения см. в разделе [Реализация сборок](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [ DROP FILE { *file_name*[ **,** _...n_] | ALL } ]  
+ [ DROP FILE { *file_name* [ **,** _...n_ ] | ALL } ]  
  Удаляет из базы данных файл, связанный со сборкой, или все файлы, связанные со сборкой. Если следующей является инструкция ADD FILE, инструкция DROP FILE выполняется в первую очередь. Это позволяет заменить файл другим файлом с тем же именем.  
   
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных или Базе данных SQL Azure.  
   
- [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
- Передает на сервер файлы для связывания со сборкой (например, исходный код, файлы отладки или другие сведения) и делает их видимыми в представлении каталога **sys.assembly_files**. *client_file_specifier* указывает расположение, откуда передаются файлы. Вместо этого можно указать список двоичных значений, составляющих файл, с помощью *file_bits*. *file_name* указывает имя, под которым файл должен храниться на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *file_name* обязателен, если указан аргумент *file_bits*, и необязателен, если указан аргумент *client_file_specifier*. Если аргумент *file_name* не указан, часть file_name в аргументе *client_file_specifier* указывается как *file_name*.  
+ [ ADD FILE FROM { *client_file_specifier* [ AS *file_name* ] | *file_bits* AS *file_name* }  
+ Передает на сервер файлы для связывания со сборкой (например, исходный код, файлы отладки или другие сведения) и делает их видимыми в представлении каталога **sys.assembly_files** . *client_file_specifier* указывает расположение, откуда передаются файлы. Вместо этого можно указать список двоичных значений, составляющих файл, с помощью *file_bits* . *file_name* указывает имя, под которым файл должен храниться на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *file_name* обязателен, если указан аргумент *file_bits* , и необязателен, если указан аргумент *client_file_specifier* . Если аргумент *file_name* не указан, часть file_name в аргументе *client_file_specifier* указывается как *file_name* .  
   
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных или Базе данных SQL Azure.  
@@ -181,7 +181,7 @@ ALTER ASSEMBLY assembly_name
   
 -   Чтобы изменить разрешение для сборки на UNSAFE, требуется разрешение **UNSAFE ASSEMBLY** на сервере.  
   
--   Для указания WITH UNCHECKED DATA требуется разрешение **ALTER ANY SCHEMA**.  
+-   Для указания WITH UNCHECKED DATA требуется разрешение **ALTER ANY SCHEMA** .  
 
 
 ### <a name="permissions-with-clr-strict-security"></a>Разрешения со строгой безопасностью среды CLR    
@@ -201,7 +201,7 @@ ALTER ASSEMBLY assembly_name
  На следующем примере показано, как сборка `ComplexNumber` обновляется до последней копии модулей [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], содержащих ее реализацию.  
   
 > [!NOTE]  
->  Сборка `ComplexNumber` может быть создана при выполнении образцов скриптов UserDefinedDataType. Дополнительные сведения см. в статье [Определяемый пользователем тип](https://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
+>  Сборка `ComplexNumber` может быть создана при выполнении образцов скриптов UserDefinedDataType. Дополнительные сведения см. в статье [Определяемый пользователем тип](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130)).  
   
  ```sql
  ALTER ASSEMBLY ComplexNumber 
@@ -233,5 +233,4 @@ ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;
  [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f70601ac1b686576f643e511873e0dfb860ec771
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91eef4cfd2a1097b7879c507cbccb0b3d3a7e909
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447980"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679001"
 ---
 # <a name="implement-event-notifications"></a>Реализация уведомлений о событиях
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ https://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  Создайте очередь для получения сообщений.  
   
     > [!NOTE]  
-    >  Очередь получает сообщения следующего типа: `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
+    >  Очередь получает сообщения следующего типа: `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
   
 2.  Создайте службу для очереди, ссылающуюся на контракт уведомлений о событии.  
   
@@ -60,7 +60,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

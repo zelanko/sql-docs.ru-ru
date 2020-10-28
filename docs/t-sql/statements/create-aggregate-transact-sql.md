@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c6ae2579cad1a04239f6d4abc4691982a49d0ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547554"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300234"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Один или несколько параметров в определяемой пользователем статистической функции. Значение параметра должно быть задано пользователем при выполнении агрегатной функции. Определяет имя параметра, используя знак **@** как первый символ. Имя параметра должно соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Параметры являются локальными для функции.  
   
  *system_scalar_type*  
- Любой из системных скалярных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения значения входного параметра или возвращаемого значения. Для определяемого пользователем статистического выражения в качестве параметра могут использоваться все скалярные типы данных, кроме **text**, **ntext** и **image**. Нельзя использовать нескалярные типы, такие как **cursor** и **table**.  
+ Любой из системных скалярных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения значения входного параметра или возвращаемого значения. Для определяемого пользователем статистического выражения в качестве параметра могут использоваться все скалярные типы данных, кроме **text** , **ntext** и **image** . Нельзя использовать нескалярные типы, такие как **cursor** и **table** .  
   
  *udt_schema_name*  
  Имя схемы, к которой относится пользовательский тип данных среды CLR. Если не указано иное, [!INCLUDE[ssDE](../../includes/ssde-md.md)] ссылается на аргумент *udt_type_name* в следующем порядке:  
@@ -82,18 +82,18 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Название пользовательского типа среды CLR, созданного в текущей базе данных. Если аргумент *udt_schema_name* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предполагает, что тип принадлежит к схеме текущего пользователя.  
   
  *assembly_name* [ **.** _class_name_ ]  
- Указывает сборку, с которой связывается определяемая пользователем агрегатная функция и, при необходимости, имя схемы, к которой принадлежит сборка, и имя класса в сборке, реализующего определяемую пользователем статистическую функцию. Сборка уже должна быть создана в базе данных с помощью инструкции CREATE ASSEMBLY. Параметр *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и совпадать с именем класса, существующим в сборке. Аргумент *class_name* может быть именем, указанным в пространстве имен, если в языке программирования, использовавшемся для написания класса, применяются пространства имен, например C#. Если аргумент *class_name* не задан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считает, что его значение равно значению аргумента *aggregate_name*.  
+ Указывает сборку, с которой связывается определяемая пользователем агрегатная функция и, при необходимости, имя схемы, к которой принадлежит сборка, и имя класса в сборке, реализующего определяемую пользователем статистическую функцию. Сборка уже должна быть создана в базе данных с помощью инструкции CREATE ASSEMBLY. Параметр *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и совпадать с именем класса, существующим в сборке. Аргумент *class_name* может быть именем, указанным в пространстве имен, если в языке программирования, использовавшемся для написания класса, применяются пространства имен, например C#. Если аргумент *class_name* не задан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считает, что его значение равно значению аргумента *aggregate_name* .  
   
 ## <a name="remarks"></a>Комментарии  
  По умолчанию возможность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускать код CLR отключена. Можно создавать, изменять и удалять объекты базы данных, которые ссылаются на модули управляемого кода, но код в этих модулях не будет выполняться в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], пока параметр [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) не будет включен с помощью хранимой процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- Класс сборки, указанной в аргументе *assembly_name*, и его методы должны соответствовать всем требованиям к реализации определяемых пользователем агрегатных функций в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Пользовательские агрегатные функции среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
+ Класс сборки, указанной в аргументе *assembly_name* , и его методы должны соответствовать всем требованиям к реализации определяемых пользователем агрегатных функций в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Пользовательские агрегатные функции среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требует разрешения CREATE AGGREGATE и разрешения REFERENCES для сборки, указанной в предложении EXTERNAL NAME.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере предполагается, что образец приложения StringUtilities.csproj скомпилирован. Дополнительные сведения см. в разделе [Пример функций программы работы со строками](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ В следующем примере предполагается, что образец приложения StringUtilities.csproj скомпилирован. Дополнительные сведения см. в разделе [Пример функций программы работы со строками](/previous-versions/sql/sql-server-2016/ff878119(v=sql.130)).  
   
  Пример создает статистическое выражение `Concatenate`. Перед созданием статистического выражения в локальной базе данных регистрируется сборка `StringUtilities.dll`.  
   
@@ -120,5 +120,4 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [DROP AGGREGATE (Transact-SQL)](../../t-sql/statements/drop-aggregate-transact-sql.md)  
-  
   

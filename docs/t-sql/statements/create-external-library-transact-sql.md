@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b25b64b9e6cde8f7546ca21f7c3383460b3e1fce
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d484d2e95f3b2f0030744a87f00c7dc3f220aa40
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688494"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300228"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "90688494"
 Отправляет файлы пакетов R или Python в базу данных из указанного байтового потока или пути к файлу. Эта инструкция служит универсальным механизмом, с помощью которого администратор базы данных может отправлять необходимые артефакты. 
 
 > [!NOTE]
-> В управляемом экземпляре SQL Azure для установки библиотеки можно использовать **sqlmlutils**. Дополнительные сведения о см. в статьях [Установка пакетов Python с помощью sqlmlutils](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current) и [Установка новых пакетов R с помощью sqlmlutils](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current).
+> В управляемом экземпляре SQL Azure для установки библиотеки можно использовать **sqlmlutils** . Дополнительные сведения о см. в статьях [Установка пакетов Python с помощью sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) и [Установка новых пакетов R с помощью sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -160,7 +160,7 @@ WITH ( LANGUAGE = <language> )
 
 Библиотеки, принадлежащие владельцу базы данных, считаются глобальными по отношению к базе данных и среде выполнения. Иными словами, владельцы базы данных могут создавать библиотеки, которые содержат общий набор библиотек или пакетов, совместно используемых несколькими пользователями. Если внешнюю библиотеку создает другой пользователь, кроме пользователя `dbo`, к этой внешней библиотеке будет иметь доступ только этот пользователь.
 
-Когда пользователь **RUser1** выполняет внешний сценарий, значение `libPath` может содержать несколько путей. Первый путь всегда является путем к общей библиотеке, созданной владельцем базы данных. Во второй части `libPath` указывается путь, содержащий пакеты, загруженные отдельно пользователем **RUser1**.
+Когда пользователь **RUser1** выполняет внешний сценарий, значение `libPath` может содержать несколько путей. Первый путь всегда является путем к общей библиотеке, созданной владельцем базы данных. Во второй части `libPath` указывается путь, содержащий пакеты, загруженные отдельно пользователем **RUser1** .
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
@@ -231,11 +231,11 @@ WITH ( LANGUAGE = <language> )
 
 Библиотеки, загруженные в экземпляр, могут быть открытыми или закрытыми. Если библиотека создается членом `dbo`, она является открытой и может использоваться всеми пользователями. В противном случае библиотека является закрытой и доступна только этому пользователю.
 
-Набор пакетов, называемых *системными пакетами*, устанавливается в экземпляре SQL предварительно. Пользователь не может добавлять, обновлять и удалять системные пакеты.
+Набор пакетов, называемых *системными пакетами* , устанавливается в экземпляре SQL предварительно. Пользователь не может добавлять, обновлять и удалять системные пакеты.
 
 ## <a name="permissions"></a>Разрешения
 
-Требуется разрешение `CREATE EXTERNAL LIBRARY`. По умолчанию любой пользователь с учетной записью **dbo**, являющийся членом роли **db_owner**, имеет разрешения на создание внешней библиотеки. Другим пользователям необходимо явным образом предоставить разрешение с помощью инструкции [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql), указав CREATE EXTERNAL LIBRARY в качестве привилегии.
+Требуется разрешение `CREATE EXTERNAL LIBRARY`. По умолчанию любой пользователь с учетной записью **dbo** , являющийся членом роли **db_owner** , имеет разрешения на создание внешней библиотеки. Другим пользователям необходимо явным образом предоставить разрешение с помощью инструкции [GRANT](./grant-database-permissions-transact-sql.md), указав CREATE EXTERNAL LIBRARY в качестве привилегии.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В SQL Server 2019 в дополнение к разрешению "CREATE EXTERNAL LIBRARY" пользователю также нужно разрешение references для внешнего языка, чтобы создать для этого языка внешние библиотеки.
@@ -400,4 +400,4 @@ library(packageA)
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: cda76ce52f9b14c732cb4effb95c3ff523dd460b
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+ms.openlocfilehash: 3d6bc9b46d089a51a12d6b399dc4946d743b4480
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847344"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300586"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -111,7 +111,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
   
 ## <a name="remarks"></a>Remarks
 
-Материализованное представление в хранилище данных Azure похоже на индексированное представление SQL Server.Оно имеет практически те же ограничения, что и индексированное представление (подробности см. в статье [Создание индексированных представлений](/sql/relational-databases/views/create-indexed-views)) за исключением того, что материализованное представление поддерживает агрегатные функции.   
+Материализованное представление в хранилище данных Azure похоже на индексированное представление SQL Server.Оно имеет практически те же ограничения, что и индексированное представление (подробности см. в статье [Создание индексированных представлений](../../relational-databases/views/create-indexed-views.md)) за исключением того, что материализованное представление поддерживает агрегатные функции.   
 
 >[!Note]
 >Несмотря на то, что CREATE MATERIALIZED VIEW не поддерживает COUNT, DISTINCT, COUNT (выражение DISTINCT) и COUNT_BIG (выражение DISTINCT), запросы SELECT с этими функциями могут по-прежнему пользоваться преимуществами материализованных представлений для повышения производительности, так как оптимизатор Synapse SQL может автоматически перезаписывать эти агрегаты в пользовательском запросе для сопоставления с существующими материализованными представлениями.  Дополнительные сведения см. в разделе с примером этой статьи. 
@@ -140,13 +140,13 @@ APPROX_COUNT_DISTINCT не поддерживается в CREATE MATERIALIZED V
 
 После создания материализованные представления отображаются в SQL Server Management Studio в папке представлений экземпляра [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
 
-Пользователи могут определить место, используемое материализованным представлением, с помощью инструкций [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) и [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest).  
+Пользователи могут определить место, используемое материализованным представлением, с помощью инструкций [SP_SPACEUSED](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md?view=azure-sqldw-latest) и [DBCC PDW_SHOWSPACEUSED](../database-console-commands/dbcc-pdw-showspaceused-transact-sql.md?view=azure-sqldw-latest).  
 
 Материализованное представление можно удалить с помощью инструкции DROP VIEW.  Отключить или перестроить материализованное представление можно с помощью инструкции ALTER MATERIALIZED VIEW.   
 
 План EXPLAIN и графический предполагаемый план выполнения в SQL Server Management Studio предоставляют сведения о том, учитывает ли оптимизатор запросов материализованное представление во время выполнения запроса. и графический предполагаемый план выполнения в SQL Server Management Studio предоставляют сведения о том, учитывает ли оптимизатор запросов материализованное представление во время выполнения запроса.
 
-Чтобы узнать, поддерживает ли инструкция SQL новое материализованное представление, выполните команду `EXPLAIN` со свойством `WITH_RECOMMENDATIONS`.  Дополнительные сведения см. в статье [EXPLAIN (Transact-SQL)](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest).
+Чтобы узнать, поддерживает ли инструкция SQL новое материализованное представление, выполните команду `EXPLAIN` со свойством `WITH_RECOMMENDATIONS`.  Дополнительные сведения см. в статье [EXPLAIN (Transact-SQL)](../queries/explain-transact-sql.md?view=azure-sqldw-latest).
 
 ## <a name="permissions"></a>Разрешения
 
@@ -199,13 +199,13 @@ select DATEDIFF(ms,@timerstart,@timerend);
 ## <a name="see-also"></a>См. также раздел
 
 [Настройка производительности с помощью материализованного представления](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
-[DROP VIEW](/sql/t-sql/statements/drop-view-transact-sql?view=azure-sqldw-latest)  
-[EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
-[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](./alter-materialized-view-transact-sql.md?view=azure-sqldw-latest)      
+[DROP VIEW](./drop-view-transact-sql.md?view=azure-sqldw-latest)  
+[EXPLAIN &#40;Transact-SQL&#41;](../queries/explain-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest)   
+[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest)   
 Представления каталога [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
 [Системные представления, поддерживаемые в Azure[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
 [Инструкции Т-SQL, поддерживаемые в Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

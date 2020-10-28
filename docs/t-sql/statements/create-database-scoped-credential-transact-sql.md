@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cfca6f2f7e40593e4480c90ecf543eb39fc810be
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834209"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300933"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Указывает имя создаваемых учетных данных для базы данных. Аргумент *credential_name* не может начинаться с символа номера (#). Системные учетные данные начинаются с символов ##.
 
-IDENTITY **='** _identity\_name_ **'** . Указывает имя учетной записи для использования при подключении за пределами сервера. Чтобы импортировать файл из хранилища BLOB-объектов Azure с использованием общего ключа, имя удостоверения должно быть `SHARED ACCESS SIGNATURE`. Для загрузки данных в хранилище данных SQL в качестве удостоверения можно использовать любое допустимое значение. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). При использовании Kerberos (Windows Active Directory или MIT KDC) не указывайте доменное имя в аргументе IDENTITY. В этом аргументе должно быть только имя учетной записи.
+IDENTITY **='** _identity\_name_ **'** . Указывает имя учетной записи для использования при подключении за пределами сервера. Чтобы импортировать файл из хранилища BLOB-объектов Azure с использованием общего ключа, имя удостоверения должно быть `SHARED ACCESS SIGNATURE`. Для загрузки данных в хранилище данных SQL в качестве удостоверения можно использовать любое допустимое значение. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](/azure/storage/storage-dotnet-shared-access-signature-part-1). При использовании Kerberos (Windows Active Directory или MIT KDC) не указывайте доменное имя в аргументе IDENTITY. В этом аргументе должно быть только имя учетной записи.
 
 > [!IMPORTANT]
 > Соединители ODBC SQL, Oracle, Teradata и MongoDB для PolyBase поддерживают только обычную проверку подлинности, но не проверку подлинности Kerberos.
@@ -85,7 +85,7 @@ SECRET **='** _secret_ **'** . Указывает секретный код, н�
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] использует учетные данные для базы данных для записи файлов расширенных событий в хранилище BLOB-объектов Azure.
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] использует учетные данные для базы данных для эластичных пулов. Дополнительные сведения см. в статье о [решении проблем с бурным ростом эластичных баз данных](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/).
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] использует учетные данные для базы данных для эластичных пулов. Дополнительные сведения см. в статье о [решении проблем с бурным ростом эластичных баз данных](/azure/azure-sql/database/elastic-pool-overview).
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) используют учетные данные для базы данных для доступа к данным из хранилища BLOB-объектов Azure. Дополнительные сведения см. в разделе [Примеры массового доступа к данным в хранилище BLOB-объектов Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
 
@@ -127,7 +127,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 В следующем примере создаются учетные данные для базы данных, которые можно использовать для создания [внешнего источника данных](../../t-sql/statements/create-external-data-source-transact-sql.md), используемого PolyBase в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
 
 Azure Data Lake Store использует приложение Azure Active Directory для проверки подлинности в службе.
-[Создайте приложение AAD](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) и задокументируйте client_id, OAuth_2.0_Token_EndPoint и ключ, прежде чем создавать учетные данные для базы данных.
+[Создайте приложение AAD](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) и задокументируйте client_id, OAuth_2.0_Token_EndPoint и ключ, прежде чем создавать учетные данные для базы данных.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -148,4 +148,4 @@ WITH
 - [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)
 - [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
 - [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)
-- [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
+- [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

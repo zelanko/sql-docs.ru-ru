@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624821"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300291"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -43,9 +43,9 @@ ms.locfileid: "91624821"
 
 Подробные примеры и краткие руководства по использованию инструкции COPY см. в следующей документации.
 
-- [Краткое руководство. Массовая загрузка данных с помощью инструкции COPY](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
-- [Краткое руководство. Примеры использования инструкции COPY и поддерживаемых ею методов проверки подлинности](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Краткое руководство. Создание инструкции COPY с помощью расширенного пользовательского интерфейса Synapse Studio (предварительная версия рабочей области)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Краткое руководство. Массовая загрузка данных с помощью инструкции COPY](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [Краткое руководство. Примеры использования инструкции COPY и поддерживаемых ею методов проверки подлинности](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [Краткое руководство. Создание инструкции COPY с помощью расширенного пользовательского интерфейса Synapse Studio (предварительная версия рабочей области)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>Синтаксис  
 
@@ -141,9 +141,9 @@ WITH
 |  **Хранилище BLOB-объектов Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake 2-го поколения** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: Для этого способа проверки подлинности требуется конечная точка .blob ( **.blob**.core.windows.net) во внешнем пути к папке.
+1: Для этого способа проверки подлинности требуется конечная точка .blob ( **.blob** .core.windows.net) во внешнем пути к папке.
 
-2: Для этого способа проверки подлинности требуется конечная точка .dfs ( **.dfs**.core.windows.net) во внешнем пути к папке.
+2: Для этого способа проверки подлинности требуется конечная точка .dfs ( **.dfs** .core.windows.net) во внешнем пути к папке.
 
 
 > [!NOTE]  
@@ -179,7 +179,7 @@ WITH
   - Минимальные требуемые роли RBAC: участник для данных BLOB-объектов хранилища или владелец данных BLOB-объектов хранилища для пользователя AAD
 
 *ERRORFILE = Directory Location*</br>
-*ERRORFILE* применяется только к CSV-файлам. Указывает каталог в инструкции COPY, в который должны записываться отклоненные строки и соответствующий файл ошибок. Можно указать полный путь из учетной записи хранения или путь относительно контейнера. Если указанный путь не существует, он будет создан от вашего имени. Создается дочерний каталог с именем "_rejectedrows". Благодаря символу "_ " каталог исключается из других процессов обработки данных, если он явно не указан в параметре LOCATION. 
+*ERRORFILE* применяется только к CSV-файлам. Указывает каталог в инструкции COPY, в который должны записываться отклоненные строки и соответствующий файл ошибок. Можно указать полный путь из учетной записи хранения или путь относительно контейнера. Если указанный путь не существует, он будет создан от вашего имени. Создается дочерний каталог с именем " _rejectedrows". Благодаря символу "_ " каталог исключается из других процессов обработки данных, если он явно не указан в параметре LOCATION. 
 
 В этом каталоге создается папка, имя которой соответствует времени отправки загруженных данных в формате "ГодМесяцДень-ЧасМинутаСекунда" (например, 20180330-173205). В эту папку записываются два типа файлов: файл причины (ошибка) и файл данных (строка), к каждому из которых предварительно добавляется queryID, distributionID и GUID файла. Так как данные и причина хранятся в отдельных файлах, эти файлы имеют соответствующие префиксы.
 
@@ -202,7 +202,7 @@ WITH
   - Минимальные требуемые роли RBAC: участник для данных BLOB-объектов хранилища или владелец данных BLOB-объектов хранилища
   
 > [!NOTE]  
-> Используйте конечную точку токена OAuth 2.0 **V1**.
+> Используйте конечную точку токена OAuth 2.0 **V1** .
 
 - Проверка подлинности с помощью ключа учетной записи хранения
   - *IDENTITY: константа со значением ключа учетной записи хранения*

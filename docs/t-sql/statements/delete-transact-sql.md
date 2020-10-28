@@ -26,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6751bab3fd7f8c10ead78da4dff44d2c3a19212
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0de7a61b92599b82aabc0f0197c02098c7758384
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990105"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300518"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -122,15 +122,15 @@ DELETE
  Задает количество или процент удаляемых случайных строк. *expression* может быть либо числом, либо процентом от числа строк. Строки, на которые ссылается выражение TOP, используемое с инструкциями INSERT, UPDATE и DELETE, не упорядочиваются. Дополнительные сведения см. в разделе [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
- Необязательное ключевое слово, которое можно использовать между ключевым словом DELETE и целевым аргументом *table_or_view_name* или *rowset_function_limited*.  
+ Необязательное ключевое слово, которое можно использовать между ключевым словом DELETE и целевым аргументом *table_or_view_name* или *rowset_function_limited* .  
   
  *table_alias*  
  Псевдоним, заданный в предложении FROM *table_source* и представляющий таблицу или представление, строки которых будут удалены.  
   
  *server_name*  
- **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+ **Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
- Имя сервера (с использованием имени связанного сервера или функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) в качестве имени сервера), на котором расположена таблица или представление. Если указано *server_name*, необходимо указать *database_name* и *schema_name*.  
+ Имя сервера (с использованием имени связанного сервера или функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) в качестве имени сервера), на котором расположена таблица или представление. Если указано *server_name* , необходимо указать *database_name* и *schema_name* .  
   
  *database_name*  
  Имя базы данных.  
@@ -143,14 +143,14 @@ DELETE
   
  Табличную переменную в пределах ее области действия также можно использовать в качестве источника таблицы в инструкции DELETE.  
   
- Представление, на которое ссылается аргумент *table_or_view_name*, должно быть обновляемым и ссылаться только на одну базовую таблицу в предложении FROM определения представления. Дополнительные сведения об обновляемых представлениях см. в разделе [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
+ Представление, на которое ссылается аргумент *table_or_view_name* , должно быть обновляемым и ссылаться только на одну базовую таблицу в предложении FROM определения представления. Дополнительные сведения об обновляемых представлениях см. в разделе [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+ **Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Функция [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) или [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) в зависимости от возможностей поставщика.  
   
- WITH **(** \<table_hint_limited> [... *n*] **)**  
+ WITH **(** \<table_hint_limited> [... *n* ] **)**  
  Задает одно или несколько табличных указаний, разрешенных для целевой таблицы. Ключевое слово WITH и круглые скобки обязательны. Использование ключевых слов NOLOCK и READUNCOMMITTED запрещено. Дополнительные сведения о табличных указаниях см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
@@ -168,7 +168,7 @@ DELETE
   
  Предусмотрено два вида операций удаления в соответствии с тем, что указывается в предложении WHERE.  
   
--   Операции удаления с поиском указывают условие поиска для уточнения строк, которые будут удалены. Например, WHERE *column_name* = *value*.  
+-   Операции удаления с поиском указывают условие поиска для уточнения строк, которые будут удалены. Например, WHERE *column_name* = *value* .  
   
 -   Операции удаления по позиции используют предложение CURRENT OF для указания курсора. Удаление осуществляется в текущей позиции курсора. Эта операция может быть более точной, чем инструкция DELETE по найденному, которая использует предложение WHERE *search_condition* для указания удаляемых строк. Инструкция DELETE по найденному удаляет несколько строк, если условие поиска не определяет уникально одну строку.  
   
@@ -182,12 +182,12 @@ DELETE
  Указывает, что аргумент *cursor_name* ссылается на глобальный курсор.  
   
  *cursor_name*  
- Имя открытого курсора, из которого производится выборка. Если существует как глобальный, так и локальный курсор с именем *cursor_name*, этот аргумент ссылается на глобальный курсор, если указан аргумент GLOBAL, в противном случае он ссылается на локальный курсор. Курсор должен позволять производить обновления.  
+ Имя открытого курсора, из которого производится выборка. Если существует как глобальный, так и локальный курсор с именем *cursor_name* , этот аргумент ссылается на глобальный курсор, если указан аргумент GLOBAL, в противном случае он ссылается на локальный курсор. Курсор должен позволять производить обновления.  
   
  *cursor_variable_name*  
  Имя переменной курсора. Переменная курсора должна содержать ссылку на курсор, обновления которого разрешены.  
   
- OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
  Ключевые слова, которые указывают, что указания оптимизатора применяются при настройке способа обработки инструкции компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Рекомендации  
@@ -272,7 +272,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- В следующем примере показано использование более сложного предложения WHERE. Предложение WHERE определяет два условия, которые должны быть выполнены для определения удаляемых строк. Значение в столбце `StandardCost` должно быть в диапазоне от `12.00` до `14.00` , а значение в столбце `SellEndDate` должно быть равно NULL. В данном примере также выводится значение из функции **\@\@ROWCOUNT**, которое показывает количество удаленных строк.  
+ В следующем примере показано использование более сложного предложения WHERE. Предложение WHERE определяет два условия, которые должны быть выполнены для определения удаляемых строк. Значение в столбце `StandardCost` должно быть в диапазоне от `12.00` до `14.00` , а значение в столбце `SellEndDate` должно быть равно NULL. В данном примере также выводится значение из функции **\@\@ROWCOUNT** , которое показывает количество удаленных строк.  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -338,7 +338,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>Д. Ограничение числа удаляемых строк с помощью ключевого слова TOP  
- Если с инструкцией DELETE применяется предложение TOP (*n*), то операция удаления производится над *n* случайно выбранными строками. Следующий пример удаляет `20` случайных строк из таблицы `PurchaseOrderDetail` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], имеющих дату ранее 1 июля 2006 г.  
+ Если с инструкцией DELETE применяется предложение TOP ( *n* ), то операция удаления производится над *n* случайно выбранными строками. Следующий пример удаляет `20` случайных строк из таблицы `PurchaseOrderDetail` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], имеющих дату ранее 1 июля 2006 г.  
   
 ```sql
 DELETE TOP (20)   
@@ -359,12 +359,12 @@ GO
 ```  
   
 ###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> Удаление строк из удаленной таблицы  
- В примерах в этом разделе описаны способы удаления строк из удаленной таблицы с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../../t-sql/functions/rowset-functions-transact-sql.md). Удаленная таблица существует на другом сервере или экземпляре SQL Server.  
+ В примерах в этом разделе описаны способы удаления строк из удаленной таблицы с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../functions/opendatasource-transact-sql.md). Удаленная таблица существует на другом сервере или экземпляре SQL Server.  
   
-**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+**Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>Е. Удаление данных из удаленной таблицы с помощью связанного сервера  
- В следующем примере будет удалена строка из удаленной таблицы. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Имя связанного сервера, `MyLinkServer`, затем определяется как часть четырехчастного имени объекта в форме *server.catalog.schema.object*.  
+ В следующем примере будет удалена строка из удаленной таблицы. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Имя связанного сервера, `MyLinkServer`, затем определяется как часть четырехчастного имени объекта в форме *server.catalog.schema.object* .  
   
 ```sql
 USE master;  
@@ -400,7 +400,7 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>З. Удаление данных из удаленной таблицы с помощью функции OPENDATASOURCE  
- В следующем примере выполняется удаление строк из удаленной таблицы с помощью вызова функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), возвращающей набор строк. Определите допустимое имя сервера для источника данных, используя формат *server_name* или *server_name\instance_name*.  
+ В следующем примере выполняется удаление строк из удаленной таблицы с помощью вызова функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), возвращающей набор строк. Определите допустимое имя сервера для источника данных, используя формат *server_name* или *server_name\instance_name* .  
   
 ```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
@@ -541,5 +541,3 @@ FROM dbo.Table2
  [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
-  
-

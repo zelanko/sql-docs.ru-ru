@@ -15,6 +15,7 @@ f1_keywords:
 - CREATE_SEARCH_PROPERTY_TSQL
 - CREATE SEARCH PROPERTY
 - CREATE SEARCH PROPERTY LIST
+- sql13.swb.spl.newsearchpropertylist.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2b347260ffc65ddf640678aed8d2728a087f981
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 22ae11a8e37109e7ba90e2b02e9e4351510f9ae7
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688880"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344080"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,15 +55,15 @@ CREATE SEARCH PROPERTY LIST new_list_name
  Имя нового списка свойств поиска. Аргумент *new_list_name* — это идентификатор с максимальной длиной в 128 символов. Аргумент *new_list_name* должен быть уникальным в списках свойств текущей базы данных и соответствовать правилам для идентификаторов. Аргумент *new_list_name* будет использоваться при создании полнотекстового индекса.  
   
  *database_name*  
- Имя базы данных, в которой находится список свойств, указанный параметром *source_list_name*. Если не указано, в качестве *database_name* по умолчанию выбирается текущая база данных.  
+ Имя базы данных, в которой находится список свойств, указанный параметром *source_list_name* . Если не указано, в качестве *database_name* по умолчанию выбирается текущая база данных.  
   
- Параметр *database_name* должен указывать имя существующей базы данных. Имя входа для текущего соединения должно быть связано с идентификатором пользователя, существующим в базе данных, которая указана аргументом *database_name*. Кроме того, требуются необходимые [разрешения](#Permissions) для базы данных.  
+ Параметр *database_name* должен указывать имя существующей базы данных. Имя входа для текущего соединения должно быть связано с идентификатором пользователя, существующим в базе данных, которая указана аргументом *database_name* . Кроме того, требуются необходимые [разрешения](#Permissions) для базы данных.  
   
  *source_list_name*  
- Указывает, что новый список свойств создается путем копирования существующего списка свойств из *database_name*. Если *source_list_name* не существует, то инструкция CREATE SEARCH PROPERTY LIST завершится ошибкой. Свойства поиска в *source_list_name* наследуются *new_list_name*.  
+ Указывает, что новый список свойств создается путем копирования существующего списка свойств из *database_name* . Если *source_list_name* не существует, то инструкция CREATE SEARCH PROPERTY LIST завершится ошибкой. Свойства поиска в *source_list_name* наследуются *new_list_name* .  
   
  AUTHORIZATION *owner_name*  
- Указывает имя пользователя или роли-владельца списка свойств. Аргумент *owner_name* должен быть именем роли, членом которой является текущий пользователь, или текущий пользователь должен иметь разрешение IMPERSONATE для *owner_name*. Если атрибут не указан, владельцем становится текущий пользователь.  
+ Указывает имя пользователя или роли-владельца списка свойств. Аргумент *owner_name* должен быть именем роли, членом которой является текущий пользователь, или текущий пользователь должен иметь разрешение IMPERSONATE для *owner_name* . Если атрибут не указан, владельцем становится текущий пользователь.  
   
 > [!NOTE]  
 >  Владельца можно изменить с помощью инструкции [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -76,9 +77,9 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
  Инструкция CREATE SEARCH PROPERTY LIST завершится неуспехом при выполнении любого из следующих условий.  
   
--   Если база данных, указанная параметром *database_name*, не существует.  
+-   Если база данных, указанная параметром *database_name* , не существует.  
   
--   Если список, указанный параметром *source_list_name*, не существует.  
+-   Если список, указанный параметром *source_list_name* , не существует.  
   
 -   Если отсутствуют нужные разрешения.  
   

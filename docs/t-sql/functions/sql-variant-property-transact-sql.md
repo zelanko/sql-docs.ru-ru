@@ -20,17 +20,17 @@ ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 273e64938825a55d96eb69f181a863f8c735b3b5
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 9e77393d7c16034d90dc443a6c8750e798e22909
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379896"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255270"
 ---
 # <a name="sql_variant_property-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Возвращает базовый тип данных и другие сведения о значении **sql_variant**.  
+  Возвращает базовый тип данных и другие сведения о значении **sql_variant** .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,22 +40,24 @@ ms.locfileid: "91379896"
 SQL_VARIANT_PROPERTY ( expression , property )  
 ```  
   
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Аргументы
  *expression*  
- Выражение типа **sql_variant**.  
+ Выражение типа **sql_variant** .  
   
  *property*  
- Содержит имя свойства **sql_variant**, для которого будут предоставлены сведения. Аргумент *property* имеет тип **varchar(** 128 **)** и может принимать одно из перечисленных ниже значений.  
+ Содержит имя свойства **sql_variant** , для которого будут предоставлены сведения. Аргумент *property* имеет тип **varchar(** 128 **)** и может принимать одно из перечисленных ниже значений.  
   
 |Значение|Описание|Возвращаемый базовый тип sql_variant|  
 |-----------|-----------------|----------------------------------------|  
 |**BaseType**|Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например:<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **bit**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = Введенные значения недопустимы.|  
-|**Точность**|Количество знаков числового базового типа данных:<br /><br /> **date** = 10<br /><br /> **datetime** = 23<br /><br /> **datetime2** = 27<br /><br /> **datetime2** (s) = 19 when s = 0, else s + 20<br /><br /> **datetimeoffset** = 34<br /><br /> **datetimeoffset** (s) = 26 when s = 0, else s + 27<br /><br /> **smalldatetime** = 16<br /><br /> **time** = 16<br /><br /> **time** (s) = 8 when s = 0, else s + 9<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** и **numeric** = 18<br /><br /> **decimal** (p,s) и **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> Все остальные типы = 0|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
-|**Масштабирование**|Количество знаков справа от десятичного разделителя числового базового типа данных:<br /><br /> **decimal** и **numeric** = 0<br /><br /> **decimal** (p,s) и **numeric** (p,s) = s<br /><br /> **money** и **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> **datetime2** = 7<br /><br /> **datetime2** (s) = s (0 - 7)<br /><br /> **datetimeoffset** = 7<br /><br /> **datetimeoffset** (s) = s (0 - 7)<br /><br /> **time** = 7<br /><br /> **time** (s) = s (0 - 7)<br /><br /> все остальные типы = 0|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
-|**TotalBytes**|Число байтов, необходимое для хранения данных и метаданных значения. Эта информация может быть полезной при проверке максимального размера данных в столбце **sql_variant**. Если значение превышает 900, создание индекса завершается сбоем.|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
-|**Параметры сортировки**|Представляет параметры сортировки конкретного значения **sql_variant**.|**sysname**<br /><br /> NULL = Введенные значения недопустимы.|  
+|**Точность**|Количество знаков числового базового типа данных:<br /><br /> **date** = 10<br /><br /> **datetime**  = 23<br /><br /> **datetime2** = 27<br /><br /> **datetime2** (s) = 19 when s = 0, else s + 20<br /><br /> **datetimeoffset** = 34<br /><br /> **datetimeoffset** (s) = 26 when s = 0, else s + 27<br /><br /> **smalldatetime**  = 16<br /><br /> **time** = 16<br /><br /> **time** (s) = 8 when s = 0, else s + 9<br /><br /> **float**  = 53<br /><br /> **real**  = 24<br /><br /> **decimal** и **numeric** = 18<br /><br /> **decimal** (p,s) и **numeric** (p,s) = p<br /><br /> **money**  = 19<br /><br /> **smallmoney**  = 10<br /><br /> **bigint**  = 19<br /><br /> **int**  = 10<br /><br /> **smallint**  = 5<br /><br /> **tinyint**  = 3<br /><br /> **bit**  = 1<br /><br /> Все остальные типы = 0|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
+|**Масштабирование**|Количество знаков справа от десятичного разделителя числового базового типа данных:<br /><br /> **decimal** и **numeric** = 0<br /><br /> **decimal** (p,s) и **numeric** (p,s) = s<br /><br /> **money** и **smallmoney**  = 4<br /><br /> **datetime**  = 3<br /><br /> **datetime2** = 7<br /><br /> **datetime2** (s) = s (0 - 7)<br /><br /> **datetimeoffset** = 7<br /><br /> **datetimeoffset** (s) = s (0 - 7)<br /><br /> **time** = 7<br /><br /> **time** (s) = s (0 - 7)<br /><br /> все остальные типы = 0|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
+|**TotalBytes**|Число байтов, необходимое для хранения данных и метаданных значения. Эта информация может быть полезной при проверке максимального размера данных в столбце **sql_variant** . Если значение превышает 900, создание индекса завершается сбоем.|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
+|**Параметры сортировки**|Представляет параметры сортировки конкретного значения **sql_variant** .|**sysname**<br /><br /> NULL = Введенные значения недопустимы.|  
 |**MaxLength**|Максимальная длина типа данных, в байтах. Например, **MaxLength** **nvarchar(** 50 **)** равно 100, а **MaxLength** **int** равно 4.|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
@@ -75,7 +77,7 @@ FROM      tableA
 WHERE      colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Обратите внимание на то, что каждое из этих трех значений имеет тип **sql_variant**.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Обратите внимание на то, что каждое из этих трех значений имеет тип **sql_variant** .  
   
 ```  
 Base Type    Precision    Scale  

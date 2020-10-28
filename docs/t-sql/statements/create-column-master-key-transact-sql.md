@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 081941d580e51188f63c54953caa30004c83c6d0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645961"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300399"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ CREATE COLUMN MASTER KEY key_name
     |'MSSQL_CERTIFICATE_STORE'|Хранилище сертификатов Windows| 
     |'MSSQL_CSP_PROVIDER'|Хранилище, например аппаратный модуль безопасности (HSM), которое поддерживает интерфейс Microsoft CryptoAPI.|
     |'MSSQL_CNG_STORE'|Хранилище, например аппаратный модуль безопасности (HSM), которое поддерживает интерфейс API криптографии следующего поколения.|  
-    |AZURE_KEY_VAULT|См. статью [Приступая к работе с хранилищем ключей Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
+    |AZURE_KEY_VAULT|См. статью [Приступая к работе с хранилищем ключей Azure](/azure/key-vault/general/overview).|  
     |MSSQL_JAVA_KEYSTORE| Хранилище ключей Java.}
   
 
@@ -101,7 +101,7 @@ key_path
      Где:  
   
     *РасположениеХранилищаСертификатов*  
-    Расположение хранилища сертификатов: текущий пользователь или локальный компьютер. Дополнительные сведения см. в статье [Хранилища сертификатов "Локальный компьютер" и "Текущий пользователь"](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
+    Расположение хранилища сертификатов: текущий пользователь или локальный компьютер. Дополнительные сведения см. в статье [Хранилища сертификатов "Локальный компьютер" и "Текущий пользователь"](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores).  
   
     *ИмяХранилищаСертификатов*  
     Имя хранилища сертификатов, например My.  
@@ -176,7 +176,7 @@ ENCLAVE_COMPUTATIONS
 
   
 ## <a name="permissions"></a>Разрешения  
-Необходимо разрешение **ALTER ANY COLUMN MASTER KEY**.  
+Необходимо разрешение **ALTER ANY COLUMN MASTER KEY** .  
   
 ## <a name="examples"></a>Примеры  
   
@@ -252,4 +252,3 @@ WITH (
 * [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Общие сведения об управлении ключами для постоянного шифрования](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [Управление ключами для Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
-  

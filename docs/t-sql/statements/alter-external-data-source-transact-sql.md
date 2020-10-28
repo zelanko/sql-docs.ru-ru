@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a17a153aedecac36acb02946e726d07a50e4c60
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: b66c95d7818144abd41b7a5b9fbedb93ba81aded
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529475"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300460"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -69,9 +69,9 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  CREDENTIAL = Credential_Name Указывает именованные учетные данные. См. раздел [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 TYPE = [HADOOP | BLOB_STORAGE]   
-**Область применения**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**Область применения** : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Только для массовых операций — `LOCATION` должен быть допустимым URL-адресом хранилища больших двоичных объектов Azure. Не помещайте **/** , имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION`.
-Используемые учетные данные необходимо создавать, используя `SHARED ACCESS SIGNATURE` в качестве удостоверения. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+Используемые учетные данные необходимо создавать, используя `SHARED ACCESS SIGNATURE` в качестве удостоверения. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
 

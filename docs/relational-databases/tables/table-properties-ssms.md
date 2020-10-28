@@ -1,6 +1,6 @@
 ---
+title: Table Properties - SSMS
 description: Table Properties - SSMS
-title: Свойства таблицы (SSMS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,23 +9,25 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
+- sql12.SWB.SELECTCOLUMNS.F1
+- sql13.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.storage.f1
 - sql13.swb.tableproperties.changetracking.f1
 - sql13.swb.tableproperties.general.f1
-- sql12.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 018b1388e283541f883844daf77c68267c535a9c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810479"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344060"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Данный раздел описывает свойства таблицы, отображаемые в диалоговом окне «Свойства таблицы» в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения по отображению этих свойств см. в разделе [Просмотр определения таблицы](../../relational-databases/tables/view-the-table-definition.md).  
@@ -53,7 +55,7 @@ ms.locfileid: "91810479"
  **Дата создания**  
  Дата и время создания таблицы.  
   
- **имя**;  
+ **имя** ;  
  Имя таблицы.  
   
  **Схема**  
@@ -69,7 +71,7 @@ ms.locfileid: "91810479"
  Показывает, был ли объект создан с параметром «заключенный в кавычки идентификатор» в значении ON. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Укрупнение блокировки**  
- Указывает укрупнение блокировки гранулярности таблицы. Дополнительные сведения о блокировке в компоненте Database Engine см. в разделе [Руководство по блокировке транзакций и управлению версиями строк SQL Server](../sql-server-transaction-locking-and-row-versioning-guide.md?view=sql-server-ver15). Возможны следующие значения:  
+ Указывает укрупнение блокировки гранулярности таблицы. Дополнительные сведения о блокировке в компоненте Database Engine см. в разделе [Руководство по блокировке транзакций и управлению версиями строк SQL Server](../sql-server-transaction-locking-and-row-versioning-guide.md). Возможны следующие значения:  
   
  AUTO  
  Этот параметр позволяет [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выбрать степень детализации укрупнения блокировки, подходящую для данной схемы таблицы.  
@@ -84,11 +86,11 @@ ms.locfileid: "91810479"
  В большинстве случаев предотвращает укрупнение блокировки. Блокировки уровня таблицы запрещены не полностью. Например, при сканировании таблицы, которая не имеет кластеризованного индекса на уровне изоляции SERIALIZABLE, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен установить блокировку таблицы для защиты целостности данных.  
   
  **Таблица реплицирована**  
- Указывает на то, что таблица реплицирована в другую базу данных при помощи репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Допустимые значения — **True** или **False**.  
+ Указывает на то, что таблица реплицирована в другую базу данных при помощи репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Допустимые значения — **True** или **False** .  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Страница отслеживания изменений  
  **Отслеживание изменений**  
- Указывает, разрешено ли отслеживание изменений для этой таблицы. Значение по умолчанию равно **False**.  
+ Указывает, разрешено ли отслеживание изменений для этой таблицы. Значение по умолчанию равно **False** .  
   
  Этот параметр доступен только в том случае, если отслеживание изменений разрешено для базы данных.  
   
@@ -109,7 +111,7 @@ ms.locfileid: "91810479"
  Корневая папка для FileTable.  
   
  **Пространство имен FileTable включено**  
- Если это значение равно **True**, значит таблица — FileTable. Если изменить это значение на **False**, FileTable изменяется на обычную пользовательскую таблицу. Если впоследствии потребуется вновь преобразовать таблицу в FileTable, то перед преобразованием таблица должна пройти проверку согласованности FileTable.  
+ Если это значение равно **True** , значит таблица — FileTable. Если изменить это значение на **False** , FileTable изменяется на обычную пользовательскую таблицу. Если впоследствии потребуется вновь преобразовать таблицу в FileTable, то перед преобразованием таблица должна пройти проверку согласованности FileTable.  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> Страница хранилища  
  Отображаются относящиеся к хранению свойства выбранной таблицы.  
@@ -135,7 +137,7 @@ ms.locfileid: "91810479"
  Имя файловой группы, содержащей таблицу.  
   
  **Таблица секционирована**  
- Допустимые значения — **True** и **False**.  
+ Допустимые значения — **True** и **False** .  
   
  **Файловая группа файлового потока**  
  Укажите имя файловой группы данных FILESTREAM, если таблица содержит столбец **varbinary(max)** , в котором есть атрибут FILESTREAM. Значение по умолчанию — файловая группа данных FILESTREAM.  
@@ -144,7 +146,7 @@ ms.locfileid: "91810479"
   
 ### <a name="general"></a>Общие сведения  
  **Включен формат хранения Vardecimal**  
- Если задано **True**, это доступное только для чтения значение указывает, что типы данных **decimal** и **numeric** хранятся в формате vardecimal. Изменить его можно параметром **vardecimal storage format** хранимой процедуры [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
+ Если задано **True** , это доступное только для чтения значение указывает, что типы данных **decimal** и **numeric** хранятся в формате vardecimal. Изменить его можно параметром **vardecimal storage format** хранимой процедуры [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
   
  **Место, занимаемое индексом**  
  Объем свободного места в мегабайтах, занимаемого индексами в таблице. Это значение не включает занимаемое XML-индексом пространство для таблицы. Если XML-индексы относятся к таблице, используйте вместо этого процедуру [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  

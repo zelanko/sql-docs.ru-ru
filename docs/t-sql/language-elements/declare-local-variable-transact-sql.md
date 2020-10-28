@@ -21,12 +21,12 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fcb156d48e619a0d5ac399bf4c04a91720d3f0d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e58213e5098a1565dc25d702aef5f68589a55475
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196622"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679173"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,8 +74,8 @@ See CREATE TABLE for index option syntax.
   
 ```  
   
-
-Синтаксис для Azure Synapse Analytics и Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DECLARE   
 {{ @local_variable [AS] data_type } [ =value [ COLLATE <collation_name> ] ] } [,...n]  
@@ -84,120 +84,119 @@ DECLARE
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## Arguments
+## <a name="arguments"></a>Аргументы
 @*local_variable*  
- Is the name of a variable. Variable names must begin with an at (@) sign. Local variable names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
+ Имя переменной. Имена переменных должны начинаться с символа @. Имена локальных переменных должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
 *data_type*  
- Is any system-supplied, common language runtime (CLR) user-defined table type, or alias data type. A variable cannot be of **text**, **ntext**, or **image** data type.  
+ Любой системный тип данных, определяемый пользователем табличный тип среды CLR или псевдоним типа данных. Переменная не может иметь тип **text** , **ntext** или **image** .  
   
- For more information about system data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). For more information about CLR user-defined types or alias data types, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
+ Дополнительные сведения о типах данных в системе см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md). Дополнительные сведения об определяемых пользователем типах данных CLR или о псевдонимах типов данных см. в разделе [CREATE TYPE(Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
   
  =*value*  
- Assigns a value to the variable in-line. The value can be a constant or an expression, but it must either match the variable declaration type or be implicitly convertible to that type. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Подставляет значение переменной. Значение может быть константой или выражением, но должно совпадать с объявленным типом переменной или явно преобразовываться в этот тип. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 @*cursor_variable_name*  
- Is the name of a cursor variable. Cursor variable names must begin with an at (@) sign and conform to the rules for identifiers.  
+ Имя переменной курсора. Имена переменных курсора должны начинаться с символа @ и должны соответствовать правилам именования идентификаторов.  
   
 CURSOR  
- Specifies that the variable is a local cursor variable.  
+ Указывает, что переменная является локальной переменной курсора.  
   
 @*table_variable_name*  
- Is the name of a variable of type **table**. Variable names must begin with an at  (@) sign and conform to the rules for identifiers.  
+ Имя переменной типа **table** . Имена переменных должны начинаться с символа @ и соответствовать правилам именования идентификаторов.  
   
 <table_type_definition>  
-Defines the **table** data type. The table declaration includes column definitions, names, data types, and constraints. The only constraint types allowed are PRIMARY KEY, UNIQUE, NULL, and CHECK. An alias data type cannot be used as a column scalar data type if a rule or default definition is bound to the type.
+Определяет тип данных **table** . Декларация таблицы включает определения столбцов, имен, типов данных и ограничений. Допустимы только ограничения PRIMARY KEY, UNIQUE, NULL и CHECK. Псевдоним типа данных не может использоваться как скалярный тип данных столбца, если к этому столбцу привязано правило или значение по умолчанию.
   
-\<table_type_definiton>
-Is a subset of information used to define a table in CREATE TABLE. Elements and essential definitions are included here. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+Аргумент \<table_type_definiton> представляет собой подмножество данных, используемых для определения таблицы в инструкции CREATE TABLE. Сюда включены элементы и наиболее существенные определения. Дополнительные сведения см. в разделе [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).  
   
  *n*  
- Is a placeholder indicating that multiple variables can be specified and assigned values. When declaring **table** variables, the **table** variable must be the only variable being declared in the DECLARE statement.  
+ Заполнитель, указывающий на то, что могут быть заданы несколько переменных и им могут быть присвоены значения. При объявлении переменных типа **table** в инструкции DECLARE единственной объявляемой переменной должна быть переменная типа **table** .  
   
  *column_name*  
- Is the name of the column in the table.  
+ Имя столбца таблицы.  
   
  *scalar_data_type*  
- Specifies that the column is a scalar data type.  
+ Указывает, что столбец имеет скалярный тип данных.  
   
  *computed_column_expression*  
- Is an expression defining the value of a computed column. It is computed from an expression using other columns in the same table. For example, a computed column can have the definition **cost** AS **price \* qty**. The expression can be a noncomputed column name, constant, built-in function, variable, or any combination of these connected by one or more operators. The expression cannot be a subquery or a user-defined function. The expression cannot reference a CLR user-defined type.  
+ Выражение, определяющее значение вычисляемого столбца. Значение вычисляется из выражения при помощи других столбцов той же таблицы. Например, вычисляемый столбец может иметь определение **cost** AS **price \* qty** . Выражение может быть именем невычисляемого столбца, константой, встроенной функцией, переменной или любым их сочетанием, созданным с помощью одного или нескольких операторов. Выражение не может быть вложенным запросом или определяемой пользователем функцией. Выражение не может ссылаться на определяемый пользователем тип данных CLR.  
   
- [ COLLATE *collation_name*]  
- Specifies the collation for the column. *collation_name* can be either a Windows collation name or an SQL collation name, and is applicable only for columns of the **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext** data types. If not specified, the column is assigned either the collation of the user-defined data type (if the column is of a user-defined data type) or the collation of the current database.  
+ [ COLLATE *collation_name* ]  
+ Задает параметры сортировки для столбца. Аргумент *collation_name* может быть либо именем параметров сортировки Windows, либо именем параметров сортировки SQL и применим только к столбцам типа **char** , **varchar** , **text** , **nchar** , **nvarchar** и **ntext** . Если этот аргумент не указан, столбцу назначаются либо параметры сортировки определяемого пользователем типа данных (если столбец принадлежит к определяемому пользователем типу данных), либо параметры сортировки текущей базы данных.  
   
- For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+ Дополнительные сведения об именах параметров сортировки Windows и SQL см. в разделе [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md).  
   
  DEFAULT  
- Specifies the value provided for the column when a value is not explicitly supplied during an insert. DEFAULT definitions can be applied to any columns except those defined as **timestamp** or those with the IDENTITY property. DEFAULT definitions are removed when the table is dropped. Only a constant value, such as a character string; a system function, such as a SYSTEM_USER(); or NULL can be used as a default. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  
+ Указывает значение, присваиваемое столбцу в случае отсутствия явно заданного значения при вставке. Определения DEFAULT могут применяться к любым столбцам, кроме имеющих тип **timestamp** или обладающих свойством IDENTITY. Определения DEFAULT удаляются, когда таблица удаляется из памяти. По умолчанию могут использоваться только константные значения, например символьные строки, системные функции, например SYSTEM_USER(), или NULL. Для сохранения совместимости с более ранними версиями сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значению DEFAULT может быть присвоено имя ограничения.  
   
  *constant_expression*  
- Is a constant, NULL, or a system function used as the default value for the column.  
+ Константа, NULL или системная функция, используемые в качестве значения по умолчанию для столбца.  
   
  IDENTITY  
- Indicates that the new column is an identity column. When a new row is added to the table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a unique incremental value for the column. Identity columns are commonly used in conjunction with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. You must specify both the seed and increment, or neither. If neither is specified, the default is (1,1).  
+ Указывает, что новый столбец является столбцом идентификаторов. При добавлении в таблицу новой строки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует для столбца уникальное, последовательное значение. Столбцы идентификаторов наиболее часто используются в сочетании с ограничениями PRIMARY KEY для выполнения функции уникального идентификатора строки таблицы. Свойство IDENTITY может назначаться для столбцов типа **tinyint** , **smallint** , **int** , **decimal(p,0)** или **numeric(p,0)** . Для каждой таблицы можно создать только один столбец идентификаторов. Ограниченные значения по умолчанию и ограничения DEFAULT не могут использоваться в столбце идентификаторов. Необходимо указывать либо оба значения seed и increment, либо ни тот, ни другой. Если ничего не указано, применяется значение по умолчанию (1,1).  
   
  *seed*  
- Is the value used for the very first row loaded into the table.  
+ Значение, используемое для самой первой строки, загружаемой в таблицу.  
   
  *increment*  
- Is the incremental value added to the identity value of the previous row that was loaded.  
+ Значение, добавляемое к значению идентификатора предыдущей загруженной строки.  
   
  ROWGUIDCOL  
- Indicates that the new column is a row global unique identifier column. Only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. The ROWGUIDCOL property can be assigned only to a **uniqueidentifier** column.  
+ Указывает, что новый столбец является столбцом глобального уникального идентификатора строки. Только один столбец типа **uniqueidentifier** в таблице может быть назначен в качестве столбца ROWGUIDCOL. Свойство ROWGUIDCOL может быть присвоено только столбцу типа **uniqueidentifier** .  
   
  NULL | NOT NULL  
- Indicates if null is allowed in the variable. The default is NULL.  
+ Указывает, является ли значение null допустимым в переменной. Значение по умолчанию — NULL.  
   
  PRIMARY KEY  
- Is a constraint that enforces entity integrity for a given column or columns through a unique index. Only one PRIMARY KEY constraint can be created per table.  
+ Ограничение, которое с помощью уникального индекса требует целостности сущностей для данного столбца или столбцов. Можно создать только одно ограничение PRIMARY KEY для таблицы.  
   
  UNIQUE  
- Is a constraint that provides entity integrity for a given column or columns through a unique index. A table can have multiple UNIQUE constraints.  
+ Ограничение, которое с помощью уникального индекса обеспечивает целостность сущностей для данного столбца или столбцов. В таблице может быть несколько ограничений UNIQUE.  
   
  CHECK  
- Is a constraint that enforces domain integrity by limiting the possible values that can be entered into a column or columns.  
+ Ограничение, обеспечивающее целостность домена путем ограничения возможных значений, которые могут быть введены в столбец или столбцы.  
   
  *logical_expression*  
- Is a logical expression that returns TRUE or FALSE.  
+ Логическое выражение, возвращающее значения TRUE или FALSE.  
   
-## Remarks  
- Variables are often used in a batch or procedure as counters for WHILE, LOOP, or for an IF...ELSE block.  
+## <a name="remarks"></a>Remarks  
+ Переменные часто используются в пакете или процедуре в качестве счетчиков для циклов WHILE, LOOP или в блоке IF…ELSE.  
   
- Variables can be used only in expressions, not in place of object names or keywords. To construct dynamic SQL statements, use EXECUTE.  
+ Переменные могут использоваться только в выражениях, но не вместо имен объектов или ключевых слов. Для построения динамических инструкций SQL используйте EXECUTE.  
   
- The scope of a local variable is the batch in which it is declared.  
+ Областью локальной переменной является пакет, в котором она объявлена.  
  
- A table variable is not necessarily memory resident. Under memory pressure, the pages belonging to a table variable can be pushed out to tempdb.
+ Табличная переменная необязательно является резидентной. В случае нехватки памяти страницы, относящиеся к табличной переменной, можно перенести в базу данных tempdb.
   
- A cursor variable that currently has a cursor assigned to it can be referenced as a source in a:  
+ На переменную курсора, которая в настоящее время содержит назначенный ей курсор, можно ссылаться в качестве источника из:  
   
--   CLOSE statement.  
+-   инструкции CLOSE;  
   
--   DEALLOCATE statement.  
+-   инструкции DEALLOCATE;  
   
--   FETCH statement.  
+-   инструкции FETCH;  
   
--   OPEN statement.  
+-   инструкции OPEN;  
   
--   Positioned DELETE or UPDATE statement.  
+-   позиционированных инструкций DELETE или UPDATE;  
   
--   SET CURSOR variable statement (on the right side).  
+-   инструкции SET CURSOR с использованием переменных (в правой части).  
   
- In all of these statements, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises an error if a referenced cursor variable exists but does not have a cursor currently allocated to it. If a referenced cursor variable does not exist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises the same error raised for an undeclared variable of another type.  
+ Во всех этих инструкциях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует ошибку, если переменная курсора, на которую они ссылаются, существует, но не содержит курсор, назначенный ей в настоящее время. Если переменная курсора, на которую производится ссылка, не существует, сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует ту же ошибку, что и для необъявленной переменной другого типа.  
   
- A cursor variable:  
+ Переменная курсора:  
   
--   Can be the target of either a cursor type or another cursor variable. For more information, see [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+-   Может быть целью типа курсора или другой переменной курсора. Дополнительные сведения см. в разделе [SET @local_variable (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
--   Can be referenced as the target of an output cursor parameter in an EXECUTE statement if the cursor variable does not have a cursor currently assigned to it.  
+-   Может быть объектом ссылки в качестве цели выходного параметра курсора в инструкции EXECUTE, если эта переменная не содержит курсора, назначенного ей в настоящее время.  
   
--   Should be regarded as a pointer to the cursor.  
+-   Должна рассматриваться в качестве указателя на курсор.  
   
-## Examples  
+## <a name="examples"></a>Примеры  
   
-### A. Using DECLARE  
- The following example uses a local variable named `@find` to retrieve contact information for all last names beginning with `Man`.  
+### <a name="a-using-declare"></a>A. Использование инструкции DECLARE  
+ В следующем примере локальная переменная с именем `@find` используется для получения контактных данных для лиц с фамилией, начинающейся на `Man`.  
   
 ```sql  
 USE AdventureWorks2012;  
