@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c283777fea2999d7948a3282b623cd92f0baf54
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542125"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907390"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Представления схемы системных сведений (Transact-SQL)
 
@@ -100,6 +100,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## <a name="permissions"></a>Разрешения  
+Видимость метаданных в представлениях информационной схемы ограничена защищаемыми объектами, которыми пользователь владеет или на которые пользователь предоставил какое-либо разрешение. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+
+> [!NOTE]  
+> Представления информационной схемы определяются на уровне сервера и поэтому не могут быть запрещены в контексте пользовательской базы данных. Чтобы отозвать или запретить доступ (SELECT), необходимо использовать базу данных master. По умолчанию открытая роль имеет разрешение SELECT на все представления информационной схемы, но содержимое ограничено правилами видимости метаданных.
 
 ## <a name="see-also"></a>См. также:
 
