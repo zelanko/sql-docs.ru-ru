@@ -23,13 +23,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/20/2020
-ms.openlocfilehash: e86a46603aeac49d0622f17c0520eb7d16970948
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.date: 10/27/2020
+ms.openlocfilehash: 3dec5e211db8ae21d7b5425c4d66c727bf1b4efd
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412640"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734650"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -43,19 +43,19 @@ SQL Server Management Studio (SSMS) — это интегрированная с
 
 :::image type="icon" source="media/download-icon.png" border="false"::: **[Скачать SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.7 является новейшей общедоступной (GA) версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.7 она будет обновлена.
+SSMS 18.7.1 является новейшей общедоступной (GA) версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.7.1 она будет обновлена.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-- Номер выпуска: 18.7
-- Номер сборки: 15.0.18357.0
-- Дата выпуска: 20 октября 2020 г.
+- Номер выпуска: 18.7.1
+- Номер сборки: 15.0.18358.0
+- Дата выпуска: 27 октября 2020 г.
 
 Если у вас есть замечания и предложения или вы хотите сообщить о проблемах, обратитесь к команде разработчиков SSMS через [пользовательские отзывы на SQL Server](https://aka.ms/sqlfeedback).
 
-При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, поэтому обе версии остаются доступными для использования. Но если у вас установлена *предварительная версия* SSMS 18.x, перед установкой SSMS 18.7 ее необходимо удалить. Чтобы узнать, установлена ли у вас предварительная версия, перейдите в окно **Справка > О программе**.
+При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, поэтому обе версии остаются доступными для использования. Но если у вас установлена *предварительная версия* SSMS 18.x, перед установкой SSMS 18.7.1 ее необходимо удалить. Чтобы узнать, установлена ли у вас предварительная версия, перейдите в окно **Справка > О программе** .
 
-Если на компьютере есть несколько параллельных установок SSMS, всегда проверяйте, правильную ли версию вы запускаете. Последняя версия называется **Microsoft SQL Server Management Studio 18**.
+Если на компьютере есть несколько параллельных установок SSMS, всегда проверяйте, правильную ли версию вы запускаете. Последняя версия называется **Microsoft SQL Server Management Studio 18** .
 
 > [!Note]
 > Если вы открываете локализованную версию этой страницы и хотите просмотреть актуальные материалы, посетите эту страницу на [версии сайта на языке US-English](https://aka.ms/downloadssmsusenglish). С версии сайта US-English вы можете скачать SSMS на других [языках из числа доступных](#available-languages).
@@ -64,8 +64,8 @@ SSMS 18.7 является новейшей общедоступной (GA) в
 
 Этот выпуск SSMS можно установить на следующих языках.
 
-SQL Server Management Studio 18.7:  
-[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40a)
+SQL Server Management Studio 18.7.1:  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40a)
 
 > [!NOTE]
 > Модуль SQL Server PowerShell устанавливается отдельно из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
@@ -74,7 +74,7 @@ SQL Server Management Studio 18.7:
 
 Дополнительные сведения о новых возможностях в этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
 
-В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-187).
+В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-1871).
 
 ## <a name="previous-versions"></a>Предыдущие версии
 
@@ -102,7 +102,7 @@ SQL Server Management Studio 18.7:
     start "" /w %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
     ```
 
-    Можно также передать */Passive* вместо */Quiet*, чтобы увидеть пользовательский интерфейс программы установки.
+    Можно также передать */Passive* вместо */Quiet* , чтобы увидеть пользовательский интерфейс программы установки.
 
 3. Если все работает правильно, в этом примере можно будет увидеть, что среда SSMS установлена по пути %systemdrive%\SSMSto\Common7\IDE\Ssms.exe. Если что-то пошло не так, можно проверить возвращенный код ошибки и взглянуть на файл журнала в %TEMP%\SSMSSetup.
 
