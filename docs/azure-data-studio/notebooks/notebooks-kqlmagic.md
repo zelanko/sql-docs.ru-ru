@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 7f77f26ffbaa0dab14e41654fdcddda3dd4ab278
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226974"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300489"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic в Azure Data Studio
 
-**Kqlmagic** — это команда, которая расширяет возможности ядра Python в **[записных книжках Azure Data Studio](./notebooks-guidance.md)** . Вы можете объединить Python и **[язык запросов Kusto (KQL)](/azure/data-explorer/kusto/query)** , чтобы запрашивать и визуализировать данные с использованием обширной библиотеки Plot.ly, интегрированной в команды `render`. Kqlmagic предоставляет преимущества записных книжек, анализ данных и широкие возможности Python в одном расположении. Поддерживаемые источники данных с Kqlmagic включают **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)** , **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** и **[журналы Azure Monitor](/azure/azure-monitor/platform/data-platform-logs)** .
+**Kqlmagic**  — это команда, которая расширяет возможности ядра Python в **[записных книжках Azure Data Studio](./notebooks-guidance.md)** . Вы можете объединить Python и **[язык запросов Kusto (KQL)](/azure/data-explorer/kusto/query)** , чтобы запрашивать и визуализировать данные с использованием обширной библиотеки Plot.ly, интегрированной в команды `render`. Kqlmagic предоставляет преимущества записных книжек, анализ данных и широкие возможности Python в одном расположении. Поддерживаемые источники данных с Kqlmagic включают **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)** , **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** и **[журналы Azure Monitor](/azure/azure-monitor/platform/data-platform-logs)** .
 
 В этой статье показано, как создать и запустить записную книжку в Azure Data Studio с помощью расширения Kqlmagic для кластера Azure Data Explorer, журнала Application Insights и журналов Azure Monitor.
 
@@ -31,11 +31,11 @@ ms.locfileid: "91226974"
 
 Действия, описанные в этом разделе, выполняются в записной книжке Azure Data Studio.
 
-1. Создайте новую записную книжку и измените **ядро** на *Python 3*.
+1. Создайте новую записную книжку и измените **ядро** на *Python 3* .
 
    ![Новая записная книжка](media/notebooks-kqlmagic/install-new-notebook.png)
 
-2. При появлении запроса выберите **Да**, чтобы обновить пакеты Python.
+2. При появлении запроса выберите **Да** , чтобы обновить пакеты Python.
 
    ![Да](media/notebooks-kqlmagic/install-python-yes.png)
 
@@ -71,7 +71,7 @@ ms.locfileid: "91226974"
    ```
 
    > [!Note]
-   > Если `Samples@help` запрашивает пароль, вы можете не указывать его и нажать клавишу **ВВОД**.
+   > Если `Samples@help` запрашивает пароль, вы можете не указывать его и нажать клавишу **ВВОД** .
 
    ![Справка](media/notebooks-kqlmagic/install-help.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "91226974"
    > [!Note]
    > Каждый раз, когда вы создаете новую записную книжку в Azure Data Studio, необходимо загрузить расширение Kqlmagic.
 
-1. Убедитесь, что для параметра **Ядро** установлено *Python3*.
+1. Убедитесь, что для параметра **Ядро** установлено *Python3* .
 
    ![Изменение ядра](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -112,7 +112,7 @@ ms.locfileid: "91226974"
     > Если вы используете собственный кластер ADX, включите в строку подключения регион следующим образом:   
     ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
-   Для проверки подлинности используется имя входа устройства. Скопируйте код из выходных данных и выберите **проверка подлинности**, чтобы открыть браузер, где необходимо вставить код. После успешного выполнения проверки подлинности можно вернуться к Azure Data Studio, чтобы продолжить выполнение остальной части скрипта.
+   Для проверки подлинности используется имя входа устройства. Скопируйте код из выходных данных и выберите **проверка подлинности** , чтобы открыть браузер, где необходимо вставить код. После успешного выполнения проверки подлинности можно вернуться к Azure Data Studio, чтобы продолжить выполнение остальной части скрипта.
 
    ![Проверка подлинности Azure Data Explorer](media/notebooks-kqlmagic/ade-auth.png)
 
@@ -157,7 +157,7 @@ ms.locfileid: "91226974"
 
 ### <a name="load-and-authenticate-kqlmagic-for-application-insights"></a><a name="appin-load-auth"></a> Загрузка и проверка подлинности Kqlmagic для Application Insights
 
-1. Убедитесь, что для параметра **Ядро** установлено *Python3*.
+1. Убедитесь, что для параметра **Ядро** установлено *Python3* .
 
    ![Ядро](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -212,7 +212,7 @@ ms.locfileid: "91226974"
 
 ### <a name="load-and-authenticate-kqlmagic-for-azure-monitor-logs"></a><a name="aml-load-auth"></a> Загрузка и проверка подлинности Kqlmagic для журналов Azure Monitor
 
-1. Убедитесь, что для параметра **Ядро** установлено *Python3*.
+1. Убедитесь, что для параметра **Ядро** установлено *Python3* .
 
    ![Change](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -254,8 +254,10 @@ ms.locfileid: "91226974"
 
 Дополнительные сведения о записных книжках и Kqlmagic
 
+- [Расширение Kusto (KQL) для Azure Data Studio (предварительная версия)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
+- [Создание и запуск записной книжки Kusto (KQL) (предварительная версия)](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
 - [Использование расширения Jupyter Notebook и Kqlmagic для анализа данных в Azure Data Explorer](/azure/data-explorer/Kqlmagic)
-- [Расширение (Magic) для Jupyter Notebook и Jupyter Lab, обеспечивающее работу с записными книжками с помощью Kusto, Application Insights и LogAnalytics](https://github.com/Microsoft/jupyter-Kqlmagic)
+- [Расширение (Magic) для Jupyter Notebook и Jupyter Lab](https://github.com/Microsoft/jupyter-Kqlmagic), обеспечивающее работу с данными Kusto, Application Insights и Log Analytics в записных книжках.
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [Использование записных книжек в Azure Data Studio](./notebooks-guidance.md)

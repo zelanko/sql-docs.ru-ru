@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0bd60864615e1ffbf2aecac5eb41efa86407ba68
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988010"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734385"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Масштабное подключение экземпляров SQL Server к службе Azure Arc
 
@@ -79,10 +79,10 @@ ms.locfileid: "91988010"
 
 На каждом целевом компьютере должен быть установлен [Azure CLI](/cli/azure/install-azure-cli). Скрипт регистрации автоматически входит в Azure с учетными данными субъекта-службы, если они были предоставлены, и никакой другой пользователь еще не вошел. Чтобы подключить экземпляры SQL Server на нескольких компьютерах Linux, выполните следующие действия.
 
-1. Создайте субъект-службу с помощью команды ["az ad sp create-for-rbac"](/cli/azure/ad/sp.md#az_ad_sp_create_for_rbac). 
+1. Создайте субъект-службу с помощью команды ["az ad sp create-for-rbac"](/cli/azure/ad/sp#az_ad_sp_create_for_rbac).
 
    ```azurecli-interactive
-   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>    
+   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>
    ```
 
    ```output

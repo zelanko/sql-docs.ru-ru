@@ -1,7 +1,7 @@
 ---
 title: Что такое расширения языка для SQL Server?
 titleSuffix: ''
-description: Расширения языка — это функция SQL Server, используемая для выполнения внешнего кода. В SQL Server 2019 поддерживаются Java, R и Python. Реляционные данные могут использоваться во внешнем коде с помощью платформы расширяемости.
+description: Расширения языка — это функция SQL Server, используемая для выполнения внешнего кода. В SQL Server 2019 поддерживаются Java, R и Python. Реляционные данные могут использоваться во внешнем коде с помощью платформы расширяемости.
 author: dphansen
 ms.author: davidph
 ms.date: 10/07/2020
@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09d5643b3a39493843adc0ad2da716b7fda1b332
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c4482adb86f9a2f205bd64044a18f342cf3e13c5
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934903"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92154949"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>Что такое расширения языка для SQL Server?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -42,5 +42,5 @@ ms.locfileid: "91934903"
 
 + Установка [настраиваемой среды выполнения Python для SQL Server](../machine-learning/install/custom-runtime-python.md)
 + Установка [настраиваемой среды выполнения R для SQL Server](../machine-learning/install/custom-runtime-r.md)
-+ Установка [Расширений языка для SQL Server в Windows](install/install-sql-server-language-extensions-on-windows.md) или [в Linux](../linux/sql-server-linux-setup-language-extensions.md)
++ Установка [Расширений языка для SQL Server в Windows](install/windows-java.md) или [в Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
 + Установка [Пакета Microsoft Extensibility SDK для Java](how-to/extensibility-sdk-java-sql-server.md)

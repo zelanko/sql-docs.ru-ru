@@ -1,7 +1,7 @@
 ---
-title: Установка azdata с помощью установщика Windows
+title: Установка Azure Data CLI (azdata) с помощью установщика Windows
 titleSuffix: ''
-description: Узнайте, как установить средство azdata с помощью установщика.
+description: Узнайте, как установить средство Azure Data CLI (azdata) с помощью установщика.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b36b69206f6a50c3c24a5ed059f52a7f2edd6c68
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 9dd953a78a992a9a5fed7135ae0aee02f88e4de9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784739"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257497"
 ---
-# <a name="install-azdata-with-windows-installer"></a>Установка `azdata` с помощью установщика Windows
+# <a name="install-azure-data-cli-azdata-with-windows-installer"></a>Установка [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] с помощью установщика Windows
 
 [!INCLUDE [azdata](../../includes/applies-to-version/azdata.md)]
 
@@ -44,4 +44,4 @@ ms.locfileid: "91784739"
 
 Дополнительные сведения о кластерах больших данных см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md)
 
-Использование azdata со [службами данных с поддержкой Azure Arc](/azure/azure-arc/data/)
+Использование `azdata` в [службах данных с поддержкой Azure Arc](/azure/azure-arc/data/)

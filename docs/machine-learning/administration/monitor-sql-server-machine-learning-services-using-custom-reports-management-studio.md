@@ -3,21 +3,21 @@ title: Мониторинг выполнения скриптов с помощ�
 description: Пользовательские отчеты в SQL Server Management Studio (SSMS) можно использовать для отслеживания выполнения внешних скриптов (Python и R), мониторинга используемых ресурсов, диагностики проблем и настройки производительности в службах машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/17/2019
+ms.date: 10/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca6070ec0b4558ab907f6945ac57dc9bc9ab5f
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847374"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115400"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Мониторинг выполнения скриптов Python и R с помощью пользовательских отчетов в SQL Server Management Studio
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Пользовательские отчеты в [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) можно использовать для отслеживания выполнения внешних скриптов (Python и R), мониторинга используемых ресурсов, диагностики проблем и настройки производительности в [службах машинного обучения SQL Server](../sql-server-machine-learning-services.md).
 
@@ -41,6 +41,11 @@ ms.locfileid: "91847374"
 
 1. Скачайте [пользовательские отчеты SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) для служб машинного обучения SQL Server с сайта GitHub.
 
+   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   >[!NOTE]
+   > Пользовательский отчет **ML Services — Configure Instance** не поддерживается в Управляемом экземпляре SQL Azure.
+   ::: moniker-end
+
 2. Копирование отчетов в Management Studio
 
     1. Найдите папку настраиваемых отчетов, используемую SQL Server Management Studio. По умолчанию пользовательские отчеты хранятся в этой папке (где **user_name** — это имя пользователя Windows):
@@ -55,11 +60,11 @@ ms.locfileid: "91847374"
 
     1. В Management Studio щелкните правой кнопкой мыши узел **Базы данных** для экземпляра, на котором вы хотите запустить отчеты.
 
-    2. Щелкните **Отчеты**, а затем **Настраиваемые отчеты**.
+    2. Щелкните **Отчеты** , а затем **Настраиваемые отчеты** .
 
     3. В диалоговом окне **Открыть файл** найдите папку настраиваемых отчетов.
 
-    4. Выберите один из загруженных ранее RDL-файлов и нажмите кнопку **Открыть**.
+    4. Выберите один из загруженных ранее RDL-файлов и нажмите кнопку **Открыть** .
 
 ## <a name="reports"></a>Отчеты
 

@@ -1,7 +1,7 @@
 ---
-title: Установка azdata с помощью zypper
+title: Установка Azure Data CLI (azdata) с помощью zypper
 titleSuffix: ''
-description: Узнайте, как установить средство azdata с помощью zypper.
+description: Узнайте, как установить средство Azure Data CLI (azdata) с помощью zypper.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ec87d5739e3707c056f7945a2c882eb00700464d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d43a1f9c65aa17fae3d262a51f45105b5f583cdd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725268"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257517"
 ---
-# <a name="install-azdata-with-zypper"></a>Установка `azdata` с помощью zypper
+# <a name="install-azure-data-cli-azdata-with-zypper"></a>Установка [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] с помощью zypper
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
@@ -30,7 +30,7 @@ ms.locfileid: "91725268"
 ## <a name="install-with-zypper"></a>Установка с помощью zypper
 
 >[!IMPORTANT]
->Пакет RPM Azure для `azdata-cli` зависит от пакета python3. В вашей системе может быть установлена более ранняя версия Python, чем *требуемая версия 3.6.x*. Если для вас это важно, найдите другой пакет python3 или выполните инструкции по установке вручную с помощью [`pip`](../install/deploy-install-azdata-pip.md).
+>Пакет RPM Azure для `azdata-cli` зависит от пакета python3. В вашей системе может быть установлена более ранняя версия Python, чем *требуемая версия 3.6.x* . Если для вас это важно, найдите другой пакет python3 или выполните инструкции по установке вручную с помощью [`pip`](../install/deploy-install-azdata-pip.md).
 
 1. Установите зависимости, необходимые для установки `azdata-cli`.
 

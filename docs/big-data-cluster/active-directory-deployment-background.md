@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892504"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257344"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Развертывание нескольких [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в одном домене Active Directory
 
@@ -140,7 +140,7 @@ ms.locfileid: "91892504"
 
 ### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>Как вернуться к поведению до пакета обновлений CU5?
 
-В некоторых ситуациях вы не можете использовать новый параметр `subdomain`. Например, необходимо развернуть выпуск до пакета обновлений CU5, и вы уже обновили `azdata` CLI. Это маловероятно, но если необходимо вернуться к предыдущему поведению, можно задать для параметра `useSubdomain` значение `false` в разделе `control.json` Active Directory.
+В некоторых ситуациях вы не можете использовать новый параметр `subdomain`. Например, необходимо развернуть выпуск до пакета обновлений CU5, и вы уже обновили [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Это маловероятно, но если необходимо вернуться к предыдущему поведению, можно задать для параметра `useSubdomain` значение `false` в разделе `control.json` Active Directory.
 
 В следующем примере для параметра `useSubdomain` задается значение `false` в этом сценарии.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: cdb11607fe7424c8c1159ba767e6f8292361065f
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956639"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793761"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Создание рабочих процессов SSIS и SSRS на языке R в SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-В конструкторе служб SSIS создайте [задачу выполнения SQL](../../integration-services/control-flow/execute-sql-task.md) для выполнения хранимой процедуры **generate_iris_rx_model**. Модель сериализуется и сохраняется в таблице ssis_iris_models. Скрипт для **SQLStatement** выглядит следующим образом:
+В конструкторе служб SSIS создайте [задачу выполнения SQL](../../integration-services/control-flow/execute-sql-task.md) для выполнения хранимой процедуры **generate_iris_rx_model** . Модель сериализуется и сохраняется в таблице ssis_iris_models. Скрипт для **SQLStatement** выглядит следующим образом:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 Теперь, когда у вас есть код, загружающий обучающие данные и создающий модель, осталось только использовать модель для создания прогнозов. 
 
-Для этого добавьте скрипт R в SQL-запрос, чтобы активировать встроенную функцию R [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) ssis_iris_model. Эта задача выполняется с помощью хранимой процедуры **predict_species_length**.
+Для этого добавьте скрипт R в SQL-запрос, чтобы активировать встроенную функцию R [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) ssis_iris_model. Эта задача выполняется с помощью хранимой процедуры **predict_species_length** .
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -193,6 +193,6 @@ exec predict_species_length 'rxLinMod';
 
 С помощью [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] вы можете выполнять сложные операции в R через хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)], которые легко можно использовать во множестве средств создания отчетов, включая [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Power BI.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 Примеры служб SSIS и SSRS в этой статье иллюстрируют два варианта выполнения хранимых процедур, содержащих внедренный скрипт R или Python. Ключевая идея в том, что можно сделать скрипт R или Python доступным для любого приложения или средства, которые могут отправить запрос на выполнение хранимой процедуры. Кроме того, со службами SSIS можно создавать пакеты, которые автоматизируют и планируют целый ряд операций, таких как получение данных, очистка, манипуляции и т. д., с помощью функций обработки и анализа данных R или Python, включенных в цепочку операций. Дополнительные сведения и идеи см. в разделе [Использование кода R с хранимыми процедурами в Службах машинного обучения SQL Server](operationalizing-your-r-code.md).

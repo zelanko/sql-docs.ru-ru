@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: В этой серии руководств, состоящий из пяти частей, вы узнаете, как внедрять код R в хранимые процедуры SQL Server и функции T-SQL с использованием машинного обучения SQL для прогнозирования стоимости поездки в нью-йоркском такси с помощью двоичной классификации.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f9f1b43b9c49cebaed706bf3c8448881c4df46
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173661"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412559"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Учебник по R. Прогнозирование стоимости поездки в нью-йоркском такси с использованием двоичной классификации
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -72,6 +72,10 @@ ms.locfileid: "88173661"
 + Установка [библиотек R](../package-management/r-package-information.md)
 
 + [Предоставление разрешений на выполнение скриптов Python](../security/user-permission.md)
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
++ Начиная с SQL Server 2019, механизм изоляции требует предоставления соответствующих разрешений каталогу, в котором хранится файл графика. Дополнительные сведения о настройке этих разрешений см. в разделе [Разрешения для файлов программы | SQL Server 2019 в Windows: изменения в изоляции в Службах машинного обучения](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
 
 + Восстановление демонстрационной базы данных [нью-йоркского такси](demo-data-nyctaxi-in-sql.md)
 

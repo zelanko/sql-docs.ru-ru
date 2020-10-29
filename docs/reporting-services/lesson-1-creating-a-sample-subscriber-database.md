@@ -10,10 +10,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "87243275"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Урок 1. Создание образца базы данных подписчика
@@ -28,7 +28,7 @@ ms.locfileid: "87243275"
   
 2.  Щелкните правой кнопкой мыши "Базы данных" и выберите команду **Создать базу данных...**  
   
-3.  В диалоговом окне "Создать базу данных" в поле **Имя базы данных**введите *Подписчики*. 
+3.  В диалоговом окне "Создать базу данных" в поле **Имя базы данных** введите *Подписчики* . 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  Нажмите кнопку **Создать запрос** на панели инструментов.  

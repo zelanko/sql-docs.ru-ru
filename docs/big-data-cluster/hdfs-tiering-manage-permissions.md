@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 126bb1ae7daddbaeb4d0ab72440051807f71cd5c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ef2a1097d07494ca74ed2afe50c93922de83838c
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725836"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257174"
 ---
 # <a name="manage-hdfs-permissions-for-big-data-clusters-2019"></a>Управление разрешениями HDFS для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -22,7 +22,7 @@ ms.locfileid: "91725836"
 
 HDFS как файловая система подобна файловым системам на базе Linux, в которых в качестве модели разрешений для файлов используется POSIX. Помимо традиционной модели разрешений POSIX, HDFS также поддерживает списки управления доступом POSIX (ACL). Дополнительные сведения см. в [статье Apache Hadoop об ACL](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29).
 
-В следующих разделах приведены примеры использования CLI `azdata` для управления разрешениями HDFS для файлов и каталогов.
+В следующих разделах приведены примеры использования [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] для управления разрешениями HDFS для файлов и каталогов.
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -31,7 +31,7 @@ HDFS как файловая система подобна файловым си
   
 ## <a name="hdfs-shell"></a>Оболочка HDFS
 
-Функция оболочки `hdfs` в `azdata` позволяет выдавать команды непосредственно в оболочке для управления разрешениями HDFS для файлов и каталогов. Базовый механизм использует вызовы WebHDFS для выдачи команд.
+Функция оболочки `hdfs` в [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] позволяет выдавать команды непосредственно в оболочке для управления разрешениями HDFS для файлов и каталогов. Базовый механизм использует вызовы WebHDFS для выдачи команд.
 
 Следующая команда открывает оболочку.
 
@@ -72,7 +72,7 @@ acl modify: Change completed.
 }
 ```
 
-## <a name="create-a-directory-in-hdfs-using-azdata"></a>Создание каталога в HDFS с помощью `azdata`
+## <a name="create-a-directory-in-hdfs-using-azure-data-cli-azdata"></a>Создание каталога в HDFS с помощью [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 
 В следующем примере показано создание каталога с именем `data` по пути `/sales`.
 
@@ -110,7 +110,7 @@ azdata bdc hdfs chmod --path /sales/users --permission 1750
 
 ## <a name="setting-acls-on-files-and-directories"></a>Настройка списков управления доступом для файлов и каталогов
 
-Чтобы задать списки управления доступом для файлов и каталогов HDFS, используйте команды `azdata`.
+Чтобы задать списки управления доступом для файлов и каталогов HDFS, используйте команды [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
 В следующем примере показано, как настроить списки управления доступом для каталога и предоставить пользователю с именем *`tom`* доступ на чтение, запись и выполнение в каталоге *`data`* . 
 
@@ -133,6 +133,6 @@ azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group:
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- [Справочник `azdata`](../azdata/reference/reference-azdata.md)
+- [Справочник [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/reference/reference-azdata.md)
 
 - [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

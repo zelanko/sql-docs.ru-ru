@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193650"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793781"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Развертывание модели R и ее использование в SQL Server (пошаговое руководство)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92193650"
 
 ## <a name="batch-scoring"></a>Пакетная оценка
 
-Создайте хранимую процедуру *PredictTipBatchMode*, которая создает несколько прогнозов, передавая запрос SQL или таблицу в качестве входных данных. Возвращается таблица результатов, которая может быть вставлена непосредственно в таблицу или записана в файл.
+Создайте хранимую процедуру *PredictTipBatchMode* , которая создает несколько прогнозов, передавая запрос SQL или таблицу в качестве входных данных. Возвращается таблица результатов, которая может быть вставлена непосредственно в таблицу или записана в файл.
 
 - получает набор входных данных в виде запроса SQL;
 - вызывает обученную модель логистической регрессии, которая была сохранена на предыдущем занятии;
@@ -74,9 +74,9 @@ ms.locfileid: "92193650"
 
     + Для вызова хранимой модели из таблицы SQL используется инструкция SELECT. Модель извлекается из таблицы как данные **varbinary(max)** , сохраняется в переменной SQL _\@lmodel2_ и передается как параметр *mod* в системную хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Данные, используемые в качестве входных данных для оценки, определяются как SQL-запрос и хранятся в виде строки в переменной SQL _\@input_. Данные, извлекаемые из базы данных, хранятся в кадре данных, именуемом *InputDataSet*. Это просто стандартное имя для входных данных в процедуре [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). При необходимости можно определить другое имя переменной с помощью параметра _\@input_data_1_name_.
+    + Данные, используемые в качестве входных данных для оценки, определяются как SQL-запрос и хранятся в виде строки в переменной SQL _\@input_ . Данные, извлекаемые из базы данных, хранятся в кадре данных, именуемом *InputDataSet* . Это просто стандартное имя для входных данных в процедуре [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). При необходимости можно определить другое имя переменной с помощью параметра _\@input_data_1_name_ .
 
-    + Для формирования оценок хранимая процедура вызывает функцию rxPredict из библиотеки **RevoScaleR**.
+    + Для формирования оценок хранимая процедура вызывает функцию rxPredict из библиотеки **RevoScaleR** .
 
     + Возвращаемое значение *Score* является вероятностью получения водителем чаевых с учетом модели. При необходимости можно легко применить определенный фильтр к возвращаемым значениям, чтобы разделить их на категории "чаевые" или "без чаевых".  Например, вероятность менее 0,5 означает вероятное отсутствие чаевых.
   
@@ -192,13 +192,13 @@ ms.locfileid: "92193650"
     END
     ```
 
-2. В SQL Server Management Studio можно использовать инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (или **EXECUTE**) для вызова хранимой процедуры и передачи ей необходимых входных данных. Например, попробуйте выполнить эту инструкцию в Management Studio:
+2. В SQL Server Management Studio можно использовать инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (или **EXECUTE** ) для вызова хранимой процедуры и передачи ей необходимых входных данных. Например, попробуйте выполнить эту инструкцию в Management Studio:
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    Здесь передаются значения для переменных _passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ и _dropoff\_longitude_.
+    Здесь передаются значения для переменных _passenger\_count_ , _trip_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ и _dropoff\_longitude_ .
 
 3. Чтобы выполнить этот же вызов из кода R, просто определите переменную R, содержащую весь вызов хранимой процедуры, например:
 
@@ -206,9 +206,9 @@ ms.locfileid: "92193650"
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    Здесь передаются значения для переменных _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ и _dropoff\_longitude_.
+    Здесь передаются значения для переменных _passenger\_count_ , _trip\_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ и _dropoff\_longitude_ .
 
-4. Вызовите функцию `sqlQuery` (из пакета **RODBC**) и передайте строку подключения и строковую переменную, содержащую вызов хранимой процедуры.
+4. Вызовите функцию `sqlQuery` (из пакета **RODBC** ) и передайте строку подключения и строковую переменную, содержащую вызов хранимой процедуры.
 
     ```R
     # predict with stored procedure in single mode
@@ -230,4 +230,4 @@ ms.locfileid: "92193650"
 + [Сценарии и шаблоны решений для обработки и анализа данных](data-science-scenarios-and-solution-templates.md)
 + [Дополнительные аналитические функции в базе данных для разработчиков SQL (руководство)](r-taxi-classification-introduction.md)
 + [Руководства по Machine Learning Server](/machine-learning-server/r/how-to-introduction)
-+ [Дополнительные ресурсы по Machine Learning Server](//machine-learning-server/resources-more)
++ [Дополнительные ресурсы по Machine Learning Server](/machine-learning-server/resources-more)

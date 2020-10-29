@@ -3,24 +3,24 @@ title: Запрос внешних данных в Oracle
 titleSuffix: SQL Server big data clusters
 description: В этом учебнике описывается, как выполняется запрос данных Oracle из кластера больших данных SQL Server 2019. Для этого создается внешняя таблица на основе данных в Oracle, после чего выполняется запрос.
 author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ''
-ms.date: 08/21/2019
+ms.author: dacoelho
+ms.reviewer: mikeray
+ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772840"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196089"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Руководство по Запрос данных Oracle из кластера больших данных SQL Server
+# <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>Руководство по созданию запроса Oracle из Кластера больших данных SQL Server
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-В этом руководстве описывается, каким образом выполняется запрос данных Oracle из кластера больших данных SQL Server 2019. Для работы с этим руководством требуется доступ к серверу Oracle. Если у вас нет доступа к серверу, из этого руководства вы можете узнать о принципах виртуализации данных для внешних источников в кластере больших данных SQL Server.
+В этом руководстве описывается, каким образом выполняется запрос данных Oracle из кластера больших данных SQL Server 2019. Для работы с этим руководством требуется доступ к серверу Oracle. Требуется учетная запись пользователя Oracle с правами на чтение для внешнего объекта. Поддерживается проверка подлинности пользователя через прокси-сервер Oracle. Если у вас нет доступа к серверу, из этого руководства вы можете узнать о принципах виртуализации данных для внешних источников в кластере больших данных SQL Server.
 
 В этом руководстве описано следующее:
 
@@ -67,7 +67,7 @@ ms.locfileid: "85772840"
 
 1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Дважды щелкните подключение в окне **Серверы**, чтобы открыть панель мониторинга сервера для главного экземпляра SQL Server. Выберите **Создать запрос**.
+1. Дважды щелкните подключение в окне **Серверы** , чтобы открыть панель мониторинга сервера для главного экземпляра SQL Server. Выберите **Создать запрос** .
 
    ![Запрос главного экземпляра SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
@@ -90,6 +90,30 @@ ms.locfileid: "85772840"
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
+   ```
+
+### <a name="optional-oracle-proxy-authentication"></a>Необязательно. Проверка подлинности прокси-сервера Oracle
+
+Oracle поддерживает проверку подлинности прокси-сервера для обеспечения точной детализации управления доступом. Пользователь прокси-сервера подключается к базе данных Oracle, используя ее учетные данные, и олицетворяет другого пользователя в базе данных. 
+
+Пользователя прокси-сервера можно настроить таким образом, чтобы он имел ограниченный доступ по сравнению с олицетворением пользователя. Например, пользователю прокси-сервера можно разрешить подключаться с помощью определенной роли базы данных олицетворенного пользователя. Удостоверение пользователя, подключающегося к базе данных Oracle через прокси-сервер, сохраняется в соединении, даже если с помощью проверки подлинности прокси-сервера подключаются несколько пользователей. Это позволяет Oracle принудительно применять управление доступом и выполнять аудит действий, выполняемых от имени фактического пользователя.
+
+Если в сценарии требуется использование пользователя прокси-сервера Oracle, __вместо шагов 4 и 5 сделайте следующие__ .
+
+4. Создайте учетные данные в области базы данных для подключения к серверу Oracle. Предоставьте соответствующие учетные данные пользователя прокси-сервера Oracle для сервера Oracle в следующей инструкции.
+
+   ```sql
+   CREATE DATABASE SCOPED CREDENTIAL [OracleProxyCredential]
+   WITH IDENTITY = '<oracle_proxy_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_proxy_user_password,nvarchar(100),manager>';
+   ```
+
+5. Создайте внешний источник данных, который указывает на сервер Oracle.
+
+   ```sql
+   CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
+   WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',
+   CONNECTION_OPTIONS = 'ImpersonateUser=% CURRENT_USER',
+   CREDENTIAL = [OracleProxyCredential]);
    ```
 
 ## <a name="create-an-external-table"></a>Создание внешней таблицы

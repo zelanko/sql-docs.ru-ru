@@ -9,12 +9,12 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1dbe3505616fa95c429faf6d1f018f947bd60930
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 63086a762e8c55109a43a32e39868b65808108f9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891034"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257094"
 ---
 # <a name="ad-mode-deployment-stopped---missing-reverse-lookup-zone-entry-for-dc"></a>Развертывание в режиме с AD остановлено — нет записи зоны обратного поиска для контроллера домена
 
@@ -90,12 +90,12 @@ azdata bdc debug copy-logs -n mssql-cluster -c security-support
 Извлеките журналы и найдите `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`.
 
 > [!TIP]
-> Собрать журналы можно несколькими способами. Вы можете не копировать журналы с помощью команды `azdata`, а просто воспользоваться записной книжкой в Azure Data Studio.
+> Собрать журналы можно несколькими способами. Вы можете не копировать журналы с помощью команды [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], а просто воспользоваться записной книжкой в Azure Data Studio.
 > В Azure Data Studio подключитесь к кластеру Kubernetes и запустите соответствующую записную книжку для устранения неполадок. Вот примеры записных книжек:
 >
 > - TSG027 — наблюдение за развертыванием кластера
 > - TSG061 — получение заключительного фрагмента журналов контейнеров для модулей pod в пространстве имен кластера больших данных
-> - TSG001 — выполнение команды `azdata` copy-logs.
+> - TSG001 — выполнение `azdata copy-logs`.
 >
 
 ## <a name="inspect-the-logs"></a>Изучение журналов

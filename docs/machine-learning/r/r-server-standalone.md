@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 342c9bd2f83fed2b74cbce1f5ea7b7d942e9fd63
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 95b00aff6a4a42ff0bc0cc01d6e4933f8ef6ceae
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956915"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793801"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Изолированный сервер Machine Learning Server или R Server в SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -80,7 +80,7 @@ SQL Server 2016 поддерживает только язык R. SQL Server 2
 
 ### <a name="step-4-operationalize-your-solution"></a>Шаг 4. Ввод решения в эксплуатацию
 
-Изолированные серверы могут использовать функцию [ввода в эксплуатацию](//machine-learning-server/what-is-operationalization) сервера [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server), не зависящего от языка SQL. Настройка изолированного сервера для ввода в эксплуатацию дает следующие преимущества: развертывание и размещение кода как веб-служб, проведение диагностики и проверка емкости веб-служб.
+Изолированные серверы могут использовать функцию [ввода в эксплуатацию](/machine-learning-server/what-is-operationalization) сервера [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server), не зависящего от языка SQL. Настройка изолированного сервера для ввода в эксплуатацию дает следующие преимущества: развертывание и размещение кода как веб-служб, проведение диагностики и проверка емкости веб-служб.
 
 ### <a name="step-5-maintain-your-server"></a>Шаг 5. Обслуживание сервера
 

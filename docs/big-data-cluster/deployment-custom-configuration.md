@@ -9,18 +9,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725869"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257206"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Настройка параметров развертывания для кластерных ресурсов и служб
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Начиная с предопределенного набора профилей конфигурации, встроенных в инструмент управления `azdata`, можно легко изменять параметры по умолчанию для достижения лучшего соответствия требованиям рабочих нагрузок BDC. Структура файлов конфигурации позволяет детально обновлять параметры для каждой службы в ресурсе.
+Начиная с предопределенного набора профилей конфигурации, встроенных в инструмент управления [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], можно легко изменять параметры по умолчанию для достижения лучшего соответствия требованиям рабочих нагрузок BDC. Структура файлов конфигурации позволяет детально обновлять параметры для каждой службы в ресурсе.
 
 Просмотрите это 13-минутное видео, в котором представлены общие сведения о конфигурации кластеров больших данных:
 
@@ -312,7 +312,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 > [!TIP]
 > Дополнительные сведения о конфигурации хранилища см. в статье [Сохраняемость данных при использовании кластера больших данных SQL Server в Kubernetes](concept-data-persistence.md).
 
-Сначала создайте файл patch.json, как показано ниже, чтобы настроить параметры *хранения*.
+Сначала создайте файл patch.json, как показано ниже, чтобы настроить параметры *хранения* .
 
 ```json
 {
@@ -648,7 +648,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch-file ./patch.j
 }
 ```
 
-Можно вручную изменить файл `control.json` и добавить в `spec` приведенный выше раздел или создать файл исправления `elasticsearch-patch.json`, подобный показанному ниже, и с помощью CLI `azdata` исправить файл `control.json`.
+Можно вручную изменить файл `control.json` и добавить в `spec` приведенный выше раздел или создать файл исправления `elasticsearch-patch.json`, подобный показанному ниже, и с помощью [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] исправить файл `control.json`.
 
 ```json
 {
@@ -677,8 +677,8 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Включение и отключение сбора метрик для модулей pod и узлов
 
-В SQL Server 2019 с накопительным пакетом обновления 5 (CU5) появились два параметра для управления сбором метрик для модулей pod и узлов. Если вы используете различные решения для мониторинга инфраструктуры Kubernetes, вы можете отключить встроенный сбор метрик для модулей pod и узлов, присвоив параметрам *allowNodeMetricsCollection* и *allowPodMetricsCollection* значения *false* в файле конфигурации развертывания *control.json*. Для сред OpenShift для этих параметров по умолчанию задано значение *false* во встроенных профилях развертывания, так как сбор метрик модулей pod и узлов требует привилегированных возможностей.
-Выполните следующую команду, чтобы обновить значения этих параметров в пользовательском файле конфигурации с помощью CLI *azdata*.
+В SQL Server 2019 с накопительным пакетом обновления 5 (CU5) появились два параметра для управления сбором метрик для модулей pod и узлов. Если вы используете различные решения для мониторинга инфраструктуры Kubernetes, вы можете отключить встроенный сбор метрик для модулей pod и узлов, присвоив параметрам *allowNodeMetricsCollection* и *allowPodMetricsCollection* значения *false* в файле конфигурации развертывания *control.json* . Для сред OpenShift для этих параметров по умолчанию задано значение *false* во встроенных профилях развертывания, так как сбор метрик модулей pod и узлов требует привилегированных возможностей.
+Выполните следующую команду, чтобы обновить значения этих параметров в пользовательском файле конфигурации с помощью CLI *azdata* .
 
 ```bash
  azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"
