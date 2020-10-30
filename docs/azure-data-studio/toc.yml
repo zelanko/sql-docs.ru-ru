@@ -7,7 +7,7 @@
 - name: Обзор
   items:
     - name: Azure Data Studio
-      href: what-is.md
+      href: what-is-azure-data-studio.md
 - name: Краткие руководства
   items:
     - name: Подключение и отправка запроса к SQL Server
