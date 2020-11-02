@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257336"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793701"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Краткое руководство. Использование Azure Data Studio для подключения и запрашивания данных с помощью выделенного пула SQL в Azure Synapse Analytics
 
@@ -36,7 +36,7 @@ ms.locfileid: "92257336"
 
 1. При первом запуске Azure Data Studio должна открыться страница **подключения** . Если страница **Подключение** не отображается, щелкните **Добавить подключение** или значок **Создать подключение** на боковой панели **Серверы** .
    
-   ![Значок нового подключения](media/quickstart-sql-dw/new-connection-icon.png)
+   ![Снимок экрана: страница "Соединение" с выделенным значком "Создать подключение".](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. В этой статье используется *имя входа SQL* , но также поддерживается *проверка подлинности Windows* . Заполните поля, указав имя сервера, имя пользователя и пароль для *вашего* сервера SQL Azure.
 
@@ -136,7 +136,7 @@ ms.locfileid: "92257336"
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Если вы не планируете продолжать работу с примерами баз данных, созданными для работы с этой статьей, [удалите группу ресурсов](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
+Если вы не планируете продолжать работу с примерами баз данных, созданными для работы с этой статьей, [удалите группу ресурсов](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные сведения см. в статье [Подключение к Synapse SQL с помощью Azure Data Studio (предварительная версия)](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio).
