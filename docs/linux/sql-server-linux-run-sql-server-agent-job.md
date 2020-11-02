@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 61790d066d6cdf0d3e2a520cca740823b78fc6dc
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115841"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524049"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Создание и запуск заданий агента SQL Server в Linux
 
@@ -60,7 +60,7 @@ ms.locfileid: "92115841"
 
 ## <a name="create-a-sample-database"></a>Создание образца базы данных
 
-Чтобы создать образец базы данных с именем **SampleDB**, выполните указанные ниже действия. Эта база данных используется для задания ежедневного резервного копирования.
+Чтобы создать образец базы данных с именем **SampleDB** , выполните указанные ниже действия. Эта база данных используется для задания ежедневного резервного копирования.
 
 1. На компьютере Linux откройте сеанс терминала bash.
 
@@ -78,7 +78,7 @@ ms.locfileid: "92115841"
 
 ## <a name="create-a-job-with-transact-sql"></a>Создание задания с помощью Transact-SQL
 
-Приведенные ниже шаги позволяют создать задание агента SQL Server в Linux с помощью команд Transact-SQL. Это задание выполняет ежедневное резервное копирование образца базы данных **SampleDB**.
+Приведенные ниже шаги позволяют создать задание агента SQL Server в Linux с помощью команд Transact-SQL. Это задание выполняет ежедневное резервное копирование образца базы данных **SampleDB** .
 
 > [!TIP]
 > Для выполнения этих команд можно использовать любой клиент T-SQL. Например, в Linux можно использовать [sqlcmd](sql-server-linux-setup-tools.md) или [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md). С удаленного сервера Windows Server вы также можете выполнять запросы в SQL Server Management Studio (SSMS) или использовать пользовательский интерфейс для управления заданиями, как описано в следующем разделе.
@@ -155,7 +155,7 @@ ms.locfileid: "92115841"
 
 1. Запустите SSMS в Windows и подключитесь к своему экземпляру SQL Server в Linux. Дополнительные сведения см. в статье [Управление SQL Server в Linux с помощью SSMS](sql-server-linux-manage-ssms.md).
 
-1. Убедитесь, чтобы создан образец базы данных с именем **SampleDB**.
+1. Убедитесь, чтобы создан образец базы данных с именем **SampleDB** .
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 
@@ -179,9 +179,9 @@ ms.locfileid: "92115841"
 
 1. Создайте расписание задания.
 
-   ![расписание заданий;](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
+   ![Снимок экрана: диалоговое окно "Новое задание" с выделенными параметрами "Расписания" и "Создать".](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
 
-   ![расписание заданий;](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
+   ![Снимок экрана: диалоговое окно "Новое задание" с выделенной кнопкой "ОК".](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
 1. Запустите ваше задание.
 

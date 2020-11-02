@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499266"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439462"
 ---
 # <a name="index-json-data"></a>Индексирование данных JSON
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 ### <a name="execution-plan-for-this-example"></a>План выполнения для этого примера
 Вот план выполнения запроса в этом примере:  
   
-![План выполнения](../../relational-databases/json/media/jsonindexblog1.png "План выполнения")  
+![Снимок экрана: план выполнения для этого примера.](../../relational-databases/json/media/jsonindexblog1.png "План выполнения")  
   
 Вместо полного табличного сканирования SQL Server применяет оператор Index Seek к некластеризованному индексу и выявляет строки, отвечающие указанным условиям. Затем он выполняет поиск ключей по таблице `SalesOrderHeader`, чтобы получить другие указанные в запросе столбцы — в этом примере это столбцы `SalesOrderNumber` и `OrderDate`.  
  
@@ -138,13 +138,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Если посмотреть на фактический план выполнения, можно увидеть, что в нем используются отсортированные значения из некластеризованного индекса.  
   
- ![План выполнения](../../relational-databases/json/media/jsonindexblog2.png "План выполнения")  
+ ![Снимок экрана: план выполнения, в котором используются отсортированные значения из некластеризованного индекса.](../../relational-databases/json/media/jsonindexblog2.png "План выполнения")  
   
  Несмотря на то что запрос содержит предложение `ORDER BY`, в плане выполнения не используется оператор Sort. Индекс JSON уже упорядочен по правилам сербской кириллицы. В связи с этим SQL Server может использовать некластеризованный индекс, в котором результаты уже отсортированы.  
   
  Но если порядок сортировки по выражению `ORDER BY` изменить, например добавить `COLLATE French_100_CI_AS_SC` после функции `JSON_VALUE`, план выполнения запроса станет совершенно иным.  
   
- ![План выполнения](../../relational-databases/json/media/jsonindexblog3.png "План выполнения")  
+ ![Снимок экрана: другой план выполнения.](../../relational-databases/json/media/jsonindexblog3.png "План выполнения")  
   
  Поскольку порядок значений в индексе не соответствует правилам сортировки для французского языка, SQL Server не может использовать этот индекс для упорядочивания результатов. В связи с этим он добавляет оператор Sort, который сортирует результаты по правилам сортировки для французского языка.  
  

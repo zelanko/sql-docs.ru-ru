@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: f496b0dcbc393a84e8cb7d5dc84d409700a6063f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 60b18502d8ac5a39f7e429bc7eac90a0abe39313
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544093"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496856"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "89544093"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [База данных SQL<br /> — управляемый экземпляр](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -57,7 +57,7 @@ ms.locfileid: "89544093"
         [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Управляемый экземпляр<br />Базы данных SQL \*_** &nbsp;
+        **_\* Управляемый экземпляр SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -78,7 +78,7 @@ ms.locfileid: "89544093"
         [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [База данных SQL<br /> — управляемый экземпляр](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -91,7 +91,7 @@ ms.locfileid: "89544093"
 
 Удаляет группу рабочей нагрузки.  После выполнения инструкции вступают в действие параметры.
 
-![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif"::: [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Синтаксис
 

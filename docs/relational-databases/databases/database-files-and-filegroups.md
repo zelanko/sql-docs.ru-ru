@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 787d6d914cd290f7edc3847663690b63f58babeb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192284"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497002"
 ---
 # <a name="database-files-and-filegroups"></a>Файлы и файловые группы базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -212,6 +212,7 @@ GO
 - Помещайте разные таблицы, использующиеся в одних и тех же запросах с соединениями, в разные файловые группы. Этот этап увеличит производительность, так как для поиска соединяемых данных можно будет использовать параллельный ввод-вывод.
 - Часто используемые таблицы и некластеризованные индексы, относящиеся к ним, помещайте в разные файловые группы. Использование разных групп файлов увеличит производительность, так как можно будет использовать параллельный ввод и вывод, если файлы находятся на разных жестких дисках.
 - Не помещайте файлы журнала транзакций на тот же физический диск, где находятся другие файлы и файловые группы.
+- Если необходимо расширить том или раздел, в котором находятся файлы базы данных, с помощью таких средств, как [Diskpart](/windows-server/administration/windows-commands/diskpart), следует сначала выполнить резервное копирование всех системных и пользовательских баз данных и остановить службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, после успешного расширения томов дисков рекомендуется выполнить команду [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), чтобы обеспечить физическую целостность всех баз данных в томе.
 
 Дополнительные рекомендации по управлению файлами журнала транзакций см. в разделе [Управление размером файла журнала транзакций](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 

@@ -1,6 +1,6 @@
 Удаляет существующую, определяемую пользователем группу рабочей нагрузки регулятора ресурсов.
 
-![Значок ссылки на раздел](../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Синтаксические обозначения в Transact-SQL](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -11,7 +11,7 @@ DROP WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>Аргументы
 
-*group_name* — имя существующей определяемой пользователем группы рабочей нагрузки.
+*group_name*  — имя существующей определяемой пользователем группы рабочей нагрузки.
 
 ## <a name="remarks"></a>Remarks
 

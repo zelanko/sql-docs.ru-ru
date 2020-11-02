@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b8f93db32602579feaff3a3230739f6fa2621fd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd8252fab91afb8b9a457f0c05f76bb8b77ecf78
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484723"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255721"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Конструктор системы отслеживания измененных данных для Oracle компании Attunity
 
@@ -33,7 +33,11 @@ ms.locfileid: "88484723"
   
 -   Редактор свойств экземпляра CDC. В этом диалоговом окне можно изменить любой существующий экземпляр службы CDC Oracle. Дополнительные сведения об изменении свойств экземпляра CDC см. в разделе [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
- Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 включены в пакет дополнительных компонентов SQL Server 2016. Скачать компоненты пакета дополнительных компонентов можно со страницы [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
+ Скачайте конструктор Microsoft Change Data Capture Designer для Oracle от Attunity для соответствующей версии SQL Server по одной из следующих ссылок:
+
+- [Пакет дополнительных компонентов для конструктора и службы CDC Oracle для Microsoft SQL Server 2016 Integration Services от Attunity](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Пакет дополнительных компонентов для конструктора и службы CDC Oracle для Microsoft SQL Server 2017 Integration Services от Attunity](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Пакет дополнительных компонентов для служб Microsoft SQL Server 2019 Integration Services](https://www.microsoft.com/download/details.aspx?id=100303) 
   
 ## <a name="in-this-documentation"></a>В этой документации  
   

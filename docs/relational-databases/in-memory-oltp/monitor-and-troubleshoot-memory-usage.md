@@ -12,12 +12,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcaae9b53ace5a79e3e1e2c5ccc3e0dc2449306c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 08a3bbf542911c31681f72c74ed783cf6ae79d99
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545207"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439525"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Мониторинг и устранение неполадок с использованием памяти
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "89545207"
   
 1.  Запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Нажмите кнопку **Создать запрос**.  
+2.  Нажмите кнопку **Создать запрос** .  
   
 3.  Вставьте этот код в окно нового запроса и выполните каждый раздел.  
 
@@ -140,11 +140,11 @@ ms.locfileid: "89545207"
   
 3.  В контекстном меню выберите **Отчеты** -> **Стандартные отчеты** -> **Использование памяти таблицами, оптимизированными для памяти**  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
+ ![Снимок экрана: обозреватель объектов с выбранным пунктом "Отчеты > Стандартные отчеты > Использование памяти таблицами, оптимизированными для памяти".](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
  Данный отчет показывает потребление памяти базой данных, созданной ранее.  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
+ ![Снимок экрана: отчет по общему использованию памяти объектами с оптимизацией для памяти.](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> Использование представлений DMV  
  Существует несколько динамических административных представлений для контроля объема памяти, используемого оптимизированными для памяти таблицами, индексами, системными объектами и структурами времени выполнения.  

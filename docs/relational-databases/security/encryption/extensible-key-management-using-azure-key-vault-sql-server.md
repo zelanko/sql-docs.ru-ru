@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: a70ae767aa0f9ed079b616402f3857e03fc3d9dc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867829"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679065"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91867829"
    
  На следующем рисунке традиционная управляемая службой иерархия ключей сравнивается с хранилищем ключей Azure.  
   
- ![ekm-key-hierarchy-traditional](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
+ ![Схема, на которой традиционная управляемая службой иерархия ключей сравнивается с системой Azure Key Vault.](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
   
    
  Соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выступает в качестве моста между [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и хранилищем ключей Azure, поэтому [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может использовать масштабируемость, высокий уровень производительности и высокую доступность службы хранилища ключей Azure. На следующем рисунке показано, как иерархия ключей работает в архитектуре поставщика расширенного управления ключами с хранилищем ключей Azure и Соединителем [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

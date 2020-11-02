@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dcad505d75528f17c65263f3b3a68defdcb6fb30
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: b893b6dc0c3ad11225d1144f757f206fcf5500d5
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005575"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678974"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Использование файла форматирования для массового импорта данных (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "92005575"
 ## <a name="before-you-begin"></a>Перед началом
 * Чтобы файл форматирования мог работать с файлом символьных данных в Юникоде, все поля ввода должны представлять собой текстовые строки Юникода (то есть строки Юникода фиксированной длины или заканчивающиеся символом конца строки).
 * Чтобы массово экспортировать или импортировать [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) -данные, используйте один из следующих типов данных в файле форматирования:
-  * SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или кодовой странице, определенной параметрами сортировки);
+  * SQLCHAR или SQLVARCHAR (данные отправляются в кодовой странице клиента или кодовой странице, определенной параметрами сортировки);
   * SQLNCHAR или SQLNVARCHAR (данные отправляются в Юникоде);
-  * SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).
+  * SQLBINARY или SQLVARBIN (данные отправляются без преобразования).
 * База данных SQL Azure и Azure Synapse Analytics поддерживают только [bcp](../../tools/bcp-utility.md).  Дополнительные сведения см. в следующих источниках:
   * [Загрузка данных в Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [Загрузка данных из SQL Server в Azure Synapse Analytics (неструктурированные файлы)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
@@ -142,8 +142,8 @@ Notepad D:\BCP\myFirstImport.xml
  </RECORD>
  <ROW>
   <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARCHAR"/>
+  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARCHAR"/>
   <COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
  </ROW>
 </BCPFORMAT>

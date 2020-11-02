@@ -13,25 +13,28 @@ author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
 ms.date: 06/12/2020
-ms.openlocfilehash: b2d4364d01b871364fda3ac42d98536e99269c29
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 004a7b0a50a657632bb2b9970f0558857d416494
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763945"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257978"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>Параметр конфигурации сервера xp_cmdshell
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-В этой статье описано, как включить параметр конфигурации SQL Server **xp_cmdshell**. Этот параметр позволяет системным администраторам контролировать, можно ли выполнять в системе [расширенную хранимую процедуру xp_cmdshell](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md). По умолчанию параметр **xp_cmdshell** отключен в новых установках.
+В этой статье описано, как включить параметр конфигурации SQL Server **xp_cmdshell** . Этот параметр позволяет системным администраторам контролировать, можно ли выполнять в системе [расширенную хранимую процедуру xp_cmdshell](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md). По умолчанию параметр **xp_cmdshell** отключен в новых установках.
 
 Перед его включением важно учесть возможные проблемы безопасности.
 
 - В новой разработанном коде не следует использовать хранимую процедуру **xp_cmdshell** и, как правило, ее нужно оставить отключенной.
-- Для работы некоторых устаревших приложений требуется включить **xp_cmdshell**. Если их нельзя изменить так, чтобы не использовать эту хранимую процедуру, ее можно включить, как описано ниже.
+- Для работы некоторых устаревших приложений требуется включить **xp_cmdshell** . Если их нельзя изменить так, чтобы не использовать эту хранимую процедуру, ее можно включить, как описано ниже.
 
-Чтобы включить **xp_cmdshell**, можно использовать [управление на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) или выполнить системную хранимую процедуру **sp_configure**, как показано в следующем примере кода:  
+> [!NOTE]  
+> Если необходимо использовать процедуру **xp_cmdshell** , из соображений безопасности рекомендуется включить ее только на время выполнения задачи, которой она требуется.
+
+Чтобы включить **xp_cmdshell** , можно использовать [управление на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) или выполнить системную хранимую процедуру **sp_configure** , как показано в следующем примере кода:  
   
 ``` sql
 -- To allow advanced options to be changed.  

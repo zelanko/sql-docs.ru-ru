@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44c696a3c912f52fef2ca5d5ece3411e59dba5d3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957018"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639007"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,17 +43,16 @@ ms.locfileid: "91957018"
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Синтаксис
+## <a name="syntax"></a>Синтаксис  
+Синтаксис для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
-Синтаксис для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и :[!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]
-
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 Синтаксис для [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] и :[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  
@@ -63,13 +62,13 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 
 ## <a name="arguments"></a>Аргументы
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*plan_handle* уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. Аргумент *plan_handle* имеет тип **varbinary(64)**, и его можно получить из следующих объектов DMO:  
+*plan_handle* уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. Аргумент *plan_handle* имеет тип **varbinary(64)** , и его можно получить из следующих объектов DMO:  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle* представляет дескриптор SQL очищаемого пакета. Аргумент *sql_handle* имеет тип **varbinary(64)**, и его можно получить из следующих объектов DMO:  
+*sql_handle* представляет дескриптор SQL очищаемого пакета. Аргумент *sql_handle* имеет тип **varbinary(64)** , и его можно получить из следующих объектов DMO:  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
@@ -95,7 +94,11 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>Комментарии  
 Инструкция DBCC FREEPROCCACHE используется для аккуратной очистки кэша планов. Очистка кэша процедур (планов) приводит к исключению всех планов. В результате при выполнении входящих запросов будет компилироваться новый план, а не использоваться существующий план из кэша. 
 
-Это может стать причиной внезапного временного снижения производительности обработки запросов из-за увеличения числа компиляций. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, сброшенных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций DBCC FREEPROCCACHE или DBCC FREESYSTEMCACHE". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
+Это может стать причиной внезапного временного снижения производительности обработки запросов из-за увеличения числа компиляций. Для каждого очищенного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение:
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.` 
+
+Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
 Следующие операции по перенастройке также очищают кэш процедур:  
 -   доступ к счетчику контейнеров проверки кэша  
@@ -182,7 +185,7 @@ DBCC FREEPROCCACHE WITH NO_INFOMSGS;
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>В. Очистка всех записей кэша, связанных с пулом ресурсов  
-В следующем примере очищаются все записи кэша, связанные с указанным пулом ресурсов. Сначала запрашивается представление `sys.dm_resource_governor_resource_pools` для получения значения аргумента *pool_name*.
+В следующем примере очищаются все записи кэша, связанные с указанным пулом ресурсов. Сначала запрашивается представление `sys.dm_resource_governor_resource_pools` для получения значения аргумента *pool_name* .
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  

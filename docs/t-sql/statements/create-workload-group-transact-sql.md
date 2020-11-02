@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 67106682f9302c7849b8f5523e88aa1dd2aa4475
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51db0074dda0a311dfbea84f51144d8b48ab90ce
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444749"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496890"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "88444749"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [База данных SQL<br /> — управляемый экземпляр](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр SQL](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -59,7 +59,7 @@ ms.locfileid: "88444749"
         [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Управляемый экземпляр<br />Базы данных SQL \*_** &nbsp;
+        **_\* Управляемый экземпляр SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -80,7 +80,7 @@ ms.locfileid: "88444749"
         [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [База данных SQL<br /> — управляемый экземпляр](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр SQL](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -93,7 +93,7 @@ ms.locfileid: "88444749"
 
 Создает группу рабочей нагрузки. Группы рабочей нагрузки являются контейнерами для набора запросов и служат основой для настройки управления рабочими нагрузками в системе. Группы рабочей нагрузки позволяют резервировать ресурсы для изоляции рабочей нагрузки, сохранять ресурсы, определять ресурсы для каждого запроса и соблюдать правила выполнения. После выполнения инструкции вступают в действие параметры.
 
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif"::: [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE WORKLOAD GROUP group_name
@@ -141,7 +141,7 @@ WITH
 |||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
-Задает максимальный объем ресурсов, выделяемых для каждого запроса. *value* — это необязательный десятичный параметр со значением по умолчанию, равным значению request_min_resource_grant_percent. Значение *value* должно быть больше или равно значению request_min_resource_grant_percent. Если значение request_max_resource_grant_percent больше значения request_min_resource_grant_percent и доступны системные ресурсы, для запроса выделяются дополнительные ресурсы.
+Задает максимальный объем ресурсов, выделяемых для каждого запроса. *value*  — это необязательный десятичный параметр со значением по умолчанию, равным значению request_min_resource_grant_percent. Значение *value* должно быть больше или равно значению request_min_resource_grant_percent. Если значение request_max_resource_grant_percent больше значения request_min_resource_grant_percent и доступны системные ресурсы, для запроса выделяются дополнительные ресурсы.
 
 *IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>        
 Указывает важность запроса по умолчанию в группе рабочей нагрузки. Важность представлена одним из следующих значений, причем значением по умолчанию является NORMAL.

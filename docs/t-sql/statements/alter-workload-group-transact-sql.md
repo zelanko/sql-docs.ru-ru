@@ -19,12 +19,12 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: c1cb7a34a29d55c9480eca83d2a2777b22fa1b62
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: acbd75ed614f6f7a2c018fb537b01528fe166e80
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538088"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496959"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "89538088"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [База данных SQL<br /> — управляемый экземпляр](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр SQL](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -58,7 +58,7 @@ ms.locfileid: "89538088"
         [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Управляемый экземпляр<br />Базы данных SQL \*_** &nbsp;
+        **_\* Управляемый экземпляр SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -79,7 +79,7 @@ ms.locfileid: "89538088"
         [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [База данных SQL<br /> — управляемый экземпляр](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр SQL](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -161,15 +161,15 @@ ALTER WORKLOAD GROUP wgDataLoads WITH
 
 Время, когда параметры вступят в силу, будет отличаться в зависимости от свойств изменяемой группы рабочей нагрузки.
 
-**Importance или query_execution_timeout**. Для importance и query_execution_timeout неклассифицированные запросы получают новые значения конфигурации.  Ожидающие и текущие запросы будут выполняться с прежней конфигурацией.  Запрос `ALTER WORKLOAD GROUP` выполняется сразу вне зависимости от текущих запросов в группе рабочей нагрузки.
+**Importance или query_execution_timeout** . Для importance и query_execution_timeout неклассифицированные запросы получают новые значения конфигурации.  Ожидающие и текущие запросы будут выполняться с прежней конфигурацией.  Запрос `ALTER WORKLOAD GROUP` выполняется сразу вне зависимости от текущих запросов в группе рабочей нагрузки.
 
-**Request_min_resource_grant_percent или request_max_resource_grant_percent**. Для request_min_resource_grant_percent и request_max_resource_grant_percent выполняющиеся запросы используют прежнюю конфигурацию.  Ожидающие и неклассифицированные запросы получают новые значения конфигурации.  Запрос `ALTER WORKLOAD GROUP` выполняется сразу вне зависимости от текущих запросов в группе рабочей нагрузки.
+**Request_min_resource_grant_percent или request_max_resource_grant_percent** . Для request_min_resource_grant_percent и request_max_resource_grant_percent выполняющиеся запросы используют прежнюю конфигурацию.  Ожидающие и неклассифицированные запросы получают новые значения конфигурации.  Запрос `ALTER WORKLOAD GROUP` выполняется сразу вне зависимости от текущих запросов в группе рабочей нагрузки.
 
-**Min_percentage_resource или cap_percentage_resource**. Для min_percentage_resource и cap_percentage_resource выполняющиеся запросы используют прежнюю конфигурацию.  Ожидающие и неклассифицированные запросы получают новые значения конфигурации. 
+**Min_percentage_resource или cap_percentage_resource** . Для min_percentage_resource и cap_percentage_resource выполняющиеся запросы используют прежнюю конфигурацию.  Ожидающие и неклассифицированные запросы получают новые значения конфигурации. 
 
 Для изменения min_percentage_resource и cap_percentage_resource требуется очистка выполняющихся запросов в изменяемой группе рабочей нагрузки.  При уменьшении min_percentage_resource освобожденные ресурсы возвращаются в общий пул, что позволяет запросам из других групп рабочей нагрузки использовать эти ресурсы.  И наоборот, при увеличении min_percentage_resource потребуется ожидание, пока выполнятся запросы, использующие только необходимые ресурсы из общего пула.  Операция изменения группы рабочей нагрузки будет иметь приоритетный доступ к общим ресурсам по отношению к другим запросам, ожидающим выполнения в общем пуле.  Если сумма min_percentage_resource превышает 100 %, запрос ALTER WORKLOAD GROUP немедленно завершится сбоем. 
 
-**Действие блокировки**. Для изменения группы рабочей нагрузки необходима глобальная блокировка всех таких групп.  Запрос на изменение группы рабочей нагрузки помещается в очередь вслед за уже отправленными запросами на создание или удаление таких групп.  Если сразу отправляется целый пакет инструкций ALTER, то эти инструкции обрабатываются в порядке их отправки.  
+**Действие блокировки** . Для изменения группы рабочей нагрузки необходима глобальная блокировка всех таких групп.  Запрос на изменение группы рабочей нагрузки помещается в очередь вслед за уже отправленными запросами на создание или удаление таких групп.  Если сразу отправляется целый пакет инструкций ALTER, то эти инструкции обрабатываются в порядке их отправки.  
 
 ## <a name="see-also"></a>См. также раздел
 

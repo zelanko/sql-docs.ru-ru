@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac19c1c8e0dfc2e8a8cf4711400eb3c5cb29b5f2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 3800029fb04f058f6f2a0f00ed3f859d1385782e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784830"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523899"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Настройка группы доступности Always On SQL Server в Windows и Linux (кроссплатформенная конфигурация)
 
@@ -69,7 +69,7 @@ ms.locfileid: "91784830"
 
    На следующем рисунке показан этот шаг целиком.
 
-   ![Включение групп доступности в Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![Снимок экрана: окно Git Bash с командой.](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 1. Настройте файл hosts на обоих серверах или зарегистрируйте имена серверов в DNS.
 
@@ -110,7 +110,7 @@ ms.locfileid: "91784830"
 
    На следующей схеме владение и группа заданы правильно для сертификата и ключа.
 
-   ![Включение групп доступности в Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![Снимок экрана: окно Git Bash с файлами CER и PVK в папке /var/opt/mssql/data.](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
 1. На вторичной реплике создайте имя для входа и пароль базы данных, а также главный ключ.

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0854e117ccc765b9e4b47011e589244e71730810
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351220"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257969"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Служба системы отслеживания измененных данных для Oracle компании Attunity
 
@@ -27,7 +27,11 @@ ms.locfileid: "88351220"
   
 ## <a name="installation"></a>Установка  
 
-Конструктор и служба Microsoft Change Data Capture Designer для Oracle от Attunity для Microsoft SQL Server 2016 входят в пакет дополнительных компонентов SQL Server 2016. Скачать компоненты пакета дополнительных компонентов можно со страницы [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).
+Скачайте конструктор и службу системы отслеживания измененных данных Microsoft для Oracle от Attunity для соответствующей версии SQL Server по одной из следующих ссылок:
+
+- [Пакет дополнительных компонентов для конструктора и службы CDC Oracle для Microsoft SQL Server 2016 Integration Services от Attunity](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Пакет дополнительных компонентов для конструктора и службы CDC Oracle для Microsoft SQL Server 2017 Integration Services от Attunity](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Пакет дополнительных компонентов для служб Microsoft SQL Server 2019 Integration Services](https://www.microsoft.com/download/details.aspx?id=100303)
   
  Службу CDC Service для Oracle можно установить на любой поддерживаемый компьютер с ОС Windows с доступом к исходным базам данных Oracle, изменения в которых отслеживаются, и к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где находится целевая база данных CDC. Службе CDC Service не нужны локально установленные базы данных Oracle или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а только их поддерживаемые клиенты. Сведения о месте установки необходимых компонентов базы данных см. в подразделе **Предварительные требования базы данных** в этом разделе.  
   
@@ -44,7 +48,7 @@ ms.locfileid: "88351220"
 -   Windows Server 2016
   
 ## <a name="database-prerequisites"></a>Предварительные требования базы данных  
- Для работы со службой CDC Service для Oracle следует установить программное обеспечения собственного клиента Native Client Oracle [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Это обязательный компонент, который нужно получить у Oracle и установить до установки службы Oracle CDC Service. Кроме того, необходимо установить клиент ODBC для SQL Server, используя процесс установки SQL Server.  
+ Для работы со службой CDC Service для Oracle следует установить клиент Oracle, совместимый с версией базы данных Oracle. Это обязательный компонент, который нужно получить у Oracle и установить до установки службы Oracle CDC Service. Кроме того, необходимо установить клиент ODBC для SQL Server, используя процесс установки SQL Server.  
   
  Служба CDC для Oracle поддерживает следующие версии:  
   
@@ -85,7 +89,7 @@ ms.locfileid: "88351220"
   
 -   [Руководство по службе системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа со службой CDC Oracle](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
   

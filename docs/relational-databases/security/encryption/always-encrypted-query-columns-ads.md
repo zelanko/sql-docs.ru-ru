@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866696"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679042"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Выполнение запросов к столбцам, использующим Always Encrypted, с помощью Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91866696"
 ### <a name="example"></a>Пример
 Предположим, что `SSN` — это зашифрованный столбец в таблице `Patients` . В этом случае если функция Always Encrypted, применяемая для подключения к базе данных, отключена, то выполнив приведенный ниже запрос, вы получите двоичные значения зашифрованных данных.   
 
-![always-encrypted-ads-query-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
+![Снимок экрана: запрос SELECT * FROM [dbo].[Patients] и его результаты, представленные в виде двоичных зашифрованных значений.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>Извлечение значений открытого текста, хранящихся в зашифрованных столбцах    
 В этом разделе описывается извлечение данных, хранящихся в зашифрованных столбцах, в виде зашифрованного текста.
@@ -52,7 +52,7 @@ ms.locfileid: "91866696"
 ### <a name="example"></a>Пример
 Предположим, что SSN — это зашифрованный столбец в таблице `Patients`. В этом случае, если функция Always Encrypted, применяемая для подключения к базе данных, включена и при этом у вас есть доступ к главному ключу, настроенному для столбца `SSN`, приведенный ниже запрос вернет значения открытого текста.   
 
-![always-encrypted-ads-query-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
+![Снимок экрана: запрос SELECT * FROM [dbo].[Patients] и его результаты, представленные в виде обычных текстовых значений.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>Отправка значений открытого текста, предназначенных для зашифрованных столбцов       
 В этом разделе описывается выполнение запроса, который отправляет значения, предназначенные для зашифрованного столбца. Например, запрос, который вставляет, обновляет или фильтрует по значению, хранящемуся в зашифрованном столбце.
@@ -71,7 +71,7 @@ ms.locfileid: "91866696"
 ### <a name="example"></a>Пример
 Если `SSN` является зашифрованным столбцом `char(11)` в таблице `Patients`, приведенный ниже сценарий попытается найти строку, содержащую `'795-73-9838'` в столбце SSN. Результаты возвращаются, если Always Encrypted включен для подключения к базе данных, в окне запроса включена параметризация для Always Encrypted и имеется доступ к главному ключу столбца, настроенному для столбца `SSN`.   
 
-![always-encrypted-ads-query-parameters](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
+![Снимок экрана: запрос DECLARE @SSN char(11) = '795-73-9838' SELECT * FROM [dbo].[Patients] WHERE [SSN] = @SSN и его результаты.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>Разрешения для выполнения запросов к зашифрованным столбцам
 
@@ -80,7 +80,7 @@ ms.locfileid: "91866696"
 Помимо указанных выше разрешений, чтобы расшифровать любые результаты и зашифровать параметры запроса (созданные в процессе параметризации переменных Transact-SQL), также требуется доступ к главному ключу столбца, который используется для защиты целевых столбцов.
 
 - **Хранилище сертификатов — локальный компьютер.** Требуется доступ на **чтение** к сертификату, который используется в качестве главного ключа столбца, либо необходимо быть администратором компьютера.   
-- **Azure Key Vault.** Требуются разрешения **get**, **unwrapKey** и **verify** к хранилищу ключей, содержащему главный ключ столбца.
+- **Azure Key Vault.** Требуются разрешения **get** , **unwrapKey** и **verify** к хранилищу ключей, содержащему главный ключ столбца.
 
 Дополнительные сведения см. в разделе [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Создание и хранение главных ключей столбцов (постоянное шифрование)).
 
@@ -99,14 +99,14 @@ ms.locfileid: "91866696"
 
 Чтобы включить или отключить Always Encrypted, выполните следующие действия.
 1. В диалоговом окне **Подключения** нажмите кнопку **Дополнительно...** .
-2. Чтобы включить Always Encrypted для подключения, задайте для поля **Always Encrypted** значение **Включено**. Чтобы отключить Always Encrypted, оставьте значение поля **Always Encrypted** пустым или задайте для него значение **Отключено**.
+2. Чтобы включить Always Encrypted для подключения, задайте для поля **Always Encrypted** значение **Включено** . Чтобы отключить Always Encrypted, оставьте значение поля **Always Encrypted** пустым или задайте для него значение **Отключено** .
 3. Если вы используете [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] и для экземпляра SQL Server настроен безопасный анклав, можно указать протокол анклава и URL-адрес аттестации анклава. Если ваш экземпляр SQL Server не использует безопасный анклав, поля **Протокол аттестации** и **URL-адрес аттестации анклава** следует оставить пустыми. Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md).
-4. Нажмите кнопку **OK**, чтобы закрыть **Расширенные свойства**.
+4. Нажмите кнопку **OK** , чтобы закрыть **Расширенные свойства** .
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+![Короткое видео с инструкциями по включению Always Encrypted для подключения.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
-> Чтобы переключиться между включением и отключением Always Encrypted для существующего окна запроса, щелкните **Отключить**, а затем щелкните **Подключиться** и выполните описанные выше действия, чтобы повторно подключиться к базе данных с нужными значениями поля **Always Encrypted**. 
+> Чтобы переключиться между включением и отключением Always Encrypted для существующего окна запроса, щелкните **Отключить** , а затем щелкните **Подключиться** и выполните описанные выше действия, чтобы повторно подключиться к базе данных с нужными значениями поля **Always Encrypted** . 
 
 > [!NOTE] 
 > Кнопка **Изменить подключение** в окне запроса в настоящее время не поддерживает переключение между включением и отключением Always Encrypted.
@@ -129,12 +129,12 @@ WHERE [SSN] = @SSN
 
 Чтобы включить/отключить параметризацию для Always Encrypted:
 
-1. Выберите **Файл** > **Настройки** > **Параметры** (**Код** > **Настройки** > **Параметры** на компьютере Mac).
-2. Перейдите в раздел **Данные** > **Microsoft SQL Server**.
-3. Установите или снимите флажок **Включить определение параметров для Always Encrypted**.
-4. Закройте окно **Параметры**.
+1. Выберите **Файл** > **Настройки** > **Параметры** ( **Код** > **Настройки** > **Параметры** на компьютере Mac).
+2. Перейдите в раздел **Данные** > **Microsoft SQL Server** .
+3. Установите или снимите флажок **Включить определение параметров для Always Encrypted** .
+4. Закройте окно **Параметры** .
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
+![Короткое видео с инструкциями по включению и отключению параметризации для Always Encrypted.](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
 > [!NOTE]
 > Параметризацию для Always Encrypted можно включить только в запросе, использующем подключение к базе данных с включенной функцией Always Encrypted (см. раздел [Включение и отключение функции Always Encrypted, применяемой для подключения к базе данных](#enabling-and-disabling-always-encrypted-for-a-database-connection)). Если эта функция отключена в окне запроса, параметризация переменных Transact-SQL не выполняется.
@@ -180,11 +180,11 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio использует технологию Intellisense, чтобы предоставлять сведения о том, для каких переменных можно выполнить параметризацию, а для каких эта операция завершится сбоем (с указанием причины).   
 
-Объявление переменной, для которой можно выполнить параметризацию, подчеркивается линией (как в информационном сообщении) в окне запроса. Если навести указатель мыши на подчеркнутую инструкцию объявления, появится сообщение с результатом параметризации, в том числе значениями основных свойств итогового объекта [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) (переменная сопоставляется с [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) и [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Кроме того, в представлении **Проблемы** можно просмотреть полный список всех параметризованных переменных. Чтобы открыть представление **Проблемы**, выберите **Представление** > **Проблемы**.    
+Объявление переменной, для которой можно выполнить параметризацию, подчеркивается линией (как в информационном сообщении) в окне запроса. Если навести указатель мыши на подчеркнутую инструкцию объявления, появится сообщение с результатом параметризации, в том числе значениями основных свойств итогового объекта [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) (переменная сопоставляется с [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) и [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Кроме того, в представлении **Проблемы** можно просмотреть полный список всех параметризованных переменных. Чтобы открыть представление **Проблемы** , выберите **Представление** > **Проблемы** .    
 
 
 
-Если попытка параметризовать переменную в Azure Data Studio завершилась сбоем, объявление переменной будет помечено знаком ошибки. Если навести указатель мыши на помеченную инструкцию выражения, отобразятся результаты ошибки. Полный список ошибок параметризации для всех переменных можно просмотреть в представлении **Проблемы**.
+Если попытка параметризовать переменную в Azure Data Studio завершилась сбоем, объявление переменной будет помечено знаком ошибки. Если навести указатель мыши на помеченную инструкцию выражения, отобразятся результаты ошибки. Полный список ошибок параметризации для всех переменных можно просмотреть в представлении **Проблемы** .
 
  
 > [!NOTE]
