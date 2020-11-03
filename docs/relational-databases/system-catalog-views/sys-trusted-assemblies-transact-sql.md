@@ -1,6 +1,6 @@
 ---
 description: sys.trusted_assemblies (Transact-SQL)
-title: sys. trusted_assemblies (Transact-SQL) | Документация Майкрософт
+title: sys.trusted_assemblies (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4eee138db35efe4b8f9b01f88d07b52141ab9a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cbf5b3310d23f5bc3f488a536447d0dc3e92350
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475168"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243841"
 ---
 # <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -37,18 +37,20 @@ ms.locfileid: "88475168"
 |Имя столбца |Тип данных |Описание |
 |--- |--- |--- |
 |hash |varbinary(8000) |SHA2_512 хэш содержимого сборки. |
-|description |nvarchar(4000) |Необязательное описание сборки, определяемое пользователем. Корпорация Майкрософт рекомендует использовать каноническое имя, которое кодирует простое имя, номер версии, язык и региональные параметры, Открытый ключ и архитектуру сборки для отношения доверия. Это значение однозначно определяет сборку на стороне среды CLR и совпадает со значением clr_name в sys. assemblies. |
+|description; |nvarchar(4000) |Необязательное описание сборки, определяемое пользователем. Корпорация Майкрософт рекомендует использовать каноническое имя, которое кодирует простое имя, номер версии, язык и региональные параметры, Открытый ключ и архитектуру сборки для отношения доверия. Это значение однозначно определяет сборку на стороне среды CLR и совпадает со значением clr_name в sys. assemblies. |
 |create_date |datetime2 |Дата добавления сборки в список доверенных сборок. |
 |created_by |NVARCHAR(128) |Имя входа участника, который добавил сборку в список. |
 | | | |
 
-
+### <a name="permissions"></a>Разрешения  
+ необходимо разрешение VIEW SERVER STATE на сервере.  
+ 
 ## <a name="remarks"></a>Remarks  
-
-**Необходимо добавить sp_add_trusted_assembly** и **необходимо добавить sys. trusted_assemblies** добавить или удалить сборки из `sys.trusted_assemblies` .
+Используйте **[sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)** для добавления и **[sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)** для удаления сборок из `sys.trusted_assemblies` .
 
 ## <a name="see-also"></a>См. также:  
-  [sys. sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md) [sys. sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) [Drop assembly &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+  [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)  
+  [sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)  
+  [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
-

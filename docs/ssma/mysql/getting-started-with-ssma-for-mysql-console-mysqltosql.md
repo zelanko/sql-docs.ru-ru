@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9eba640bc529487772510e06a7c66210be3e43a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59df65daf56708a2b30b1e0a75e554750e95cb47
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463443"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235191"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Начало работы с консолью SSMA для MySQL (MySQLToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением MySQL. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -26,7 +26,7 @@ ms.locfileid: "88463443"
 ## <a name="launching-ssma-console"></a>Запуск консоли SSMA  
 Чтобы запустить консольное приложение SSMA, выполните следующие действия:  
   
-1.  Последовательно выберите пункты **Пуск** и **все программы**.  
+1.  Последовательно выберите пункты **Пуск** и **все программы** .  
   
 2.  Щелкните ярлык **командной строки MySQL помощник по миграции SQL Server** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88463443"
 ## <a name="ssma-console-output-conventions"></a>Соглашения о выходных данных консоли SSMA  
 После выполнения команд и параметров сценария SSMA консольная программа отображает результаты и сообщения (сведения, ошибка и т. д.) пользователю на консоли или, если необходимо, перенаправляет в выходной XML-файл. Каждый тип сообщения в выходных данных обозначается уникальным цветом. Например, текстовое сообщение в белом цвете означает команды файла сценария; зеленый цвет представляет собой запрос на ввод пользователя и т. д.  
   
-![Вывод консоли SSMA_MySQL](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "Вывод консоли SSMA_MySQL")  
+![Снимок экрана, показывающий пример выходных данных MySQL консоли SSMA.](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "Вывод консоли SSMA_MySQL")  
   
 Цветовая интерпретация выходных данных консоли в следующей таблице:  
   
@@ -65,6 +65,6 @@ ms.locfileid: "88463443"
 |Зеленый|Запрос на ввод данных пользователем|  
 |Цвет|Начало, окончание и результат операции|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Установка SSMA для MySQL](installing-ssma-for-mysql-mysqltosql.md)  
   

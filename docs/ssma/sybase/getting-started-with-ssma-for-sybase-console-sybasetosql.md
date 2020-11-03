@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e59cb5565ca518dc927f29e684401bf8fc6d5822
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418320"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235371"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Начало работы с помощью консоли SSMA для Sybase (SybaseToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением SSMA для Sybase. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -53,7 +53,7 @@ ms.locfileid: "88418320"
 ## <a name="ssma-console-output-conventions"></a>Соглашения о выходных данных консоли SSMA  
 После выполнения команд и параметров сценария SSMA консольная программа отображает результаты и сообщения (сведения, ошибку и т. д.) пользователю на консоли или, при необходимости, перенаправляет в выходной XML-файл. Каждый тип сообщения в выходных данных обозначается уникальным цветом. Например, текстовое сообщение в белом цвете означает команды файла сценария; зеленый цвет представляет собой запрос на ввод пользователя и т. д.  
   
-![Вывод консоли SSMA_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "Вывод консоли SSMA_Sybase")  
+![Снимок экрана, показывающий пример выходных данных консоли SSMA Sybase.](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "Вывод консоли SSMA_Sybase")  
   
 В следующей таблице представлена цветовая интерпретация выходных данных консоли.  
   
@@ -66,5 +66,5 @@ ms.locfileid: "88418320"
 |Зеленый|Запрос на ввод данных пользователем|  
 |Цвет|Начало, окончание и результат операции|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
 [Установка SSMA для SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

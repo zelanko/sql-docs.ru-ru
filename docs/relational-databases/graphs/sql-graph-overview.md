@@ -16,12 +16,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494206"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235639"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Обработка графов в SQL Server и Базы данных SQL Azure
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -48,18 +48,18 @@ ms.locfileid: "88494206"
 
 
 ### <a name="create-graph-objects"></a>Создание объектов Graph
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] расширения позволяют пользователям создавать таблицы node или ребра. С этими узлами и краями могут быть связаны свойства. Поскольку узлы и грани хранятся в виде таблиц, все операции, поддерживаемые реляционными таблицами, поддерживаются в таблице node или EDGE. Пример:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] расширения позволяют пользователям создавать таблицы node или ребра. С этими узлами и краями могут быть связаны свойства. Поскольку узлы и грани хранятся в виде таблиц, все операции, поддерживаемые реляционными таблицами, поддерживаются в таблице node или EDGE. Например:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![Person-друзья — таблицы](../../relational-databases/graphs/media/person-friends-tables.png "Пограничные таблицы узлов Person и друзей")  
+![Схема, показывающая узлы и края, хранится в виде таблиц.](../../relational-databases/graphs/media/person-friends-tables.png "Пограничные таблицы узлов Person и друзей")  
 Узлы и грани хранятся в виде таблиц.  
 
 ### <a name="query-language-extensions"></a>Расширения языка запросов  
-`MATCH`Введено предложение New для поддержки сопоставления шаблонов и навигации с несколькими прыжками через граф. `MATCH`Функция использует синтаксис стиля ASCII для сопоставления шаблонов. Например:  
+`MATCH`Введено предложение New для поддержки сопоставления шаблонов и навигации с несколькими прыжками через граф. `MATCH`Функция использует синтаксис стиля ASCII для сопоставления шаблонов. Пример:  
 
 ```   
 -- Find friends of John

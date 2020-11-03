@@ -15,24 +15,24 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeb6cde4e4b24d9ef7b5e67de8bfd155808fd649
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 57051ece8e432ed56c2b376c6586ff5a147b25b6
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331054"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235556"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Создание базы данных Graph и выполнение некоторых запросов сопоставления шаблонов с помощью T-SQL
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-Этот пример предоставляет [!INCLUDE[tsql-md](../../includes/tsql-md.md)] скрипт для создания базы данных графа с узлами и краями, а затем использует новое предложение Match для сопоставления некоторых шаблонов и обхода графа. Этот пример скрипта будет работать как в базе данных SQL Azure, так и в[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Этот пример предоставляет [!INCLUDE[tsql-md](../../includes/tsql-md.md)] скрипт для создания базы данных графа с узлами и краями, а затем использует новое предложение Match для сопоставления некоторых шаблонов и обхода графа. Этот пример скрипта будет работать как в базе данных SQL Azure, так и в [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>Образец схемы
 
 Этот пример создает схему графа, как показано на рис. 1, для гипотетических социальных сетей с узлами "люди", "Ресторан" и "город". Эти узлы связаны друг с другом с помощью друзей, нравится и расположенными на краях.
 
-![Person-городов-рестораны-таблицы](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Пример базы данных SQL Graph")  
+![Схема, на которой показан пример схемы с личными и ресторанными узлами, расположенными, размещается на краях.](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Пример базы данных SQL Graph")  
 Рис. 1. Пример схемы с личными и ресторанными узлами, а также расположенными, различнои краями.
 
 ## <a name="sample-script"></a>Образец скрипта
@@ -167,4 +167,4 @@ go
 |---  |---  |
 |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)  |Создание таблицы узла или граничной диаграммы  |
 |[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)  |Вставить в таблицу узла или ребра  |
-|[СООТВЕТСТВИЕ &#40;&#41;Transact-SQL](../../t-sql/queries/match-sql-graph.md)  |Использование MATCH для сопоставления шаблона или прохода по графу  |
+|[СООТВЕТСТВИЕ &#40;&#41;Transact-SQL ](../../t-sql/queries/match-sql-graph.md)  |Использование MATCH для сопоставления шаблона или прохода по графу  |

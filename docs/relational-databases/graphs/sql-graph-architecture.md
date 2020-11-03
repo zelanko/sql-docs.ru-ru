@@ -15,12 +15,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d676d32426678720f76de1ff04c355a54998dd1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c742ebd930066c4e242cabff781b0c61af5f566f
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408740"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235581"
 ---
 # <a name="sql-graph-architecture"></a>Архитектура SQL Graph  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88408740"
 Пользователи могут создать один график для каждой базы данных. Граф — это коллекция узлов и граничных таблиц. Таблицы node или ребра могут быть созданы в любой схеме базы данных, но все они принадлежат к одному логическому графу. Таблица узлов представляет собой коллекцию узлов такого же типа. Например, таблица узлов Person содержит все узлы Person, принадлежащие графу. Аналогичным образом, краевая таблица представляет собой коллекцию схожих типов краев. Например, пограничная таблица друзья содержит все грани, соединяющие человека с другим лицом. Поскольку узлы и края хранятся в таблицах, большинство операций, поддерживаемых в обычных таблицах, поддерживаются в таблицах node и EDGE. 
  
  
-![Архитектура SQL-Graph](../../relational-databases/graphs/media/sql-graph-architecture.png "Архитектура базы данных SQL Graph")   
+![Схема, показывающая архитектуру базы данных SQL Graph.](../../relational-databases/graphs/media/sql-graph-architecture.png "Архитектура базы данных SQL Graph")   
 
 Рис. 1. Архитектура базы данных SQL Graph
  
@@ -56,7 +56,7 @@ ms.locfileid: "88408740"
 
 На рис. 2 показано, как таблицы node и граничных таблиц хранятся в базе данных. 
 
-![Person-друзья — таблицы](../../relational-databases/graphs/media/person-friends-tables.png "Пограничные таблицы узлов Person и друзей")   
+![Схема, показывающая представление таблицы узла и ребра.](../../relational-databases/graphs/media/person-friends-tables.png "Пограничные таблицы узлов Person и друзей")   
 
 Рисунок 2. представление таблицы node и ребра
 
@@ -99,14 +99,14 @@ ms.locfileid: "88408740"
 
 Неявные столбцы в таблице node
 
-|Имя столбца    |Тип данных  |is_hidden  |Комментарий  |
+|Имя столбца    |Тип данных  |is_hidden  |Комментировать  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |внутренний `graph_id` столбец  |
 |$node _id_\<hex_string> |NVARCHAR   |0  |Столбец внешнего узла `node_id`  |
 
 Неявные столбцы в граничной таблице
 
-|Имя столбца    |Тип данных  |is_hidden  |Комментарий  |
+|Имя столбца    |Тип данных  |is_hidden  |Комментировать  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |внутренний `graph_id` столбец  |
 |$edge _id_\<hex_string> |NVARCHAR   |0  |внешний `edge_id` столбец  |

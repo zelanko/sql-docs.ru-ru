@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f275628747d0b17ede6c76f67961fe5233e788c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412869"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243543"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (многомерные выражения)
 
@@ -52,7 +52,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  Как и функция [BottomPercent](../mdx/bottompercent-mdx.md) , функция **TopPercent** всегда прерывает иерархию.  
   
-## <a name="example"></a>Пример  
+## <a name="examples"></a>Примеры  
+
+### <a name="a-return-toppercent"></a>A. Возврат TopPercent
+
  В следующем примере возвращаются лучшие города, дающие вклад в 10 % от продаж посредников в категории Bike. Результат сортируется по убыванию, начиная с города с максимальной суммой продаж.  
   
 ```  
@@ -68,11 +71,11 @@ WHERE([Product].[Product Categories].[Bikes])
   
  Приведенное выше выражение дает следующие результаты.  
   
-|Город|Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3 508 904,84|  
 |London|$1 521 530,09|  
-|Seattle|$1 209 418,16|  
+|Сиэтл|$1 209 418,16|  
 |Париж|$1 170 425,18|  
   
  Исходный набор данных можно получить следующим запросом, возвращающим 588 строк:  
@@ -89,8 +92,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## <a name="example"></a>Пример  
- Следующее пошаговое руководство поможет понять последствия отрицательных значений в *Numeric_Expression*. Сначала нужно построить контекст, где представлен этот эффект.  
+### <a name="b-understand-the-effect-of-negative-values"></a>Б. Понимание влияния отрицательных значений
+
+ Следующее пошаговое руководство поможет понять последствия отрицательных значений в *Numeric_Expression* . Сначала нужно построить контекст, где представлен этот эффект.  
   
  Следующий запрос возвращает таблицу со столбцами «Sales Amount», «Total Product Cost» и «Gross Profit» для посредников с сортировкой по убыванию прибыли. Заметьте, что для прибыли заданы только отрицательные значения, поэтому сверху будет отображаться минимальный убыток.  
   
