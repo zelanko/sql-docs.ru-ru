@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92193742"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
@@ -232,7 +232,7 @@ ms.locfileid: "92193742"
 >  (В RC0 этот метод был перемещен в новый интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Дополнительные сведения см. в разделе [Новый интерфейс IDTSComponentMetaData130 в API](#CMD130).)  
 
 ####  <a name="support-for-server-wide-default-logging-level"></a><a name="ServerLogLevel"></a> Поддержка для серверного уровня ведения журнала по умолчанию  
- Теперь для свойства **Уровень ведения журнала сервера**в разделе **Свойства сервера** в SQL Server можно выбрать серверный уровень ведения журнала по умолчанию. Вы можете выбрать один из встроенных уровней ведения журнала — базовый, нет, подробный, по производительности или журналу преобразований для среды выполнения — или существующий пользовательский уровень. Выбранный уровень применяется ко всем пакетам, развернутым в каталоге служб SSIS. По умолчанию этот уровень применяется также к заданию агента SQL Server, в рамках которого запущен пакет служб SSIS.  
+ Теперь для свойства **Уровень ведения журнала сервера** в разделе **Свойства сервера** в SQL Server можно выбрать серверный уровень ведения журнала по умолчанию. Вы можете выбрать один из встроенных уровней ведения журнала — базовый, нет, подробный, по производительности или журналу преобразований для среды выполнения — или существующий пользовательский уровень. Выбранный уровень применяется ко всем пакетам, развернутым в каталоге служб SSIS. По умолчанию этот уровень применяется также к заданию агента SQL Server, в рамках которого запущен пакет служб SSIS.  
 
 ####  <a name="new-idtscomponentmetadata130-interface-in-the-api"></a><a name="CMD130"></a> Новый интерфейс IDTSComponentMetaData130 в API  
  Новый уровень ведения журнала <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> добавляет новые функции в SQL Server 2016 для существующего интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> , в частности метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> . (Метод **GetIdentificationStringByID** перемещен в новый интерфейс из интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> интерфейса.) Также существуют новые интерфейсы <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> , интерфейсы, имеющие свойство **LineageIdentificationString** . Дополнительные сведения см. в разделе [Имена столбцов для ошибок в потоке данных](#ErrorColumn).  
@@ -243,7 +243,7 @@ ms.locfileid: "92193742"
  При обновлении проектов служб SSIS с предыдущих версий до текущей диспетчеры подключений на уровне проекта продолжают работать должным образом, а макет пакета и заметки сохраняются.  
 
 ####  <a name="autoadjustbuffersize-property-automatically-calculates-buffer-size-for-data-flow"></a><a name="BufferSize"></a> Свойство AutoAdjustBufferSize автоматически вычисляет размер буфера для потока данных  
- При задании значения **true** для нового свойства **AutoAdjustBufferSize**подсистема обработки потока данных автоматически вычисляет размер буфера для потока. Дополнительные сведения см. в разделе [Возможности для повышения производительности потока данных](../integration-services/data-flow/data-flow-performance-features.md).  
+ При задании значения **true** для нового свойства **AutoAdjustBufferSize** подсистема обработки потока данных автоматически вычисляет размер буфера для потока. Дополнительные сведения см. в разделе [Возможности для повышения производительности потока данных](../integration-services/data-flow/data-flow-performance-features.md).  
 
 ####  <a name="reusable-control-flow-templates"></a><a name="Templates"></a> Многоразовые шаблоны потока управления  
  Можно сохранить часто используемую задачу или контейнер потока управления в отдельный файл шаблона и повторно использовать их несколько раз в одном или нескольких пакетах проекта с помощью шаблонов потока управления. Такая возможность повторного использования упрощает разработку и обслуживание пакетов служб SSIS. Дополнительные сведения см. в разделе [Повторное использование потока управления для нескольких пакетов с помощью частей пакета потока управления](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  
@@ -325,7 +325,7 @@ ms.locfileid: "92193742"
 ####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> Поддержка нескольких версий в конструкторе служб SSIS  
  Теперь можно использовать конструктор SSIS в SQL Server Data Tools (SSDT) для Visual Studio 2015, чтобы создавать, обслуживать и выполнять пакеты, ориентированные на SQL Server 2016, SQL Server 2014 или SQL Server 2012. Процедуру получения SSDT см. в разделе [Скачивание последней версии SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
- В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства**, чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
+ В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства** , чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
    
  ![Свойство TargetServerVersion в диалоговом окне Свойства проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне Свойства проекта")  
 

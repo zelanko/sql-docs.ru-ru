@@ -342,7 +342,7 @@
               href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Список записных книжек для определенных операций
               href: big-data-cluster/cluster-manage-notebooks.md
-        - name: Монитор
+        - name: Azure Monitor
           items:
             - name: Выполнение мониторинга с помощью Azure Data Studio
               href: big-data-cluster/cluster-monitor-ads.md
@@ -1869,7 +1869,7 @@
           items:
             - name: Создание
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: Удалить
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Изменить
               href: relational-databases/tables/modify-edge-constraint.md
@@ -10180,6 +10180,8 @@
   items:
     - name: Обзор
       href: sql-server/azure-arc/overview.md
+    - name: "Заметки о\_выпуске"
+      href: sql-server/azure-arc/release-notes.md
     - name: Подключение
       href: sql-server/azure-arc/connect.md
     - name: Подключение в большом масштабе

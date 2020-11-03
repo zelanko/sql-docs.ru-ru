@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
-ms.date: 04/27/2020
-ms.openlocfilehash: 7f77f26ffbaa0dab14e41654fdcddda3dd4ab278
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.date: 10/29/2020
+ms.openlocfilehash: 436c176e469e7ce0f34e26a883fae4cdd6bb59a1
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300489"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067246"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic в Azure Data Studio
 
@@ -31,7 +31,7 @@ ms.locfileid: "92300489"
 
 Действия, описанные в этом разделе, выполняются в записной книжке Azure Data Studio.
 
-1. Создайте новую записную книжку и измените **ядро** на *Python 3* .
+1. Создайте новую записную книжку и измените **ядро** на *Python 3*.
 
    ![Новая записная книжка](media/notebooks-kqlmagic/install-new-notebook.png)
 
@@ -71,7 +71,7 @@ ms.locfileid: "92300489"
    ```
 
    > [!Note]
-   > Если `Samples@help` запрашивает пароль, вы можете не указывать его и нажать клавишу **ВВОД** .
+   > Если `Samples@help` запрашивает пароль, вы можете не указывать его и нажать клавишу **ВВОД**.
 
    ![Справка](media/notebooks-kqlmagic/install-help.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "92300489"
    > [!Note]
    > Каждый раз, когда вы создаете новую записную книжку в Azure Data Studio, необходимо загрузить расширение Kqlmagic.
 
-1. Убедитесь, что для параметра **Ядро** установлено *Python3* .
+1. Убедитесь, что для параметра **Ядро** установлено *Python3*.
 
    ![Изменение ядра](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -157,7 +157,7 @@ ms.locfileid: "92300489"
 
 ### <a name="load-and-authenticate-kqlmagic-for-application-insights"></a><a name="appin-load-auth"></a> Загрузка и проверка подлинности Kqlmagic для Application Insights
 
-1. Убедитесь, что для параметра **Ядро** установлено *Python3* .
+1. Убедитесь, что для параметра **Ядро** установлено *Python3*.
 
    ![Ядро](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -212,7 +212,7 @@ ms.locfileid: "92300489"
 
 ### <a name="load-and-authenticate-kqlmagic-for-azure-monitor-logs"></a><a name="aml-load-auth"></a> Загрузка и проверка подлинности Kqlmagic для журналов Azure Monitor
 
-1. Убедитесь, что для параметра **Ядро** установлено *Python3* .
+1. Убедитесь, что для параметра **Ядро** установлено *Python3*.
 
    ![Change](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -259,5 +259,4 @@ ms.locfileid: "92300489"
 - [Использование расширения Jupyter Notebook и Kqlmagic для анализа данных в Azure Data Explorer](/azure/data-explorer/Kqlmagic)
 - [Расширение (Magic) для Jupyter Notebook и Jupyter Lab](https://github.com/Microsoft/jupyter-Kqlmagic), обеспечивающее работу с данными Kusto, Application Insights и Log Analytics в записных книжках.
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
-- [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [Использование записных книжек в Azure Data Studio](./notebooks-guidance.md)

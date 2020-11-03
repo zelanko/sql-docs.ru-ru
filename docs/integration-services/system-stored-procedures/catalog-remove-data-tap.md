@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edf15fb4e6e9d58389ed110c3bca9db1cca147ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca55276a6108cd53ffae82fd4c40089023da20fb
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430036"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243626"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
@@ -38,7 +38,10 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  Уникальный идентификатор отвода данных, созданного с использованием хранимой процедуры catalog.add_data_tap. Параметр *data_tap_id* имеет тип **bigint**.  
   
 ## <a name="remarks"></a>Комментарии  
- Если пакет содержит более одной задачи потока данных с одинаковым именем, отвод данных добавляется к первой задаче потока данных с таким именем.  
+
+- Если пакет содержит более одной задачи потока данных с одинаковым именем, отвод данных добавляется к первой задаче потока данных с таким именем.  
+  
+- Чтобы удалить отводы данных, экземпляр выполнения должен быть создан (значение 1 в столбце **status** представления [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="return-codes"></a>Коды возврата  
  0 (успешное завершение)  
@@ -47,9 +50,6 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
   
 ## <a name="result-set"></a>Результирующий набор  
  None  
-  
-## <a name="remarks"></a>Remarks  
- Чтобы удалить отводы данных, экземпляр выполнения должен быть создан (значение 1 в столбце **status** представления [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
