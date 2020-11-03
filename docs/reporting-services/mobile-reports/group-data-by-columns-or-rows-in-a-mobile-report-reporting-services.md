@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f28c3feb8d8cd2fe68ab093241ac4390768b6487
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d775b0346ce2838abeec4bebce55762afd3b0adc
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448232"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907332"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Группирование данных в мобильном отчете по столбцам или строкам | Службы Reporting Services
 Во многих типах диаграмм в [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]данные можно группировать по столбцам или строкам. Для этого выполните описанные ниже действия.
@@ -29,17 +29,17 @@ ms.locfileid: "79448232"
 
 2. Выберите вкладку **Данные** . Вы увидите таблицу SimulatedTable с рядом столбцов: от **Метрика1** до **Метрика5** и от **Сравнение1** до **Сравнение5**. 
 
-   ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
+   ![Снимок экрана: столбцы группы данных мобильного отчета.](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
-3. В области **Свойства данных** в поле **Основной ряд** выбран вариант **SimulatedTable**. Щелкните стрелку в поле рядом с полем **Основной ряд**и вы увидите, что выбраны параметры **Метрика1** — **Метрика5** .
+3. В области **Свойства данных** в поле **Основной ряд** выбран вариант **SimulatedTable**. Щелкните стрелку в поле рядом с полем **Основной ряд** и вы увидите, что выбраны параметры **Метрика1** — **Метрика5** .
 
-   ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
+   ![Снимок экрана: параметры рядом с полем "Основной ряд".](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
    Для поля **Ряд сравнения** выбраны параметры **Сравнение1** -- **Сравнение5**.
    
 4. Выберите **Предварительный просмотр**.
 
-   ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
+   ![Снимок экрана: результаты предварительного просмотра диаграммы итогов для сравнения.](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
    Каждая полоска в диаграмме представляет один из столбцов в таблице. Более толстые полоски соответствуют столбцам Metric, а более тонкие — столбцам Comparison.
 
@@ -47,17 +47,17 @@ ms.locfileid: "79448232"
 
 6. На вкладке **Макет** в области **Свойства визуальных элементов** изменение значение **По столбцам** в поле **Структура данных** на значение **По строкам**.  
 
-7. Выберите вкладку **Данные** . Теперь в таблице SimulatedTable наряду со столбцами **Метрика** и **Сравнение** отображается столбец **Категория**, содержащий категории от А до E. 
+7. Выберите вкладку **Данные** . Теперь в таблице SimulatedTable наряду со столбцами **Метрика** и **Сравнение** отображается столбец **Категория** , содержащий категории от А до E. 
 
-   ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
+   ![Снимок экрана: строки группы данных мобильного отчета.](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
 8.  В области **Свойства данных** появляется поле "Столбец категории", в котором перечислены строки столбца "Категория" в таблице SimulatedTable. В поле "Основной ряд" выберите столбец, из которого будут браться значения. По умолчанию [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] выбирает для основного ряда столбцы от "Метрика1" до "Метрика5", а для ряда сравнения — столбцы от "Сравнение1" до "Сравнение5". 
 
-    ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
+    ![Снимок экрана: параметры рядом с полем "Ряд сравнения".](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
 9. Выберите **Предварительный просмотр**.
 
-   ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
+   ![Снимок экрана: результаты предварительного просмотра обновленной диаграммы итогов для сравнения.](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 
    Теперь каждый столбец в диаграмме представляет значения по каждой категории в столбце "Категория".
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1c8338fe9c477f8885839a0236f2aaaa0e9ebde
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 98134fb195b9184bb10905b4a4f8ddec48f3cb57
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890851"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496979"
 ---
 # <a name="install-report-builder"></a>Установите Построитель отчетов.
 
@@ -37,7 +37,7 @@ ms.locfileid: "91890851"
   
 ### <a name="sharepoint-site-integrated-with-ssrsnoversion"></a>Сайт SharePoint, интегрированный с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- На сайте SharePoint, интегрированном с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], если меню **Создать документ** не содержит пункты **Отчет построителя отчетов**, **Модель построителя отчетов**и **Источник данных отчета**, необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ На сайте SharePoint, интегрированном с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], если меню **Создать документ** не содержит пункты **Отчет построителя отчетов** , **Модель построителя отчетов** и **Источник данных отчета** , необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ::: moniker-end
  
@@ -67,7 +67,7 @@ ms.locfileid: "91890851"
     > [!NOTE]  
     >  Если планируется работать со средством [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , когда оно подключено к серверу отчетов, на данном этапе будет удобнее указать URL-адрес сервера. Вы также можете сделать это в диалоговом окне **Параметры** в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
-5.  Нажмите кнопку **Установить**, чтобы завершить установку [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+5.  Нажмите кнопку **Установить** , чтобы завершить установку [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
 ## <a name="to-install-ssrbnoversion-from-a-share"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из общей папки  
   
@@ -81,7 +81,7 @@ ms.locfileid: "91890851"
   
 ## <a name="to-install-ssrbnoversion-from-the-command-line"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки 
 
- Кроме того, можно установить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки, задав аргументы для настройки установки. Кроме стандартных внутренних параметров MSI, вы можете использовать пользовательские параметры, предоставляемые [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR и REPORTSERVERURL. RBINSTALLDIR указывает корневой каталог установки для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL указывает сервер отчетов по умолчанию, используемый [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] для сохранения отчетов на сервере.  
+ Кроме того, можно установить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки, задав аргументы для настройки установки. Кроме стандартных внутренних параметров MSI можно использовать пользовательские параметры, предоставляемые [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR и RBSERVERURL. RBINSTALLDIR указывает корневой каталог установки для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. RBSERVERURL указывает сервер отчетов по умолчанию, используемый [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] для сохранения отчетов на сервере.  
   
  Если необходимо произвести установку в полностью автоматическом режиме, без какого-либо взаимодействия с пользовательским интерфейсом, укажите параметр **/quiet** . Флаг параметра подавляет сообщения об ошибках установки. В связи с этим при использовании автоматической установки рекомендуется включить параметр **/l** , указывающий необходимость ведения журнала.   
   
@@ -97,9 +97,9 @@ ms.locfileid: "91890851"
   
 6.  Введите команду в следующем формате:  
   
-     `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
+     `msiexec/i ReportBuilder.msi OPTION=OptionValue [OPTION=OptionValue]`  
   
-     Для установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нужны два параметра: RBINSTALLDIR и REPORTSERVERURL. Вам не обязательно включать эти аргументы в командную строку. Ниже приведена базовая команда:  
+     У установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] имеется два параметра: RBINSTALLDIR и RBSERVERURL. Вам не обязательно включать эти аргументы в командную строку. Ниже приведена базовая команда:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "91890851"
   
 -   Щелкните **Построитель отчетов** .  
   
-     Если сервер отчетов отсутствует в списке существующих серверов, закройте диалоговое окно **Открытие отчета**, а затем в нижней части [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нажмите кнопку **Подключиться**, чтобы подключиться к серверу.  
+     Если сервер отчетов отсутствует в списке существующих серверов, закройте диалоговое окно **Открытие отчета** , а затем в нижней части [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нажмите кнопку **Подключиться** , чтобы подключиться к серверу.  
   
 ## <a name="see-also"></a>См. также  
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)   

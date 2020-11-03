@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 47964ebf5702542452227589e1426948825cc216
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891304"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678870"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Интеграция сервера отчетов с Power BI (диспетчер конфигурации)
 
@@ -89,7 +89,7 @@ ms.locfileid: "91891304"
 
 - На странице **Интеграция с Power BI** нажмите кнопку **Обновить регистрацию**.
 
-     Вам будет предложено войти в Azure AD. На обновленной странице в списке **URL-адреса перенаправления**появится новый URL-адрес.
+     Вам будет предложено войти в Azure AD. На обновленной странице в списке **URL-адреса перенаправления** появится новый URL-адрес.
 
 ##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Сводные данные по процессу интеграции с Power BI и закреплению элементов
 
@@ -125,11 +125,11 @@ ms.locfileid: "91891304"
 
 7. Создается подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для управления запланированным обновлением элемента отчета на плитке панели мониторинга. Подписка использует маркер безопасности, который был создан при входе пользователя в систему.
 
-     Маркер действует в течение **90 дней**, после чего пользователю необходимо выполнить вход еще раз, чтобы создать маркер. По истечении срока действия маркера закрепленные плитки по-прежнему будут отображаться на панели мониторинга, но данные обновляться не будут.  Для подписок, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используемых для закрепленных элементов, будут выводиться сообщения об ошибках до тех пор, пока не будет создан новый маркер пользователя. См. статью [Страница "Мои параметры", используемая для интеграции с Power BI (веб-портал)](../my-settings-for-power-bi-integration-web-portal.md). для получения дополнительных сведений.
+     Маркер действует в течение **90 дней** , после чего пользователю необходимо выполнить вход еще раз, чтобы создать маркер. По истечении срока действия маркера закрепленные плитки по-прежнему будут отображаться на панели мониторинга, но данные обновляться не будут.  Для подписок, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используемых для закрепленных элементов, будут выводиться сообщения об ошибках до тех пор, пока не будет создан новый маркер пользователя. См. статью [Страница "Мои параметры", используемая для интеграции с Power BI (веб-портал)](../my-settings-for-power-bi-integration-web-portal.md). для получения дополнительных сведений.
 
 Когда пользователь закрепляет элемент второй раз, шаги 1–4 пропускаются. Вместо них из базы данных ReportServer извлекается идентификатор приложения и URL-адреса, и поток продолжается с шага 5.
 
-![ssRS-pin-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
+![Рисунок, на котором показано, как пользователь закрепляет элемент отчета на панели мониторинга.](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
 
  **Срабатывание подписки для обновления плитки панели мониторинга**
 
@@ -143,7 +143,7 @@ ms.locfileid: "91891304"
 
 5. Если маркер является недопустимым, возвращается ошибка, которая регистрируется на сервере отчетов.  На панель мониторинга не отправляются сведения о состоянии или другая информация.
 
-![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
+![Рисунок, на котором показано срабатывание подписки для обновления плитки панели мониторинга.](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

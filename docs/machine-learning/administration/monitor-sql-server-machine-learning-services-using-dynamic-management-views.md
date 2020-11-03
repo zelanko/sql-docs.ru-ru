@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115553"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679208"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Мониторинг служб машинного обучения SQL Server с помощью динамических административных представлений
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -250,9 +250,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 | Столбец                   | Описание  |
 |--------------------------|--------------|
 | pool_name                | Имя пула ресурсов. Пулы ресурсов SQL Server имеют префикс `SQL Server`, а внешние пулы ресурсов — префикс `External Pool`. |
-| total_cpu_usage_hours    | Совокупное использование ЦП (в миллисекундах) с момента сброса статистики регулятора ресурсов. |
-| read_io_completed_total  | Общая сумма завершенных операций ввода-вывода с момента сброса регулятора ресурсов.              |
-| write_io_completed_total | Общая сумма завершенных операций ввода-вывода записи с момента сброса регулятора ресурсов.             |
+| total_cpu_usage_hours    | Совокупное использование ЦП (в миллисекундах) с момента сброса статистики Resource Governor. |
+| read_io_completed_total  | Общее число завершенных операций ввода-вывода чтения с момента сброса статистики Resource Governor.              |
+| write_io_completed_total | Общее число завершенных операций ввода-вывода записи с момента сброса статистики Resource Governor.             |
 
 ## <a name="installed-packages"></a>Установленные пакеты
 

@@ -1,1 +1,1 @@
-**ПРИМЕНИМО К:** ![Да](media/yes-icon.png)SQL Server 2016 ![Да](media/yes-icon.png)Сервер отчетов Power BI
+**ПРИМЕНИМО К:** :::image type="icon" source="media/yes-icon.png":::SQL Server 2016 :::image type="icon" source="media/yes-icon.png":::Сервер отчетов Power BI

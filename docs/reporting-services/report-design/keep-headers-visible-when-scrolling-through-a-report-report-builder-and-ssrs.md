@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: ce0edeb4d0d78f43da0c510b09e74e7972f5d301
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255507"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907112"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Сохранение заголовков видимыми при прокрутке отчета (построитель отчетов и службы SSRS)
   Чтобы предотвратить исчезновение заголовков строк и столбцов из поля видимости при прокрутке после подготовки отчета к просмотру, можно закрепить заголовок строки или столбца.  
@@ -28,11 +28,11 @@ ms.locfileid: "84255507"
   
  На следующем рисунке показана таблица.  
   
- ![Таблица](../../reporting-services/report-design/media/table.png "Таблица")  
+ ![Снимок экрана: таблица.](../../reporting-services/report-design/media/table.png "Таблица")  
   
  На следующем рисунке показана матрица.  
   
- ![Матрица](../../reporting-services/report-design/media/matrix.png "Матрица")  
+ ![Снимок экрана: матрица.](../../reporting-services/report-design/media/matrix.png "Матрица")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,7 +41,7 @@ ms.locfileid: "84255507"
   
 1.  Щелкните правой кнопкой мыши маркер строки или столбца либо угловой маркер области данных табликса, а затем выберите пункт **Свойства табликса**.  
   
-2.  На вкладке **Общие** в области **Заголовки строк** или **Заголовки столбцов**установите флажок **Всегда отображать заголовок**.  
+2.  На вкладке **Общие** в области **Заголовки строк** или **Заголовки столбцов** установите флажок **Всегда отображать заголовок**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

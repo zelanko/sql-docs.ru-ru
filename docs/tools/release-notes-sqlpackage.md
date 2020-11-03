@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: d78df7ed144c1cb94f486a20bd65ffc9c1c9cafb
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005982"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496701"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Заметки о выпуске SqlPackage.exe
 
@@ -57,7 +57,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Исправления
 | Компонент | Сведения |
 | :------ | :------ | 
-| Развертывание | Исправлен неверный сценарий развертывания, создаваемый при выборе Управляемого экземпляра Базы данных SQL Azure в качестве целевого пользователем, не являющимся sysadmin.  | 
+| Развертывание | Исправлен неверный скрипт развертывания, создаваемый при выборе управляемого экземпляра SQL Azure в качестве целевого пользователя, не являющегося sysadmin.  | 
 | Развертывание | Исправлена загрузка участников развертывания при выполнении действий сценария. | 
 | Справка | Вывод корректного затраченного времени в sqlpackage, когда операция длится больше 1 дня. | 
 | Развертывание | Исправлена регистрация DACPAC при развертывании для .NET Core. | 

@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: В четвертой части этого цикла учебников вы обучите и сохраните модель, используя R и Transact-SQL на SQL Server с помощью машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 242835f4ae65fa0f2ada862e225df47e35f8ec82
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178441"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412546"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>Учебник по R. Обучение и сохранение модели
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -38,14 +38,14 @@ ms.locfileid: "88178441"
 
 ## <a name="create-the-stored-procedure"></a>Создание хранимой процедуры
 
-При вызове R из T-SQL используется системная хранимая процедура [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Однако для часто повторяемых процессов (например, повторное обучение модели) проще инкапсулировать вызов процедуры sp_execute_exernal_script в другую хранимую процедуру.
+При вызове R из T-SQL используется системная хранимая процедура [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Однако для часто повторяемых процессов (например, повторное обучение модели) проще инкапсулировать вызов процедуры `sp_execute_external_script` в другую хранимую процедуру.
 
 1. В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] откройте новое окно **Запрос**.
 
-2. Выполните следующую инструкцию, чтобы создать хранимую процедуру **RxTrainLogitModel**. Эта хранимая процедура определяет входные данные и использует функцию **rxLogit** из RevoScaleR для создания модели логистической регрессии.
+2. Выполните следующую инструкцию, чтобы создать хранимую процедуру **RTrainLogitModel**. Эта хранимая процедура определяет входные данные и использует **glm** для создания модели логистической регрессии.
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
+   CREATE PROCEDURE [dbo].[RTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
    
    AS
    BEGIN
@@ -60,7 +60,7 @@ ms.locfileid: "88178441"
      EXEC sp_execute_external_script @language = N'R',
                                      @script = N'
    ## Create model
-   logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet)
+   logitObj <- glm(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet, family = binomial)
    summary(logitObj)
    
    ## Serialize model 
@@ -77,9 +77,9 @@ ms.locfileid: "88178441"
 
    + Запрос SELECT использует пользовательскую скалярную функцию *fnCalculateDistance* для вычисления прямого расстояния между местами посадки и высадки. Результаты выполнения запроса сохраняются во входной переменной R по умолчанию `InputDataset`.
   
-   + Сценарий R вызывает функцию **rxLogit** (одну из расширенных функций R, входящих в состав служб [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]) для создания модели логистической регрессии.
+   + Этот скрипт R вызывает функцию R **glm** для создания модели логистической регрессии.
   
-     Двоичная переменная _tipped_ применяется в качестве столбца *меток* или результатов, и модель компонуется с использованием следующих столбцов характеристик:  _passenger_count_, _trip_distance_, _trip_time_in_secs_и _direct_distance_.
+     Двоичная переменная _tipped_ применяется в качестве столбца *меток* или результатов, и модель компонуется с использованием следующих столбцов характеристик:  _passenger_count_ , _trip_distance_ , _trip_time_in_secs_ и _direct_distance_.
   
    + Модель обучения, сохраненная в переменной R `logitObj`, сериализуется и возвращается в качестве выходного параметра.
 
@@ -87,28 +87,26 @@ ms.locfileid: "88178441"
 
 Поскольку хранимая процедура уже включает в себя определение входных данных, указывать входной запрос не требуется.
 
-1. Для обучения и развертывания модели R вызовите хранимую процедуру и вставьте ее в таблицу базы данных _nyc_taxi_models_, чтобы ее можно было использовать для будущих прогнозов:
+1. Для обучения и развертывания модели R вызовите хранимую процедуру и вставьте ее в таблицу базы данных _nyc_taxi_models_ , чтобы ее можно было использовать для будущих прогнозов:
 
    ```sql
    DECLARE @model VARBINARY(MAX);
-   EXEC RxTrainLogitModel @model OUTPUT;
-   INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
+   EXEC RTrainLogitModel @model OUTPUT;
+   INSERT INTO nyc_taxi_models (name, model) VALUES('RTrainLogit_model', @model);
    ```
 
-2. Следите за сообщениями, которые должны передаваться в поток R **stdout**, в окне **Сообщения** среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]: 
+2. Следите за сообщениями, которые должны передаваться в поток R **stdout** , в окне **Сообщения** среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]: 
 
    "Сообщения STDOUT из внешнего сценария: Прочитано строк: 1193025, всего обработано строк: 1193025, общее время обработки блока: 0,093 с"
 
-   Также можно увидеть сообщения, относящиеся к отдельной функции `rxLogit`. В этих сообщениях указываются переменные и тестовые метрики, сформированные в ходе создания модели.
-
 3. После выполнения инструкции откройте таблицу *nyc_taxi_models*. Обработка данных и компоновка модели может занять некоторое время.
 
-   Вы увидите, что была добавлена одна новая строка, которая содержит сериализованную модель в столбце _model_ и имя модели **RxTrainLogit_model** в столбце _name_.
+   Вы увидите, что была добавлена одна новая строка, которая содержит сериализованную модель в столбце _model_ и имя модели **TrainLog_model** в столбце _name_.
 
    ```text
    model                        name
    ---------------------------- ------------------
-   0x580A00000002000302020....  RxTrainLogit_model
+   0x580A00000002000302020....  RTrainLogit_model
    ```
 
 В следующей части этого учебника обученная модель будет использоваться для создания прогнозов.

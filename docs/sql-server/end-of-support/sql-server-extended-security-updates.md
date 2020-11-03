@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a4c032315ef6fb17578ffcdfc7116f3a93293ac8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862946"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793821"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Что такое дополнительные обновления системы безопасности SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "87862946"
 ## <a name="what-are-extended-security-updates"></a>Что такое дополнительные обновления системы безопасности
 Дополнительные обновления безопасности (ESU) для [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] предусматривают подготовку обновлений системы безопасности для тех клиентов, которые приобрели подписку на обновления в рамках расширенной поддержки.
 
-Обновления ESU становятся доступными **по мере необходимости**, когда в системе безопасности обнаруживается уязвимость и [Центр Майкрософт по реагированию на угрозы](https://portal.msrc.microsoft.com) присваивает этой угрозе **критический** уровень. Таким образом, регулярные выпуски ESU для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не предусмотрены.
+Обновления ESU становятся доступными **по мере необходимости** , когда в системе безопасности обнаруживается уязвимость и [Центр Майкрософт по реагированию на угрозы](https://portal.msrc.microsoft.com) присваивает этой угрозе **критический** уровень. Таким образом, регулярные выпуски ESU для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не предусмотрены.
 
 ESU не содержат:
 - новые функции;
@@ -56,7 +56,7 @@ ESU доступны для клиентов, рабочие нагрузки к
 
 Виртуальные машины Azure с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под управлением **Windows Server 2008 R2 и более поздней версии** получат ESU автоматически через существующие каналы обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если на виртуальной машине настроено [автоматизированное применение исправлений](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-На виртуальных машинах Azure с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под управлением **Windows Server 2008** и на виртуальных машинах, на которых ***не* настроено [автоматизированное применение исправлений](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** , потребуется вручную скачать и развернуть исправления ESU, как описано в разделе [Локальные и размещенные среды](#on-premises-or-hosted-environments).
+На виртуальных машинах Azure с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под управлением **Windows Server 2008** и на виртуальных машинах, на которых **_не_ настроено [автоматизированное применение исправлений](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** , потребуется вручную скачать и развернуть исправления ESU, как описано в разделе [Локальные и размещенные среды](#on-premises-or-hosted-environments).
 
 ### <a name="on-premises-or-hosted-environments"></a>Локальные и размещенные среды
 Если вы подписаны на программу Software Assurance, в рамках соглашения Enterprise Agreement (EA), соглашения Enterprise Subscription (EAS), Server & Cloud Enrollment (SCE) или Enrollment for Education Solutions (EES), вы можете приобрести подписку на расширенные обновления системы безопасности (ESU) на период до трех лет после окончания срока поддержки. Вы можете приобрести ESU только для тех серверов, которые необходимо защитить. ESU можно приобрести непосредственно у корпорации Майкрософт или у партнера Майкрософт по лицензированию. 
@@ -82,14 +82,14 @@ ESU доступны для клиентов, рабочие нагрузки к
 1. Войдите на [портал Azure](https://portal.azure.com). 
 1. Выберите элемент **Создать ресурс**. 
 1. Введите `SQL Server registry` в поле поиска.  
-1. Выберите элемент **Реестр SQL Server**, опубликованный [!INCLUDE[msCoName](../../includes/msconame-md.md)], а затем выберите команду **Создать**. 
+1. Выберите элемент **Реестр SQL Server** , опубликованный [!INCLUDE[msCoName](../../includes/msconame-md.md)], а затем выберите команду **Создать**. 
 
-   ![Выбор службы реестра SQL Server](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![Снимок экрана: портал Azure, на котором создается реестр SQL Server.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. В разделе **Сведения о проекте** в раскрывающемся списке выберите свою подписку. Затем выберите существующую **группу ресурсов** или выберите команду **Создать**, чтобы создать новую группу ресурсов для новой службы реестра SQL Server. 
-1. В разделе **Сведения о службе** укажите имя и регион для нового ресурса **реестра SQL Server**: 
+1. В разделе **Сведения о проекте** в раскрывающемся списке выберите свою подписку. Затем выберите существующую **группу ресурсов** или выберите команду **Создать** , чтобы создать новую группу ресурсов для новой службы реестра SQL Server. 
+1. В разделе **Сведения о службе** укажите имя и регион для нового ресурса **реестра SQL Server** : 
 
-   ![Выбор службы реестра SQL Server](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![Снимок экрана: вкладка "Основные сведения" для реестра SQL Server.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
 1. Выберите элемент **Review + create** (Проверить и создать), чтобы ознакомиться с подробными сведениями о **реестре SQL Server**. После успешной проверки нажмите кнопку **Создать**. 
 
@@ -139,14 +139,14 @@ ESU доступны для клиентов, рабочие нагрузки к
 
    ![Массовая регистрация нескольких экземпляров SQL Server](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
 
-1. Щелкните значок файла, чтобы перейти к расположению своего CSV-файла. Выберите этот CSV-файл. Затем выберите элемент **Зарегистрировать**, чтобы отправить файл и зарегистрировать несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+1. Щелкните значок файла, чтобы перейти к расположению своего CSV-файла. Выберите этот CSV-файл. Затем выберите элемент **Зарегистрировать** , чтобы отправить файл и зарегистрировать несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
    ![Отправка CSV-файла для регистрации нескольких экземпляров SQL Server](media/sql-server-extended-security-updates/upload-csv-file-for-bulk-registration.png)
 
 ### <a name="formatting-requirements-for-csv-file"></a>Требования к форматированию CSV-файла
 - Значения разделяются запятыми
 - Значения нельзя заключать в одинарные или двойные кавычки
-- В названиях столбцов регистр не учитывается, но их необходимо **именовать**, как показано ниже: 
+- В названиях столбцов регистр не учитывается, но их необходимо **именовать** , как показано ниже: 
   - name
   - version
   - edition
@@ -209,7 +209,7 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
 
 ## <a name="configure-regional-redundancy"></a>Настройка региональной избыточности 
 
-Клиенты, которым требуется региональная избыточность для **реестра SQL Server**, могут создавать регистрационные данные в двух разных регионах. После этого клиенты могут загружать обновления для системы безопасности из любого региона, основываясь на доступности службы **реестра SQL Server**. 
+Клиенты, которым требуется региональная избыточность для **реестра SQL Server** , могут создавать регистрационные данные в двух разных регионах. После этого клиенты могут загружать обновления для системы безопасности из любого региона, основываясь на доступности службы **реестра SQL Server**. 
 
 Для региональной избыточности службу **реестра SQL Server**  нужно создать в двух разных регионах, а инвентаризация SQL Server должна быть разделена между этими двумя службами. Таким образом, половина серверов SQL Server регистрируется в службе реестра в одном регионе, а вторая половина — в службе реестра в другом регионе. 
 
@@ -219,8 +219,8 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
   
    :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="Пример отправки файлов":::
 
-1. Создайте первую службу **реестра SQL Server** в одном регионе, а затем выполните в нем пакетную регистрацию одного из CSV-файлов. Например, создайте первую службу **реестра SQL Server** в регионе **Западная часть США**, а затем выполните пакетную регистрацию серверов SQL Server с помощью файла upload1.csv. 
-1. Создайте вторую службу **реестра SQL Server** во втором регионе, а затем выполните в нем пакетную регистрацию одного из CSV-файлов. Например, создайте вторую службу **реестра SQL Server** в регионе **Восточная часть США**, а затем выполните пакетную регистрацию серверов SQL Server с помощью файла upload2.csv. 
+1. Создайте первую службу **реестра SQL Server** в одном регионе, а затем выполните в нем пакетную регистрацию одного из CSV-файлов. Например, создайте первую службу **реестра SQL Server** в регионе **Западная часть США** , а затем выполните пакетную регистрацию серверов SQL Server с помощью файла upload1.csv. 
+1. Создайте вторую службу **реестра SQL Server** во втором регионе, а затем выполните в нем пакетную регистрацию одного из CSV-файлов. Например, создайте вторую службу **реестра SQL Server** в регионе **Восточная часть США** , а затем выполните пакетную регистрацию серверов SQL Server с помощью файла upload2.csv. 
 
 
 После регистрации данных в двух разных ресурсах **реестра SQL Server** вы сможете загружать обновления безопасности из любого региона, основываясь на доступности служб. 
@@ -323,7 +323,7 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
 - [Страница поддержки SQL Server 2008 / 2008 R2](https://aka.ms/sqleos)
 - [Часто задаваемые вопросы о дополнительных обновлениях системы безопасности](https://aka.ms/sqleosfaq)
 - [Центр Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [Управление обновлениями Windows при помощи службы автоматизации Azure](/azure/automation/automation-tutorial-update-management)
+- [Управление обновлениями Windows при помощи службы автоматизации Azure](/azure/automation/update-management/overview)
 - [Автоматическая установка исправлений для виртуальной машины SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Руководство по миграции данных Майкрософт](https://datamigration.microsoft.com/)
 - [Миграция в Azure: параметры точности и сдвига для перемещения текущего экземпляра SQL Server 2008 / 2008 R2 в виртуальную машину Azure](https://azure.microsoft.com/services/azure-migrate/)

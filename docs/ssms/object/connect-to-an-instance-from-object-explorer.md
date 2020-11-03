@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037657"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523983"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Подключение к SQL Server или базе данных SQL Azure
 
@@ -37,11 +37,11 @@ ms.locfileid: "92037657"
 
 1. При подключении к серверу SQL Azure вы можете получить запрос на вход в систему для создания правила брандмауэра. Щелкните **Войти…** (в противном случае перейдите к шагу 6 ниже)
 
-   ![брандмауэр](../media/connect-to-server/firewall-rule-sign-in.png)
+   ![Снимок экрана: диалоговое окно "Новое правило брандмауэра" с выделенным параметром "Войти".](../media/connect-to-server/firewall-rule-sign-in.png)
 
 1. После выполнения входа в систему в форме появится ваш IP-адрес. Если ваш IP-адрес часто меняется, возможно, проще предоставить доступ для диапазона адресов. Выберите вариант, который лучше всего подходит для вашей среды. 
 
-   ![брандмауэр](../media/connect-to-server/new-firewall-rule.png)
+   ![Снимок экрана: диалоговое окно "Новое правило брандмауэра" с выбранным параметром "Добавить мой клиентский IP-адрес" и выделенным параметром "ОК".](../media/connect-to-server/new-firewall-rule.png)
 
 1. Чтобы создать правило брандмауэра и подключиться к серверу, нажмите кнопку **ОК**.
 

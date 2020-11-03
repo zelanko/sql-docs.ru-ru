@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765743"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914350"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -22,9 +22,7 @@ ms.locfileid: "88765743"
 
 Начиная с версии [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] обеспечивают развертывание масштабируемых кластеров SQL Server, Spark и контейнеров HDFS, работающих в Kubernetes. Эти компоненты работают параллельно, позволяя считывать, записывать и обрабатывать большие данные в Transact-SQL или Spark, благодаря чему вы можете с легкостью объединять и анализировать важные реляционные данные с объемными большими данными.
 
-В [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] впервые представлены кластеры больших данных SQL Server.
-
-Используйте кластеры больших данных SQL Server для решения следующих задач:
+Используйте среду [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] для выполнения следующих действий:
 
 - [Развертывание масштабируемых кластеров](./deploy-get-started.md) SQL Server, Spark и контейнеров HDFS, выполняемых в Kubernetes. 
 - Чтение, запись и обработка больших данных из Transact-SQL или Spark.
@@ -45,7 +43,7 @@ ms.locfileid: "88765743"
 
 ### <a name="data-virtualization"></a>Виртуализация данных
 
-С помощью [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] могут выполнять запросы к внешним источникам данных, не прибегая при этом к перемещению или копированию данных. В [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] применяются новые соединители с источниками данных.
+С помощью [PolyBase](../relational-databases/polybase/polybase-guide.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] могут выполнять запросы к внешним источникам данных, не прибегая при этом к перемещению или копированию данных. В [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] применяются новые соединители с источниками данных.
 
 ![Виртуализация данных](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -75,7 +73,7 @@ ms.locfileid: "88765743"
 - Встроенные фрагменты кода для общих задач управления.
 - Просмотр HDFS, загрузка и предварительный просмотр файлов, а также создание каталогов.
 - Создание, открытие и выполнение записных книжек, совместимых с Jupyter.
-- Мастер виртуализации данных, упрощающий процесс создания внешних источников данных (включается с помощью **расширения Data Virtualization**).
+- Мастер виртуализации данных, упрощающий процесс создания внешних источников данных (включается с помощью **расширения Data Virtualization** ).
 
 ## <a name="architecture"></a><a id="architecture"></a> Архитектура
 
@@ -96,7 +94,7 @@ Kubernetes — это оркестратор контейнеров с откр
 
 ### <a name="big-data-clusters-architecture"></a>Архитектура кластеров больших данных
 
-На следующей схеме показаны компоненты кластера больших данных для SQL Server.
+На следующем рисунке показаны компоненты кластера больших данных SQL Server:
 
 ![Обзор архитектуры](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
@@ -121,4 +119,4 @@ Kubernetes — это оркестратор контейнеров с откр
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о развертывании кластеров больших данных SQL Server см. в статье [Начало работы с кластерами больших данных SQL Server](deploy-get-started.md).
+Дополнительные сведения о развертывании [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] см. в разделе [Начало работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).

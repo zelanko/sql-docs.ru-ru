@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
-ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
+ms.openlocfilehash: db705ffc6bd3f7f961ea569883b77934e9689f9f
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86291151"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679205"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Что такое службы SQL Server Reporting Services (SSRS)?
 
@@ -54,7 +54,7 @@ SQL Server Reporting Services предлагает обновленный наб
 
 ## <a name="paginated-reports"></a>Отчеты с разбиением на страницы
 
-![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
+![Изображение отчетов с разбиением на страницы на экране настольного ПК и на планшетном устройстве.](../reporting-services/media/ssrs-paginated-reports.png)
 
 С помощью Reporting Services создаются "традиционные" отчеты с разбивкой на страницы, которые идеально подходят для оптимизированных для печати документов с фиксированным макетом таких форматов, как PDF и Word.
 
@@ -67,7 +67,7 @@ SQL Server Reporting Services предлагает обновленный наб
 
 ## <a name="mobile-reports"></a>Мобильные отчеты
 
-![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
+![Изображение мобильных отчетов на экране настольного ПК и на планшетном устройстве.](../reporting-services/media/ssrs-mobile-reports.png)
 
 Мобильные вычисления повлияли на те устройства, которые люди используют для работы, в результате чего изменились и требования к отчетам. Отчеты с фиксированным макетом плохо подходят для планшетов и телефонов. Вариант, предназначенный для большого экрана ПК, не является оптимальным на экране небольшого телефона, который еще и может иметь книжную либо альбомную ориентацию.
 
@@ -79,7 +79,7 @@ SQL Server Reporting Services предлагает обновленный наб
 
 ## <a name="web-portal"></a>Веб-портал
 
-![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
+![Изображение веб-портала на ноутбуке.](../reporting-services/media/ssrs-web-portal.png)
 
 Для пользователей, которые работают в собственном режиме служб Reporting Services, интерфейсом служит современный веб-портал, который можно открыть в большинстве браузеров. На новом портале доступны все мобильные отчеты, отчеты с разбивкой на страницы и ключевые показатели эффективности служб Reporting Services. Ключевые показатели эффективности позволяют быстро отслеживать основные бизнес-метрики в браузере без открытия отчета.
 

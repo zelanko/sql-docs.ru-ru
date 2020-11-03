@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2c72f3720b397e20df7daa794e08ef7ca241abf
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 3820bee4c008bb82a2c1ffdb8a4a6bfb00335958
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255704"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907268"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)
 Скользящее среднее — это среднее по данным в ряде, вычисленное за определенный период времени. В отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы скользящее среднее можно отобразить в диаграмме для определения важных трендов.  
 
-![report-builder-column-chart-tutorial](../../reporting-services/media/report-builder-column-chart-tutorial.png)
+![Снимок экрана: диаграмма продаж.](../../reporting-services/media/report-builder-column-chart-tutorial.png)
   
  Формула скользящего среднего является наиболее популярным признаком цены, используемым в техническом анализе. Многие другие формулы, включая среднее, медиану и стандартное отклонение также могут быть производными от ряда на диаграмме. При указании скользящего среднего каждая формула может иметь один или более параметров, которые необходимо указать.  
  

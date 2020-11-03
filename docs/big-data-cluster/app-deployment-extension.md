@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 74f3306167a4c2fbc248f65e5384ea9847f48f7a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680607"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678910"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Использование Visual Studio Code для развертывания приложений в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -81,7 +81,7 @@ ms.locfileid: "88680607"
 azdata bdc endpoint list
 ```
 
-Доступен еще один способ получения этой информации: щелкните правой кнопкой мыши элемент **Управление**на сервере в Azure Data Studio, где будут перечислены конечные точки служб.
+Доступен еще один способ получения этой информации: щелкните правой кнопкой мыши элемент **Управление** на сервере в Azure Data Studio, где будут перечислены конечные точки служб.
 
 ![Конечная точка ADS](media/vs-extension/ads_end_point.png)
 
@@ -93,7 +93,7 @@ azdata bdc endpoint list
 
 ### <a name="app-template"></a>Шаблон приложения
 
-В Visual Studio Code необходимо *открыть рабочую область*, в которой будут сохраняться артефакты приложения.
+В Visual Studio Code необходимо *открыть рабочую область* , в которой будут сохраняться артефакты приложения.
 
 Чтобы развернуть новое приложение на основе одного из наших шаблонов, нажмите кнопку `New App Template` в области `App Specifications`. Вам будет предложено указать имя, среду выполнения и расположение, где необходимо разместить новое приложение на локальном компьютере. В качестве имени и версии необходимо предоставить метку в формате DNS-1035, которая должна состоять из строчных букв и цифр или дефисов "-", начинаться с буквы и заканчиваться буквой или цифрой.
 
@@ -153,7 +153,7 @@ azdata bdc endpoint list
 
 Если щелкнуть `Links`, можно получить доступ к файлу `swagger.json` развернутого приложения. Это позволяет создавать собственные клиенты, вызывающие приложение:
 
-![Swagger](media/vs-extension/swagger.png)
+![Снимок экрана: файл swagger.json в пользовательском интерфейсе VS Code.](media/vs-extension/swagger.png)
 
 Дополнительные сведения см. в статье [Использование приложений в кластерах больших данных](app-consume.md).
 

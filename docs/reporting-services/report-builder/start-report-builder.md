@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00a954a23cf9b17a58c3272a03222019400ae891
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290762"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907042"
 ---
 # <a name="start-report-builder"></a>Запуск построителя отчетов
 
@@ -30,7 +30,7 @@ ms.locfileid: "80290762"
   
  При первом запуске [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] с веб-портала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint вам будет предложено скачать средство из Центра загрузки Майкрософт. 
  
-![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
+![Снимок экрана: сообщение "Идет открытие построителя отчетов".](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  Пользователь или администратор может также [установить построитель отчетов на компьютер из Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=219138). См. подраздел "Установка построителя отчетов с помощью Systems Manager Server" в разделе [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md) .
  
@@ -40,7 +40,7 @@ ms.locfileid: "80290762"
   
 ## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  В веб-браузере введите в адресной строке URL-адрес для сервера отчетов. URL-адрес по умолчанию — https://\<*имя_сервера*>/reports.  
+1.  В веб-браузере введите в адресной строке URL-адрес для сервера отчетов. URL-адрес по умолчанию — https://\<*servername*>/reports.  
   
 2.  На верхней панели веб-портала выберите **Создать** > **Отчет с разбиением на страницы**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "80290762"
   
      [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , и можно будет приступить к созданию отчета или открыть отчет на сервере отчетов.  
   
-     **Примечание** . Если меню **Создать документ** не содержит параметры **Отчет построителя отчетов**, **Модель построителя отчетов**или **Источник данных отчета**, необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+     **Примечание** . Если меню **Создать документ** не содержит параметры **Отчет построителя отчетов** , **Модель построителя отчетов** или **Источник данных отчета** , необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

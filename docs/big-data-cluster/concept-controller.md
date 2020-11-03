@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 97df8916b713feae56a7cd5344e7fbdc93038317
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 70ca43a017edaa760a5ffa999f40d99516f232bb
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358522"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914353"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Что такое контроллер в кластере больших данных SQL Server
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Контроллер содержит основную логику для развертывания кластера больших данных и управления им. Он отвечает за все взаимодействие с Kubernetes, экземплярами SQL Server, входящими в кластер, и другими компонентами, такими как HDFS и Spark.
+Контроллер содержит основную логику для развертывания кластера больших данных SQL Server и управления им. Он отвечает за все взаимодействие с Kubernetes, экземплярами SQL Server, входящими в кластер, и другими компонентами, такими как HDFS и Spark.
 
 Служба контроллера предоставляет следующие основные возможности:
 
@@ -48,7 +48,7 @@ ms.locfileid: "92358522"
 
 ### <a name="azdata"></a>azdata
 
-**azdata** — это служебная программа командной строки на языке Python, которая позволяет администраторам кластера провести начальную загрузку и управлять кластером больших данных с помощью интерфейсов REST API, предоставляемых службой контроллера.
+**azdata**  — это служебная программа командной строки на языке Python, которая позволяет администраторам кластера провести начальную загрузку и управлять кластером больших данных с помощью интерфейсов REST API, предоставляемых службой контроллера.
 
 ## <a name="controller-service-security"></a>Безопасность службы контроллера
 

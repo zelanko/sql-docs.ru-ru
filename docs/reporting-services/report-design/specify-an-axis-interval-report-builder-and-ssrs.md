@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c9ca24186a1b3b2a9fed9f1b3fa9454aa020f9b
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6b756d7db3a41787da2a9a1a30f1c82b9a72317c
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934945"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907182"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Задание интервала оси (построитель отчетов и службы SSRS)
 Узнайте, как изменить количество меток и делений на оси категорий (X) диаграммы, задав интервал оси в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .
@@ -36,24 +36,24 @@ ms.locfileid: "91934945"
 
 На этой гистограмме для горизонтального интервала меток задано значение "Автоматически".
 
-![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
+![Снимок экрана: результаты предварительного просмотра гистограммы построителя отчетов с заданным интервалом по оси X "Автоматически".](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
 1.  Щелкните правой кнопкой мыши ось категорий и выберите пункт **Свойства горизонтальной оси**.   
 
-    ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
+    ![Снимок экрана: настройка меток оси X на гистограмме построителя отчетов.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  В диалоговом окне **Свойства горизонтальной оси** откройте вкладку **Параметры оси** и задайте для параметра **Интервал** значение **1**, чтобы отобразить каждую метку группы категорий. Чтобы отобразить каждую метку группы другой категории на оси X, введите значение **2**. 
+2.  В диалоговом окне **Свойства горизонтальной оси** откройте вкладку **Параметры оси** и задайте для параметра **Интервал** значение **1** , чтобы отобразить каждую метку группы категорий. Чтобы отобразить каждую метку группы другой категории на оси X, введите значение **2**. 
 
-     ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
+     ![Снимок экрана: настройка равного 1 интервала по оси X на гистограмме построителя отчетов.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-    Теперь на гистограмме отображаются все метки горизонтальной оси.
-
-    ![report-builder-column-chart-preview-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
-  
-    > [!NOTE]  
-    >  После установки интервала оси автоматическое присваивание меток отключается. При указании значения для интервала оси может возникнуть непредсказуемое поведение при присваивании меток в зависимости от количества категорий на оси категорий.  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+     
+     Теперь на гистограмме отображаются все метки горизонтальной оси.
+     
+     ![Снимок экрана: результаты предварительного просмотра гистограммы построителя отчетов с метками оси X.](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
+     
+     > [!NOTE]  
+     >  После установки интервала оси автоматическое присваивание меток отключается. При указании значения для интервала оси может возникнуть непредсказуемое поведение при присваивании меток в зависимости от количества категорий на оси категорий.  
 
 ## <a name="change-the-label-interval-in-properties-pane"></a>Изменение интервала меток на панели "Свойства"
 
@@ -63,13 +63,13 @@ ms.locfileid: "91934945"
 
 3. На панели "Свойства" назначьте свойству LabelInterval значение **1**.
 
-    ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![Снимок экрана: настройка интервала между метками на гистограмме построителя отчетов.](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     В режиме конструктора диаграмма выглядит так же. 
     
 5.  Нажмите кнопку **Выполнить** для предварительного просмотра отчета.
 
-    ![report-builder-column-chart-label-interval-one-preview](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![Снимок экрана: результаты предварительного просмотра гистограммы построителя отчетов с равным 1 интервалом между метками.](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Теперь на диаграмме отображаются все метки.
   

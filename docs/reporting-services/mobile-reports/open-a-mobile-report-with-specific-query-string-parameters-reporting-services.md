@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: abcdda5a396451508df78610eeb4f7bc417484d5
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448392"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907352"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Открытие мобильного отчета с определенными параметрами строки запроса | Службы Reporting Services
 Если у вас есть мобильный отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с параметрами, а также источник данных [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)], можно включить в URL-адрес отчета параметры строки запроса, чтобы он автоматически открывался с заданными значениями. 
@@ -24,7 +24,7 @@ ms.locfileid: "79448392"
 
 2. Найдите имя набора данных на вкладке в нижней части таблицы и требуемое имя поля. 
     
-    ![mobile-report-publisher-parameter-data-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
+    ![Снимок экрана: представление данных параметров для издателя мобильного отчета.](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
     
 2.  Синтаксис URL-адреса зависит от источника данных. 
 
@@ -47,7 +47,7 @@ ms.locfileid: "79448392"
     
 3.  Этот URL-адрес открывает отчет на сервере, автоматически отфильтрованный по указанному значению параметра.
 
-    ![mobile-report-publisher-parameter-web-portal-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
+    ![Снимок экрана: представление веб-портала параметров для издателя мобильного отчета; стрелка указывает на URL-адрес; прямоугольником обведен текст ?TimeChartLoD.@category=Clothing.](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
 
 ### <a name="see-also"></a>См. также раздел
 

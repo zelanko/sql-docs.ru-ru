@@ -9,22 +9,22 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e8bc204c3f93d4a4ebbd26876bc8c3e23bad8047
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257247"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914298"
 ---
-# <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>Что такое пул носителей ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
+# <a name="what-is-the-storage-pool-in-a-sql-server-big-data-cluster"></a>Что такое пул носителей в кластере больших данных SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-В этой статье описывается роль *пула носителей SQL Server* в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (BDC). В следующих разделах содержатся сведения об архитектуре и функциональных возможностях пула носителей SQL.
+В этой статье описывается роль *пула носителей SQL Server* в кластере больших данных SQL Server. В следующих разделах содержатся сведения об архитектуре и функциональных возможностях пула носителей.
 
 ## <a name="storage-pool-architecture"></a>Архитектура пула носителей
 
-Пул носителей — это локальный кластер HDFS (Hadoop) в экосистеме SQL Server BDC. Он предоставляет постоянное хранилище для неструктурированных и частично структурированных данных. Файлы данных, такие как Parquet или текст с разделителями, могут храниться в пуле носителей. Для постоянного хранения к каждому pod в пуле прикреплен постоянный том. Доступ к файлам пула носителей осуществляется через [Polybase](../relational-databases/polybase/polybase-guide.md) посредством SQL Server или напрямую с помощью шлюза Apache Knox.
+Пул носителей — это локальный кластер HDFS (Hadoop) в кластере больших данных SQL Server. Он предоставляет постоянное хранилище для неструктурированных и частично структурированных данных. Файлы данных, такие как Parquet или текст с разделителями, могут храниться в пуле носителей. Для постоянного хранения к каждому pod в пуле прикреплен постоянный том. Доступ к файлам пула носителей осуществляется через [Polybase](../relational-databases/polybase/polybase-guide.md) посредством SQL Server или напрямую с помощью шлюза Apache Knox.
 
 Классическая конфигурация HDFS состоит из набора обычных компьютеров с подключенным хранилищем. Данные распределяются по блокам на узлах, что приводит к отказоустойчивости и возможности использования параллельной обработки. Один из узлов в кластере выступает в качестве узла имен и содержит метаданные о файлах, расположенных в узлах данных.
 

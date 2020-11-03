@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3000abfed5258f02d47148ce351a6390cb225c7
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258464"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678887"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Урок 2. Задание информации о подключении (службы Reporting Services)
 
 В уроке 1 вы добавили отчет с разбиением на страницы [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] к проекту Tutorial.
   
-В этом уроке вы определите *источник данных*, то есть настроите сведения о подключении для доступа отчета к данным из реляционной базы данных или других источников.
+В этом уроке вы определите *источник данных* , то есть настроите сведения о подключении для доступа отчета к данным из реляционной базы данных или других источников.
 
 Для этого отчета вы добавите в качестве источника данных пример базы данных AdventureWorks2016. В руководстве предполагается, что эта база данных размещена в экземпляре по умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)], который установлен на локальном компьютере.  
 
@@ -28,7 +28,7 @@ ms.locfileid: "75258464"
 
 1. На панели **Данные отчета** щелкните **Создать** > **Источник данных**. Если область **Данные отчета** не отображается, в меню **Вид** выберите пункт **Данные отчета**.
 
-    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+    ![Снимок экрана: область "Данные отчета", в которой выбран пункт "Создать > Источник данных".](media/ssrs-table-tutorial-2-new-data-source.png)
 
     Откроется диалоговое окно **Свойства источника данных** с разделом **Общие**.
 
@@ -53,7 +53,7 @@ ms.locfileid: "75258464"
     >
     > Дополнительные сведения о строках подключения вы можете найти в разделе `See also` ниже.
 
-6. Выберите вкладку **Учетные данные**, а затем в разделе **Change the credentials used to connect to the data source** (Изменить учетные данные, используемые для подключения к источнику данных) установите переключатель **Использовать проверку подлинности Windows (встроенная безопасность)** .
+6. Выберите вкладку **Учетные данные** , а затем в разделе **Change the credentials used to connect to the data source** (Изменить учетные данные, используемые для подключения к источнику данных) установите переключатель **Использовать проверку подлинности Windows (встроенная безопасность)** .
 
 7. Чтобы завершить процесс, нажмите кнопку **ОК**.
 

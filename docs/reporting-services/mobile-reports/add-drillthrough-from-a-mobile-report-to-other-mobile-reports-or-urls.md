@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b42c68daa49145ba4703c8cd141dc433aa7d64df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 149c074b0aacc56f192b27cfea0894fe2cd73778
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448329"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907302"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса
 Детализацию по любому датчику, графику или сетке данных в мобильном отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] можно добавить в любой другой мобильный отчет или пользовательский URL-адрес. 
@@ -23,11 +23,11 @@ ms.locfileid: "79448329"
   
 Если при просмотре исходного мобильного отчета на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] выбрать элемент с объектом детализации, вы перейдете к этому объекту — другому мобильному отчету или URL-адресу.  
 
-Элементы отчета с детализацией до URL-адреса или другого мобильного отчета имеют значок детализации ![mobile-report-drill-through-icon](../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png) в верхнем правом углу.
+Элементы отчета с детализацией до URL-адреса или другого мобильного отчета имеют значок детализации :::image type="icon" source="../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png"::: в верхнем правом углу.
 
-![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
+![Снимок экрана: датчик мобильного отчета с детализацией.](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png)
 
->**Совет**. Для начала создайте целевой отчет и сохраните его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Если вы планируете передавать параметры из исходного отчета, добавьте параметры и в целевой отчет. После этого вы сможете настроить детализацию из исходного отчета в целевой. [Добавьте параметры в мобильный отчет](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Совет**. Для начала создайте целевой отчет и сохраните его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Если вы планируете передавать параметры из исходного отчета, добавьте параметры и в целевой отчет. После этого вы сможете настроить детализацию из исходного отчета в целевой. [Добавьте параметры в мобильный отчет](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>Настройка детализации в мобильный отчет  
 
@@ -42,7 +42,7 @@ ms.locfileid: "79448329"
  
 4. Выбрав целевой мобильный отчет, вы увидите доступные входные параметры, включая свойства, которые можно привязать к элементам управления и параметрам навигатора, настроенным на наборы данных целевого мобильного отчета.  
 
-   ![mobile-report-drillthrough-target](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-target.PNG)
+   ![Снимок экрана: диалоговое окно "Настройка целевого отчета", в котором отображаются доступные параметры отчета.](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-target.PNG)
    
    *Свойства детализации для целевого мобильного отчета*  
   
@@ -53,9 +53,9 @@ ms.locfileid: "79448329"
 1. В режиме макета в [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]выберите визуализацию, которая поддерживает объекты детализации.    
 2. На панели **Свойства визуальных элементов** выберите меню **Объект детализации** > **Пользовательский URL-адрес**.  Откроется диалоговое окно настройки детализации.  
   
-3. В поле **Указание URL-адреса детализации** введите URL-адрес назначения для перехода при щелчке по визуализации и выберите один из **доступных параметров**, указанных справа. В поле внизу отображается предварительный просмотр пользовательского URL-адреса в сочетании с примерами разрешенных параметров (если они включены).  
+3. В поле **Указание URL-адреса детализации** введите URL-адрес назначения для перехода при щелчке по визуализации и выберите один из **доступных параметров** , указанных справа. В поле внизу отображается предварительный просмотр пользовательского URL-адреса в сочетании с примерами разрешенных параметров (если они включены).  
   
-   ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
+   ![Снимок экрана: диалоговое окно "Укажите URL-адрес детализации".](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   
    *Свойства детализации в пользовательский URL-адрес*  
   
@@ -69,7 +69,7 @@ ms.locfileid: "79448329"
 
 1. На веб-портале щелкните многоточие (...) рядом с целевом отчетом, который нужно скрыть, и выберите пункт "Управление".
 
-2. В разделе **Свойства**выберите пункт **Скрыть в представлении плитки**.
+2. В разделе **Свойства** выберите пункт **Скрыть в представлении плитки**.
 
 Чтобы отобразить скрытые элементы на веб-портале, выполните указанные ниже действия. 
 
@@ -77,7 +77,7 @@ ms.locfileid: "79448329"
 
 Скрытые элементы отображаются более светлым цветом.
     
-### <a name="see-also"></a>См. также раздел  
+### <a name="see-also"></a>См. также  
  
 * [Добавление параметров в мобильный отчет служб Reporting Services](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
