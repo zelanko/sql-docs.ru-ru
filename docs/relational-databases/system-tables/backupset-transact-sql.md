@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544694"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294389"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "89544694"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]основной номер версии. Может иметь значение NULL.|  
 |**software_minor_version**|**tinyint**|Дополнительный номер версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
 |**software_build_version**|**smallint**|Номер сборки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
-|**time_zone**|**smallint**|Разница между местным временем (в месте осуществления операции резервного копирования) и временем в формате UTC в 15-минутных интервалах. Может принимать значения от -48 до +48 включительно. Значение 127 соответствует неизвестному значению. Например, -20 — время на восточном побережье США (Eastern Standard Time, EST), отстоящее на пять часов вперед от UTC. Может иметь значение NULL.|  
+|**time_zone**|**smallint**|Разница между местным временем (где выполняется операция резервного копирования) и временем в 15-минутном времени (UTC) в момент начала операции резервного копирования. Может принимать значения от -48 до +48 включительно. Значение 127 соответствует неизвестному значению. Например, -20 — время на восточном побережье США (Eastern Standard Time, EST), отстоящее на пять часов вперед от UTC. Может иметь значение NULL.|  
 |**mtf_minor_version**|**tinyint**|Дополнительный номер версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format. Может иметь значение NULL.|  
 |**first_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале для первой или самой ранней записи журнала в резервном наборе данных. Может иметь значение NULL.|  
 |**last_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале для следующей записи журнала после резервного набора данных. Может иметь значение NULL.|  
@@ -92,7 +92,7 @@ ms.locfileid: "89544694"
 |**is_copy_only**|**bit**|1 = резервная копия только для копирования. Дополнительные сведения см. в разделе [Резервные копии только для копирования (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|Идентификатор начальной вилки восстановления. Это соответствует **значение firstrecoveryforkid** RESTORE HEADERONLY.<br /><br /> Для резервных копий данных **first_recovery_fork_guid** равно **last_recovery_fork_guid**.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|Идентификатор конечной вилки восстановления. Это соответствует **RecoveryForkID** RESTORE HEADERONLY.<br /><br /> Для резервных копий данных **first_recovery_fork_guid** равно **last_recovery_fork_guid**.|  
-|**fork_point_lsn**|**numeric(25,0)**|Если **first_recovery_fork_guid** не равно **last_recovery_fork_guid**, это регистрационный номер в журнале для точки ветвления. В противном случае значение равно NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Если **first_recovery_fork_guid** не равно **last_recovery_fork_guid** , это регистрационный номер в журнале для точки ветвления. В противном случае значение равно NULL.|  
 |**database_guid**|**uniqueidentifier**|Уникальный идентификатор базы данных. Это соответствует **биндингид** RESTORE HEADERONLY. При восстановлении базы данных назначается новое значение.|  
 |**family_guid**|**uniqueidentifier**|Уникальный идентификатор оригинальной базы данных в момент создания. Это значение остается неизменным при восстановлении базы данных, даже если ей присваивается другое имя.|  
 |**differential_base_lsn**|**numeric(25,0)**|Основной регистрационный номер транзакции в журнале для разностного резервного копирования. Для разностной резервной копии с одной на основе; изменения с номерами LSN больше или равными **differential_base_lsn** включаются в разностную резервную копию.<br /><br /> Для многобазовой разностной резервной копии значение равно NULL, а базовый номер LSN должен быть определен на уровне файла (см. раздел [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Для неразностных типов резервного копирования значение всегда равно NULL.|  
@@ -102,12 +102,12 @@ ms.locfileid: "89544694"
 |**encryptor_thumbprint**|**varbinary(20)**|Отпечаток шифратора, который будет использоваться для поиска сертификата или асимметричного ключа в базе данных. Если резервная копия не была зашифрована, это значение равно NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Тип используемого шифратора: сертификат или асимметричный ключ. . Если резервная копия не была зашифрована, это значение равно NULL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбец таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
