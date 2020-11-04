@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678907"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328579"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,15 +41,15 @@ ms.locfileid: "92678907"
 |database_id|**int**|Идентификатор базы данных, используемой явным контекстом (например, DB_X).|См. раздел ID в [представлении sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |.|**nvarchar(4000)**|Содержит полный текст запроса, отправленный пользователем.|Любой допустимый запрос или текст запроса. Запросы, длина которых превышает 4000 байт, усекаются.|  
 |resource_class|**nvarchar (20)**|Группа рабочей нагрузки, используемая для этого запроса. |Статические классы ресурсов</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Динамические классы ресурсов</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|Важность, с которой был выполнен запрос.  Это относительная важность запроса в этой группе рабочей нагрузки и в группах рабочей нагрузки для общих ресурсов.  Важность, указанная в классификаторе, переопределяет параметр важности группы рабочей нагрузки.</br>Область применения: Хранилище данных SQL Azure|NULL</br>low</br>below_normal</br>Обычная (по умолчанию)</br>above_normal</br>high|
-|group_name|**sysname** |Для запросов, использующих ресурсы, group_name — имя группы рабочей нагрузки, в которой выполняется запрос.  Если запрос не использует ресурсы, group_name имеет значение null.</br>Область применения: Хранилище данных SQL Azure|
+|importance|**nvarchar(128)**|Важность, с которой был выполнен запрос.  Это относительная важность запроса в этой группе рабочей нагрузки и в группах рабочей нагрузки для общих ресурсов.  Важность, указанная в классификаторе, переопределяет параметр важности группы рабочей нагрузки.</br>Область применения: Azure Synapse Analytics|NULL</br>low</br>below_normal</br>Обычная (по умолчанию)</br>above_normal</br>high|
+|group_name|**sysname** |Для запросов, использующих ресурсы, group_name — имя группы рабочей нагрузки, в которой выполняется запрос.  Если запрос не использует ресурсы, group_name имеет значение null.</br>Область применения: Azure Synapse Analytics|
 |classifier_name|**sysname**|Для запросов, использующих ресурсы, имя классификатора, используемого для назначения ресурсов и важности.||
-|resource_allocation_percentage|**Decimal (5, 2)**|Процентный объем ресурсов, выделенных для запроса.</br>Область применения: Хранилище данных SQL Azure|
-|result_cache_hit|**int**|Сведения о том, использовался ли завершенный запрос к кэшу результирующего набора.  </br>Область применения: Хранилище данных SQL Azure| 1 = попадание в кэш результирующего набора </br> 0 = промах кэша результирующего набора </br> Отрицательные целочисленные значения = причины, по которым кэширование результирующего набора не использовалось.  Дополнительные сведения см. в разделе "Примечания".|
+|resource_allocation_percentage|**Decimal (5, 2)**|Процентный объем ресурсов, выделенных для запроса.</br>Область применения: Azure Synapse Analytics|
+|result_cache_hit|**int**|Сведения о том, использовался ли завершенный запрос к кэшу результирующего набора.  </br>Область применения: Azure Synapse Analytics| 1 = попадание в кэш результирующего набора </br> 0 = промах кэша результирующего набора </br> Отрицательные целочисленные значения = причины, по которым кэширование результирующего набора не использовалось.  Дополнительные сведения см. в разделе "Примечания".|
 |client_correlation_id|**nvarchar(255)**|Необязательное определяемое пользователем имя для сеанса клиента.  Чтобы задать для сеанса, вызовите sp_set_session_context "client_correlation_id", " <CorrelationIDName> ".  Выполните команду `SELECT SESSION_CONTEXT(N'client_correlation_id')` , чтобы получить его значение.|
 ||||
 
-## <a name="remarks"></a>Remarks 
+## <a name="remarks"></a>Комментарии 
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
 Отрицательное целочисленное значение в result_cache_hit столбце является битовым значением всех примененных причин, по которым результирующий набор запроса не может быть кэширован.  Этот столбец может быть [| (Побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) произведение одного или нескольких из следующих значений:  
@@ -81,4 +81,4 @@ ms.locfileid: "92678907"
   
 ## <a name="see-also"></a>См. также:
 
- [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
