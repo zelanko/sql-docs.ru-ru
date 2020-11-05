@@ -342,7 +342,7 @@
               href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Список записных книжек для определенных операций
               href: big-data-cluster/cluster-manage-notebooks.md
-        - name: Azure Monitor
+        - name: Монитор
           items:
             - name: Выполнение мониторинга с помощью Azure Data Studio
               href: big-data-cluster/cluster-monitor-ads.md
@@ -1869,7 +1869,7 @@
           items:
             - name: Создание
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Удалить
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Изменить
               href: relational-databases/tables/modify-edge-constraint.md
@@ -8811,6 +8811,8 @@
               href: ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
             - name: Настройка аудита входа
               href: ssms/configure-login-auditing-sql-server-management-studio.md
+            - name: Включение копирования в окне поиска и замены
+              href: ssms/troubleshoot/enable-copying-find-replace-window.md
             - name: Диагностика
               items:
                 - name: Создать полный дамп памяти
@@ -10172,7 +10174,7 @@
   items:
     - name: База данных SQL Azure >
       href: /azure/sql-database/
-    - name: "Хранилище данных SQL\_Azure\_>"
+    - name: Azure Synapse Analytics >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - name: "SQL\_Server на виртуальной машине Azure\_>"
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -10180,7 +10182,7 @@
   items:
     - name: Обзор
       href: sql-server/azure-arc/overview.md
-    - name: "Заметки о\_выпуске"
+    - name: Заметки о выпуске
       href: sql-server/azure-arc/release-notes.md
     - name: Подключение
       href: sql-server/azure-arc/connect.md
@@ -11943,7 +11945,7 @@
               href: relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md
             - name: sys.spatial_reference_systems
               href: relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
-        - name: Хранилище данных SQL
+        - name: Azure Synapse Analytics
           href: relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
           items:
             - name: sys.pdw_column_distribution_properties
@@ -12550,7 +12552,7 @@
           items:
             - name: sys.dm_db_objects_disabled_on_compatibility_level_change
               href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-        - name: Хранилище данных SQL и Parallel Data Warehouse
+        - name: "Azure Synapse\_Analytics и Parallel\_Data\_Warehouse"
           href: relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md
           items:
             - name: sys.dm_pdw_component_health_active_alerts
@@ -14231,7 +14233,7 @@
               href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
             - name: sp_delete_backup
               href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-        - name: Хранилище данных SQL
+        - name: Azure Synapse Analytics
           href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
           items:
             - name: sp_datatype_info_90
@@ -16304,7 +16306,7 @@
               items:
                 - name: AT TIME ZONE
                   href: t-sql/queries/at-time-zone-transact-sql.md
-                - name: "Присвоение псевдонима (хранилище данных\_SQL Azure или Parallel Data\_Warehouse)"
+                - name: "Псевдонимы (Azure Synapse\_Analytics, Parallel\_Data\_Warehouse)"
                   href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: EXPLAIN
                   href: t-sql/queries/explain-transact-sql.md
@@ -16318,7 +16320,7 @@
                   href: t-sql/queries/readtext-transact-sql.md
                 - name: Условие поиска
                   href: t-sql/queries/search-condition-transact-sql.md
-                - name: "Вложенные запросы (хранилище данных\_SQL Azure или Parallel Data\_Warehouse)"
+                - name: "Вложенные запросы (Azure Synapse\_Analytics, Parallel\_Data\_Warehouse)"
                   href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: Конструктор табличных значений
                   href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16638,7 +16640,7 @@
                   href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
                 - name: FUNCTION
                   href: t-sql/statements/create-function-transact-sql.md
-                - name: FUNCTION (хранилище данных SQL)
+                - name: FUNCTION (Azure Synapse Analytics)
                   href: t-sql/statements/create-function-sql-data-warehouse.md
                 - name: INDEX
                   href: t-sql/statements/create-index-transact-sql.md
@@ -16698,11 +16700,11 @@
                   href: t-sql/statements/create-synonym-transact-sql.md
                 - name: TABLE
                   href: t-sql/statements/create-table-transact-sql.md
-                - name: TABLE (хранилище данных SQL Azure)
+                - name: TABLE (Azure Synapse Analytics)
                   href: t-sql/statements/create-table-azure-sql-data-warehouse.md
                 - name: TABLE (граф SQL)
                   href: t-sql/statements/create-table-sql-graph.md
-                - name: TABLE AS SELECT (хранилище данных SQL Azure)
+                - name: TABLE AS SELECT (Azure Synapse Analytics)
                   href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
                 - name: TABLE IDENTITY (свойство)
                   href: t-sql/statements/create-table-transact-sql-identity-property.md
@@ -16962,7 +16964,7 @@
                   href: t-sql/statements/open-master-key-transact-sql.md
                 - name: OPEN SYMMETRIC KEY
                   href: t-sql/statements/open-symmetric-key-transact-sql.md
-                - name: 'Разрешения: Разрешения: GRANT, DENY, REVOKE (хранилище данных SQL Azure, Parallel Data Warehouse)'
+                - name: "Разрешения: GRANT, DENY, REVOKE (Azure Synapse\_Analytics, Parallel\_Data\_Warehouse)"
                   href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: REVERT
                   href: t-sql/statements/revert-transact-sql.md
