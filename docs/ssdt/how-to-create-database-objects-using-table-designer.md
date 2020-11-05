@@ -7,18 +7,19 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
+- Microsoft.Data.Relational.Design.PW.RelationshipsDescriptor.OnDelete
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 410b2674f407018b895ed84781bedf5fa8766feb
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518784"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364396"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Руководство. создать объекты базы данных с помощью конструктора таблиц
 
@@ -52,9 +53,9 @@ ms.locfileid: "85518784"
     CREATE TABLE [dbo].[Suppliers]  
     ```  
   
-4.  Щелкните пустую строку в сетке столбцов, чтобы добавить новый столбец к таблице.  Введите в поле **Имя** значение **CompanyName**, в поле **Тип данных** значение **nvarchar (128)** и снимите флажок **Разрешить значение NULL**. При выходе в другие вкладки обратите внимание, что данные в области скриптов обновляются моментально.  
+4.  Щелкните пустую строку в сетке столбцов, чтобы добавить новый столбец к таблице.  Введите в поле **Имя** значение **CompanyName** , в поле **Тип данных** значение **nvarchar (128)** и снимите флажок **Разрешить значение NULL**. При выходе в другие вкладки обратите внимание, что данные в области скриптов обновляются моментально.  
   
-5.  Добавьте еще один новый столбец. Введите в поле **Имя** значение **Address**, в поле **Тип данных** значение **nvarchar (MAX)** и снимите флажок **Разрешить значение NULL**.  
+5.  Добавьте еще один новый столбец. Введите в поле **Имя** значение **Address** , в поле **Тип данных** значение **nvarchar (MAX)** и снимите флажок **Разрешить значение NULL**.  
   
     > [!WARNING]  
     > При редактировании объектов из подключенной базы данных не сохраняйте их на локальный диск. Чтобы сохранить изменения в базе данных правильно, выполните инструкции, приведенные в руководстве по [обновлению подключенной базы данных с помощью Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  

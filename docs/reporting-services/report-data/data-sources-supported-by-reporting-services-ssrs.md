@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5b8fb15c2fb479471000fc9979c691761e4d81cd
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006455"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328559"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -104,7 +104,7 @@ ms.locfileid: "92006455"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|OLEDB|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OledbClient|Да|Да|SQL Server 2012 и выше.|Да|Да|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[ODBC](#ODBC)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OdbcClient|Да|Да|SQL Server 2012 и выше.|Да|Да|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[База данных SQL Microsoft Azure](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Н/Д|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Да|Да|
-|Хранилище данных SQL|[База данных SQL Microsoft Azure](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Н/Д|Хранилище данных SQL|Да|Да| 
+|Azure Synapse Analytics|[База данных SQL Microsoft Azure](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Н/Д|Azure Synapse Analytics|Да|Да| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] (модуль)|[Параллельные хранилища данных Microsoft](#PWD)|Нерекомендуемый модуль обработки данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Недоступно|Недоступно|Н/Д|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|Нет|N|  
 |Многомерная или табличная база данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Службы Microsoft SQL Server Analysis Services](#AnalysisServices)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Использует ADOMD.NET|Да|Да|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и более поздние версии|Да|Да|  
 |Набор данных Power BI Premium (начиная с Reporting Services версии 2019 и Сервера отчетов Power BI от января 2020 г.) |[Службы Microsoft SQL Server Analysis Services](#AnalysisServices)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Использует ADOMD.NET|Да|Да|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и более поздние версии|Да|Да|
@@ -178,14 +178,14 @@ ms.locfileid: "92006455"
  Вы можете также создавать модели на основе источников данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ###  <a name="ole-db-data-processing-extension"></a><a name="OLEDBAll"></a> OLE DB Data Processing Extension  
- Модуль обработки данных OLE DB требует выбора дополнительного уровня поставщика данных в зависимости от версии источника данных, который необходимо использовать в отчете. Если конкретный поставщик данных не выбран, предоставляется поставщик по умолчанию. Выберите конкретный поставщик данных в диалоговом окне **Свойства соединения**, открыть которое можно, нажав кнопку **Изменить** в диалоговых окнах "Источник данных" или "Общий источник данных".  
+ Модуль обработки данных OLE DB требует выбора дополнительного уровня поставщика данных в зависимости от версии источника данных, который необходимо использовать в отчете. Если конкретный поставщик данных не выбран, предоставляется поставщик по умолчанию. Выберите конкретный поставщик данных в диалоговом окне **Свойства соединения** , открыть которое можно, нажав кнопку **Изменить** в диалоговых окнах "Источник данных" или "Общий источник данных".  
   
  Дополнительные сведения о соответствующем конструкторе запросов OLE DB см. в разделах [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Дополнительные сведения об определенной поддержке поставщиков OLE DB см. в статье [Конструктор Visual Studio .NET поддерживает отдельных поставщиков данных OLE DB](https://support.microsoft.com/default.aspx/kb/811241) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   
 ####  <a name="ole-db-for-sql-server"></a><a name="OLEDBSQL"></a> OLE DB для SQL Server  
- При выборе типа источника данных **OLE DB**выбирается модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который расширяет возможности поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для OLE DB. Этот модуль обработки данных скомпилирован в собственном коде для платформ на базе x86 и x64.  
+ При выборе типа источника данных **OLE DB** выбирается модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который расширяет возможности поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для OLE DB. Этот модуль обработки данных скомпилирован в собственном коде для платформ на базе x86 и x64.  
   
  Дополнительные сведения см. в разделе [Тип соединения OLE DB (службы SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
@@ -214,7 +214,7 @@ ms.locfileid: "92006455"
  [Назад к таблице источников данных](#DataSourcesTable)  
   
 ###  <a name="odbc-data-processing-extension"></a><a name="ODBC"></a> ODBC Data Processing Extension  
- При выборе типа источника данных **ODBC**выбирается модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который расширяет возможности поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для ODBC. Этот модуль обработки данных скомпилирован в собственном коде для платформ на базе x86 и [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] . Этот модуль может быть использован для подключения к любому источнику данных, использующему поставщик ODBC, и получения данных из него.  
+ При выборе типа источника данных **ODBC** выбирается модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который расширяет возможности поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для ODBC. Этот модуль обработки данных скомпилирован в собственном коде для платформ на базе x86 и [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] . Этот модуль может быть использован для подключения к любому источнику данных, использующему поставщик ODBC, и получения данных из него.  
   
 > [!NOTE]  
 >  Несмотря на то, что поставщик данных может поддерживать предварительный просмотр отчета на системе клиента, создающего отчет, не все поставщики данных ODBC поддерживают отчеты, опубликованные на сервере отчетов.  
@@ -249,7 +249,7 @@ ms.locfileid: "92006455"
  [Назад к таблице источников данных](#DataSourcesTable)  
   
 ###  <a name="teradata-data-processing-extension"></a><a name="Teradata"></a> Модуль обработки данных Teradata  
- При выборе типа источника данных **Teradata**выбирается модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который расширяет возможности поставщика данных .NET Framework для Teradata. Чтобы получить данные отчета от Teradata, системный администратор должен установить поставщика данных .NET Framework для Teradata на клиенте разработки отчетов для предварительного просмотра отчетов и на сервере отчетов для просмотра опубликованных отчетов.  
+ При выборе типа источника данных **Teradata** выбирается модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который расширяет возможности поставщика данных .NET Framework для Teradata. Чтобы получить данные отчета от Teradata, системный администратор должен установить поставщика данных .NET Framework для Teradata на клиенте разработки отчетов для предварительного просмотра отчетов и на сервере отчетов для просмотра опубликованных отчетов.  
   
  Для проектов сервера отчетов не существует графического конструктора запросов для этого модуля. Для создания запросов используйте текстовый конструктор запросов.  
   
