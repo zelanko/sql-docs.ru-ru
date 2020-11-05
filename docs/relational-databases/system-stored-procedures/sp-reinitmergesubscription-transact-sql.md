@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1a924af8d72239e3d185e27c491ecd48d9f38ad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc1d2d3dc8b9763d19410b2a9773fb7766d22140
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547440"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364749"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,28 +41,31 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **ALL**.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию **ALL**.  
   
-`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию **ALL**.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname** и значение по умолчанию **ALL**.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Имя базы данных подписчика. Аргумент *subscriber_db* имеет тип **sysname**и значение по умолчанию **ALL**.  
+`[ @subscriber_db = ] 'subscriber_db'` Имя базы данных подписчика. Аргумент *subscriber_db* имеет тип **sysname** и значение по умолчанию **ALL**.  
   
-`[ @upload_first = ] 'upload_first'` Указывает, передаются ли изменения на подписчике перед повторной инициализацией подписки. *upload_first* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение — true**, изменения передаются перед повторной инициализацией подписки. Если **значение равно false**, изменения не передаются.  
+`[ @upload_first = ] 'upload_first'` Указывает, передаются ли изменения на подписчике перед повторной инициализацией подписки. *upload_first* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение — true** , изменения передаются перед повторной инициализацией подписки. Если **значение равно false** , изменения не передаются.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_reinitmergesubscription** используется в репликации слиянием.  
   
  для повторной инициализации подписок на публикацию слиянием можно вызвать **sp_reinitmergesubscription** с издателя. Также рекомендуется перезапустить агент моментальных снимков.  
   
  Если добавить, удалить или изменить параметризованный фильтр, ожидающие обработки изменения подписчика нельзя будет передать издателю во время повторной инициализации. Если нужно передать изменения, ожидающие обработки, то перед изменением фильтра необходимо синхронизировать все подписки.  
   
-## <a name="example"></a>Пример  
+## <a name="examples"></a>Примеры  
+
+### <a name="a-reinitialize-the-push-subscription-and-lose-pending-changes"></a>A. Повторная инициализация принудительной подписки и потеря ожидающих изменений
+
  [!code-sql[HowTo#sp_reinitmergepushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_1.sql)]  
   
-## <a name="example"></a>Пример  
+### <a name="b-reinitialize-the-push-subscription-and-upload-pending-changes"></a>Б. Повторная инициализация принудительной подписки и отправка ожидающих изменений
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
