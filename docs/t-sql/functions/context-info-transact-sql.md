@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad1dea00f71039a3dfb37386bfd7ebe63b53a6d6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0a6ff9b888601403029ef8c830dd8dd674aa1f10
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990277"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235655"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Эта функция возвращает значение **context_info**, установленное для текущего сеанса или пакета либо полученное с помощью инструкции [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md).
+Эта функция возвращает значение **context_info** , установленное для текущего сеанса или пакета либо полученное с помощью инструкции [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,8 +48,8 @@ CONTEXT_INFO()
 Значение **context_info**.
   
 Если значение **context_info** не было задано:
--   в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращается значение NULL;  
--   в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] возвращается уникальный идентификатор GUID, связанный с сеансом.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает значение NULL.  
+-   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] возвращает уникальный идентификатор GUID, связанный с сеансом.  
   
 ## <a name="remarks"></a>Примечания  
 Множественный активный результирующий набор (функция MARS) позволяет приложениям запускать несколько пакетов или запросов одновременно, используя одно и то же подключение. Если один из пакетов подключения MARS запустит SET CONTEXT_INFO, функция `CONTEXT_INFO` вернет новое контекстное значение, когда функция `CONTEXT_INFO` запускается в том же пакете, что и инструкция SET. Если функция `CONTEXT_INFO` выполняется в одном или нескольких других пакетах подключения, `CONTEXT_FUNCTION` не возвращает новое значение, если эти пакеты не запускаются после пакета, выполнившего инструкцию SET.

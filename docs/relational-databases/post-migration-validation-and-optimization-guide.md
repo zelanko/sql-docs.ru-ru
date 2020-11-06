@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891134"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235478"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Руководство по оптимизации и проверке после миграции
 
@@ -32,7 +32,7 @@ ms.locfileid: "91891134"
 
 ## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Регрессии запросов из-за изменения в версии CE
 
-**Область применения: миграция с ** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Область применения: миграция с** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 При миграции со старых версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] или более новые версии и при обновлении [уровня совместимости базы данных](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) до последнего доступного выполнение рабочей нагрузки может замедляться.
 
@@ -44,7 +44,7 @@ ms.locfileid: "91891134"
 
 Измените [уровень совместимости базы данных](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) на исходную версию и следуйте рекомендуемому рабочему процессу обновления, показанному на следующем рисунке:
 
-![хранилище запросов-использование-5](../relational-databases/performance/media/query-store-usage-5.png "хранилище запросов-использование-5")  
+![Схема, на которой показан рекомендуемый рабочий процесс обновления.](../relational-databases/performance/media/query-store-usage-5.png "хранилище запросов-использование-5")  
 
 Дополнительные сведения по этой теме см. в разделе [Поддержание стабильной производительности во время обновления до более новой версии SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -94,7 +94,7 @@ ms.locfileid: "91891134"
 > [!NOTE]
 > Если при миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] подобная проблема возникнет в источнике [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], миграция на новую версию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] без изменений будет проходить без учета этого сценария.
 
-Оптимизатор запросов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] работает только с теми данными, которые известны на момент компиляции. Если рабочая нагрузка выполняется с предикатами, которые могут быть известны только во время выполнения, вероятность неадекватного выбора плана возрастает. Для получения плана оптимального качества требуются предикаты **SARGable** или **S**earch **Arg**ument**able**.
+Оптимизатор запросов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] работает только с теми данными, которые известны на момент компиляции. Если рабочая нагрузка выполняется с предикатами, которые могут быть известны только во время выполнения, вероятность неадекватного выбора плана возрастает. Для получения плана оптимального качества требуются предикаты **SARGable** или **S** earch **Arg** ument **able**.
 
 Приведем несколько примеров предикатов, отличных от SARGable:
 -   Неявные преобразования данных, например VARCHAR в NVARCHAR или INT в VARCHAR. Ищите предупреждения CONVERT_IMPLICIT в фактических планах выполнения в среде выполнения. Преобразование одного типа в другой также может приводить к потере точности.

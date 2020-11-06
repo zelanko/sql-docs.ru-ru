@@ -8,17 +8,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: c6e4dd8869c9f26adb34c5acb965241ff9a2198e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.date: 10/29/2020
+ms.openlocfilehash: 0c77b957f14401aec3130fa5fa4f78f0d34de9b5
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098703"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067206"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Расширение Kusto (KQL) для Azure Data Studio (предварительная версия)
 
-Расширение Kusto (KQL) для [Azure Data Studio](../what-is.md) позволяет подключаться к кластерам [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) и выполнять к ним запросы.
+Расширение Kusto (KQL) для [Azure Data Studio](../what-is-azure-data-studio.md) позволяет подключаться к кластерам [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) и выполнять к ним запросы.
 
 Теперь пользователи могут создавать и выполнять запросы KQL, а также разрабатывать записные книжки с помощью [ядра Kusto](../notebooks/notebooks-kusto-kernel.md) с технологией IntelliSense.
 
@@ -55,7 +55,7 @@ ms.locfileid: "92098703"
 
 Найдите свой кластер Azure Data Explorer на [портале Azure](https://ms.portal.azure.com/#home), а затем найдите универсальный код ресурса (URI) для кластера.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Расширение Data Explorer":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
 
 Вы также можете сразу приступить к работе, используя кластер *help.kusto.windows.net*.
 
@@ -82,13 +82,13 @@ ms.locfileid: "92098703"
     7. Поле **Имя (необязательно)** оставьте пустым.
         1. Это поле можно использовать для присвоения псевдонима вашему серверу.
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Расширение Data Explorer":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Сведения о подключении":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>Как выполнить запрос к базе данных Azure Data Explorer в Azure Data Studio
 
 Теперь, когда вы настроили подключение к кластеру Azure Data Explorer, можно выполнять запросы к вашей базе данных с помощью Kusto (KQL).
 
-Чтобы создать новую вкладку запроса, можно либо выбрать в меню **Файл > Создать запрос**, либо использовать сочетание клавиш *Ctrl + N*, либо щелкнуть базу данных правой кнопкой мыши и выбрать пункт **Создать запрос**.
+Чтобы создать новую вкладку запроса, можно либо выбрать в меню **Файл > Создать запрос** , либо использовать сочетание клавиш *Ctrl + N* , либо щелкнуть базу данных правой кнопкой мыши и выбрать пункт **Создать запрос**.
 
 Когда новая вкладка запроса будет открыта, введите запрос Kusto.
 
@@ -120,23 +120,21 @@ StormEvents
 
 Параметры расширения выглядят следующим образом.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Расширение Data Explorer":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Параметры расширения Kusto (KQL)":::
 
 ## <a name="sanddance-visualization"></a>Визуализация SandDance
 
-[Расширение SandDance](sanddance-extension.md) с расширением Kusto (KQL) в Azure Data Studio объединяют сводят вместе широкие возможности интерактивной визуализации. В результирующем наборе запроса KQL нажмите кнопку **Визуализатор**, чтобы запустить [SandDance](https://sanddance.js.org/).
+[Расширение SandDance](sanddance-extension.md) с расширением Kusto (KQL) в Azure Data Studio объединяют сводят вместе широкие возможности интерактивной визуализации. В результирующем наборе запроса KQL нажмите кнопку **Визуализатор** , чтобы запустить [SandDance](https://sanddance.js.org/).
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Расширение Data Explorer":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Визуализация SandDance":::
 
 ## <a name="known-issues"></a>Известные проблемы
 
 | Сведения | Обходной путь |
 |---------|------------|
-| [Вьюлет подключения Kusto не работает после перезагрузки](https://github.com/microsoft/azuredatastudio/issues/12475). | Н/Д |
-| [Не удается автоматически выполнить повторное подключение](https://github.com/microsoft/azuredatastudio/issues/11830). | Отключитесь и повторно подключитесь к кластеру Azure Data Explorer. |
-| [Повторное подключение кластера обновления Kusto выполняется неправильно](https://github.com/microsoft/azuredatastudio/issues/11824). | Отключитесь и повторно подключитесь к кластеру Azure Data Explorer. |
-| [При подключении к кластеру вместо базы данных будет выводится панель мониторинга кластера](https://github.com/microsoft/azuredatastudio/issues/12549) | Н/Д |
-| Для каждой таблицы в базе данных кластера данных Azure можно выбрать параметр **SELECT TOP 1000**, но не **TAKE 10**. | Н/Д |
+| [В записной книжке Kusto изменение подключения к базе данных на сохраненном подключении псевдонима зависает после ошибки при выполнении ячейки кода](https://github.com/microsoft/azuredatastudio/issues/12384) | Закройте и снова откройте записную книжку, а затем подключитесь к нужному кластеру с базой данных |
+| [В записной книжке Kusto не работает изменение подключения к базе данных на несохраненном псевдониме](https://github.com/microsoft/azuredatastudio/issues/12843) |Создайте новое подключение во вьюлете подключений и сохраните его с псевдонимом. Затем создайте новую записную книжку и подключитесь к только что сохраненному соединению. | 
+| [В записной книжке Kusto раскрывающийся список баз данных не заполняется при создании нового подключения ADX](https://github.com/microsoft/azuredatastudio/issues/12666) | Создайте новое подключение во вьюлете подключений и сохраните его с псевдонимом. Затем создайте новую записную книжку и подключитесь к только что сохраненному соединению. |
 
 Можно отправить [запрос функции](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=), чтобы оставить отзыв для команды специалистов по продукту.  
 Можно сообщить об [ошибке](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=), чтобы оставить отзыв для команды специалистов по продукту.

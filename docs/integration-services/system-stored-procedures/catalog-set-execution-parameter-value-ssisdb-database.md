@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5775b87b13fc126907dfc0f121e9838c2d490fd0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425116"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243668"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (база данных SSISDB)
 
@@ -74,7 +74,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 ## <a name="remarks"></a>Комментарии  
  Чтобы выяснить значения параметров, использованные в ходе данного выполнения, выполните запрос к представлению catalog.execution_parameter_values.  
   
- Чтобы задать диапазон информации, регистрируемой в ходе выполнения пакета, присвойте параметру *parameter_name* значение LOGGING_LEVEL, а параметру *parameter_value* — одно из указанных ниже значений.  
+ Чтобы задать диапазон информации, регистрируемой в ходе выполнения пакета, присвойте параметру *parameter_name* значение LOGGING_LEVEL, а параметру *parameter_value*  — одно из указанных ниже значений.  
   
  Присвойте параметру *object_type* значение 50.  
   
@@ -114,7 +114,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|Один или несколько кодов событий|  
   
-## <a name="example"></a>Пример  
+## <a name="examples"></a>Примеры  
+
+### <a name="a-generate-dump-files-for-errors"></a>A. Создание файлов дампа для ошибок
+
  В следующем примере задано, что сервер служб Integration Services создает файлы дампа при возникновении любой ошибки в ходе выполнения пакета.  
   
 ```sql
@@ -122,7 +125,8 @@ exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
 ```  
   
-## <a name="example"></a>Пример  
+### <a name="b-generate-dump-files-for-events"></a>Б. Создание файлов дампа для событий
+
  В следующем примере задано, что сервер служб Integration Services создает файлы дампа при возникновении событий в ходе выполнения пакета, и указано событие, в результате которого сервер создает файлы.  
   
 ```sql

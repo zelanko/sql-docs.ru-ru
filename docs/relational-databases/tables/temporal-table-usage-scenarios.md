@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7e87d77eec096191c00a0ff7d68cd40dca713926
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809200"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243586"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Сценарии использования темпоральных таблиц
 
@@ -33,7 +33,7 @@ ms.locfileid: "91809200"
 На следующей схеме показан сценарий таблицы Employee с примером данных, включая текущие (помеченные синим цветом) и предыдущие версии строк (помеченные серым цветом).
 В правой части схемы показаны версии строк по оси времени, а также какие строки выбираются в разных типах запросов к темпоральной таблице с предложением SYSTEM_TIME или без него.
 
-![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
+![Схема, показывающая первый сценарий использования темпоральных таблиц.](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
 
 ### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>Включение системного управления версиями в новой таблице для аудита данных
 
@@ -175,7 +175,7 @@ FROM Employee
 
 На следующей схеме показана упрощенная модель данных, используемая для управления запасами.
 
-![TemporalUsageInMemory](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
+![Схема упрощенной модели данных, используемой для управления запасами.](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
 
 В следующем примере кода создается таблица ProductInventory как темпоральная таблица с системным управлением версиями в памяти с кластеризованным индексом columnstore в таблице журнала (который фактически заменяет индекс хранилища строк, создаваемый по умолчанию):
 
@@ -261,7 +261,7 @@ END;
 
 Хранимая процедура SpUpdateInventory либо вставляет новый продукт на склад, либо обновляет количество продуктов для определенного расположения. Бизнес-логика очень проста и заключается в поддержании постоянной точности актуального состояния путем увеличения или уменьшения значения поля Quantity через обновление таблицы, при этом таблицы с системным управлением версиями прозрачно добавляют измерение журнала к данным, как показано на следующей схеме.
 
-![TemporalUsageInMemory2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
+![Схема, демонстрирующая использование использования темпоральных таблиц с текущим использованием в памяти и хронологическое использование в кластеризованном индексе columnstore.](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
 
 Теперь запрос актуального состояния может выполняться эффективно из модуля, скомпилированного в собственном коде:
 
@@ -295,7 +295,7 @@ SELECT * FROM vw_GetProductInventoryHistory
 
 На схеме ниже показан журнал данных для одного продукта, который можно легко отобразить, импортировав представление выше в Power Query, Power BI или аналогичное средство бизнес-аналитики:
 
-![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
+![Схема журнала данных для одного продукта.](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
 
 Темпоральные таблицы могут использоваться в этом сценарии для выполнения других типов анализа с переходом во времени, например для восстановления состояния запасов в любой момент времени в прошлом или для сравнения моментальных снимков, относящихся к разным моментам времени.
 
@@ -348,7 +348,7 @@ SELECT * FROM vw_ProductInventoryDetails
 
 На следующем рисунке показан план выполнения, созданный для запроса SELECT. Это показывает, что вся сложность работы с темпоральными отношениями полностью обрабатывается ядром SQL Server:
 
-![ASOFExecutionPlan](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
+![Схема плана выполнения, созданного для запроса SELECT, показывающая, что все сложности работы с временными связями полностью обрабатываются ядром SQL Server.](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
 
 Для сравнения состояния складских запасов в два момента времени (день назад и месяц назад) используйте следующий код:
 
@@ -390,7 +390,7 @@ CREATE TABLE [dbo].[Product]
 
 На следующей схеме показаны покупки с течением времени.
 
-![TemporalAnomalyDetection](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
+![Схема покупок с течением времени.](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
 
 При условии что в обычные дни количество приобретенных продуктов имеет небольшой разброс, следующий запрос определяет единичные всплески — образцы, которые значительно отличаются от своих ближайших соседей (вдвое), тогда как окружающие образцы отличаются не сильно (менее чем на 20 %):
 
@@ -466,7 +466,7 @@ ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLoca
 
 На следующем рисунке показано, как можно использовать темпоральные таблицы в простом сценарии с двумя SCD (DimLocation и DimProduct) и одной таблицей фактов.
 
-![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
+![Схема: как можно использовать темпоральные таблицы в простом сценарии с двумя SCD (DimLocation и DimProduct) и одной таблицей фактов.](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
 
 Чтобы использовать показанные выше SCD в отчетах, необходимо эффективно настроить запросы. Например, можно вычислить общий объем продаж и среднее количество проданных продуктов на человека за последние шесть месяцев. Обратите внимание, что для обеих метрик требуется корреляция важных для анализа данных из таблицы фактов и измерений, атрибуты которых могли измениться (DimLocation.NumOfCustomers, DimProduct.UnitPrice). Следующий запрос должным образом вычисляет требуемые метрики:
 
@@ -539,13 +539,13 @@ UPDATE Employee
 
 На следующем рисунке показано состояние строки до и после вызова процедуры. Красный прямоугольник отмечает текущую, неправильную версию строки, а зеленый прямоугольник отмечает правильную версию из журнала.
 
-![TemporalUsageRepair1](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
+![Снимок экрана: состояние строки до и после вызова процедуры.](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
 
 ```sql
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
 ```
 
-![TemporalUsageRepair2](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
+![Снимок экрана: исправленная строка.](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
 
 Можно определить эту хранимую процедуру восстановления таким образом, чтобы она принимала точное время вместо версии строки. Она будет восстанавливать строку до той версии, которая была активна на предоставленный момент времени (т. е. в состояние на момент времени).
 
@@ -567,11 +567,11 @@ UPDATE Employee
 
 На следующем рисунке показан сценарий восстановления для тех же данных с условием времени. Здесь выделены параметр @asOf, выбранная строка в журнале, которая была действующей на указанный момент времени, и новая версия строки в текущей таблице после операции восстановления.
 
-![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
+![Снимок экрана: сценарий восстановления с условием времени.](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
 
 Корректировка данных может стать частью автоматической загрузки данных в системах хранения данных и подготовки отчетов. Если только что обновленное значение неправильно, для устранения этого во многих сценариях достаточно восстановить предыдущую версию. На следующей схеме показано, как этот процесс можно автоматизировать.
 
-![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
+![Схема, показывающая, как можно автоматизировать процесс.](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

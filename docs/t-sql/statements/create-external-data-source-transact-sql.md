@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300173"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043847"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -119,7 +119,7 @@ WITH
 - Укажите `Driver={<Name of Driver>}` при подключении через `ODBC`.
 - `wasbs` необязателен, но рекомендуется к использованию при доступе к учетным записям службы хранилища Azure, так как тогда данные будут передаваться по защищенному каналу TLS/SSL.
 - API `abfs` или `abfss` не поддерживаются при доступе к учетным записям хранения Azure.
-- Параметр иерархического пространства имен для учетных записей хранения Azure (v2) не поддерживается. Убедитесь, что этот параметр **отключен** .
+- Параметр иерархического пространства имен для учетных записей хранения Azure (v2) не поддерживается. Убедитесь, что этот параметр **отключен**.
 - Чтобы обеспечить успешное выполнение запросов PolyBase в случае отработки отказа Hadoop `Namenode`, целесообразно использовать для `Namenode` кластера Hadoop виртуальный IP-адрес. Если этого не сделать, следует выполнить команду [ALTER EXTERNAL DATA SOURCE][alter_eds], чтобы указать новое расположение.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *пара "ключ-значение"*
@@ -493,7 +493,7 @@ WITH
 
 Дополнительные примечания и инструкции при задании учетных данных:
 
-- Для загрузки данных из службы хранилища Azure в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] необходимо использовать ключ хранилища Azure.
+- Чтобы загрузить данные из службы хранилища Azure в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], используйте подписанный URL-адрес (маркер SAS).
 - `CREDENTIAL` требуется, только если данные были защищены. `CREDENTIAL` не является обязательным для наборов данных с возможностью анонимного доступа.
 - При  = `BLOB_STORAGE``SHARED ACCESS SIGNATURE` учетные данные необходимо создавать, используя `TYPE` в качестве удостоверения. Кроме того, маркер SAS должен создаваться следующим образом:
   - Исключите начальные `?` при настройке в качестве секрета

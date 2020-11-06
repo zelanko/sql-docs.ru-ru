@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fea0c2df2ec25493e09214289802824ffe5f93ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19111422e69b2ce77f53e13bb6d1a450b4ef7692
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430246"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243692"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>Функции — dm_execution_performance_counters
 
@@ -64,14 +64,18 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |counter_name|**nvarchar(128)**|Имя счетчика.|См. раздел **Примечания** в описании значений.|  
 |counter_value|**BigInt**|Значение, возвращаемое счетчиком.||  
   
-## <a name="example"></a>Пример  
+## <a name="examples"></a>Примеры  
+
+### <a name="a-return-statistics-for-a-running-execution"></a>A. Получение статистики для запущенного выполнения
+
  В следующем примере функция возвращает статистику для запущенного выполнения с идентификатором 34.  
   
 ```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
-## <a name="example"></a>Пример  
+### <a name="b-return-statistics-for-all-running-executions"></a>Б. Получение статистики для всех запущенных выполнений
+
  В следующем примере функция возвращает статистику для всех выполнений, запущенных на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], в зависимости от разрешений.  
   
 ```sql

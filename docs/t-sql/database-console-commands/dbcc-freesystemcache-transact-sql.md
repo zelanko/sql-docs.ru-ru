@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 0069e1fc2a6991df71291fd377aaa76e10f23256
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638987"
+ms.locfileid: "92734630"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,13 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>Аргументы
 ( 'ALL' [, _pool\_name_ ] )  
 Ключевое слово ALL указывает все поддерживаемые кэши.  
-Аргумент _pool\_name_ указывает кэш пула Resource Governor. Освобождены будут только записи, связанные с этим пулом.  
+Аргумент _pool\_name_ указывает кэш пула регулятора ресурсов. Освобождены будут только записи, связанные с этим пулом. Чтобы получить список доступных имен пулов, выполните следующую команду.
+
+```sql
+SELECT name FROM sys.dm_os_memory_clerks
+```
+
+Большинство, но не все, кэши можно освободить по отдельности с помощью этой команды.
   
 MARK_IN_USE_FOR_REMOVAL  
 Асинхронно освобождает текущие используемые элементы из соответствующих кэшей после того, как они перестают использоваться. Новые элементы, созданные в кэше после выполнения DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL, не будут затронуты.  
@@ -62,7 +68,7 @@ NO_INFOMSGS
 Подавляет вывод всех информационных сообщений.  
   
 ## <a name="remarks"></a>Remarks  
-При выполнении инструкции DBCC FREESYSTEMCACHE очищается кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех предстоящих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: 
+При выполнении инструкции DBCC FREESYSTEMCACHE очищается кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех предстоящих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение:
 
 >`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
 

@@ -2,7 +2,7 @@
 title: Разрешения (ядро СУБД) | Документация Майкрософт
 description: Просмотрите полный список разрешений SQL Server, чтобы узнать, какие разрешения применяются к используемым платформам.
 ms.custom: ''
-ms.date: 01/03/2017
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-author: VanMSFT
-ms.author: vanto
+author: AndreasWolter
+ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081953"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243653"
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92081953"
 С каждым защищаемым объектом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связаны разрешения, которые могут быть предоставлены участнику. Управление разрешениями в [!INCLUDE[ssDE](../../includes/ssde-md.md)] осуществляется на уровне сервера (назначение разрешений именам входа и ролям сервера) и на уровне базы данных (назначение разрешений пользователям и ролям базы данных). Модель для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] использует ту же систему для разрешений базы данных, однако разрешения на уровне сервера недоступны. Здесь содержится полный список разрешений. Советы по проектированию системы разрешений см. в статье [Начало работы с разрешениями ядра СУБД](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 Общее количество разрешений для [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] составляет 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] предоставляет 254 разрешений. Большинство разрешений применяются ко всем платформам, но некоторые из них — только к определенным. Например, разрешения на уровне сервера нельзя предоставить в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], а некоторые разрешения действуют только в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] предоставляет 238 разрешений. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставлены 230 разрешений. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предоставлены 219 разрешений. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] предоставлены 214 разрешений. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] предоставлены 195 разрешений. В разделе [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) описаны нововведения последних версий.
+Новые разрешения вводятся постепенно с новыми выпусками. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] предоставляет 238 разрешений. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставлены 230 разрешений. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предоставлены 219 разрешений. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] предоставлены 214 разрешений. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] предоставлены 195 разрешений. В разделе [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) указаны новые разрешения последних версий.
 
 Если вы знаете, как применять разрешения, примените их на уровне сервера к именам для входа и пользователям разрешений на уровне базы данных, используя инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)и [DENY](../../t-sql/statements/deny-transact-sql.md) . Пример:   
 ```sql
@@ -364,7 +364,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Общие сведения об алгоритме проверки разрешений  
- Проверка разрешений может оказаться сложной задачей. Алгоритм проверки разрешений учитывает перекрывающееся членство в группах и цепочки владения, явные и неявные разрешения. На его работу могут влиять разрешения на защищаемые классы, содержащие защищаемые сущности. Общая процедура алгоритма состоит в сборе всех применимых разрешений. Если не обнаружена блокирующая инструкция DENY, алгоритм выполняет поиск инструкции GRANT, которая предоставляет достаточные права доступа. Алгоритм содержит три необходимых элемента: **контекст безопасности**, **область разрешения**и **требуемое разрешение**.  
+ Проверка разрешений может оказаться сложной задачей. Алгоритм проверки разрешений учитывает перекрывающееся членство в группах и цепочки владения, явные и неявные разрешения. На его работу могут влиять разрешения на защищаемые классы, содержащие защищаемые сущности. Общая процедура алгоритма состоит в сборе всех применимых разрешений. Если не обнаружена блокирующая инструкция DENY, алгоритм выполняет поиск инструкции GRANT, которая предоставляет достаточные права доступа. Алгоритм содержит три необходимых элемента: **контекст безопасности** , **область разрешения** и **требуемое разрешение**.  
   
 > [!NOTE]  
 >  Невозможно предоставить, запретить или отменить разрешения sa, dbo, владельцу сущности, information_schema, sys или самому себе.  
@@ -406,7 +406,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 3.  Выполнить статистическую обработку удостоверений на уровне сервера, базы данных и подписанных модулей, относящихся к вызывающей стороне, чтобы создать **контекст безопасности**.  
   
-4.  Собрать для полученного **контекста безопасности**все разрешения, которые предоставлены или запрещены в **области разрешения**. Разрешение может задаваться в явном виде в составе инструкций GRANT, GRANT WITH GRANT или DENY (либо быть неявным или покрывающим разрешением GRANT или DENY). Например, из разрешения CONTROL на схему следует разрешение CONTROL на таблицу, а из разрешения CONTROL на таблицу следует разрешение SELECT. Таким образом, если предоставлено разрешение CONTROL на схему, то неявно предоставляется разрешение SELECT на таблицу. Если разрешение CONTROL на таблицу запрещается, то неявно запрещается разрешение SELECT на таблицу.  
+4.  Собрать для полученного **контекста безопасности** все разрешения, которые предоставлены или запрещены в **области разрешения**. Разрешение может задаваться в явном виде в составе инструкций GRANT, GRANT WITH GRANT или DENY (либо быть неявным или покрывающим разрешением GRANT или DENY). Например, из разрешения CONTROL на схему следует разрешение CONTROL на таблицу, а из разрешения CONTROL на таблицу следует разрешение SELECT. Таким образом, если предоставлено разрешение CONTROL на схему, то неявно предоставляется разрешение SELECT на таблицу. Если разрешение CONTROL на таблицу запрещается, то неявно запрещается разрешение SELECT на таблицу.  
   
     > [!NOTE]  
     >  Инструкция GRANT для разрешения на уровне столбцов имеет приоритет над инструкцией DENY на уровне объектов.  

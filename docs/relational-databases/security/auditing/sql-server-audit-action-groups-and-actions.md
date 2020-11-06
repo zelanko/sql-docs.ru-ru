@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 51f971caef999424e002a49ab357e33fd1f0657a
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301903"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243577"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Действия и группы действий подсистемы аудита SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "86301903"
 |BATCH_STARTED_GROUP|Это событие возникает каждый раз, когда начинается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает до выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом. **Добавлено в SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Это событие вызывается для составления отчета о сообщениях аудита, связанных с механизмом обеспечения безопасности транспорта компонента Service Broker. Эквивалентно [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Это событие вызывается при создании, изменении или удалении базы данных. Это событие возникает при создании, изменении или удалении любой базы данных. Эквивалентно [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Это событие возникает при выходе пользователя автономной базы данных из базы данных.|  
+|DATABASE_LOGOUT_GROUP|Это событие возникает при выходе пользователя автономной базы данных из базы данных. Эквивалентно [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Это событие вызывается для составления отчета о сообщениях аудита, связанных с механизмом обеспечения безопасности транспорта зеркального отображения базы данных. Эквивалентно [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
 |DATABASE_OBJECT_ACCESS_GROUP|Это событие вызывается каждый раз при обращении к типам сообщений, сборкам и контрактам. Это событие возникает при любом доступе к любой базе данных. Примечание. Это может привести к появлению большого количества записей аудита.<br /><br /> Эквивалентно [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Это событие вызывается в тот момент, когда для объекта базы данных (например, для схемы) выполняется инструкция CREATE, ALTER или DROP. Это событие возникает при создании, изменении или удалении любого объекта базы данных. Примечание. Это приводит к очень большому количеству записей аудита.<br /><br /> Эквивалентно [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
@@ -141,7 +141,7 @@ ms.locfileid: "86301903"
 |BATCH_COMPLETED_GROUP;|Это событие возникает каждый раз, когда завершается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает после выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом, включая результат.|  
 |BATCH_STARTED_GROUP|Это событие возникает каждый раз, когда начинается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает до выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом.|  
 |DATABASE_CHANGE_GROUP|Это событие вызывается при создании, изменении или удалении базы данных. Эквивалентно [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Это событие возникает при выходе пользователя автономной базы данных из базы данных. Эквивалент [класса событий Audit Backup и Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|DATABASE_LOGOUT_GROUP|Это событие возникает при выходе пользователя автономной базы данных из базы данных.|  
 |DATABASE_OBJECT_ACCESS_GROUP|Это событие вызывается каждый раз, когда производится доступ к сертификатам, асимметричным ключам и другим объектам базы данных. Эквивалентно [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Это событие вызывается в тот момент, когда для объекта базы данных (например, для схемы) выполняется инструкция CREATE, ALTER или DROP. Эквивалентно [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Это событие возникает при изменении владельца объектов в области базы данных. Эквивалентно [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  

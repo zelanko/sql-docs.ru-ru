@@ -19,32 +19,32 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 68efda5b93663c2980e10f49c9b8592d08ee02d6
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 5f3e65de977926076ec10ef1609bf712c9579faa
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670240"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243823"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Просмотр и чтение файлов журналов программы установки SQL Server
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-Программа установки SQL Server по умолчанию создает файлы журналов в папке с датой и меткой времени в **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log**, где *nnn* — это число, соответствующее устанавливаемой версии SQL. Формат папки журналов с меткой времени — ГГГГММДД_ччммсс. При запуске программы установки в автоматическом режиме журналы создаются по пути %temp%\sqlsetup*.log. Все файлы в папке журналов архивируются в файле Log\*.cab в соответствующей папке журналов.  
+Программа установки SQL Server по умолчанию создает файлы журналов в папке с датой и меткой времени в **\%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log** , где *nnn*  — это число, соответствующее устанавливаемой версии SQL. Формат папки журналов с меткой времени — ГГГГММДД_ччммсс. При запуске программы установки в автоматическом режиме журналы создаются по пути %temp%\sqlsetup*.log. Все файлы в папке журналов архивируются в файле Log\*.cab в соответствующей папке журналов.  
 
    | Файл           | путь |
    | :------        | :----------------------------- |
-   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
-   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс |
-   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс|
-   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс\Datastore
-   | **Файлы журнала MSI** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс\\\<Name>.log|
-   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс |
-   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\ГГГГММДД_ччммсс |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\ГГГГММДД_ччммсс|
+   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\ГГГГММДД_ччммсс\Datastore
+   | **Файлы журнала MSI** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\ГГГГММДД_ччммсс\\\<Name>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\ГГГГММДД_ччммсс |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\ГГГГММДД_ччммсс |
    | **Для автоматической установки** | %temp%\sqlsetup*.log |
 
 
- ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
+ ![Снимок экрана: расположение файла ConfigurationFiles.ini в папке Setup Bootstrap.](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
  >[!NOTE]
  > Число *nnn* в пути соответствует устанавливаемой версии SQL. На приведенном выше рисунке установлена версия SQL 2017, поэтому в пути используется число 140. Для SQL 2016 использовалась бы папка с числом 130, а для SQL 2014 — с числом 120.
@@ -86,7 +86,7 @@ ms.locfileid: "91670240"
   > Обратите внимание на то, что при применении исправлений может быть несколько вложенных папок (по одной для каждого экземпляра, к которому применяются исправления, и еще одна для общих компонентов). Они содержат одинаковые наборы файлов (например, %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### <a name="location"></a>Расположение  
- Файл summary.txt находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
+ Файл summary.txt находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\.
   
  Чтобы найти ошибки в текстовом файле сводки, воспользуйтесь поиском с ключевыми словами «error» или «failed».
   
@@ -96,7 +96,7 @@ ms.locfileid: "91670240"
  Базовый файл summary_engine схож с файлом справки и создается при выполнении основного рабочего процесса.
   
 ### <a name="location"></a>Расположение  
- Файл Summary_\<MachineName>_ГГГГММДД_ЧЧММсс.txt находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.
+ Файл Summary_\<MachineName>_ГГГГММДД_ЧЧММсс.txt находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.
   
   
 ## <a name="detailtxt-file"></a>Файл Detail.txt
@@ -105,7 +105,7 @@ ms.locfileid: "91670240"
  Detail.txt создается при выполнении рабочего процесса основных процедур, таких как установка или обновление, и обеспечивает сведения о выполнении. Журналы в файле создаются с учетом времени инициации всех действий, связанных с установкой. В текстовом файле указывается порядок выполнения действий и их зависимости.  
   
 ### <a name="location"></a>Расположение  
- Файл detail.txt находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\Detail.txt.  
+ Файл detail.txt находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\Detail.txt.  
   
  При возникновении ошибки во время процесса установки исключение или ошибка регистрируются в конце этого файла. Чтобы найти ошибки в этом файле, сначала проверьте его конец, а затем воспользуйтесь поиском по файлу с ключевыми словами "ошибка" и "исключение".
     
@@ -121,7 +121,7 @@ ms.locfileid: "91670240"
 -   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>Расположение  
- Файлы журналов MSI расположены в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\<имя\>.log.  
+ Файлы журналов MSI расположены в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\<имя\>.log.  
   
  В конце файла приведена сводка выполнения, в которой указываются общее состояние (успешное или ошибка) и свойства. Для поиска ошибок в файле MSI воспользуйтесь поиском по запросу "value 3" и просмотрите текст рядом с этой строкой.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "91670240"
  В файле конфигурации содержатся входные параметры, указанные при установке. Их можно использовать для повторной установки, что избавит от необходимости их ввода вручную. Однако пароли учетных записей, PID и некоторые параметры не сохраняются в файле конфигурации. Параметры могут либо быть добавлены к файлу или указаны с помощью командной строки или пользовательского интерфейса программы установки. Дополнительные сведения см. в разделе [Установка SQL Server 2016 с помощью файла конфигурации](./install-sql-server-using-a-configuration-file.md).  
   
 ### <a name="location"></a>Расположение  
- Файл ConfigurationFile.ini находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.  
+ Файл ConfigurationFile.ini находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.  
   
 ## <a name="systemconfigurationcheck_reporthtm-file"></a>Файл SystemConfigurationCheck_Report.htm
   
@@ -139,7 +139,7 @@ ms.locfileid: "91670240"
  В отчете о проверке конфигурации системы содержится краткое описание всех выполняемых правил и состояния выполнения.
   
 ### <a name="location"></a>Расположение  
-Файл SystemConfigurationCheck_Report.htm находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.
+Файл SystemConfigurationCheck_Report.htm находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
