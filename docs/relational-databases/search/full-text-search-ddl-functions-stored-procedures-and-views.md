@@ -25,7 +25,7 @@ ms.locfileid: "88498616"
   
  Этот список не содержит устаревшие объекты.  
   
- Список объектов базы данных, которые поддерживают семантический поиск, см. в разделе [Semantic Search DDL, Functions, Stored Procedures, and Views](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md).  
+ Список объектов базы данных, которые поддерживают семантический поиск, см. в разделе [Инструкции семантического поиска DDL, функции, хранимые процедуры и представления](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md).  
   
 ##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Инструкции языка описания данных (DDL) Transact-SQL  
   
