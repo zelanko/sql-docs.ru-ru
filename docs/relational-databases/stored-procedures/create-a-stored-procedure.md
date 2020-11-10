@@ -15,12 +15,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dde2beed868314f315bf51e9fa8174ba01b09e3e
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 5da64e544211e29491ce4270c91ae527bda923de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332663"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364766"
 ---
 # <a name="create-a-stored-procedure"></a>Создание хранимой процедуры
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,6 @@ ms.locfileid: "87332663"
 
 В этом разделе описывается, как можно создать хранимую процедуру [!INCLUDE[tsql](../../includes/tsql-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
   
-##  <a name="Top"></a>   
 -   **Перед началом работы**  [Разрешения](#Permissions)  
   
 -   **Создание процедуры с использованием:**  [среды SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
@@ -46,11 +45,11 @@ ms.locfileid: "87332663"
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Создание процедуры в обозревателе объектов**  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
-2.  Последовательно разверните узел **Базы данных**, базу данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] и узел **Программирование**.  
+2.  Последовательно разверните узел **Базы данных** , базу данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] и узел **Программирование**.  
   
-3.  Щелкните правой кнопкой мыши элемент **Хранимые процедуры**и выберите пункт **Создать хранимую процедуру**.  
+3.  Щелкните правой кнопкой мыши элемент **Хранимые процедуры** и выберите пункт **Создать хранимую процедуру**.  
   
 4.  В меню **Запрос** выберите пункт **Указать значения для параметров шаблона**.  
   
@@ -63,15 +62,15 @@ ms.locfileid: "87332663"
     |Описание|Возвращает данные о сотрудниках.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|**nvarchar**(50)|  
+    |@Datatype_For_Param1|**nvarchar** (50)|  
     |Default_Value_For_Param1|NULL|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|**nvarchar**(50)|  
+    |@Datatype_For_Param2|**nvarchar** (50)|  
     |Default_Value_For_Param2|NULL|  
   
 6.  Нажмите кнопку **ОК**.  
   
-7.  В **редакторе запросов**замените инструкцию SELECT следующей инструкцией:  
+7.  В **редакторе запросов** замените инструкцию SELECT следующей инструкцией:  
   
     ```sql  
     SELECT FirstName, LastName, Department  
@@ -96,7 +95,7 @@ ms.locfileid: "87332663"
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Создание процедуры в редакторе запросов**  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  В меню **Файл** выберите пункт **Создать запрос**.  
   
@@ -132,7 +131,6 @@ ms.locfileid: "87332663"
   
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
 ## <a name="see-also"></a>См. также:  
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)  
   
