@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c84283f4ff6628e56ae3bdbcd1a48ace35399de0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f420aff2681495a8890a1c86841e124c73a98184
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472076"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243719"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>Метод supportsResultSetConcurrency (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public boolean supportsResultSetConcurrency(int type,
 #### <a name="parameters"></a>Параметры  
  *type*  
   
- Значение типа **int**, указывающее тип результирующего набора. Оно может быть равно следующим значениям, определенным в java.sql.ResultSet или SQLServerResultSet:  
+ Значение типа **int** , указывающее тип результирующего набора. Оно может быть равно следующим значениям, определенным в java.sql.ResultSet или SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Типы java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -61,14 +61,14 @@ public boolean supportsResultSetConcurrency(int type,
   
  *concurrency*  
   
- Значение **int**, указывающее уровень параллелизма результирующего набора. Возможно одно из следующих значений, определенных в java.sql.ResultSet или SQLServerResultSet:  
+ Значение **int** , указывающее уровень параллелизма результирующего набора. Возможно одно из следующих значений, определенных в java.sql.ResultSet или SQLServerResultSet:  
   
-## <a name="javasqlresultset-types"></a>Типы java.sql.ResultSet  
+## <a name="concurrency-javasqlresultset-types"></a>Типы параллелизма java.sql.ResultSet  
  CONCUR_READ_ONLY  
   
  CONCUR_UPDATABLE  
   
-## <a name="sqlserverresultset-types"></a>Типы SQLServerResultSet  
+## <a name="concurrency-sqlserverresultset-types"></a>Типы параллелизма SQLServerResultSet  
  CONCUR_SS_OPTIMISTIC_CC  
   
  CONCUR_SS_SCROLL_LOCKS  
@@ -76,7 +76,7 @@ public boolean supportsResultSetConcurrency(int type,
  CONCUR_SS_OPTIMISTIC_VAL  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **true**, если поддерживается. В противном случае — **false**.  
+ **true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

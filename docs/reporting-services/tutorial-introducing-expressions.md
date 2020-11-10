@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: db1efab37a24e49dcf9eac774809ec788831b037
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248543"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043818"
 ---
 # <a name="tutorial-introducing-expressions"></a>Руководство по Знакомство с выражениями
 В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] вы научитесь использовать выражения со стандартными функциями и операторами для создания эффективных и гибких отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. 
@@ -25,7 +25,7 @@ ms.locfileid: "87248543"
   
 На этом рисунке показан отчет, похожий на тот, который будет в итоге создан.  
   
-![руководство-по-выражениям-построителя-отчетов-в-браузере](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
+![Снимок экрана отчета построителя отчетов, в котором используются выражения.](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
 На изучение этого руководства потребуется примерно 30 минут.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "87248543"
   
 10. На панели инструментов конструктора запросов нажмите кнопку **Выполнить** ( **!** ). В результирующем наборе будет 23 строк данных в следующих столбцах: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase и LastPurchase.  
 
-    ![руководство-по-выражениям-построителя-отчетов-запрос-как-текст](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
+    ![Снимок экрана: шаг "Проектирование запроса" мастера создания таблиц или матриц.](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
 11. Щелкните **Далее**.  
   
@@ -113,13 +113,13 @@ ms.locfileid: "87248543"
   
     Суммирование больше не применяется к полю YTDPurchase.  
     
-    ![руководство-по-выражениям-построителя-отчетов-без-суммы](../reporting-services/media/report-builder-expression-not-sum.png)
+    ![Снимок экрана со списком значений, в котором отображается параметр "Сумма", готовый к очистке.](../reporting-services/media/report-builder-expression-not-sum.png)
   
 15. Щелкните **Далее**.  
   
 16. На странице **Выбор макета** оставьте параметры по умолчанию и нажмите кнопку **Далее**.  
 
-    ![руководство-по-выражениям-построителя-отчетов-выбор-макета](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
+    ![Снимок экрана этапа "Выбор макета" в мастере создания таблицы или матрицы.](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
 17. Нажмите кнопку **Готово**.  
   
@@ -141,34 +141,34 @@ ms.locfileid: "87248543"
   
 2.  Щелкните правой кнопкой мыши пункт **DataSet1** и выберите пункт **Свойства набора данных**.  
 
-    ![руководство-по-выражениям-построителя-отчетов-переименование-набора-данных](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
+    ![Снимок экрана, показывающий доступ к свойствам набора данных в построителе отчетов.](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
 3.  В поле **Имя** введите **Expressions**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Отображение фамилии и инициала имени  
-В этом разделе в выражении используется функция **Left** и оператор **Concatenate** (**&**) для вычисления имени, состоящего из фамилии и инициала имени. Можно построить выражение в пошаговом режиме либо пропустить процедуру, а затем скопировать и вставить выражение из учебника в диалоговом окне **Выражение** .   
+В этом разделе в выражении используется функция **Left** и оператор **Concatenate** ( **&** ) для вычисления имени, состоящего из фамилии и инициала имени. Можно построить выражение в пошаговом режиме либо пропустить процедуру, а затем скопировать и вставить выражение из учебника в диалоговом окне **Выражение** .   
   
-1.  Щелкните правой кнопкой мыши столбец **StateProvince** , наведите указатель на пункт **Вставить столбец**, а затем выберите пункт **Слева**.  
+1.  Щелкните правой кнопкой мыши столбец **StateProvince** , наведите указатель на пункт **Вставить столбец** , а затем выберите пункт **Слева**.  
   
     Новый столбец будет добавлен слева от столбца **StateProvince** . 
     
-    ![руководство-по-выражениям-построителя-отчетов-вставка-столбца](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
+    ![Снимок экрана, показывающий, как вставить столбец в отчет.](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
 2.  Щелкните заголовок нового столбца и введите **Name**.  
   
 3.  Щелкните правой кнопкой мыши ячейку данных для столбца **Name** и выберите пункт **Выражение**.  
 
-    ![руководство-по-выражениям-построителя-отчетов-вставка-выражения](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
+    ![Снимок экрана, показывающий, как вставить выражение в отчет.](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
   
-4.  В диалоговом окне **Выражение** разверните узел **Общие функции**и выберите **Текст**.  
+4.  В диалоговом окне **Выражение** разверните узел **Общие функции** и выберите **Текст**.  
   
 5.  В списке **Элемент** дважды щелкните **Left**.  
   
     В выражение будет добавлена функция **Left** .  
     
-    ![руководство-по-выражениям-построителя-отчетов-функция-left](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
+    ![Снимок экрана, показывающий, как добавить функцию Left в выражение.](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
 6.  В списке **Категория** щелкните **Поля (выражения)** .  
   
@@ -186,7 +186,7 @@ ms.locfileid: "87248543"
   
     Законченное выражение выглядит следующим образом: `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`  
     
-    ![руководство-по-выражениям-построителя-отчетов-законченное-выражение](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
+    ![Снимок экрана, показывающий, как добавить значение LastName в выражение.](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -201,11 +201,11 @@ ms.locfileid: "87248543"
   
 2.  Выберите ячейку данных в столбце **LastPurchase** и на вкладке **Главная** в разделе **Число** выберите **Дата**.  
 
-    ![руководство-по-выражениям-построителя-отчетов-формат-дат](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
+    ![Снимок экрана, показывающий, как установить значение столбца LastPurchase на "Дата".](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
 3.  В разделе **Число** щелкните стрелку рядом с полем **Стили заполнителя** и выберите **Образцы значений**. 
 
-    ![руководство-по-выражениям-построителя-отчетов-образцы-значений](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
+    ![Снимок экрана с выбранным параметром «Образцы значений» в построителе отчетов.](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
 
     Вы увидите пример выбранного форматирования. 
   
@@ -219,13 +219,13 @@ ms.locfileid: "87248543"
 
 2. На вкладке **Главная** в разделе **Абзац** выберите **Слева**. 
 
-    ![руководство-по-выражениям-построителя-отчетов-форматирование-заголовков](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
+    ![Снимок экрана, показывающий форматирование заголовков в построителе отчетов.](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
 3. Нажмите кнопку **Выполнить** для предварительного просмотра отчета. 
 
 Вот как на данный момент выглядит отчет с отформатированными заголовками столбцов, датами и валютами.
 
-![руководство-по-выражениям-построителя-отчетов-предпросмотр-форматирования](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
+![Снимок экрана, показывающий предварительный просмотр форматированного отчета.](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
 ## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4. Обозначение пола цветом  
@@ -236,7 +236,7 @@ ms.locfileid: "87248543"
  
 ### <a name="to-add-an-mf-column"></a>Добавление столбца пола  
   
-1.  Щелкните правой кнопкой мыши столбец **Name** , наведите указатель на пункт **Вставить столбец**, а затем выберите пункт **Слева**.  
+1.  Щелкните правой кнопкой мыши столбец **Name** , наведите указатель на пункт **Вставить столбец** , а затем выберите пункт **Слева**.  
   
     Новый столбец будет добавлен слева от столбца **Name** .  
   
@@ -248,11 +248,11 @@ ms.locfileid: "87248543"
   
      В ячейку будет добавлен прямоугольник.  
      
-     ![руководство-по-выражениям-построителя-отчетов-вставка-прямоугольника](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
+     ![Снимок экрана, показывающий, как вставить прямоугольник.](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
   
 2. Перетащите разделитель столбцов между столбцами **M/F/** и **Name** , чтобы сузить столбец **M/F** .
 
-    ![руководство-по-выражениям-построителя-отчетов-сужение-столбца](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
+    ![Снимок экрана, показывающий, как сделать столбец более узким.](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
 ### <a name="to-use-color-to-show-gender"></a>Обозначение пола цветом  
   
@@ -270,9 +270,9 @@ ms.locfileid: "87248543"
   
 7.  Введите **="Male",** (включая запятую).
 
-8. В списке **Категория** выберите **Константы**, а в поле **Значения** щелкните **Васильковый**.
+8. В списке **Категория** выберите **Константы** , а в поле **Значения** щелкните **Васильковый**.
 
-    ![руководство-по-выражениям-построителя-отчетов-цвет-васильковый](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
+    ![Снимок экрана, показывающий, как использовать цвет для отображения пола.](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
 9. В конце введите запятую. 
   
@@ -280,19 +280,19 @@ ms.locfileid: "87248543"
   
 7.  Введите **="Female",** (включая запятую). 
 
-8. В списке **Категория** выберите **Константы**, а в поле **Значения** щелкните **Томатный**.
+8. В списке **Категория** выберите **Константы** , а в поле **Значения** щелкните **Томатный**.
 
 13. После этого введите закрывающую скобку **)** . 
   
     Законченное выражение выглядит следующим образом: `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
-    ![руководство-по-выражениям-построителя-отчетов-цвет-законченное-выражение](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
+    ![Снимок экрана, показывающий полное выражение в диалоговом окне "Выражение".](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
-12. Нажмите кнопку **ОК**, затем нажмите кнопку **ОК** еще раз, чтобы закрыть диалоговое окно **Свойства прямоугольника** .  
+12. Нажмите кнопку **ОК** , затем нажмите кнопку **ОК** еще раз, чтобы закрыть диалоговое окно **Свойства прямоугольника** .  
   
 14. Нажмите кнопку **Выполнить** для предварительного просмотра отчета.  
 
-    ![руководство-по-выражениям-построителя-отчетов-предпросмотр-столбец-m-f](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
+    ![Снимок экрана, показывающий предварительный просмотр столбца M/F.](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
 ### <a name="to-format-the-color-rectangles"></a>Форматирование цветных прямоугольников
 
@@ -304,11 +304,11 @@ ms.locfileid: "87248543"
     - BorderStyle — Solid (Сплошной).
     - BorderWidth — 5pt.
     
-    ![руководство-по-выражениям-построителя-отчетов-форматирование-столбца-m-f](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
+    ![Снимок экрана, показывающий, как форматировать цветные прямоугольники в столбце M/F.](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
 
 18. Нажмите кнопку **Выполнить** для предварительного просмотра отчета еще раз. На этот раз цветные блоки имеют границы белого цвета со всех сторон.
 
-    ![руководство-по-выражениям-построителя-отчетов-предпросмотр-форматированного-столбца-m-f](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
+    ![Снимок экрана с предварительным просмотром прямоугольников, отформатированных в столбце M/F.](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
 ## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5. Поиск значения в столбце CountryRegion  
 В этом разделе вы создадите набор данных CountryRegion и при помощи функции **Lookup** отобразите название страны или региона вместо идентификатора.  
@@ -358,7 +358,7 @@ ms.locfileid: "87248543"
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Поиск значений в наборе данных CountryRegion  
   
-1.  Щелкните заголовок столбца **Country Region ID** (ИД региона страны) и удалите текст: **ID**, чтобы осталось только **Country Region** (Регион страны).  
+1.  Щелкните заголовок столбца **Country Region ID** (ИД региона страны) и удалите текст: **ID** , чтобы осталось только **Country Region** (Регион страны).  
   
 2.  Щелкните правой кнопкой мыши ячейку для столбца **Country Region** и выберите пункт **Выражение**.  
   
@@ -387,7 +387,7 @@ ms.locfileid: "87248543"
   
 1.  Щелкните **Конструктор** для возврата в режим конструктора.  
   
-2.  Щелкните правой кнопкой мыши столбец **Last Purchase** , наведите указатель на пункт **Вставить столбец**, а затем выберите пункт **Справа**.  
+2.  Щелкните правой кнопкой мыши столбец **Last Purchase** , наведите указатель на пункт **Вставить столбец** , а затем выберите пункт **Справа**.  
   
     Новый столбец будет добавлен справа от столбца **Last Purchase** .  
   
@@ -405,7 +405,7 @@ ms.locfileid: "87248543"
   
 11. Сразу после `Fields!LastPurchase.Value`введите **,** (запятую). 
   
-13. В списке **Категория** еще раз щелкните пункт **Дата и время**, а затем в списке **Элемент** дважды щелкните **Сейчас**.  
+13. В списке **Категория** еще раз щелкните пункт **Дата и время** , а затем в списке **Элемент** дважды щелкните **Сейчас**.  
   
     > [!WARNING]  
     > В рабочих отчетах функцию **Now** нельзя использовать в выражениях, которые вычисляются многократно при подготовке отчета (например, в строках детализации отчета). Значение **Now** будет разным в разных строках, и эти различия повлияют на результаты вычислений, что может привести к некоторой несогласованности результатов. Вместо этого необходимо пользоваться глобальной переменной `ExecutionTime` , имеющейся в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -414,7 +414,7 @@ ms.locfileid: "87248543"
   
     Законченное выражение выглядит следующим образом: `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
-    ![руководство-по-выражениям-построителя-отчетов-дней-с-последней-покупки](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
+    ![Снимок экрана, показывающий полное выражение для даты с момента последней покупки.](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -427,7 +427,7 @@ ms.locfileid: "87248543"
   
 ### <a name="to-add-the--or---avg-sales-column"></a>Добавление столбца «+ or - AVG Sales»  
   
-1.  Щелкните правой кнопкой мыши столбец **YTD Purchase** , наведите указатель на пункт **Вставить столбец**, а затем выберите пункт **Справа**.  
+1.  Щелкните правой кнопкой мыши столбец **YTD Purchase** , наведите указатель на пункт **Вставить столбец** , а затем выберите пункт **Справа**.  
   
     Новый столбец будет добавлен справа от столбца **YTD Purchase** .  
   
@@ -435,23 +435,23 @@ ms.locfileid: "87248543"
   
 ### <a name="to-add-an-indicator"></a>Добавление индикатора  
   
-1.  На вкладке **Вставка** щелкните **Индикатор**, а затем — ячейку данных для столбца **+ or – AVG Sales** .  
+1.  На вкладке **Вставка** щелкните **Индикатор** , а затем — ячейку данных для столбца **+ or – AVG Sales** .  
   
     Откроется диалоговое окно **Выбор стиля индикатора** .  
   
 2.  В группе наборов значков **Направляющие** щелкните набор из трех серых стрелок.  
 
-    ![руководство-по-выражениям-построителя-отчетов-выбор-индикатора](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
+    ![Снимок экрана показывающий, как добавить индикатор.](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-configure-the-indicator"></a>Настройка индикатора  
   
-1.  Щелкните индикатор правой кнопкой мыши, выберите пункт **Свойства индикатора**, а затем щелкните **Значение и состояния**.  
+1.  Щелкните индикатор правой кнопкой мыши, выберите пункт **Свойства индикатора** , а затем щелкните **Значение и состояния**.  
   
 2.  Нажмите кнопку выражения **fx** рядом с текстовым полем **Значение** .  
   
-3.  В диалоговом окне **Выражение** разверните узел **Общие функции**и выберите **Математические**.  
+3.  В диалоговом окне **Выражение** разверните узел **Общие функции** и выберите **Математические**.  
   
 4.  В списке **Элемент** дважды щелкните **Round**.  
   
@@ -459,7 +459,7 @@ ms.locfileid: "87248543"
   
 7.  Сразу же после `Fields!YTDPurchase.Value`введите  **-** (знак "минус"). 
   
-9. Еще раз разверните **Общие функции** щелкните **Статистическое**, а затем в списке **Элемент** дважды щелкните **Avg**.  
+9. Еще раз разверните **Общие функции** щелкните **Статистическое** , а затем в списке **Элемент** дважды щелкните **Avg**.  
   
 11. В списке **Категория** выберите **Поля (выражения)** , а в списке **Значения** дважды щелкните **YTDPurchase**.  
   
@@ -473,9 +473,9 @@ ms.locfileid: "87248543"
   
 17. В строке со стрелкой вниз нажмите кнопку **fx** справа от текстового поля для значения **Начало** .  
 
-    ![руководство-по-выражениям-построителя-отчетов-индикатор-начало](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
+    ![Снимок экрана, показывающий, как выбрать кнопку fx рядом с текстовым полем "Начало".](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
-18. В диалоговом окне **Выражение** разверните узел **Общие функции**и выберите **Математические**.  
+18. В диалоговом окне **Выражение** разверните узел **Общие функции** и выберите **Математические**.  
   
 19. В списке **Элемент** дважды щелкните **Round**.  
   
@@ -483,7 +483,7 @@ ms.locfileid: "87248543"
   
 22. Сразу же после `Fields!YTDPurchase.Value`введите  **-** (знак "минус"). 
   
-24. Еще раз разверните **Общие функции** , щелкните **Статистическое**, а затем в списке **Элемент** дважды щелкните **Avg**.  
+24. Еще раз разверните **Общие функции** , щелкните **Статистическое** , а затем в списке **Элемент** дважды щелкните **Avg**.  
   
 26. В списке **Категория** выберите **Поля (выражения)** , а в списке **Значения** дважды щелкните **YTDPurchase**.  
   
@@ -497,7 +497,7 @@ ms.locfileid: "87248543"
   
 32. Щелкните строку, где находится горизонтальная стрелка, а затем щелкните **Удалить**.  
 
-    ![руководство-по-выражениям-построителя-отчетов-состояние-индикатора](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
+    ![Снимок экрана показывающий, как удалить индикатор.](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
     
     Сейчас есть только две стрелки — вверх или вниз.
   
@@ -513,7 +513,7 @@ ms.locfileid: "87248543"
   
 38. Нажмите кнопку **Выполнить** для предварительного просмотра отчета.  
 
-    ![руководство-по-выражениям-построителя-отчетов-предпросмотр-индикатора](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
+    ![Снимок экрана с предварительным просмотром столбца "+ or – AVG Sales", включая все новые индикаторы.](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
 ## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8. Создание отчета с чередованием строк  
 Создайте параметр, чтобы пользователи отчета могли задавать цвет, который будет применяться для чередования строк в отчете.  
@@ -524,13 +524,13 @@ ms.locfileid: "87248543"
   
 2.  На панели **Данные отчета** щелкните правой кнопкой мыши узел **Параметры** и выберите команду **Добавить параметр**.  
 
-    ![руководство-по-выражениям-построителя-отчетов-добавление-параметра](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
+    ![Снимок экрана показывающий, как добавить параметр.](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
   
     Откроется диалоговое окно **Свойства параметра отчета** .  
   
-3.  В поле **Подсказка**введите **Выберите цвет**  
+3.  В поле **Подсказка** введите **Выберите цвет**  
   
-4.  В поле **Имя**введите **RowColor**  
+4.  В поле **Имя** введите **RowColor**  
   
 5.  На вкладке **Доступные значения** выберите **Указать значения**.  
   
@@ -558,7 +558,7 @@ ms.locfileid: "87248543"
   
 18. В поле **Значение** введите **Pink**  
 
-    ![руководство-по-выражениям-построителя-отчетов-доступный-параметр](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
+    ![Снимок экрана: диалоговое окно "Свойства параметра отчета" с отображением шага "Выберите доступные значения для этого параметра".](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -566,7 +566,7 @@ ms.locfileid: "87248543"
   
 1.   Выберите все ячейки в строке данных, за исключением ячейки в столбце **M/F** , который имеет собственный цвет фона.  
 
-     ![руководство-по-выражениям-построителя-отчетов-выбор-чередование](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
+     ![Снимок экрана, показывающий ячейки, выбранные в строке данных.](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
 4.  На панели свойств щелкните **BackgroundColor**. 
 
@@ -576,13 +576,13 @@ ms.locfileid: "87248543"
   
 5.  Нажмите стрелку вниз и выберите **Выражение**.  
 
-    ![руководство-по-выражениям-построителя-отчетов-свойство-чередования-цвета](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
+    ![Снимок экрана с полем свойств, показывающий, как связать выражение с BackgroundColor.](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
   
 6.  В диалоговом окне **Выражение** разверните узел **Общие функции** и выберите **Программный поток**.  
   
 7.  В списке **Элемент** дважды щелкните **IIf**.  
   
-8.  В списке **Общие функции**щелкните **Прочее**и в списке **Элемент** дважды щелкните **RowNumber**.  
+8.  В списке **Общие функции** щелкните **Прочее** и в списке **Элемент** дважды щелкните **RowNumber**.  
 
 9. Сразу же после **RowNumber(** введите **Nothing) MOD 2,** .
   
@@ -592,7 +592,7 @@ ms.locfileid: "87248543"
   
     Законченное выражение выглядит следующим образом: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
-    ![руководство-по-выражениям-построителя-отчетов-чередование-цветов](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
+    ![Снимок экрана, показывающий полное выражение цвета с чередованием.](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -604,13 +604,13 @@ ms.locfileid: "87248543"
   
 3.  В списке **Выберите цвет** выберите цвет для небелых полос в отчете.  
     
-    ![руководство-по-выражениям-построителя-отчетов-выбор-цвета](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
+    ![Снимок экрана, показывающий, как выбрать цвет для не-белых полос.](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
   
 4.  Нажмите кнопку **Просмотр отчета**.  
   
     Отчет будет подготовлен к просмотру с выбранным цветом фона чередующихся строк. 
     
-    ![руководство-по-выражениям-построителя-отчетов-предпросмотр-чередование](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
+    ![Снимок экрана, показывающий предварительный просмотр строк с чередованием цветов.](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
 ## <a name="optional-add-a-report-title"></a><a name="Title"></a>(Необязательно) Добавление заголовка отчета  
 Добавим заголовок отчета.  
@@ -619,7 +619,7 @@ ms.locfileid: "87248543"
   
 1.  В области конструктора щелкните ссылку **Щелкните, чтобы добавить заголовок**.  
   
-2.  Введите **Sales Comparison Summary**(Сравнительная сводка по продажам), а затем выделите текст.  
+2.  Введите **Sales Comparison Summary** (Сравнительная сводка по продажам), а затем выделите текст.  
   
 3.  На вкладке **Главная** в окне **Шрифт** установите следующие значения:
 
@@ -652,7 +652,7 @@ ms.locfileid: "87248543"
 
 Теперь пользователи смогут найти ваш отчет на веб-портале [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .
 
-![руководство-по-выражениям-построителя-отчетов-окончание-в-браузере](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
+![Снимок экрана нового отчета, с каждым видимым выражением.](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
 ## <a name="see-also"></a>См. также:  

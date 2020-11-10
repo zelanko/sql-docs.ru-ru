@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: cd6c70f92cb409ee6742590709743897bb3e77f7
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85061053"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364446"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Создание схемы документа (построитель отчетов и службы SSRS)
 
@@ -40,8 +40,7 @@ ms.locfileid: "85061053"
   
  Дополнительные сведения см. в разделе [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md).  
   
-##  <a name="AddRptItemToMap"></a>   
-#### <a name="to-add-a-report-item-to-a-document-map"></a>Добавление элемента отчета к схеме документа  
+##  <a name="to-add-a-report-item-to-a-document-map"></a><a name="AddRptItemToMap"></a> Добавление элемента отчета к схеме документа  
   
 1.  Выберите элемент отчета в режиме конструктора, например таблицу, матрицу или датчик, который следует добавить в схему документа. Свойства этого элемента отчета появятся на панели свойств.  
   
@@ -58,8 +57,7 @@ ms.locfileid: "85061053"
 4.  Нажмите кнопку **Запустить**. Отчет будет запущен, а в его схеме документа будут отображены созданные метки. Щелкните любую из ссылок, чтобы перейти к странице отчета с данным элементом.  
 
   
-##  <a name="AddUniqueValuesToMap"></a>   
-#### <a name="to-add-unique-group-values-to-a-document-map"></a>Добавление в схему документа уникальных значений групп  
+##  <a name="to-add-unique-group-values-to-a-document-map"></a><a name="AddUniqueValuesToMap"></a> Добавление в схему документа уникальных значений групп  
   
 1.  В режиме конструктора выберите таблицу, матрицу или список, содержащий группу, которая должна быть отображена в схеме документа. На панели группирования будут отображены группы столбцов и строк.  
   
@@ -75,8 +73,7 @@ ms.locfileid: "85061053"
   
 7.  Нажмите кнопку **Запустить**. Отчет будет запущен, а в его схеме документа будут отображены значения групп. Щелкните любую из ссылок, чтобы перейти к странице отчета с данным элементом.  
   
-##  <a name="HideMapWhenViewRpt"></a>   
-#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Скрытие схемы документа при просмотре отчета  
+##  <a name="to-hide-the-document-map-when-you-view-a-report"></a><a name="HideMapWhenViewRpt"></a> Скрытие схемы документа при просмотре отчета  
   
 1.  На веб-портале перейдите к отчету, имеющему схему документа.  
   

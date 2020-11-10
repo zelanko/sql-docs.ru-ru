@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 301d77a972da39f4e3e046e5e983206e9a1ba5c9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987400"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243775"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Веб-портал сервера отчетов (службы SSRS в собственном режиме)
 
@@ -22,7 +22,7 @@ ms.locfileid: "91987400"
 
 Используемый в службах Reporting Services веб-портал представляет собой веб-интерфейс. С его помощью можно просматривать отчеты, мобильные отчеты, ключевые показатели эффективности, а также переходить между элементами, содержащимися в экземпляре сервера отчетов. Этот веб-портал можно также использовать для администрирования отдельного экземпляра сервера отчетов.
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png)
+![Снимок экрана, показывающий портал SQL Server Reporting Services.](../reporting-services/media/ssrsportal.png)
 
 ## <a name="what-is-the-web-portal"></a>Что такое веб-портал?
 
@@ -86,15 +86,15 @@ ms.locfileid: "91987400"
 
 Отображаемым содержимым можно управлять, выбрав элемент **Вид** в правом верхнем углу. Если выбрать параметр "Показать скрытые", такие элементы будут отображаться более светлым цветом.
 
-![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
+![Снимок экрана с выбранным параметром «Показать скрытые элементы» в раскрывающемся списке «Представление».](../reporting-services/media/ssrswebportal-view.png)
 
-![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
+![Снимок экрана, показывающий недоступность параметра «Отчеты с разбивкой на страницы».](../reporting-services/media/ssrswebportal-hidden.png)
 
 ### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Отчеты Power BI Desktop и книги Excel
 
 Вы можете передавать и упорядочивать отчеты Power BI Desktop и книги Excel, а также управлять разрешениями для них. Они будут сгруппированы вместе в пределах веб-портала.
 
-![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
+![Снимок экрана, показывающий раздел «Отчеты Power BI Desktop» и раздел «Книги Excel».](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
 Файлы хранятся в службах Reporting Services, подобно другим файлам ресурсов. При выборе одного этих элементов они будут загружены локально на рабочий стол. Внесенные изменения можно сохранить, повторно передав их на сервер отчетов.
 
@@ -102,7 +102,7 @@ ms.locfileid: "91987400"
 
 Введите условие поиска, и вы увидите все содержимое, к которому у вас есть доступ. Результаты разбиваются по категориям: ключевые показатели эффективности, отчеты, наборы данных и другие элементы. Затем можно взаимодействовать с результатами и добавлять их в избранное.
 
-![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
+![Снимок экрана, показывающий портал серверов отчетов SQL Server с выделенным текстовым полем поиска.](../reporting-services/media/ssrswebportal-search.png)
 
 ## <a name="web-portal-tasks"></a>Задачи веб-портала
 

@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e80892bfef7ee2c8cf22aef1b491ab5ea0c0addd
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988000"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235568"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>Подключение SQL Server к Azure Arc
 
@@ -24,6 +24,10 @@ ms.locfileid: "91988000"
 * На компьютере должен быть установлен хотя бы один экземпляр SQL Server.
 * На компьютерах с ОС Windows необходимо установить Azure PowerShell. Чтобы [установить Azure PowerShell](/powershell/azure/install-az-ps), следуйте следующей инструкции.
 * На компьютерах с ОС Linux необходимо скачать Azure CLI и подключиться к учетной записи Azure. Чтобы [установить Azure CLI](/cli/azure/install-azure-cli-apt), следуйте следующей инструкции.
+* Поставщик ресурсов **Microsoft.AzureData** зарегистрирован. Дополнительные сведения о поставщиках ресурсов Azure см. в "Поставщики и типы ресурсов Azure".
+    * В PowerShell выполните команду `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData`.
+    * В Linux выполните `az provider register --namespace 'Microsoft.AzureData`.
+
 
 
 ## <a name="generate-a-registration-script-for-sql-server"></a>Создание скрипта регистрации для SQL Server
@@ -84,13 +88,13 @@ ms.locfileid: "91988000"
 
 ## <a name="validate-the-sql-server---azure-arc-resources"></a>Проверка ресурсов SQL Server — Azure Arc
 
-Перейдите на [портал Azure](https://ms.portal.azure.com/#home) и откройте только что зарегистрированный ресурс __SQL Server — Azure Arc__, чтобы проверить его.
+Перейдите на [портал Azure](https://ms.portal.azure.com/#home) и откройте только что зарегистрированный ресурс __SQL Server — Azure Arc__ , чтобы проверить его.
 
 ![Проверка подключенного экземпляра SQL Server ](media/join/validate-sql-server-azure-arc.png)
 
 ## <a name="un-register-the-sql-server---azure-arc-resources"></a>Отмена регистрации ресурсов SQL Server — Azure Arc
 
-Чтобы удалить существующий ресурс __SQL Server — Azure Arc__, перейдите в группу ресурсов, которая его содержит, и удалите его из списка ресурсов в этой группе.
+Чтобы удалить существующий ресурс __SQL Server — Azure Arc__ , перейдите в группу ресурсов, которая его содержит, и удалите его из списка ресурсов в этой группе.
 
 ![Отмена регистрации экземпляра SQL Server](media/join/delete-sql-server-azure-arc.png)
 

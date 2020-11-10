@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4efd72f1c2d6f9098e2af4840483d38d4749d264
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243559"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243751"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Работа с подписками (веб-портал)
 
@@ -28,7 +28,7 @@ ms.locfileid: "87243559"
 > Должна быть запущена служба агента SQL Server.   
   
 ![Управление подписками](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
-Чтобы открыть страницу "Подписки", нажмите **многоточие (...)** в отчете, выберите пункт **Управление**, а затем — **Подписки**.  
+Чтобы открыть страницу "Подписки", нажмите **многоточие (...)** в отчете, выберите пункт **Управление** , а затем — **Подписки**.  
   
 На странице "Подписки" можно создавать подписки, нажимая **+ новая подписка**. Можно также изменять существующие или удалять выбранные подписки.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "87243559"
 ## <a name="type-of-subscription"></a>Тип подписки  
 Можно выбрать **стандартную подписку** или **управляемую данными подписку**.  
   
-![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![Снимок экрана, показывающий раздел "Тип подписки".](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 Управляемая данными подписка выполняет запрос к базе данных подписчика на получение сведений о подписке при каждом ее запуске. В управляемых данными подписках результаты запросов используются для определения получателей подписки, параметров доставки и значений параметров отчета. Во время выполнения сервер отчетов запускает запрос для получения значений, используемых в настройках подписки.   
   
@@ -57,7 +57,7 @@ ms.locfileid: "87243559"
   
 Доступность модуля доставки зависит от его установки и настройки на сервере отчетов. Электронная почта сервера отчетов — это модуль доставки по умолчанию для подписок; перед использованием он должен быть настроен. Модуль доставки в общую папку не требует настройки, однако перед его использованием необходимо определить общую папку.  
   
-![ssRSWebPortal-subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![Снимок экрана, показывающий разделы "Назначение" и "Параметры доставки" (общая папка Windows).](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 В зависимости от выбранного модуля доставки появляются следующие параметры.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "87243559"
 ## <a name="data-driven-subscription-dataset"></a>Набор данных подписки, управляемой данными  
 Для подписки, управляемой данными, необходимо определить набор данных, который для нее используется. Выберите **Изменить набор данных** , чтобы указать эти данные.  
   
-![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![Снимок экрана, показывающий раздел набора данных.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 Необходимо сначала указать **источник данных** для запроса. Это может быть общий источник данных или пользовательский источник данных.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "87243559"
   
 -   Строки результирующего набора определяют количество формируемых доставок отчета. При наличии 10 000 строк сервер отчета сформирует 10 000 уведомлений и доставок.  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![Снимок экрана, показывающий раздел запроса.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
 Затем можно проверить запрос. Кроме того, можно определить **время ожидания запроса**.  
   

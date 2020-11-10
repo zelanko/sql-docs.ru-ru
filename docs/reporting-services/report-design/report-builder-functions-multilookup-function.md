@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: b8db1d2a7fe18264c81d7585e02babef65b3346d
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462388"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364576"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Функции построителя отчетов — функция Multilookup
   Возвращает набор первых подходящих значений для указанного набора имен из набора данных, содержащего пары «имя-значение».  
@@ -31,24 +31,24 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>Параметры  
  *source_expression*  
- (**VariantArray**) Выражение, вычисляемое в текущей области и указывающее набор имен или ключей для поиска. Например, для многозначного параметра `=Parameters!IDs.value`.  
+ ( **VariantArray** ) Выражение, вычисляемое в текущей области и указывающее набор имен или ключей для поиска. Например, для многозначного параметра `=Parameters!IDs.value`.  
   
  *destination_expression*  
- (**Variant**) Выражение, вычисляемое для каждой строки в наборе данных и указывающее имя или ключ для сопоставления. Например, `=Fields!ID.Value`.  
+ ( **Variant** ) Выражение, вычисляемое для каждой строки в наборе данных и указывающее имя или ключ для сопоставления. Например, `=Fields!ID.Value`.  
   
  *result_expression*  
- (**Variant**) Выражение, которое вычисляется для строки в наборе данных, где *source_expression* = *destination_expression*, и указывает возвращаемое значение. Например, `=Fields!Name.Value`.  
+ ( **Variant** ) Выражение, которое вычисляется для строки в наборе данных, где *source_expression* = *destination_expression* , и указывает возвращаемое значение. Например, `=Fields!Name.Value`.  
   
  *набор данных*  
  Константа, задающая имя набора данных в отчете. Например, «Colors».  
   
 ## <a name="return"></a>Возвращает  
- Возвращает значение **VariantArray**или **Nothing** , если совпадения нет.  
+ Возвращает значение **VariantArray** или **Nothing** , если совпадения нет.  
   
 ## <a name="remarks"></a>Remarks  
- Функция **Multilookup** служит для извлечения набора значений из набора данных, содержащего пары "имя-значение" со связью "один к одному". Функция**MultiLookup** является эквивалентом функции **Lookup** для набора имен или ключей. Например, для параметра с несколькими значениями на основе идентификаторов первичных ключей функция **Multilookup** может быть использована в выражении в текстовом поле таблицы для извлечения связанных значений из набора данных, не привязанного к параметру или таблице.  
+ Функция **Multilookup** служит для извлечения набора значений из набора данных, содержащего пары "имя-значение" со связью "один к одному". Функция **MultiLookup** является эквивалентом функции **Lookup** для набора имен или ключей. Например, для параметра с несколькими значениями на основе идентификаторов первичных ключей функция **Multilookup** может быть использована в выражении в текстовом поле таблицы для извлечения связанных значений из набора данных, не привязанного к параметру или таблице.  
   
- Функция**Multilookup** выполняет следующие действия.  
+ Функция **Multilookup** выполняет следующие действия.  
   
 -   вычисляет исходное выражение в текущей области и создает массив объектов типа variant;  
   
@@ -60,7 +60,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Применяются следующие ограничения:  
   
--   Функция**Multilookup** вычисляется после применения всех критериев фильтра.  
+-   Функция **Multilookup** вычисляется после применения всех критериев фильтра.  
   
 -   Поддерживается только один уровень уточняющего запроса. Исходное, целевое и результирующее выражения не могут включать в себя ссылки на функцию уточняющего запроса.  
   
@@ -68,7 +68,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Исходное, целевое и результирующее выражения не могут включать в себя ссылки на переменные отчета или группы.  
   
--   Функцию**Multilookup** нельзя использовать в качестве выражения для следующих элементов отчета:  
+-   Функцию **Multilookup** нельзя использовать в качестве выражения для следующих элементов отчета:  
   
     -   динамические строки соединения для источника данных;  
   
@@ -84,7 +84,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Дополнительные сведения см. в разделах [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) и [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Пример  
+## <a name="examples"></a>Примеры
+
+### <a name="a-use-multilookup-function"></a>A. Использование функции MultiLookup
  Предположим, набор данных Category содержит поле CategoryList, которое содержит список идентификаторов категорий с разделителями-запятыми, например «2, 4, 2, 1».  
   
  Набор данных «CategoryNames» содержит идентификатор и название категории, как показано в следующей таблице.  
@@ -106,7 +108,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
    ", ")  
 ```  
   
-## <a name="example"></a>Пример  
+### <a name="b-use-multilookup-with-multivalue-parameter"></a>Б. Использование MultiLookup с многозначным параметром  
  Предположим, в наборе данных с именем ProductColors есть поле идентификатора цвета ColorID и поле значения цвета Color, как показано в следующей таблице.  
   
 |ColorID|Color|  

@@ -10,16 +10,16 @@ ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 811b996732dac0f8c6bc0c71e9c8976dc3244085
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114619"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364733"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Все критические ошибки и события предупреждений для библиотеки ресурсов SQL Server записываются в журнал событий Windows. Диагностические сведения, связанные с SQL Server и записываемые в журнал, перехватываются хранимой процедурой [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) и записываются в файлы журнала диагностики отказоустойчивого кластера SQL Server (также называемые журналами *SQLDIAG*).  
+  Все критические ошибки и события предупреждений для библиотеки ресурсов SQL Server записываются в журнал событий Windows. Диагностические сведения, связанные с SQL Server и записываемые в журнал, перехватываются хранимой процедурой [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) и записываются в файлы журнала диагностики отказоустойчивого кластера SQL Server (также называемые журналами *SQLDIAG* ).  
   
 -   **Перед началом работы**  [Рекомендации](#Recommendations), [Безопасность](#Security)  
   
@@ -37,16 +37,16 @@ ms.locfileid: "91114619"
 ###  <a name="security"></a><a name="Security"></a> безопасность  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
- Для запуска **fn_xe_file_target_read_file**требуется разрешение VIEW SERVER STATE.  
+ Для запуска **fn_xe_file_target_read_file** требуется разрешение VIEW SERVER STATE.  
   
  Откройте среду SQL Server Management Studio в качестве администратора  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Просмотр файлов журнала диагностики:**  
   
-1.  В меню **Файл** выберите **Открыть**, **Файл**и выберите файл журнала диагностики для просмотра.  
+1.  В меню **Файл** выберите **Открыть** , **Файл** и выберите файл журнала диагностики для просмотра.  
   
-2.  События отображаются в виде строк в правой панели, причем по умолчанию показаны только два столбца, **name**и **timestamp** .  
+2.  События отображаются в виде строк в правой панели, причем по умолчанию показаны только два столбца, **name** и **timestamp** .  
   
      Это также приводит к активации меню **ExtendedEvents** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "91114619"
   
 4.  Можно фильтровать и сортировать данные событий, используя меню **ExtendedEvents** и выбирая параметр **Фильтр** .  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="view-diagnostic-log-files-with-transact-sql"></a><a name="TsqlProcedure"></a> Просмотр файлов журнала диагностики с помощью Transact-SQL  
  **Просмотр файлов журнала диагностики:**  
   
  Для просмотра всех записей в файле журнала SQLDIAG используйте следующий запрос.  
@@ -88,8 +88,8 @@ ORDER BY Time;
 > [!NOTE]  
 >  Можно отфильтровать результаты для определенных компонентов или состояний с помощью предложения WHERE.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Использование Transact-SQL  
- **Настройка свойств журнала диагностики**  
+##  <a name="configure-diagnostic-log-properties-with-transact-sql"></a><a name="TsqlConfigure"></a> Настройка свойств журнала диагностики с помощью Transact-SQL  
+ **Настройка свойств журнала диагностики:**  
   
 > [!NOTE]  
 >  Пример этой процедуры см. в подразделе [Примеры (Transact-SQL)](#TsqlExample)далее в этом разделе.  

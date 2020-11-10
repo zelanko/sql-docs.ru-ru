@@ -9,12 +9,12 @@ ms.author: hanqin
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: bfb4ea0b745fa61ea6d7c688ab90eaf369b2a5bb
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 4054917071578fb0b3ddcf5c22d5950075a2b0fe
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036001"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328482"
 ---
 # <a name="preview-features-in-azure-data-studio"></a>Предварительные версии функций в Azure Data Studio
 
@@ -77,7 +77,7 @@ ms.locfileid: "93036001"
 ### <a name="first-party-extensions-in-preview"></a>Собственные расширения в предварительной версии
 
 * Пакет администрирования для SQL Server
-* Полезные сведения Хранилища данных SQL Azure
+* Аналитические сведения Azure Synapse Analytics
 * Центральные серверы управления
 * Расширения средства администрирования баз данных для Windows
 * Kusto

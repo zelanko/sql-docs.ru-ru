@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c790f63ddec2a30d1381459b37b4cfdf9088389
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 22d4a311d38d32fad4910960007223edbe2f9b70
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255587"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364466"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Функции построителя отчетов — функция LookupSet
   Возвращает набор совпадающих значений для заданного имени из набора данных, содержащего пары «имя-значение».  
@@ -31,24 +31,24 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Параметры  
  *source_expression*  
- (**Variant**) Выражение, вычисляемое в текущей области и указывающее имя или ключ для поиска. Например, `=Fields!ID.Value`.  
+ ( **Variant** ) Выражение, вычисляемое в текущей области и указывающее имя или ключ для поиска. Например, `=Fields!ID.Value`.  
   
  *destination_expression*  
- (**Variant**) Выражение, вычисляемое для каждой строки в наборе данных и указывающее имя или ключ для сопоставления. Например, `=Fields!CustomerID.Value`.  
+ ( **Variant** ) Выражение, вычисляемое для каждой строки в наборе данных и указывающее имя или ключ для сопоставления. Например, `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (**Variant**) Выражение, которое вычисляется для строки в наборе данных, где *source_expression* = *destination_expression*, и указывает возвращаемое значение. Например, `=Fields!PhoneNumber.Value`.  
+ ( **Variant** ) Выражение, которое вычисляется для строки в наборе данных, где *source_expression* = *destination_expression* , и указывает возвращаемое значение. Например, `=Fields!PhoneNumber.Value`.  
   
  *набор данных*  
  Константа, задающая имя набора данных в отчете. Например, «ContactInformation».  
   
 ## <a name="return"></a>Возвращает  
- Возвращает значение **VariantArray**или **Nothing** , если совпадения нет.  
+ Возвращает значение **VariantArray** или **Nothing** , если совпадения нет.  
   
 ## <a name="remarks"></a>Remarks  
  Функция **LookupSet** служит для извлечения набора значений из указанного набора данных, состоящего из пар "имя-значение" со связью "один ко многим". Например, функция **LookupSet** позволяет извлечь по идентификатору пользователя в таблице все связанные с ним телефонные номера из набора данных, не привязанного к этой области данных.  
   
- Функция**LookupSet** выполняет следующие действия.  
+ Функция **LookupSet** выполняет следующие действия.  
   
 -   Вычисляет исходное выражение в текущей области.  
   
@@ -62,7 +62,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Применяются следующие ограничения:  
   
--   Функция**LookupSet** вычисляется после применения всех выражений фильтров.  
+-   Функция **LookupSet** вычисляется после применения всех выражений фильтров.  
   
 -   Поддерживается только один уровень уточняющего запроса. Исходное, целевое и результирующее выражения не могут включать в себя ссылки на функцию уточняющего запроса.  
   
@@ -70,7 +70,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Исходное, целевое и результирующее выражения не могут включать в себя ссылки на переменные отчета или группы.  
   
--   Функцию**LookupSet** нельзя использовать в качестве выражения для следующих элементов отчета:  
+-   Функцию **LookupSet** нельзя использовать в качестве выражения для следующих элементов отчета:  
   
     -   динамические строки соединения для источника данных;  
   
@@ -86,16 +86,18 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Дополнительные сведения см. в разделах [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) и [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Пример  
- В следующем примере предположим, что таблица привязана к набору данных, включающему идентификатор территории продаж TerritoryGroupID. Отдельный набор данных с именем Stores содержит список всех складов на данной территории и включает идентификатор ID и название склада StoreName.  
+## <a name="examples"></a>Примеры
+
+ В следующих примерах предположим, что таблица привязана к набору данных, включающему идентификатор территории продаж TerritoryGroupID. Отдельный набор данных с именем Stores содержит список всех складов на данной территории и включает идентификатор ID и название склада StoreName.  
   
+### <a name="a-use-lookupset"></a>A. Используйте LookupSet  
  В следующем выражении функция **LookupSet** сравнивает значение TerritoryGroupID со значением ID для каждой из строк набора данных Stores. Для каждого совпадения значение поля StoreName в этой строке добавляется в результирующий набор.  
   
 ```  
 =LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores")  
 ```  
   
-## <a name="example"></a>Пример  
+### <a name="b-use-join-to-create-a-result-list"></a>Б. Используйте Join для создания списка результатов 
  Поскольку функция **LookupSet** возвращает коллекцию объектов, результирующее выражение невозможно непосредственно отобразить в текстовом поле. Значения объектов коллекции можно склеить в одну строку.  
   
  Функция [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]**Join** позволяет создать из набора объектов строку с разделителями. Для объединения объектов в одну строку используйте в качестве разделителя запятую. В некоторых модулях подготовки можно использовать в качестве разделителя перевод строки [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`).  
@@ -106,10 +108,10 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
 ```  
   
-## <a name="example"></a>Пример  
+### <a name="c-add-code-to-generate-html"></a>В. Добавьте код для создания HTML
  Для текстовых полей, подготовка которых к просмотру выполняется лишь несколько раз, можно добавить пользовательский код формирования HTML для отображения значений в текстовом поле. HTML в текстовом поле требует дополнительной обработки, поэтому плохо подходит для текстовых полей, подготовка которых выполняется тысячи раз.  
   
- Скопируйте следующие функции [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] в блок кода. Функция**MakeList** принимает массив объектов, возвращаемый из *result_expression* , и строит неупорядоченный список с помощью тегов HTML. Свойство**Length** возвращает число элементов в массиве объектов.  
+ Скопируйте следующие функции [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] в блок кода. Функция **MakeList** принимает массив объектов, возвращаемый из *result_expression* , и строит неупорядоченный список с помощью тегов HTML. Свойство **Length** возвращает число элементов в массиве объектов.  
   
 ```  
 Function MakeList(ByVal items As Object()) As String  
@@ -138,7 +140,7 @@ Function Length(ByVal items as Object()) as Integer
 End Function  
 ```  
   
-## <a name="example"></a>Пример  
+### <a name="d-call-the-function"></a>Г. Вызов функции
  Для формирования HTML необходимо вызвать функцию. Вставьте следующее выражение в свойство Value текстового поля и задайте для типа разметки текста значение HTML. Дополнительные сведения см. в разделе [Добавление HTML в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md).  
   
 ```  

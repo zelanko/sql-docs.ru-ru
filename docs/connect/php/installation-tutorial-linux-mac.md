@@ -1,7 +1,7 @@
 ---
 title: Установка Linux и macOS для драйверов для PHP
 description: В этих инструкциях вы узнаете, как установить драйверы Майкрософт для PHP для SQL Server на Linux или macOS.
-ms.date: 09/22/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 8d256e7cabf26b280988afe08d8e795466141688
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 66c505f588d6f250c0e18dc88a79b21ed658f2b5
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115544"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243737"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Руководство по установке драйверов Майкрософт для PHP для SQL Server в Linux и MacOS
 В следующих инструкциях предполагается чистая среда и показано, как установить PHP 7.x, драйвер Microsoft ODBC, веб-сервер Apache и драйверы Майкрософт для PHP для SQL Server в Ubuntu 16.04, 18.04 и 20.04, RedHat 7 и 8, Debian 8, 9 и 10, SUSE 12 и 15, Alpine 3.11 и macOS 10.13, 10.14 и 10.15. В этих инструкциях рекомендуется установка драйверов с помощью PECL, но вы можете скачать предварительно созданные двоичные файлы со страницы проекта [драйверов Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) на сайте GitHub и установить их по инструкциям из статьи [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) (Загрузка драйверов Майкрософт для PHP для SQL Server). Описание процесса загрузки расширений и причины, по которым расширения не добавляются в файл php.ini, см. в статье [о загрузке драйверов](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
-Эти инструкции по умолчанию устанавливают PHP 7.4 с помощью `pecl install`. Возможно, потребуется сначала выполнить `pecl channel-update pecl.php.net`. Обратите внимание, что некоторые поддерживаемые дистрибутивы Linux по умолчанию используют PHP 7.1 и более ранних версий, которые не поддерживаются последней версией драйверов PHP для SQL Server. Изучите рекомендации в начале каждого раздела, чтобы установить вместо них версию PHP 7.2 или 7.3.
+Эти инструкции по умолчанию устанавливают PHP 7.4 с помощью `pecl install`. Возможно, потребуется сначала выполнить `pecl channel-update pecl.php.net`. Некоторые поддерживаемые дистрибутивы Linux по умолчанию используют PHP 7.1 или более ранних версий, которые не поддерживаются последней версией драйверов PHP для SQL Server. См. примечания в начале каждого раздела, насчет установки вместо этого PHP 7.2 или 7.3.
 
 Также включены инструкции по установке диспетчера процессов PHP FastCGI (PHP-FPM) в Ubuntu. Это необходимо, если вместо Apache используется веб-сервер nginx.
 
@@ -267,7 +267,7 @@ sudo service apache2 restart
 ## <a name="installing-the-drivers-on-suse-12-and-15"></a>Установка драйверов в Suse 12 и 15
 
 > [!NOTE]
-> В приведенных ниже инструкциях замените `<SuseVersion>` нужной версией Suse. Если вы используете Suse Enterprise Linux 15, используйте значение SLE_15 или SLE_15_SP1. Для SUSE 12 используйте SLE_12_SP4 (или выше, если применимо). Не все версии PHP доступны для всех версий Suse Linux. В `http://download.opensuse.org/repositories/devel:/languages:/php` указано, какие версии Suse имеют доступную версию PHP по умолчанию, а в `http://download.opensuse.org/repositories/devel:/languages:/php:/` — какие еще версии PHP доступны для разных версий Suse.
+> В приведенных ниже инструкциях замените `<SuseVersion>` нужной версией Suse. Если вы используете Suse Enterprise Linux 15, используйте значение SLE_15 или SLE_15_SP1. Для SUSE 12 используйте SLE_12_SP4 (или выше, если применимо). Не все версии PHP доступны для всех версий SUSE Linux. В `http://download.opensuse.org/repositories/devel:/languages:/php` указано, какие версии SUSE имеют доступную версию PHP по умолчанию, а в `http://download.opensuse.org/repositories/devel:/languages:/php:/` — какие еще версии PHP доступны для разных версий SUSE.
 
 > [!NOTE]
 > Пакеты для PHP 7.4 недоступны для SUSE 12. Чтобы установить PHP 7.2, замените URL-адрес репозитория в команде ниже следующим URL-адресом: `https://download.opensuse.org/repositories/devel:/languages:/php:/php72/<SuseVersion>/devel:languages:php:php72.repo`.
@@ -367,7 +367,7 @@ brew tap
 brew tap homebrew/core
 brew install php@7.4
 ```
-PHP теперь будет указана в пути. Запустите `php -v` и убедитесь, что используется правильная версия PHP. Если в пути нет PHP или есть PHP неправильной версии, выполните следующую команду:
+PHP теперь должен быть указан в пути. Запустите `php -v` и убедитесь, что используется правильная версия PHP. Если в пути нет PHP или есть PHP неправильной версии, выполните следующую команду:
 ```bash
 brew link --force --overwrite php@7.4
 ```
@@ -407,7 +407,7 @@ sudo apachectl restart
 ## <a name="testing-your-installation"></a>Тестирование установки
 
 Чтобы протестировать этот пример скрипта, создайте файл с именем testsql.php в корневом каталоге документов системы. Это каталог `/var/www/html/` в Ubuntu, Debian и Redhat, `/srv/www/htdocs` в SUSE, `/var/www/localhost/htdocs` в Alpine и `/usr/local/var/www` в macOS. Скопируйте приведенный ниже скрипт, заменив имя сервера, имя базы данных, имя пользователя и пароль правильными значениями.
-```
+```php
 <?php
 $serverName = "yourServername";
 $connectionOptions = array(
@@ -415,6 +415,15 @@ $connectionOptions = array(
     "uid" => "yourUsername",
     "pwd" => "yourPassword"
 );
+
+function exception_handler($exception) {
+    echo "<h1>Failure</h1>";
+    echo "Uncaught exception: " , $exception->getMessage();
+    echo "<h1>PHP Info for troubleshooting</h1>";
+    phpinfo();
+}
+
+set_exception_handler('exception_handler');
 
 // Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
@@ -434,7 +443,7 @@ if ($stmt === false) {
 }
 ?>
 
-<h1> Results : </h1>
+<h1> Success Results : </h1>
 
 <?php
 while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
@@ -447,6 +456,7 @@ sqlsrv_close($conn);
 function formatErrors($errors)
 {
     // Display errors
+    echo "<h1>SQL Error:</h1>";
     echo "Error information: <br/>";
     foreach ($errors as $error) {
         echo "SQLSTATE: ". $error['SQLSTATE'] . "<br/>";
@@ -456,7 +466,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-Перейдите в браузере на страницу https://localhost/testsql.php (https://localhost:8080/testsql.php в Mac OS). Теперь вы сможете подключиться к базе данных SQL Server или SQL Azure.
+Перейдите в браузере на страницу https://localhost/testsql.php (https://localhost:8080/testsql.php в Mac OS). Теперь вы сможете подключиться к базе данных SQL Server или SQL Azure. Если вы не видите сообщение об успешном выполнении, в котором содержатся сведения о версии SQL, см. места, где можно найти необходимую информацию в разделе [Ресурсы поддержки](support-resources-for-the-php-sql-driver.md).
 
 ## <a name="see-also"></a>См. также:  
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)

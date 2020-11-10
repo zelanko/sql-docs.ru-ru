@@ -2,7 +2,7 @@
 title: Заметки о выпуске ODBC Driver for SQL Server для Windows
 description: В этих заметках о выпуске описываются изменения в каждом выпуске драйвера Microsoft ODBC Driver for SQL Server в Windows.
 ms.custom: ''
-ms.date: 07/29/2020
+ms.date: 10/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898818"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043814"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server для Windows
 
@@ -169,6 +169,7 @@ GeneMi (and CraigG).  2019/03/30.
 | Режим проверки подлинности Управляемого удостоверения Azure Active Directory (назначаемого системой и пользователем). | См. статью [Использование Azure Active Directory с драйвером ODBC](../using-azure-active-directory.md). |
 | Возможность передавать входные параметры в потоковом режиме для столбцов Always Encrypted. | См. раздел [Ограничения драйвера ODBC при использовании Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Распределенные транзакции XA. | [Использование транзакций XA](../use-xa-with-dtc.md). |
+| Обновленный распространяемый компонент Visual C++ | Зависимость среды выполнения обновлена до распространяемого пакета Visual C++ 2017 ([загрузка для x64](https://aka.ms/vs/15/release/vc_redist.x64.exe) [загрузка для x86](https://aka.ms/vs/15/release/vc_redist.x86.exe)) |
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
