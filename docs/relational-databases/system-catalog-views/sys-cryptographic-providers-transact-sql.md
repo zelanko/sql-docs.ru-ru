@@ -1,6 +1,6 @@
 ---
 description: sys.cryptographic_providers (Transact-SQL)
-title: sys. cryptographic_providers (Transact-SQL) | Документация Майкрософт
+title: sys.cryptographic_providers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 898522531177d562ce15f81512efd49b47762958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 305ea4a72855dd5ba136740dcc9b4321826384ad
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402400"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384815"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,15 +38,12 @@ ms.locfileid: "88402400"
 |**provider_id**|**int**|Идентификационный номер поставщика служб шифрования.|  
 |**name**|**sysname**|Имя поставщика служб шифрования.|  
 |**guid**|**uniqueidentifier**|Глобальный уникальный идентификатор поставщика (GUID).|  
-|**version**|**nvarchar(50)**|Версия поставщика в формате "*AA.BB.CCCC.dd*".|  
+|**version**|**nvarchar(50)**|Версия поставщика в формате " *AA.BB.CCCC.dd* ".|  
 |**dll_path**|**nvarchar(512)**|Путь к библиотеке DLL, реализующей API-интерфейс расширенного управления ключами.|  
 |**is_enabled**|**bit**|Указывает, включен ли поставщик на сервере или нет:<br /><br /> 0 = не включен (по умолчанию);<br /><br /> 1 = включен|  
   
-## <a name="remarks"></a>Remarks  
- Представление **sys. cryptographic_providers** является видимым для общедоступного.  
-  
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Представление **sys.cryptographic_providers** является видимым для общедоступной версии.  
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
