@@ -1,6 +1,6 @@
 ---
 title: Использование Polybase для доступа к внешним данным в хранилище BLOB-объектов Azure
-description: Объясняется, как настроить Polybase в Parallel Data Warehouse для подключения к внешним Hadoop.
+description: Объясняется, как использовать Polybase в хранилище данных с параллельным доступом (ТД) для запроса внешних данных в хранилище BLOB-объектов Azure.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 52ad8a4e8c335eea412264b69d87453a5ce84104
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "74400724"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520979"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Настройка Polybase для доступа к внешним данным в хранилище BLOB-объектов Azure
 

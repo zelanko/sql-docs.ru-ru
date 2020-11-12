@@ -1,6 +1,6 @@
 ---
 title: Настройка безопасности Hadoop в Polybase
-description: Объясняется, как настроить Polybase в Parallel Data Warehouse для подключения к внешним Hadoop.
+description: Содержит справочник по различным параметрам конфигурации, влияющим на подключение к Polybase (ТД) с Hadoop.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,12 +9,12 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3c0db3807b45d28f99ef1a3da571675bd6d8ac48
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243500"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520961"
 ---
 # <a name="configure-polybase-hadoop-security"></a>Настройка безопасности Hadoop в Polybase
 
@@ -42,7 +42,7 @@ ms.locfileid: "87243500"
    </property> 
 ```
 
-## <a name="kerberos-configuration"></a><a id="kerberossettings"></a>Конфигурация Kerberos  
+## <a name="kerberos-configuration"></a><a id="kerberossettings"></a> Конфигурация Kerberos  
 
 Когда PolyBase выполняет проверку подлинности в защищенном кластере Kerberos, параметр hadoop.rpc.protection должен по умолчанию иметь значение Authenticate. При этом обмен данными между узлами Hadoop остается в незашифрованном виде. Чтобы использовать значение Privacy или Integrity для параметра hadoop.rpc.protection, обновите файл core-site.xml на сервере PolyBase. Дополнительные сведения см. в предыдущем разделе [Подключение к кластеру Hadoop с параметром Hadoop.rpc.protection](#rpcprotection).
 
@@ -114,7 +114,7 @@ ms.locfileid: "87243500"
 
 4. Создайте объект учетных данных для базы данных, чтобы указать аутентификационные сведения для каждого пользователя Hadoop. См. статью [Объекты T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).
 
-## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Настройка зоны шифрования Hadoop
+## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a> Настройка зоны шифрования Hadoop
 Если вы используете зону шифрования Hadoop, измените core-site.xml и hdfs-site.xml следующим образом. Укажите IP-адрес, на котором запущена служба KMS, с соответствующим номером порта. Порт по умолчанию для службы KMS в CDH — 16000.
 
 **core-site.xml**

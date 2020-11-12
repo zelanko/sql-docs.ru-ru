@@ -1,6 +1,6 @@
 ---
 title: Интеграция со средой CLR и транзакции | Документация Майкрософт
-description: Пространство имен System. Transactions представляет собой платформу транзакций, которая полностью интегрирована с ADO.NET и SQL Server интеграции со средой CLR.
+description: При интеграции со средой CLR и транзакциях System. Transactions и ADO.NET работают вместе для расширения и упрощения использования локальных и распределенных транзакций в управляемых приложениях.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c93aec2d5246073073fefaaaf4b21d3d542416a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd65fce2f2a2bdf2ce25f4811063f7f9d56d2e15
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737662"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521144"
 ---
 # <a name="clr-integration-and-transactions"></a>Интеграция со средой CLR и транзакции
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85737662"
  [Время существования транзакций](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  Содержит описание различий во времени существования между транзакциями, запущенными в хранимых процедурах [!INCLUDE[tsql](../../includes/tsql-md.md)], и транзакциями, запущенными в приложениях CLR.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Доступ к данным из объектов среды CLR для работы с базами данных](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

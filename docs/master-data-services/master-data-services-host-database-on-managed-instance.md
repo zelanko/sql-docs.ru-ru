@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 671ae0d9578c81d56c3324f73a4240152594dd49
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194436"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521113"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Размещение базы данных MDS на управляемом экземпляре
 
@@ -48,8 +48,8 @@ ms.locfileid: "92194436"
      - Консоль управления (IIS)
      - Веб-службы Интернета
      - Разработка приложений
-     - Расширяемость платформы .NET версии 3.5
-     - Расширяемость платформы .NET версии 4.5
+     - Расширяемость .NET 3.5
+     - Расширяемость .NET 4.5
      - ASP.NET 3.5
      - ASP.NET 4.5
      - Расширения ISAPI
@@ -100,13 +100,13 @@ ms.locfileid: "92194436"
    - Оснастка Windows PowerShell
    - Папки и файлы для веб-приложений и служб.
 
-   ![MDS-SQLServer2019-config-MI-Склфеатуреселектион](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "MDS-SQLServer2019-config-MI_SQLFeatureSelection")  
+   ![Снимок экрана со страницей выбора компонентов.](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "MDS-SQLServer2019-config-MI_SQLFeatureSelection")  
 
 ### <a name="set-up-the-database-and-website"></a>Настройка базы данных и веб-сайта
 
 1. Подключите виртуальную сеть Azure, чтобы убедиться, что вы можете подключиться к управляемому экземпляру.
 
-   ![MDS-SQLServer2019-config-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")
+   ![Снимок экрана с VPN-подключением Test MI к виртуальной сети Azure.](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")
 
 1. Откройте, [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] а затем выберите **Конфигурация базы данных** в левой области.
 
@@ -121,53 +121,53 @@ ms.locfileid: "92194436"
 
    Проверка подлинности должна содержать правило **"sysadmin"** для управляемых экземпляров.
 
-   ![MDS-SQLServer2019-config-MI-Креатедбконнект](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
+   ![Снимок экрана: страница "сервер базы данных" мастера создания базы данных.](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
 
 1. Введите имя в поле **Имя базы данных** . Кроме того, чтобы выбрать параметры сортировки Windows, снимите флажок **SQL Server параметры сортировки по умолчанию** и выберите один или несколько доступных параметров. Например, **с учетом регистра**. Выберите **Далее**.
 
-   ![MDS-SQLServer2019-config-MI-Креатеддбнаме](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")
+   ![Снимок экрана: страница "база данных" мастера создания базы данных.](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")
 
 1. В поле **имя пользователя** укажите учетную запись Windows суперпользователя по умолчанию для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] . Супер-пользователь имеет доступ ко всем функциональным областям и может добавлять, удалять и обновлять все модели.
 
-   ![MDS-SQLServer2019-config-MI-Креатедбусернаме](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
+   ![Снимок экрана со страницей учетной записи администратора мастера создания базы данных.](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
 
 1. Нажмите кнопку **Далее** , чтобы просмотреть сводку параметров для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базы данных. Нажмите кнопку  **Далее** еще раз, чтобы создать базу данных. Вы увидите страницу **ход выполнения и завершение** .
 
 1. После создания и настройки базы данных нажмите кнопку **Готово**.
 
-   Дополнительные сведения о параметрах **мастера создания базы данных**см. в разделе [Мастер создания базы данных &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
+   Дополнительные сведения о параметрах **мастера создания базы данных** см. в разделе [Мастер создания базы данных &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
 
 1. На странице **Конфигурация базы данных** в выберите [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **выбрать базу данных**.
 
-1. Выберите **подключить**, выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных и нажмите кнопку **ОК**.
+1. Выберите **подключить** , выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных и нажмите кнопку **ОК**.
 
-   ![MDS-SQLServer2019-config-MI-Коннектдбнаме](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
+   ![Снимок экрана: диалоговое окно "подключение к базе данных".](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
 
 1. В [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] выберите **веб-конфигурация** в левой области.
 
-1. В списке веб **-сайт** выберите **веб-сайт по умолчанию**, а затем щелкните **создать** , чтобы создать веб-приложение.
+1. В списке веб **-сайт** выберите **веб-сайт по умолчанию** , а затем щелкните **создать** , чтобы создать веб-приложение.
 
-   ![MDS-SQLServer2019-config-MI-Web Configuration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
+   ![Снимок экрана: диалоговое окно "диспетчер конфигурации Master Data Services".](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
 
    > [!NOTE]
-   > При выборе **веб-сайта по умолчанию**необходимо отдельно создать веб-приложение. Если в списке выбран вариант **создать новый веб-сайт** , приложение будет создано автоматически.
+   > При выборе **веб-сайта по умолчанию** необходимо отдельно создать веб-приложение. Если в списке выбран вариант **создать новый веб-сайт** , приложение будет создано автоматически.
 
 1. В разделе **пул приложений** введите другое имя пользователя, введите пароль и нажмите кнопку **ОК**.
 
-   ![MDS-SQLServer2019-config-MI-Креатевебаппликатион](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "MDS-SQLServer2019-config-MI_CreateWebApplication")
+   ![Снимок экрана: диалоговое окно "Управление приложением".](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "MDS-SQLServer2019-config-MI_CreateWebApplication")
 
    > [!NOTE]
    > Убедитесь, что пользователь имеет доступ к базе данных с помощью встроенной проверки подлинности Active Directory, которую вы недавно создали. Кроме того, вы можете изменить подключение в `web.config` дальнейшем.
 
-   Дополнительные сведения о диалоговом окне " **Создание веб-приложения** " см. в разделе [&#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;диалогового окна "Создание веб-приложения" ](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
+   Дополнительные сведения о диалоговом окне " **Создание веб-приложения** " см. в разделе [&#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;диалогового окна "Создание веб-приложения"](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
 
 1. В области **веб-конфигурация** в окне **веб-приложение** выберите созданное приложение и нажмите кнопку **выбрать** в разделе **связать приложение с базой данных** .
 
-1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Щелкните **ОК**.
+1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Нажмите кнопку **ОК**.
 
    Настройка веб-сайта завершена. Теперь на странице **веб-конфигурация** отображается выбранный веб-сайт, созданное веб-приложение и [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] база данных, связанная с приложением.
 
-   ![MDS-SQLServer2019-config-MI-Вебконфигселектдб](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
+   ![Снимок экрана: раздел веб-конфигурации.](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
 
 1. Нажмите кнопку **Применить**. Появится сообщение **Завершение настройки** . Нажмите кнопку **ОК** в окне сообщения, чтобы запустить веб-приложение. Адрес веб-сайта — `http://server name/web application/` .
 
@@ -205,8 +205,8 @@ MDS также поддерживает проверку подлинности 
 
 ### <a name="upgrade-sql-server"></a>Обновление SQL Server
 
-При `The client version is incompatible with the database version` установке **накопительного пакета обновления SQL Server 2019**может появиться сообщение об ошибке.
-![MDS-SQLServer2019-config-MI-Упградедбпаже](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "MDS-SQLServer2019-config-MI_UpgradeDBPage")
+При `The client version is incompatible with the database version` установке **накопительного пакета обновления SQL Server 2019** может появиться сообщение об ошибке.
+![Снимок экрана Master Data Services ошибки.](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "MDS-SQLServer2019-config-MI_UpgradeDBPage")
 
 Чтобы устранить эту проблему, необходимо обновить версию базы данных:
 
@@ -214,17 +214,17 @@ MDS также поддерживает проверку подлинности 
 
 1. На странице **Конфигурация базы данных** в выберите [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **выбрать базу данных**.
 
-1. Выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, связанную с веб-приложением. Выберите **подключить**, а затем нажмите кнопку **ОК**.
+1. Выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, связанную с веб-приложением. Выберите **подключить** , а затем нажмите кнопку **ОК**.
 
-   ![MDS-SQLServer2019-config-MI-Коннектдбнаме](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_ConnectDBName")
+   ![Снимок экрана: диалоговое окно "подключение к базе данных службы основных данных".](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_ConnectDBName")
 
 1. Выберите **обновить базу данных...** .
 
-   ![MDS-SQLServer2019-config-MI-Селектупградедб](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "MDS-SQLServer2019-config-MI_SelectUpgradeDB")
+   ![Снимок экрана с параметром обновления базы данных.](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "MDS-SQLServer2019-config-MI_SelectUpgradeDB")
 
 1. В мастере обновления базы данных нажмите кнопку **Далее** на странице **Приветствие** и на странице  **Проверка обновления** .
 
-   ![MDS-SQLServer2019-config-MI-Упградедбвизард](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "MDS-SQLServer2019-config-MI_UpgradeDBWizard")
+   ![Снимок экрана страницы "Проверка обновления" мастера обновления базы данных.](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "MDS-SQLServer2019-config-MI_UpgradeDBWizard")
 
 1. По завершении всех задач нажмите кнопку **Готово** .
 
