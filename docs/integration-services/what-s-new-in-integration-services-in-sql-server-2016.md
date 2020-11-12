@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92193742"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384873"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 
@@ -288,7 +288,7 @@ ms.locfileid: "92193742"
  Диспетчер подключений, источник и назначение Excel теперь явным образом поддерживают источники данных Excel 2016.  
 
 ####  <a name="connector-for-sap-bw-for-sql-server-2016-released"></a><a name="SAPBW"></a> Выпуск соединителя для SAP BW для SQL Server 2016  
- Соединитель с SAP BW (Microsoft®) для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Скачать эти компоненты можно здесь: [Пакет дополнительных компонентов для Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).
+ Соединитель с SAP BW (Microsoft®) для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Скачать эти компоненты можно здесь: [Пакет дополнительных компонентов для Microsoft® SQL Server® 2016](https://www.microsoft.com/download/details.aspx?id=56833).
  
 #### <a name="connectors-v40-for-oracle-and-teradata-released"></a><a name="oracleteradata"></a> Выпуск соединителей версии 4.0 для Oracle и Teradata
 Были выпущены соединители Майкрософт версии v4.0 для Oracle и Teradata. Скачать их можно здесь: [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
@@ -311,7 +311,7 @@ ms.locfileid: "92193742"
 
 #### <a name="support-for-azure-synapse-analytics-released"></a><a name="sqldwupload"></a> Реализована поддержка Azure Synapse Analytics
 
-Последняя версия пакета дополнительных компонентов Azure включает задачу отправки информации в хранилище данных SQL Azure, позволяющую заполнить это хранилище данными. Дополнительные сведения см. в статье [Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+Последняя версия пакета дополнительных компонентов Azure включает задачу отправки в хранилище данных SQL Azure, позволяющую заполнить данными Azure Synapse Analytics. Дополнительные сведения см. в статье [Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
 ## <a name="usability-and-productivity"></a>Удобство использования и производительность  
  
@@ -349,7 +349,7 @@ ms.locfileid: "92193742"
  Мастер импорта и экспорта SQL Server теперь может импортировать данные из хранилища BLOB-объектов и сохранять их там. Дополнительные сведения см. в разделах [Выбор источника данных (мастер импорта и экспорта SQL Server)](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) и [Выбор назначения (мастер импорта и экспорта SQL Server)](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="change-data-capture-designer-and-service-for-oracle-for-microsoft-sql-server-2016-released"></a><a name="CDCOracle"></a> Выпуск конструктора и службы системы отслеживания измененных данных для Oracle для Microsoft SQL Server 2016  
- Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 выпущены в составе пакета дополнительных компонентов SQL Server 2016.  Эти компоненты теперь поддерживают Oracle 12c в классической установке. (Мультитенантная установка не поддерживается.) Скачать компоненты пакета дополнительных компонентов можно здесь: [Пакет дополнительных компонентов Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).  
+ Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 выпущены в составе пакета дополнительных компонентов SQL Server 2016.  Эти компоненты теперь поддерживают Oracle 12c в классической установке. (Мультитенантная установка не поддерживается.) Скачать компоненты пакета дополнительных компонентов можно здесь: [Пакет дополнительных компонентов Microsoft® SQL Server® 2016](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ####  <a name="cdc-components-updated-for-sql-server-2016"></a><a name="cdc2016"></a> Обновление компонентов CDC для SQL Server 2016  
  Компоненты задачи по проверке CDC (отслеживание измененных данных), источника и преобразования разделителя были обновлены для обеспечения полной совместимости с SQL Server 2016. Какие -либо новые функции и изменения в поведении отсутствуют.  

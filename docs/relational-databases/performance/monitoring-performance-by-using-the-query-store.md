@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 5b3a9151d07599661445eb3dfa20c9ef432e0719
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243435"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418031"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 
@@ -50,7 +50,7 @@ ms.locfileid: "87243435"
 
 ### <a name="use-transact-sql-statements"></a>Использование инструкций Transact-SQL
 
-Используйте инструкцию **ALTER DATABASE**, чтобы включить хранилище запросов для указанной базы данных. Пример:
+Используйте инструкцию **ALTER DATABASE** , чтобы включить хранилище запросов для указанной базы данных. Пример:
 
 ```sql
 SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
@@ -130,7 +130,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 Типы ожидания в хранилище запросов объединены в **категории ожидания**. Сопоставление категорий ожидания с типами ожидания доступно в [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
 
-Выберите **Статистика ожидания запросов**, чтобы открыть панель **Статистика ожидания запросов** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 или более поздней версии. Панель статистики ожидания запросов показывает диаграмму с главными категориями ожидания в хранилище запросов. Воспользуйтесь раскрывающимся меню в верхней части, чтобы выбрать критерий для времени ожидания: среднее, максимальное, минимальное, стандартное отклонение и **общее** (по умолчанию).
+Выберите **Статистика ожидания запросов** , чтобы открыть панель **Статистика ожидания запросов** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 или более поздней версии. Панель статистики ожидания запросов показывает диаграмму с главными категориями ожидания в хранилище запросов. Воспользуйтесь раскрывающимся меню в верхней части, чтобы выбрать критерий для времени ожидания: среднее, максимальное, минимальное, стандартное отклонение и **общее** (по умолчанию).
 
 ![Статистика ожидания запросов SQL Server 2017 в обозревателе объектов SSMS](../../relational-databases/performance/media/query-store-waits.PNG "Статистика ожидания запросов SQL Server 2017 в обозревателе объектов SSMS")
 
@@ -155,7 +155,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 Сведения о доступных параметрах для настройки параметров хранилища запросов см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
-Запросите представление **sys.database_query_store_options**, чтобы определить текущие параметры хранилища запросов. В представлении [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) можно посмотреть о значениях дополнительные сведения.
+Запросите представление **sys.database_query_store_options** , чтобы определить текущие параметры хранилища запросов. В представлении [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) можно посмотреть о значениях дополнительные сведения.
 
 Примеры настройки параметров конфигурации с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Управление параметрами](#OptionMgmt).
 
@@ -233,7 +233,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_query_store_remove_plan (Transct-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+        [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
     :::column-end:::
     :::column:::
         [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
@@ -241,11 +241,13 @@ INNER JOIN sys.query_store_query_text AS Txt
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::
+
+<sup>1</sup> В чрезвычайных ситуациях хранилище запросов может перейти в состояние ERROR (Ошибка) из-за внутренних ошибок. Начиная с версии SQL Server 2017 (14.x), в таких случаях хранилище запросов можно восстановить, выполнив хранимую процедуру sp_query_store_consistency_check в соответствующей базе данных. Дополнительные сведения приведены в описании для столбца actual_state_desc в статье [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
 ## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Основные сценарии использования
 
@@ -383,8 +385,8 @@ EXEC sp_MSforeachdb @command
 
 В примере выше используется расширенная хранимая процедура **sp_query_store_remove_query** для удаления ненужных данных. Кроме того, можно использовать следующую команду:
 
-- **sp_query_store_reset_exec_stats** — чтобы удалить статистику времени выполнения для указанного плана;
-- **sp_query_store_remove_plan** — чтобы удалить отдельный план.
+- **sp_query_store_reset_exec_stats**  — чтобы удалить статистику времени выполнения для указанного плана;
+- **sp_query_store_remove_plan**  — чтобы удалить отдельный план.
 
 ### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Аудит производительности и устранение проблем
 

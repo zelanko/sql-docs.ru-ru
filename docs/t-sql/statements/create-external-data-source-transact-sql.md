@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
+ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043847"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93417425"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -107,7 +107,7 @@ WITH
 - `<`Namenode`>`: имя компьютера или IP-адрес `Namenode` в Hadoop Namenode. PolyBase необходимо разрешить любые DNS-имена, используемые в кластере Hadoop. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port`: порт, который прослушивает внешний источник данных. В Hadoop порт можно найти, используя параметр конфигурации `fs.defaultFS`. Значение по умолчанию — 8020.
 - `<container>`: контейнер учетной записи хранения, содержащей данные. Корневые контейнеры доступны только для чтения, записать данные в контейнер невозможно.
-- `<storage_account>`: имя учетной записи хранения Azure.
+- `<storage_account>`: имя учетной записи хранения ресурса Azure.
 - `<server_name>`: имя узла.
 - `<instance_name>`: имя экземпляра SQL Server. Используется, если у вас работает служба обозревателя SQL Server на целевом экземпляре.
 
@@ -338,7 +338,7 @@ WITH (
 
 ### <a name="g-create-external-data-source-to-reference-kafka"></a>Ж. Создание внешнего источника данных для ссылки на Kafka
 
-В этом примере внешний источник данных — это сервер Kafka с IP-адресом xxx.xxx.xxx.xxx, ожидающий передачи данных на порте 1900. Внешний источник данных Kafka предназначен только для потоковой передачи данных и не поддерживает принудительную отправку предиката.
+В этом примере внешний источник данных — это сервер Kafka с IP-адресом xxx.xxx.xxx.xxx, ожидающий передачи данных на порту 1900. Внешний источник данных Kafka предназначен только для потоковой передачи данных и не поддерживает принудительную отправку предиката.
 
 ```sql
 -- Create an External Data Source for Kafka
@@ -678,6 +678,7 @@ WITH
 
 ## <a name="syntax"></a>Синтаксис
 
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
@@ -686,6 +687,15 @@ WITH
     [ [ , ] TYPE = HADOOP ]
 [ ; ]
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL DATA SOURCE <data_source_name>  
+WITH
+(    LOCATION = '<prefix>://<path>[:<port>]'
+) 
+[;]
+```
+---
 
 ## <a name="arguments"></a>Аргументы
 
@@ -706,7 +716,7 @@ WITH
 Путь к расположению:
 
 - `<container>`: контейнер учетной записи хранения, содержащей данные. Корневые контейнеры доступны только для чтения, записать данные в контейнер невозможно.
-- `<storage_account>`: имя учетной записи хранения Azure.
+- `<storage_account>`: имя учетной записи хранения ресурса Azure.
 
 Дополнительные примечания и инструкции при задании расположения:
 
@@ -965,7 +975,7 @@ WITH
 - `<Namenode>` — имя компьютера, URI службы имен или IP-адрес `Namenode` в кластере Hadoop. PolyBase необходимо разрешить любые DNS-имена, используемые в кластере Hadoop. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port`: порт, который прослушивает внешний источник данных. В Hadoop порт можно найти, используя параметр конфигурации `fs.defaultFS`. Значение по умолчанию — 8020.
 - `<container>`: контейнер учетной записи хранения, содержащей данные. Корневые контейнеры доступны только для чтения, записать данные в контейнер невозможно.
-- `<storage_account>`: имя учетной записи хранения Azure.
+- `<storage_account>`: имя учетной записи хранения ресурса Azure.
 
 Дополнительные примечания и инструкции при задании расположения:
 

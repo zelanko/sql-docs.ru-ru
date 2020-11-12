@@ -341,16 +341,10 @@
           href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
     - name: Производительность
       items:
-        - name: R
+        - name: "Производительность кода\_R"
           items:
-            - name: Общие сведения о настройке производительности для R
-              href: ../machine-learning/r/sql-server-r-services-performance-tuning.md
-            - name: Настройка производительности — конфигурация сервера
-              href: ../machine-learning/r/sql-server-configuration-r-services.md
-            - name: Настройка производительности — оптимизация данных для R
+            - name: "Оптимизация данных в\_R"
               href: ../machine-learning/r/r-and-data-optimization-r-services.md
-            - name: Настройка производительности результатов для R
-              href: ../machine-learning/r/performance-case-study-r-services.md
             - name: Использование функций профилирования кода R
               href: ../machine-learning/r/using-r-code-profiling-functions.md
 - name: Справочник
