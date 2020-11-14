@@ -2731,10 +2731,10 @@
           items:
             - name: Общие сведения о расширении языка
               href: language-extensions/language-extensions-overview.md
+            - name: Что представляет собой расширение языка Java?
+              href: language-extensions/java-overview.md
             - name: Новые возможности
               href: language-extensions/language-extensions-whats-new.md
-            - name: Общие сведения о расширении языка Java
-              href: language-extensions/java-overview.md
         - name: Установка
           items:
             - name: Установка расширения языка в Windows

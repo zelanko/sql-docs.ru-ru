@@ -1,7 +1,7 @@
 ---
 description: DistinctCount (многомерные выражения)
 title: DistinctCount (многомерные выражения) | Документация Майкрософт
-ms.date: 06/04/2018
+ms.date: 11/12/2020
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 286debd54299942ad6f885d918390e2ece53fc0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28807d1a24f97a6b197ad56d0434399ab53cd742
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484047"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584851"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (многомерные выражения)
 
@@ -32,7 +32,7 @@ DistinctCount(Set_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция **DistinctCount** эквивалентна `Count(Distinct(Set_Expression), EXCLUDEEMPTY)` .  
   
 ## <a name="examples"></a>Примеры  
@@ -61,7 +61,9 @@ DistinctCount(Set_Expression)
  `SELECT {MEASURES.SETDISTINCTCOUNT} ON 0`  
   
  `FROM [Adventure Works]`  
-  
+ 
+Функция DistinctCount возвращает различное количество элементов в наборе; в этом примере необязательный второй параметр используется для исключения элементов, которые не имеют значения для данного кортежа. В этом случае в наборе в первом параметре содержится четыре отдельных элемента, но функция возвращает три, так как только Австралия, Канада и Франция содержат данные за 1 июля 2001 для объема продаж через Интернет.
+ 
 ## <a name="see-also"></a>См. также:  
  [Count &#40;Set&#41; &#40;многомерных выражений&#41;](../mdx/count-set-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  

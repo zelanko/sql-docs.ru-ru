@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 895940f1a0f53c010e7088d02cf12cbfc0a0ff63
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 4019a1e661b14825532596091918f2f14eac1e92
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037737"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405071"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -82,17 +82,17 @@ OPENROWSET
 
 ## <a name="arguments"></a>Аргументы
 
-### <a name="provider_name"></a>'*provider_name*'
+### <a name="provider_name"></a>' *provider_name* '
 Символьная строка, которая представляет понятное имя (или PROGID) поставщика OLE DB, указанное в реестре. Аргумент *provider_name* не имеет значения по умолчанию. Примеры имен поставщиков: `Microsoft.Jet.OLEDB.4.0`, `SQLNCLI` или `MSDASQL`.
 
-### <a name="datasource"></a>'*datasource*'
-Строковая константа, соответствующая конкретному источнику данных OLE DB. Аргумент *datasource* — это свойство DBPROP_INIT_DATASOURCE, которое должно быть передано в интерфейс IDBProperties поставщика для инициализации поставщика. Обычно эта строка содержит имя файла базы данных, имя сервера баз данных или имя, с помощью которого поставщик находит базу или базы данных.
+### <a name="datasource"></a>' *datasource* '
+Строковая константа, соответствующая конкретному источнику данных OLE DB. Аргумент *datasource*  — это свойство DBPROP_INIT_DATASOURCE, которое должно быть передано в интерфейс IDBProperties поставщика для инициализации поставщика. Обычно эта строка содержит имя файла базы данных, имя сервера баз данных или имя, с помощью которого поставщик находит базу или базы данных.
 Источником данных может быть путь к файлу `C:\SAMPLES\Northwind.mdb'` для поставщика `Microsoft.Jet.OLEDB.4.0` или строка подключения `Server=Seattle1;Trusted_Connection=yes;` для поставщика `SQLNCLI`.
 
-### <a name="user_id"></a>'*user_id*'
+### <a name="user_id"></a>' *user_id* '
 Строковая константа, представляющая имя пользователя, передаваемое указанному поставщику OLE DB. Аргумент *user_id* указывает контекст безопасности для подключения и передается как свойство DBPROP_AUTH_USERID для инициализации поставщика. Аргумент *user_id* не может быть именем входа Microsoft Windows.
 
-### <a name="password"></a>'*password*'
+### <a name="password"></a>' *password* '
 Строковая константа, представляющая пароль пользователя, передаваемый поставщику OLE DB. Аргумент *password* передается как свойство DBPROP_AUTH_PASSWORD при инициализации поставщика. Аргумент *password* не может быть паролем Microsoft Windows.
 
 ```sql
@@ -104,7 +104,7 @@ SELECT a.*
                    Customers) AS a;
 ```
 
-### <a name="provider_string"></a>'*provider_string*'
+### <a name="provider_string"></a>' *provider_string* '
 Строковая константа для конкретного поставщика, которая передается как свойство DBPROP_INIT_PROVIDERSTRING для инициализации поставщика OLE DB. Аргумент *provider_string* обычно инкапсулирует все необходимые сведения о подключении для инициализации поставщика. Список ключевых слов, распознаваемых поставщиком OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Свойства инициализации и авторизации](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
 
 ```sql
@@ -117,7 +117,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 Удаленная таблица или представление, содержащие данные, которые должны быть прочитаны `OPENROWSET`. Это может быть объект с именем из трех частей со следующими компонентами:
 - *каталог* (необязательно) — имя каталога или базы данных, в которых хранится указанный объект.
 - *схема* (необязательно) — имя схемы или владелец указанного объекта.
-- *объект* — имя объекта, уникальным образом идентифицирующее объект, с которым производится взаимодействие.
+- *объект*  — имя объекта, уникальным образом идентифицирующее объект, с которым производится взаимодействие.
 
 ```sql
 SELECT d.*
@@ -125,7 +125,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
                  AdventureWorks2012.HumanResources.Department) AS d;
 ```
 
-### <a name="query"></a>'*query*'
+### <a name="query"></a>' *query* '
 Строковая константа, посылаемая поставщику и исполняемая им. Локальный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обрабатывает этот запрос, но обрабатывает результаты запроса, возвращаемые поставщиком, это так называемый транзитный запрос. Передаваемые запросы полезны при использовании поставщиков, которые не предоставляют свои табличные данные через таблицы имен, а только через командный язык. Передаваемые запросы поддерживаются на удаленном сервере настолько, насколько поставщик запросов поддерживает объект OLE DB Command и его обязательные интерфейсы. Дополнительные сведения см. в статье [SQL Server Native Client (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
 ```sql
@@ -141,7 +141,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 > [!IMPORTANT]
 > База данных SQL Azure поддерживает только чтение из хранилища BLOB-объектов Azure.
 
-Аргументы параметра BULK позволяют полностью управлять началом и концом считывания данных, отладку ошибок и способ обработки полученных данных. Например, можно указать, что файл с данными будет считан как набор строк типа **varbinary**, **varchar** или **nvarchar** из одной строки и одного столбца. Поведение по умолчанию описано в следующем далее описании аргументов.
+Аргументы параметра BULK позволяют полностью управлять началом и концом считывания данных, отладку ошибок и способ обработки полученных данных. Например, можно указать, что файл с данными будет считан как набор строк типа **varbinary** , **varchar** или **nvarchar** из одной строки и одного столбца. Поведение по умолчанию описано в следующем далее описании аргументов.
 
  Дополнительные сведения об использовании параметра BULK см. в подразделе «Примечания» далее в этом разделе. Дополнительные сведения о разрешениях, необходимых параметру BULK, см. в подразделе «Разрешения» далее в этом разделе.
 
@@ -150,7 +150,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 
 Сведения о подготовке данных к массовому импорту см. в разделе [Подготовка данных к массовому экспорту или импорту (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
-#### <a name="bulk-data_file"></a>BULK '*data_file*'
+#### <a name="bulk-data_file"></a>BULK ' *data_file* '
 Полный путь к файлу данных, данные из которого копируются в целевую таблицу.
 
 ```sql
@@ -168,7 +168,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="bulk-error-handling-options"></a>BULK: параметры обработки ошибок
 
 ##### <a name="errorfile"></a>ERRORFILE
-`ERRORFILE` ='*file_name*. Указывает файл, используемый для сбора строк, которые имеют ошибки форматирования и не могут быть преобразованы в набор строк OLE DB. Эти строки без изменений копируются из файла данных в файл ошибок.
+`ERRORFILE` =' *file_name*. Указывает файл, используемый для сбора строк, которые имеют ошибки форматирования и не могут быть преобразованы в набор строк OLE DB. Эти строки без изменений копируются из файла данных в файл ошибок.
 
 Файл ошибок создается в начале выполнения команды. Если он уже существует, возникнет ошибка. Дополнительно создается управляющий файл с расширением ERROR.txt. Этот файл ссылается на каждую строку в файле ошибок и позволяет провести их диагностику. После исправления ошибок данные могут быть загружены.
 **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
@@ -181,7 +181,7 @@ SELECT * FROM OPENROWSET(
 ##### <a name="maxerrors"></a>MAXERRORS
 `MAXERRORS` =*maximum_errors*. Указывает максимальное количество синтаксических ошибок или ошибок форматирования строк, отмеченное в файле форматирования, которое может произойти до того, как функция OPENROWSET сформирует исключение. Пока значение MAXERRORS не достигнуто, функция OPENROWSET не учитывает все ошибочные строки, не загружая их, и считает каждую ошибочную строку за одну ошибку.
 
-Значение по умолчанию для *maximum_errors* — 10.
+Значение по умолчанию для *maximum_errors*  — 10.
 
 > [!NOTE]
 > `MAX_ERRORS` не применяется к ограничениям CHECK или преобразованиям типов **money** и **bigint**.
@@ -214,7 +214,7 @@ SELECT * FROM OPENROWSET(
 
 Если собственные строки файла данных не отсортированы в соответствии с заданным порядком или если задано указание UNIQUE и присутствуют повторяющиеся ключи, то будет возвращена ошибка.
 
-При использовании ORDER обязательны псевдонимы столбцов. Список псевдонимов столбцов должен ссылаться на производную таблицу, к которой обращается предложение BULK. Имена столбцов, указанных в предложении ORDER, ссылаются на список псевдонимов столбцов. Нельзя указывать столбцы типов больших значений (**varchar(max)** , **nvarchar(max)** , **varbinary(max)** и **xml**) и типов больших объектов (**text**, **ntext** и **image**).
+При использовании ORDER обязательны псевдонимы столбцов. Список псевдонимов столбцов должен ссылаться на производную таблицу, к которой обращается предложение BULK. Имена столбцов, указанных в предложении ORDER, ссылаются на список псевдонимов столбцов. Нельзя указывать столбцы типов больших значений ( **varchar(max)** , **nvarchar(max)** , **varbinary(max)** и **xml** ) и типов больших объектов ( **text** , **ntext** и **image** ).
 
 ##### <a name="single_blob"></a>SINGLE_BLOB
 Возвращает содержимое файла *data_file* в виде набора строк с одной строкой и одним столбцом типа **varbinary(max)** .
@@ -236,7 +236,7 @@ SELECT *
 #### <a name="bulk-input-file-format-options"></a>BULK: параметры формата входного файла
 
 ##### <a name="codepage"></a>CODEPAGE
-`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*code_page*' }. Задает кодовую страницу данных в файле данных. Аргумент CODEPAGE имеет смысл только в том случае, если данные содержат столбцы типа **char**, **varchar** или **text** с символами, коды которых больше 127 или меньше 32.
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| ' *code_page* ' }. Задает кодовую страницу данных в файле данных. Аргумент CODEPAGE имеет смысл только в том случае, если данные содержат столбцы типа **char** , **varchar** или **text** с символами, коды которых больше 127 или меньше 32.
 
 > [!IMPORTANT]
 > `CODEPAGE` не поддерживается в Linux.
@@ -246,8 +246,8 @@ SELECT *
 
 |Значение аргумента CODEPAGE|Описание|
 |--------------------|-----------------|
-|ACP|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы ANSI или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
-|OEM (по умолчанию)|Столбцы типа **char**, **varchar** или **text** преобразуются из системной кодовой страницы OEM в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
+|ACP|Столбцы типа **char** , **varchar** или **text** преобразуются из кодовой страницы ANSI или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
+|OEM (по умолчанию)|Столбцы типа **char** , **varchar** или **text** преобразуются из системной кодовой страницы OEM в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |RAW|Преобразование из одной кодовой страницы в другую не выполняется. Это наиболее быстрый параметр.|
 |*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br /> **Важно!** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|
 
@@ -264,7 +264,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 ##### <a name="formatfile"></a>FORMATFILE
-`FORMATFILE` ='*format_file_path*. Указывает полный путь к файлу форматирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два типа файлов форматирования: XML и отличный от XML.
+`FORMATFILE` =' *format_file_path*. Указывает полный путь к файлу форматирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два типа файлов форматирования: XML и отличный от XML.
 
 Файл форматирования необходим для определения типов столбцов в результирующем наборе. Единственное исключение — случай, когда указаны аргументы SINGLE_CLOB, SINGLE_BLOB или SINGLE_NCLOB, при которых файл форматирования не обязателен.
 
@@ -520,43 +520,18 @@ WITH ( TYPE = BLOB_STORAGE,
 );
 
 INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
 ```
 
 > [!IMPORTANT]
-> База данных SQL Azure поддерживает только чтение из хранилища BLOB-объектов Azure.
+> База данных SQL Azure поддерживает чтение из Хранилища BLOB-объектов Azure только с помощью маркера SAS.
 
-Другой способ получить доступ к учетной записи хранения — с помощью [управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview). Для этого выполните [шаги с 1 по 3](/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json#steps), чтобы настроить базу данных SQL для доступа к хранилищу через управляемое удостоверение, после чего можно реализовать пример кода, как показано ниже
-```sql
---> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
-GO
-
---> Change to using Managed Identity instead of SAS key 
-CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
-GO
-
-CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
-WITH ( TYPE = BLOB_STORAGE,
-          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
-          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
-);
-
-INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
-```
 ### <a name="additional-examples"></a>Дополнительные примеры
 
 Дополнительные примеры использования инструкции `INSERT...SELECT * FROM OPENROWSET(BULK...)` см. в следующих статьях:

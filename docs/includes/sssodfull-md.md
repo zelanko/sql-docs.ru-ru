@@ -1,1 +1,1 @@
-Использование SQL по запросу (предварительная версия) в Azure Synapse Analytics
+Бессерверный пул SQL (предварительная версия) в Azure Synapse Analytics

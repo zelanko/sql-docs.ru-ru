@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d9fee236a710d7bc742f9a8fed27e12801daa550
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: ebebc4ed225e131db50df4c4c0b1ee3eb6da51b7
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988273"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384639"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>Заметки о выпуске пакета обновления 2 (SP2) для SQL Server 2008 R2
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91988273"
 |32-разрядная версия только клиента и средств управления для SQL Server 2008 R2 или SQL Server 2008 R2 с пакетом обновления 1 (SP1) (включая SQL Server 2008 R2 Management Studio)|Обновление клиента и средств управления до 32-разрядной версии SQL Server 2008 R2 с пакетом обновления 2 (SP2)|SQLServer2008R2SP2-KB2630458-x86-ENU.exe [по этой ссылке](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
 |32-разрядная версия SQL Server 2008 R2 Management Studio Express или SQL Server 2008 R2 Management Studio Express с пакетом обновления 1 (SP1)|Обновление до 32-разрядной версии SQL Server 2008 R2 с пакетом обновления 2 (SP2) Management Studio Express|SQLManagementStudio_x86_ENU.exe [по этой ссылке](https://go.microsoft.com/fwlink/p/?LinkId=251791)|  
 |32-разрядная версия любого выпуска SQL Server 2008 R2 или SQL Server 2008 R2 с пакетом обновления 1 (SP1) **и** 32-разрядная версия клиента и средств управляемости (включая SQL Server 2008 R2 RTM Management Studio)|Обновление всех продуктов до 32-разрядной версии SQL Server 2008 R2 с пакетом обновления 2 (SP2)|SQLServer2008R2SP2-KB2630458-x86-ENU.exe [по этой ссылке](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
-|32-разрядная версия одного или более средств из [пакета дополнительных компонентов Microsoft SQL Server 2008 R2 RTM](https://www.microsoft.com/download/details.aspx?id=44272)|Обновление средств до 32-разрядной версии пакета дополнительных компонентов Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2)|Один или несколько файлов из [пакета дополнительных компонентов Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2)](https://go.microsoft.com/fwlink/?LinkId=251792)|  
+|32-разрядная версия одного или более средств из [пакета дополнительных компонентов Microsoft SQL Server 2008 R2 RTM](https://www.microsoft.com/download/details.aspx?id=44272)|Обновление средств до 32-разрядной версии пакета дополнительных компонентов Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2)|Один или несколько файлов из [пакета дополнительных компонентов Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=30438)|  
 |Отсутствует 32-разрядная установка SQL Server 2008 R2|Установка Server 2008 R2, включая пакет обновления 2 (SP2)|Перейдите по ссылке [SQL Server 2008 R2 Express Edition с пакетом обновления 2 (SP2)](https://go.microsoft.com/fwlink/?LinkId=251791) и следуйте инструкциям.|  
 |Отсутствует 32-разрядная установка SQL Server 2008 R2 Management Studio|Установка среды SQL Server 2008 R2 Management Studio, включая пакет обновления 2 (SP2)|SQLManagementStudio_x86_ENU.exe [по этой ссылке](https://go.microsoft.com/fwlink/p/?LinkId=251791) для установки бесплатного выпуска среды SQL Server 2008 R2 с пакетом обновления 2 (SP2) Management Studio Express Edition|  
 |64-разрядная версия любого выпуска SQL Server 2008 R2 или SQL Server 2008 R2 с пакетом обновления 1 (SP1)|Обновление до 64-разрядной версии SQL Server 2008 R2 с пакетом обновления 2 (SP2)|SQLServer2008R2SP2-KB2630458-x64-ENU или SQLServer2008R2SP2-KB2630455-IA64-ENU.exe [по этой ссылке](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
@@ -51,14 +51,14 @@ ms.locfileid: "91988273"
 |64-разрядная версия только клиента и средств управляемости для SQL Server 2008 R2 или SQL Server 2008 R2 с пакетом обновления 1 (SP1) (включая SQL Server 2008 R2 Management Studio)|Обновление клиента и средств управляемости до 64-разрядной версии SQL Server 2008 R2 с пакетом обновления 2 (SP2)|SQLServer2008R2SP2-KB2630458-x64-ENU.exe или SQLServer2008R2SP2-KB2630455-IA64-ENU.exe [по этой ссылке](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
 |64-разрядная версия SQL Server 2008 R2 Management Studio Express или SQL Server 2008 R2 Management Studio Express с пакетом обновления 1 (SP1)|Обновление до 64-разрядной версии SQL Server 2008 R2 с пакетом обновления 2 (SP2) Management Studio Express|SQLManagementStudio_x64_ENU.exe [по этой ссылке](https://go.microsoft.com/fwlink/p/?LinkId=251791)|  
 |64-разрядная версия любого выпуска SQL Server 2008 R2 или SQL Server 2008 R2 с пакетом обновления 1 (SP1) **и** 64-разрядная версия клиента и средств управляемости (включая SQL Server 2008 R2 RTM Management Studio)|Обновление всех продуктов до 64-разрядной версии SQL Server 2008 R2 с пакетом обновления 2 (SP2)|SQLServer2008R2SP2-KB2630458-x64-ENU.exe [по этой ссылке](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
-|64-разрядная версия одного или более средств из [пакета дополнительных компонентов Microsoft SQL Server 2008 R2 RTM](https://www.microsoft.com/download/details.aspx?id=44272)|Обновление средств до 64-разрядной версии пакета дополнительных компонентов Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2)|Один или несколько файлов из [пакета дополнительных компонентов Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2)](https://go.microsoft.com/fwlink/?LinkId=251792)|  
+|64-разрядная версия одного или более средств из [пакета дополнительных компонентов Microsoft SQL Server 2008 R2 RTM](https://www.microsoft.com/download/details.aspx?id=44272)|Обновление средств до 64-разрядной версии пакета дополнительных компонентов Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2)|Один или несколько файлов из [пакета дополнительных компонентов Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=30438)|  
 |Отсутствует 64-разрядная установка SQL Server 2008 R2|Установка Server 2008 R2, включая пакет обновления 2 (SP2)|Перейдите по ссылке [SQL Server 2008 R2 Express Edition с пакетом обновления 2 (SP2)](https://go.microsoft.com/fwlink/?LinkId=251791) и следуйте инструкциям.|  
 |Отсутствует 64-разрядная установка SQL Server 2008 R2 Management Studio|Установка среды SQL Server 2008 R2 Management Studio, включая пакет обновления 2 (SP2)|SQLManagementStudio_x64_ENU.exe [по этой ссылке](https://go.microsoft.com/fwlink/p/?LinkId=251791) для установки бесплатного выпуска среды SQL Server 2008 R2 с пакетом обновления 2 (SP2) Management Studio Express Edition|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2. Неудачное завершение программы установки, если файл SQAGTRES.dll заблокирован другим процессом  
 **Проблема**. Операция установки SQL Server может завершиться неудачей со следующей ошибкой. `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` Основная причина состоит в том, что файл C:\Windows\system32\SQAGTRES.DLL заблокирован другим процессом и программа установки не может его обновить.  
   
-**Возможное решение**: Переименуйте файл C:\Windows\system32\SQAGTRES.DLL, указав временное имя, такое как C:\Windows\system32\SQAGTRES_old.DLL, а затем нажмите кнопку "Повтор" в окне сообщения об ошибке установки. Это даст возможность программе установки продолжить работу. После перезагрузки можно удалить временный файл C:\Windows\system32\SQAGTRES_old.DLL.  
+**Возможное решение** : Переименуйте файл C:\Windows\system32\SQAGTRES.DLL, указав временное имя, такое как C:\Windows\system32\SQAGTRES_old.DLL, а затем нажмите кнопку "Повтор" в окне сообщения об ошибке установки. Это даст возможность программе установки продолжить работу. После перезагрузки можно удалить временный файл C:\Windows\system32\SQAGTRES_old.DLL.  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0. Известные проблемы, исправленные в этом пакете обновления  
 Полный список ошибок и известных проблем, исправленных в этом пакете обновления, см. в следующей [статье базы знаний](https://support.microsoft.com/kb/2630455).  

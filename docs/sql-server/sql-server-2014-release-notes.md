@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 623c0e6b5a1bafa033ddc9a6fd34a1911d6ecf5b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f2b94f4458e29090559e2fdf7d5819cddb30842f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988540"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384856"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
 - [Скачать пакет обновления 1 (SP1) для Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
 - [Выпущен пакет обновления 1 (SP1) для SQL Server 2014 — обновлено](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 Express с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=42299)
-- [Пакет дополнительных компонентов для Microsoft SQL Server 2014 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=46696)
+- [Пакет дополнительных компонентов для Microsoft SQL Server 2014 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=46694)
 
 
 ## <a name="before-you-install-sql-server-2014-rtm"></a>Действия перед установкой SQL Server 2014 RTM
@@ -114,7 +114,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Неправильная версия клиента StreamInsight на носителе SQL Server 2014/ISO/CAB  
 На носителе SQL Server media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>) находится неправильная версия StreamInsight.msi и StreamInsightClient.msi.  
   
-**Решение:** Скачайте правильную версию со [страницы скачивания пакета дополнительных компонентов SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=306709) и установите ее.  
+**Решение:** Скачайте правильную версию со [страницы скачивания пакета дополнительных компонентов SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=57474) и установите ее.  
   
 ### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>Документация по версии RTM
   
@@ -270,7 +270,7 @@ DATEPART(weekday, @d)
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>При регистрации через среду SSMS добавляются метаданные приложения уровня данных с несовпадающими идентификаторами экземпляра  
 **Проблема**. При регистрации или удалении пакета приложения уровня данных (DACPAC) с помощью среды SQL Server Management Studio таблицы SYSDAC* не обновляются правильно, чтобы позволить пользователю выполнять запросы к журналу DACPAC базы данных.  Instance_id для sysdac_history_internal и sysdac_instances_internal не совпадают, из-за чего соединение невозможно.  
   
-**Решение:** Эта проблема исправлена в платформе [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295), которая распространяется в составе пакета дополнительных компонентов.  После применения обновления все новые записи журнала будут использовать значение, указанное для instance_id в таблице sysdac_instances_internal.  
+**Решение:** Эта проблема исправлена в платформе [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=100297), которая распространяется в составе пакета дополнительных компонентов.  После применения обновления все новые записи журнала будут использовать значение, указанное для instance_id в таблице sysdac_instances_internal.  
   
 Если уже имеется проблема с несовпадающими значениями instance_id, единственным способом устранить их является подключиться к серверу от имени пользователя с правами на запись в базу данных MSDB и исправить значения instance_id на верные.  Если вы получаете несколько событий регистрации и отмены регистрации из одной и той же базы данных, необходимо изучить значения даты и времени, чтобы определить, какие записи соответствуют текущему значению instance_id.  
   
@@ -359,7 +359,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **Решение:**  
   
-1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе "Поставщик Microsoft Analysis Services OLE DB для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)" [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе "Поставщик Microsoft Analysis Services OLE DB для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)" [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575).  
   
 2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15).  
   
@@ -374,7 +374,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **Решение:**  
   
-1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе "Поставщик Microsoft Analysis Services OLE DB для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)" [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе "Поставщик Microsoft Analysis Services OLE DB для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)" [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575).  
   
 2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15).  
   
@@ -411,7 +411,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>Помощник по обновлению SQL Server 2014 сообщает о несущественных проблемах с обновлением для служб SQL Server Reporting Services  
 **Проблема**. Помощник по обновлению SQL Server (SSUA), поставляемый с носителем SQL Server 2014, неправильно сообщает о ряде ошибок при анализе сервера служб SQL Server Reporting Services.  
   
-**Решение:** Эта ошибка исправлена в помощнике по обновлению SQL Server в [пакете дополнительных компонентов SQL Server 2014 для SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Решение:** Эта ошибка исправлена в помощнике по обновлению SQL Server в [пакете дополнительных компонентов SQL Server 2014 для SSUA](https://www.microsoft.com/download/details.aspx?id=57474).  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>Помощник по обновлению SQL Server 2014 сообщает об ошибке при анализе сервера служб SQL Server Integration Services  
 **Проблема**. Помощник по обновлению SQL Server (SSUA), поставляемый на носителе SQL Server 2014, сообщает об ошибке при анализе сервера SQL Server Integration Services.  Сообщение, отображаемое пользователю:  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**Решение:** Эта ошибка исправлена в помощнике по обновлению SQL Server в [пакете дополнительных компонентов SQL Server 2014 для SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Решение:** Эта ошибка исправлена в помощнике по обновлению SQL Server в [пакете дополнительных компонентов SQL Server 2014 для SSUA](https://www.microsoft.com/download/details.aspx?id=57474).  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

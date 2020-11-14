@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a1251ed1fa5d3fc7a520259fdfc360ac5b5fb22c
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379785"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405051"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -36,6 +36,9 @@ ms.locfileid: "91379785"
 STRING_SPLIT требует уровня совместимости не ниже 130. При уровне меньше 130 SQL Server не может найти функцию STRING_SPLIT.
 
 Сведения об изменении уровня совместимости базы данных см. в статье [Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
+
+> [!NOTE]
+> Конфигурация совместимости для STRING_SPLIT в Azure Synapse Analytics не требуется.
 
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,14 +53,14 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>Аргументы
 
  *строка*  
- [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (например, **nvarchar**, **varchar**, **nchar** или **char**).  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (например, **nvarchar** , **varchar** , **nchar** или **char** ).  
   
- *separator*язательно, количество  
+ *separator* язательно, количество  
  Отдельное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (например, **nvarchar(1)** , **varchar(1)** , **nchar(1)** или **char(1)** ), которое используется в качестве разделителя сцепленных подстрок.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
 
-Возвращает состоящую из одного столбца таблицу, строки которой являются подстроками. Имя столбца — **value**. Возвращает значение типа **nvarchar**, если любой из входных аргументов имеет тип **nvarchar** или **nchar**. В противном случае возвращает значение типа **varchar**. Длина типа возвращаемого значения равна длине аргумента string.  
+Возвращает состоящую из одного столбца таблицу, строки которой являются подстроками. Имя столбца — **value**. Возвращает значение типа **nvarchar** , если любой из входных аргументов имеет тип **nvarchar** или **nchar**. В противном случае возвращает значение типа **varchar**. Длина типа возвращаемого значения равна длине аргумента string.  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -65,7 +68,7 @@ STRING_SPLIT ( string , separator )
 
 Выходные строки могут быть расположены в любом порядке. Порядок _не_ обязательно совпадает с порядком подстрок во входной строке. Окончательный порядок сортировки можно переопределить с помощью предложения ORDER BY в инструкции SELECT (`ORDER BY value`).
 
-Символ 0x0000 (**char(0)** ) не определен в параметрах сортировки Windows, и его нельзя включать в STRING_SPLIT.
+Символ 0x0000 ( **char(0)** ) не определен в параметрах сортировки Windows, и его нельзя включать в STRING_SPLIT.
 
 Пустые строки нулевой длины присутствуют в том случае, если входная строка содержит два или несколько последовательных вхождений знака разделителя. Пустые подстроки обрабатываются так же, как и обычные подстроки. Можно отфильтровать строки, содержащие пустые подстроки, используя предложение WHERE (`WHERE value <> ''`). Если входная строка равна NULL, функция STRING_SPLIT с табличным значением возвращает пустую таблицу.  
 

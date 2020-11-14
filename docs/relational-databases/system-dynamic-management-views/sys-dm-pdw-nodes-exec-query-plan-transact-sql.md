@@ -13,17 +13,21 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ec94a367ca0cc9bb354fd35cbc214d8e83ede584
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 06c5acb9480f52d0cadf84c54aa39bbc9bae12d9
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059538"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584941"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.pdw_nodes_dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Возвращает события инструкции Showplan в XML-формате для пакета, указанного в дескрипторе плана. План, указанный в дескрипторе плана может быть кэширован или выполняться в данный момент.  
+
+> [!note] 
+> В синапсе SQL добавление пробелов в запросе является изменением запроса, которое приводит к повторному вычислению хэша запроса, а предыдущий кэшированный план выполнения не используется заново.
+
 
 ## <a name="table-returned"></a>Таблица возвращена  
   
