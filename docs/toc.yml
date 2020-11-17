@@ -135,7 +135,13 @@
             - name: Предварительные требования
               href: big-data-cluster/active-directory-prerequisites.md
             - name: Развертывание
-              href: big-data-cluster/active-directory-deploy.md
+              items:
+                - name: Простое развертывание AD
+                  href: big-data-cluster/active-directory-deploy.md
+                - name: Планирование AD в AKS
+                  href: big-data-cluster/active-directory-deployment-aks.md
+                - name: 'Руководство: AD в AKS'
+                  href: big-data-cluster/active-directory-deployment-aks-tutorial.md
             - name: Подключение
               href: big-data-cluster/active-directory-connect.md
             - name: Несколько BDC в одном домене AD
@@ -342,7 +348,7 @@
               href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Список записных книжек для определенных операций
               href: big-data-cluster/cluster-manage-notebooks.md
-        - name: Azure Monitor
+        - name: Монитор
           items:
             - name: Выполнение мониторинга с помощью Azure Data Studio
               href: big-data-cluster/cluster-monitor-ads.md
@@ -1869,7 +1875,7 @@
           items:
             - name: Создание
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Удалить
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Изменить
               href: relational-databases/tables/modify-edge-constraint.md
@@ -9992,11 +9998,11 @@
               href: linux/sql-server-linux-setup-full-text-search.md
             - name: "Установка служб SQL\_Server Integration\_Services"
               href: linux/sql-server-linux-setup-ssis.md
-            - name: Установка служб машинного обучения SQL Server
+            - name: Установка Служб машинного обучения SQL Server (Python и R)
               href: linux/sql-server-linux-setup-machine-learning.md
-            - name: "Установка Служб машинного обучения SQL\_Server в\_Docker"
+            - name: 'Установка Служб машинного обучения SQL Server (Python, R) в Docker'
               href: linux/sql-server-linux-setup-machine-learning-docker.md
-            - name: Установка расширения языка для SQL Server
+            - name: "Установка расширения языка Java для SQL\_Server"
               href: linux/sql-server-linux-setup-language-extensions-java.md
             - name: Настройка репозиториев
               href: linux/sql-server-linux-change-repo.md
