@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c56b8595955caef35d5ff1e591eed417a831a48
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: febd24b17458a37a6ff12c8b17f55527311a0aee
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726567"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584794"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Службы Analysis Services с группами доступности AlwaysOn
 
@@ -138,7 +138,7 @@ ms.locfileid: "91726567"
   
      Задайте свойству **Назначение приложения** значение **READONLY** , если вы настраиваете клиентское подключение ко вторичной реплике только для чтения. В противном случае оставьте значение по умолчанию, **READWRITE** , чтобы направить подключение на первичную реплику.  
   
-5.  В данных об олицетворении выберите **Использовать указанные имя пользователя и пароль**и введите учетную запись пользователя домена Windows, имеющего минимум разрешений **db_datareader** для базы данных.  
+5.  В данных об олицетворении выберите **Использовать указанные имя пользователя и пароль** и введите учетную запись пользователя домена Windows, имеющего минимум разрешений **db_datareader** для базы данных.  
   
      Не выбирайте параметр **Использовать учетные данные текущего пользователя** или **Наследовать**. Можно выбрать **Использовать учетную запись службы**, но только если эта учетная запись имеет разрешение на чтение для базы данных.  
   

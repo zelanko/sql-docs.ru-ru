@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: a6849f13f8182285749c7a95801ee111e7ba0130
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 060039496d5877951e5255fce5e6cac2321731c6
+ms.sourcegitcommit: 31f3405be08441471f441395f1d0f0017ebc0ad5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624681"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94617932"
 ---
 # <a name="build-a-database-project-from-command-line"></a>Создание проекта базы данных из командной строки
 
@@ -24,7 +24,7 @@ ms.locfileid: "91624681"
 
 1. Установите и настройте [расширение проектов баз данных SQL для Azure Data Studio](sql-database-project-extension.md).
 
-2. Для построения проекта базы данных SQL из командной строки на всех платформах, которые поддерживаются расширением Azure Data Studio, для проектов базы данных SQL необходимы следующие DLL-библиотеки .NET Core и целевой файл `Microsoft.Data.Tools.Schema.SqlTasts.targets`. Эти файлы создаются расширением во время первой сборки, выполненной в интерфейсе Azure Data Studio и помещенной в папку расширения в разделе `BuildDirectory`.  Например, на Linux эти файлы помещаются в `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`.  Скопируйте эти 10 файлов в новую и доступную папку или запишите их расположение.  Это расположение будет обозначаться в документе как `DotNet Core build folder`.
+2. Для построения проекта базы данных SQL из командной строки на всех платформах, которые поддерживаются расширением Azure Data Studio, для проектов базы данных SQL необходимы следующие DLL-библиотеки .NET Core и целевой файл `Microsoft.Data.Tools.Schema.SqlTasks.targets`. Эти файлы создаются расширением во время первой сборки, выполненной в интерфейсе Azure Data Studio и помещенной в папку расширения в разделе `BuildDirectory`.  Например, на Linux эти файлы помещаются в `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`.  Скопируйте эти 10 файлов в новую и доступную папку или запишите их расположение.  Это расположение будет обозначаться в документе как `DotNet Core build folder`.
 
     - Microsoft.Data.Tools.Schema.Sql.dll
     - Microsoft.Data.Tools.Schema.Tasks.Sql.dll

@@ -14,12 +14,12 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f70e0d563760cf0e511b673ea7f838f6aabdde4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75a8df34472bd8e29b7d4422612ccc6977a70dda
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488686"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674242"
 ---
 # <a name="column-properties-general-page"></a>Свойства столбцов (страница «Общие»)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88488686"
  Тип данных, которые могут храниться в столбце. Если тип данных является системным типом данных, то выводится системный тип данных. Если тип данных является пользовательским, то выводится системный тип данных, на котором основан пользовательский тип данных.  
   
  **Первичный ключ**  
- Указывает, является ли столбец первичным ключом. Допустимые значения — **True**и **False**.  
+ Указывает, является ли столбец первичным ключом. Допустимые значения — **True** и **False**.  
   
  **Разрешить значения NULL**  
  Указывает, принимает ли столбец значения NULL. Допустимые значения — **True** и **False**.  
