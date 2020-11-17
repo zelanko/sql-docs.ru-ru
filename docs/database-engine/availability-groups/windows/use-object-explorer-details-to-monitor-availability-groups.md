@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cc56fad8481141cb208b8fb218c281d12c1e3027
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894163"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583755"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Использование области "Сведения обозревателя объектов" для отслеживания групп доступности
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85894163"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Мониторинг групп доступности, реплик доступности и баз данных доступности**  
   
-1.  В меню «Вид» выберите **Подробности обозревателя объектов**или нажмите клавишу **F7** .  
+1.  В меню «Вид» выберите **Подробности обозревателя объектов** или нажмите клавишу **F7** .  
   
 2.  В обозревателе объектов подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором нужен мониторинг группы доступности, и щелкните имя сервера, чтобы развернуть дерево сервера.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85894163"
  На экране подробных сведений **Группы доступности** отображаются следующие столбцы.  
   
  **имя**;  
- Список папок прослушивателей **Реплики доступности**, **Базы данных доступности**и **Группа доступности** для выбранной группы доступности.  
+ Список папок прослушивателей **Реплики доступности**, **Базы данных доступности** и **Группа доступности** для выбранной группы доступности.  
   
 ##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Подробные сведения о реплике доступности  
  На экране подробных сведений **Реплика доступности** отображаются следующие столбцы.  

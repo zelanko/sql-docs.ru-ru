@@ -6,21 +6,23 @@ ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
-author: pensivebrian
-ms.author: broneill
-ms.reviewer: drswkier; sstein
-ms.date: 09/29/2020
-ms.openlocfilehash: c4a7fb02521a20dffa95c45cc8a345c243c4ae0e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan; sstein
+ms.date: 11/4/2020
+ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005534"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384503"
 ---
 # <a name="sqlpackageexe"></a>SQLPackage.exe
 
 Программа командной строки **SqlPackage.exe** автоматизирует следующие задачи разработки баз данных.  
   
+- [Версия.](#version) Возвращает номер сборки приложения SqlPackage.  Этот параметр добавлен в версии 18.6.
+
 - [Extract](#extract-parameters-and-properties): создает файл моментального снимка базы данных (DACPAC) из активной Базы данных SQL Server или SQL Azure.  
   
 - [Publish](#publish-parameters-properties-and-sqlcmd-variables): выполняет добавочное обновление схемы базы данных в соответствии со схемой исходного DACPAC-файла. Если база данных не существует на сервере, операция публикации создаст ее. В противном случае обновляется существующая база данных.  
@@ -69,7 +71,10 @@ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
 
-Отображает версию sqlpackage:
+
+## <a name="version"></a>Версия
+
+Выводит версию sqlpackage в виде номера сборки.  Может использоваться в интерактивных запросах, а также в [автоматизированных конвейерах](sqlpackage-pipelines.md).
 
 ```
 sqlpackage.exe /Version

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 0f38c60868785a9487e848fd9617e2b2feedf481
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 260af6fa8615969a895425aa3d2145071b78eb72
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670096"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583967"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91670096"
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> Источники данных отчетов и группы доступности  
  Источники данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на основе [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] будут работать по-разному в зависимости от того, каким образом администратор настроил среду групп доступности.  
   
- Для использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в источниках данных отчетов необходимо настроить строку соединения с источником данных отчета, где должно быть указано *DNS-имя прослушивателя*группы доступности. Поддерживаются следующие источники данных.  
+ Для использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в источниках данных отчетов необходимо настроить строку соединения с источником данных отчета, где должно быть указано *DNS-имя прослушивателя* группы доступности. Поддерживаются следующие источники данных.  
   
 -   Источник данных ODBC, использующий SQL Native Client.  
   

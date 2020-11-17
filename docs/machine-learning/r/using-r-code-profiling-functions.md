@@ -3,22 +3,22 @@ title: Повышение производительности с помощью
 description: Собирайте полезные сведения, чтобы повысить производительность и быстрее получать результаты вычислений R в SQL Server, с помощью функций профилирования. Функция *rprof* собирает и возвращает сведения о внутренних вызовах функций.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 12/12/2018
+ms.date: 10/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e65171fa0222c0c581f692bede727dc4366c9c53
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d15f31dc2c289df910b06de8cb1f48647dbde33c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180446"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384753"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>Использование функций профилирования кода R для повышения производительности
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Помимо использования средств и ресурсов SQL Server для отслеживания выполнения скрипта R можно использовать средства обеспечения производительности, входящие в другие пакеты R, чтобы получить дополнительные сведения о внутренних вызовах функций. 
+В этой статье описываются средства производительности, которые предоставляются пакетами R и позволяют получить сведения о внутренних вызовах функций. Такие сведения вы можете использовать для повышения производительности кода.
 
 > [!TIP]
 > В этой статье приводятся основные ресурсы, которые помогут вам приступить к работе. Чтобы ознакомиться с рекомендациями экспертов, мы рекомендуем изучить раздел о *производительности*[книги Хедли Уикема (Hadley Wickham) "Advanced R", посвященной структурам данных R](http://adv-r.had.co.nz).
@@ -59,9 +59,11 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>Отладка и профилирование в R
 
-Установленная по умолчанию документация по Microsoft R Open содержит подробное руководство по разработке расширений языка R, посвященное [профилированию и отладке](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging). Эту же документацию можно найти на компьютере в папке C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual.
+Установленная по умолчанию документация по Microsoft R Open содержит подробное руководство по разработке расширений языка R, посвященное [профилированию и отладке](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="next-steps"></a>Дальнейшие шаги
 
-+ [Пакет R utils](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ ["Advanced R", автор Хедли Уикем (Hadley Wickham)](http://adv-r.had.co.nz)
++ Дополнительные сведения об оптимизации скриптов R в SQL Server см. в статье [Настройка производительности и оптимизация данных для R](r-and-data-optimization-r-services.md).
++ Более полные сведения о настройке производительности в SQL Server см. в статье [Центр производительности для Базы данных SQL Azure и ядра СУБД SQL Server](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database).
++ Дополнительные сведения о пакете utils для R см. [здесь](https://www.rdocumentation.org/packages/utils/versions/3.5.1).
++ Подробные сведения о программировании на языке R см. в книге [Advanced R](http://adv-r.had.co.nz) (Продвинутое программирование на R) Хэдли Уикхеэма (Hadley Wickham).

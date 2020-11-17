@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 575eabef6524af9d4d5dd67f016791a5f34d589d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fc49e558305a7cd4f86f517a05653093b798846c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670823"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583830"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Выбор URL-адреса конечной точки при добавлении или изменении реплики доступности
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91670823"
 ##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> Синтаксис для URL-адреса конечной точки  
  Синтаксис URL-адреса конечной точки имеет следующую форму:  
   
- TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>* ,  
+ TCP <strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>* ,  
   
  где  
   

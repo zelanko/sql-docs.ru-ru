@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: caca5016c6d461af5cd665ae0ada144cd5fd1c2e
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111140"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384687"
 ---
 # <a name="sql-server-2012-release-notes"></a>Заметки о выпуске SQL Server 2012
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "87111140"
   
 3.  В окне "Службы компонентов" перейдите в папку **Корень консоли** -> **Службы компонентов** -> **Компьютеры** -> **Мой компьютер** -> **Dconfig** ->**DReplayController**.  
   
-4.  Щелкните **DReplayController**правой кнопкой мыши и выберите **Свойства**.  
+4.  Щелкните **DReplayController** правой кнопкой мыши и выберите **Свойства**.  
   
 5.  В окне **Свойства DReplayController** на вкладке **Безопасность** нажмите кнопку **Правка** в разделе **Разрешения запуска и активации** .  
   
@@ -133,9 +133,9 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         2.  В окне **Выбор компонентов** разверните запись **Возможности .NET Framework 3.5.1** .  
   
-        3.  Когда **Возможности .NET Framework 3.5.1**будут развернуты, на экране появятся два флажка. Один флажок для компонента .NET Framework 3.5.1, другой ― для компонента «Активация WCF». Выберите **.NET Framework 3.5.1**и нажмите кнопку **Далее**. Нельзя установить компоненты .NET Framework 3.5.1, если не установлены необходимые службы ролей и компоненты.  
+        3.  Когда **Возможности .NET Framework 3.5.1** будут развернуты, на экране появятся два флажка. Один флажок для компонента .NET Framework 3.5.1, другой ― для компонента «Активация WCF». Выберите **.NET Framework 3.5.1** и нажмите кнопку **Далее**. Нельзя установить компоненты .NET Framework 3.5.1, если не установлены необходимые службы ролей и компоненты.  
   
-        4.  На странице **Подтверждение установки компонентов**просмотрите сводку по установке и щелкните "Установить".  
+        4.  На странице **Подтверждение установки компонентов** просмотрите сводку по установке и щелкните "Установить".  
   
         5.  Подождите завершения процесса установки и нажмите кнопку **Закрыть**.  
   
@@ -143,7 +143,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         1.  Щелкните **Пуск** | **Все программы** | **Стандартные**.  
   
-        2.  Разверните папку **Windows PowerShell**, щелкните правой кнопкой мыши **Windows PowerShell**и выберите команду **Запуск от имени администратора**. Нажмите кнопку **Да** в диалоговом окне **Контроль учетных записей пользователей** .  
+        2.  Разверните папку **Windows PowerShell**, щелкните правой кнопкой мыши **Windows PowerShell** и выберите команду **Запуск от имени администратора**. Нажмите кнопку **Да** в диалоговом окне **Контроль учетных записей пользователей** .  
   
         3.  В командной строке PowerShell введите следующие команды, нажимая клавишу ВВОД после ввода каждой команды:  
   
@@ -630,7 +630,7 @@ Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300
 ![горизонтальная_полоса](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="90-streaminsight"></a><a name="SI"></a>9.0. StreamInsight  
-SQL Server 2012 включает в себя StreamInsight 2.0. Для работы StreamInsight 2.0 требуется лицензия на Microsoft SQL Server 2012 и .NET Framework 4.0. В этой версии содержится много улучшений производительности, а также исправлены некоторые проблемы. Дополнительные сведения см. в статье [Microsoft StreamInsight 2.0 Release Notes](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)(Заметки о выпуске Microsoft StreamInsight 2.0). Чтобы скачать StreamInsight 2.0 отдельно, зайдите на [страницу скачивания Microsoft StreamInsight 2.0](https://go.microsoft.com/fwlink/?LinkId=241593) в Центре загрузки Майкрософт.  
+SQL Server 2012 включает в себя StreamInsight 2.1. Для работы со StreamInsight 2.1 требуется лицензия на Microsoft SQL Server 2012 и .NET Framework 4.0. В этой версии содержится много улучшений производительности, а также исправлены некоторые проблемы. Дополнительные сведения см. в статье [Заметки о выпуске Microsoft StreamInsight 2.1](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Чтобы скачать StreamInsight 2.1 отдельно, зайдите на [страницу скачивания Microsoft StreamInsight 2.1](https://www.microsoft.com/download/details.aspx?id=30149) в Центре загрузки Майкрософт.  
   
 ![горизонтальная_полоса](media/horizontal-bar.png "horizontal_bar")  
   

@@ -1,7 +1,7 @@
 ---
 title: Подключение Azure Data Lake Storage 2-го поколения для распределения по уровням HDFS
 titleSuffix: How to mount ADLS Gen2
-description: В этой статье описывается настройка распределения по уровням HDFS для подключения внешней файловой системы Azure Data Lake Storage к HDFS в кластере больших данных SQL Server 2019.
+description: В этой статье приводится пример настройки распределения по уровням HDFS для источника данных Azure Data Lake Storage 2-го поколения.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4bfb894112f071cc7a628146265ede17b3f0a14
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730655"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521041"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение ADLS 2-го поколения для распределения по уровням HDFS в кластере больших данных
 
