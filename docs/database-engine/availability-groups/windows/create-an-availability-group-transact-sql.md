@@ -10,18 +10,18 @@ ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e79175a6194b282fa57514146a63d9102dd33833
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e6235f980627ad56d18330031c3bae6995eb45d2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727970"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584422"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Создание группы доступности Always On с помощью Transact-SQL (T-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  В данном разделе описывается использование [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания и настройки группы доступности на основе экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , на которых включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
+  В данном разделе описывается использование [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания и настройки группы доступности на основе экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , на которых включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности* и поддерживающих отработку отказа.  
   
 > [!NOTE]  
 >  Базовые сведения о группах доступности см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

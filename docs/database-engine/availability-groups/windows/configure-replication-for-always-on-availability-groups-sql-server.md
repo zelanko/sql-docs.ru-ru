@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 085b8788ba15349cca5b3ab445bf5c093207f72b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 505982d700608d34e909248b02ade932d470c4b5
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115072"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584480"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Настройка репликации в группах доступности Always On
 
@@ -179,7 +179,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
  Хранимая процедура **sp_validate_replica_hosts_as_publishers** должна быть запущена от имени входа с достаточными правами авторизации на каждом узле реплики группы доступности для выполнения запроса сведений о группе доступности. В отличие от **sp_validate_redirected_publisher**, для подключения к репликам группы доступности в ней используются учетные данные вызывающего объекта, а не имя входа, хранимое в msdb.dbo.MSdistpublishers.  
   
 > [!NOTE]  
->  Работа**sp_validate_replica_hosts_as_publishers** завершится сбоем со следующей ошибкой при проверке узлов вторичной реплики, которые не допускают доступ для чтения либо требуют указания намерения чтения.  
+>  Работа **sp_validate_replica_hosts_as_publishers** завершится сбоем со следующей ошибкой при проверке узлов вторичной реплики, которые не допускают доступ для чтения либо требуют указания намерения чтения.  
 >   
 >  Сообщение 21899, уровень 11, состояние 1, процедура **sp_hadr_verify_subscribers_at_publisher**, строка 109  
 >   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 08a051a5b0fa450680566b8bcfb408e481016325
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 33172488fd20ed4ef2fc555026931ae8b9a10f9c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727933"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584326"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Включение или отключение функции групп доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "91727933"
   
 1.  Подключитесь к узлу отказоустойчивого кластера Windows Server (WSFC) с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], для которого требуется включить группы доступности Always On.  
   
-2.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки**и **Диспетчер конфигурации SQL Server**.  
+2.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки** и **Диспетчер конфигурации SQL Server**.  
   
 3.  В окне **Диспетчер конфигурации SQL Server** выберите **Службы SQL Server**, правой кнопкой мыши щелкните SQL Server ( **\<**_instance name_**>)** , где **\<**_instance name_**>** — имя локального экземпляра сервера, для которого требуется включить группы доступности AlwaysOn, после чего щелкните **Свойства**.  
   
@@ -179,11 +179,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  Подключитесь к узлу отказоустойчивого кластера Windows Server (WSFC) с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], для которого требуется отключить группы доступности Always On.  
   
-2.  В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
+2.  В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки** и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
 3.  В окне **Диспетчер конфигурации SQL Server** выберите **Службы SQL Server**, правой кнопкой мыши щелкните SQL Server ( **\<**_instance name_**>)** , где **\<**_instance name_**>** — имя локального экземпляра сервера, для которого требуется отключить группы доступности AlwaysOn, после чего щелкните **Свойства**.  
   
-4.  На вкладке **Высокий уровень доступности Always On**снимите флажок **Включить группы доступности Always On** и нажмите кнопку **ОК**.  
+4.  На вкладке **Высокий уровень доступности Always On** снимите флажок **Включить группы доступности Always On** и нажмите кнопку **ОК**.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сохранит изменения и перезапустит службу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . После перезапуска службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функция AlwaysOn будет отключена, а для свойства **IsHadrEnabled** будет установлено значение 0, указывающее на то, что группы доступности AlwaysOn отключены.  
   
