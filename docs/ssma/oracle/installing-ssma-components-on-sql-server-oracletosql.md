@@ -3,7 +3,7 @@ title: Установка компонентов SSMA на SQL Server (OracleToS
 description: Узнайте, как установить пакет расширений SSMA и поставщики Oracle на компьютере, на котором выполняется SQL Server для поддержки преобразования базы данных Oracle.
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/14/2020
+ms.date: 11/16/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7acabfac10c3eb6e7afa1fbfbb2f546b0ae4137d
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 64850d1a701491f0dc5817576a568fdc3ebc2483
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006436"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870110"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Установка компонентов SSMA на SQL Server (OracleToSQL)
 
@@ -26,11 +26,11 @@ ms.locfileid: "92006436"
 
 ## <a name="ssma-for-oracle-extension-pack"></a>SSMA для пакета расширений Oracle
 
-Пакет расширений SSMA добавляет базы данных **сисдб** и **ссматестердб** в указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . База данных **сисдб** содержит таблицы и хранимые процедуры, необходимые для переноса данных, и определяемые пользователем функции, имитирующие системные функции Oracle. База данных **ссматестердб** содержит таблицы и процедуры, необходимые компоненту тестера.
+Пакет расширений SSMA развертывает расширенные хранимые процедуры и добавляет базы данных **сисдб** и **ссматестердб** в указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Расширенные хранимые процедуры предоставляют функции, необходимые для эмуляции функций и бехаиов Oracle, в то время как база данных **сисдб** содержит таблицы и хранимые процедуры, необходимые для переноса данных. База данных **ссматестердб** содержит таблицы и процедуры, необходимые для компонента тестера (если он установлен).
 
 Кроме того, при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда для переноса данных используется модуль миграции данных на стороне сервера.
 
-### <a name="prerequisites"></a>Предварительные условия
+### <a name="prerequisites"></a>Предварительные требования
 
 Перед установкой SSMA для компонентов сервера Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Убедитесь, что система соответствует следующим требованиям.
 
@@ -52,9 +52,9 @@ ms.locfileid: "92006436"
 
 Чтобы установить пакет расширений, выполните следующие действия.
 
-1. Скопируйте **SSMAforOracleExtensionPack_*n*. msi** (где *n* — номер сборки) на компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-2. Дважды щелкните **SSMAforOracleExtensionPack_*n*. msi**.
-3. На странице **приветствия** нажмите кнопку **Далее**.
+1. Скопируйте **SSMAforOracleExtensionPack_ *n*. msi** (где *n* — номер сборки) на компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. Дважды щелкните **SSMAforOracleExtensionPack_ *n*. msi**.
+3. На странице **Приветствие** нажмите кнопку **Далее**.
 4. На странице Лицензионное **соглашение** ознакомьтесь с лицензионным соглашением. Если вы согласны, выберите параметр **я принимаю условия соглашения** , а затем нажмите кнопку **Далее**.
 5. На странице **Выбор типа установки** выберите вариант **Обычная**.
 6. На странице **Все готово для установки** нажмите кнопку **Установить**.
@@ -83,7 +83,7 @@ ms.locfileid: "92006436"
 
     Если установлен флажок **установить базу данных тестировщика** , будет создана база данных **ссматестердб** .
 
-12. После завершения установки появится запрос на подтверждение установки служебной базы данных на другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выберите **Да**, а затем нажмите кнопку **Далее**или закрыть мастер, выберите **нет** и нажмите кнопку **выход**.
+12. После завершения установки появится запрос на подтверждение установки служебной базы данных на другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выберите **Да**, а затем нажмите кнопку **Далее** или закрыть мастер, выберите **нет** и нажмите кнопку **выход**.
 
 13. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью `sqlcmd` программы выполните следующий скрипт, чтобы включить CLR:
 
@@ -103,6 +103,12 @@ ms.locfileid: "92006436"
 После установки пакета расширений в базе данных **сисдб** появляется таблица **ssma_oracle. bcp _migration_packages** .
 
 Каждый раз при миграции данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Задание агента. Эти задания называются **ssma_oracle пакет переноса данных {GUID}** и отображаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] узле агент [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в папке задания.
+
+Кроме того, следующие расширенные хранимые процедуры будут добавлены в базу данных **master** :
+
+- `xp_ora2ms_exec2`
+- `xp_ora2ms_exec2_ex`
+- `xp_ora2ms_versioninfo2`
 
 ## <a name="see-also"></a>См. также статью
 
