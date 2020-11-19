@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115428"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674210"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2019 на Linux
 
@@ -225,6 +225,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Сборки CLR с набором разрешений EXTERNAL_ACCESS или UNSAFE |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Резервное копирование по URL-адресу: страничный BLOB-объект<sup>2</sup> |
 | **Агент SQL Server** |  Подсистемы: CmdExec, PowerShell, средство чтения очереди, SSIS, SSAS, SSRS |
 | &nbsp; | видны узлы |
 | &nbsp; | Управляемое резервное копирование |
@@ -241,7 +242,9 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 | &nbsp; | Службы Master Data Services |
 
 <sup>1</sup> R SQL Server поддерживается в SQL Server, однако службы R SQL Server в виде отдельного пакета нет.
-  
+
+<sup>2</sup> Резервное копирование по URL-адресу поддерживается для блочных BLOB-объектов с использованием [подписанного URL-адреса](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## <a name="next-steps"></a>Дальнейшие действия
  [Выпуски и поддерживаемые функции для SQL Server 2017 на Linux](sql-server-linux-editions-and-components-2017.md)  
  [Возможности, поддерживаемые различными выпусками SQL Server 2019 — Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  

@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fdabd19b81a880c0969cc6359c703cd156a03fab
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115807"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521124"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Начало работы с доставкой журналов в Linux
 
@@ -20,8 +20,7 @@ ms.locfileid: "92115807"
 
 Доставка журналов SQL Server — это конфигурация с высоким уровнем доступности, предполагающая репликацию базы данных с сервера-источника на один или несколько серверов-получателей. Если говорить коротко, резервная копия базы данных-источника восстанавливается на сервере-получателе. Затем сервер-источник периодически создает резервные копии журналов транзакций, а серверы-получатели восстанавливают их, обновляя копию базы данных-получателя. 
 
-  ![Доставка журналов](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![Схема: рабочий процесс доставки журналов.](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 Как показано на этой иллюстрации, сеанс доставки журналов состоит из следующих этапов:
 

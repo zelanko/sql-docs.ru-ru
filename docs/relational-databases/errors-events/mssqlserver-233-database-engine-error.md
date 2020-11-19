@@ -1,6 +1,6 @@
 ---
 title: MSSQLSERVER_233 | Документация Майкрософт
-description: Клиенту SQL Server не удается установить соединение с сервером. См. объяснение ошибки и возможные способы ее устранения.
+description: Клиенту SQL Server не удается установить соединение с сервером. См. объяснение ошибки 233 и возможные способы ее устранения.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201665dc-7ac8-4c19-90d3-33354c5caa72
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87c312289b9a2a8ed7e0ae9d97a4993121772721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf1a3e2f94c221caa4b70105aaccc331c6082b97
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780462"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521078"
 ---
 # <a name="mssqlserver_233"></a>MSSQLSERVER_233
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

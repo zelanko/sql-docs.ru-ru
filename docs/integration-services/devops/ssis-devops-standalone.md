@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1d0e6b5fe9303269f5941ba11d231e1ca18def11
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 52578422cc9f68c728c901cf39bf05425576133b
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098811"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521098"
 ---
 # <a name="standalone-sql-server-integration-service-ssis-devops-tools-preview"></a>Изолированные средства DevOps для служб SQL Server Integration Services (SSIS) (предварительная версия)
 
@@ -128,6 +128,12 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## <a name="release-notes"></a>заметки о выпуске;
+
+### <a name="version-011-preview"></a>Предварительная версия 0.1.1
+
+Дата выпуска: 11 ноября 2020 г.
+
+- Исправлена проблема, из-за которой SSISDeploy.exe не удавалось загрузить сборку при развертывании ispac в каталоге SSIS.
 
 ### <a name="version-010-preview"></a>Предварительная версия 0.1.0
 

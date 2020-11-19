@@ -17,20 +17,20 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a294cbfbb165e6cc37f931cdd5d3a40406713f86
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363312"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447125"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Настройка параметра конфигурации сервера max degree of parallelism
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  В этом разделе описывается настройка параметра конфигурации сервера **max degree of parallelism (MAXDOP)** в SQL Server с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на многопроцессорном компьютере, он определяет степень параллелизма, то есть количество процессоров, задействованных для выполнения одной инструкции, для каждого из планов параллельного выполнения. Для ограничения количества процессоров в плане параллельного выполнения может быть использован параметр **max degree of parallelism** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает планы параллельного выполнения для запросов, операций с индексами на языке DDL, параллельной вставки, изменения столбца в режиме "в сети", параллельного сбора статистики и заполнения статических курсоров и курсоров, управляемых набором ключей.
+  В этом разделе описывается настройка параметра конфигурации сервера **max degree of parallelism (MAXDOP)** в SQL Server с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на компьютере с более чем одним микропроцессором или ЦП, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] определяет, можно ли использовать параллелизм. Уровень параллелизма ограничивает максимальное число процессоров, которые задействуются для выполнения одной инструкции для каждого выполнения параллельных планов. Для ограничения количества процессоров в плане параллельного выполнения может быть использован параметр **max degree of parallelism** . Дополнительные сведения об ограничениях **максимальной степени параллелизма (MAXDOP)** см. в разделе [Ограничения](#Restrictions) на этой странице. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает планы параллельного выполнения для запросов, операций с индексами на языке DDL, параллельной вставки, изменения столбца в режиме "в сети", параллельного сбора статистики и заполнения статических курсоров и курсоров, управляемых набором ключей.
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] содержит автоматические рекомендации по настройке параметра конфигурации сервера MAXDOP в процессе установки. Пользовательский интерфейс программы установки позволяет либо принять рекомендуемые параметры, либо задать свое значение. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — страница MaxDOP](../../sql-server/install/instance-configuration.md#maxdop).
+> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] содержит автоматические рекомендации по настройке параметра конфигурации сервера MAXDOP в процессе установки на основе количества доступных процессоров. Пользовательский интерфейс программы установки позволяет либо принять рекомендуемые параметры, либо задать свое значение. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — страница MaxDOP](../../sql-server/install/instance-configuration.md#maxdop).
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
@@ -54,7 +54,7 @@ ms.locfileid: "87363312"
 
 > [!TIP]
 > Для выполнения этого на уровне запросов используйте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.     
-> На уровне базы данных используйте [конфигурацию области баз данных ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)**MAXDOP**.      
+> На уровне базы данных используйте [конфигурацию области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)**MAXDOP**.      
 > На уровне рабочих нагрузок используйте [параметр конфигурации группы рабочей нагрузки Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.      
 
 ###  <a name="guidelines"></a><a name="Guidelines"></a> Рекомендации  
@@ -91,7 +91,7 @@ ms.locfileid: "87363312"
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>Настройка параметра максимальной степени параллелизма  
   
-1.  В **обозревателе объектов**щелкните правой кнопкой мыши сервер и выберите пункт **Свойства**.  
+1.  В **обозревателе объектов** щелкните правой кнопкой мыши сервер и выберите пункт **Свойства**.  
   
 2.  Щелкните узел **Дополнительно** .  
   

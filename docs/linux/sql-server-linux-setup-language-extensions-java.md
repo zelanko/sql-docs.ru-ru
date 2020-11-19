@@ -1,86 +1,46 @@
 ---
-title: Установка расширений языка Java для SQL Server в Linux
-titleSuffix: ''
-description: Узнайте, как установить расширения языка Java для SQL Server в Red Hat, Ubuntu и SUSE Linux.
-author: cawrites
-ms.author: chadam
+title: Установка расширения языка Java в Linux
+titleSuffix: SQL Server Language Extensions
+description: Узнайте, как установить расширение языка Java для SQL Server в Red Hat, Ubuntu и SUSE Linux.
+author: dphansen
+ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 02/03/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 100ef62ce2c87fa642a8c1ef9ef6307a6d9b9103
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: e859a445bf4283f7f3d56e04997525ac2823193a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155595"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585092"
 ---
-# <a name="install-sql-server-java-language-extensions-on-linux"></a>Установка расширений языка Java для SQL Server в Linux 
+# <a name="install-sql-server-java-language-extension-on-linux"></a>Установка расширения языка Java для SQL Server в Linux
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-Расширения языка — это надстройка ядра СУБД. Хотя [ядро СУБД и расширения языка можно установить одновременно](#install-all), рекомендуется сначала установить и настроить ядро СУБД SQL Server, чтобы устранить все неполадки, прежде чем добавлять дополнительные компоненты. 
+Узнайте, как установить компонент [расширения языка Java](../language-extensions/java-overview.md) для SQL Server в Linux. Расширение языка Java входит в состав пакета [расширений языков для SQL Server](../language-extensions/language-extensions-overview.md) и надстройки к ядру СУБД. 
 
-Чтобы установить расширение языка Java, следуйте инструкциям в этой статье.
-
-Пакет расширений Java находится в репозиториях исходного кода SQL Server для Linux. Если вы уже настроили репозитории исходного кода для ядра СУБД, команды установки пакета **mssql-server-extensibility-java** можно выполнить, используя ту же регистрацию репозиториев.
-
-Расширения языка также поддерживаются в контейнерах Linux. Мы не предоставляем готовые контейнеры с расширениями языка, однако вы можете создать такой контейнер для SQL Server, используя [шаблон, доступный в GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
-
-Расширения языка и [службы машинного обучения](../machine-learning/index.yml) устанавливаются по умолчанию в кластерах больших данных SQL Server. Если вы используете кластеры больших данных, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../big-data-cluster/machine-learning-services.md).
-
-## <a name="uninstall-preview-version"></a>Удаление предварительной версии
-
-Если вы установили предварительную версию (CTP или RC), рекомендуется удалить эту версию, чтобы удалить все предыдущие пакеты перед установкой SQL Server 2019. Параллельная установка нескольких версий не поддерживается, и список пакетов был изменен после выхода последних предварительных версий (CTP/RC).
-
-### <a name="1-confirm-package-installation"></a>1. Подтверждение установки пакета
-
-В качестве первого шага вам может потребоваться проверить наличие предыдущей установки. Следующие файлы указывают на существующую установку: checkinstallextensibility.sh, exthost, launchpad.
-
-```bash
-ls /opt/microsoft/mssql/bin
-```
-
-### <a name="2-uninstall-previous-ctprc-packages"></a>2. Удаление пакетов предыдущей версии CTP/RC
-
-Выполняйте удаление на самом низком уровне пакета. Любой вышестоящий пакет, зависящий от пакета более низкого уровня, удаляется автоматически.
-
-  + Для интеграции с Java удалите **mssql-server-extensibility-java**.
-
-Команды для удаления пакетов приведены в таблице ниже.
-
-| Платформа  | Команды для удаления пакетов | 
-|-----------|----------------------------|
-| RHEL  | `sudo yum remove mssql-server-extensibility-java` |
-| SLES  | `sudo zypper remove mssql-server-extensibility-java` |
-| Ubuntu    | `sudo apt-get remove mssql-server-extensibility-java`|
-
-### <a name="3-install-sql-server-2019"></a>3. Установка SQL Server 2019
-
-Выполните установку на самом верхнем уровне пакета, следуя инструкциям из этой статьи для вашей операционной системы.
-
-Для каждого набора инструкций по установке, относящихся к определенной ОС, *наивысшим уровнем пакета* является **Пример 1. Полная установка** для полного набора пакетов либо **Пример 2. Минимальная установка** для минимального количества пакетов, необходимого для выполнения установки.
-
-1. Выполните команды установки, используя диспетчеры пакетов и синтаксис для вашего дистрибутива Linux: 
-
-   + [RedHat](#RHEL)
-   + [Ubuntu](#ubuntu)
-   + [SUSE](#suse)
+Хотя [ядро СУБД и расширения языка можно установить одновременно](#install-all), рекомендуется сначала установить и настроить ядро СУБД SQL Server, чтобы устранить все неполадки, прежде чем добавлять дополнительные компоненты.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 + Версия Linux должна [поддерживаться SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), но не включает в себя подсистему Docker. Поддерживаемые версии
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
-
    + [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
-
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 + У вас должно быть средство для выполнения команд T-SQL. Редактор запросов необходим для настройки и проверки после установки. Рекомендуется использовать бесплатное решение [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#get-azure-data-studio-for-linux), работающее в Linux.
+
++ Пакет расширений Java находится в репозиториях исходного кода SQL Server для Linux. Если вы уже настроили репозитории исходного кода для ядра СУБД, команды установки пакета **mssql-server-extensibility-java** можно выполнить, используя ту же регистрацию репозиториев.
+
++ Расширения языка также поддерживаются в контейнерах Linux. Мы не предоставляем готовые контейнеры с расширениями языка, однако вы можете создать такой контейнер для SQL Server, используя [шаблон, доступный в GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
+
++ Расширения языка и [службы машинного обучения](../machine-learning/index.yml) устанавливаются по умолчанию в кластерах больших данных SQL Server. Если вы используете кластеры больших данных, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../big-data-cluster/machine-learning-services.md).
 
 ## <a name="package-list"></a>Список пакетов
 
@@ -93,7 +53,7 @@ ls /opt/microsoft/mssql/bin
 
 <a name="RHEL"></a>
 
-## <a name="install-language-extensions"></a>Установка расширений языка
+## <a name="install-java-language-extension"></a>Установка нового расширения языка Java
 
 Расширения языка и Java можно установить в Linux путем установки пакета **mssql-server-extensibility-java**. При установке пакета **mssql-server-extensibility-java** автоматически устанавливается среда JRE 11, если она еще не установлена. Кроме того, путь к JVM добавляется в переменную среды JRE_HOME.
 
@@ -218,38 +178,37 @@ CREATE EXTERNAL LANGUAGE DLL предоставляет параметр (ENVIRO
 
 <a name="install-all"></a>
 
-## <a name="full-install-of-sql-server-and-language-extensions"></a>Полная установка SQL Server и расширений языка
+## <a name="full-install-of-sql-server-and-java-language-extension"></a>Полная установка SQL Server и расширения языка Java
 
-Вы можете установить и настроить ядро СУБД и расширения языка в одной процедуре, добавив параметры и пакеты Java в команду, устанавливающую ядро СУБД.
+Вы можете установить и настроить ядро СУБД и расширение языка Java в одной процедуре, добавив параметры и пакеты Java в команду, устанавливающую ядро СУБД.
 
 1. Укажите командную строку, включающую ядро СУБД, а также функции расширения языка.
 
-  В установку ядра СУБД можно добавить расширяемость Java.
+    В установку ядра СУБД можно добавить расширяемость Java.
 
-  ```bash
-  sudo yum install -y mssql-server mssql-server-extensibility-java 
-  ```
+    ```bash
+    sudo yum install -y mssql-server mssql-server-extensibility-java 
+    ```
 
-3. Примите условия лицензионных соглашений и завершите настройку после установки. Для этой задачи используйте средство **mssql-conf**.
+1. Примите условия лицензионных соглашений и завершите настройку после установки. Для этой задачи используйте средство **mssql-conf**.
 
-  ```bash
-  sudo /opt/mssql/bin/mssql-conf setup
-  ```
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf setup
+    ```
 
-  Вам будет предложено принять условия лицензионного соглашения для ядра СУБД, выбрать выпуск и задать пароль администратора. 
+    Вам будет предложено принять условия лицензионного соглашения для ядра СУБД, выбрать выпуск и задать пароль администратора. 
 
-4. При появлении соответствующего запроса перезапустите службу.
+1. При появлении соответствующего запроса перезапустите службу.
 
-  ```bash
-  sudo systemctl restart mssql-server.service
-  ```
+    ```bash
+    sudo systemctl restart mssql-server.service
+    ```
 
 ## <a name="unattended-installation"></a>Автоматическая установка
 
-С помощью [автоматической установки](./sql-server-linux-setup.md#unattended) для ядра СУБД вы можете добавить пакеты для mssql-server-extensibility-java.
+Воспользуйтесь [автоматической установкой](./sql-server-linux-setup.md#unattended) для ядра СУБД добавьте пакеты для **mssql-server-extensibility-java**.
 
 <a name="offline-install"></a>
-
 
 ## <a name="offline-installation"></a>Автономная установка
 
@@ -260,7 +219,7 @@ CREATE EXTERNAL LANGUAGE DLL предоставляет параметр (ENVIRO
 
 #### <a name="download-site"></a>Сайт загрузки
 
-Пакеты можно скачать по адресу [https://packages.microsoft.com/](https://packages.microsoft.com/). Все пакеты для Java размещены вместе с пакетом ядра СУБД. 
+Пакеты можно скачать по адресу [https://packages.microsoft.com/](https://packages.microsoft.com/). Все пакеты для Java размещены вместе с пакетом ядра СУБД.
 
 #### <a name="redhat7-paths"></a>Пути RedHat/7
 
@@ -276,17 +235,15 @@ CREATE EXTERNAL LANGUAGE DLL предоставляет параметр (ENVIRO
 
 #### <a name="suse12-paths"></a>Пути SUSE/12
 
-
 |Пакет|Расположение для скачивания|
 |--|----|
 | Пакеты mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>Список пакетов
-
 В зависимости от того, какие расширения вы хотите использовать, скачайте пакеты, необходимые для конкретного языка. Точные имена файлов содержат сведения о платформе в суффиксе, но приведенные ниже имена должны быть достаточно понятными, чтобы вы могли определить, какие файлы нужно получить.
 
 ```
-# Core packages 
+# Core packages
 mssql-server-15.0.1000
 mssql-server-extensibility-15.0.1000
 
@@ -296,20 +253,20 @@ mssql-server-extensibility-java-15.0.1000
 
 ## <a name="limitations"></a>Ограничения
 
-+ Неявная проверка подлинности в настоящее время недоступна в Linux, поэтому вы не можете подключиться обратно к серверу из выполняемого скрипта Java для доступа к данным или другим ресурсам.
+Неявная проверка подлинности в настоящее время недоступна в Linux, поэтому вы не можете подключиться обратно к серверу из выполняемого скрипта Java для доступа к данным или другим ресурсам.
 
 ### <a name="resource-governance"></a>Управление ресурсами
 
-С точки зрения [управления ресурсами](../t-sql/statements/create-external-resource-pool-transact-sql.md) для внешних пулов ресурсов между Linux и Windows наблюдается паритет, однако статистика для [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) сейчас содержит другие единицы измерения для Linux. 
- 
-| Имя столбца   | Описание | Значение в Linux | 
+С точки зрения [управления ресурсами](../t-sql/statements/create-external-resource-pool-transact-sql.md) для внешних пулов ресурсов между Linux и Windows наблюдается паритет, однако статистика для [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) сейчас содержит другие единицы измерения для Linux.
+
+| Имя столбца   | Описание | Значение в Linux |
 |---------------|--------------|---------------|
 |peak_memory_kb | Максимальный объем используемой памяти для пула ресурсов. | В Linux эта статистика извлекается из подсистемы memory CGroups, где используется значение memory.max_usage_in_bytes. |
-|write_io_count | Общее число выполненных операций ввода-вывода записи с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки write используется значение blkio.throttle.io_serviced. | 
-|read_io_count | Общее число выполненных операций ввода-вывода чтения с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки read используется значение blkio.throttle.io_serviced. | 
+|write_io_count | Общее число выполненных операций ввода-вывода записи с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки write используется значение blkio.throttle.io_serviced. |
+|read_io_count | Общее число выполненных операций ввода-вывода чтения с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки read используется значение blkio.throttle.io_serviced. |
 |total_cpu_kernel_ms | Совокупное время ядра использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки user используется значение cpuacct.stat. |  
-|total_cpu_user_ms | Совокупное время использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor.| В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки system используется значение cpuacct.stat. | 
-|active_processes_count | Количество внешних процессов, выполняемых в момент запроса.| В Linux эта статистика извлекается из подсистемы pids CGroups, где используется значение pids.current. | 
+|total_cpu_user_ms | Совокупное время использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor.| В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки system используется значение cpuacct.stat. |
+|active_processes_count | Количество внешних процессов, выполняемых в момент запроса.| В Linux эта статистика извлекается из подсистемы pids CGroups, где используется значение pids.current. |
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

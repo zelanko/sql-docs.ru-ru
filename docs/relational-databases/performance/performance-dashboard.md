@@ -2,7 +2,7 @@
 title: Панель мониторинга производительности | Документация Майкрософт
 description: Сведения о панели мониторинга производительности SQL Server Management Studio, которая позволяет быстро получать аналитические сведения об SQL Server и Управляемом экземпляре SQL Azure.
 ms.custom: ''
-ms.date: 12/14/2019
+ms.date: 11/13/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45b657be3cef9267431892eeced327e966b97b7d
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863399"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674200"
 ---
 # <a name="performance-dashboard"></a>Панель мониторинга производительности
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,8 +78,9 @@ ms.locfileid: "87863399"
 
 Отчеты **Ресурсоемкие запросы** сбрасываются при перезапуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так как данные в базовых динамических административных представлениях очищаются. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] подробные сведения о ресурсоемких запросах можно найти в хранилище запросов. 
 
+
 > [!NOTE]
-> Панель мониторинга производительности была впервые выпущена в качестве отдельного скачиваемого компонента для [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), а позже была обновлена для [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063).
+> Панель мониторинга производительности была впервые выпущена в качестве отдельного скачиваемого компонента для [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), а позже была обновлена для [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063). Хотя отрисовщик отчетов SQL Server Management Studio не поддерживает доступ к буферу обмена с текстом, содержащимся в отчетах, доступ к этому тексту можно получить через автономные отчеты.  Скачайте автономные отчеты, если нужно скопировать текст запроса из отчетов.
 
 ## <a name="permissions"></a>Разрешения  
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуются разрешения `VIEW SERVER STATE` и `ALTER TRACE`. В [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.
