@@ -37,7 +37,7 @@
 - name: Подключение к SQL Server
   href: connect-to-sql-server-db2tosql.md
 - name: "Подключение к SQL\_Server"
-  href: connecting-to-sql-server-db2etosql.md
+  href: connecting-to-sql-server-db2tosql.md
 - name: Отчет об оценке
   href: assessment-report-db2tosql.md
 - name: "Подключение к\_DB2"

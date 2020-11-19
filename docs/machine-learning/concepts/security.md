@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956536"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870022"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Архитектура безопасности для платформы расширяемости в Службах машинного обучения SQL Server
 
@@ -77,7 +76,7 @@ ms.locfileid: "91956536"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Службы, используемые во внешней обработке (панель запуска)
 
-Платформа расширяемости добавляет одну новую службу NT в [список служб](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) в установке SQL Server: [**Панель запуска SQL Server (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+Платформа расширяемости добавляет одну новую службу NT в [список служб](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) в установке SQL Server: [**Панель запуска SQL Server (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Ядро СУБД использует службу **панели запуска** SQL Server для создания экземпляра сеанса внешнего скрипта в виде отдельного процесса. 
 Процесс выполняется в учетной записи с низким уровнем привилегий. Эта учетная запись отличается от SQL Server, самой панели запуска и удостоверения пользователя, под которым выполнялась хранимая процедура или запрос узла. Запуск скрипта в отдельном процессе в учетной записи с низким уровнем привилегий лежит в основе модели безопасности и изоляции для внешних скриптов в SQL Server.
@@ -93,7 +92,7 @@ SQL Server также поддерживает сопоставление удо
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Службы, используемые во внешней обработке (панель запуска)
 
-Платформа расширяемости добавляет одну новую службу NT в [список служб](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) в установке SQL Server: [**Панель запуска SQL Server (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+Платформа расширяемости добавляет одну новую службу NT в [список служб](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) в установке SQL Server: [**Панель запуска SQL Server (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Ядро СУБД использует службу **панели запуска** SQL Server для создания экземпляра сеанса внешнего скрипта в виде отдельного процесса. 
 Процесс выполняется под удостоверением пользователя панели запуска, но с дополнительным ограничением, содержащимся внутри AppContainer. Такой подход лежит в основе модели безопасности и изоляции для внешних скриптов в SQL Server.
@@ -129,7 +128,7 @@ SQL Server также поддерживает сопоставление удо
 
 + Размер пула учетных записей пользователей является статическим со значением по умолчанию, равным 20 (поддерживает 20 одновременных сеансов). Число сеансов среды внешней среды выполнения, которые могут запускаться одновременно, ограничено размером пула учетных записей пользователей. 
 
-+ Имена рабочих учетных записей в пуле имеют формат SQLInstanceName*nn*. Например, в экземпляре по умолчанию группа **SQLRUserGroup** содержит учетные записи с именами MSSQLSERVER01, MSSQLSERVER02 и т. д. до MSSQLSERVER20.
++ Имена рабочих учетных записей в пуле имеют формат SQLInstanceName *nn*. Например, в экземпляре по умолчанию группа **SQLRUserGroup** содержит учетные записи с именами MSSQLSERVER01, MSSQLSERVER02 и т. д. до MSSQLSERVER20.
 
 Параллельные задачи не используют дополнительные учетные записи. Например, если пользователь выполняет задачу оценки, которая использует параллельную обработку, для всех потоков многократно применяется одна и та же рабочая учетная запись. Если вы планируете активно использовать машинное обучение, можно увеличить число учетных записей, используемых для выполнения внешних скриптов. Дополнительные сведения см. в разделе [Масштабирование параллельного выполнения внешних сценариев в SQL Server службы машинного обучения](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md).
 

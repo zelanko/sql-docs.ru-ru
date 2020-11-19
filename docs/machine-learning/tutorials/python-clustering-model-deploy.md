@@ -9,15 +9,14 @@ ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 93e6dfc69a1587e1eef1d06cd5c13f8592f57488
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2c9d971efb90f51562bfa59c73802e577dd8d511
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173465"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870403"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Учебник по Python. Развертывание модели для классификации клиентов с использованием машинного обучения SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "88173465"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* В четвертой части этого учебника предполагается, что вы уже выполнили предварительные требования из [**первой части**](python-clustering-model.md), а также действия, указанные во [**второй** ](python-clustering-model-prepare-data.md) и [**третьей**](python-clustering-model-build.md) частях.
+* В четвертой части этого учебника предполагается, что вы уже выполнили предварительные требования из [**первой части**](python-clustering-model.md), а также действия, указанные во [**второй**](python-clustering-model-prepare-data.md) и [**третьей**](python-clustering-model-build.md) частях.
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>Создание хранимой процедуры, которая формирует модель
 
