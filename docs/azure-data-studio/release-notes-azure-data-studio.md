@@ -8,17 +8,40 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 11/12/2020
+ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059192"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584807"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](./download-azure-data-studio.md)**
+
+## <a name="november-2020"></a>Ноябрь 2020 г.
+
+12 ноября 2020 г. &nbsp; / &nbsp; версия: 1.24.0
+
+&nbsp;
+
+| Изменение | Сведения |
+| ------ | ------- |
+| Исправления ошибок | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed). |
+| Диалоговое окно подключения | Добавлена новая вкладка браузера для диалогового окна подключения. |
+| Обновление расширений | Выпущено обновление для расширения Postgres. |
+| Новые функции записной книжки | Добавлены новые функции в SQL для поддержки записных книжек. <br/> Добавлены новые функции для поддержки параметризации Записных книжек. <br/>  Добавлены новые функции в потоковую передачу результатов для Записных книжек SQL. |
+| Установка Python | Пакет PROSE удален из установки Python по умолчанию. |
+
+### <a name="known-issues-1240"></a>Известные проблемы (в версии 1.24.0)
+
+| Добавления | Сведения | Обходной путь |
+|----------|---------|------------|
+| Расширение Azure Arc | [Известная проблема.](https://github.com/microsoft/azuredatastudio/issues/13319) Кнопка "Сценарий для Notebook" для развертываний Arc MIAA и PG не выполняет проверку поля перед созданием скрипта для записной книжки. Это означает, что при вводе неправильного пароля в поле подтверждения пароля пользователь может получить записную книжку с неправильным значением пароля.| Кнопка "Развернуть" работает правильно, поэтому мы рекомендуем использовать именно ее. |
+| Обозреватель объектов | Выпуски ADS, предшествующие 1.24.0, имеют критически важное изменение в обозревателе объектов из-за изменений, связанных с механизмом [SQL по запросу для Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Чтобы продолжить использование обозревателя объектов в Azure Data Studio с SQL по запросу для Azure Synapse Analytics, требуется Azure Data Studio версии 1.24.0 или более поздней. |
+
+На странице с [отзывами об Azure Data Studio](https://github.com/microsoft/azuredatastudio) представлены сведения о других известных проблемах. Там же можно отправить отзыв группе разработчиков.
 
 ## <a name="october-2020"></a>Октябрь 2020 г.
 
