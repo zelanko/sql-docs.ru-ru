@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 06ac0126bb12668654c04e6a82b20ca551dd925e
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947956"
+ms.locfileid: "94983065"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Настройка Windows Server Update Services (WSUS) в системе аналитики платформы
 В этих инструкциях описано, как использовать мастер настройки Windows Server Update Services (WSUS) для настройки WSUS для системы платформы аналитики. Прежде чем можно будет применить обновления программного обеспечения к устройству, необходимо настроить службы WSUS. Служба WSUS уже установлена на виртуальной машине VMM устройства.  
@@ -156,7 +156,7 @@ ms.locfileid: "94947956"
   
     Выберите **критические обновления**, **обновления для системы безопасности** и **накопительные пакеты обновления** для обновлений, которые будут синхронизированы для устройства Analytics Platform System, а затем нажмите кнопку **Далее**.  
   
-    ![Выберите классификации](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Выберите классификации](./media/configure-windows-server-update-services-wsus/sql-server-pdw-wsus-choose-classifications.png "SQL-Server-PDW-WSUS-выбор классификации")  
   
 10. Настройте расписание синхронизации.  
   
