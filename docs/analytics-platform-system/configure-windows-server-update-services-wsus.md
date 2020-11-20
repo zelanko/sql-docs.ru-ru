@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379582"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947956"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Настройка Windows Server Update Services (WSUS) в системе аналитики платформы
 В этих инструкциях описано, как использовать мастер настройки Windows Server Update Services (WSUS) для настройки WSUS для системы платформы аналитики. Прежде чем можно будет применить обновления программного обеспечения к устройству, необходимо настроить службы WSUS. Служба WSUS уже установлена на виртуальной машине VMM устройства.  
@@ -53,7 +53,7 @@ ms.locfileid: "91379582"
   
     #### <a name="to-launch-the-configuration-wizard"></a>Запуск мастера настройки  
   
-    1.  На **панели мониторинга Диспетчер сервера**в меню **сервис** выберите пункт **Windows Server Update Services**.  
+    1.  На **панели мониторинга Диспетчер сервера** в меню **сервис** выберите пункт **Windows Server Update Services**.  
   
     2.  В левой области окна **службы Update Services** щелкните, чтобы развернуть сервер узла управления виртуальными машинами (**_appliance_domain_-VMM**), а затем нажмите кнопку **Параметры**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "91379582"
   
         ![Реплика вышестоящего сервера WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
-    4.  На этом этапе вы завершили настройку вышестоящего сервера. Нажмите кнопку **Далее**или выберите **указать прокси-сервер** в левой области навигации.  
+    4.  На этом этапе вы завершили настройку вышестоящего сервера. Нажмите кнопку **Далее** или выберите **указать прокси-сервер** в левой области навигации.  
   
 5.  Укажите прокси-сервер.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "91379582"
   
     Выберите **скачивать обновления только на этих языках**.  
   
-    Выберите **Английский**и нажмите кнопку **Далее**.  
+    Выберите **Английский** и нажмите кнопку **Далее**.  
   
     ![Выберите языки](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
@@ -145,7 +145,7 @@ ms.locfileid: "91379582"
   
     Отменить выбор всех выбранных обновлений.  
   
-    Выберите **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**и **System Center 2012 R2-Virtual Machine Manager**, а затем нажмите кнопку **Далее**.  
+    Выберите **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**, **System Center 2012 R2-Virtual Machine Manager**, **Windows Server 2016** и **System Center 2016 — Virtual Machine Manager** а затем нажмите кнопку **Далее**.  
   
 9. Выберите классификации.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "91379582"
   
     Отменить выбор всех ранее выбранных обновлений.  
   
-    Выберите **критические обновления** и **обновления для системы безопасности** для обновлений, которые будут синхронизированы для устройства Analytics Platform System, а затем нажмите кнопку **Далее**.  
+    Выберите **критические обновления**, **обновления для системы безопасности** и **накопительные пакеты обновления** для обновлений, которые будут синхронизированы для устройства Analytics Platform System, а затем нажмите кнопку **Далее**.  
   
     ![Выберите классификации](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
@@ -200,6 +200,6 @@ ms.locfileid: "91379582"
   
     ![Установите членство в группе компьютеров](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
-6.  Выберите новую группу компьютеров, измените ее **состояние** на **ANY**и нажмите кнопку **Обновить**. Теперь все компьютеры должны быть назначены этой группе и перечислены в правой области. Обычно можно продолжать работу, когда узлы показывают предупреждения, такие, как **этот узел еще не сообщил о состоянии**.  
+6.  Выберите новую группу компьютеров, измените ее **состояние** на **ANY** и нажмите кнопку **Обновить**. Теперь все компьютеры должны быть назначены этой группе и перечислены в правой области. Обычно можно продолжать работу, когда узлы показывают предупреждения, такие, как **этот узел еще не сообщил о состоянии**.  
   
     ![Измените состояние на Any и нажмите кнопку Обновить.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
