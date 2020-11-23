@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 96e72d5046e095e25cf890c60059b3120d1bed80
-ms.sourcegitcommit: 3bde506b2fa3bc82813dbe658d567b1b9eb4278b
+ms.openlocfilehash: 7f25b832feeb54e622b364ccd715886ed90aae88
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94498497"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94582646"
 ---
 # <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>Что такое службы машинного обучения SQL Server с Python и R?
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "94498497"
 ## <a name="get-started-with-machine-learning-services"></a>Приступая к работе со Службами машинного обучения
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-1. [Установите Службы машинного обучения SQL Server в Windows](install/sql-machine-learning-services-windows-install.md) или [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). Вы также можете использовать [Службы машинного обучения в кластерах больших данных](../big-data-cluster/machine-learning-services.md) и [Службы машинного обучения в Управляемом экземпляре SQL Azure \(предварительная версия\)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+1. [Установите Службы машинного обучения SQL Server в Windows](install/sql-machine-learning-services-windows-install.md) или [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). Вы также можете использовать [службы машинного обучения в кластерах больших данных](../big-data-cluster/machine-learning-services.md) и [службы машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 1. Настройте средства разработки. Вы можете [выполнять сценарии Python и R в записных книжках Azure Data Studio](install/sql-machine-learning-azure-data-studio.md). Можно также выполнять T-SQL в [Azure Data Studio](../azure-data-studio/what-is.md).
 

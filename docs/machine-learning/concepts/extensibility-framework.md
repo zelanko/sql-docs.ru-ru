@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: b7be2d8a11a63c1330e721f893e0ec3e945d8b5d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956545"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870032"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Архитектура расширяемости в службах машинного обучения SQL Server. 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,15 +45,15 @@ ms.locfileid: "91956545"
 
 Архитектура разработана таким образом, что внешние сценарии выполняются в отдельном от SQL Server процессе, но с компонентами, которые внутренне управляют цепочкой запросов на данные и операции в SQL Server. В зависимости от версии SQL Server поддерживаемые языковые расширения включают [R](extension-r.md), [Python](extension-python.md) и сторонние языки, такие как Java и .NET.
 
-  ***Архитектура компонентов в Windows:***
+  ***Архитектура компонентов в Windows:** _
   
   ![Архитектура компонентов Windows](../media/generic-architecture-windows.png "Архитектура компонентов")
   
-  ***Архитектура компонентов в Linux:***
+  _*_Архитектура компонентов в Linux:_*_
 
   ![Архитектура компонентов Linux](../media/generic-architecture-linux.png "Архитектура компонентов")
   
-Компоненты включают в себя службу **панели запуска**, которая используется для вызова внешних сред выполнения и логики, зависящей от библиотеки, для загрузки интерпретаторов и библиотек. Средство запуска загружает языковую среду выполнения и все собственные модули. Например, если код включает функции RevoScaleR, загружается интерпретатор RevoScaleR. **BxlServer** и **вспомогательная служба SQL** управляет связью и обменом данными с SQL Server. 
+Компоненты включают в себя службу _ *панели запуска**, которая используется для вызова внешних сред выполнения и логики, зависящей от библиотеки, для загрузки интерпретаторов и библиотек. Средство запуска загружает языковую среду выполнения и все собственные модули. Например, если код включает функции RevoScaleR, загружается интерпретатор RevoScaleR. **BxlServer** и **вспомогательная служба SQL** управляет связью и обменом данными с SQL Server. 
 
 В Linux SQL использует службу **панели запуска** для взаимодействия с отдельным процессом панели запуска для каждого пользователя.
 

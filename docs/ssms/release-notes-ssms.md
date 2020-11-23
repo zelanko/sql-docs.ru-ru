@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: c2139f53771ed50a5ce01cc9fb4c3c64bfd14692
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: eb3fa0a07e9a0b5e7cf1bc1c7564fdb7b0d82a62
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570971"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704199"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Заметки о выпуске SQL Server Management Studio (SSMS)
 
@@ -58,6 +58,7 @@ SSMS 18.7 является самым современным общедосту
 | Службы Analysis Services | В редких случаях при использовании установки обновления для открытия редактора DAX после обновления SSMS может возникать ошибка "Объект не задан экземпляром объекта". | Чтобы устранить эту проблему, удалите, а затем переустановите SSMS. |
 | Общие ошибки SSMS | В диалоговом окне New Server Audit Specification (Создать спецификацию аудита сервера) может происходить сбой SSMS с ошибкой нарушения прав доступа. | Недоступно |
 | Общие ошибки SSMS | Расширения SSMS с использованием объектов SMO должны быть перекомпилированы для нового пакета v161 SMO, предназначенного для среды SSMS. Доступна предварительная версия по адресу https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/. </br></br> Расширения, скомпилированные для предыдущих версий 160 пакета Microsoft.SqlServer.SqlManagementObjects, по-прежнему будут работать. | Недоступно |
+| Мастер создания скриптов | Сбой мастера при попытке выполнить перечисление объектов базы данных в SQL Server 2014 и более поздних версий. См. статью [Отзывы пользователей SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Используйте SSMS 18.6 для выбора объектов в мастере создания скриптов для SQL 2014 и более ранних версий. |
 | Службы Integration Services | При импорте пакетов в Integration Services или экспорте из Integration Services, а также при экспорте пакетов из Azure-SSIS Integration Runtime утрачиваются скрипты пакетов, содержащих задачи или компоненты скрипта. Обходное решение. Удалите папку C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild. | Недоступно |
 | Службы Integration Services | Удаленные подключения к службам интеграции могут завершаться ошибкой "Указанная служба не существует как установленная служба" в более новой операционной системе. Обходное решение. В разделах Computer\HKEY_CLASSES_ROOT\AppID и Computer\HKEY_CLASSES_ROOT\WOW6432Node\AppID найдите записи, связанные со службами интеграции, и в этих кустах переименуйте раздел реестра с именем "LocalService" на "LocalService_A" для конкретной версии служб интеграции, которую нужно подключить. | Н/Д |
 | Обозреватель объектов | Выпуски SSMS, предшествующие 18.7, имеют критически важное изменение в обозревателе объектов из-за изменений, связанных с механизмом [SQL по запросу для Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Чтобы продолжить использование обозревателя объектов в SSMS с SQL по запросу для Azure Synapse Analytics, требуется SSMS 18.7 или более поздней версии. |
@@ -157,6 +158,7 @@ SSMS 18.7 является самым современным общедосту
 | Службы Analysis Services | В редких случаях при использовании установки обновления для открытия редактора DAX после обновления SSMS может возникать ошибка "Объект не задан экземпляром объекта". | Чтобы устранить эту проблему, удалите, а затем переустановите SSMS. |
 | Общие ошибки SSMS | В диалоговом окне New Server Audit Specification (Создать спецификацию аудита сервера) может происходить сбой SSMS с ошибкой нарушения прав доступа. | Недоступно |
 | Общие ошибки SSMS | Расширения SSMS с использованием объектов SMO должны быть перекомпилированы для нового пакета v161 SMO, предназначенного для среды SSMS. Доступна предварительная версия по адресу https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/. </br></br> Расширения, скомпилированные для предыдущих версий 160 пакета Microsoft.SqlServer.SqlManagementObjects, по-прежнему будут работать. | Недоступно |
+| Мастер создания скриптов | Сбой мастера при попытке выполнить перечисление объектов базы данных в SQL Server 2014 и более поздних версий. См. статью [Отзывы пользователей SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Используйте SSMS 18.6 для выбора объектов в мастере создания скриптов для SQL 2014 и более ранних версий. |
 | Службы Integration Services | При импорте пакетов в Integration Services или экспорте из Integration Services, а также при экспорте пакетов из Azure-SSIS Integration Runtime утрачиваются скрипты пакетов, содержащих задачи или компоненты скрипта. Обходное решение. Удалите папку C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild. | Недоступно |
 | Службы Integration Services | Удаленные подключения к службам интеграции могут завершаться ошибкой "Указанная служба не существует как установленная служба" в более новой операционной системе. Обходное решение. В разделах Computer\HKEY_CLASSES_ROOT\AppID и Computer\HKEY_CLASSES_ROOT\WOW6432Node\AppID найдите записи, связанные со службами интеграции, и в этих кустах переименуйте раздел реестра с именем "LocalService" на "LocalService_A" для конкретной версии служб интеграции, которую нужно подключить. | Н/Д |
 | Обозреватель объектов | Выпуски SSMS, предшествующие 18.7, имеют критически важное изменение в обозревателе объектов из-за изменений, связанных с механизмом [SQL по запросу для Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Чтобы продолжить использование обозревателя объектов в SSMS с SQL по запросу для Azure Synapse Analytics, требуется SSMS 18.7 или более поздней версии. |

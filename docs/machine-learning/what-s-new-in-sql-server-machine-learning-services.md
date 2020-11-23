@@ -2,7 +2,7 @@
 title: Новые возможности служб машинного обучения SQL Server
 titleSuffix: ''
 description: Объявления о новых возможностях для каждого выпуска служб машинного обучения SQL Server и SQL Server 2016 R.
-ms.date: 11/04/2019
+ms.date: 11/17/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
@@ -10,17 +10,17 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 287b0fd536e5d3a6c76e8ef3760702da061a90ec
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195066"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810514"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Новые возможности служб машинного обучения SQL Server
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
-Возможности машинного обучения добавляются в SQL Server в каждом выпуске, так как мы продолжаем расширять и углублять интеграцию между платформой данных, расширенной аналитикой и обработкой и анализом данных. 
+В этих статьях описываются новые возможности и функции, включенные в различные версии [служб машинного обучения SQL Server](sql-server-machine-learning-services.md). Возможности машинного обучения добавляются в SQL Server в каждом выпуске, так как мы продолжаем расширять и углублять интеграцию между платформой данных, расширенной аналитикой и обработкой и анализом данных. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>Новые возможности в SQL Server 2019

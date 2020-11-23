@@ -46,12 +46,14 @@
         - name: Безопасность SQL Server
           href: ../connect/ado-net/sql/sql-server-security.md
           items:
-            - name: Аутентификация в SQL Server
+            - name: Аутентификация
               href: ../connect/ado-net/sql/authentication-sql-server.md
-            - name: Сценарии безопасности приложений в SQL Server
+            - name: "Проверка подлинности Azure\_Active\_Directory"
+              href: ../connect/ado-net/sql/azure-active-directory-authentication.md
+            - name: Сценарии обеспечения безопасности приложений
               href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
               items:
-                - name: Написание безопасного динамического кода SQL в SQL Server
+                - name: Написание безопасного динамического кода SQL
                   href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
             - name: Безопасность SQL Server Express
               href: ../connect/ado-net/sql/sql-server-express-security.md

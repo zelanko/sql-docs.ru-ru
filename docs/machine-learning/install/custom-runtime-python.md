@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155065"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674142"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Установка настраиваемой среды выполнения Python для SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -30,16 +30,11 @@ ms.locfileid: "92155065"
 > [!NOTE]
 > В этой статье описывается, как установить настраиваемую среду выполнения для Python в Windows. Об установке на Linux см. статью [Установка настраиваемой среды выполнения Python для SQL Server на Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
 
-
-
 ## <a name="pre-install-checklist"></a>Контрольный список перед установкой
 
 Перед установкой настраиваемой среды выполнения Python установите следующие компоненты.
 
-+ [SQL Server 2019 для Windows с накопительным обновлением 3 или более поздней версии](../../database-engine/install-windows/install-sql-server.md).
-
-  > [!NOTE]
-  > Для настраиваемой среды выполнения Python требуется накопительное обновление (CU) 3 или более поздняя версия для SQL Server 2019.
++ [SQL Server 2019 с накопительным пакетом обновления (CU) 3 для Windows](../../database-engine/install-windows/install-sql-server.md).
 
 + [Расширения языка SQL Server для Windows с платформой расширяемости](../../language-extensions/install/windows-java.md).
 
@@ -99,7 +94,7 @@ python.exe -m pip install pandas
 
 + В поле поиска Windows введите "среда" и выберите **Изменение системных переменных среды**.
 + На вкладке **Дополнительно** выберите **Переменные среды**.
-+ В разделе **Системные переменные**выберите **Создать**, чтобы создать PYTHONHOME с указанием на расположение установки Python 3.7.
++ В разделе **Системные переменные** выберите **Создать**, чтобы создать PYTHONHOME с указанием на расположение установки Python 3.7.
 Если PYTHONHOME уже существует, выберите **Изменить**, чтобы он указывал на расположение установки Python 3.7.
 + Нажмите **ОК**, чтобы закрыть остальные окна.
 
@@ -302,7 +297,7 @@ GO
 
 ## <a name="enable-external-script-execution-in-sql-server"></a>Включение выполнения внешнего скрипта в SQL Server
 
-Внешний скрипт в Python может быть выполнен с помощью хранимой процедуры [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), запускаемой на SQL Server. 
+Внешний скрипт в Python может быть выполнен с помощью хранимой процедуры [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), запускаемой на SQL Server. 
 
 Чтобы включить внешние скрипты, выполните следующие команды SQL с помощью [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), подключенного к SQL Server.
 

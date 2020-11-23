@@ -2,19 +2,19 @@
 title: Построение гистограммы для изучения данных с помощью Python
 titleSuffix: SQL machine learning
 description: Узнайте, как создать гистограмму для визуализации данных с помощью Python.
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f30230b00258b5f5f662a99c2d75c29ea7ba8d
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: ee708d473e29cd36fe02e18e95eb71c0505dfdd7
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956813"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870170"
 ---
 # <a name="plot-histograms-in-python"></a>Построение гистограмм в Python 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,15 +24,15 @@ ms.locfileid: "91956813"
 ## <a name="prerequisites"></a>Предварительные требования:
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server. Сведения об установке см. в разделе [SQL Server для Windows](../../database-engine/install-windows/install-sql-server.md) или [для Linux](../../linux/sql-server-linux-overview.md).
+* [SQL Server для Windows](../../database-engine/install-windows/install-sql-server.md) или [для Linux](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* База данных SQL Azure. Сведения о регистрации см. в разделе [База данных SQL Azure](/azure/sql-database/sql-database-get-started-portal).
+* [База данных SQL Azure](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Управляемый экземпляр SQL Azure. Сведения о регистрации см. в разделе [Управляемый экземпляр SQL Azure](/azure/azure-sql/managed-instance/instance-create-quickstart).
+* [Управляемый экземпляр SQL Azure](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) для восстановления образца базы данных в Управляемый экземпляр SQL Azure.
 ::: moniker-end

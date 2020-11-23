@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1fc4ea656830eb779b80b22a15a74dfd799781aa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7b8e0e8df7bd2a5453299751df682e0c33502c25
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178581"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585076"
 ---
 # <a name="python-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Учебник по Python. Прогнозирование стоимости поездки в нью-йоркском такси с использованием двоичной классификации
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88178581"
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-В этой серии (из пяти частей) руководств для программистов SQL вы узнаете об интеграции Python в [Службы машинного обучения в управляемом экземпляре Azure SQL (предварительная версия)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+В этой серии (из пяти частей) руководств для программистов SQL вы узнаете об интеграции Python в [службы машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 Вы создадите и развернете решение для машинного обучения на базе Python, используя образец базы данных на SQL Server. Вы будете использовать T-SQL, Azure Data Studio или SQL Server Management Studio, а также экземпляр СУБД с поддержкой машинного обучения SQL и языка Python.

@@ -6,17 +6,16 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/28/2020
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 649f98875c1a359acb5ab28ba58d4178f6fa2111
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: edd4ec79799cbb62c32c70a9d40236ffd4a76b73
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834561"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870024"
 ---
 # <a name="quickstart-python-functions-with-sql-machine-learning"></a>Краткое руководство. Функции Python с использованием машинного обучения SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "91834561"
 - База данных SQL на одной из следующих платформ:
   - [Службы машинного обучения SQL Server](../sql-server-machine-learning-services.md). Сведения об установке см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
   - Кластеры больших данных SQL Server. [Применение служб машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
-  - Службы машинного обучения в управляемом экземпляре SQL Azure. Сведения о регистрации см. в статье [Общие сведения о Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+  - Службы машинного обучения в управляемом экземпляре SQL Azure. Дополнительные сведения см. в статье [Общие сведения о службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 - Средство для выполнения SQL-запросов, содержащих сценарии Python. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
 
