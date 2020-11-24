@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: db9b5c98bd073fcf92f7fd93a24c551f5bca0804
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155107"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810524"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью служб Azure Kubernetes (AKS)
 
@@ -66,7 +66,7 @@ ms.locfileid: "92155107"
 
 Следующая команда создает пароль для учетной записи SA:
 
-   ```azurecli
+   ```console
    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```  
 
@@ -111,7 +111,7 @@ ms.locfileid: "92155107"
 
 1. Создайте утверждение постоянного тома в Kubernetes.
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
@@ -123,7 +123,7 @@ ms.locfileid: "92155107"
 
 1. Проверьте утверждение постоянного тома.
 
-   ```azurecli
+   ```console
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
@@ -131,7 +131,7 @@ ms.locfileid: "92155107"
 
    На предыдущем шаге утверждение постоянного тома называется `mssql-data`. Чтобы просмотреть метаданные об утверждении постоянного тома, выполните следующую команду:
 
-   ```azurecli
+   ```console
    kubectl describe pvc mssql-data
    ```
 
@@ -145,7 +145,7 @@ ms.locfileid: "92155107"
 
 1. Проверьте постоянный том.
 
-   ```azurecli
+   ```console
    kubectl describe pv
    ```
 
@@ -244,7 +244,7 @@ ms.locfileid: "92155107"
 
 1. Создайте развертывание.
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
@@ -265,7 +265,7 @@ ms.locfileid: "92155107"
 
 1. Убедитесь в том, что службы запущены. Выполните следующую команду:
 
-   ```azurecli
+   ```console
    kubectl get services 
    ```
 
@@ -281,13 +281,13 @@ ms.locfileid: "92155107"
 
 1. Кроме того, вы можете проверить, что контейнер работает как не корневой, выполнив следующую команду:
 
-    ```azurecli
+    ```console
     kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
     ```
 
     Затем выполните команду whoami, и увидите имя пользователя как mmsql. Это не корневой пользователь.
 
-    ```azurecli
+    ```console
     whoami
     ```
 
@@ -320,7 +320,7 @@ ms.locfileid: "92155107"
 
 1. Выведите список модулей Pod, где работает SQL Server.
 
-   ```azurecli
+   ```console
    kubectl get pods
    ```
 
@@ -328,7 +328,7 @@ ms.locfileid: "92155107"
 
 1. Удалите модуль.
 
-   ```azurecli
+   ```console
    kubectl delete pod mssql-deployment-0
    ```
 
