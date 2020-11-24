@@ -27,7 +27,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/01/2020
 ms.locfileid: "85718017"
 ---
-# <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
+# <a name="restore-a-database-backup-using-ssms"></a>Восстановление резервной копии базы данных с помощью среды SSMS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Этот раздел содержит сведения о восстановлении полной резервной копии базы данных с использованием среды SQL Server Management Studio.    
@@ -147,7 +147,7 @@ ms.locfileid: "85718017"
 7.  в разделе **Параметры восстановления** установите флажок **Перезаписать существующую базу данных (WITH REPLACE)** .
 
     > [!NOTE]
-    > Если вы не выберете этот параметр, может отобразиться следующее сообщение об ошибке: "System.Data.SqlClient.SqlError: The backup set holds a backup of a database other than the existing '`Sales`' database. (Microsoft.SqlServer.SmoExtended)"
+    > Если этот параметр не выбран, может отобразиться следующее сообщение об ошибке: "System.Data.SqlClient.SqlError: резервный набор данных содержит резервную копию базы данных, отличающуюся от существующей базы данных `Sales`. (Microsoft.SqlServer.SmoExtended)"
 
 8.  В разделе **Резервная копия заключительного фрагмента журнала** снимите флажок **Делать резервную копию заключительного фрагмента журнала перед восстановлением**.
 
@@ -182,7 +182,7 @@ ms.locfileid: "85718017"
 
     > [!NOTE]
     > Если вы получаете следующее сообщение об ошибке:      
-    > "System.Data.SqlClient.SqlError: The tail of the log for the database "`Sales`" has not been backed up. Если журнал содержит работу, потеря которой нежелательна, создайте резервную копию с помощью инструкции `BACKUP LOG WITH NORECOVERY`. Чтобы просто перезаписать содержимое журнала, используются предложения `WITH REPLACE` или `WITH STOPAT` с инструкцией `RESTORE`. (Microsoft.SqlServer.SmoExtended)".      
+    > "System.Data.SqlClient.SqlError: резервная копия заключительного фрагмента журнала для базы данных "`Sales`" не создана. Если журнал содержит работу, потеря которой нежелательна, создайте резервную копию с помощью инструкции `BACKUP LOG WITH NORECOVERY`. Чтобы просто перезаписать содержимое журнала, используются предложения `WITH REPLACE` или `WITH STOPAT` с инструкцией `RESTORE`. (Microsoft.SqlServer.SmoExtended)".      
     > Скорее всего, вы не ввели название новой базы данных из шага 6 выше. Восстановление обычно не допускает случайной перезаписи базы данных другой базой данных. Если указанная в инструкции `RESTORE` база данных уже существует на текущем сервере, а идентификатор GUID семейства для заданной базы данных отличается от идентификатора GUID семейства для базы данных, записанного в резервном наборе данных, то ее восстановление не будет выполнено. Это является важной защитной мерой.
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>Г.  Восстановление предыдущих дисковых резервных копий на определенный момент времени
