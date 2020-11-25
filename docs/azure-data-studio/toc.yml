@@ -154,6 +154,8 @@
   items:
     - name: ВОПРОСЫ И ОТВЕТЫ
       href: faq.md
+    - name: Устранение неполадок
+      href: troubleshooting.md
     - name: "Репозиторий GitHub Azure\_Data\_Studio\_>"
       href: 'https://www.github.com/Microsoft/azuredatastudio'
     - name: "Сообщить о проблемах и внести предложения\_>"
