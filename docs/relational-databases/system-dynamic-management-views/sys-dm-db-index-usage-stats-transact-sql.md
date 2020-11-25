@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_usage_stats (Transact-SQL)
-title: sys. dm_db_index_usage_stats (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_index_usage_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b61a4f897aeebdc50d4ae173488b1fbbc6e8a72c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 772d4ec17e2dd2a5789f324f4ce26cbb219a1aa7
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548935"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96128785"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "89548935"
  Динамические административные представления в среде [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Во избежание раскрытия этой информации все строки, содержащие данные, не принадлежащие подключенному клиенту, отфильтровываются.  
   
 > [!NOTE]  
->  **sys. dm_db_index_usage_stats** не возвращает сведения о индексах, оптимизированных для памяти. Сведения об использовании индексов, оптимизированных для памяти, см. в разделе [sys. dm_db_xtp_index_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+>  **sys.dm_db_index_usage_stats** не возвращает сведения о индексах, оптимизированных для памяти, или пространственных индексах. Сведения об использовании индексов, оптимизированных для памяти, см. в разделе [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Чтобы вызвать это представление из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте **sys. dm_pdw_nodes_db_index_usage_stats**.  
+>  Чтобы вызвать это представление из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте **sys.dm_pdw_nodes_db_index_usage_stats**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "89548935"
 |**last_system_update**|**datetime**|Время последней системной операции обновления.|  
 |pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Каждая отдельная операция поиска, просмотра, уточняющего запроса или обновления на заданном индексе при выполнении одного запроса засчитывается как использование этого индекса и увеличивает на единицу соответствующий счетчик в данном представлении. Данные выводятся как для операций, вызванных пользовательскими запросами, так и для операций, вызванных внутренними запросами, например при выполнении операции просмотра для сбора статистики.  
   
  Счетчик **user_updates** указывает уровень обслуживания индекса, зависящий от операций вставки, обновления или удаления данных базовой таблицы или представления. С помощью этого представления можно определять, какие индексы используются приложениями лишь в незначительной степени. Можно также определять, какие индексы привносят дополнительную нагрузку, связанную с обслуживанием. Стоит рассмотреть возможность удаления индексов, вызывающих дополнительную нагрузку, связанную с их обслуживанием, но не использующихся для выполнения запросов или использующихся лишь иногда.  
@@ -73,13 +73,13 @@ ms.locfileid: "89548935"
   
  При использовании индекса в представление **sys.dm_db_index_usage_stats** добавляется соответствующая строка, если ее там еще нет. При добавлении строки ее счетчики вначале сбрасываются в нуль.  
   
- Во время обновления до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] записи в sys. dm_db_index_usage_stats удаляются. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , записи сохраняются в том виде, в котором они были раньше [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+ Во время обновления до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , записи в sys.dm_db_index_usage_stats удаляются. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , записи сохраняются в том виде, в котором они были раньше [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
 ## <a name="permissions"></a>Разрешения  
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 
  [Динамические административные представления и функции, связанные с индексами &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   

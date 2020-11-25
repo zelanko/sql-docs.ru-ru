@@ -1,5 +1,5 @@
 ---
-title: Функции CLR с табличным значением | Документация Майкрософт
+title: Функции Table-Valued CLR | Документация Майкрософт
 description: Возвращающая табличное значение функция возвращает таблицу. В SQL Server интеграции со средой CLR можно создавать функции, возвращающие табличное значение, в управляемом коде.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca80594050e73bf20ecfd589f18a5eca43e4dbde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4295ca970e503ad1785846d63e5ed479923f4303
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727897"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125286"
 ---
 # <a name="clr-table-valued-functions"></a>Функции среды CLR с табличным значением
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "85727897"
  Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расширяет возможности возвращающих табличное значение функций, позволяя определить функцию с табличным значением на любом управляемом языке. Данные возвращаются из возвращающей табличное значение функции через объект **IEnumerable** или **IEnumerator** .  
   
 > [!NOTE]  
->  Для функций, возвращающих табличное значение, столбцы типа возвращаемой таблицы не могут содержать столбцы типа timestamp или столбцы строковых данных не в Юникоде (например, **char**, **varchar**и **Text**). Ограничение NOT NULL не поддерживается.  
+>  Для функций, возвращающих табличное значение, столбцы типа возвращаемой таблицы не могут содержать столбцы типа timestamp или столбцы строковых данных не в Юникоде (например, **char**, **varchar** и **Text**). Ограничение NOT NULL не поддерживается.  
   
- Дополнительные сведения о возвращающих табличное значение функциях CLR см [. в MSSQLTips "Введение в функции SQL Server CLR с табличными функциями!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/) "  
+ Дополнительные сведения о функциях CLR Table-Valued см. в статье [Знакомство с MSSQLTips "Общие сведения о SQL Server функциях, возвращающих табличное значение CLR!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Различия между функциями Transact-SQL и среды CLR с табличным значением  
  Возвращающие табличное значение функции [!INCLUDE[tsql](../../includes/tsql-md.md)] материализуют результаты вызова в промежуточной таблице. По этой причине они поддерживают в результатах ограничения и уникальные индексы. Это исключительно полезно при возвращении результатов большого объема.  
@@ -99,7 +99,8 @@ public class TabularEventLog
     [SqlFunction(FillRowMethodName = "FillRow")]  
     public static IEnumerable InitMethod(String logname)  
     {  
-        return new EventLog(logname).Entries;    }  
+        return new EventLog(logname).Entries;
+    }  
   
     public static void FillRow(Object obj, out SqlDateTime timeWritten, out SqlChars message, out SqlChars category, out long instanceId)  
     {  
