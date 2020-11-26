@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 0c7d02931ab25c1400fbb256fc86d14464826114
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255781"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947939"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "92255781"
   
 - Текст с разделителями  
   
-- Hive RCFile  
+- Hive RCFile — не применяется к Azure Synapse Analytics.
   
 - Hive ORC
   
@@ -146,7 +146,7 @@ WITH (
 - ORC  
   Задает формат ORC. Для использования этого параметра во внешнем кластере Hadoop требуется Hive версии 0.11 или выше. В Hadoop формат файла ORC обеспечивает более качественное сжатие и более высокую производительность, чем формат файла RCFILE.
 
-- RCFILE (в сочетании с SERDE_METHOD = *SERDE_method* ) Задает формат файла RcFile. Этот параметр требует задания метода сериализации и десериализации куч (SerDe). То же требование действует при использовании Hive/HiveQL в Hadoop для отправки запросов файлам RC. Обратите внимание, что метод SerDe учитывает регистр.
+- RCFILE (в сочетании с SERDE_METHOD = *SERDE_method*) Задает формат файла RcFile. Этот параметр требует задания метода сериализации и десериализации куч (SerDe). То же требование действует при использовании Hive/HiveQL в Hadoop для отправки запросов файлам RC. Обратите внимание, что метод SerDe учитывает регистр.
 
   Примеры задания RCFile с двумя методами SerDe, которые поддерживаются PolyBase.
 
@@ -257,7 +257,7 @@ WITH (
   
 Примечания об этой таблице:  
   
--   Год, месяц и день могут иметь различные форматы и порядок. В таблице показан только формат **ymd** . Месяц может обозначаться одной или двумя цифрами или тремя символами. День может обозначаться одной или двумя цифрами. Год может обозначаться двумя или четырьмя цифрами.
+-   Год, месяц и день могут иметь различные форматы и порядок. В таблице показан только формат **ymd**. Месяц может обозначаться одной или двумя цифрами или тремя символами. День может обозначаться одной или двумя цифрами. Год может обозначаться двумя или четырьмя цифрами.
   
 -   Миллисекунды (fffffff) не требуются.
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 155ff6d21fdb0a40e042463b809c1ed14bbe70df
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458156"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983168"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, объект статистики по ответам пакетов
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "86458156"
   
 |Элемент|Описание|  
 |----------|-----------------|  
-|**CPU Time:Requests**|Время, затраченное ЦП на запрос.|  
+|**CPU Time:Requests**|Число запросов на основе времени ЦП.|  
 |**CPU Time:Total(ms)**|Общее время, затраченное ЦП на пакет.|  
-|**Elapsed Time:Requests**|Затраченное время для запроса.|  
+|**Elapsed Time:Requests**|Число запросов на основе затраченного времени.|  
 |**Elapsed Time:Total(ms)**|Затраченное время для пакета.|  
 
 ## <a name="see-also"></a>См. также:
