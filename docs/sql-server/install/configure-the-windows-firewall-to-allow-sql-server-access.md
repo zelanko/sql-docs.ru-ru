@@ -21,14 +21,14 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1459c50d87f2f7ccc58e20bd7e21d27ace700f66
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497736"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120840"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "91497736"
     netsh advfirewall firewall add rule name = SQLPort dir = in protocol = tcp action = allow localport = 1433 remoteip = localsubnet profile = DOMAIN  
     ```  
   
-     Дополнительные сведения о средстве **netsh**см. в следующих разделах:  
+     Дополнительные сведения о средстве **netsh** см. в следующих разделах:  
   
     -   [Синтаксис команды Netsh, контексты и форматирование](/windows-server/networking/technologies/netsh/netsh-contexts)    
     -   [Использование контекста netsh advfirewall firewall вместо контекста netsh firewall для управления работой брандмауэра Windows в операционной системе Windows Server 2008 или Windows Vista](https://support.microsoft.com/kb/947709)    
@@ -132,7 +132,7 @@ ms.locfileid: "91497736"
 1. В меню "Пуск" наберите *wf.msc*. Нажмите клавишу ВВОД или выберите результат поиска "wf.msc", чтобы открыть **Брандмауэр Защитника Windows в режиме повышенной безопасности**.
 1. В левой панели щелкните **Правила для входящих подключений**.
 1. В правой панели в разделе **Действия** нажмите кнопку **Создать правило...** . Откроется **мастер создания правила для нового входящего подключения**.
-1. В разделе **Тип правила**выберите **Программа**. Выберите **Далее**.
+1. В разделе **Тип правила** выберите **Программа**. Выберите **Далее**.
 1. В разделе **Программа** выберите **Путь к программе**. Нажмите кнопку **Обзор** и найдите файл программы SQL Server. Этот файл называется sqlservr.exe. Обычно он находится в папке:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
@@ -141,7 +141,7 @@ ms.locfileid: "91497736"
 
 1. В разделе **Действие** выберите вариант **Разрешить подключение**. Выберите **Далее**.
 1. В разделе **Профиль** включите все три профиля. Выберите **Далее**.
-1. В поле **Имя**введите имя правила. Нажмите кнопку **Готово**.
+1. В поле **Имя** введите имя правила. Нажмите кнопку **Готово**.
 
 Дополнительные сведения о конечных точках см. в разделах [Настройка ядра СУБД на прослушивание нескольких портов TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) и [Представления каталога конечных точек (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
   
@@ -264,8 +264,8 @@ ms.locfileid: "91497736"
   
 ### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>Создание правила брандмауэра при помощи мастера создания правил  
   
-1.  В меню "Пуск" выберите пункт **Выполнить**, введите **WF.msc**и нажмите кнопку **ОК**.    
-2.  В левой части панели **Брандмауэр Windows в режиме повышенной безопасности**щелкните правой кнопкой мыши элемент **Правила для входящих подключений**и выберите пункт **Создать правило**.   
+1.  В меню "Пуск" выберите пункт **Выполнить**, введите **WF.msc** и нажмите кнопку **ОК**.    
+2.  В левой части панели **Брандмауэр Windows в режиме повышенной безопасности** щелкните правой кнопкой мыши элемент **Правила для входящих подключений** и выберите пункт **Создать правило**.   
 3.  Завершите **мастер создания правила для нового входящего подключения** , задав все необходимые параметры.  
   
 ##  <a name="troubleshooting-firewall-settings"></a><a name="BKMK_troubleshooting"></a> Устранение неполадок настройки брандмауэра  

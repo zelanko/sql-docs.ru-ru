@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec6345d4470c95669b13a08bde103057409bde67
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: df0e0df9198e1d8abfeb0605a5a13cf0b22059c7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883717"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120914"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Удаление служб Master Data Services
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85883717"
 |База данных|Процесс удаления не затрагивает базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . База данных на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] остается неизменной, поэтому все данные, включая основные данные, объекты моделей, разрешения пользователей и групп, бизнес-правила и т. п., сохраняются.<br /><br /> Если база данных больше не нужна и не предвидится ее соединение с другим веб-сайтом или приложением [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] в будущем, можно удалить базу данных на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , на котором она размещена. Дополнительные сведения см. в разделе [Удаление базы данных](../../relational-databases/databases/delete-a-database.md).|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] и Web.config|В процессе удаления в файловой системе удаляется папка WebApplication. Папка WebApplication содержит файлы веб-приложения и файл Web.config, используемые [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].<br /><br /> **\*\* Важно! \*\*** Перед удалением можно скопировать файл Web.config в другое расположение, чтобы сохранить любые пользовательские настройки или другие содержащиеся в файле сведения. После завершения процесса удаления восстановить файл Web.config невозможно.|  
 |Элементы служб Internet Information Services (IIS)|Процесс удаления не затрагивает пулы приложений, веб-сайты и веб-приложения в IIS на локальном компьютере. Так как процесс удаления удаляет папку WebApplication и файл Web.config для [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], любые веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , которым требуются эти файлы, прекратят работу. Если пользователь попытается обратиться к такому веб-приложению, он получит сообщение об ошибке HTTP 500.19 — внутренняя ошибка сервера: "Запрашиваемая страница не доступна из-за неверной конфигурации данных для этой страницы".<br /><br /> Если веб-сайт или приложение больше не нужны, а сайт или приложение предоставляются пулом приложений, для их удаления можно воспользоваться средствами IIS. Дополнительные сведения см. в [Руководстве по использованию IIS 7](https://go.microsoft.com/fwlink/?LinkId=184885) на сайте [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
-|Группа**MDS_ServiceAccounts**|После завершения процесса удаления группа Windows **MDS_ServiceAccounts** и любые добавленные в нее учетные записи служб сохраняются. Если эта группа и учетные записи больше не нужны, можно удалить их.|  
+|Группа **MDS_ServiceAccounts**|После завершения процесса удаления группа Windows **MDS_ServiceAccounts** и любые добавленные в нее учетные записи служб сохраняются. Если эта группа и учетные записи больше не нужны, можно удалить их.|  
 |Реестр|В процессе удаления из реестра Windows удаляются все разделы, связанные со службами [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|  
   
 ## <a name="see-also"></a>См. также:  

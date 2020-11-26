@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4a4d15d2a1475acfc5c4924e68a60b48f698c4ae
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364733"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127575"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Все критические ошибки и события предупреждений для библиотеки ресурсов SQL Server записываются в журнал событий Windows. Диагностические сведения, связанные с SQL Server и записываемые в журнал, перехватываются хранимой процедурой [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) и записываются в файлы журнала диагностики отказоустойчивого кластера SQL Server (также называемые журналами *SQLDIAG* ).  
+  Все критические ошибки и события предупреждений для библиотеки ресурсов SQL Server записываются в журнал событий Windows. Диагностические сведения, связанные с SQL Server и записываемые в журнал, перехватываются хранимой процедурой [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) и записываются в файлы журнала диагностики отказоустойчивого кластера SQL Server (также называемые журналами *SQLDIAG*).  
   
 -   **Перед началом работы**  [Рекомендации](#Recommendations), [Безопасность](#Security)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "93364733"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Просмотр файлов журнала диагностики:**  
   
-1.  В меню **Файл** выберите **Открыть** , **Файл** и выберите файл журнала диагностики для просмотра.  
+1.  В меню **Файл** выберите **Открыть**, **Файл** и выберите файл журнала диагностики для просмотра.  
   
 2.  События отображаются в виде строк в правой панели, причем по умолчанию показаны только два столбца, **name** и **timestamp** .  
   
