@@ -40,6 +40,39 @@
           href: ../connect/ado-net/appcontext-switches.md
         - name: Поиск дополнительных сведений
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: Сопоставления типов данных в ADO.NET
+      href: ../connect/ado-net/data-type-mappings-ado-net.md
+      items:
+        - name: Сопоставления типов данных SQL Server
+          href: ../connect/ado-net/sql-server-data-type-mappings.md
+        - name: Числа с плавающей запятой
+          href: ../connect/ado-net/floating-point-numbers.md
+    - name: Извлечение и изменение данных в ADO.NET
+      href: ../connect/ado-net/retrieving-modifying-data.md
+      items:
+        - name: Подключение к источнику данных
+          href: ../connect/ado-net/connecting-to-data-source.md
+          items:
+            - name: Установка подключения
+              href: ../connect/ado-net/establishing-connection.md
+            - name: События подключения
+              href: ../connect/ado-net/connection-events.md
+        - name: Строки подключения
+          href: ../connect/ado-net/connection-strings.md
+          items:
+            - name: Построители строк подключения
+              href: ../connect/ado-net/connection-string-builders.md
+            - name: Строки подключения и файлы конфигурации
+              href: ../connect/ado-net/connection-strings-and-configuration-files.md
+            - name: Синтаксис строки подключения
+              href: ../connect/ado-net/connection-string-syntax.md
+            - name: Защита сведений о подключении
+              href: ../connect/ado-net/protecting-connection-information.md
+        - name: Объединение подключений в пул
+          href: ../connect/ado-net/connection-pooling.md
+          items:
+            - name: Объединение подключений в пул в SQL Server (ADO.NET)
+              href: ../connect/ado-net/sql-server-connection-pooling.md
     - name: SQL Server и ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
