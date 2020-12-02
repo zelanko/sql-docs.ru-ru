@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: 31d0046c3a81b84c926a99efce80816c5ef42a88
-  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+  ms.openlocfilehash: 97ca3c3c7fb6611b58f20fb14f627cf0ad546b15
+  ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/22/2020
-  ms.locfileid: "90915481"
+  ms.lasthandoff: 12/01/2020
+  ms.locfileid: "96442934"
 landingContent:
 - title: SQL в Azure
   linkLists:
@@ -24,9 +24,9 @@ landingContent:
       url: /azure/sql-database/sql-database-single-database
     - text: Управляемый экземпляр SQL Azure
       url: /azure/sql-database/sql-database-managed-instance
-    - text: Azure Synapse Analytics (хранилище данных SQL)
+    - text: Azure Synapse Analytics
       url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-    - text: SQL Server на виртуальной машине Windows
+    - text: Использование SQL Server на виртуальной машине Windows
       url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
     - text: SQL Server на виртуальной машине Linux
       url: ../linux/quickstart-install-connect-clouds.md
@@ -100,7 +100,7 @@ landingContent:
       url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
     - text: Зеркальное отображение базы данных
       url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
-    - text: доставка журналов;
+    - text: Доставка журналов
       url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
     - text: Репликация
       url: ../relational-databases/replication/sql-server-replication.md
