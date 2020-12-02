@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420498"
 ---
 # <a name="publication-properties-subscription-options"></a>Свойства публикации, параметры подписки
@@ -66,7 +66,7 @@ ms.locfileid: "88420498"
  Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, разрешить ли использование файлов резервных копий для инициализации подписок. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Разрешать подписчиков, отличных от подписчиков SQL Server**  
- Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, поддерживает ли публикация подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Установка данного параметра равным **True** определяет другие свойства публикации для поддержки подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При наличии подписок этот параметр доступен только для чтения; его нельзя установить равным **True** , если параметры **Разрешать немедленное обновление подписок**, **Разрешить обновляемые посредством очередей подписки**или **Разрешать одноранговые подписки** установлены равными **True**. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, поддерживает ли публикация подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Установка данного параметра равным **True** определяет другие свойства публикации для поддержки подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При наличии подписок этот параметр доступен только для чтения; его нельзя установить равным **True** , если параметры **Разрешать немедленное обновление подписок**, **Разрешить обновляемые посредством очередей подписки** или **Разрешать одноранговые подписки** установлены равными **True**. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Преобразование данных  
  **Разрешать преобразования данных**  
@@ -77,7 +77,7 @@ ms.locfileid: "88420498"
   
 ### <a name="peer-to-peer-replication"></a>Одноранговая репликация  
  **Разрешать одноранговые подписки**  
- Относится только к [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздним версиям. Определяет, поддерживает ли публикация одноранговую репликацию. При указании для данного параметра значения **True** устанавливаются другие свойства публикации для поддержки одноранговой репликации. Этот параметр доступен только для чтения, если существуют подписки. Ему нельзя присвоить значение **True** , если параметр **Разрешать немедленное обновление подписок** , **Разрешить обновляемые посредством очередей подписки**или **Разрешать подписчиков, отличных от подписчиков SQL Server** , установлен в значение **True**. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+ Относится только к [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздним версиям. Определяет, поддерживает ли публикация одноранговую репликацию. При указании для данного параметра значения **True** устанавливаются другие свойства публикации для поддержки одноранговой репликации. Этот параметр доступен только для чтения, если существуют подписки. Ему нельзя присвоить значение **True** , если параметр **Разрешать немедленное обновление подписок** , **Разрешить обновляемые посредством очередей подписки** или **Разрешать подписчиков, отличных от подписчиков SQL Server** , установлен в значение **True**. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  **Разрешать одноранговое обнаружение конфликтов**  
  Относится только к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям. Указывает, будет ли применяться обнаружение конфликтов для данной публикации. Для использования обнаружения конфликтов на всех узлах должен выполняться [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии; кроме того, обнаружение должно быть включено на всех узлах. Для обнаружения конфликтов нужно также задать значение для параметра **Идентификатор равноправного инициатора**. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  

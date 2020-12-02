@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88325850"
 ---
 # <a name="sequence-properties-general-page"></a>Свойства последовательности (страница «Общие»)
@@ -29,7 +29,7 @@ ms.locfileid: "88325850"
   
  Сведения и сценарии использования функций **CREATE SEQUENCE** и **NEXT VALUE FOR** см. в разделе [Порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- Доступ к этой странице можно получить двумя способами: щелкнуть правой кнопкой мыши **Последовательности** в обозревателе объектов и выбрать **Создать последовательность**или щелкнуть правой кнопкой мыши существующую последовательность и выбрать **Свойства**. Если щелкнуть правой кнопкой мыши существующую последовательность и выбрать пункт **Свойства**, параметры будут недоступны для редактирования. Для изменения параметров последовательности воспользуйтесь инструкцией [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md) или удалите и создайте повторно объект последовательности.  
+ Доступ к этой странице можно получить двумя способами: щелкнуть правой кнопкой мыши **Последовательности** в обозревателе объектов и выбрать **Создать последовательность** или щелкнуть правой кнопкой мыши существующую последовательность и выбрать **Свойства**. Если щелкнуть правой кнопкой мыши существующую последовательность и выбрать пункт **Свойства**, параметры будут недоступны для редактирования. Для изменения параметров последовательности воспользуйтесь инструкцией [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md) или удалите и создайте повторно объект последовательности.  
   
 ## <a name="options"></a>Параметры  
  **Имя последовательности**  
@@ -87,7 +87,7 @@ ms.locfileid: "88325850"
  Дополнительные сведения о параметрах создания последовательностей см. в разделе [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо разрешение **CREATE SEQUENCE**, **ALTER**или **CONTROL** для схемы SCHEMA.  
+ Необходимо разрешение **CREATE SEQUENCE**, **ALTER** или **CONTROL** для схемы SCHEMA.  
   
 ## <a name="see-also"></a>См. также  
  [sys.sequences (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  

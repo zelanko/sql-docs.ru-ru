@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408120"
 ---
 # <a name="indexes-on-computed-columns"></a>Индексы вычисляемых столбцов
@@ -95,9 +95,9 @@ ms.locfileid: "88408120"
 
 ## <a name="data-type-requirements"></a>требования к типам данных;
   
--   Выражение *computed_column_expression* , заданное для вычисляемого столбца, не может определять значения типов данных **text**, **ntext**или **image** .  
+-   Выражение *computed_column_expression* , заданное для вычисляемого столбца, не может определять значения типов данных **text**, **ntext** или **image** .  
 -   Вычисляемые столбцы, производные от типов данных **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** и **xml** , могут индексироваться, если тип данных вычисляемого столбца допускается в качестве ключевого столбца индекса.  
--   Вычисляемые столбцы, производные от типов данных **image**, **ntext**и **text** , могут быть неключевыми (включенными) столбцами некластеризованного индекса, если тип данных вычисляемого столбца является допустимым в качестве неключевого индексного столбца.  
+-   Вычисляемые столбцы, производные от типов данных **image**, **ntext** и **text** , могут быть неключевыми (включенными) столбцами некластеризованного индекса, если тип данных вычисляемого столбца является допустимым в качестве неключевого индексного столбца.  
 
 
 ## <a name="set-option-requirements"></a>требования к параметру SET.

@@ -12,10 +12,10 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 575353cd2cf770ed42d439fd31647ccaef3e01bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449759"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Урок 1-1. Создание нового проекта служб Integration Services
@@ -49,7 +49,7 @@ ms.locfileid: "88449759"
   
     По умолчанию создается пустой пакет с именем **Package.dtsx**, который добавляется в узел проекта **Пакеты служб SSIS**.  
   
-7.  В **обозревателе решений** щелкните правой кнопкой мыши файл **Package.dtsx**, выберите действие **Переименовать**и присвойте пакету по умолчанию имя **Lesson 1.dtsx**.  
+7.  В **обозревателе решений** щелкните правой кнопкой мыши файл **Package.dtsx**, выберите действие **Переименовать** и присвойте пакету по умолчанию имя **Lesson 1.dtsx**.  
   
 ## <a name="go-to-next-task"></a>Переход к следующей задаче
 [Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  

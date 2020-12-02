@@ -14,10 +14,10 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d418e3d9f8b323c5f0c7905dad8c2ec636f1a3e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457656"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Выберите столбцы и таблицы Oracle
@@ -37,11 +37,11 @@ ms.locfileid: "88457656"
   
      Если это имя не задано, то оно является производным от имени схемы источника и имени исходной таблицы в формате `<schema-name>_<table-name>`. Длина имени экземпляра отслеживания не может превышать 100 символов, оно должно быть уникальным в пределах базы данных.  
   
-     Щелкните любую ячейку в этом столбце, чтобы изменить **capture_instance**вручную.  
+     Щелкните любую ячейку в этом столбце, чтобы изменить **capture_instance** вручную.  
   
 -   **Роль безопасности**. Имя шлюзовой роли базы данных, используемой для управления доступом к информации об изменениях.  
   
-     Щелкните любую ячейку в этом столбце, чтобы изменить **security_role**вручную.  
+     Щелкните любую ячейку в этом столбце, чтобы изменить **security_role** вручную.  
   
  **Добавить таблицы**  
  Нажмите кнопку **Добавить таблицы** , чтобы открыть диалоговое окно "Выбор таблицы", где вы можете [выбрать таблицы Oracle для отслеживания изменений](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md).  

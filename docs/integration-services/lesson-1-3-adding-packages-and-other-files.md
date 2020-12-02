@@ -12,10 +12,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449726"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Занятие 1–3. Добавление пакетов и других файлов
@@ -48,13 +48,13 @@ ms.locfileid: "88449726"
   
 ### <a name="to-add-packages-to-the-deployment-tutorial-project"></a>Добавление пакетов в проект из учебника по развертыванию  
   
-1.  Если среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] еще не открыта, нажмите кнопку **Пуск**, наведите указатель на пункт **Все программы**, затем на пункт **Microsoft SQL Server**и выберите пункт **SQL Server Data Tools**.  
+1.  Если среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] еще не открыта, нажмите кнопку **Пуск**, наведите указатель на пункт **Все программы**, затем на пункт **Microsoft SQL Server** и выберите пункт **SQL Server Data Tools**.  
   
 2.  В меню **Файл** выберите пункт **Открыть**, щелкните **Проект или решение**, разверните папку **Deployment Tutorial** и нажмите кнопку **Открыть**, а затем дважды щелкните файл **Deployment Tutorial.sln**.  
   
-3.  В обозревателе решений правой кнопкой мыши щелкните проект Deployment Tutorial, нажмите кнопку **Добавить**и выберите **Существующий пакет**.  
+3.  В обозревателе решений правой кнопкой мыши щелкните проект Deployment Tutorial, нажмите кнопку **Добавить** и выберите **Существующий пакет**.  
   
-4.  В диалоговом окне **Добавление копии существующего пакета** в разделе **Расположение пакета**выберите пункт **Файловая система**.  
+4.  В диалоговом окне **Добавление копии существующего пакета** в разделе **Расположение пакета** выберите пункт **Файловая система**.  
   
 5.  Нажмите кнопку обзора **(...)**, перейдите к папке C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, выберите файл **DataTransfer.dtsx** и нажмите кнопку **Открыть**.  
   

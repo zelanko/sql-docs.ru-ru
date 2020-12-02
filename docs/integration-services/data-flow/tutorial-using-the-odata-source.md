@@ -12,10 +12,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425676"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Руководство по Использование источника OData
@@ -29,9 +29,9 @@ ms.locfileid: "88425676"
   
 1.  Запустите **SQL Server Data Tools** или [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-2.  В меню **Файл**выберите **Создать**, а затем **Проект**.  
+2.  В меню **Файл** выберите **Создать**, а затем **Проект**.  
   
-3.  В диалоговом окне **Создание проекта** разверните пункты **Установлено**, **Шаблоны**, **Бизнес-аналитика**и выберите **Службы Integration Services**.  
+3.  В диалоговом окне **Создание проекта** разверните пункты **Установлено**, **Шаблоны**, **Бизнес-аналитика** и выберите **Службы Integration Services**.  
   
 4.  Выберите **Проект служб Integration Services** в качестве типа проекта.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "88425676"
   
 13. Щелкните **Столбцы** на левой панели навигации, чтобы перейти на страницу **Столбцы** .  
   
-14. Выберите **EmployeeID**, **FirstName**и **LastName** в **Доступные внешние столбцы** , установив соответствующие флажки.  
+14. Выберите **EmployeeID**, **FirstName** и **LastName** в **Доступные внешние столбцы** , установив соответствующие флажки.  
   
 15. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно **Редактор источника OData** .  
   

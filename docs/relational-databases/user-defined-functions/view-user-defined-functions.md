@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 70cb57fd62b62e10aeb1d68d708a7504265e4e97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88460198"
 ---
 # <a name="view-user-defined-functions"></a>Просмотр определяемых пользователем функций
@@ -57,7 +57,7 @@ ms.locfileid: "88460198"
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>Отображение свойств определяемой пользователем функции  
   
-1.  В **обозревателе объектов**щелкните знак «плюс» рядом с базой данных, содержащей функцию, свойства которой необходимо просмотреть, а затем щелкните знак «плюс», чтобы развернуть папку **Программирование** .  
+1.  В **обозревателе объектов** щелкните знак «плюс» рядом с базой данных, содержащей функцию, свойства которой необходимо просмотреть, а затем щелкните знак «плюс», чтобы развернуть папку **Программирование** .  
   
 2.  Чтобы развернуть папку **Функции** , щелкните знак «плюс» (+).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "88460198"
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Получение определения и свойств функции  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "88460198"
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>Получение зависимостей функции  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
