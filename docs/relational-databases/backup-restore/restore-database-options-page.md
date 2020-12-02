@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 244b815a0e670cd0e697c037c62d66cc78159d81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737719"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129103"
 ---
 # <a name="restore-database-options-page"></a>Восстановление базы данных (страница «Параметры»)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85737719"
  Для изменения поведения операции восстановления используются параметры панели **Параметры восстановления** .  
   
  **Перезаписать существующую базу данных [WITH REPLACE]**  
- Указывает, что операция восстановления перезапишет файлы любой базы данных, в настоящее время использующей имя, которое указано в поле **Восстановить в**на странице [Общие](../../relational-databases/backup-restore/restore-database-general-page.md) диалогового окна **Восстановление базы данных** . Файлы существующей базы данных будут перезаписаны, даже если восстанавливается резервная копия из другой базы данных в существующую базу данных. Выбор этого параметра равнозначен использованию параметра REPLACE инструкции [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Указывает, что операция восстановления перезапишет файлы любой базы данных, в настоящее время использующей имя, которое указано в поле **Восстановить в** на странице [Общие](../../relational-databases/backup-restore/restore-database-general-page.md) диалогового окна **Восстановление базы данных** . Файлы существующей базы данных будут перезаписаны, даже если восстанавливается резервная копия из другой базы данных в существующую базу данных. Выбор этого параметра равнозначен использованию параметра REPLACE инструкции [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Данный параметр рекомендуется использовать только после тщательного анализа последствий. Дополнительные сведения см. в разделе [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "85737719"
  Дополнительные сведения см. в разделе [Резервное копирование и восстановление реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Ограничить доступ к восстановленной базе данных [WITH RESTRICTED_USER]**  
- Доступ к восстановленной базе данных будет только у пользователей **db_owner**, **dbcreator**или **sysadmin**.  
+ Доступ к восстановленной базе данных будет только у пользователей **db_owner**, **dbcreator** или **sysadmin**.  
   
  Выбор этой функции равнозначен использованию параметра RESTRICTED_USER инструкции RESTORE.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "85737719"
  Чтобы определить состояние базы данных после операции восстановления, необходимо выбрать один из параметров на панели **Состояние восстановления** .  
   
  **RESTORE WITH RECOVERY**  
- Восстанавливает базу данных после восстановления последней резервной копии, отмеченной в сетке **Восстанавливаемые резервные наборы данных**на странице [Общие](../../relational-databases/backup-restore/restore-database-general-page.md). Этот параметр применяется по умолчанию и равнозначен указанию предложения WITH RECOVERY в инструкции [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Восстанавливает базу данных после восстановления последней резервной копии, отмеченной в сетке **Восстанавливаемые резервные наборы данных** на странице [Общие](../../relational-databases/backup-restore/restore-database-general-page.md). Этот параметр применяется по умолчанию и равнозначен указанию предложения WITH RECOVERY в инструкции [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  В модели полного восстановления и модели восстановления с неполным протоколированием этот параметр нужно выбирать только при немедленном восстановлении из копии всех файлов журнала.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 85f30b310f6878e9090dcf55e63be41c16f1490e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 76c712143d97d602270c9faeacae4c3550f6964d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809866"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129294"
 ---
 # <a name="copy-only-backups"></a>Резервные копии только для копирования
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "91809866"
 ###  <a name="a-using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> A. Использование среды SQL Server Management Studio  
 В этом примере резервная копия только для копирования для базы данных `Sales` будет заархивирована на диск в папку резервных копий по умолчанию.
 
-1. В **обозревателе объектов**подключитесь к экземпляру компонента SQL Server Database Engine и разверните его.
+1. В **обозревателе объектов** подключитесь к экземпляру компонента SQL Server Database Engine и разверните его.
 
-1. Разверните узел **Базы данных**, щелкните правой кнопкой `Sales`, укажите на пункт **Задачи**и выберите **Создать резервную копию...**
+1. Разверните узел **Базы данных**, щелкните правой кнопкой `Sales`, укажите на пункт **Задачи** и выберите **Создать резервную копию...**
 
 1. На странице **Общие** в разделе **Источник** установите флажок **Архивная копия только для копирования** .
 

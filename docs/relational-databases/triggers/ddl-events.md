@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 25cdef293ced7b58ea41f71f78a1046c6b5dd0ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463806"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128636"
 ---
 # <a name="ddl-events"></a>DDL-события
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -197,7 +197,7 @@ ms.locfileid: "88463806"
         CREATE_FULLTEXT_CATALOG (Применяется в инструкции CREATE FULLTEXT CATALOG и процедуре **sp_fulltextcatalog** , если указан аргумент *create* .)
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_CATALOG (Применяется в инструкции ALTER FULLTEXT CATALOG и процедуре **sp_fulltextcatalog** , если указаны аргументы *start_incremental*, *start_full*, *Stop*или *Rebuild* , и процедуре **sp_fulltext_database** , если указан аргумент *enable* .)
+        ALTER_FULLTEXT_CATALOG (Применяется в инструкции ALTER FULLTEXT CATALOG и процедуре **sp_fulltextcatalog** , если указаны аргументы *start_incremental*, *start_full*, *Stop* или *Rebuild* , и процедуре **sp_fulltext_database** , если указан аргумент *enable* .)
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_CATALOG (Применяется в инструкции DROP FULLTEXT CATALOG и процедуре **sp_fulltextcatalog** , если указан аргумент *drop* .)
@@ -208,7 +208,7 @@ ms.locfileid: "88463806"
         CREATE_FULLTEXT_INDEX (Применяется в инструкции CREATE FULLTEXT INDEX и процедуре **sp_fulltexttable** , если указан аргумент *create* .)
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_INDEX (Применяется в инструкции ALTER FULLTEXT INDEX, процедуре **sp_fulltextcatalog** , если указаны аргументы *start_full*, *start_incremental*или *stop* , процедуре **sp_fulltext_column**и процедуре **sp_fulltext_table** , если определено любое действие, отличное от *create* или *drop* .)
+        ALTER_FULLTEXT_INDEX (Применяется в инструкции ALTER FULLTEXT INDEX, процедуре **sp_fulltextcatalog** , если указаны аргументы *start_full*, *start_incremental* или *stop* , процедуре **sp_fulltext_column** и процедуре **sp_fulltext_table** , если определено любое действие, отличное от *create* или *drop* .)
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_INDEX (Применяется в инструкции DROP FULLTEXT INDEX и процедуре **sp_fulltexttable** , если указан аргумент *drop* .)
@@ -355,13 +355,13 @@ ms.locfileid: "88463806"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_ROLE (Применяется в инструкции CREATE ROLE, процедурах **sp_addrole**и **sp_addgroup**.)
+        CREATE_ROLE (Применяется в инструкции CREATE ROLE, процедурах **sp_addrole** и **sp_addgroup**.)
     :::column-end:::
     :::column:::
         ALTER_ROLE
     :::column-end:::
     :::column:::
-        DROP_ROLE (Применяется в инструкции DROP ROLE, процедурах **sp_droprole**и **sp_dropgroup**.)
+        DROP_ROLE (Применяется в инструкции DROP ROLE, процедурах **sp_droprole** и **sp_dropgroup**.)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -407,7 +407,7 @@ ms.locfileid: "88463806"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_SCHEMA (Применяется в инструкции CREATE SCHEMA, процедурах **sp_addrole**, **sp_adduser**, **sp_addgroup**и **sp_grantdbaccess**.)
+        CREATE_SCHEMA (Применяется в инструкции CREATE SCHEMA, процедурах **sp_addrole**, **sp_adduser**, **sp_addgroup** и **sp_grantdbaccess**.)
     :::column-end:::
     :::column:::
         ALTER_SCHEMA (Применяется в инструкции ALTER SCHEMA и процедуре **sp_changeobjectowner**.)
@@ -568,13 +568,13 @@ ms.locfileid: "88463806"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_USER (Применяется в инструкции CREATE USER, процедурах **sp_adduser**и **sp_grantdbaccess**.)
+        CREATE_USER (Применяется в инструкции CREATE USER, процедурах **sp_adduser** и **sp_grantdbaccess**.)
     :::column-end:::
     :::column:::
         ALTER_USER (Применяется в инструкции ALTER USER и процедуре **sp_change_users_login**.)
     :::column-end:::
     :::column:::
-        DROP_USER (Применяется в инструкции DROP USER, процедурах **sp_dropuser**и **sp_revokedbaccess**.)
+        DROP_USER (Применяется в инструкции DROP USER, процедурах **sp_dropuser** и **sp_revokedbaccess**.)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -724,13 +724,13 @@ ms.locfileid: "88463806"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_LOGIN (Применяется в инструкции CREATE LOGIN, процедурах **sp_addlogin**, **sp_grantlogin**, **xp_grantlogin**и **sp_denylogin** при использовании несуществующего имени входа, который должен быть неявно создан.)
+        CREATE_LOGIN (Применяется в инструкции CREATE LOGIN, процедурах **sp_addlogin**, **sp_grantlogin**, **xp_grantlogin** и **sp_denylogin** при использовании несуществующего имени входа, который должен быть неявно создан.)
     :::column-end:::
     :::column:::
-        ALTER_LOGIN (Применяется в инструкции ALTER LOGIN, процедурах **sp_defaultdb**, **sp_defaultlanguage**, **sp_password**и **sp_change_users_login** , если указан параметр *Auto_Fix* .)
+        ALTER_LOGIN (Применяется в инструкции ALTER LOGIN, процедурах **sp_defaultdb**, **sp_defaultlanguage**, **sp_password** и **sp_change_users_login** , если указан параметр *Auto_Fix* .)
     :::column-end:::
     :::column:::
-        DROP_LOGIN (Применяется в инструкции DROP LOGIN, процедурах **sp_droplogin**, **sp_revokelogin**и **xp_revokelogin**.)
+        DROP_LOGIN (Применяется в инструкции DROP LOGIN, процедурах **sp_droplogin**, **sp_revokelogin** и **xp_revokelogin**.)
     :::column-end:::
 :::row-end:::  
 :::row:::

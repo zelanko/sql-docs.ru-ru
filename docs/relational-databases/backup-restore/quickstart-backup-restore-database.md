@@ -2,8 +2,8 @@
 title: Краткое руководство. Резервное копирование и восстановление базы данных
 titleSuffix: SQL Server
 description: В этой статье вы узнаете, как создать новую базу данных, выполнить резервное копирование базы данных и восстановить резервную копию в SQL Server.
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d658358fa8e09b967b921d162b8f443032a16ddc
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669958"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129203"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Краткое руководство. Локальное резервное копирование и восстановление баз данных SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ GO
 
 1. Запустите среду [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) и подключитесь к своему экземпляру SQL Server.
 1. В **обозревателе объектов** разверните узел **Базы данных**.  
-1. Щелкните правой кнопкой мыши базу данных, наведите указатель мыши на **Задачи**и выберите **Резервное копирование...** . 
+1. Щелкните правой кнопкой мыши базу данных, наведите указатель мыши на **Задачи** и выберите **Резервное копирование...** . 
 1. В разделе **Назначение** проверьте путь к резервной копии. Если вам нужно изменить его, выберите **Удалить**, чтобы удалить существующий путь, а затем **Добавить**, чтобы ввести новый путь. Можно использовать кнопку с многоточием для перехода к определенному файлу. 
 1. Чтобы создать резервную копию базы данных, нажмите **ОК**. 
 

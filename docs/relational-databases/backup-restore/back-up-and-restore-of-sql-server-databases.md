@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: afc33480cb19ac8b676c6384d839f1ae4b7d9440
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b6e369cc3677e399182f631885afdfb3b3ac53ee
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810090"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129408"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "91810090"
  **резервная копия**  
  Копия данных, которая может использоваться для восстановления данных в случае возникновения ошибки. Резервные копии баз данных также могут использоваться для восстановления копии базы данных в новом расположении.  
   
-устройство**резервного копирования**  
+устройство **резервного копирования**  
  Диск или ленточное устройство, на которые записываются резервные копии SQL Server для последующего восстановления. Резервные копии SQL Server можно также записать в службу хранилища BLOB-объектов Azure, а формат **URL-адреса** используется, чтобы указать назначение и имя файла резервной копии. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 **носитель данных резервной копии**  

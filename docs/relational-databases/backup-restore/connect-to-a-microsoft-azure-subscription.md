@@ -8,21 +8,21 @@ ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3073607520bc6ebe25debf39e9ccc3a4b5b29d64
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 541f17e5e01f81702b387664cbf2f666c0d21703
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809880"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129303"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Соединение с подпиской Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Параметр **Соединиться с подпиской Майкрософт** используется для регистрации существующего контейнера больших двоичных объектов в экземпляре SQL Server.  С помощью параметров, приведенных в диалоговом окне, в контейнере больших двоичных объектов будет создан подписанный URL-адрес и политика подписанных URL-адресов, после чего будут созданы учетные данные SQL Server.  Это диалоговое окно открывается при использовании задачи резервного копирования или восстановления в SQL Server Management Studio. Для выполнения операции требуется URL-адрес устройства.
 
 ## <a name="limitation"></a>Ограничение
-Параметр**Соединиться с подпиской Майкрософт** работает только с учетной записью хранилища Azure, созданной с помощью модели развертывания управления службами (классической модели развертывания).  Дополнительные сведения о моделях развертывания Azure см. в статье [Azure Resource Manager и классическое развертывание](/azure/azure-resource-manager/management/deployment-models).
+Параметр **Соединиться с подпиской Майкрософт** работает только с учетной записью хранилища Azure, созданной с помощью модели развертывания управления службами (классической модели развертывания).  Дополнительные сведения о моделях развертывания Azure см. в статье [Azure Resource Manager и классическое развертывание](/azure/azure-resource-manager/management/deployment-models).
 
 ## <a name="options"></a>Параметры
 **Вход**     

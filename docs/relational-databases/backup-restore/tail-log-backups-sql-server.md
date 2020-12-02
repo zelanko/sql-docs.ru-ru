@@ -16,14 +16,14 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: fa48e2e96c5066ee2a2bd5d2757a3ae8f669225b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 546029b8615745c64d62da49af5299893d4d7c15
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631364"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129026"
 ---
 # <a name="tail-log-backups-sql-server"></a>Резервные копии заключительного фрагмента журнала (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85631364"
 |CONTINUE_AFTER_ERROR|Параметр CONTINUE_AFTER_ERROR следует указывать только в том случае, если создается резервная копия заключительного фрагмента журнала поврежденной базы данных.<br /><br /> При резервном копировании заключительного фрагмента журнала поврежденной базы данных, некоторые метаданные, захватываемые обычно в резервные копии журналов, могут быть недоступны. Дополнительные сведения см. в подразделе [Резервное копирование заключительного фрагмента журнала с неполными метаданными резервной копии](#IncompleteMetadata)этого раздела.|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a> Резервные копии заключительного фрагмента журнала с неполными метаданными  
- Резервное копирование заключительного фрагмента журнала захватывает конец журнала даже в тех случаях, когда база данных работает вне сети, повреждена или в ней не хватает файлов данных. В результате этого метаданные команд восстановления данных и базы данных **msdb**могут быть неполными. Однако несмотря на неполноту метаданных, захваченный журнал будет полным и готовым к использованию.  
+ Резервное копирование заключительного фрагмента журнала захватывает конец журнала даже в тех случаях, когда база данных работает вне сети, повреждена или в ней не хватает файлов данных. В результате этого метаданные команд восстановления данных и базы данных **msdb** могут быть неполными. Однако несмотря на неполноту метаданных, захваченный журнал будет полным и готовым к использованию.  
   
  Если резервная копия заключительного фрагмента журнала содержит неполные метаданные, то параметр [has_incomplete_metadata](../../relational-databases/system-tables/backupset-transact-sql.md) в таблице **backupset** принимает значение **1**. Кроме того, выходной аргумент [HasIncompleteMetadata](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)инструкции **RESTORE HEADERONLY** принимает значение **1**.  
   

@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.swb.backupdatabase.options.f1
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a4932a229d2d883a8d5b2be84795a96aafd5bba3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e91ecfb8375385e672c90e557910a36c71f80c8d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719985"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129405"
 ---
 # <a name="back-up-database-backup-options-page"></a>Резервное копирование базы данных (страница «Параметры резервного копирования»)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

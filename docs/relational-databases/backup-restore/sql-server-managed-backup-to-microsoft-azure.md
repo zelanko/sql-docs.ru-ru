@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e181ce4851e2d00867c25942e8842b200525a3bf
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 32a48093f40d048532ff58a1f91f450e52d6019b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810878"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129008"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Управляемое резервное копирование SQL Server в Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "91810878"
 ##  <a name="supportability"></a><a name="support_limits"></a> Поддержка  
  Ниже приведены ограничения и рекомендации, связанные [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   Поддерживается резервное копирование системных баз данных **master**, **model**и **msdb** . Резервное копирование **tempdb** не поддерживается. 
+-   Поддерживается резервное копирование системных баз данных **master**, **model** и **msdb** . Резервное копирование **tempdb** не поддерживается. 
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]поддерживает все модели восстановления (модель полного восстановления, модель восстановления с неполным протоколированием и простую модель восстановления).  
   
