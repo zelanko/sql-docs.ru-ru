@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386430"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128833"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>использование приложения SQL Server Profiler для создания набора сбора трассировки SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88386430"
   
     1.  В поле **Имя трассировки** введите требуемое имя трассировки. В этом примере используется имя **SPgt80**.  
   
-    2.  В списке **Использовать шаблон**выберите шаблон для трассировки. В этом примере выберите **TSQL_SPs**.  
+    2.  В списке **Использовать шаблон** выберите шаблон для трассировки. В этом примере выберите **TSQL_SPs**.  
   
 7.  На вкладке **Выбор событий** выполните следующие действия.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88386430"
   
 10. На панели инструментов щелкните **Остановить выбранную трассировку** или **Приостановить выбранную трассировку**.  
   
-11. В меню **Файл** укажите пункт **Экспорт**, затем **Создать определение трассировки**и щелкните **Для набора элементов сбора трассировки SQL**.  
+11. В меню **Файл** укажите пункт **Экспорт**, затем **Создать определение трассировки** и щелкните **Для набора элементов сбора трассировки SQL**.  
   
 12. В диалоговом окне **Сохранить как** введите имя определения трассировки в поле **Имя файла** и сохраните файл в требуемом расположении. В данном примере имя файла совпадает с именем трассировки (SPgt80).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88386430"
   
 5.  В обозревателе объектов проверьте успешность создания набора элементов сбора. Для этого выполните следующие действия:  
   
-    1.  Щелкните правой кнопкой мыши узел **Управление**и выберите команду **Обновить**.  
+    1.  Щелкните правой кнопкой мыши узел **Управление** и выберите команду **Обновить**.  
   
     2.  Разверните узел **Управление**, затем **Сбор данных**.  
   
@@ -127,11 +127,11 @@ BEGIN TRANSACTION
 BEGIN TRY  
   
 -- Define collection set  
--- ***  
--- *** Replace 'SqlTrace Collection Set Name Here' in the   
--- *** following script with the name you want  
--- *** to use for the collection set.  
--- ***  
+-- **_  
+-- _*_ Replace 'SqlTrace Collection Set Name Here' in the   
+-- _*_ following script with the name you want  
+-- _*_ to use for the collection set.  
+-- _*_  
 DECLARE @collection_set_id int;  
 EXEC [dbo].[sp_syscollector_create_collection_set]  
     @name = N'SPROC_CollectionSet',  
@@ -171,11 +171,11 @@ SELECT @collector_type_GUID = collector_type_uid
   WHERE name = N'Generic SQL Trace Collector Type';  
   
 -- Create the trace collection item.  
--- ***  
--- *** Replace 'SqlTrace Collection Item Name Here' in   
--- *** the following script with the name you want to  
--- *** use for the collection item.  
--- ***  
+-- _*_  
+-- _*_ Replace 'SqlTrace Collection Item Name Here' in   
+-- _*_ the following script with the name you want to  
+-- _*_ use for the collection item.  
+-- _**  
 EXEC [dbo].[sp_syscollector_create_collection_item]  
    @collection_set_id = @collection_set_id,  
    @collector_type_uid = @collector_type_GUID,  

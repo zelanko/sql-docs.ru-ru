@@ -1,11 +1,11 @@
 ---
-title: sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 description: Возвращает текущее состояние семафоров ресурсов, используемых для регулирования параллельной оптимизации запросов
 ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: language-reference
 f1_keywords:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3da92fb6d489bd8ca09c65e267f67dca75d8c01a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646404"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96503585"
 ---
-# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -54,7 +54,7 @@ SQL Server требуется разрешение VIEW SERVER STATE на сер
 ## <a name="remarks"></a>Комментарии  
 SQL Server использует многоуровневый шлюз для регулирования числа разрешенных параллельных компиляций.  Используются три шлюза, включая небольшие, средние и большие. Шлюзы помогают предотвратить исчерпание общих ресурсов памяти за счет большего объема памяти компиляции, требующего потребителей.
 
-Ожидает результат шлюза при отложенной компиляции. Помимо задержек при компиляции, регулируемые запросы будут иметь связанный RESOURCE_SEMAPHORE_QUERY_COMPILE тип ожидания. Тип ожидания RESOURCE_SEMAPHORE_QUERY_COMPILE может указывать на то, что запросы используют большой объем памяти для компиляции и что память была исчерпана, или же достаточно памяти в целом, но доступные единицы в определенном шлюзе исчерпаны. Выходные данные **sys. dm_exec_query_optimizer_memory_gateways** можно использовать для устранения неполадок в сценариях, где недостаточно памяти для компиляции плана выполнения запроса.  
+Ожидает результат шлюза при отложенной компиляции. Помимо задержек при компиляции, регулируемые запросы будут иметь связанный RESOURCE_SEMAPHORE_QUERY_COMPILE тип ожидания. Тип ожидания RESOURCE_SEMAPHORE_QUERY_COMPILE может указывать на то, что запросы используют большой объем памяти для компиляции и что память была исчерпана, или же достаточно памяти в целом, но доступные единицы в определенном шлюзе исчерпаны. Выходные данные **sys.dm_exec_query_optimizer_memory_gateways** можно использовать для устранения неполадок в сценариях, где недостаточно памяти для компиляции плана выполнения запроса.  
 
 ## <a name="examples"></a>Примеры  
 
@@ -69,7 +69,7 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ```  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](./system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Использование команды DBCC MEMORYSTATUS для мониторинга использования памяти в SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005) 

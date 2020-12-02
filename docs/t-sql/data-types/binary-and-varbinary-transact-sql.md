@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 842cde194f39b32b2140c09afed458f903dc772d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88312490"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130810"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary и varbinary (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "88312490"
   
 ## <a name="arguments"></a>Аргументы
 
-**binary** [ ( _n_ ) ] Двоичные данные фиксированной длины размером в _n_байт, где _n_ — значение от 1 до 8000. Размер при хранении составляет _n_ байт.
+**binary** [ ( _n_ ) ] Двоичные данные фиксированной длины размером в _n_ байт, где _n_ — значение от 1 до 8000. Размер при хранении составляет _n_ байт.
   
 **varbinary** [ ( _n_ | **max**) ] Двоичные данные с переменной длиной. _n_ может иметь значение от 1 до 8000. Значение **max** указывает, что максимальный размер при хранении составляет 2^31-1 байт. Размер хранения — это фактическая длина введенных данных плюс 2 байта. Введенные данные могут иметь размер 0 символов. В ANSI SQL синонимом для **varbinary** является **binary varying**.
   

@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4b0bdb3d9edca685e3b939c5f9a3ab1a0ec68846
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382490"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130270"
 ---
 # <a name="enable-indexes-and-constraints"></a>Включение индексов и ограничений
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "88382490"
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Использование инструкции ALTER INDEX для включения отключенного индекса  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "88382490"
   
 #### <a name="to-enable-a-disabled-index-using-create-index"></a>Использование инструкции CREATE INDEX для включения отключенного индекса  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "88382490"
   
 #### <a name="to-enable-a-disabled-index-using-dbcc-dbreindex"></a>Использование инструкции DBCC DBREINDEX для включения отключенного индекса  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "88382490"
   
 #### <a name="to-enable-all-indexes-on-a-table-using-alter-index"></a>Использование инструкции ALTER INDEX для включения всех индексов в таблице  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "88382490"
   
 #### <a name="to-enable-all-indexes-on-a-table-using-dbcc-dbreindex"></a>Использование инструкции DBCC DBREINDEX для включения всех индексов в таблице  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

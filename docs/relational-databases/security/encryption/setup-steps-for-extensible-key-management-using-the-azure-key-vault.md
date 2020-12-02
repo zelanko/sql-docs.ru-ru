@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
-ms.openlocfilehash: e3b12ed6d4f28ce04c1ceac5960ae564368d9a9a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4df1fb243b2e811b216b03ec453164ae1a00b1af
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866603"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130213"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Настройка расширенного управления ключами SQL Server TDE с помощью Azure Key Vault
 
@@ -466,7 +466,7 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 1. Измените новое имя входа и сопоставьте учетные данные расширенного управления ключами с новым именем входа.
 
      ```sql  
-    --Now drop the credential mapping from the original association
+    --Now add the credential mapping to the new Login
     ALTER LOGIN TDE_Login
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```  

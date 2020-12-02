@@ -14,11 +14,11 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bcccb89d1af55f990388b389087c16c003d12c39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496281"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130658"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Создание и изменение службы CDC Oracle
 
@@ -72,7 +72,7 @@ ms.locfileid: "88496281"
   
  Имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используемому службой Oracle CDC Service, достаточно быть членом предопределенной роли сервера public. Других разрешений не требуется. Когда добавляются новые экземпляры Oracle CDC, это имя входа получает доступ **db_owner** к соответствующим базам данных CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Чтобы создать определение службы Windows для Oracle CDC, программе требуется доступ с возможностью обновления к базе данных MSXDBCDC в соответствующем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При нажатии кнопки **OK**появляется диалоговое окно с приглашением ввести имя входа, имеющее доступ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с возможностью обновления к базе данных MSXDBCDC.  
+ Чтобы создать определение службы Windows для Oracle CDC, программе требуется доступ с возможностью обновления к базе данных MSXDBCDC в соответствующем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При нажатии кнопки **OK** появляется диалоговое окно с приглашением ввести имя входа, имеющее доступ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с возможностью обновления к базе данных MSXDBCDC.  
   
  Дополнительные сведения о вводе данных в диалоговое окно «Подключение к SQL Server» см. в разделе [Connection to SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   

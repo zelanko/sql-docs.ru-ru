@@ -73,6 +73,24 @@
           items:
             - name: Объединение подключений в пул в SQL Server (ADO.NET)
               href: ../connect/ado-net/sql-server-connection-pooling.md
+        - name: Команды и параметры
+          href: ../connect/ado-net/commands-parameters.md
+          items:
+            - name: Выполнение команды
+              href: ../connect/ado-net/execute-command.md
+            - name: Настройка параметров
+              href: ../connect/ado-net/configure-parameters.md
+            - name: Создание команд с помощью построителей CommandBuilder
+              href: ../connect/ado-net/generate-commands-with-commandbuilders.md
+            - name: Получение одного значения из базы данных
+              href: ../connect/ado-net/obtain-single-value-from-database.md
+            - name: Использование команд для изменения данных
+              href: ../connect/ado-net/use-commands-to-modify-data.md
+              items:
+                - name: Обновление данных в источнике данных
+                  href: ../connect/ado-net/update-data-inside-data-source.md
+                - name: Выполнение операций каталога
+                  href: ../connect/ado-net/perform-catalog-operations.md
     - name: SQL Server и ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:

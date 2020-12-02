@@ -16,11 +16,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006342"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130194"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Создание, проектирование и создание запросов к экземплярам типа данных geography
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "92006342"
  [STEndpoint (тип данных geography)](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Измерение  
- Непустой объект **geography** может иметь 0, 1 или 2 измерения. Объекты **geography** , имеющие 0 измерений, например **Point** и **MultiPoint**, не имеют ни длины, ни площади. Одномерные объекты, такие как **LineString, CircularString**, **CompoundCurve**и **MultiLineString**, имеют длину. Двухмерные экземпляры, такие как **Polygon, CurvePolygon**и **MultiPolygon**, имеют длину и площадь. В отчете пустых экземпляров указывается измерение -1, а в отчетах **GeometryCollection** — максимальное измерение содержимого.  
+ Непустой объект **geography** может иметь 0, 1 или 2 измерения. Объекты **geography** , имеющие 0 измерений, например **Point** и **MultiPoint**, не имеют ни длины, ни площади. Одномерные объекты, такие как **LineString, CircularString**, **CompoundCurve** и **MultiLineString**, имеют длину. Двухмерные экземпляры, такие как **Polygon, CurvePolygon** и **MultiPolygon**, имеют длину и площадь. В отчете пустых экземпляров указывается измерение -1, а в отчетах **GeometryCollection** — максимальное измерение содержимого.  
   
  **Получение измерения экземпляра**  
  [STDimension (тип данных geography)](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -175,13 +175,13 @@ ms.locfileid: "92006342"
  [STArea (тип данных geography)](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> Пустой  
- _Пустым_ называется экземпляр объекта **geography**, не содержащий ни одной точки. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve**и **MultiLineString** равна 0. Площадь пустых экземпляров **Polygon, CurvePolygon** и **MultiPolygon** равна 0.  
+ _Пустым_ называется экземпляр объекта **geography**, не содержащий ни одной точки. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve** и **MultiLineString** равна 0. Площадь пустых экземпляров **Polygon, CurvePolygon** и **MultiPolygon** равна 0.  
   
  **Проверка, является ли экземпляр пустым**  
  [STIsEmpty (тип данных geography)](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Замыкание  
- _Замкнутый_ экземпляр **geography** — это фигура, начальная и конечная точки которой совпадают. Экземпляры**Polygon** считаются замкнутыми. Экземпляры**Point** не замкнуты.  
+ _Замкнутый_ экземпляр **geography** — это фигура, начальная и конечная точки которой совпадают. Экземпляры **Polygon** считаются замкнутыми. Экземпляры **Point** не замкнуты.  
   
  Кольцо — это простой замкнутый экземпляр **LineString** .  
   

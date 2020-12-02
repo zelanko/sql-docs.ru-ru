@@ -14,14 +14,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4d0164cee84309f9789dc71e2e64caf812b12b4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8ae00ecf4b71e4614b95f80e428ae88b65b54f35
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695977"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130770"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85695977"
 |[sp_cleanup_log_shipping_history](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)|Производит очистку журнала локально и на сервере мониторинга с учетом срока хранения.|  
 |[sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)|Удаляет базу данных-получателя, а также локальный и удаленный журналы.|  
 |[sp_delete_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-primary-transact-sql.md)|Удаляет сведения об определенном сервере-источнике из сервера-получателя.|  
-|[sp_help_log_shipping_secondary_database, хранимая процедура](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Получает настройки базы данных-получателя из таблиц **log_shipping_secondary**, **log_shipping_secondary_databases**и **log_shipping_monitor_secondary** .|  
+|[sp_help_log_shipping_secondary_database, хранимая процедура](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Получает настройки базы данных-получателя из таблиц **log_shipping_secondary**, **log_shipping_secondary_databases** и **log_shipping_monitor_secondary** .|  
 |[sp_help_log_shipping_secondary_primary, хранимая процедура](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|Эта хранимая процедура получает настройки для данной базы данных-источника с сервера-получателя.|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|Обновляет монитор данными для определенного агента доставки журналов.|  
   

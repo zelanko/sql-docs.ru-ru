@@ -12,14 +12,14 @@ helpviewer_keywords:
 - online restores [SQL Server]
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 00cec6d2ce9fcb74151bcbc6e87a58f9b8fbbfe2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670443"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130378"
 ---
 # <a name="online-restore-sql-server"></a>Восстановление в сети (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85670443"
 >  Если резервные копии создавались при наличии нескольких носителей, присоединенных к серверу, то в процессе восстановления в сети должно быть доступно то же самое количество носителей.  
   
 > [!CAUTION]  
->  При использовании резервных копий моментальных снимков нельзя выполнять **Online Restore**. Дополнительные сведения о **резервном копировании путем создания моментального снимка**см. в статье [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+>  При использовании резервных копий моментальных снимков нельзя выполнять **Online Restore**. Дополнительные сведения о **резервном копировании путем создания моментального снимка** см. в статье [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ## <a name="log-backups-for-online-restore"></a>Создание резервных копий журналов для восстановления в сети  
  При восстановлении в сети точкой восстановления служит точка, в которой восстанавливаемые данные в последний раз переводились в режим «вне сети» или режим «только для чтения». Должны быть доступны все резервные копии журналов транзакций до этой точки восстановления включительно. Как правило, чтобы захватить точку восстановления, необходимо использовать для восстановления резервную копию журналов после этой точки. Единственным исключением является восстановление данных в сети, предназначенных только для чтения, из резервной копии данных, которая сделана после перевода данных в режим «только для чтения». В этом случае резервная копия журналов не требуется.  

@@ -14,11 +14,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470116"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130900"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Настройка шифрования столбцов с помощью Always Encrypted с пакетом приложения уровня данных 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88470116"
 Если операция обновления запускает операцию шифрования данных, также необходим доступ к главным ключам столбцов, настроенным для затрагиваемых столбцов.
 
 - **Хранилище сертификатов — локальный компьютер** — требуется доступ на чтение к сертификату, который используется в качестве главного ключа столбца, либо необходимо быть администратором компьютера.
-- **Хранилище ключей Azure** — требуются разрешения *create*, *get*, *unwrapKey*, *wrapKey*, *sign*и *verify* к хранилищу, содержащему главный ключ столбца.
+- **Хранилище ключей Azure** — требуются разрешения *create*, *get*, *unwrapKey*, *wrapKey*, *sign* и *verify* к хранилищу, содержащему главный ключ столбца.
 - **Поставщик хранилища ключей (CNG)** — необходимые разрешения и учетные данные, которые могут быть запрошены при использовании хранилища ключей или ключа, зависят от конфигурации хранилища и KSP.
 - **Поставщик служб шифрования (CAPI)** — необходимые разрешения и учетные данные, которые могут быть запрошены при использовании хранилища ключей или ключа, зависят от конфигурации хранилища и CSP.
 

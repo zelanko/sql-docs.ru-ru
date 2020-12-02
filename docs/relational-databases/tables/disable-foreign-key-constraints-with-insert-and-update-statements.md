@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d68a5689d31d5db0e4221e4fc58ec5d724ee4fdf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427566"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130888"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>Отключение ограничений внешнего ключа для инструкций INSERT и UPDATE
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -58,11 +58,11 @@ ms.locfileid: "88427566"
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Отключение ограничений внешнего ключа для инструкций INSERT и UPDATE  
   
-1.  Разверните в **обозревателе объектов**таблицу с ограничением, затем разверните папку **Ключи** .  
+1.  Разверните в **обозревателе объектов** таблицу с ограничением, затем разверните папку **Ключи** .  
   
 2.  Щелкните правой кнопкой мыши ограничение и выберите команду **Изменить**.  
   
-3.  В сетке под **конструктором таблиц**щелкните пункт **Принудительное использование ограничения внешнего ключа** и выберите значение **Нет** в раскрывающемся списке.  
+3.  В сетке под **конструктором таблиц** щелкните пункт **Принудительное использование ограничения внешнего ключа** и выберите значение **Нет** в раскрывающемся списке.  
   
 4.  Щелкните **Закрыть**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "88427566"
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Отключение ограничений внешнего ключа для инструкций INSERT и UPDATE  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

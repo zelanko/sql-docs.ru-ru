@@ -15,11 +15,11 @@ ms.assetid: 8ce8024f-153f-4066-b607-0d36fefc79ed
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 84b9c97935d0bcf89a4741304bb9a1e6b3576605
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726035"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130132"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Диспетчер подключений Azure Resource Manager
 
@@ -32,7 +32,7 @@ ms.locfileid: "91726035"
 
 Чтобы создать и настроить **диспетчер подключений Azure Resource Manager**, выполните указанные ниже действия:
 
-1. В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **AzureResourceManager**и щелкните **Добавить**.
+1. В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **AzureResourceManager** и щелкните **Добавить**.
 2. В диалоговом окне **редактора диспетчера подключений Azure Resource Manager** укажите **Идентификатор приложения**, **Ключ приложения** и **Идентификатор клиента** для субъекта-службы. Дополнительные сведения об этих свойствах см. [этой](/azure/azure-resource-manager/resource-group-create-service-principal-portal) статье.
 3. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно.
 4. Свойства созданного диспетчера соединений можно просмотреть в окне **Свойства** .

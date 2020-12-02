@@ -19,17 +19,17 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 5ca659670cb68bafa10f758bc2a7997243f5c1a8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 232ad1cfe65fca719260a9ed8ab87a7f2d7ed3dd
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990132"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443155"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
-  Возвращает результирующий набор, содержащий метаданные о необъявленных параметрах в [!INCLUDE[tsql](../../includes/tsql-md.md)] пакете. Учитывает каждый параметр, используемый в пакете ** \@ tsql** , но не объявленный в ** \@ параметрах**. Возвращается результирующий набор, содержащий одну строку для каждого такого параметра со сведениями о предполагаемом типе параметра. Процедура возвращает пустой результирующий набор, если у пакета ввода ** \@ tsql** нет параметров, кроме тех, которые объявлены в ** \@ параметре params**.  
+  Возвращает результирующий набор, содержащий метаданные о необъявленных параметрах в [!INCLUDE[tsql](../../includes/tsql-md.md)] пакете. Учитывает каждый параметр, используемый в пакете **\@ tsql** , но не объявленный в **\@ параметрах**. Возвращается результирующий набор, содержащий одну строку для каждого такого параметра со сведениями о предполагаемом типе параметра. Процедура возвращает пустой результирующий набор, если у пакета ввода **\@ tsql** нет параметров, кроме тех, которые объявлены в **\@ параметре params**.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> Чтобы использовать эту хранимую процедуру в Azure синапсе Analytics (прежнее название — SQL DW), задайте уровень совместимости базы данных 20 или выше.   Чтобы отказаться от этого, измените уровень совместимости базы данных на 10.
+> Чтобы использовать эту хранимую процедуру в Azure синапсе Analytics в выделенном пуле SQL, задайте уровень совместимости базы данных 20 или выше.   Чтобы отказаться от этого, измените уровень совместимости базы данных на 10.
 
 ## <a name="arguments"></a>Аргументы  
 `[ \@tsql = ] 'Transact-SQL\_batch'` Одна или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact-SQL_batch* может иметь тип **nvarchar (**_n_**)** или **nvarchar (max)**.  
@@ -56,7 +56,7 @@ sp_describe_undeclared_parameters
  Тип данных параметра.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **sp_describe_undeclared_parameters** всегда возвращает нулевое состояние при успешном выполнении. Если процедура вызывает ошибку, а процедура вызвана как RPC, то состояние возврата заполняется типом ошибки, как описано в столбце error_type sys. dm_exec_describe_first_result_set. Если процедура вызывается из [!INCLUDE[tsql](../../includes/tsql-md.md)], возвращаемое значение всегда равно нулю, даже при наличии ошибок.  
+ **sp_describe_undeclared_parameters** всегда возвращает нулевое состояние при успешном выполнении. Если процедура вызывает ошибку, а процедура вызвана как RPC, то состояние возврата заполняется типом ошибки, как описано в столбце error_type sys.dm_exec_describe_first_result_set. Если процедура вызывается из [!INCLUDE[tsql](../../includes/tsql-md.md)], возвращаемое значение всегда равно нулю, даже при наличии ошибок.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_describe_undeclared_parameters** возвращает следующий результирующий набор.  
@@ -88,7 +88,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Для внутреннего использования.|  
 |**suggested_tds_length**|**int NOT NULL**|Для внутреннего использования.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **sp_describe_undeclared_parameters** всегда возвращает состояние возврата, равное нулю.  
   
  Чаще всего она применяется, когда приложению передается инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)], которая может содержать параметры и должна некоторым образом их обрабатывать. Примером является пользовательский интерфейс (такой как ODBCTest или RowsetViewer), где пользователь передает запрос с синтаксисом параметров ODBC. Приложение должно динамически обнаруживать число параметров и запрашивать каждый параметр у пользователя.  
@@ -226,7 +226,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      В этом случае E ( \@ p) имеет Col_Int + \@ p, а TT ( \@ p) — **int**. **int** выбирается для \@ p, так как не создает неявных преобразований. Любой другой выбор типа данных требует не меньше одного неявного преобразования.  
   
-2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Например:  
+2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Например.  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
@@ -279,5 +279,5 @@ WHERE object_id = @id OR NAME = @name',
   
 ## <a name="see-also"></a>См. также:  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

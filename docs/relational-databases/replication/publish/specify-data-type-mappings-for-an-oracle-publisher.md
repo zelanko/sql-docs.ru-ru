@@ -16,11 +16,11 @@ ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a58c4a27a90a36acc47c3338b39a802a2209060d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900651"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130980"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Указание сопоставления типов данных для издателя Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

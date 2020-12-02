@@ -15,11 +15,11 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e80df479a6fbd13e51e69ebddff5634ce7a0c3b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385740"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128815"
 ---
 # <a name="create-a-database-mail-account"></a>Создание учетной записи компонента Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88385740"
   
 -   Дважды щелкните компонент Database Mail, чтобы открыть мастер настройки компонента Database Mail.  
   
--   На странице **Выбор задачи настройки** выберите **Управление учетными записями и профилями компонента Database Mail**и нажмите **Далее**.  
+-   На странице **Выбор задачи настройки** выберите **Управление учетными записями и профилями компонента Database Mail** и нажмите **Далее**.  
   
 -   На странице **Управление учетными записями и профилями** выберите **Создать новую учетную запись** и нажмите **Далее**.  
   

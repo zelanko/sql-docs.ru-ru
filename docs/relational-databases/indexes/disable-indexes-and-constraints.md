@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424176"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130288"
 ---
 # <a name="disable-indexes-and-constraints"></a>Отключение индексов и ограничений
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "88424176"
  Отображает имя таблицы или представления, для которых был создан индекс.  
   
  **Тип индекса**  
- Отображает тип индекса: **кластеризованный**, **некластеризованный**, **пространственный**или **XML**.  
+ Отображает тип индекса: **кластеризованный**, **некластеризованный**, **пространственный** или **XML**.  
   
  **Состояние**  
  Отображает состояние операции отключения. Возможные значения после выполнения.  
@@ -167,7 +167,7 @@ ms.locfileid: "88424176"
   
 #### <a name="to-disable-an-index"></a>Отключение индекса  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "88424176"
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>Отключение всех индексов таблицы  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

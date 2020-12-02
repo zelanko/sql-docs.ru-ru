@@ -10,11 +10,11 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495491"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130005"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Развертывание проекта служб SSIS из командной строки с помощью ISDeploymentWizard.exe
 
@@ -76,7 +76,7 @@ ms.locfileid: "88495491"
     -   Затем нажмите кнопку **Далее**, чтобы перейти на страницу **Проверка**. (Кнопка **Далее** станет доступна, только когда вы выберете **Подключиться**.)
 
 4.  Просмотрите выбранные параметры на странице **Проверка**.
-    -   Вы можете изменить выбранные параметры, нажав кнопку **Назад**или кнопку любого из шагов на левой панели.
+    -   Вы можете изменить выбранные параметры, нажав кнопку **Назад** или кнопку любого из шагов на левой панели.
     -   Щелкните **Развернуть** , чтобы начать развертывание.
 
 5.  При развертывании на сервере базы данных SQL Azure откроется страница **Проверка**. На этой странице пакеты проекта будут проверены на наличие известных проблем, которые могут помешать их запуску в среде выполнения интеграции Azure-SSIS. Дополнительные сведения см. в статье [Проверка пакетов SSIS, развертываемых в Azure](lift-shift/ssis-azure-validate-packages.md).
