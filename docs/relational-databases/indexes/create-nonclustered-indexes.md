@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 04c45acc426cdeb187fd673756da388f971fe24e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382620"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125179"
 ---
 # <a name="create-nonclustered-indexes"></a>Создание некластеризованных индексов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "88382620"
   
 6.  Выберите новый индекс в текстовом поле **Выбранный первичный/уникальный ключ или индекс** .  
   
-7.  Выберите в сетке элемент **Создать как кластеризованный**и в раскрывающемся списке справа от свойства выберите значение **Нет** .  
+7.  Выберите в сетке элемент **Создать как кластеризованный** и в раскрывающемся списке справа от свойства выберите значение **Нет** .  
   
 8.  Щелкните **Закрыть**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88382620"
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>Создание некластеризованного индекса для таблицы  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

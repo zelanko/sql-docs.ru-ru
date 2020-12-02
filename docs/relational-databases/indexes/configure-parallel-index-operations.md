@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f4226d3fac66ec20f5012a15bb092b666cf86f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475808"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125189"
 ---
 # <a name="configure-parallel-index-operations"></a>Настройка параллельных операций с индексами
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -96,9 +96,9 @@ ms.locfileid: "88475808"
   
 5.  Щелкните правой кнопкой мыши индекс, для которого нужно задать параметр max degree of parallelism, и выберите пункт **Свойства**.  
   
-6.  В разделе **Выбор страницы**щелкните **Параметры**.  
+6.  В разделе **Выбор страницы** щелкните **Параметры**.  
   
-7.  Выберите свойство **Максимальная степень параллелизма**и введите значение от 1 до 64.  
+7.  Выберите свойство **Максимальная степень параллелизма** и введите значение от 1 до 64.  
   
 8.  Нажмите кнопку **ОК**.  
 
@@ -106,7 +106,7 @@ ms.locfileid: "88475808"
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Задание параметра max degree of parallelism для существующего индекса  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "88475808"
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>Задание параметра max degree of parallelism для нового индекса  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

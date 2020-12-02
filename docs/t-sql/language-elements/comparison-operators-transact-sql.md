@@ -22,11 +22,11 @@ ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 34df520dcb0f193e2b548a909ea10cd4113995fc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196658"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124481"
 ---
 # <a name="comparison-operators-transact-sql"></a>Операторы сравнения (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

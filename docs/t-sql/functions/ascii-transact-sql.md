@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d0169bc8dd5ed25e6f1689802e9a431df34fe457
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417500"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124940"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,13 +46,13 @@ ASCII ( character_expression )
 
 ## <a name="arguments"></a>Аргументы
 *character_expression*  
-[Выражение ](../../t-sql/language-elements/expressions-transact-sql.md) типа **char** или **varchar**.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **char** или **varchar**.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
  **int**  
   
 ## <a name="remarks"></a>Remarks
-ASCII — это аббревиатура от **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange (американский стандартный код для обмена информацией). Это стандарт кодировки символов для современных компьютеров. Список символов ASCII см. в разделе **Печатаемые символы** спецификации [ASCII](https://www.wikipedia.org/wiki/ASCII).
+ASCII — это аббревиатура от **A** merican **S** tandard **C** ode for **I** nformation **I** nterchange (американский стандартный код для обмена информацией). Это стандарт кодировки символов для современных компьютеров. Список символов ASCII см. в разделе **Печатаемые символы** спецификации [ASCII](https://www.wikipedia.org/wiki/ASCII).
 
 ASCII — это 7-разрядная кодировка. Расширенный ASCII или старший код ASCII — это 8-разрядная кодировка, которая не обрабатывается функцией `ASCII`. 
 

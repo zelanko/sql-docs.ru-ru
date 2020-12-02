@@ -16,11 +16,11 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3ee012fe4bcd7fa1cd98c51f537035fc6148938
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461156"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125243"
 ---
 # <a name="create-a-database-mail-profile"></a>Создание профиля компонента Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "88461156"
   
 -   **Перед началом работы** [необходимые компоненты](#Prerequisites), [безопасность](#Security)  
   
--   **Создание частного профиля Database Mail с помощью следующих средств: **  [мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **Создание частного профиля Database Mail с помощью следующих средств:**  [мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Создание общего профиля Database Mail с помощью следующих средств: **  [мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **Создание общего профиля Database Mail с помощью следующих средств:**  [мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   

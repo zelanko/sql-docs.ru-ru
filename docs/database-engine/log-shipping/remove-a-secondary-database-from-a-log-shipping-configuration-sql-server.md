@@ -14,14 +14,14 @@ helpviewer_keywords:
 - secondary data files [SQL Server], removing
 - log shipping [SQL Server], secondary databases
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: db79ab9084e1c633af66736d6974487e00182385
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d06b864f4a14b15acaf978d74d8224019dc010b1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695759"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125703"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Удаление базы данных-получателя из конфигурации доставки журналов (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "85695759"
   
 2.  Разверните узел **Базы данных**, щелкните правой кнопкой мыши базу данных-источник доставки журналов и выберите пункт **Свойства**.  
   
-3.  В области **Выбор страницы**щелкните **Доставка журналов транзакций**.  
+3.  В области **Выбор страницы** щелкните **Доставка журналов транзакций**.  
   
-4.  В меню **Экземпляры сервера-получателя и базы данных**щелкните базу данных, которую необходимо удалить.  
+4.  В меню **Экземпляры сервера-получателя и базы данных** щелкните базу данных, которую необходимо удалить.  
   
 5.  Щелкните **Удалить**.  
   

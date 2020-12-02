@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4616d7224ab7697eebdca78e935c96521ccedd3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446376"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125045"
 ---
 # <a name="delete-views"></a>Удаление представлений
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88446376"
   
 #### <a name="to-delete-a-view-from-a-database"></a>Удаление представления из базы данных  
   
-1.  В **обозревателе объектов**разверните базу данных, в которой содержится представление, подлежащее удалению, а затем разверните папку **Представления** .  
+1.  В **обозревателе объектов** разверните базу данных, в которой содержится представление, подлежащее удалению, а затем разверните папку **Представления** .  
   
 2.  Щелкните правой кнопкой мыши представление, которое требуется удалить, и выберите **Удалить**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "88446376"
   
 #### <a name="to-delete-a-view-from-a-database"></a>Удаление представления из базы данных  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6280e0abe6c95b2ac0a13339b0dfe2c6092e2fa3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670450"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125966"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 
@@ -326,14 +326,14 @@ ms.locfileid: "91670450"
     > [!NOTE]  
     > Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — страница MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop). 
+    Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — страница MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop). 
 
      Используйте страницу **Конфигурация ядра СУБД — ресурсы памяти**, чтобы указать значения параметров **Min Server Memory** и **Max Server Memory**, которые будет использовать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после запуска. Вы можете сохранить здесь значения по умолчанию, выбрать вычисляемые рекомендуемые значения или вручную изменить их после выбора варианта **Рекомендуется**.
      
     > [!NOTE]  
     > Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Дополнительные сведения см. в разделе о странице [ресурсов памяти при конфигурации ядра СУБД](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory). 
+    Дополнительные сведения см. в разделе о странице [ресурсов памяти при конфигурации ядра СУБД](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory). 
 
      Чтобы включить FILESTREAM в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте страницу **Конфигурация ядра СУБД — FILESTREAM**. Дополнительные сведения см. в разделе [Настройка компонента Database Engine — страница FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
@@ -401,7 +401,7 @@ ms.locfileid: "91670450"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-[Настройте новую установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017).  
+[Настройте новую установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](../../database-engine/configure-windows/database-engine-instances-sql-server.md).  
   
 Чтобы сократить уязвимую для атак контактную зону системы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выборочно устанавливает и активирует ключевые службы и функции. Дополнительные сведения см. в разделе [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md) (Конфигурация контактной зоны).  
   
