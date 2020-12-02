@@ -17,16 +17,16 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b1249cafc3fd10cdded36ed7d73f190c38d02f5d
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235532"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115907"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (тип данных geometry)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Возвращает экземпляр **geometry** , представляющий набор всех точек, расстояние которых от вызывающего экземпляра **geometry** меньше параметра *distance* или равно ему.  
+  Возвращает экземпляр **geometry**, представляющий набор всех точек, расстояние которых от вызывающего экземпляра **geometry** меньше параметра *distance* или равно ему.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -69,11 +69,11 @@ ms.locfileid: "93235532"
 |расстояние > 0|Все измерения|Экземпляр **CurvePolygon** или **GeometryCollection**|  
   
 > [!NOTE]  
->  Поскольку аргумент *distance* относится к типу **float** , в расчетах очень маленькое значение может быть приравнено к нулю. Когда это происходит, возвращается копия вызывающего экземпляра **geometry**. См. статью [Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  Поскольку аргумент *distance* относится к типу **float**, в расчетах очень маленькое значение может быть приравнено к нулю. Когда это происходит, возвращается копия вызывающего экземпляра **geometry**. См. статью [Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
  Отрицательный буфер удаляет все точки в пределах указанного расстояния от границы геометрического объекта. На следующей иллюстрации отрицательный буфер показан в виде области круга со светлой тенью. Пунктирная линия — это граница первоначального многоугольника, а сплошная линия — граница получаемого многоугольника.  
   
- Если методу передается параметр **string** , то он будет преобразован в тип **float** или возникнет исключение `ArgumentException`.  
+ Если методу передается параметр **string**, то он будет преобразован в тип **float** или возникнет исключение `ArgumentException`.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -104,7 +104,7 @@ ms.locfileid: "93235532"
  Эта инструкция **SELECT** возвращает `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>Г. Вызов функции BufferWithCurves() со значением параметра = 0  
- В следующем примере возвращается копия вызывающего экземпляра **geometry** :  
+ В следующем примере возвращается копия вызывающего экземпляра **geometry**:  
   
 ```
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
@@ -112,7 +112,7 @@ ms.locfileid: "93235532"
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>Д. Вызов функции BufferWithCurves() с ненулевым, но очень малым значением параметра  
- В следующем примере также возвращается копия вызывающего экземпляра **geometry** :  
+ В следующем примере также возвращается копия вызывающего экземпляра **geometry**:  
   
 ```
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 

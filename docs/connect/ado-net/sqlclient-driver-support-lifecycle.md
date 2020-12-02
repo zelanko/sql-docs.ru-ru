@@ -1,7 +1,7 @@
 ---
 title: Жизненный цикл поддержки драйвера SqlClient
 description: Страница с информацией о жизненном цикле поддержки продукта.
-ms.date: 09/08/2020
+ms.date: 11/19/2020
 dev_langs:
 - csharp
 - vb
@@ -12,13 +12,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b9b461454db98de77ed6003477b7a02114067eb
-ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
+ms.reviewer: v-jizho2
+ms.openlocfilehash: 30155a584de4e22692601a1dcf9551a67d4f580f
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614593"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011794"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Жизненный цикл поддержки драйвера SqlClient
 
@@ -36,6 +36,7 @@ ms.locfileid: "89614593"
 
 | Версия | Дата официального выпуска | Последняя версия исправления | Дата выпуска исправления | Уровень поддержки  | Окончание поддержки |
 | -- | -- | -- | -- | -- | -- |
+| 2.1 | 19 ноября 2020 г. | 2.1.0 | 19 ноября 2020 г. | Текущий | |
 | 2.0 | 16 июня 2020 г. | 2.0.1 | 25 августа 2020 г. | Текущий | |
 | 1.1 | 20 ноября 2019 г. | 1.1.3 | 15 мая 2020 г. | LTS | 21 ноября 2022 г. |
 | 1.0 | 28 августа 2019 г. | 1.0.19269.1 | 26 сентября 2019 г. | Текущий | 20 февраля 2020 г. |
@@ -52,6 +53,7 @@ ms.locfileid: "89614593"
 
 |Версия базы данных&nbsp;&#8594;<br />&#8595; Версия драйвера|База данных SQL Azure|Azure Synapse Analytics|Управляемый экземпляр SQL Azure|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
 |---|---|---|---|---|---|---|---|---|
+|2.1|Да|Да|Да|Да|Да|Да|Да|Да|
 |2.0|Да|Да|Да|Да|Да|Да|Да|Да|
 |1,1|Да|Да|Да|Да|Да|Да|Да|Да|
 |1.0|Да|Да|Да|Да|Да|Да|Да|Да|

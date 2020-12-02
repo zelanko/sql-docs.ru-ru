@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384873"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
@@ -325,7 +325,7 @@ ms.locfileid: "94384873"
 ####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> Поддержка нескольких версий в конструкторе служб SSIS  
  Теперь можно использовать конструктор SSIS в SQL Server Data Tools (SSDT) для Visual Studio 2015, чтобы создавать, обслуживать и выполнять пакеты, ориентированные на SQL Server 2016, SQL Server 2014 или SQL Server 2012. Процедуру получения SSDT см. в разделе [Скачивание последней версии SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
- В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства** , чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
+ В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства**, чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
    
  ![Свойство TargetServerVersion в диалоговом окне Свойства проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне Свойства проекта")  
 

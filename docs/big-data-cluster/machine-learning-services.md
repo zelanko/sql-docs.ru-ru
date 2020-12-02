@@ -4,16 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: Узнайте, как выполнять скрипты Python и R в главном экземпляре кластеров больших данных SQL Server с помощью служб машинного обучения.
 author: dphansen
 ms.author: davidph
-ms.date: 04/30/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: a14258c15ac1af1445b201f7b999dbec1682555d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: aa71450a1c16c9239a0dc74403a1989b5a9a1986
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196934"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947969"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Выполнение скриптов Python и R с помощью служб машинного обучения в кластерах больших данных SQL Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "86196934"
 Скрипты Python и R можно выполнять в главном экземпляре [кластеров больших данных SQL Server](big-data-cluster-overview.md) с помощью [служб машинного обучения](../machine-learning/index.yml).
 
 > [!NOTE]
-> Можно также выполнять код Java в главном экземпляре с помощью [расширений языка для SQL Server](../language-extensions/language-extensions-overview.md). После выполнения описанных ниже действий будут также включены расширения языка.
+> Вы также можете выполнять код Java в главном экземпляре кластера больших данных SQL Server с помощью [расширений языка Java](../language-extensions/java-overview.md). После выполнения описанных ниже действий будут также включены [расширения языка для SQL Server](../language-extensions/language-extensions-overview.md).
 
 ## <a name="enable-machine-learning-services"></a>Включение служб машинного обучения
 

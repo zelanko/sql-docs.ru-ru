@@ -19,10 +19,10 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7644e25159a7df28d2de51d5e1a08a0e1b36ef05
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92300374"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (тип данных geometry)
@@ -41,7 +41,7 @@ ms.locfileid: "92300374"
 
 ## <a name="arguments"></a>Аргументы
  *distance*  
- Значение типа **float** ( **double** в .NET Framework), указывающее расстояние от геометрического объекта, вокруг которого вычисляется буфер.  
+ Значение типа **float** (**double** в .NET Framework), указывающее расстояние от геометрического объекта, вокруг которого вычисляется буфер.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
@@ -49,23 +49,23 @@ ms.locfileid: "92300374"
  Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Метод `STBuffer()` вычисляет буфер аналогично методу [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), задавая аргументы *tolerance* = distance \* 0,001 и *relative* = **false** .  
+ Метод `STBuffer()` вычисляет буфер аналогично методу [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), задавая аргументы *tolerance* = distance \* 0,001 и *relative* = **false**.  
   
- Когда *distance*  > 0, возвращается экземпляр **Polygon** или **MultiPolygon** .  
+ Когда *distance* > 0, возвращается экземпляр **Polygon** или **MultiPolygon**.  
   
 > [!NOTE]  
->  Поскольку аргумент distance относится к типу **float** , в расчетах очень маленькое значение может быть приравнено к нулю.  Когда это происходит, возвращается экземпляр **geometry** .  См. раздел [Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  Поскольку аргумент distance относится к типу **float**, в расчетах очень маленькое значение может быть приравнено к нулю.  Когда это происходит, возвращается экземпляр **geometry**.  См. раздел [Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
- Когда *distance* = 0, возвращается копия вызывающего экземпляра **geometry** .  
+ Когда *distance* = 0, возвращается копия вызывающего экземпляра **geometry**.  
   
  Когда *distance* < 0, то  
   
--   возвращается пустой экземпляр **GeometryCollection** , если измерения экземпляра — 0 или 1.  
+-   возвращается пустой экземпляр **GeometryCollection**, если измерения экземпляра — 0 или 1.  
   
 -   возвращается отрицательный буфер, если измерения экземпляра — 2 или более.  
   
     > [!NOTE]  
-    >  Отрицательный буфер может также создать пустой экземпляр **GeometryCollection** .  
+    >  Отрицательный буфер может также создать пустой экземпляр **GeometryCollection**.  
   
  Отрицательный буфер удаляет все точки в пределах указанного расстояния от границы геометрического объекта.  
   

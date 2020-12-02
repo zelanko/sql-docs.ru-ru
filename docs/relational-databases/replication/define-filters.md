@@ -16,11 +16,11 @@ ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e4834e78ec82a681faba9f6c0fa780d78f890def
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498792"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121323"
 ---
 # <a name="define-filters"></a>Определение фильтров
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88498792"
   
 ## <a name="options"></a>Параметры  
  **Оператор**  
- Выберите оператор для фильтра, например **Меньше**или Равно.
+ Выберите оператор для фильтра, например **Меньше** или Равно.
   
  **Значение**  
  Введите значение для фильтра. Для большинства операторов нужно только значение в первом столбце **Значение** , но для операторов **Между** и **Вне** необходимы значения в обоих столбцах **Значение** .  

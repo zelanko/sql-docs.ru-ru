@@ -3,18 +3,18 @@ title: Установка из командной строки
 description: Запустите программу установки SQL Server из командной строки, чтобы добавить Службы машинного обучения с R и Python в экземпляр ядра СУБД SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/12/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956772"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122759"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Установка Служб машинного обучения с R и Python в SQL Server из командной строки
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "91956772"
 
 ## <a name="command-line-arguments"></a>Аргументы командной строки
 
-Аргумент FEATURES является обязательным, как и соглашения о условии лицензирования. 
+Аргумент **/FEATURES** является обязательным, как и принятие условий лицензирования. 
 
-При установке из командной строки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает полностью тихий режим (включается параметром /Q) и простой тихий режим (включается параметром /QS). При указании параметра /QS показывается только ход выполнения, не запрашивается ввод данных и не выводятся сообщения об обнаруженных ошибках. Параметр /QS поддерживается только в случае, когда указан режим /Action=install.
+При установке из командной строки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает полностью тихий режим (включается параметром **/Q**) и простой тихий режим (включается параметром **/QS**). При указании параметра **/QS** показывается только ход выполнения, не запрашивается ввод данных и не выводятся сообщения об обнаруженных ошибках. Параметр **/QS** поддерживается только в случае, когда указан режим **/Action=install**.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | Аргументы | Описание |

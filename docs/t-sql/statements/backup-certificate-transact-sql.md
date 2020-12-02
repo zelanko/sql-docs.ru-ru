@@ -30,11 +30,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
 ms.openlocfilehash: 06776d309042483f879dd3d31d9f6bae62119037
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067500"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124173"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -79,18 +79,18 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *certname*  
  Имя копируемого сертификата.
 
- TO FILE = ' *путь к файлу* '  
+ TO FILE = '*путь к файлу*'  
  Указывает полный путь, включая имя файла, для файла, в котором должен быть сохранен сертификат. Это может быть локальный путь или UNC-путь к расположению в сети. Если указано только имя файла, файл будет сохранен в папке данных пользователя по умолчанию для экземпляра (это может быть, а может и не быть папка данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). В SQL Server Express LocalDB папкой данных пользователя по умолчанию для экземпляра является путь, указанный в переменной среды `%USERPROFILE%` учетной записи, создавшей этот экземпляр.  
 
  WITH PRIVATE KEY указывает, что закрытый ключ сертификата следует сохранить в файл. Это предложение является необязательным.
 
- FILE = ' *путь к файлу закрытого ключа* '  
+ FILE = '*путь к файлу закрытого ключа*'  
  Указывает полный путь, включая имя файла, для файла, в котором должен быть сохранен закрытый ключ. Это может быть локальный путь или UNC-путь к расположению в сети. Если указано только имя файла, файл будет сохранен в папке данных пользователя по умолчанию для экземпляра (это может быть, а может и не быть папка данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). В SQL Server Express LocalDB папкой данных пользователя по умолчанию для экземпляра является путь, указанный в переменной среды `%USERPROFILE%` учетной записи, создавшей этот экземпляр.  
 
- ENCRYPTION BY PASSWORD = ' *пароль шифрования* '  
+ ENCRYPTION BY PASSWORD = '*пароль шифрования*'  
  Пароль, используемый для шифрования закрытого ключа перед записью ключа в файл резервной копии. Пароль проходит проверку сложности.  
   
- DECRYPTION BY PASSWORD = ' *пароль шифрования* '  
+ DECRYPTION BY PASSWORD = '*пароль шифрования*'  
  Пароль, используемый для дешифрования закрытого ключа перед созданием резервной копии ключа. Этот аргумент не является обязательным, если сертификат зашифрован главным ключом. 
   
 ## <a name="remarks"></a>Комментарии  

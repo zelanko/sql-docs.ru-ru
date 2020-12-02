@@ -12,10 +12,10 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d46d3598bb309029319c1b74b467983e681b96ac
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197059"
 ---
 # <a name="sap-bw-destination"></a>Назначение SAP BW
@@ -48,7 +48,7 @@ ms.locfileid: "92197059"
   
     1.  Выберите тип **"Сторонние/промежуточные BAPI"**.  
   
-    2.  Для параметра **Тип связи с целевой системой**выберите **Не Юникод (неактивные настройки MDMP)**.  
+    2.  Для параметра **Тип связи с целевой системой** выберите **Не Юникод (неактивные настройки MDMP)**.  
   
     3.  Назначьте соответствующий идентификатор программы.  
   

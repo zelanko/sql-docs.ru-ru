@@ -1,7 +1,7 @@
 ---
 title: Введение в пространство имен Microsoft.Data.SqlClient
 description: Узнайте подробнее о пространстве имен Microsoft.Data.SqlClient и о том, почему это предпочтительный способ подключения к SQL для приложений .NET.
-ms.date: 09/29/2020
+ms.date: 11/19/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,17 +9,232 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.reviewer: v-kaywon
-ms.openlocfilehash: d02c12998f1083774727c33a261292396151a352
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.reviewer: v-jizho2
+ms.openlocfilehash: f522b856e759ec9821b5cc549ce3f801951b7283
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081473"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011829"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Введение в пространство имен Microsoft.Data.SqlClient
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+
+## <a name="release-notes-for-microsoftdatasqlclient-21"></a>Заметки о выпуске для Microsoft.Data.SqlClient 2.1
+
+Заметки о выпуске также доступны в репозитории GitHub: [Заметки о выпуске для версии 2.1](https://github.com/dotnet/SqlClient/tree/master/release-notes/2.1).
+
+### <a name="new-features"></a>новые функции;
+
+### <a name="cross-platform-support-for-always-encrypted"></a>Кроссплатформенная поддержка для Always Encrypted
+В Microsoft.Data.SqlClient версии 2.1 добавлена поддержка Always Encrypted для следующих платформ:
+
+| Поддержка Always Encrypted | Поддержка Always Encrypted с безопасными анклавами  | Требуемая версия .NET Framework | Версия Microsoft.Data.SqlClient | Операционная система |
+|:--|:--|:--|:--:|:--:|
+| Да | Да | .NET Framework 4.6+ | 1.1.0 и выше | Windows |
+| Да | Да | .NET Core 2.1+ | 2.1.0 и выше<sup>1</sup> | Windows, Linux, macOS |
+| Да | Нет<sup>2</sup> | .NET Standard 2.0 | 2.1.0 и выше | Windows, Linux, macOS |
+| Да | Да | .NET Standard 2.1 и выше | 2.1.0 и выше | Windows, Linux, macOS |
+
+> [!NOTE]
+> <sup>1</sup> В версиях Microsoft.Data.SqlClient ниже 2.1 функцию Always Encrypted поддерживает только Windows.
+> <sup>2</sup> .NET Standard 2.0 не поддерживает Always Encrypted с безопасными анклавами.
+
+### <a name="azure-active-directory-device-code-flow-authentication"></a>Проверка подлинности в потоке кода устройства Azure Active Directory
+Microsoft.Data.SqlClient версии 2.1 поддерживает проверку подлинности "Поток кода устройства" с помощью MSAL.NET.
+Справочная документация: [Поток предоставления авторизации устройства OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code)
+
+Пример строки подключения:
+
+`Server=<server>.database.windows.net; Authentication=Active Directory Device Code Flow; Database=Northwind;`
+
+Следующий API позволяет настраивать механизм обратного вызова для потока кода устройства:
+
+```csharp
+public class ActiveDirectoryAuthenticationProvider
+{
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void SetDeviceCodeFlowCallback(Func<DeviceCodeResult, Task> deviceCodeFlowCallbackMethod)
+}
+```
+
+### <a name="azure-active-directory-managed-identity-authentication"></a>Проверка подлинности Azure Active Directory с использованием управляемого удостоверения
+В Microsoft.Data.SqlClient версии 2.1 добавлена поддержка проверки подлинности Azure Active Directory с использованием [управляемых удостоверений](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).
+
+Режим проверки подлинности поддерживает такие ключевые слова:
+- Active Directory Managed Identity (управляемое удостоверение Active Directory);
+- Active Directory MSI (для совместимости с драйверами MS SQL).
+
+Примеры строк подключения:
+
+```cs
+// For System Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory MSI; Initial Catalog={db};"
+
+// For System Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory Managed Identity; Initial Catalog={db};"
+
+// For User Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory MSI; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+
+// For User Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory Managed Identity; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+```
+
+### <a name="azure-active-directory-interactive-authentication-enhancements"></a>Расширения интерактивной проверки подлинности Azure Active Directory
+В Microsoft.Data.SqlClient версии 2.1 добавлены следующие API-интерфейсы для настройки взаимодействия с интерактивной проверкой подлинности Active Directory:
+
+```csharp
+public class ActiveDirectoryAuthenticationProvider
+{
+    // For .NET Framework targeted applications only
+    public void SetIWin32WindowFunc(Func<IWin32Window> iWin32WindowFunc);
+
+    // For .NET Standard targeted applications only
+    public void SetParentActivityOrWindowFunc(Func<object> parentActivityOrWindowFunc);
+
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken, Task<Uri>> acquireAuthorizationCodeAsyncCallback);
+
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void ClearUserTokenCache();
+}
+```
+
+### <a name="sqlclientauthenticationproviders-configuration-section"></a>Раздел конфигурации `SqlClientAuthenticationProviders`
+В Microsoft.Data.SqlClient версии 2.1 добавлен новый раздел конфигурации, `SqlClientAuthenticationProviders` (это клон существующего `SqlAuthenticationProviders`). Существующий раздел конфигурации `SqlAuthenticationProviders` также поддерживается для обеспечения обратной совместимости, если определен соответствующий тип.
+
+Этот новый раздел позволяет включать в файлы конфигурации одновременно раздел SqlAuthenticationProviders для System.Data.SqlClient и раздел SqlClientAuthenticationProviders для Microsoft.Data.SqlClient.
+
+
+### <a name="azure-active-directory-authentication-using-an-application-client-id"></a>Проверка подлинности Azure Active Directory с помощью идентификатора клиента приложения
+В Microsoft.Data.SqlClient версии 2.1 добавлена поддержка передачи определяемого пользователем идентификатора клиента приложения в библиотеку проверки подлинности Майкрософт. Идентификатор клиента приложения используется для проверки подлинности в Azure Active Directory.
+
+Также добавлены следующие API-интерфейсы:
+
+1. В ActiveDirectoryAuthenticationProvider добавлен новый конструктор:\
+_[Применимо ко всем платформам .NET (.NET Framework, .NET Core и .NET Standard)]_
+
+```csharp
+public ActiveDirectoryAuthenticationProvider(string applicationClientId)
+```
+
+Использование:
+```csharp
+string APP_CLIENT_ID = "<GUID>";
+SqlAuthenticationProvider customAuthProvider = new ActiveDirectoryAuthenticationProvider(APP_CLIENT_ID);
+SqlAuthenticationProvider.SetProvider(SqlAuthenticationMethod.ActiveDirectoryInteractive, customAuthProvider);
+
+using (SqlConnection sqlConnection = new SqlConnection("<connection_string>")
+{
+    sqlConnection.Open();
+}
+```
+
+2. Добавлено новое свойство конфигурации в `SqlAuthenticationProviderConfigurationSection` и `SqlClientAuthenticationProviderConfigurationSection`:\
+_[Применимо к .NET Framework и .NET Core]_
+
+```csharp
+internal class SqlAuthenticationProviderConfigurationSection : ConfigurationSection
+{
+    ...
+    [ConfigurationProperty("applicationClientId", IsRequired = false)]
+    public string ApplicationClientId => this["applicationClientId"] as string;
+}
+
+// Inheritance
+internal class SqlClientAuthenticationProviderConfigurationSection : SqlAuthenticationProviderConfigurationSection
+{ ... }
+```
+
+Использование:
+```xml
+<configuration>
+    <configSections>
+        <section name="SqlClientAuthenticationProviders"
+                         type="Microsoft.Data.SqlClient.SqlClientAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
+    </configSections>
+    <SqlClientAuthenticationProviders applicationClientId ="<GUID>" />
+</configuration>
+
+<!--or-->
+
+<configuration>
+    <configSections>
+        <section name="SqlAuthenticationProviders"
+                         type="Microsoft.Data.SqlClient.SqlAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
+    </configSections>
+    <SqlAuthenticationProviders applicationClientId ="<GUID>" />
+</configuration>
+```
+
+### <a name="data-classification-v2-support"></a>Поддержка Классификации данных версии 2
+В Microsoft.Data.SqlClient версии 2.1 добавлена поддержка информации "Ранг конфиденциальности" согласно Классификации данных. Доступны следующие API-интерфейсы:
+
+```csharp
+public class SensitivityClassification
+{
+    public SensitivityRank SensitivityRank;
+}
+
+public class SensitivityProperty
+{
+    public SensitivityRank SensitivityRank;
+}
+
+public enum SensitivityRank
+{
+    NOT_DEFINED = -1,
+    NONE = 0,
+    LOW = 10,
+    MEDIUM = 20,
+    HIGH = 30,
+    CRITICAL = 40
+}
+```
+
+### <a name="server-process-id-for-an-active-sqlconnection"></a>Идентификатор процесса сервера для активного `SqlConnection`
+В Microsoft.Data.SqlClient версии 2.1 введено новое свойство `SqlConnection` для активного подключения: `ServerProcessId`.
+
+```csharp
+public class SqlConnection
+{
+    // Returns the server process Id (SPID) of the active connection.
+    public int ServerProcessId;
+}
+```
+
+### <a name="trace-logging-support-in-native-sni"></a>Поддержка журнала трассировки в собственном SNI
+Microsoft.Data.SqlClient версии 2.1 пополняет существующую реализацию `SqlClientEventSource` возможностью трассировки событий в SNI.dll. Эти события должны собираться таким инструментом, как Xperf.
+
+Чтобы включить трассировку, можно отправить команду `SqlClientEventSource`, как показано ниже:
+
+```csharp
+// Enables trace events:
+EventSource.SendCommand(eventSource, (EventCommand)8192, null);
+
+// Enables flow events:
+EventSource.SendCommand(eventSource, (EventCommand)16384, null);
+
+// Enables both trace and flow events:
+EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
+```
+
+
+### <a name="command-timeout-connection-string-property"></a>Свойство строки подключения "Command Timeout" (время ожидания команды)
+В Microsoft.Data.SqlClient версии 2.1 введено новое свойство строки подключения "Command Timeout", которое позволяет переопределить стандартное время ожидания (30 секунд). Время ожидания для отдельных команд можно также переопределить с помощью свойства `CommandTimeout` в команде SqlCommand.
+
+Примеры строк подключения:
+
+`"Server={serverURL}; Initial Catalog={db}; Integrated Security=true; Command Timeout=60"`
+
+### <a name="removal-of-symbols-from-native-sni"></a>Удаление символов из собственного SNI
+Начиная с Microsoft.Data.SqlClient версии 2.1, мы удалили символы, добавленные в [версии 2.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI/2.0.0), из пакета NuGet [Microsoft.Data.SqlClient.SNI.runtime](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime) (начиная с [версии 2.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime/2.1.1)). Теперь общедоступные символы публикуются на сервере символов Майкрософт для BinSkim и других инструментов, которым требуется доступ к общедоступным символам.
+
+### <a name="source-linking-of-microsoftdatasqlclient-symbols"></a>Сопоставление с источником для символов Microsoft.Data.SqlClient
+Начиная с Microsoft.Data.SqlClient версии 2.1, символы Microsoft.Data.SqlClient сопоставляются с источником и публикуются на сервере символов Майкрософт. Это позволяет поддерживать расширенную отладку без скачивания исходного кода.
+
 
 ## <a name="release-notes-for-microsoftdatasqlclient-20"></a>Заметки о выпуске для Microsoft.Data.SqlClient 2.0
 
@@ -45,7 +260,7 @@ ms.locfileid: "92081473"
 
 #### <a name="dns-failure-resiliency"></a>Устойчивость к сбоям DNS
 
-Теперь драйвер будет кэшировать IP-адреса всех успешных подключений к конечной точке SQL Server, которая поддерживает эту функцию. Если во время попытки подключения происходит сбой разрешения DNS, драйвер пытается установить подключение с помощью кэшированного IP-адреса для этого сервера, если таковой существует. 
+Теперь драйвер будет кэшировать IP-адреса всех успешных подключений к конечной точке SQL Server, которая поддерживает эту функцию. Если во время попытки подключения происходит сбой разрешения DNS, драйвер пытается установить подключение с помощью кэшированного IP-адреса для этого сервера, если таковой существует.
 
 #### <a name="eventsource-tracing"></a>Трассировка EventSource
 
@@ -67,7 +282,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWind
 
 Полный список доступных параметров в драйвере см. в разделе [Параметры AppContext в SqlClient](appcontext-switches.md).
 
-#### <a name="enabling-decimal-truncation-behavior"></a>Включение усечения десятичных чисел 
+#### <a name="enabling-decimal-truncation-behavior"></a>Включение усечения десятичных чисел
 
 Драйвер будет по умолчанию округлять десятичные числа, как это делается SQL Server. Для обеспечения обратной совместимости можно задать для параметра AppContext **Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal** значение **true**.
 
@@ -92,7 +307,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### <a name="sqlbulkcopy-rowscopied-property"></a>Свойство SqlBulkCopy RowsCopied
 
-Свойство RowsCopied предоставляет доступ только для чтения к количеству строк, которые были обработаны в текущей операции с массовым копированием. Это значение не обязательно должно быть равно конечному количеству строк, добавляемых в целевую таблицу. 
+Свойство RowsCopied предоставляет доступ только для чтения к количеству строк, которые были обработаны в текущей операции с массовым копированием. Это значение не обязательно должно быть равно конечному количеству строк, добавляемых в целевую таблицу.
 
 #### <a name="connection-open-overrides"></a>Переопределение открытия соединения
 

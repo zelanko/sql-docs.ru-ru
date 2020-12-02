@@ -15,11 +15,11 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f63ea95489b639672ddb50b44fa882eecc463025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425566"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123282"
 ---
 # <a name="--conditional-ssis-expression"></a>? , перечислены ниже. (условный оператор) (выражение служб SSIS)
 
@@ -58,7 +58,7 @@ boolean_expression?expression1:expression2
   
 -   Длина результата типа DT_BYTES равна длине более длинного аргумента.  
   
- Выражения *expression1* и *expression2*должны иметь допустимый тип данных и должны удовлетворять одному из приведенных ниже правил.  
+ Выражения *expression1* и *expression2* должны иметь допустимый тип данных и должны удовлетворять одному из приведенных ниже правил.  
   
 -   **Числовой** Как *expression1* , так и *expression2* должны иметь числовой тип данных. В соответствии с правилами неявных числовых преобразований, выполняемых средством оценки выражений, пересечением типов данных должен быть числовой тип данных. NULL не может быть значением пересечения двух числовых типов данных. Дополнительные сведения см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   

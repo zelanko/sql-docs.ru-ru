@@ -23,11 +23,11 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688381"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124267"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -102,7 +102,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  Заполняется ли полнотекстовый индекс после добавления или удаления столбца полнотекстового индекса, зависит от того, включено ли отслеживание изменений и указано ли предложение WITH NO POPULATION. Дополнительные сведения см. в разделе [Взаимодействие между отслеживанием изменений и параметром NO POPULATION](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
- Указывает имя столбца таблицы (*type_column_name*), в котором хранится тип документа для документа **varbinary**, **varbinary(max)** или **image**. Этот столбец называется столбцом типа и содержит указываемое пользователем расширение файла (.DOC, .PDF, .XLS и т. д.) Столбец типа должен иметь тип **char**, **nchar**, **varchar**или **nvarchar**.  
+ Указывает имя столбца таблицы (*type_column_name*), в котором хранится тип документа для документа **varbinary**, **varbinary(max)** или **image**. Этот столбец называется столбцом типа и содержит указываемое пользователем расширение файла (.DOC, .PDF, .XLS и т. д.) Столбец типа должен иметь тип **char**, **nchar**, **varchar** или **nvarchar**.  
   
  Указывайте параметр TYPE COLUMN *type_column_name* только в случае, когда в параметре *column_name* указан столбец типа **varbinary**, **varbinary(max)** или **image**, где данные хранятся в двоичном виде. В противном случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвратит ошибку.  
   

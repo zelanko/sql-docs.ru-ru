@@ -24,16 +24,16 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 26c8d6f53ef87fa2d9e6ab5dcfee6b39be01834f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92196812"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Изменяет значение параметра конфигурации (столбец **config_value** в результирующем наборе данных процедуры **sp_configure**) с помощью хранимой системной процедуры **sp_configure**. Поскольку для изменения некоторых параметров конфигурации требуется остановка и перезапуск сервера, инструкция RECONFIGURE не всегда обновляет текущее значение (столбец **run_value** в результирующем наборе данных процедуры**sp_configure**) для измененного параметра конфигурации.    
+  Изменяет значение параметра конфигурации (столбец **config_value** в результирующем наборе данных процедуры **sp_configure**) с помощью хранимой системной процедуры **sp_configure**. Поскольку для изменения некоторых параметров конфигурации требуется остановка и перезапуск сервера, инструкция RECONFIGURE не всегда обновляет текущее значение (столбец **run_value** в результирующем наборе данных процедуры **sp_configure**) для измененного параметра конфигурации.    
     
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     

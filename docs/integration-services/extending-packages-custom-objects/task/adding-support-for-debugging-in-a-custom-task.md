@@ -23,11 +23,11 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23abaf34f5bec9ecab8e506a123e9e9a1ec4f81f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430456"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123075"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Добавление поддержки отладки в пользовательскую задачу
 
@@ -45,7 +45,7 @@ ms.locfileid: "88430456"
  Задачи, не использующие точек останова, должны тем не менее реализовывать интерфейсы <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> и <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. Это гарантирует, что задача правильно приостановится, если другие объекты в пакете инициируют события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>Интерфейс IDTSBreakpointSite и класс BreakpointManager  
- Задачи создают целевые объекты точек останова, вызывая метод <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> класса <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, предоставляя целочисленный идентификатор и строковое описание как параметры. Когда задача достигает точки в коде, которая содержит целевой объект точки останова, она оценивает целевой объект при помощи метода <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A>, чтобы определить, включена ли точка останова. Если возвращается значение**true**, задача уведомляет обработчик среды выполнения, инициируя событие <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
+ Задачи создают целевые объекты точек останова, вызывая метод <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> класса <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, предоставляя целочисленный идентификатор и строковое описание как параметры. Когда задача достигает точки в коде, которая содержит целевой объект точки останова, она оценивает целевой объект при помощи метода <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A>, чтобы определить, включена ли точка останова. Если возвращается значение **true**, задача уведомляет обработчик среды выполнения, инициируя событие <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
  Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> определяет единственный метод <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>, который вызывается обработчиком среды выполнения во время создания задачи. Этот метод предоставляет в качестве параметра объект <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, который далее используется задачей для создания точек останова и управления ими. Задачи должны хранить объект <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> локально для использования во время выполнения методов **Validate** и **Execute**.  
   

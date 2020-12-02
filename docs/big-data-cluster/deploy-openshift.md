@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 91c491facec15ea50ee93641ff9482b20e5bbf1a
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892494"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96123989"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в локальной среде OpenShift и Azure Red Hat OpenShift
 
@@ -37,7 +37,7 @@ ms.locfileid: "91892494"
 > [!IMPORTANT]
 > Указанные ниже предварительные требования должны быть выполнены администратором кластера OpenShift (роль кластера "Администратор кластера") с достаточными разрешениями для создания этих объектов на уровне кластера. Дополнительные сведения о ролях кластера в OpenShift см. в разделе [Использование RBAC для определения и применения разрешений](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
 
-1. Измените параметр `pidsLimit` в OpenShift в соответствии с рабочими нагрузками SQL Server. Значение по умолчанию в OpenShift слишком мало для нагрузок, характерных для рабочей среды. Рекомендуется указать по меньшей мере `4096`, но оптимальное значение будет зависеть от параметра `max worker threads` в SQL Server и количества процессоров ЦП на узле OpenShift. 
+1. Измените параметр `pidsLimit` в OpenShift в соответствии с рабочими нагрузками SQL Server. Значение по умолчанию в OpenShift слишком мало для нагрузок, характерных для рабочей среды. Укажите по меньшей мере значение `4096`, но оптимальное значение будет зависеть от параметра `max worker threads` в SQL Server и числа ЦП на узле OpenShift. 
     - Чтобы узнать, как изменить `pidsLimit` для кластера OpenShift, используйте [эти инструкции]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md). Обратите внимание, что версии OpenShift до `4.3.5` имели дефект, препятствовавший применению измененного значения. Обновите OpenShift до последней версии. 
     - Чтобы упростить расчет оптимального значения с учетом среды и запланированных рабочих нагрузок SQL Server, можно использовать оценку и примеры ниже:
 
@@ -49,7 +49,13 @@ ms.locfileid: "91892494"
     > [!NOTE]
     > Другие процессы (например, резервное копирование, CLR, Fulltext, SQLAgent) также добавляют некоторые дополнительные служебные данные, поэтому добавляйте к предполагаемому значению некоторый запас.
 
-2. Создайте настраиваемое ограничение контекста безопасности (SCC) с помощью присоединенного [`bdc-scc.yaml`](#bdc-sccyaml-file).
+1. Скачайте настраиваемое ограничение контекста безопасности (SCC) [`bdc-scc.yaml`](#bdc-sccyaml-file):
+
+    ```console
+    curl https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml -o bdc-scc.yaml
+    ```
+
+1. Примените его к кластеру.
 
     ```console
     oc apply -f bdc-scc.yaml
@@ -104,7 +110,7 @@ ms.locfileid: "91892494"
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   Для развертывания в ARO рекомендуется начать с одного из профилей `aro-` , включающих значения по умолчанию для `serviceType` и `storageClass`, подходящие для этой среды. Пример:
+   Для развертывания в ARO начните с одного из профилей `aro-`, который включает значения по умолчанию для `serviceType` и `storageClass`, подходящие для этой среды. Пример:
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -129,19 +135,19 @@ ms.locfileid: "91892494"
 
 1. После успешного развертывания можно войти в систему и вывести список конечных точек внешнего кластера:
 
-```console
-   azdata login -n mssql-cluster
-   azdata bdc endpoint list
-```
+   ```console
+      azdata login -n mssql-cluster
+      azdata bdc endpoint list
+   ```
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>Параметры для OpenShift в файлах конфигурации развертывания
 
 Накопительный пакет обновления 5 для SQL Server 2019 представляет два параметра для управления сбором метрик объектов pod и узлов. Для этих параметров по умолчанию во встроенных профилях для OpenShift задано значение `false`, так как контейнерам мониторинга требуется [привилегированный контекст безопасности](https://www.openshift.com/blog/managing-sccs-in-openshift), что ослабляет некоторые ограничения безопасности для пространства имен, в котором развернут кластер больших данных.
 
 ```json
-    "security": {
-      "allowNodeMetricsCollection": false,
-      "allowPodMetricsCollection": false
+    "security": {
+      "allowNodeMetricsCollection": false,
+      "allowPodMetricsCollection": false
 }
 ```
 
@@ -164,47 +170,9 @@ ms.locfileid: "91892494"
 
 ## <a name="bdc-sccyaml-file"></a>Файл `bdc-scc.yaml`
 
-```yaml
-apiVersion: security.openshift.io/v1
-kind: SecurityContextConstraints
-metadata:
-  annotations:
-    kubernetes.io/description: SQL Server BDC custom scc is based on 'nonroot' scc plus additional capabilities.
-  generation: 2
-  name: bdc-scc
-allowHostDirVolumePlugin: false
-allowHostIPC: false
-allowHostNetwork: false
-allowHostPID: false
-allowHostPorts: false
-allowPrivilegeEscalation: true
-allowPrivilegedContainer: false
-allowedCapabilities:
-  - SETUID
-  - SETGID
-  - CHOWN
-  - SYS_PTRACE
-defaultAddCapabilities: null
-fsGroup:
-  type: RunAsAny
-readOnlyRootFilesystem: false
-requiredDropCapabilities:
-  - KILL
-  - MKNOD
-runAsUser:
-  type: MustRunAsNonRoot
-seLinuxContext:
-  type: MustRunAs
-supplementalGroups:
-  type: RunAsAny
-volumes:
-  - configMap
-  - downwardAPI
-  - emptyDir
-  - persistentVolumeClaim
-  - projected
-  - secret
-```
+Файл SCC для этого развертывания:
+
+:::code language="yaml" source="../../sql-server-samples/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml":::
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

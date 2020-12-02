@@ -12,10 +12,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3e1b6c318bd971e5352ad0191ccad51e20f5560a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193809"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Занятие 2–1. Построение программы развертывания
@@ -31,7 +31,7 @@ ms.locfileid: "92193809"
   
 ### <a name="to-set-the-deployment-utility-properties"></a>Установка свойств программы развертывания  
   
-1.  Если среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] еще не открыта, нажмите кнопку **Пуск**, наведите указатель на пункт **Все программы**, затем на пункт **Microsoft SQL Server**и выберите **Среда Business Intelligence Development Studio**.  
+1.  Если среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] еще не открыта, нажмите кнопку **Пуск**, наведите указатель на пункт **Все программы**, затем на пункт **Microsoft SQL Server** и выберите **Среда Business Intelligence Development Studio**.  
   
 2.  В меню **Файл** выберите пункт **Открыть**, щелкните **Проект или решение**, разверните папку **Deployment Tutorial** и нажмите кнопку **Открыть**, а затем дважды щелкните файл **Deployment Tutorial.sln**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "92193809"
   
 4.  В диалоговом окне **Страницы свойств учебника по развертыванию** разверните узел "Свойства конфигурации" и выберите "Программа развертывания".  
   
-5.  В правой области диалогового окна **Страницы свойств учебника по развертыванию** убедитесь в том, что свойство **AllowConfigurationChanges** имеет значение **true**, присвойте свойству **CreateDeploymentUtility** значение **true**и при необходимости измените значение по умолчанию свойства **DeploymentOutputPath**.  
+5.  В правой области диалогового окна **Страницы свойств учебника по развертыванию** убедитесь в том, что свойство **AllowConfigurationChanges** имеет значение **true**, присвойте свойству **CreateDeploymentUtility** значение **true** и при необходимости измените значение по умолчанию свойства **DeploymentOutputPath**.  
   
 6.  Нажмите кнопку **ОК**.  
   

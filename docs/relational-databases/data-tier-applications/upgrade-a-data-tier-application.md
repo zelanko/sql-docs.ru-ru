@@ -24,10 +24,10 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be606f7aa8f42b9966f6b1a2d1e3e21095b03916
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92196226"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Обновление приложения уровня данных
@@ -79,7 +79,7 @@ ms.locfileid: "92196226"
 ##  <a name="using-the-upgrade-data-tier-application-wizard"></a><a name="UsingDACUpgradeWizard"></a> Использование мастера обновления приложения уровня данных  
  **Обновление приложения уровня данных с помощью мастера**  
   
-1.  В **Обозревателе объектов**разверните узел экземпляра с приложением уровня данных, которое требуется обновить.  
+1.  В **Обозревателе объектов** разверните узел экземпляра с приложением уровня данных, которое требуется обновить.  
   
 2.  Разверните узел **Управление** , а затем узел **Приложения уровня данных** .  
   

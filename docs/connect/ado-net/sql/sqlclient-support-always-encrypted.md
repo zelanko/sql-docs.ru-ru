@@ -1,7 +1,7 @@
 ---
 title: Использование Always Encrypted с SqlClient
 description: Узнайте, как разрабатывать приложения с использованием Microsoft.Data.SqlClient и Always Encrypted для обеспечения безопасности данных.
-ms.date: 07/09/2020
+ms.date: 11/16/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: fbfa8e19599294df827756da495fbe4eb43c479d
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: bb971ed9fdc24491babf1ce9fe777210778037de
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081613"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96123905"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Использование Always Encrypted с поставщиком данных Microsoft .NET для SQL Server
 
-[!INCLUDE[appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
+[!INCLUDE[appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 В этой статье содержатся сведения о разработке приложений .NET с помощью [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) или [Always Encrypted с безопасными анклавами](../../../relational-databases/security/encryption/always-encrypted-enclaves.md) и [**поставщика данных Microsoft .NET. для SQL Server**](../microsoft-ado-net-sql-server.md).
 
@@ -28,20 +28,32 @@ ms.locfileid: "92081613"
 ## <a name="prerequisites"></a>Предварительные требования
 
 - Настройте функцию постоянного шифрования в базе данных. В процесс настройки входят действия по подготовке ключей постоянного шифрования и настройке шифрования для выбранных столбцов базы данных. Если в базе данных Always Encrypted еще не настроен, следуйте инструкциям в разделе [Начало работы с Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
-- Убедитесь, что на компьютере разработки установлена требуемая платформа .NET. В [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md) функция Always Encrypted поддерживается как для .NET Framework, так и для .NET Core. Необходимо убедиться, что в среде разработки в качестве целевой версии платформы установлена платформа [.NET Framework 4.6](/dotnet/framework/) или более поздней версии или [.NET Core 2.1](/dotnet/core/). Если вы используете Visual Studio, обратитесь к статье [Общие сведения о настройке целевой платформы](/visualstudio/ide/visual-studio-multi-targeting-overview).
+- Убедитесь, что на компьютере разработки установлена требуемая платформа .NET. В [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md) функция Always Encrypted поддерживается как для .NET Framework, так и для .NET Core. Убедитесь, что в среде разработки в качестве целевой версии платформы установлена платформа [.NET Framework 4.6](/dotnet/framework/) или более поздней версии, или [.NET Core 2.1](/dotnet/core/). Начиная с Microsoft.Data.SqlClient версии 2.1.0, функция Always Encrypted также поддерживается для [.NET Standard 2.0](/dotnet/standard/net-standard). Чтобы использовать Always Encrypted с безопасными анклавами, требуется версия [.NET Standard 2.1](/dotnet/standard/net-standard). Если вы используете Visual Studio, см. статью [Общие сведения о настройке целевой платформы](/visualstudio/ide/visual-studio-multi-targeting-overview).
+
+В следующей таблице перечислены необходимые платформы .NET для использования функции Always Encrypted с **Microsoft.Data.SqlClient**.
+
+| Поддержка Always Encrypted | Поддержка Always Encrypted с безопасными анклавами  | Требуемая версия .NET Framework | Версия Microsoft.Data.SqlClient | Операционная система |
+|:--|:--|:--|:--:|:--:|
+| Да | Да | .NET Framework 4.6+ | 1.1.0 и выше | Windows |
+| Да | Да | .NET Core 2.1+ | 2.1.0 и выше<sup>1</sup> | Windows, Linux, macOS |
+| Да | Нет | .NET Standard 2.0 | 2.1.0 и выше | Windows, Linux, macOS |
+| Да | Да | .NET Standard 2.1 и выше | 2.1.0 и выше | Windows, Linux, macOS |
+
+> [!NOTE]
+> <sup>1</sup> В версиях Microsoft.Data.SqlClient ниже 2.1.0 функция Always Encrypted поддерживается только для Windows. 
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>Включение постоянного шифрования для запросов приложений
 
 Самым простым способом включения шифрования параметров и расшифровки результатов запросов, предназначенных для зашифрованных столбцов, является установка для ключевого слова `Column Encryption Setting` строки подключения значения **enabled**.
 
-Ниже приведен пример строки подключения, включающий постоянное шифрование.
+Следующий пример демонстрирует использование строки подключения, которая включает функцию Always Encrypted.
 
 ```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
 SqlConnection connection = new SqlConnection(connectionString);
 ```
 
-Далее приведен эквивалент примера с использованием свойства SqlConnectionStringBuilder.ColumnEncryptionSetting.
+Следующий фрагмент кода выполняет ту же операцию с использованием свойства SqlConnectionStringBuilder.ColumnEncryptionSetting.
 
 ```cs
 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
@@ -75,8 +87,6 @@ connection.Open();
 
 Пошаговое руководство см. в статье [Учебник. Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md) (Разработка приложения NET с помощью Always Encrypted с безопасными анклавами).
 
-> [!NOTE]
-> Always Encrypted с безопасными анклавами поддерживается только в Windows.
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Получение и изменение данных в зашифрованных столбцах
 
@@ -90,7 +100,7 @@ connection.Open();
 | Запросы с параметрами, предназначенными для зашифрованных столбцов. | Значения параметров прозрачно шифруются. | Error | Error |
 | Запросы, получающие данные из зашифрованных столбцов, без параметров, предназначенных для зашифрованных столбцов. | Результаты из зашифрованных столбцов прозрачно расшифровываются. Приложение получает значения типов данных .NET в виде открытого текста, которые соответствуют типам SQL Server, настроенным для зашифрованных столбцов. | Error | Результаты из зашифрованных столбцов не расшифровываются. Приложение получает зашифрованные значения в виде массивов байтов (byte[]). |
 
-В следующих примерах показано получение и изменение данных в зашифрованных столбцах. В примерах предполагается использование целевой таблицы с приведенной ниже схемой. Столбцы SSN и BirthDate зашифрованы.
+В следующих примерах показано получение и изменение данных в зашифрованных столбцах. В примерах предполагается использование целевой таблицы с приведенной ниже схемой. Столбцы `SSN` и `BirthDate` шифруются.
 
 ```sql
 CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
@@ -113,9 +123,9 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 В этом примере показана вставка строки в таблицу Patients. Следует отметить следующее.
 
 - В образце кода нет ничего, связанного с шифрованием. **Поставщик данных Microsoft .NET. для SQL Server** автоматически обнаруживает и шифрует параметры `paramSSN` и `paramBirthdate`, предназначенные для зашифрованных столбцов. В этом случае шифрование является прозрачным для приложения.
-- Значения, вставляемые в столбцы базы данных, включая зашифрованные столбцы, передаются как объекты [SqlParameter](/dotnet/api/microsoft.data.sqlclient.sqlparameter) . Несмотря на то, что при отправке значений в незашифрованные столбцы использовать параметр **SqlParameter** необязательно (но настоятельно рекомендуется, так как он помогает предотвратить внедрение кода SQL), он требуется для значений, предназначенных для зашифрованных столбцов. Если значения, вставленные в столбцы SSN или BirthDate, были переданы в качестве литералов, внедренных в инструкцию запроса, выполнение запроса завершится ошибкой, так как **поставщик данных Microsoft .NET для SQL Server** не сможет определить значения в зашифрованных столбцах и поэтому не сможет зашифровать значения. В результате сервер отклонит их как несовместимые с зашифрованными столбцами.
-- Для типа данных параметра, предназначенного для столбца SSN, задана строка ANSI (отличная от Юникода), которая сопоставляется с типом данных char и varchar SQL Server. Если для типа параметра была задана строка в Юникоде (String), которая сопоставляется с типом данных char и varchar, выполнение запроса завершится ошибкой, так как постоянное шифрование не поддерживает преобразования из зашифрованных значений nchar и nvarchar в зашифрованные значения char и varchar. Сведения о сопоставлении типов данных см. в разделе [Сопоставления типов данных SQL Server](/dotnet/framework/data/adonet/sql-server-data-type-mappings) .
-- В качестве типа данных параметра, вставляемого в столбец BirthDate, явным образом задан целевой тип данных SQL Server. Для этого использовалось свойство [SqlParameter.SqlDbType Property](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqldbtype), а не неявное сопоставление типов .NET с типами данных SQL Server, применяемыми при работе со свойством [SqlParameter.DbType Property](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype). По умолчанию [структура DateTime](/dotnet/api/system.datetime) сопоставляется с типом данных datetime SQL Server. Так как типом данных столбца BirthDate является date и постоянное шифрование не поддерживает преобразование зашифрованных значений datetime в зашифрованные значения date, использование сопоставления по умолчанию приведет к ошибке.
+- Значения, вставляемые в столбцы базы данных, включая зашифрованные столбцы, передаются как объекты [SqlParameter](/dotnet/api/microsoft.data.sqlclient.sqlparameter) . Несмотря на то, что при отправке значений в незашифрованные столбцы использовать параметр **SqlParameter** необязательно (но настоятельно рекомендуется, так как он помогает предотвратить внедрение кода SQL), он требуется для значений, предназначенных для зашифрованных столбцов. Если значения, вставленные в столбцы `SSN` или `BirthDate`, были переданы в качестве литералов, внедренных в инструкцию запроса, выполнение этого запроса завершится ошибкой, так как **поставщик данных Microsoft .NET для SQL Server** не сможет определить значения в зашифрованных столбцах и не сможет зашифровать эти значения. В результате сервер отклонит их как несовместимые с зашифрованными столбцами.
+- Параметр, предназначенный для столбца `SSN`, определен как строка ANSI (отличающаяся от Юникода). Это тип данных, который сопоставляется с типом данных char/varchar в SQL Server. Если для типа параметра была задана строка в Юникоде (String), которая сопоставляется с типом данных char и varchar, выполнение запроса завершится ошибкой, так как постоянное шифрование не поддерживает преобразования из зашифрованных значений nchar и nvarchar в зашифрованные значения char и varchar. Сведения о сопоставлении типов данных см. в разделе [Сопоставления типов данных SQL Server](/dotnet/framework/data/adonet/sql-server-data-type-mappings) .
+- Для параметра, вставляемого в столбец `BirthDate`, с помощью свойства [SqlParameter.SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqldbtype) явным образом задан требуемый тип данных SQL Server, чтобы исключить неявное сопоставление типов .NET с типами данных SQL Server, которое выполняется при использовании свойства [SqlParameter.DbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype). По умолчанию [структура DateTime](/dotnet/api/system.datetime) сопоставляется с типом данных datetime SQL Server. Так как для столбца `BirthDate` задан тип данных date, а функция Always Encrypted не поддерживает преобразование зашифрованных значений datetime в зашифрованные значения date, выполнение стандартного сопоставления приведет к ошибке.
 
 ```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
@@ -165,12 +175,6 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 В приведенном ниже примере показана фильтрация данных на основе зашифрованных значений и получение данных в виде открытого текста из зашифрованных столбцов. Следует отметить следующее.
 
-- Значение, используемое в предложении WHERE для фильтрации по столбцу SSN, необходимо передать с помощью SqlParameter, чтобы **поставщик данных Microsoft .NET для SQL Server** мог его прозрачно зашифровать перед отправкой в базу данных.
-- Все значения, выводимые программой, будут представлены в виде обычного текста, так как **поставщик данных Microsoft .NET для SQL Server** прозрачно расшифровывает данные, полученные из столбцов SSN и BirthDate.
-
-> [!NOTE]
-> Запросы могут выполнять сравнение на равенство для столбцов, если они шифруются с помощью детерминированного шифрования. Дополнительные сведения см. в разделе [Выбор детерминированного или случайного шифрования](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
-
 ```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
@@ -199,14 +203,18 @@ using (SqlCommand cmd = connection.CreateCommand())
 }
 ```
 
+> [!NOTE]
+> - Значение, используемое в предложении WHERE для фильтрации по столбцу `SSN`, необходимо передать с помощью SqlParameter, чтобы **поставщик данных Microsoft .NET для SQL Server** смог прозрачно зашифровать его перед отправкой в базу данных.
+>
+> - Все значения, выводимые программой, будут представлены в виде обычного текста, так как **поставщик данных Microsoft .NET для SQL Server** прозрачно расшифровывает данные, полученные из столбцов `SSN` и `BirthDate`.
+>
+> - Запросы могут выполнять сравнение на равенство для столбцов, если они шифруются с помощью детерминированного шифрования. Дополнительные сведения см. в разделе [Выбор детерминированного или случайного шифрования](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+
 ### <a name="retrieving-encrypted-data-example"></a>Пример получения зашифрованных данных
 
 Если постоянное шифрование не включено, запрос может получать данные из зашифрованных столбцов, пока для него не будут указаны параметры, предназначенные для зашифрованных столбцов.
 
-В следующем примере показано извлечение двоичных зашифрованных данных из зашифрованных столбцов. Следует отметить следующее.
-
-- Так как постоянное шифрование не включено в строке подключения, запрос будет возвращать зашифрованные значения SSN и BirthD в виде байтовых массивов (программа преобразует значения в строки).
-- Запрос, получающий данные из зашифрованных столбцов с отключенным постоянным шифрованием, может иметь параметры при условии, что ни один из параметров не предназначен для зашифрованного столбца. Приведенный выше запрос выполняет фильтрацию по LastName, который не зашифрован в базе данных. Запрос, отфильтрованный по SSN или BirthDate, завершится ошибкой.
+В следующем примере показано извлечение двоичных зашифрованных данных из зашифрованных столбцов. 
 
 ```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true";
@@ -236,6 +244,11 @@ using (SqlCommand cmd = connection.CreateCommand())
     }
 }
 ```
+
+> [!NOTE]
+> - Так как в строке подключения не включена функция Always Encrypted, этот запрос вернет зашифрованные значения `SSN` и `BirthDate` в виде массивов байтов (программа преобразует эти значения в строки).
+>
+> - Запрос, получающий данные из зашифрованных столбцов с отключенным постоянным шифрованием, может иметь параметры при условии, что ни один из параметров не предназначен для зашифрованного столбца. Приведенный выше запрос выполняет фильтрацию по LastName, который не зашифрован в базе данных. Запрос с фильтром по `SSN` или `BirthDate` завершится ошибкой.
 
 ### <a name="avoiding-common-problems-when-querying-encrypted-columns"></a>Как избежать распространенных проблем при запросе зашифрованных столбцов
 
@@ -274,7 +287,7 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 Чтобы зашифровать значение параметра или расшифровать данные в результатах запроса, **поставщику данных Microsoft .NET для SQL Server** необходимо получить ключ шифрования столбца, настроенный для целевого столбца. Ключи шифрования столбцов хранятся в зашифрованном виде в метаданных базы данных. Каждый ключ шифрования столбца имеет соответствующий главный ключ столбца, который использовался для шифрования ключа шифрования столбца. Метаданные базы данных не хранят главные ключи столбцов — они содержат только сведения о хранилище ключей, где находится определенный главный ключ столбца, и расположении ключа в хранилище ключей.
 
-Чтобы получить значение в виде открытого текста для ключа шифрования столбца, **поставщик данных Microsoft .NET для SQL Server** сначала получает метаданные о ключе шифрования столбца и соответствующем ему главном ключе столбца, а затем использует сведения в метаданных для доступа в хранилище ключей, содержащее главный ключ столбца, и для расшифровки ключа шифрования зашифрованных столбцов. **Поставщик данных Microsoft .NET для SQL Server** взаимодействует с хранилищем ключей с помощью поставщика хранилища главных ключей столбцов, который является экземпляром класса, производным от класса[ SqlColumnEncryptionKeyStoreProvider](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider).
+Чтобы получить значение ключа шифрования столбца в формате открытого текста, **поставщик данных Microsoft .NET для SQL Server** сначала получит метаданные как для ключа шифрования столбца, так и для соответствующего главного ключа столбца. Затем он применит эти метаданные для обращения в хранилище ключей, где хранится главный ключ столбца, и для расшифровки зашифрованного ключа шифрования столбца. **Поставщик данных Microsoft .NET для SQL Server** взаимодействует с хранилищем ключей с помощью поставщика хранилища главных ключей столбцов, который является экземпляром класса, производным от класса [ SqlColumnEncryptionKeyStoreProvider](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider).
 
 Процедура получения ключа шифрования столбца:
 
@@ -286,7 +299,7 @@ using (SqlCommand cmd = connection.CreateCommand())
 
     - Зашифрованное значение ключа шифрования столбца.
     - Имя алгоритма, который использовался для шифрования ключа шифрования столбца.
-2. **Поставщик данных Microsoft .NET для SQL Server** использует имя поставщика хранилища главных ключей столбцов для поиска объекта поставщика (экземпляр класса, производного от класса SqlColumnEncryptionKeyStoreProvider class) во внутренней структуре данных.
+2. **Поставщик данных Microsoft .NET для SQL Server** использует во внутренней структуре данных имя поставщика хранилища главных ключей столбцов для поиска объекта поставщика, который представляет собой экземпляр класса, производного от SqlColumnEncryptionKeyStoreProvider.
 3. Чтобы расшифровать ключ шифрования столбца, **поставщик данных Microsoft .NET для SQL Server** вызывает метод `SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey()`, передавая путь к главному ключу столбца, зашифрованное значение ключа шифрования столбца и имя алгоритма шифрования, используемого для создания ключа шифрования зашифрованных столбцов.
 
 ### <a name="using-built-in-column-master-key-store-providers"></a>Использование встроенных поставщиков хранилища главных ключей столбцов
@@ -316,11 +329,13 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 ### <a name="implementing-a-custom-column-master-key-store-provider"></a>Реализация настраиваемого поставщика хранилища главных ключей столбцов
 
-Чтобы сохранить главные ключи столбцов в хранилище ключей, не поддерживаемом существующим поставщиком, можно реализовать настраиваемый поставщик, расширив [класс SqlColumnEncryptionCngProvider](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) и зарегистрировав поставщик с помощью метода [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders).
+Чтобы сохранить главные ключи столбцов в хранилище ключей, не поддерживаемом существующим поставщиком, можно реализовать настраиваемый поставщик, расширив [класс SqlColumnEncryptionKeyStoreProvider](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider) и зарегистрировав поставщик с помощью метода [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders).
 
 ```cs
 public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
 {
+    public const string ProviderName = "MY_CUSTOM_STORE";
+
     public override byte[] EncryptColumnEncryptionKey(string masterKeyPath, string encryptionAlgorithm, byte[] columnEncryptionKey)
     {
         // Logic for encrypting a column encrypted key.
@@ -334,11 +349,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Dictionary\<string, SqlColumnEncryptionKeyStoreProvider> providers =
-            new Dictionary\<string, SqlColumnEncryptionKeyStoreProvider>();
-        providers.Add("MY_CUSTOM_STORE", customProvider);
-        SqlConnection.RegisterColumnEncryptionKeyStoreProviders(providers);
-        providers.Add(SqlColumnEncryptionCertificateStoreProvider.ProviderName, customProvider);
+        Dictionary<string, SqlColumnEncryptionKeyStoreProvider> providers =
+            new Dictionary<string, SqlColumnEncryptionKeyStoreProvider>();
+        providers.Add(MyCustomKeyStoreProvider.ProviderName, new MyCustomKeyStoreProvider());
         SqlConnection.RegisterColumnEncryptionKeyStoreProviders(providers);
         // ...
     }
@@ -394,7 +407,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 **Поставщик данных Microsoft .NET для SQL Server** кэширует результаты **sys.sp_describe_parameter_encryption** для каждой инструкции запроса. Следовательно, если одна и та же инструкция запроса выполняется несколько раз, драйвер вызывает **sys.sp_describe_parameter_encryption** всего один раз. Кэширование метаданных шифрования для инструкций запроса значительно сокращает затраты ресурсов на получение метаданных из базы данных. Кэширование включено по умолчанию. Вы можете отключить параметр кэширования метаданных, задав для [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled свойство](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled) значение false, однако рекомендуется делать это только в редких случаях, например в описанной ниже ситуации:
 
-Рассмотрим базу данных с двумя различными схемами: s1 и s2. Каждая схема содержит таблицу с одинаковым именем: t. Определения таблиц s1.t и s2.t идентичны за исключением свойств, связанных с шифрованием: столбец с именем "c" в таблице s1.t не шифруется, но он зашифрован в таблице s2.t. База данных имеет двух пользователей: u1 и u2. Схема по умолчанию для пользователя u1 — s1. Схема по умолчанию для u2 — s2. Приложения .NET открывает два подключения к базе данных, олицетворяя пользователя u1 в одном соединении и пользователя u2 в другом. Приложение отправляет запрос с параметром, предназначенным для столбца c, через подключение для пользователя u1 (запрос не указывает схему, поэтому подразумевается схема пользователя по умолчанию). Затем приложение отправляет тот же запрос через соединение для пользователя u2. Если кэширование метаданных запроса включено, после первого запроса кэш заполняется метаданными, указывающими, что столбец c, для которого предназначен параметр запроса, не шифруется. Так как второй запрос такую же инструкцию запроса, используются сведения, хранящиеся в кэше. В результате драйвер посылает запрос без шифрования параметра (что неверно, так как целевой столбец s2.t.c шифруется), в результате чего происходит утечка значения параметра в формате открытого текста на сервер. Сервер обнаружит несоответствие и велит драйверу обновить кэш, чтобы приложение могло прозрачно переотправить запрос с правильно зашифрованным значением параметра. В этом случае следует отключить кэширование во избежание утечки конфиденциальных значений на сервер.
+Рассмотрим базу данных с двумя схемами `s1` и `s2`. Каждая из этих схем содержит таблицу с именем `t`. Определения таблиц `s1.t` и `s2.t` идентичны за исключением свойств,с вязанных с шифрованием. Столбец с именем `c` в таблице `s1.t` не шифруется, но шифруется в таблице `s2.t`. База данных имеет двух пользователей: `u1` и `u2`. Для пользователя `u1` указана схема по умолчанию `s1`. Для `u2` указана схема по умолчанию `s2`. Приложение .NET открывает два подключения к базе данных, олицетворяя пользователя `u1` в одном из них и пользователя `u2` в другом. Это приложение отправляет запрос с параметром, указывающим на столбец `c`, через подключение для пользователя `u1` (этот запрос не определяет схему, поэтому применяется схема пользователя по умолчанию). Затем приложение отправляет тот же запрос через подключение для пользователя `u2`. Если кэширование метаданных запроса включено, после первого запроса в кэш помещаются метаданные с информацией о том, что целевой столбец `c` не шифруется. Так как второй запрос такую же инструкцию запроса, используются сведения, хранящиеся в кэше. В результате драйвер отправит запрос без шифрования параметра (что неверно, так как целевой столбец `s2.t.c` зашифрован), в результате чего серверу раскрывается значение параметра в виде открытого текста. Сервер обнаружит несоответствие и велит драйверу обновить кэш, чтобы приложение могло прозрачно переотправить запрос с правильно зашифрованным значением параметра. В этом случае следует отключить кэширование во избежание утечки конфиденциальных значений на сервер.
 
 ### <a name="setting-always-encrypted-at-the-query-level"></a>Задание постоянного шифрования на уровне запроса
 
@@ -406,15 +419,15 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 Для управления поведением функции Always Encrypted в отдельных запросах необходимо использовать этот конструктор [SqlCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand) и [SqlCommandColumnEncryptionSetting](/dotnet/api/microsoft.data.sqlclient.sqlcommandcolumnencryptionsetting). Ниже приведены некоторые полезные рекомендации.
 
 - Если большинство запросов, отправляемых клиентским приложением через подключение к базе данных, получает доступ к зашифрованным столбцам:
-  - Задайте для ключевого слова строки подключения **Параметр шифрования столбца** значение *Включено*.
-  - Задайте **SqlCommandColumnEncryptionSetting.Disabled** для отдельных запросов, которые не обращаются к зашифрованным столбцам. Будет отключена возможность вызова sys.sp_describe_parameter_encryption и расшифровки всех значений в наборе результатов.
-  - Задайте **SqlCommandColumnEncryptionSetting.ResultSet** для отдельных запросов, которые не имеют параметров, требующих шифрования, но получают данные из зашифрованных столбцов. Будет отключена возможность вызова sys.sp_describe_parameter_encryption и шифрования параметров. Запрос сможет расшифровывать результаты из столбцов шифрования.
+  - Задайте для ключевого слова строки подключения **Параметр шифрования столбца** значение **Включено**.
+  - Задайте **SqlCommandColumnEncryptionSetting.Disabled** для отдельных запросов, которые не обращаются к зашифрованным столбцам. В этом варианте отключается возможность вызова **sys.sp_describe_parameter_encryption** и расшифровки значений в наборе результатов.
+  - Задайте **SqlCommandColumnEncryptionSetting.ResultSetOnly** для отдельных запросов, которые не имеют требующих шифрования параметров, но получают данные из зашифрованных столбцов. В этом варианте отключается возможность вызова **sys.sp_describe_parameter_encryption** и шифрования параметров. Запрос сможет расшифровывать результаты из столбцов шифрования.
 - Если большинство запросов, отправляемых клиентским приложением через подключение к базе данных, не получают доступа к зашифрованным столбцам:
   - Задайте для ключевого слова строки подключения **Параметр шифрования столбца** значение **Отключено**.
-  - Задайте **SqlCommandColumnEncryptionSetting.Enabled** для отдельных запросов, имеющих параметры, которые требуется зашифровать. Будет включена возможность вызова sys.sp_describe_parameter_encryption и расшифровки результатов запроса, полученных из зашифрованных столбцов.
-  - Задайте **SqlCommandColumnEncryptionSetting.ResultSet** для запросов, которые не имеют параметров, требующих шифрования, но получают данные из зашифрованных столбцов. Будет отключена возможность вызова sys.sp_describe_parameter_encryption и шифрования параметров. Запрос сможет расшифровывать результаты из столбцов шифрования.
+  - Задайте **SqlCommandColumnEncryptionSetting.Enabled** для отдельных запросов, имеющих параметры, которые требуется зашифровать. В этом варианте включается возможность вызова **sys.sp_describe_parameter_encryption** и расшифровки результатов запроса, полученных из зашифрованных столбцов.
+  - Задайте **SqlCommandColumnEncryptionSetting.ResultSetOnly** для запросов, которые не имеют параметров, требующих шифрования, но получают данные из зашифрованных столбцов. В этом варианте отключается возможность вызова **sys.sp_describe_parameter_encryption** и шифрования параметров. Запрос сможет расшифровывать результаты из столбцов шифрования.
 
-В следующем примере постоянное шифрование отключено для подключения к базе данных. Запрос, выполняемый приложением, имеет параметр, предназначенный для незашифрованного столбца LastName. Запрос получает данные из зашифрованных столбцов SSN и BirthDate. В этом случае вызывать sys.sp_describe_parameter_encryption для получения метаданных шифрования не требуется. Однако необходимо включить расшифровку результатов запроса, чтобы приложение могло получать значения в виде обычного текста из двух зашифрованных столбцов. Для этого используется параметр SqlCommandColumnEncryptionSetting.ResultSet.
+В следующем примере постоянное шифрование отключено для подключения к базе данных. Запрос, выполняемый приложением, имеет параметр, предназначенный для незашифрованного столбца LastName. Этот запрос получает данные из зашифрованных столбцов `SSN` и `BirthDate`. В этом случае не нужно вызывать **sys.sp_describe_parameter_encryption** для получения метаданных шифрования. Однако необходимо включить расшифровку результатов запроса, чтобы приложение могло получать значения в виде обычного текста из двух зашифрованных столбцов. Для этого используется параметр **SqlCommandColumnEncryptionSetting.ResultSetOnly**.
 
 ```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true";
@@ -451,11 +464,11 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 ## <a name="enabling-additional-protection-for-a-compromised-sql-server"></a>Включение дополнительной защиты для скомпрометированного SQL Server
 
-По умолчанию ***поставщик данных Microsoft .NET для SQL Server*** полагается на систему базы данных (SQL Server или Базу данных SQL Azure), которая предоставляет метаданные о том, какие столбцы базы данных шифруются и как именно. Метаданные шифрования позволяют поставщику данных **Microsoft .NET для SQL Server** шифровать параметры запроса и расшифровывать результаты запроса без получения дополнительных входных данных из приложения, что позволяет значительно сократить число изменений, необходимых для приложения. Однако если процесс SQL Server скомпрометирован и злоумышленник незаконно изменяет метаданные, которые SQL Server отправляет поставщику данных **Microsoft .NET для SQL Server**, злоумышленник получает возможность украсть конфиденциальную информацию. В этом разделе описываются интерфейсы API, которые помогают обеспечить дополнительный уровень защиты от таких атак за счет снижения прозрачности.
+По умолчанию **поставщик данных Microsoft .NET для SQL Server** полагается на систему базы данных (SQL Server или Базу данных SQL Azure), которая предоставляет метаданные о том, какие столбцы базы данных шифруются и как именно. Метаданные шифрования позволяют поставщику данных **Microsoft .NET для SQL Server** шифровать параметры запроса и расшифровывать результаты запроса без получения дополнительных входных данных из приложения, что позволяет значительно сократить число изменений, необходимых для приложения. Однако если процесс SQL Server скомпрометирован и злоумышленник незаконно изменяет метаданные, которые SQL Server отправляет поставщику данных **Microsoft .NET для SQL Server**, злоумышленник получает возможность украсть конфиденциальную информацию. В этом разделе описываются интерфейсы API, которые помогают обеспечить дополнительный уровень защиты от таких атак за счет снижения прозрачности.
 
 ### <a name="forcing-parameter-encryption"></a>Принудительное шифрование параметров
 
-Прежде чем поставщик данных **Microsoft .NET для SQL Server** отправляет параметризованный запрос в SQL Server, он просит SQL Server (путем вызова[ sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)) проанализировать инструкцию запроса и предоставить сведения о том, какие параметры запроса должны быть зашифрованы. Скомпрометированный экземпляр SQL Server может ввести поставщика данных **Microsoft .NET для SQL Server** в заблуждение, отправляя метаданные о том, что параметр не предназначен для зашифрованного столбца, хотя этот столбец в базе данных шифруется. В результате поставщик данных **Microsoft .NET для SQL Server** не шифрует значение параметра и отправляет его в формате открытого текста в скомпрометированный экземпляр SQL Server.
+Прежде чем поставщик данных **Microsoft .NET для SQL Server** отправляет параметризованный запрос в SQL Server, он просит SQL Server (путем вызова [ sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)) проанализировать инструкцию запроса и предоставить сведения о том, какие параметры запроса должны быть зашифрованы. Скомпрометированный экземпляр SQL Server может ввести поставщика данных **Microsoft .NET для SQL Server** в заблуждение, отправляя метаданные о том, что параметр не предназначен для зашифрованного столбца, хотя этот столбец в базе данных шифруется. В результате поставщик данных **Microsoft .NET для SQL Server** не шифрует значение параметра и отправляет его в формате открытого текста в скомпрометированный экземпляр SQL Server.
 
 Чтобы предотвратить подобную атаку, приложение может присвоить [свойству SqlParameter.ForceColumnEncryption](/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption) для параметра значение true. Это приводит к тому, что поставщик данных **Microsoft .NET для SQL Server** выдает исключение, если полученные им с сервера метаданные указывают, что шифровать параметр не нужно.
 
@@ -511,20 +524,20 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 
 С помощью SqlBulkCopy можно скопировать данные, которые уже зашифрованы и хранятся в одной таблице, в другую таблицу, не расшифровывая при этом данные. Для этого выполните указанные далее действия.
 
-- Убедитесь, что конфигурация шифрования целевой таблицы идентична конфигурации исходной таблицы. В частности, обе таблицы должны иметь одинаковые зашифрованные столбцы, которые должны быть зашифрованы с помощью одних и тех же типов шифрования и ключей шифрования. Примечание. Если способ шифрования какого-либо целевого столбца отличается от способа шифрования соответствующего исходного столбца, вы не сможете расшифровать данные в целевой таблице после операции копирования. Данные будут повреждены.
+- Убедитесь, что конфигурация шифрования целевой таблицы идентична конфигурации исходной таблицы. В частности, обе таблицы должны иметь одинаковые зашифрованные столбцы, которые должны быть зашифрованы с помощью одних и тех же типов шифрования и ключей шифрования. Если способ шифрования какого-либо целевого столбца отличается от способа шифрования соответствующего исходного столбца, вы не сможете расшифровать данные в целевой таблице после операции копирования. Данные будут повреждены.
 - Настройте подключения базы данных к исходной и конечной таблицам без включения функции Always Encrypted.
 - Задайте параметр `AllowEncryptedValueModifications` (см. сведения о [SqlBulkCopyOptions](/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions)).
 
 > [!NOTE]
 > Используйте параметр `AllowEncryptedValueModifications` с осторожностью. **Поставщик данных Microsoft .NET для SQL Server** не проверяет, являются ли данные зашифрованными и используется ли при шифровании тот же тип, алгоритм и ключ шифрования, что у целевого столбца. Таким образом, изменение значений может повредить целевую базу.
 
-Ниже приведен пример копирования данных из одной таблицы в другую. Предполагается, что столбцы SSN и BirthDate зашифрованы.
+Ниже приведен пример копирования данных из одной таблицы в другую. Предполагается, что столбцы `SSN` и `BirthDate` зашифрованы.
 
 ```cs
 static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 {
     string sourceConnectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true";
-    string targetConnectionString = "Data Source= server64; Initial Catalog=Clinic; Integrated Security=true";
+    string targetConnectionString = "Data Source=server64; Initial Catalog=Clinic; Integrated Security=true";
     using (SqlConnection connSource = new SqlConnection(sourceConnectionString))
     {
         connSource.Open();
@@ -554,12 +567,13 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |[Класс SqlColumnEncryptionCngProvider](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider)|Поставщик хранилища ключей для интерфейса Microsoft Cryptography API: Next Generation (CNG).|
 |[Класс SqlColumnEncryptionCspProvider](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider)|Поставщик хранилища ключей для Microsoft CAPI на основе поставщиков служб шифрования (CSP).|
 |[SqlColumnEncryptionKeyStoreProvider](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider)|Базовый класс для всех поставщиков хранилища ключей.|
-|[Перечисление SqlCommandColumnEncryptionSetting](/dotnet/api/microsoft.data.sqlclient.sqlcommandcolumnencryptionsetting)|Параметры для включения шифрования и расшифровки для подключения к базе данных.|
-|[Перечисление SqlCommandColumnEncryptionSetting](/dotnet/api/microsoft.data.sqlclient.sqlconnectioncolumnencryptionsetting)|Параметры для управления поведением постоянного шифрования для отдельных запросов.|
+|[Перечисление SqlCommandColumnEncryptionSetting](/dotnet/api/microsoft.data.sqlclient.sqlcommandcolumnencryptionsetting)|Параметры для управления поведением постоянного шифрования для отдельных запросов.|
+|[Перечисление SqlConnectionAttestationProtocol](/dotnet/api/microsoft.data.sqlclient.sqlconnectionattestationprotocol)|Указывает значение для протокола аттестации при использовании Always Encrypted с безопасными анклавами|
+|[Перечисление SqlCommandColumnEncryptionSetting](/dotnet/api/microsoft.data.sqlclient.sqlconnectioncolumnencryptionsetting)|Параметры для включения шифрования и расшифровки для подключения к базе данных.|
 |[Свойство SqlConnectionStringBuilder.ColumnEncryptionSetting](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting)|Возвращает и задает постоянное шифрование в строке подключения.|
 |[SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled свойство](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled)|Включает и отключает кэширование метаданных для запроса шифрования.|
 |[свойства SqlConnection.ColumnEncryptionKeyCacheTtl](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl)|Возвращает и задает срок жизни для записей в кэше ключа шифрования столбца.|
-|[свойства SqlConnection.ColumnEncryptionTrustedMasterKeyPaths](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|Позволяет задать список доверенных путей ключа для сервера базы данных. Если при обработке запроса приложения драйвер получает путь ключа, которого нет в списке, запрос завершается с ошибкой. Это свойство обеспечивает дополнительную защиту от атак на систему безопасности, включающих предоставление скомпрометированным SQL Server фиктивных путей ключа, что может привести к утечке учетных данных хранилища ключей.|
+|[свойства SqlConnection.ColumnEncryptionTrustedMasterKeyPaths](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|Позволяет задать список доверенных путей ключа для сервера базы данных. Если при обработке запроса приложения драйвер получает путь к разделу, которого нет в списке, запрос завершится ошибкой. Это свойство обеспечивает дополнительную защиту от атак на систему безопасности, включающих предоставление скомпрометированным SQL Server фиктивных путей ключа, что может привести к утечке учетных данных хранилища ключей.|
 |[Метод SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|Позволяет регистрировать пользовательские поставщики хранилища ключей. Это словарь, сопоставляющий имена поставщиков хранилища ключей с реализациями поставщиков хранилища ключей.|
 |[Конструктор SqlCommand (String, SqlConnection, SqlTransaction, SqlCommandColumnEncryptionSetting)](/dotnet/api/microsoft.data.sqlclient.sqlcommand.-ctor?view=sqlclient-dotnet-core-1.0&preserve-view=true#Microsoft_Data_SqlClient_SqlCommand__ctor_System_String_Microsoft_Data_SqlClient_SqlConnection_Microsoft_Data_SqlClient_SqlTransaction_Microsoft_Data_SqlClient_SqlCommandColumnEncryptionSetting_)|Позволяет управлять поведением постоянного шифрования для отдельных запросов.|
 |[свойству SqlParameter.ForceColumnEncryption](/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption)|Принудительно шифрует параметр. Если SQL Server сообщает драйверу, что параметр не должен быть зашифрован, запрос, использующий параметр, завершится ошибкой. Это свойство обеспечивает дополнительную защиту от атак на систему безопасности, включающих предоставление клиенту скомпрометированным SQL Server неверных метаданных шифрования, что может привести к раскрытию данных.|
@@ -568,6 +582,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## <a name="see-also"></a>См. также раздел
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted с безопасными анклавами](../../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [Учебник по базе данных SQL: защита конфиденциальных данных с помощью Always Encrypted](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
 - [Руководство. Разработка приложения .NET с помощью Always Encrypted с безопасными анклавами](tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Пример. Использование Azure Key Vault с Always Encrypted](azure-key-vault-example.md)

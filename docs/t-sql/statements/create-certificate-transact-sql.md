@@ -29,11 +29,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067435"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124148"
 ---
 # <a name="create-certificate-transact-sql"></a>Инструкция CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -126,7 +126,7 @@ CREATE CERTIFICATE certificate_name
  ASSEMBLY *assembly_name*  
  Указывает подписанную сборку, уже загруженную в базу данных.  
   
- [ EXECUTABLE ] FILE = ' *path_to_file* '  
+ [ EXECUTABLE ] FILE = '*path_to_file*'  
  Указывает полный путь, включающий имя файла, к файлу, зашифрованному по правилам DER и содержащему сертификат. Если используется параметр EXECUTABLE, то файл является библиотекой DLL, заверенной с использованием данного сертификата. *path_to_file* может быть локальным путем или UNC-путем к расположению в сети. Доступ к файлу осуществляется в контексте безопасности учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта учетная запись должна иметь соответствующие разрешения на доступ в файловой системе.  
 
 > [!IMPORTANT]
@@ -134,35 +134,35 @@ CREATE CERTIFICATE certificate_name
   
  BINARY = *asn_encoded_certificate*  
  Биты закодированного в ASN сертификата, указанного в качестве двоичной константы.  
- **Область применения** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  WITH PRIVATE KEY  
  Указывает, что закрытый ключ сертификата загружен в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это предложение действительно лишь в случае, когда сертификат создается из сборки. Для загрузки закрытого ключа сертификата, созданного из сборки, следует использовать команду [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
   
- FILE =' *path_to_private_key* '  
+ FILE ='*path_to_private_key*'  
  Указывает полный путь к закрытому ключу, включая имя файла. *path_to_private_key* может быть локальным путем или UNC-путем к расположению в сети. Доступ к файлу осуществляется в контексте безопасности учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта учетная запись должна иметь соответствующие разрешения на доступ в файловой системе.  
   
 > [!IMPORTANT]  
 > Этот параметр недоступен в автономной базе данных или в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  BINARY = *private_key_bits*  
- **Область применения** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Биты закрытого ключа, указанного в качестве двоичной константы. Биты могут находиться в зашифрованном виде. Если они зашифрованы, пользователь должен предоставить пароль для расшифровки. Проверка политики паролей для данного пароля не выполняется. Биты закрытого ключа должны быть в формате файла PVK.  
   
- DECRYPTION BY PASSWORD = ' *key_password* '  
+ DECRYPTION BY PASSWORD = '*key_password*'  
  Указывает пароль, необходимый для расшифровки закрытого ключа, получаемого из файла. Это предложение необязательно, если закрытый ключ защищен пустым паролем. Не рекомендуется сохранять закрытый ключ в файл без защиты паролем. Если требуется ввод пароля, но верный пароль не указан, выполнение инструкции завершится ошибкой.  
   
- ENCRYPTION BY PASSWORD = ' *пароль* '  
+ ENCRYPTION BY PASSWORD = '*пароль*'  
  Указывает пароль для шифрования закрытого ключа. Этот аргумент нужно использовать лишь в том случае, если необходимо зашифровать сертификат с помощью пароля. Если аргумент опущен, закрытый ключ шифруется с использованием главного ключа базы данных. *password* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md).  
   
- SUBJECT = ' *certificate_subject_name* '  
+ SUBJECT = '*certificate_subject_name*'  
  Термин *subject* (субъект) относится к полю в метаданных сертификата, определяемому стандартом X.509. Длина субъекта не должна превышать 64 символов, и это ограничение действует для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Linux. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Windows он может иметь длину до 128 символов. Субъекты, имеющие длину больше 128 символов, усекаются, если они сохраняются в каталоге, однако в большом двоичном объекте (BLOB), содержащем сертификат, сохранится полное имя субъекта.  
   
- START_DATE = ' *datetime* '  
+ START_DATE = '*datetime*'  
  Дата, начиная с которой сертификат действителен. Если она не указана, в качестве значения START_DATE устанавливается текущая дата. Значение START_DATE имеет формат времени UTC. Это значение можно указать в любом формате, который можно преобразовать в формат даты и времени.  
   
- EXPIRY_DATE = ' *datetime* '  
+ EXPIRY_DATE = '*datetime*'  
  Дата истечения срока действия сертификата. Если она не указана, для EXPIRY_DATE устанавливается дата через год от START_DATE. Значение EXPIRY_DATE имеет формат времени UTC. Это значение можно указать в любом формате, который можно преобразовать в формат даты и времени. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Компонент Service Broker проверяет дату окончания срока действия. Во время резервного копирования с шифрованием при помощи сертификатов также проверяется дата окончания срока действия. Если сертификат просрочен, резервная копия не будет создана, но восстановление с просроченным сертификатом допускается. Срок действия не проверяется, когда сертификат используется для шифрования баз данных или для функции Always Encrypted.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  

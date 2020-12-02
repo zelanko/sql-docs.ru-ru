@@ -17,10 +17,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194785"
 ---
 # <a name="odbc-source"></a>ODBC-источник
@@ -134,7 +134,7 @@ ms.locfileid: "92194785"
   
 2.  На вкладке **Поток данных** дважды щелкните источник ODBC.  
   
-3.  В окне **Редактор источника ODBC**нажмите кнопку **Столбцы**.  
+3.  В окне **Редактор источника ODBC** нажмите кнопку **Столбцы**.  
   
 ### <a name="options"></a>Параметры  
   
@@ -159,7 +159,7 @@ ms.locfileid: "92194785"
   
 -   На вкладке **Поток данных** дважды щелкните источник ODBC.  
   
--   В окне **Редактор источника ODBC**нажмите кнопку **Вывод ошибок**.  
+-   В окне **Редактор источника ODBC** нажмите кнопку **Вывод ошибок**.  
   
 ### <a name="options"></a>Параметры  
   

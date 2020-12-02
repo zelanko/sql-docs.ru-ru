@@ -27,10 +27,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195598"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
@@ -69,7 +69,7 @@ ms.locfileid: "92195598"
   
 1.  Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на предприятии или в службах [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-2.  В **обозревателе объектов**щелкните правой кнопкой мыши узел **Базы данных**, а затем выберите пункт меню **Импорт приложения уровня данных** для запуска мастера.  
+2.  В **обозревателе объектов** щелкните правой кнопкой мыши узел **Базы данных**, а затем выберите пункт меню **Импорт приложения уровня данных** для запуска мастера.  
   
 3.  Выполните шаги в диалоговых окнах мастера.  
   
