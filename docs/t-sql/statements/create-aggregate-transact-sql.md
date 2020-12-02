@@ -23,11 +23,11 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300234"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126215"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Один или несколько параметров в определяемой пользователем статистической функции. Значение параметра должно быть задано пользователем при выполнении агрегатной функции. Определяет имя параметра, используя знак **@** как первый символ. Имя параметра должно соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Параметры являются локальными для функции.  
   
  *system_scalar_type*  
- Любой из системных скалярных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения значения входного параметра или возвращаемого значения. Для определяемого пользователем статистического выражения в качестве параметра могут использоваться все скалярные типы данных, кроме **text** , **ntext** и **image** . Нельзя использовать нескалярные типы, такие как **cursor** и **table** .  
+ Любой из системных скалярных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения значения входного параметра или возвращаемого значения. Для определяемого пользователем статистического выражения в качестве параметра могут использоваться все скалярные типы данных, кроме **text**, **ntext** и **image**. Нельзя использовать нескалярные типы, такие как **cursor** и **table**.  
   
  *udt_schema_name*  
  Имя схемы, к которой относится пользовательский тип данных среды CLR. Если не указано иное, [!INCLUDE[ssDE](../../includes/ssde-md.md)] ссылается на аргумент *udt_type_name* в следующем порядке:  
@@ -82,12 +82,12 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Название пользовательского типа среды CLR, созданного в текущей базе данных. Если аргумент *udt_schema_name* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предполагает, что тип принадлежит к схеме текущего пользователя.  
   
  *assembly_name* [ **.** _class_name_ ]  
- Указывает сборку, с которой связывается определяемая пользователем агрегатная функция и, при необходимости, имя схемы, к которой принадлежит сборка, и имя класса в сборке, реализующего определяемую пользователем статистическую функцию. Сборка уже должна быть создана в базе данных с помощью инструкции CREATE ASSEMBLY. Параметр *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и совпадать с именем класса, существующим в сборке. Аргумент *class_name* может быть именем, указанным в пространстве имен, если в языке программирования, использовавшемся для написания класса, применяются пространства имен, например C#. Если аргумент *class_name* не задан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считает, что его значение равно значению аргумента *aggregate_name* .  
+ Указывает сборку, с которой связывается определяемая пользователем агрегатная функция и, при необходимости, имя схемы, к которой принадлежит сборка, и имя класса в сборке, реализующего определяемую пользователем статистическую функцию. Сборка уже должна быть создана в базе данных с помощью инструкции CREATE ASSEMBLY. Параметр *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и совпадать с именем класса, существующим в сборке. Аргумент *class_name* может быть именем, указанным в пространстве имен, если в языке программирования, использовавшемся для написания класса, применяются пространства имен, например C#. Если аргумент *class_name* не задан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считает, что его значение равно значению аргумента *aggregate_name*.  
   
 ## <a name="remarks"></a>Комментарии  
  По умолчанию возможность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускать код CLR отключена. Можно создавать, изменять и удалять объекты базы данных, которые ссылаются на модули управляемого кода, но код в этих модулях не будет выполняться в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], пока параметр [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) не будет включен с помощью хранимой процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- Класс сборки, указанной в аргументе *assembly_name* , и его методы должны соответствовать всем требованиям к реализации определяемых пользователем агрегатных функций в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Пользовательские агрегатные функции среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
+ Класс сборки, указанной в аргументе *assembly_name*, и его методы должны соответствовать всем требованиям к реализации определяемых пользователем агрегатных функций в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Пользовательские агрегатные функции среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требует разрешения CREATE AGGREGATE и разрешения REFERENCES для сборки, указанной в предложении EXTERNAL NAME.  

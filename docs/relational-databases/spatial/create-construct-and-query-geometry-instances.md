@@ -15,11 +15,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ddc0df0e6949ed429d415940fe9fda4263d3190a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006352"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127709"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Создание, конструирование и запрос экземпляров geometry
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -206,7 +206,7 @@ ms.locfileid: "92006352"
   
   
 ###  <a name="dimension"></a><a name="dimension"></a> Измерение  
- Непустой объект **geometry** может иметь 0, 1 или 2 измерения. Объекты **geometries**, имеющие 0 измерений, например **Point** и **MultiPoint**, не имеют ни длины, ни площади. Одномерные объекты, такие как **LineString, CircularString, CompoundCurve**и **MultiLineString**, имеют длину. Двухмерные объекты, такие как **Polygon**, **CurvePolygon**и **MultiPolygon**, имеют длину и площадь. Пустые объекты имеют измерение -1, а объект **GeometryCollection** имеет площадь, зависящую от типов его содержимого.  
+ Непустой объект **geometry** может иметь 0, 1 или 2 измерения. Объекты **geometries**, имеющие 0 измерений, например **Point** и **MultiPoint**, не имеют ни длины, ни площади. Одномерные объекты, такие как **LineString, CircularString, CompoundCurve** и **MultiLineString**, имеют длину. Двухмерные объекты, такие как **Polygon**, **CurvePolygon** и **MultiPolygon**, имеют длину и площадь. Пустые объекты имеют измерение -1, а объект **GeometryCollection** имеет площадь, зависящую от типов его содержимого.  
   
  **Получение измерения экземпляра**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -219,7 +219,7 @@ ms.locfileid: "92006352"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Пустой  
- _Пустой_ объект **geometry** не имеет никаких точек. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve**и **MultiLineString** равна нулю. Площадь пустых экземпляров **Polygon**, **CurvePolygon**и **MultiPolygon** равна нулю.  
+ _Пустой_ объект **geometry** не имеет никаких точек. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve** и **MultiLineString** равна нулю. Площадь пустых экземпляров **Polygon**, **CurvePolygon** и **MultiPolygon** равна нулю.  
   
  **Проверка, является ли экземпляр пустым**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -244,9 +244,9 @@ ms.locfileid: "92006352"
   
  *Граница* определяется в OGC следующим образом:  
   
--   Экземпляры**Point** и **MultiPoint** не имеют границы.  
+-   Экземпляры **Point** и **MultiPoint** не имеют границы.  
   
--   Границы**LineString** и **MultiLineString** boundaries are formed by the start points и end points, removing those that occur an even number of times.  
+-   Границы **LineString** и **MultiLineString** boundaries are formed by the start points и end points, removing those that occur an even number of times.  
   
 ```sql  
 DECLARE @g geometry;  
@@ -272,7 +272,7 @@ SELECT @g.STBoundary().ToString();
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Замыкание  
- _Замкнутый_ объект **geometry** — это фигура, начальная и конечная точки которой совпадают. Экземпляры**Polygon** считаются замкнутыми. Экземпляры**Point** не замкнуты.  
+ _Замкнутый_ объект **geometry** — это фигура, начальная и конечная точки которой совпадают. Экземпляры **Polygon** считаются замкнутыми. Экземпляры **Point** не замкнуты.  
   
  Кольцо — это простой замкнутый экземпляр **LineString** .  
   

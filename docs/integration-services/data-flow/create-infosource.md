@@ -12,11 +12,11 @@ ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4672ce48890af7202445d283d15c2c167550f5a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495943"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127248"
 ---
 # <a name="create-infosource"></a>Создание InfoSource
 
@@ -36,9 +36,9 @@ ms.locfileid: "88495943"
   
 2.  На вкладке **Поток данных** дважды щелкните назначение SAP BW.  
   
-3.  В **Редакторе назначений SAP BW**щелкните **Диспетчер соединений** , чтобы открыть страницу редактора **Диспетчер соединений** .  
+3.  В **Редакторе назначений SAP BW** щелкните **Диспетчер соединений** , чтобы открыть страницу редактора **Диспетчер соединений** .  
   
-4.  На вкладке **Диспетчер соединений** в поле группы **Создание объектов SAP BW** выберите **InfoSource**и щелкните **Создать**.  
+4.  На вкладке **Диспетчер соединений** в поле группы **Создание объектов SAP BW** выберите **InfoSource** и щелкните **Создать**.  
   
 ## <a name="options"></a>Параметры  
  **Данные транзакций**  

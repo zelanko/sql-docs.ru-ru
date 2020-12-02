@@ -17,14 +17,14 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16255027d2fa0617066fcff0d2a208e70c96a9f9
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718029"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126901"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "85718029"
   
      Таблица **suspect_pages** содержит по одной строке на каждую страницу, в которой обнаружена ошибка с номером 824, но не более 1000 строк. В следующей таблице приводятся ошибки, занесенные в столбец **event_type** таблицы **suspect_pages** .  
   
-    |Описание ошибки|Значение**event_type**|  
+    |Описание ошибки|Значение **event_type**|  
     |-----------------------|---------------------------|  
     |Ошибка 823, вызванная ошибкой CRC операционной системы, или ошибка 824, не относящаяся к неверной контрольной сумме или обрыву страницы (например, неверный идентификатор страницы).|1|  
     |Неверная контрольная сумма|2|  
@@ -126,9 +126,9 @@ ms.locfileid: "85718029"
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Управление таблицей suspect_pages  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], разверните его, а затем разверните узел **Базы данных**.  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], разверните его, а затем разверните узел **Базы данных**.  
   
-2.  Разверните последовательно узлы **Системные базы данных**, **msdb**, **Таблицы**и **Системные таблицы**.  
+2.  Разверните последовательно узлы **Системные базы данных**, **msdb**, **Таблицы** и **Системные таблицы**.  
   
 3.  Разверните узел **dbo.suspect_pages** и щелкните правой кнопкой мыши **Изменить 200 верхних строк**.  
   

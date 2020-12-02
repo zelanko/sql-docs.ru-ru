@@ -23,11 +23,11 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: eac401156014952142c39851b1e703605997c245
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549428"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128000"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ CREATE FULLTEXT INDEX ON table_name
 CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
 TYPE COLUMN *type_column_name*       
-Указывает имя столбца таблицы (*type_column_name*), в котором хранится тип документа для документа **varbinary(max)** или **image**. Этот столбец называется столбцом типа и содержит указываемое пользователем расширение файла (.DOC, .PDF, .XLS и т. д.) Столбец типа должен иметь тип **char**, **nchar**, **varchar**или **nvarchar**.  
+Указывает имя столбца таблицы (*type_column_name*), в котором хранится тип документа для документа **varbinary(max)** или **image**. Этот столбец называется столбцом типа и содержит указываемое пользователем расширение файла (.DOC, .PDF, .XLS и т. д.) Столбец типа должен иметь тип **char**, **nchar**, **varchar** или **nvarchar**.  
   
 Указывайте параметр TYPE COLUMN *type_column_name* только в случае, когда в параметре *column_name* указан столбец типа **varbinary(max)** или **image**, где данные хранятся в двоичном виде. В противном случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]возвратит ошибку.  
   

@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
 ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067487"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128143"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -89,20 +89,20 @@ ALTER CERTIFICATE certificate_name
   
  WITH PRIVATE KEY указывает, что закрытый ключ сертификата следует загрузить в SQL Server.
 
- FILE =' *path_to_private_key* '  
+ FILE ='*path_to_private_key*'  
  Указывает полный путь к закрытому ключу, включая имя файла. Этот аргумент может быть локальным путем или UNC-путем к точке в сети. Доступ к файлу осуществляется в контексте безопасности учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используя этот аргумент, необходимо убедиться в том, что учетная запись службы имеет доступ к указанному файлу.
  
  Если указано только имя файла, файл сохраняется в папке данных пользователя по умолчанию для экземпляра. Это может быть, а может и не быть папка данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В SQL Server Express LocalDB папкой данных пользователя по умолчанию для экземпляра является путь, указанный в переменной среды `%USERPROFILE%` учетной записи, создавшей этот экземпляр.  
   
- BINARY =' *биты закрытого ключа* '  
- **Область применения** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
+ BINARY ='*биты закрытого ключа*'  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Биты закрытого ключа, указанного в качестве двоичной константы. Биты могут находиться в зашифрованном виде. Если они зашифрованы, пользователь должен предоставить пароль для расшифровки. Проверка политики паролей для данного пароля не выполняется. Биты закрытого ключа должны быть в формате файла PVK.  
   
- DECRYPTION BY PASSWORD =' *текущий пароль* '  
+ DECRYPTION BY PASSWORD ='*текущий пароль*'  
  Указывает пароль, необходимый для расшифровки закрытого ключа.  
   
- ENCRYPTION BY PASSWORD =' *новый пароль* '  
+ ENCRYPTION BY PASSWORD ='*новый пароль*'  
  Задает пароль, который используется для шифрования закрытого ключа сертификата в базе данных. *Новый пароль* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md).  
   
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  

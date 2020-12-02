@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database backups [SQL Server], tapes
 - tape backup devices, creating
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 17fa4f717c7da238503c87dc99ab2120b65e9cdb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ddb39f0d488becdcb7711ef05030bad4aff08aa5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748118"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127015"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>Определение логического устройства резервного копирования для ленточного накопителя (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85748118"
   
 1.  После подключения к соответствующему экземпляру [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
   
-2.  Разверните узел **Объекты сервера**и щелкните правой кнопкой мыши пункт **Устройства резервного копирования**.  
+2.  Разверните узел **Объекты сервера** и щелкните правой кнопкой мыши пункт **Устройства резервного копирования**.  
   
 3.  Выберите пункт **Новое устройство резервного копирования**, в результате чего появится диалоговое окно **Устройство резервного копирования** .  
   

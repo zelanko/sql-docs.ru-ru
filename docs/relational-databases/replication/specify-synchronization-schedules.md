@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6dbdad85561116fb3dd6a3c003bb7bf9967c00b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783120"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127805"
 ---
 # <a name="specify-synchronization-schedules"></a>Указание расписаний синхронизации
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "85783120"
   
     -   Для указания запуска агента по запросу выберите **Один раз**.  
   
-7.  При выборе значения **Периодически**укажите расписание для агента.  
+7.  При выборе значения **Периодически** укажите расписание для агента.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -115,7 +115,7 @@ ms.locfileid: "85783120"
   
     -   Для указания запуска агента по запросу выберите **Один раз**.  
   
-6.  При выборе значения **Периодически**укажите расписание для агента.  
+6.  При выборе значения **Периодически** укажите расписание для агента.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -137,7 +137,7 @@ ms.locfileid: "85783120"
   
     -   Для указания запуска агента по запросу выберите **Один раз**.  
   
-6.  При выборе значения **Периодически**укажите расписание для агента.  
+6.  При выборе значения **Периодически** укажите расписание для агента.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

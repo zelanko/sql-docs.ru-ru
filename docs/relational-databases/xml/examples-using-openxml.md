@@ -28,11 +28,11 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729972"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126316"
 ---
 # <a name="examples-using-openxml"></a>Примеры: Использование OPENXML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85729972"
   
 -   параметр *flags* имеет значение **1** , которое указывает на сопоставление с использованием атрибутивной модели; В результате XML-атрибуты сопоставляются со столбцами в наборе строк, определенном в элементе *SchemaDeclaration*;  
   
--   в элементе *SchemaDeclaration*предложения WITH заданные значения параметра *ColName* совпадают с соответствующими именами XML-атрибутов. Поэтому параметр *ColPattern* не указывается в элементе *SchemaDeclaration*.  
+-   в элементе *SchemaDeclaration* предложения WITH заданные значения параметра *ColName* совпадают с соответствующими именами XML-атрибутов. Поэтому параметр *ColPattern* не указывается в элементе *SchemaDeclaration*.  
   
  Затем инструкция SELECT извлекает все столбцы из набора строк, предоставленного инструкцией OPENXML:  
   
@@ -145,7 +145,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>Б. Задание параметра ColPattern для сопоставления столбцов набора строк с XML-атрибутами и элементами  
  Данный пример показывает, как задается шаблон XPath в необязательном параметре *ColPattern* для сопоставления столбцов набора строк с XML-атрибутами и элементами.  
   
- XML-документ в этом примере состоит из элементов <`Customer`>, <`Order`> и <`OrderDetail`>. Инструкция OPENXML получает из XML-документа сведения о заказчике и заказе в виде набора строк (**CustomerID**, **OrderDate**, **ProdID**и **Qty**).  
+ XML-документ в этом примере состоит из элементов <`Customer`>, <`Order`> и <`OrderDetail`>. Инструкция OPENXML получает из XML-документа сведения о заказчике и заказе в виде набора строк (**CustomerID**, **OrderDate**, **ProdID** и **Qty**).  
   
  Сначала вызывается хранимая процедура **sp_xml_preparedocument** , чтобы получить дескриптор документа. Дескриптор документа передается инструкции OPENXML.  
   
@@ -155,7 +155,7 @@ LILAS      Carlos Gonzlez
   
  В примере параметр *flags* имеет значение **2** , которое указывает на сопоставление с использованием элементов. Однако сопоставление, указанное в параметре *ColPattern* , перекрывает данное сопоставление. То есть шаблон XPath, заданный в параметре *ColPattern* , сопоставляет столбцы набора строк с атрибутами. Результатом является атрибутивное сопоставление.  
   
- В элементе *SchemaDeclaration*предложения WITH параметр *ColPattern* также задается параметрами *ColName* и *ColType* . Необязательный параметр *ColPattern* является заданным шаблоном XPath и указывает следующее:  
+ В элементе *SchemaDeclaration* предложения WITH параметр *ColPattern* также задается параметрами *ColName* и *ColType* . Необязательный параметр *ColPattern* является заданным шаблоном XPath и указывает следующее:  
   
 -   Столбцы **OrderID**, **CustomerID** и **OrderDate** в наборе строк сопоставляются с атрибутами родителя узлов, заданных шаблоном *rowpattern*, а шаблон *rowpattern* определяет узлы <`OrderDetail`>. Следовательно, столбцы **CustomerID** и **OrderDate** сопоставляются с атрибутами **CustomerID** и **OrderDate** элемента <`Order`>;  
   
@@ -345,7 +345,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>Д. Задание элемента TableName в предложении WITH  
  Этот пример задает элемент *TableName* в предложении WITH вместо элемента *SchemaDeclaration*. Это полезно, если таблица имеет нужную структуру и не требуются шаблоны столбцов (параметр *ColPattern* ).  
   
- XML-документ в этом примере состоит из элементов <`Customer`> и <`Order`>. Инструкция OPENXML возвращает сведения о заказе в наборе строк из трех столбцов (**oid**, **date**и **amount**), полученные из XML-документа.  
+ XML-документ в этом примере состоит из элементов <`Customer`> и <`Order`>. Инструкция OPENXML возвращает сведения о заказе в наборе строк из трех столбцов (**oid**, **date** и **amount**), полученные из XML-документа.  
   
  Сначала вызывается хранимая процедура **sp_xml_preparedocument** , чтобы получить дескриптор документа. Дескриптор документа передается инструкции OPENXML.  
   
@@ -464,7 +464,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>Ж. Задание шаблона rowpattern, заканчивающегося атрибутом  
- XML-документ в этом примере состоит из элементов <`Customer`>, <`Order`> и <`OrderDetail`>. Инструкция OPENXML возвращает сведения о заказе в наборе строк из трех столбцов (**ProductID**, **Quantity**и **OrderID**) из XML-документа.  
+ XML-документ в этом примере состоит из элементов <`Customer`>, <`Order`> и <`OrderDetail`>. Инструкция OPENXML возвращает сведения о заказе в наборе строк из трех столбцов (**ProductID**, **Quantity** и **OrderID**) из XML-документа.  
   
  Сначала вызывается хранимая процедура **sp_xml_preparedocument** , чтобы получить дескриптор документа. Дескриптор документа передается инструкции OPENXML.  
   
@@ -612,11 +612,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     Атрибуты **id** (идентификатор студента), **name**и **attends** . Атрибут **attends** является многозначным атрибутом.  
+     Атрибуты **id** (идентификатор студента), **name** и **attends** . Атрибут **attends** является многозначным атрибутом.  
   
 -   \<Class>  
   
-     Атрибуты **id** (идентификатор класса), **name**и **attendedBy** . Атрибут **attendedBy** является многозначным атрибутом.  
+     Атрибуты **id** (идентификатор класса), **name** и **attendedBy** . Атрибут **attendedBy** является многозначным атрибутом.  
   
  Атрибут **attends** элемента \<Student> и атрибут **attendedBy** элемента \<Class> представляют отношение **m : n** между таблицами Student и Class. Студент может посещать множество классов, а класс может иметь множество студентов.  
   
