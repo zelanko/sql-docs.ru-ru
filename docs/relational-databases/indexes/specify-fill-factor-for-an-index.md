@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b14aaaceadcc5cabeb8fad667879cae60e2d1331
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499347"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Укажите коэффициент заполнения для индекса
@@ -97,7 +97,7 @@ ms.locfileid: "88499347"
   
 5.  Щелкните правой кнопкой мыши индекс с коэффициентом заполнения, который нужно указать, и выберите пункт **Свойства**.  
   
-6.  В разделе **Выбор страницы**щелкните **Параметры**.  
+6.  В разделе **Выбор страницы** щелкните **Параметры**.  
   
 7.  В строке **Коэффициент заполнения** введите нужный коэффициент заполнения.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "88499347"
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Указание коэффициента заполнения для существующего индекса  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "88499347"
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>Другой способ указания коэффициента заполнения в индексе  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15986ee3b8407a62fc4ed40a49c043921fe34588
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92035858"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Урок 2. Настройка разрешений для объектов базы данных
@@ -45,8 +45,8 @@ ms.locfileid: "92035858"
   
 ### <a name="create-a-new-windows-account"></a>Создание учетной записи Windows  
   
-1.  Нажмите кнопку **Пуск**, выберите **Выполнить**, в поле **Открыть** введите **%SystemRoot%\system32\compmgmt.msc /s**и нажмите кнопку **OK** , чтобы открыть программу "Управление компьютером". 
-2.  В пункте **Служебные программы**откройте **Локальные пользователи и группы**, щелкните правой кнопкой мыши элемент **Пользователи**и выберите пункт **Новый пользователь**.    
+1.  Нажмите кнопку **Пуск**, выберите **Выполнить**, в поле **Открыть** введите **%SystemRoot%\system32\compmgmt.msc /s** и нажмите кнопку **OK** , чтобы открыть программу "Управление компьютером". 
+2.  В пункте **Служебные программы** откройте **Локальные пользователи и группы**, щелкните правой кнопкой мыши элемент **Пользователи** и выберите пункт **Новый пользователь**.    
 3.  В поле **Имя пользователя** введите **Mary**.    
 4.  В полях **Пароль** и **Подтверждение пароля** введите надежный пароль и нажмите кнопку **Создать** , чтобы создать нового локального пользователя Windows.  
   

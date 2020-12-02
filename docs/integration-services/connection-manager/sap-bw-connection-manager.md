@@ -14,10 +14,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6e09a6cdf6f8d863e57d2de0749e29b33c989eea
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719647"
 ---
 # <a name="sap-bw-connection-manager"></a>Диспетчер соединений SAP BW
@@ -150,7 +150,7 @@ ms.locfileid: "91719647"
  Используйте функцию обзора, чтобы выбрать папку для каталога журналов.  
   
  **Проверка соединения**  
- Выполните проверку подключения с указанными значениями. После щелчка **Проверка подключения**откроется окно сообщения, в котором будет указано, установлено ли подключение успешно или с ошибкой.  
+ Выполните проверку подключения с указанными значениями. После щелчка **Проверка подключения** откроется окно сообщения, в котором будет указано, установлено ли подключение успешно или с ошибкой.  
   
 ## <a name="see-also"></a>См. также:  
  [Компоненты Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  

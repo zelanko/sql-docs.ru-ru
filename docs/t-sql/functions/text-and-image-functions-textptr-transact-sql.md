@@ -22,10 +22,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 90365bd45edac8e3e5a131ab4786449352b70011
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92036477"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTPTR (Transact-SQL)
@@ -64,10 +64,10 @@ TEXTPTR ( column )
   
 |Функция или инструкция|Описание|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Возвращает позицию символа указанной символьной строки в столбцах **text** или **ntext**.|  
-|DATALENGTH<b>(</b>_expression_ **)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
+|PATINDEX <b>('</b> _%pattern%_ **' ,** _expression_ **)**|Возвращает позицию символа указанной символьной строки в столбцах **text** или **ntext**.|  
+|DATALENGTH <b>(</b>_expression_ **)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
 |SET TEXTSIZE|Возвращает предельный размер (в байтах) для данных типа **text**, **ntext** или **image**, возвращаемых инструкцией SELECT.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|Возвращает строку типа **varchar**, указанную с помощью определенного смещения *start* и длины *length*. Длина должна быть меньше 8 KБ.|  
+|SUBSTRING <b>(</b>_text_column_, _start_, _length_ **)**|Возвращает строку типа **varchar**, указанную с помощью определенного смещения *start* и длины *length*. Длина должна быть меньше 8 KБ.|  
   
 ## <a name="examples"></a>Примеры  
   

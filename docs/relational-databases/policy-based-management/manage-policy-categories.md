@@ -14,10 +14,10 @@ ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 26b15222f570304f321337a4b3574c3fa2f3b945
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88494021"
 ---
 # <a name="manage-policy-categories"></a>Управление категориями политики
@@ -55,7 +55,7 @@ ms.locfileid: "88494021"
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Применение политик категории к экземпляру SQL Server  
   
-1.  В **обозревателе объектов**щелкните знак «плюс», чтобы развернуть сервер, к которому нужно применить политики категории.  
+1.  В **обозревателе объектов** щелкните знак «плюс», чтобы развернуть сервер, к которому нужно применить политики категории.  
   
 2.  Щелкните знак «плюс», чтобы развернуть папку **Управление** .  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88494021"
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Применение политик категории к экземпляру SQL Server  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

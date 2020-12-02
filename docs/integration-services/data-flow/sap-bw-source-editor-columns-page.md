@@ -14,10 +14,10 @@ ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dab03a43269739bbf77101f8ded9dac68ff2b8f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495767"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>Редактор источников SAP BW (страница «Столбцы»)
@@ -41,7 +41,7 @@ ms.locfileid: "88495767"
   
 2.  На вкладке **Поток данных** дважды щелкните источник SAP BW.  
   
-3.  В **Редакторе источников SAP BW**щелкните **Столбцы** , чтобы открыть страницу редактора **Столбцы** .  
+3.  В **Редакторе источников SAP BW** щелкните **Столбцы** , чтобы открыть страницу редактора **Столбцы** .  
   
 ## <a name="options"></a>Параметры  
   

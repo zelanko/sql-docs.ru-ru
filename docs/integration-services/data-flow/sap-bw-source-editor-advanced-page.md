@@ -14,10 +14,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 433698b83ed1148f473062658b95d99e9657e6ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495763"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Редактор источников SAP BW (страница «Дополнительно»)
@@ -41,7 +41,7 @@ ms.locfileid: "88495763"
   
 2.  На вкладке **Поток данных** дважды щелкните источник SAP BW.  
   
-3.  В **Редакторе источников SAP BW**щелкните **Дополнительно** , чтобы открыть страницу редактора **Дополнительно** .  
+3.  В **Редакторе источников SAP BW** щелкните **Дополнительно** , чтобы открыть страницу редактора **Дополнительно** .  
   
 ## <a name="options"></a>Параметры  
   

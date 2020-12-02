@@ -26,10 +26,10 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c3a08123af9155789fa2d14e2deac807061bf162
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380059"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
@@ -56,7 +56,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
  *Param2*  
 **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
   
- Указывает, проверено ли имя входа. Аргумент *Param2* имеет тип **int** и является необязательным. Если параметр *Param2* равен 0, то имя для входа не проверяется. Если параметр*Param2* не равен 0, то имя для входа Windows проверяется на обязательное соответствие имени для входа, сохраненному в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Указывает, проверено ли имя входа. Аргумент *Param2* имеет тип **int** и является необязательным. Если параметр *Param2* равен 0, то имя для входа не проверяется. Если параметр *Param2* не равен 0, то имя для входа Windows проверяется на обязательное соответствие имени для входа, сохраненному в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **varbinary(85)**  

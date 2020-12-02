@@ -16,10 +16,10 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d571e5b41937947e0c6d03e5d1a84fe0dc88e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465276"
 ---
 # <a name="merge-agent-security"></a>Безопасность агента слияния
@@ -50,7 +50,7 @@ ms.locfileid: "88465276"
   
  Если при установке соединений производится олицетворение учетной записи процесса, требуются дополнительные разрешения. См. разделы **Соединиться с распространителем и издателем** и **Соединиться с подписчиком** , приведенные ниже.  
   
- Невозможно указать**Учетную запись процесса** для подписок по запросу на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], потому что агент слияния не работает на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ Невозможно указать **Учетную запись процесса** для подписок по запросу на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], потому что агент слияния не работает на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
  **Пароль** и **Подтверждение пароля**  
  Введите пароль для учетной записи Windows.  

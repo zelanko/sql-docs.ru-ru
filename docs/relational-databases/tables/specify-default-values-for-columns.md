@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361e98e19788f4d2c6aa921caf71e58552ee53a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488573"
 ---
 # <a name="specify-default-values-for-columns"></a>Указание значений по умолчанию для столбца
@@ -56,7 +56,7 @@ ms.locfileid: "88488573"
 
 ### <a name="object-explorer"></a>Обозреватель объектов
 
-1. В **Обозревателе объектов**щелкните правой кнопкой мыши таблицу со столбцами, масштаб которых необходимо изменить, и выберите пункт **Конструктор**.
+1. В **Обозревателе объектов** щелкните правой кнопкой мыши таблицу со столбцами, масштаб которых необходимо изменить, и выберите пункт **Конструктор**.
 
 2. Выберите столбец, для которого нужно задать значение по умолчанию.
 
@@ -73,7 +73,7 @@ ms.locfileid: "88488573"
 
 ### <a name="alter-table-t-sql"></a>ALTER TABLE (T-SQL)
 
-1. В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2. На стандартной панели выберите пункт **Создать запрос**.
 

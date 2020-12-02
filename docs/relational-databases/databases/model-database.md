@@ -16,10 +16,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465427"
 ---
 # <a name="model-database"></a>База данных model
@@ -94,7 +94,7 @@ ms.locfileid: "88465427"
   
 -   Изменение параметров сортировки. Параметрами сортировки по умолчанию являются параметры сортировки сервера.  
   
--   Изменение владельца базы данных. Владельцем**model** является **sa**.  
+-   Изменение владельца базы данных. Владельцем **model** является **sa**.  
   
 -   Удаление базы данных.  
   

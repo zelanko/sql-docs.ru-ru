@@ -12,10 +12,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472043"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Занятие 3–3. Тестирование развернутых пакетов
@@ -45,7 +45,7 @@ ms.locfileid: "88472043"
 2.  В диалоговом окне **Соединение с сервером** выберите **Службы Integration Services** из списка **Тип сервера** , введите имя сервера в поле **Имя сервера** и нажмите **Соединить**.  
   
     > [!IMPORTANT]  
-    > Если подключиться к [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]не удается, возможно, что служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не запущена. Чтобы узнать о состоянии службы, нажмите кнопку **Пуск**и последовательно выберите пункты **Все программы**, **Microsoft SQL Server**, **Средства настройки**и **Диспетчер конфигурации SQL Server**. На левой панели щелкните **Службы SQL Server**. На панели справа найдите службу [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Если служба не запущена, запустите ее.  
+    > Если подключиться к [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]не удается, возможно, что служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не запущена. Чтобы узнать о состоянии службы, нажмите кнопку **Пуск** и последовательно выберите пункты **Все программы**, **Microsoft SQL Server**, **Средства настройки** и **Диспетчер конфигурации SQL Server**. На левой панели щелкните **Службы SQL Server**. На панели справа найдите службу [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Если служба не запущена, запустите ее.  
   
     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . По умолчанию окно обозревателя объектов открывается и помещается в правом верхнем углу студии. Если обозреватель объектов не открыт, выберите **Обозреватель объектов** в меню **Вид** .  
   

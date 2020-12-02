@@ -29,10 +29,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 13000e068c82ff3224eda50b7012bf06c7b83204
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89541259"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
@@ -59,7 +59,7 @@ SET DATEFORMAT { format | @format_var }
 ## <a name="remarks"></a>Комментарии  
  Значение **ydm** параметра DATEFORMAT не поддерживается для типов данных **date**, **datetime2** и **datetimeoffset**.  
   
- Параметр DATEFORMAT может интерпретировать символьные строки по-разному для разных типов данных даты в зависимости от их формата строк. Например, интерпретации **datetime** и **smalldatetime** могут не соответствовать **date**, **datetime2** или ** datetimeoffset**. Этот параметр влияет на интерпретацию символьных строк при их преобразовании в значения даты для базы данных. Он не влияет на отображение значений типов данных даты, хранящихся в базе данных, а также на формат их хранения.  
+ Параметр DATEFORMAT может интерпретировать символьные строки по-разному для разных типов данных даты в зависимости от их формата строк. Например, интерпретации **datetime** и **smalldatetime** могут не соответствовать **date**, **datetime2** или **datetimeoffset**. Этот параметр влияет на интерпретацию символьных строк при их преобразовании в значения даты для базы данных. Он не влияет на отображение значений типов данных даты, хранящихся в базе данных, а также на формат их хранения.  
   
  Некоторые форматы символьных строк, например ISO 8601, интерпретируются независимо от параметра DATEFORMAT.  
   

@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809830"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
@@ -142,7 +142,7 @@ ms.locfileid: "91809830"
 
 Когда [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует память динамически, он периодически опрашивает систему, чтобы определить объем свободной памяти. Поддержание достаточного объема свободной памяти позволяет избежать подкачки в операционной системе (ОС). Если свободно меньше памяти, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] высвобождает память для ОС. Если свободно больше памяти, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может выделить дополнительный объем памяти. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] добавляет память, только если она требуется для рабочей нагрузки; во время простоя сервера размер виртуального адресного пространства не увеличивается.  
   
-**[Максимальная память сервера](../database-engine/configure-windows/server-memory-server-configuration-options.md)** управляет выделением памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], памятью компиляции, всеми кэшами (включая буферный пул), [временно предоставляемыми буферами памяти для выполнения запросов](#effects-of-min-memory-per-query), [памятью диспетчера блокировки](#memory-used-by-sql-server-objects-specifications) и памятью CLR<sup>1</sup> (фактически любым клерком памяти, находящимся в **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** ). 
+**[Максимальная память сервера](../database-engine/configure-windows/server-memory-server-configuration-options.md)** управляет выделением памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], памятью компиляции, всеми кэшами (включая буферный пул), [временно предоставляемыми буферами памяти для выполнения запросов](#effects-of-min-memory-per-query), [памятью диспетчера блокировки](#memory-used-by-sql-server-objects-specifications) и памятью CLR <sup>1</sup> (фактически любым клерком памяти, находящимся в **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** ). 
 
 <sup>1</sup> Память CLR управляется в рамках выделения по max_server_memory, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
@@ -163,7 +163,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
  
-<a name="stacksizes"></a> Параметр "Макс. памяти сервера" **не** контролирует память для стеков потоков<sup>1</sup>, CLR<sup>2</sup>, DLL–файлов расширенных процедур, поставщиков OLE DB, на которые ссылаются распределенные запросы, объектов автоматизации, на которые ссылаются операторы [!INCLUDE[tsql](../includes/tsql-md.md)], и память, выделяемую библиотеками DLL, не относящимися к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+<a name="stacksizes"></a> Параметр "Макс. памяти сервера" **не** контролирует память для стеков потоков <sup>1</sup>, CLR <sup>2</sup>, DLL–файлов расширенных процедур, поставщиков OLE DB, на которые ссылаются распределенные запросы, объектов автоматизации, на которые ссылаются операторы [!INCLUDE[tsql](../includes/tsql-md.md)], и память, выделяемую библиотеками DLL, не относящимися к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 <sup>1</sup> Сведения о вычисляемых рабочих потоках по умолчанию для указанного числа родственных ЦП на текущем узле см. в разделе [Настройка параметра конфигурации сервера "Максимальное число рабочих потоков"](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md). Размеры стеков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] имеют следующие значения.
 
@@ -343,7 +343,7 @@ FROM sys.dm_os_process_memory;
 > [!NOTE]
 > Прежде чем [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], можно использовать флаг трассировки 8048, чтобы превратить PMO на основе узла в PMO на основе ЦП. Начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], эта реакция является динамической и управляется подсистемой.
 
-Начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], [!INCLUDE[ssde_md](../includes/ssde_md.md)] может динамически обнаруживать состязание в конкретном объекте CMemThread и менять реализацию объекта между вариантами на основе узла или на основе ЦП. После изменения реализации PMO остается в этом состоянии до тех пор, пока не будет перезапущен процесс [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Состязание в CMemThread можно обнаружить по большому времени ожидания CMEMTHREAD в динамическом административном представлении [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), а также по содержанию столбцов динамического административного представления [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) *contention_factor*, *partition_type*, *exclusive_allocations_count*и *waiting_tasks_count*.
+Начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], [!INCLUDE[ssde_md](../includes/ssde_md.md)] может динамически обнаруживать состязание в конкретном объекте CMemThread и менять реализацию объекта между вариантами на основе узла или на основе ЦП.  После изменения реализации PMO остается в этом состоянии до тех пор, пока не будет перезапущен процесс [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Состязание в CMemThread можно обнаружить по большому времени ожидания CMEMTHREAD в динамическом административном представлении [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), а также по содержанию столбцов динамического административного представления [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) *contention_factor*, *partition_type*, *exclusive_allocations_count* и *waiting_tasks_count*.
 
 ## <a name="see-also"></a>См. также:
 [Параметры конфигурации сервера «Server Memory»](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

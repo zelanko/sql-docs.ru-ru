@@ -14,10 +14,10 @@ ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccd18ea2d13b643899b5492b0151984b275b8c80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484583"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Редактор назначений SAP BW (страница «Диспетчер соединений»)
@@ -38,7 +38,7 @@ ms.locfileid: "88484583"
   
 2.  На вкладке **Поток данных** дважды щелкните назначение SAP BW.  
   
-3.  В **Редакторе назначений SAP BW**щелкните **Диспетчер соединений** , чтобы открыть страницу редактора **Диспетчер соединений** .  
+3.  В **Редакторе назначений SAP BW** щелкните **Диспетчер соединений** , чтобы открыть страницу редактора **Диспетчер соединений** .  
   
 ## <a name="options"></a>Параметры  
   

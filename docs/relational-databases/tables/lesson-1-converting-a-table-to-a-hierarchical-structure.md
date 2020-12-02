@@ -14,10 +14,10 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809488"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Урок 1. Преобразование таблицы в иерархическую структуру
@@ -290,7 +290,7 @@ ms.locfileid: "91809488"
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    Индекс преимущественно по**EmployeeID**: строки хранятся в соответствии с последовательностью значений **EmployeeID** .  
+    Индекс преимущественно по **EmployeeID**: строки хранятся в соответствии с последовательностью значений **EmployeeID** .  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

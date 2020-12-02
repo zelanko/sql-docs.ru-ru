@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868948"
 ---
 # <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
@@ -137,7 +137,7 @@ ms.locfileid: "91868948"
   
  Дополнительные сведения о резервном копировании и восстановлении полнотекстовых каталогов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] см. в разделах [Резервное копирование и восстановление полнотекстовых каталогов](./back-up-and-restore-full-text-catalogs-and-indexes.md) и [Резервное копирование и восстановление файлов и полнотекстовые каталоги](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))в электронной документации по [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- При восстановлении базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]для полнотекстового каталога будет создан новый файл базы данных. По умолчанию данный файл имеет имя ftrow_*имя-каталога*.ndf. Например, если *имя-каталога* — `cat1`, то именем по умолчанию файла базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] будет `ftrow_cat1.ndf`. Но если имя по умолчанию уже используется в целевом каталоге, новый файл базы данных будет назван `ftrow_`*имя-каталога*`{`*GUID*`}.ndf`(где *GUID* — это глобальный уникальный идентификатор нового файла).  
+ При восстановлении базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]для полнотекстового каталога будет создан новый файл базы данных. По умолчанию данный файл имеет имя ftrow_ *имя-каталога*.ndf. Например, если *имя-каталога* — `cat1`, то именем по умолчанию файла базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] будет `ftrow_cat1.ndf`. Но если имя по умолчанию уже используется в целевом каталоге, новый файл базы данных будет назван `ftrow_`*имя-каталога*`{`*GUID*`}.ndf`(где *GUID* — это глобальный уникальный идентификатор нового файла).  
   
  После импорта каталогов обновляются представления **sys.database_files** и **sys.master_files**: удаляются записи каталога и устанавливается значение NULL для столбца **path** (путь) в **sys.fulltext_catalogs** .  
   

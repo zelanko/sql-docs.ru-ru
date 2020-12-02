@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472930"
 ---
 # <a name="user-defined-functions"></a>Определяемые пользователем функции
@@ -50,7 +50,7 @@ ms.locfileid: "88472930"
   
 ##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> Типы функций  
 **Скалярная функция**  
- Пользовательские скалярные функции возвращают одно значение типа данных, заданного в предложении RETURNS. Для встроенной скалярной функции возвращаемое скалярное значение является результатом одной инструкции. Скалярная функция из нескольких инструкций имеет текст может содержать последовательность инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], возвращающих одно значение. Такие функции могут возвращать любые типы данных, кроме **text**, **ntext**, **image**, **cursor**и **timestamp**. 
+ Пользовательские скалярные функции возвращают одно значение типа данных, заданного в предложении RETURNS. Для встроенной скалярной функции возвращаемое скалярное значение является результатом одной инструкции. Скалярная функция из нескольких инструкций имеет текст может содержать последовательность инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], возвращающих одно значение. Такие функции могут возвращать любые типы данных, кроме **text**, **ntext**, **image**, **cursor** и **timestamp**. 
  **[Примеры.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Функции с табличными значениями**  
