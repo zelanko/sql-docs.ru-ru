@@ -23,11 +23,11 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a314867515ecbde34702761e7c9ee8904523d0a3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688366"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128090"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,16 +67,16 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |Формат|Описание|  
 |------------|-----------------|  
-|Строка|Аргумент *language_term* соответствует значению столбца **alias** в представлении совместимости [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Строка должна быть заключена в одиночные кавычки: **'***language_term***'** .|  
+|Строка|Аргумент *language_term* соответствует значению столбца **alias** в представлении совместимости [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Строка должна быть заключена в одиночные кавычки: **'** _language_term_*_'_*.|  
 |Целое число|Аргумент *language_term* представляет собой код языка.|  
 |Шестнадцатеричный|Аргумент *language_term* состоит из 0x со следующим шестнадцатеричным значением кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули. Если значение указано в формате двухбайтовой кодировки (DBCS), SQL Server преобразует его в Юникод.|  
   
- ADD **'***stopword***'** LANGUAGE *language_term*  
+ ADD **'** _stopword_*_'_* LANGUAGE *language_term*  
  Добавляет стоп-слово в список стоп-слов для языка, указанного в аргументе LANGUAGE *language_term*.  
   
  Если указанное сочетание ключевого слова и значения кода языка в рамках данного списка стоп-слов не уникальны, возвращается ошибка.  Если значение кода языка не соответствует зарегистрированному языку, формируется ошибка.  
   
- DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
+ DROP { **'** _stopword_*_'_* LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  Удаляет стоп-слово из списка стоп-слов.  
   
  **'** *stopword* **'** LANGUAGE *language_term*  

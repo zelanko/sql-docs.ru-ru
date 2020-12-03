@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3dcf1473fc92ba69d68f9aae9d871540e2604b52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 106773df7a5e9f88c123b614688ca19722613d7f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737827"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130532"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Резервное копирование и восстановление. Взаимодействие и сосуществование (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "85737827"
   
  Если во время запуска базы данных возникает проблема, восстановление завершается ошибкой, а база данных помечается как подозрительная (SUSPECT). Если проблема касается только отдельных файлов, администратор базы данных может перевести их в режим «вне сети»и попытаться перезапустить базу данных. Для перевода файла в режим «вне сети» можно выполнить следующую инструкцию [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) :  
   
- ALTER DATABASE *имя_базы_данных* MODIFY FILE (NAME **='***имя_файла***'** , OFFLINE)  
+ ALTER DATABASE *имя_базы_данных* MODIFY FILE (NAME **='** _имя_файла_*_'_*, OFFLINE)  
   
  Если запуск пройдет успешно, то любая файловая группа, содержащая файлы в режиме «вне сети», также будет находиться в режиме «вне сети».  
   

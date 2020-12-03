@@ -1,5 +1,5 @@
 ---
-description: Input and Output Error During Hard Page Fault
+description: Ошибка ввода-вывода во время сбоев страниц физической памяти
 title: Ошибка ввода-вывода при отсутствии страницы в памяти | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -20,7 +20,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/09/2020
 ms.locfileid: "91892474"
 ---
-# <a name="input-and-output-error-during-hard-page-fault"></a>Input and Output Error During Hard Page Fault
+# <a name="input-and-output-error-during-hard-page-fault"></a>Ошибка ввода-вывода во время сбоев страниц физической памяти
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Это правило проверяет журнал системных событий на наличие события с идентификатором EventId 51. Ошибка вызывается сбоем страниц физической памяти.  
   

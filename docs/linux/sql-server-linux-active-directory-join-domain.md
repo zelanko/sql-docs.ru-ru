@@ -2,19 +2,19 @@
 title: Присоединение SQL Server на базе Linux к Active Directory
 titleSuffix: SQL Server
 description: В этой статье приводятся рекомендации по присоединению хост-компьютера SQL Server Linux к домену AD. Вы можете использовать встроенный пакет SSSD или сторонние поставщики услуг AD.
-author: Dylan-MSFT
-ms.author: dygray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 184744aeea40dd8d21c023806cc63d644311ffde
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896968"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419851"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Присоединение SQL Server на узле Linux к домену Active Directory
 
@@ -29,13 +29,21 @@ ms.locfileid: "85896968"
 > [!IMPORTANT]
 > Примеры шагов, описанные в этой статье, являются лишь рекомендациями и относятся к операционным системам Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x и SUSE Enterprise Linux (SLES) 12. Фактические шаги могут немного отличаться в вашей среде в зависимости от ее общей настройки и версии ОС. Например, Ubuntu 18.04 использует netplan, а Red Hat Enterprise Linux (RHEL) 8. x использует nmcli наряду с другими инструментами для управления сетью и ее настройки. Привлекайте своего системного администратора и администратора домена в своей среде к подбору инструментария, настройке и устранению неполадок.
 
+### <a name="reverse-dns-rdns"></a>Обратная DNS (RDNS)
+
+При настройке компьютера под управлением Windows Server в качестве контроллера домена зона RDNS может по умолчанию отсутствовать. Убедитесь в наличии соответствующей зоны RDNS как для контроллера домена, так и для IP-адреса компьютера Linux, на котором будет запущен SQL Server.
+
+Также проверьте существование записи типа PTR, указывающей на контроллеры домена.
+
 ## <a name="check-the-connection-to-a-domain-controller"></a>Проверка подключения к контроллеру домена
 
-Убедитесь, что вы можете связаться с контроллером домена как по короткому, так и по полному имени домена.
+Убедитесь, что вы можете связаться с контроллером домена как по короткому, так и по полному доменному имени, а также с помощью имени узла контроллера домена. IP-адрес контроллера домена также должен разрешаться в полное доменное имя контроллера домена:
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
@@ -62,6 +70,39 @@ ping contoso.com
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
+   ```
+
+1. Далее убедитесь, что файл **/etc/resolv.conf** содержит строку, аналогичную следующей.
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
+### <a name="ubuntu-1804"></a>Ubuntu 18.04
+
+1. Измените файл [sudo vi /etc/netplan/******.yaml], чтобы ваш домен Active Directory находился в списке поиска доменов.
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > Сетевой интерфейс (`eth0`) может отличаться для разных компьютеров. Чтобы узнать, какой из них вы используете, выполните команду **ifconfig**. Затем скопируйте интерфейс, имеющий IP-адрес и переданные и полученные байты.
+
+1. После изменения этого файла перезапустите сетевую службу.
+
+   ```bash
+   sudo netplan apply
    ```
 
 1. Далее убедитесь, что файл **/etc/resolv.conf** содержит строку, аналогичную следующей.
@@ -100,7 +141,7 @@ ping contoso.com
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles-12"></a>SLES 12
+### <a name="sles-12"></a>SLES 12
 
 1. Измените файл **/etc/sysconfig/network/config**, чтобы IP-адрес контроллера домена Active Directory использовался для запросов DNS, а домен Active Directory находился в списке поиска доменов.
 
@@ -145,22 +186,41 @@ ping contoso.com
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE:**
+   
+   **SLES 12:**
+   
+   Обратите внимание, что эти шаги относятся к SLES 12, который является единственной официально поддерживаемой версией SUSE для Linux.
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu:**
+   **Ubuntu 16.04:**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
+   **Ubuntu 18.04:**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
+   ```
+
 1. Если при установке пакета клиента Kerberos запрашивается имя области, введите имя домена прописными буквами.
 
 1. Убедившись, что DNS настроена правильно, присоединитесь к домену с помощью указанной ниже команды. Нужно выполнить проверку подлинности с помощью учетной записи AD, имеющей достаточные права в AD для присоединения нового компьютера к домену. Эта команда создает учетную запись компьютера в AD, создает KEYTAB-файл узла **/etc/krb5.keytab**, настраивает домен в **/etc/sssd/sssd.conf** и обновляет **/etc/krb5.conf**.
+
+   Из-за проблемы с **realmd** сначала укажите для узла компьютера полное доменное имя, а не имя компьютера. В противном случае **realmd** может не создать все необходимые имена субъекта-службы для компьютера, а записи DNS не будут обновляться автоматически, даже если контроллер домена поддерживает динамические обновления DNS.
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   После выполнения приведенной выше команды файл /etc/hostname должен содержать <old hostname>.contoso.com.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v

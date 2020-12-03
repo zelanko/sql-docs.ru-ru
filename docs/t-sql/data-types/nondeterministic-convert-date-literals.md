@@ -14,10 +14,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445872"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Недетерминированное преобразование строк дат литералов в значения DATE
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-***/
+**_/
 ```
 
 
@@ -69,7 +69,7 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-Предыдущий формат **ДМГ** указывает, что пример строки даты "01-03-2018" будет интерпретироваться как _первый день марта 2018 года_.
+Предыдущий формат _ *ДМГ** указывает, что пример строки даты "01-03-2018" будет интерпретироваться как _первый день марта 2018 года_.
 
 Если указан формат **МДГ**, то "01-03-2018" означает _третий день января 2018 года_.
 
@@ -115,10 +115,10 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-***/
+**_/
 ```
 
-В предыдущем примере кода в последнем примере есть несоответствие между форматом **ГМД** и входной строкой. Третий узел входной строки представляет числовое значение, слишком большое для дня. Корпорация Майкрософт не гарантирует выходное значение в таких случаях.
+В предыдущем примере кода в последнем примере есть несоответствие между форматом _ *ГМД** и входной строкой. Третий узел входной строки представляет числовое значение, слишком большое для дня. Корпорация Майкрософт не гарантирует выходное значение в таких случаях.
 
 #### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT предлагает явные коды для _детерминированного_ управления форматами даты
 

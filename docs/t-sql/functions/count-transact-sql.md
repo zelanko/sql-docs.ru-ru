@@ -25,11 +25,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 973583b5c5dd32273312f6282e91d501659887fb
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114890"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124860"
 ---
 # <a name="count-transact-sql"></a>Функция COUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ DISTINCT
 Указывает, что функция `COUNT` возвращает количество уникальных значений, не равных NULL.
   
 *expression*  
-[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа, кроме**image**, **ntext** и **text**. Обратите внимание, что функция `COUNT` не поддерживает агрегатные функции и вложенные запросы в выражении.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа, кроме **image**, **ntext** и **text**. Обратите внимание, что функция `COUNT` не поддерживает агрегатные функции и вложенные запросы в выражении.
   
 \*  
 Указывает, что функция `COUNT` должна учитывать все строки, чтобы определить общее количество строк таблицы для возврата. Функция `COUNT(*)` не принимает параметры и не поддерживает использование аргумента DISTINCT. Для функции `COUNT(*)` не требуется параметр *expression*, так как по определению она не использует сведения о конкретном столбце. Функция `COUNT(*)` возвращает количество строк в указанной таблице с учетом повторяющихся строк. Она подсчитывает каждую строку отдельно. При этом учитываются и строки, содержащие значения NULL.
@@ -79,7 +79,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
   
 Для возвращаемых значений, которые превышают значение 2^31-1, функция `COUNT` возвращает ошибку. В таких случаях используйте вместо нее функцию `COUNT_BIG`.
   
-`COUNT` — это детерминированная функция, если она используется ***без*** предложений OVER и ORDER BY. Она не детерминирована при использовании ***с*** предложениями OVER и ORDER BY. Дополнительные сведения см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`COUNT` — это детерминированная функция, если она используется ***без** _ предложений OVER и ORDER BY. Она не детерминирована при использовании _*_с_*_ предложениями OVER и ORDER BY. Дополнительные сведения см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Примеры  
   
@@ -101,7 +101,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>Б. Использование функции COUNT(\*)  
+### <a name="b-using-count_"></a>Б. Использование функции COUNT(\_)  
 В этом примере функция возвращает общее количество сотрудников [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
   
 ```sql

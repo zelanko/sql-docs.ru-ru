@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: d1dfea07a02effb5362b0f01ad496b536c646139
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300838"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328120"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,16 +39,14 @@ ms.locfileid: "92300838"
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис
-  
+
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>Синтаксис для [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] и [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
-  
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>Синтаксис для [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] и [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_WARNINGS ON
 ```
 
@@ -59,7 +57,7 @@ SET ANSI_WARNINGS ON
   
 -   Если значения NULL появляются в агрегатных функциях, таких как SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP или COUNT, то при установке значения ON формируется предупреждающее сообщение. При установке значения OFF предупреждения не формируются.  
   
--   Если задано значение ON, то для инструкции, выполнение которой привело к ошибке деления на ноль или арифметического переполнения, будет выполнен откат и сформировано сообщение об ошибке. Если установлено значение OFF, то ошибки деления на ноль и арифметического переполнения приведут к возврату значений NULL. Ошибки деления на нуль и арифметического переполнения приводят к возврату значений NULL, если инструкции INSERT или UPDATE применяются к столбцу типа **character** , Unicode или **binary** и длина нового значения превышает максимальный размер для этого столбца. Если значение SET ANSI_WARNINGS установлено в ON, то выполнение инструкции INSERT или UPDATE прекращается в соответствии со стандартом ISO. Конечные пробелы игнорируются для символьных столбцов, а конечные значения NULL игнорируются для бинарных столбцов. Если указано значение OFF, то данные усекаются до размера столбца, и инструкция успешно завершается.  
+-   Если задано значение ON, то для инструкции, выполнение которой привело к ошибке деления на ноль или арифметического переполнения, будет выполнен откат и сформировано сообщение об ошибке. Если установлено значение OFF, то ошибки деления на ноль и арифметического переполнения приведут к возврату значений NULL. Ошибки деления на нуль и арифметического переполнения приводят к возврату значений NULL, если инструкции INSERT или UPDATE применяются к столбцу типа **character**, Unicode или **binary** и длина нового значения превышает максимальный размер для этого столбца. Если значение SET ANSI_WARNINGS установлено в ON, то выполнение инструкции INSERT или UPDATE прекращается в соответствии со стандартом ISO. Конечные пробелы игнорируются для символьных столбцов, а конечные значения NULL игнорируются для бинарных столбцов. Если указано значение OFF, то данные усекаются до размера столбца, и инструкция успешно завершается.  
   
 > [!NOTE]  
 > Если усечение возникает во время преобразования в тип данных **binary** или **varbinary** или из этих типов данных, то не возникает ошибок или предупреждений, несмотря на значения параметров SET.  
@@ -93,7 +91,7 @@ SELECT @ANSI_WARN AS ANSI_WARNINGS;
 ```  
   
 ## <a name="permissions"></a>Разрешения  
-Необходимо быть членом роли **public** .  
+Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
 Следующий пример демонстрирует три рассмотренные ситуации со значениями ON и OFF для параметра SET ANSI_WARNINGS.  

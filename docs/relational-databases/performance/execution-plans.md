@@ -18,11 +18,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457264"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126610"
 ---
 # <a name="execution-plans"></a>Планы выполнения
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "86457264"
 
 > [!NOTE]
 > В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] есть три способа отображения планов выполнения:        
-> -  ***[Предполагаемый план выполнения](../../relational-databases/performance/display-the-estimated-execution-plan.md)***  — это скомпилированный план, созданный оптимизатором запросов на основе оценок. Это план запроса, который хранится в кэше планов.        
-> -  ***[Действительный план выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md)***  — это скомпилированный план с [контекстом выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Он станет доступным **после выполнения запроса**. Сюда входят актуальные сведения о среде выполнения, включая предупреждения, касающиеся выполнения, а также в более новых версиях [!INCLUDE[ssde_md](../../includes/ssde_md.md)] — время, затраченное на выполнение, и время ЦП.         
-> -  ***[Статистика активных запросов](../../relational-databases/performance/live-query-statistics.md)***  — это скомпилированный план с контекстом выполнения. Он доступен для **выполнения запросов в реальном времени**и обновляется каждую секунду. Сюда входят такие сведения о среде выполнения, как фактическое число строк, проходящих через [операторы](../../relational-databases/showplan-logical-and-physical-operators-reference.md), затраченное время и предполагаемый ход выполнения запроса.
+> -  **_[Предполагаемый план выполнения](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* _ — это скомпилированный план, созданный оптимизатором запросов на основе оценок. Это план запроса, который хранится в кэше планов.        
+> -  _*_ [Действительный план выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_  — это скомпилированный план с [контекстом выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Он станет доступным _*после выполнения запроса**. Сюда входят актуальные сведения о среде выполнения, включая предупреждения, касающиеся выполнения, а также в более новых версиях [!INCLUDE[ssde_md](../../includes/ssde_md.md)] — время, затраченное на выполнение, и время ЦП.         
+> -  **_[Статистика активных запросов](../../relational-databases/performance/live-query-statistics.md)_ *_ — это скомпилированный план с контекстом выполнения. Он доступен для _* выполнения запросов в реальном времени** и обновляется каждую секунду. Сюда входят такие сведения о среде выполнения, как фактическое число строк, проходящих через [операторы](../../relational-databases/showplan-logical-and-physical-operators-reference.md), затраченное время и предполагаемый ход выполнения запроса.
 
 > [!TIP]
 > См. сведения о планах обработки и выполнения запросов в руководстве по [оптимизации инструкций SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) и [кэшированию и повторному использованию плана выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) в документации по архитектуре обработки запросов.
