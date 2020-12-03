@@ -1,7 +1,7 @@
 ---
 title: Политики поддержки для драйвера OLE DB для SQL Server
 description: Узнайте о политиках поддержки для OLE DB Driver for SQL Server и о том, какие операционные системы и версии баз данных SQL поддерживаются в каждой версии драйвера.
-ms.date: 08/06/2020
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca90e20ef6dab5a61bfa6b2969a1220d4a22db2e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: aa01dec4758bb91a4b05d65af372ee66c1c53672
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860645"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506425"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Политики поддержки для драйвера OLE DB для SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,6 +30,7 @@ ms.locfileid: "88860645"
 
 | Версия базы данных&nbsp;&#8594;<br />&#8595; Версия драйвера | База данных SQL Azure | Azure Synapse Analytics | Управляемый экземпляр SQL Azure | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|---|---|---|---|---|---|---|---|
+|18.5|Да|Да|Да|Да|Да|Да|Да|Да|
 |18.4|Да|Да|Да|Да|Да|Да|Да|Да|
 |18.3|Да|Да|Да|Да|Да|Да|Да|Да|
 |18.2|Да|Да|Да|Да|Да|Да|Да|Да|
@@ -43,6 +44,7 @@ ms.locfileid: "88860645"
 
 | Операционная система&nbsp;&#8594;<br />&#8595; Версия драйвера | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|---|---|---|---|---|---|
+|18.5|Да|Да|Да|Да|Да|Да|
 |18.4|Да|Да|Да|Да|Да|Да|
 |18.3|Да|Да|Да|Да|Да|Да|
 |18.2|Да|Да|Да|Да|Да|Да|

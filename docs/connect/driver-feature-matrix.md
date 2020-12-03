@@ -2,19 +2,19 @@
 title: Матрица поддержки функций драйверами
 description: Узнайте, какие популярные функции поддерживаются в драйверах для SQL Server и где можно найти сведения о них.
 ms.custom: ''
-ms.date: 08/05/2020
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081433"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419676"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Матрица поддержки функций драйверами для Microsoft SQL Server
 
@@ -43,11 +43,11 @@ ms.locfileid: "92081433"
 | [Проверка подлинности Azure Active Directory с использованием пароля](/azure/sql-database/sql-database-aad-authentication) | да | да | | Да |
 | [Интегрированная проверка подлинности Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | да | да | | Да |
 | [Интерактивная проверка подлинности Azure Active Directory (MFA)](/azure/sql-database/sql-database-aad-authentication) | да | да | | Да |
-| [Проверка подлинности Azure Active Directory с использованием управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) | | | | |
+| [Проверка подлинности Azure Active Directory с использованием управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) | Да | да | | |
 | [Проверка подлинности Azure Active Directory субъекта-службы](/azure/active-directory/develop/app-objects-and-service-principals) | да | Да | | |
 | [Встроенная проверка подлинности Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | [Да](ado-net/sql/authentication-sql-server.md) | [Да](ado-net/sql/authentication-sql-server.md) | [Да](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Да](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Массовое копирование](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Да](ado-net/sql/bulk-copy-operations-sql-server.md) | [Да](ado-net/sql/bulk-copy-operations-sql-server.md) | [Да](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Да](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
-| [Метаданные о конфиденциальности и классификации данных](../relational-databases/security/sql-data-discovery-and-classification.md) | да | да | да | Да |
+| [Метаданные о конфиденциальности и классификации данных](../relational-databases/security/sql-data-discovery-and-classification.md) | да | Да | Да | Да |
 | [Режим MARS](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Да](ado-net/sql/multiple-active-result-sets-mars.md) | [Да](ado-net/sql/multiple-active-result-sets-mars.md) | [Да](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [Да](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [Типы пространственных данных](../relational-databases/spatial/spatial-data-sql-server.md) | | да | | Да |
 | [Параметры, которые возвращают табличное значение (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Да](ado-net/sql/table-valued-parameters.md) | [Да](ado-net/sql/table-valued-parameters.md) | [Да](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [Да](/dotnet/framework/data/adonet/sql/table-valued-parameters) |

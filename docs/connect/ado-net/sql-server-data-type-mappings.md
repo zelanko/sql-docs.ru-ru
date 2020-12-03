@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 3da101331d6c8ecfeae4fa2167fdae2101445cd2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 0b12445989fd044a39ab88b2d840368aec206025
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126467"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419715"
 ---
 # <a name="sql-server-data-type-mappings"></a>Сопоставления типов данных в SQL Server
 
@@ -73,4 +73,5 @@ ms.locfileid: "96126467"
 
 - [Типы данных SQL Server и ADO.NET](./sql/sql-server-data-types.md)
 - [Двоичные данные и данные больших значений SQL Server](./sql/sql-server-binary-large-value-data.md)
+- [Настройка параметров](configure-parameters.md)
 - [Сопоставления типов данных в ADO.NET](data-type-mappings-ado-net.md)
