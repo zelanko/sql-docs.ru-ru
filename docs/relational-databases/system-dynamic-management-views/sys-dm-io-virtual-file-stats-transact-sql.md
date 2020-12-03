@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059622"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535298"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -76,7 +76,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|имя базы данных.</br></br>Для Azure синапсе Analytics это имя базы данных, хранящейся на узле, который определяется pdw_node_id. Каждый узел имеет одну базу данных tempdb с 13 файлами. Каждый узел также имеет одну базу данных для каждого распределения, и каждая база данных распространителя имеет 5 файлов. Например, если каждый узел содержит 4 распределения, в результатах отобразится 20 файлов базы данных распространителя на pdw_node_id. 
+|**database_name**|**sysname**|**Не применяется к:**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> имя базы данных.</br></br>Для Azure синапсе Analytics это имя базы данных, хранящейся на узле, который определяется pdw_node_id. Каждый узел имеет одну базу данных tempdb с 13 файлами. Каждый узел также имеет одну базу данных для каждого распределения, и каждая база данных распространителя имеет 5 файлов. Например, если каждый узел содержит 4 распределения, в результатах отобразится 20 файлов базы данных распространителя на pdw_node_id. 
 |**database_id**|**smallint**|Идентификатор базы данных.|  
 |**file_id**|**smallint**|Идентификатор файла.|  
 |**sample_ms**|**bigint**|Число миллисекунд, прошедших со времени запуска компьютера. Этот столбец может быть использован для сравнения различных вариантов выполнения этой функции.</br></br>Тип данных — **int** для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -93,7 +93,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall_queued_write_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с до [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для записи. Не допускает значение NULL.|
 |**pdw_node_id**|**int**|**Применимо к:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Идентификатор узла для распределения.
  
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 При запуске службы SQL Server (MSSQLSERVER) счетчики инициализируются пустыми.
   
 ## <a name="permissions"></a>Разрешения  
@@ -122,7 +122,7 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с I O &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
