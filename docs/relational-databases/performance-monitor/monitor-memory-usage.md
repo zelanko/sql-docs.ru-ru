@@ -22,14 +22,14 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], memory usage
 - server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0d390a0ed1397a7f433c5582361def2f4022d09b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 93e2780c3e51ce46e0687864896c36b7d3166917
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906342"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506014"
 ---
 # <a name="monitor-memory-usage"></a>Наблюдение за использованием памяти
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "86906342"
  Дополнительные сведения об устранении проблемы излишней подкачки см. в документации по операционной системе Windows.  
   
 ## <a name="isolating-memory-used-by-sql-server"></a>Изоляция памяти, используемой SQL Server  
- По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изменяет свои требования к памяти динамически, исходя из доступных ресурсов системы. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нужно больше памяти, он производит запрос к операционной системе, чтобы определить, доступна ли свободная физическая память, и использует ее. Если в операционной системе недостаточно свободной памяти, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет освобождать память для операционной системы до тех пор, пока нехватка памяти не будет устранена или пока [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не достигнет предела minservermemory. Однако можно отказаться от динамического использования памяти, задав значения параметрам конфигурации сервера **minservermemory**и **maxservermemory** . Дополнительные сведения см. в разделе [Параметры памяти сервера](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+ По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изменяет свои требования к памяти динамически, исходя из доступных ресурсов системы. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нужно больше памяти, он производит запрос к операционной системе, чтобы определить, доступна ли свободная физическая память, и использует ее. Если в операционной системе недостаточно свободной памяти, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет освобождать память для операционной системы до тех пор, пока нехватка памяти не будет устранена или пока [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не достигнет предела minservermemory. Однако можно отказаться от динамического использования памяти, задав значения параметрам конфигурации сервера **minservermemory** и **maxservermemory** . Дополнительные сведения см. в разделе [Параметры памяти сервера](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
  Для мониторинга объема памяти, используемого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , наблюдайте за следующими счетчиками производительности.  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], move
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a3ff2eff8f72499506aa129b064690693f1b14ff
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 03ad7743638779aa1afc05359be45da377f997b7
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456814"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506584"
 ---
 # <a name="move-a-workload-group"></a>Перемещение группы рабочей нагрузки
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "86456814"
   
 5.  Доступные пулы ресурсов отображаются в окне. Щелкните имя пула ресурсов, в который нужно перенести группу рабочей нагрузки, а затем нажмите кнопку **ОК** , чтобы выполнить это действие.  
   
-6.  Действие не завершено, пока не будет нажата кнопка **ОК**. При нажатии кнопки **ОК**выполняется инструкция ALTER RESOURCE GOVERNOR RECONFIGURE.  
+6.  Действие не завершено, пока не будет нажата кнопка **ОК**. При нажатии кнопки **ОК** выполняется инструкция ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
 7.  Если операция создания или изменения конфигурации пула ресурсов или группы рабочей нагрузки завершилась неуспешно, под заголовком страницы свойств будет отображено сводное сообщение об ошибке. Чтобы просмотреть подробное сообщение об ошибке, щелкните стрелку вниз рядом с ним.  
   
