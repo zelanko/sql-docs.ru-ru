@@ -13,18 +13,18 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: ed1e16aac4de3277906d00c2b1a0f4458418cc95
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 31510c4fbe4291168753809c227650951592e1e6
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081773"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328044"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Использование проверки подлинности NTLM для подключения к SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] позволяет приложению использовать свойство подключения ** authenticationScheme**, чтобы указать, что подключение к базе данных должно устанавливаться с использованием проверки подлинности NTLM v2. 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] позволяет приложению использовать свойство подключения **authenticationScheme**, чтобы указать, что подключение к базе данных должно устанавливаться с использованием проверки подлинности NTLM v2. 
 
 Для проверки подлинности NTLM также используются следующие свойства:
 

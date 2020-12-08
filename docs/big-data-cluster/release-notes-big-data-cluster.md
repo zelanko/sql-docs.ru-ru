@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+ms.openlocfilehash: b3265c99e185f4a8fcbe68e400ab1277b1e72671
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631690"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442883"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Заметки о выпуске Кластеров больших данных SQL Server 2019
 
@@ -113,8 +113,10 @@ ms.locfileid: "94631690"
 - [Управление доступом к кластеру больших данных в режиме AD DS](manage-user-access.md)
 - [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory](active-directory-deploy.md)
 - [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в AKS в режиме Active Directory](active-directory-deployment-aks.md)
-- [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] с высоким уровнем доступности](deployment-high-availability.md)
-- [Настройка [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
+- [Развертывание кластеров больших данных в частном кластере службы Azure Kubernetes (AKS)](private-deploy.md)
+- [Ограничения для исходящего трафика Кластеров больших данных (BDC) в частном кластере Службы Azure Kubernetes (AKS)](private-restrict-egress-traffic.md)
+- [Развертывание кластера больших данных SQL Server с высокой доступностью](deployment-high-availability.md)
+- [Настройка кластера больших данных SQL Server](configure-cluster.md)
 - [Настройка Apache Spark и Apache Hadoop в Кластерах больших данных](configure-spark-hdfs.md)
 - [Свойства конфигурации главного экземпляра SQL Server](reference-config-master-instance.md)
 - [Свойства конфигурации Apache Spark и Apache Hadoop (HDFS)](reference-config-spark-hadoop.md)

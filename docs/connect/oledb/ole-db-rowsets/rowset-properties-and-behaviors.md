@@ -2,7 +2,7 @@
 title: Свойства и поведение наборов строк (драйвер OLE DB)
 description: Узнайте о свойствах набора строк OLE DB Driver for SQL Server, в том числе их имена и описание.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ff19eb334fceba0b49a88fd1f812ad5b320c762f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859993"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504745"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Свойства и поведение наборов строк
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Существуют следующие свойства набора строк OLE DB Driver for SQL Server.  
+  Ниже перечислены свойства набора строк OLE DB Driver for SQL Server.
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "88859993"
 |DBPROP_BOOKMARKTYPE|Ч/З Только для чтения<br /><br /> Значение по умолчанию: DBPROPVAL_BMK_NUMERIC<br /><br /> Описание. OLE DB Driver for SQL Server реализует только числовые закладки. Закладка OLE DB Driver for SQL Server — это 32-разрядное целое число без знака, имеющее тип DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|OLE DB Driver for SQL Server не реализует это свойство наборов строк. При попытке считать или записать значение свойства возникает ошибка.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|Ч/З Чтение/запись<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание. OLE DB Driver for SQL Server поддерживает обратную выборку и прокрутку в непоследовательных наборах строк. Если свойство DBPROP_CANFETCHBACKWARDS или DBPROP_CANSCROLLBACKWARDS имеет значение VARIANT_TRUE, то драйвер OLE DB для SQL Server создает набор строк, поддерживаемый курсорами. Дополнительные сведения см. в статье [Наборы строк и курсоры SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
-|DBPROP_CANHOLDROWS|Ч/З Чтение/запись<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание. По умолчанию OLE DB Driver for SQL Server возвращает значение DB_E_ROWSNOTRELEASED при попытке объекта-получателя получить больше строк для набора, в котором существуют отложенные изменения. Это поведение может быть изменено.<br /><br /> Присвоение свойствам DBPROP_CANHOLDROWS и DBPROP_IRowsetChange значения VARIANT_TRUE подразумевает набор строк с закладками. Если оба свойства имеют значение VARIANT_TRUE, то для набора строк доступен интерфейс **IRowsetLocate**, а свойства DBPROP_BOOKMARKS и DBPROP_LITERALBOOKMARKS имеют значение VARIANT_TRUE.<br /><br /> Наборы строк OLE DB Driver for SQL Server, содержащие закладки, поддерживаются курсорами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|DBPROP_CANHOLDROWS|Ч/З Чтение/запись<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание: По умолчанию OLE DB Driver for SQL Server возвращает значение DB_E_ROWSNOTRELEASED при попытке объекта-получателя получить больше строк для набора, в котором существуют ожидающие изменение. Это поведение может быть изменено.<br /><br /> Присвоение свойствам DBPROP_CANHOLDROWS и DBPROP_IRowsetChange значения VARIANT_TRUE подразумевает набор строк с закладками. Если оба свойства имеют значение VARIANT_TRUE, то для набора строк доступен интерфейс **IRowsetLocate**, а свойства DBPROP_BOOKMARKS и DBPROP_LITERALBOOKMARKS имеют значение VARIANT_TRUE.<br /><br /> Наборы строк OLE DB Driver for SQL Server, содержащие закладки, поддерживаются курсорами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |DBPROP_CHANGEINSERTEDROWS|Ч/З Чтение/запись<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание. Это свойство может иметь только значение VARIANT_TRUE, если набор строк использует курсор, управляемый набором ключей.|  
 |DBPROP_COLUMNRESTRICT|Ч/З Только для чтения<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание. OLE DB Driver for SQL Server задает для свойства значение VARIANT_TRUE, когда объект-получатель не может изменить столбец в наборе строк. Другие столбцы в наборе строк можно изменять, а сами строки — удалять.<br /><br /> Если это свойство имеет значение VARIANT_TRUE, то потребитель по элементу *dwFlags* структуры DBCOLUMNINFO определяет, может ли быть записано значение отдельного столбца. Для изменяемых столбцов элемент *dwFlags* принимает значение DBCOLUMNFLAGS_WRITE.|  
 |DBPROP_COMMANDTIMEOUT|Ч/З Чтение/запись<br /><br /> Значение по умолчанию: 0<br /><br /> Описание. По умолчанию OLE DB Driver for SQL Server не проверяет истечение времени ожидания для метода **ICommand::Execute**.|  
@@ -97,6 +97,7 @@ ms.locfileid: "88859993"
 |SSPROP_DEFERPREPARE|Столбец: нет<br /><br /> Ч/З Чтение/запись<br /><br /> Тип: VT_BOOL.<br /><br /> Значение по умолчанию: VARIANT_TRUE<br /><br /> Описание. VARIANT_TRUE: при выполнении с подготовкой команда подготовки откладывается до вызова метода **ICommand::Execute** или выполнения операции метасвойства. Если свойство имеет значение<br /><br /> VARIANT_FALSE: подготовка инструкции производится при вызове метода **ICommandPrepare::Prepare**.|  
 |SSPROP_IRowsetFastLoad|Столбец: нет<br /><br /> Ч/З Чтение/запись<br /><br /> Тип: VT_BOOL.<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание. Чтобы открыть набор строк быстрой загрузки с помощью метода **IOpenRowset::OpenRowset**, присвойте этому свойству значение VARIANT_TRUE. Это свойство не может быть установлено в методе **ICommandProperties::SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Столбец: Нет.<br /><br /> Ч/З Чтение/запись<br /><br /> Тип: VT_BOOL.<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание. Чтобы задействовать асинхронные операции через интерфейс [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md), присвойте этому свойству значение VARIANT_TRUE.|  
+|SSPROP_ISSDataClassification|Ч/З Чтение/запись<br /><br />  Тип: VT_BOOL.<br /><br /> Значение по умолчанию: VARIANT_TRUE<br /><br /> Описание: OLE DB Driver for SQL Server поддерживает получение сведений о классификации конфиденциальных данных с помощью интерфейса [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md).|  
 |SSPROP_MAXBLOBLENGTH|Столбец: нет<br /><br /> Ч/З Чтение/запись<br /><br /> Тип: VT_I4<br /><br /> Значение по умолчанию: поставщик не ограничивает размер текста, возвращаемого сервером, и это свойство определяет это максимальное значение. Например, 2147483647.<br /><br /> Описание. Для ограничения длины данных больших двоичных объектов (BLOB), возвращаемых инструкцией SELECT, OLE DB Driver for SQL Server выполняет инструкцию SET TEXTSIZE.|  
 |SSPROP_NOCOUNT_STATUS|Столбец: NoCount.<br /><br /> Ч/З Только для чтения<br /><br /> Тип: VT_BOOL.<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание. Логическое значение, представляющее состояние SET NOCOUNT ON/OFF в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: если SET NOCOUNT ON<br /><br /> VARIANT_FALSE: если SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Столбец: нет<br /><br /> Ч/З Чтение/запись<br /><br /> Тип: VT_BSTR (допустимо от 1 до 2000 символов).<br /><br /> Значение по умолчанию: Пустая строка.<br /><br /> Описание. Текст сообщения уведомления запроса. Определяется пользователем, не имеет формата определения.|  

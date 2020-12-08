@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 059ecfb25389de1be0f8636a868e81e621e57bac
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 7450ebddf94a4378313bb1793bcefe34a88407a5
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867236"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442949"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Соединитель Apache Spark для SQL Server и Azure SQL
 
@@ -44,14 +44,14 @@ ms.locfileid: "91867236"
 | Базы данных SQL Azure                  | Поддерживается                       |
 
 > [!NOTE]
-> Использование Azure Synapse Analytics (хранилище данных SQL Azure) не проверяется с помощью этого соединителя. Вы можете это сделать, однако могут возникнуть непредвиденные проблемы.
+> Использование Azure Synapse Analytics не проверяется с помощью этого соединителя. Вы можете это сделать, однако могут возникнуть непредвиденные проблемы.
 
 ### <a name="supported-options"></a>Поддерживаемые варианты
 Соединитель Apache Spark для SQL Server и Azure SQL поддерживает параметры, определенные здесь: [SQL DataSource JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
 
 Кроме того, поддерживаются указанные ниже параметры
 
-| Параметр | Значение по умолчанию | Описание |
+| Параметр | По умолчанию | Описание |
 | --------- | ------------------ | ------------------------------------------ |
 | `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` или `NO_DUPLICATES`. `NO_DUPLICATES` реализует надежную операцию вставки в сценариях перезапуска исполнителя |
 | `dataPoolDataSource` | `none` | `none` означает, что значение не задано и соединитель должен записывать данные в один экземпляр SQL Server. Присвойте этому параметру имя источника данных для записи в таблицу пула данных в кластере больших данных|

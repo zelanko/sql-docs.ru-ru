@@ -2,7 +2,7 @@
 title: Конфигурация универсального канала передачи данных (UDL) | Документация Майкрософт
 description: Узнайте, как на вкладке "Подключение" настроить подключение к данным с помощью OLE DB Driver for SQL Server.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: b691d24bb1d700a63e1ecfc9daca3bbfb5399800
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f8d9444864dfe144918374c6d10e1a9f403faff3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727285"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504737"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Конфигурация универсального канала передачи данных (UDL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91727285"
 |Параметр|Description|
 |---   |---        |
 |Выберите или введите имя сервера|Выберите имя сервера из раскрывающегося списка либо введите адрес сервера, на котором расположена нужная база данных. Выбор базы данных на сервере является отдельным действием. Обновите список, щелкнув "Обновить".
-|Enter information to sign in to the server (Введите данные для входа на сервер)|Вы можете выбрать из раскрывающегося списка следующие параметры проверки подлинности: <ul><li>`Windows Authentication:` проверка подлинности в SQL Server с использованием учетных данных пользователя Windows, вошедшего в систему.</li><li>`SQL Server Authentication:` проверка подлинности с помощью имени для входа и пароля.</li><li>`Active Directory - Integrated:` встроенная проверка подлинности с помощью идентификатора Azure Active Directory. Этот режим можно также использовать для проверки подлинности Windows в SQL Server.</li><li>`Active Directory - Password:` проверка подлинности по идентификатору и паролю пользователя с использованием идентификатора Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` встроенная проверка подлинности с использованием идентификатора Azure Active Directory. Этот режим поддерживает Многофакторную идентификацию Microsoft Azure (MFA).</li></ul>|
+|Enter information to sign in to the server (Введите данные для входа на сервер)|Вы можете выбрать из раскрывающегося списка следующие параметры проверки подлинности: <ul><li>`Windows Authentication:` проверка подлинности в SQL Server с использованием учетных данных пользователя Windows, вошедшего в систему.</li><li>`SQL Server Authentication:` проверка подлинности с помощью имени для входа и пароля.</li><li>`Active Directory - Integrated:` встроенная проверка подлинности с помощью идентификатора Azure Active Directory. Этот режим можно также использовать для проверки подлинности Windows в SQL Server.</li><li>`Active Directory - Password:` проверка подлинности по идентификатору и паролю пользователя с использованием идентификатора Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` встроенная проверка подлинности с использованием идентификатора Azure Active Directory. Этот режим поддерживает Многофакторную идентификацию Microsoft Azure (MFA).</li><li>`Active Directory - Service Principal:` проверка подлинности с использованием субъекта-службы Azure Active Directory. В качестве **имени пользователя** нужно указать идентификатор приложения (клиента). В качестве **пароля** нужно указать секрет приложения (клиента).</li></ul>|
 |Имя участника-службы сервера|Если используется доверительное соединение, можно указать имя участника-службы для соединения с основным сервером.|
 |Имя пользователя|Введите идентификатор пользователя, который будет использоваться для проверки подлинности при входе в источник данных.|
 |Пароль|Введите пароль, который будет использоваться для проверки подлинности при входе в источник данных.|

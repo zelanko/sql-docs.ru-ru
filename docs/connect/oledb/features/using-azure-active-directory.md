@@ -2,7 +2,7 @@
 title: Использование Azure Active Directory
 description: Узнайте о методах проверки подлинности Azure Active Directory, доступных в Microsoft OLE DB Driver for SQL Server, которые позволяют подключаться к базам данных SQL Azure.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: bace88bd8ccf42cbef96a34ddb2af2593cedd7be
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 71f95203e006141649db7b884b56d085f562974b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727305"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504722"
 ---
 # <a name="using-azure-active-directory"></a>Использование Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,15 +24,20 @@ ms.locfileid: "91727305"
 
 ## <a name="purpose"></a>Назначение
 
-Начиная с версии 18.2.1, OLE DB Driver for SQL Server позволяет приложениям OLE DB подключаться к экземпляру Базы данных SQL Azure с помощью федеративного идентификатора. К новым методам проверки подлинности относятся:
+
+Начиная с версии [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server позволяет приложениям OLE DB подключаться к экземпляру Базы данных SQL Azure с помощью федеративного удостоверения. К новым методам проверки подлинности относятся:
 - имя для входа Azure Active Directory и пароль;
 - Маркер доступа Azure Active Directory
 - Интегрированная проверка подлинности Azure Active Directory
 - имя для входа SQL и пароль.
 
-В версии 18.3 добавлена поддержка следующих методов проверки подлинности:
+
+В версии [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) добавлена поддержка следующих способов проверки подлинности:
 - Интерактивная проверка подлинности Azure Active Directory
 - Проверка подлинности Azure Active Directory с использованием управляемого удостоверения
+
+В версии [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) добавлена поддержка следующего способа проверки подлинности:
+- Проверка подлинности субъекта-службы Azure Active Directory.
 
 > [!NOTE]
 > Использование следующих режимов проверки подлинности с параметром `DataTypeCompatibility` (или соответствующего свойства этого элемента) со значением `80` **не** поддерживается:
@@ -40,7 +45,8 @@ ms.locfileid: "91727305"
 > - проверка подлинности Azure Active Directory с помощью маркера доступа;
 > - Интегрированная проверка подлинности Azure Active Directory
 > - Интерактивная проверка подлинности Azure Active Directory
-> - Проверка подлинности Azure Active Directory с использованием управляемого удостоверения
+> - проверка подлинности Azure Active Directory с использованием управляемых удостоверений;
+> - проверка подлинности субъекта-службы Azure Active Directory.
 
 ## <a name="connection-string-keywords-and-properties"></a>Ключевые слова и свойства строки подключения
 Для поддержки проверки подлинности Azure Active Directory были введены следующие ключевые слова строки подключения:
@@ -142,6 +148,13 @@ ms.locfileid: "91727305"
         > Server=[сервер];Database=[база_данных];**Authentication=ActiveDirectoryMSI**;UID=[ИД объекта];Encrypt=yes.
     - Управляемое удостоверение, назначаемое системой:
         > Server=[сервер];Database=[база_данных];**Authentication=ActiveDirectoryMSI**;Encrypt=yes.
+
+### <a name="azure-active-directory-service-principal-authentication"></a>Проверка подлинности субъекта-службы Azure Active Directory.
+
+- Использование среды `IDataInitialize::GetDataSource`:
+    > Provider=MSOLEDBSQL;Data Source=[сервер];Initial Catalog=[база_данных];**Authentication=ActiveDirectoryServicePrincipal**;User ID=[ИД_приложения_(клиента)];Password=[секрет_приложения_(клиента)];Use Encryption for Data=true
+- Использование среды `DBPROP_INIT_PROVIDERSTRING`:
+    > Server=[сервер];Database=[база_данных];**Authentication=ActiveDirectoryServicePrincipal**;UID=[ИД_приложения_(клиента)];PWD=[секрет_приложения_(клиента)];Encrypt=yes
 
 ## <a name="code-samples"></a>Примеры кода
 

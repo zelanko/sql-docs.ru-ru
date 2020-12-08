@@ -1,19 +1,19 @@
 ---
 title: Заметки о выпуске OLE DB Driver
 description: В этих заметках о выпуске описываются изменения в каждом выпуске драйвера Microsoft OLE DB Driver for SQL Server.
-ms.date: 05/25/2020
+ms.date: 12/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: e66856d7eac47bca5fe7093cbec02d9414c585ef
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726949"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523089"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Заметки о выпуске Microsoft OLE DB Driver for SQL Server
 
@@ -27,6 +27,34 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1850"></a>18.5.0
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2135577)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2135722)  
+
+Выпущено: 1 декабря 2020 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+    Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40a)  
+    Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40a)  
+
+### <a name="features-added"></a>Добавлены возможности
+
+| Добавленная возможность | Сведения |
+| :------------ | :------ |
+| Включено [обнаружение и классификация данных SQL](../../relational-databases/security/sql-data-discovery-and-classification.md) | [Использование классификации данных](features/using-data-classification.md) |
+| Поддержка проверки подлинности субъекта-службы Azure Active Directory (`ActiveDirectoryServicePrincipal`) | [Использование Azure Active Directory](features/using-azure-active-directory.md) |
+
+### <a name="bugs-fixed"></a>Исправлены ошибки
+
+| Исправление ошибки | Сведения |
+| :-------- | :------ |
+| Исправлена проблема с внедренными символами NUL. | Исправлена ошибка, из-за которой драйвер возвращал неправильную длину строк с внедренными символами NUL. |
+| Исправлена утечка памяти в интерфейсе [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md). | Исправлена утечка памяти в интерфейсе [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) для операций с массовым копированием данных типа `sql_variant`. |
+| Исправлены ошибки, из-за которых возвращаются неправильные значения для свойств `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` и `SSPROP_MUTUALLYAUTHENTICATED`. | Предыдущие версии драйвера возвращали усеченные значения свойства `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD`. Кроме того, в случае проверки подлинности `ActiveDirectoryIntegrated`возвращаемое значение свойства `SSPROP_MUTUALLYAUTHENTICATED` было `VARIANT_FALSE`, даже если обе стороны выполняли взаимную проверку подлинности.|
+| Исправлена ошибка при вставке удаленной таблицы связанного сервера. | Исправлена ошибка, которая приводила к сбою вставки удаленной таблицы связанного сервера, если был включен [параметр конфигурации сервера NOCOUNT](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). |
+
+## <a name="previous-releases"></a>Предыдущие выпуски
 
 ## <a name="1840"></a>18.4.0
 ![скачать](../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2129954)  
@@ -52,12 +80,10 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | Исправлены различные ошибки в интерфейсе [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) | Некоторые ошибки, касающиеся многобайтовых кодовых страниц, приводили к тому, что интерфейс преждевременно сообщал о завершении потока во время операции чтения.|
 | Исправлена утечка памяти в интерфейсе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) | Исправлена утечка памяти в интерфейсе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) при включении свойства `SSPROP_IRowsetFastLoad`. |
 | Исправлена ошибка в сценариях с использованием типа данных `sql_variant` и строк, отличных от ASCII. | Некоторые сценарии с использованием типа данных `sql_variant` и строк, отличных от ASCII, могут приводить к повреждению данных. Подробная информация доступна в следующих статьях: [Известные проблемы](ole-db-data-types/ssvariant-structure.md#known-issues). |
-| Устранены проблемы с кнопкой *Проверить соединение* в диалоговом окне [настройки UDL](help-topics/data-link-pages.md). | Кнопка *Проверить соединение* в диалоговом окне [настройки UDL](help-topics/data-link-pages.md) теперь учитывает свойства инициализации, заданные на вкладке *Все*. |
-| Исправлена обработка значения по умолчанию для свойства `SSPROP_INIT_PACKETSIZE` | Устранена непредвиденная ошибка, возникавшая, когда свойству `SSPROP_INIT_PACKETSIZE` присваивалось значение по умолчанию `0`. Подробные сведения об этом свойстве см. в статье [Свойства инициализации и авторизации](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
-| Устранены проблемы переполнения буфера в [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Устранены проблемы переполнения буфера при использовании неверно сформированных файлов данных. |
-| Устранены проблемы со специальными возможностями | Устранены проблемы со специальными возможностями в пользовательском интерфейсе установщика и [диалоговом окне входа в SQL Server](help-topics/sql-server-login-dialog.md) (чтение содержимого, позиции табуляции). |
-
-## <a name="previous-releases"></a>Предыдущие выпуски
+| Устранены проблемы с кнопкой *Проверить подключение* в диалоговом окне [Настройка UDL](help-topics/data-link-pages.md). | Кнопка *Проверить соединение* в диалоговом окне [настройки UDL](help-topics/data-link-pages.md) теперь учитывает свойства инициализации, заданные на вкладке *Все*. |
+| Исправлена проблема с обработкой значения по умолчанию для свойства `SSPROP_INIT_PACKETSIZE` | Устранена непредвиденная ошибка, возникавшая, когда свойству `SSPROP_INIT_PACKETSIZE` присваивалось значение по умолчанию `0`. Подробные сведения об этом свойстве см. в статье [Свойства инициализации и авторизации](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Устранены проблемы с переполнением буфера в [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Устранены проблемы переполнения буфера при использовании неверно сформированных файлов данных. |
+| Устранены проблемы со специальными возможностями. | Устранены проблемы со специальными возможностями в пользовательском интерфейсе установщика и [диалоговом окне входа в SQL Server](help-topics/sql-server-login-dialog.md) (чтение содержимого, позиции табуляции). |
 
 ## <a name="1830"></a>18.3.0
 
@@ -74,7 +100,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| Поддержка проверки подлинности Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Использование Azure Active Directory](features/using-azure-active-directory.md) |
+| Поддержка проверки подлинности Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`) | [Использование Azure Active Directory](features/using-azure-active-directory.md) |
 | Включение библиотеки проверки подлинности Azure Active Directory (adal.dll) в установщик | Теперь Библиотека проверки подлинности Active Directory корпорации Майкрософт для SQL Server включена в базовую установку драйвера, а значит, существующие установки библиотеки будут автоматически обновлены и удалены установщиком OLE DB из списка установленных приложений в Windows. |
 | &nbsp; | &nbsp; |
 
@@ -102,7 +128,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| Поддержка обновления драйверов со съемного носителя SQL Server. | Это обновление включает поддержку обновления драйверов непосредственно со съемного носителя SQL Server. |
+| Поддержка обновления драйверов со съемного носителя SQL Server | Это обновление включает поддержку обновления драйверов непосредственно со съемного носителя SQL Server. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -138,8 +164,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| Поддержка кодировки UTF-8 на сервере. | [Поддержка UTF-8 в OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md). |
-| Поддержка проверки подлинности Azure Active Directory. | [Использование Azure Active Directory](features/using-azure-active-directory.md) |
+| Поддержка кодировки UTF-8 на сервере | [Поддержка UTF-8 в драйвере OLE DB для SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+| Поддержка проверки подлинности Azure Active Directory | [Использование Azure Active Directory](features/using-azure-active-directory.md) |
 | &nbsp; | &nbsp; |
 
 ## <a name="1810"></a>18.1.0
@@ -157,7 +183,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| Поддержка ключевого слова `UseFMTONLY` для строки подключения, а также свойства инициализации `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` определяет способ получения метаданных при подключении к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более новым версиям.<br/><br/>Дополнительные сведения см. в разделе: [Использование ключевых слов строки подключения с OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Поддержка ключевого слова строки подключения `UseFMTONLY`, а также свойства инициализации `SSPROP_INIT_USEFMTONLY` | `UseFMTONLY` определяет способ получения метаданных при подключении к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более новым версиям.<br/><br/>Дополнительные сведения см. в разделе: [Использование ключевых слов строки подключения с OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed-in-1810"></a>Ошибки, исправленные в 18.1.0

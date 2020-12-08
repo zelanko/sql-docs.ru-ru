@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 52f465b4cfdcb2ff771a71c1ef956af78b522358
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042237"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442872"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Использование массового копирования с помощью JDBC Driver
 
@@ -364,9 +364,9 @@ public class BulkCopyMultiple {
 
 Это свойство соединения, если задано значение `false`, отправит типы данных **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME** и **TIME** в качестве соответствующих типов вместо отправки их в виде строки.
 
-Отправка временных типов данных в соответствии с их типами позволяет пользователю отправлять данные в эти столбцы для Azure Synapse Analytics (SQL DW), что было невозможным ранее, так как драйвер преобразовывал данные в строку. Отправка строковых данных во временные столбцы работает для SQL Server, так как SQL Server будет выполнять неявное преобразование для нас, но это не то же самое в случае Azure Synapse Analytics (SQL DW).
+Отправка временных типов данных в соответствии с их типами позволяет пользователю отправлять данные в эти столбцы для Azure Synapse Analytics, что было невозможным ранее, так как драйвер преобразовывал данные в строку. Отправка строковых данных во временные столбцы работает для SQL Server, так как SQL Server будет автоматически выполнять неявное преобразование, но это не то же самое в случае с Azure Synapse Analytics.
 
-Кроме того, даже без установки для этой строки подключения значения "false", начиная с версии **8.4.1** типы данных **MONEY** и **SMALLMONEY** будут отправляться как типы данных **MONEY** / **SMALLMONEY**, а не **DECIMAL**, что также позволяет выполнять операции копирования типов данных в Azure Synapse Analytics (SQL DW).
+Кроме того, даже без установки для этой строки подключения значения false, начиная с версии **8.4.1** типы данных **MONEY** и **SMALLMONEY** будут отправляться как типы данных **MONEY** / **SMALLMONEY**, а не **DECIMAL**, что также позволяет массово копировать типы данных в Azure Synapse Analytics.
 
 ### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Ограничения расширенного массового копирования для хранилища данных Azure
 
@@ -599,7 +599,7 @@ public class BulkCopyExistingTransactions {
 > [!IMPORTANT]  
 > Этот пример не будет работать, если вы не создали рабочие таблицы, как описано в разделе [Настройка таблиц](#table-setup).  
   
-1. Откройте**SQL Server Management Studio** и подключитесь к SQL Server с базой данных AdventureWorks.  
+1. Откройте **SQL Server Management Studio** и подключитесь к SQL Server с базой данных AdventureWorks.  
   
 2. Разверните базы данных, щелкните правой кнопкой мыши базу данных AdventureWorks, выберите **Задачи** и **Экспорт данных**.  
   

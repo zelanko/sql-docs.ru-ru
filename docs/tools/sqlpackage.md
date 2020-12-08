@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 7894ea12ef77a7fb07a61ff454f27150812c7dfb
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384503"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443066"
 ---
 # <a name="sqlpackageexe"></a>SQLPackage.exe
 
@@ -245,7 +245,7 @@ sqlpackage.exe /Version
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в продолжительности периода, в течение которого SQL Server хранит маршрут в таблице маршрутизации, при публикации в базе данных.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в точках с запятой между инструкциями T-SQL при публикации в базе данных.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах таблиц при публикации в базе данных.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах секций таблиц при публикации в базе данных.  Этот параметр применяется только к базам данных пула SQL Azure Synapse Analytics (хранилища данных).|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах секций таблиц при публикации в базе данных.  Этот параметр применяется только к базам данных выделенного пула SQL Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Определяет, пропускаются или обновляются различия в объектах параметров пользователя при публикации в базе данных.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Определяет, пропускаются или обновляются различия в пробелах при публикации в базе данных.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Определяет, пропускаются или обновляются различия в значении предложения WITH NOCHECK для проверочных ограничений при публикации.|

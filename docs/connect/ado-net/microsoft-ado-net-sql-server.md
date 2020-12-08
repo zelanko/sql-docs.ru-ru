@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b3f1e0c518bf1b77c096999423c5e6d37e6051a
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f78760819e91a3f83e1a91208bdd96e7d1ec15ac
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123917"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442724"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET для SQL Server
 
@@ -32,8 +32,8 @@ ADO.NET — это базовая технология доступа к дан�
 
 ## <a name="documentation"></a>Документация
 * [Общие сведения об ADO.NET](/dotnet/framework/data/adonet/)
-* [Начало работы с драйвером SqlClient](get-started-sqlclient-driver.md)  
-* [Общие сведения о драйвере SqlClient](overview-sqlclient-driver.md)  
+* [Начало работы с драйвером SqlClient](get-started-sqlclient-driver.md)
+* [Общие сведения о драйвере SqlClient](overview-sqlclient-driver.md)
 * [Сопоставления типов данных в ADO.NET](data-type-mappings-ado-net.md)
 * [Извлечение и изменение данных в ADO.NET](retrieving-modifying-data.md)
 * [SQL Server и ADO.NET](./sql/index.md)

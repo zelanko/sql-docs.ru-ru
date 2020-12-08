@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943033"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442600"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Использование API массового копирования для операции пакетной вставки
 
@@ -71,7 +71,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 ## <a name="example"></a>Пример
 
-Ниже приведен пример кода, демонстрирующий вариант использования операции пакетной вставки в Azure Synapse Analytics (хранилище данных SQL) с тысячами строк для обоих сценариев (обычная вставка и API массового копирования).
+Ниже приведен пример кода, демонстрирующий вариант использования операции пакетной вставки в Azure Synapse Analytics с тысячами строк для обоих сценариев (обычная вставка и API массового копирования).
 
 ```java
     public static void main(String[] args) throws Exception

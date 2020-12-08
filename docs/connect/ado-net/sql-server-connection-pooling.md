@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 2a04c986f9d9b5189a5ed0c2751c0df3cdd876e0
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126468"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419750"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Пул подключений к SQL Server (ADO.NET)
 
@@ -129,5 +129,5 @@ ms.locfileid: "96126468"
 
 ## <a name="see-also"></a>См. также
 
-- [Объединение подключений в пул](connection-pooling.md)
+- [Организация пулов соединений](connection-pooling.md)
 - [SQL Server и ADO.NET](./sql/index.md)
