@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor, performance improvements
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8c64f567d8da74a2eb15b5647a2b259ba52193b4
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e6d392cedebec98c00ca6dac84dcc1d2fee21258
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678957"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505108"
 ---
 # <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>Повышение производительности с помощью рекомендаций помощника по настройке ядра СУБД (DTA)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92678957"
 
 Чтобы продемонстрировать преимущества рекомендаций DTA по повышению производительности рабочей нагрузки, мы поэкспериментировали с несколькими реальными рабочими нагрузками клиентов. DTA проанализировал отдельные запросы, а также полную рабочую нагрузку запросов каждой рабочей нагрузки клиентов. Рассмотрим три альтернативных варианта:
   
-  1. **Только columnstore** : построение для всех таблиц только индексов columnstore без использования DTA. 
+  1. **Только columnstore**: построение для всех таблиц только индексов columnstore без использования DTA. 
   2. **DTA (только rowstore)** : выполнение DTA с возможностью рекомендовать только индексы rowstore.
   3. **DTA (rowstore и columnstore)** : выполнение DTA с возможностью рекомендовать индексы rowstore и columnstore.  
    
@@ -41,7 +41,7 @@ ms.locfileid: "92678957"
 
 
 
-**Потребность в смешанных физических схемах** . Первая гистограмма соответствует запросу 1 первого клиента. DTA (rowstore и columnstore) рекомендует набор из четырех индексов columnstore и шести rowstore, что позволит сократить время ЦП в 2,5–4 раза в сравнении с использованием только индексов columnstore и DTA (только rowstore). Этот пример демонстрирует преимущества смешанной физической схемы, состоящей из индексов rowstore и columnstore ( *даже для одного запроса* ). 
+**Потребность в смешанных физических схемах**. Первая гистограмма соответствует запросу 1 первого клиента. DTA (rowstore и columnstore) рекомендует набор из четырех индексов columnstore и шести rowstore, что позволит сократить время ЦП в 2,5–4 раза в сравнении с использованием только индексов columnstore и DTA (только rowstore). Этот пример демонстрирует преимущества смешанной физической схемы, состоящей из индексов rowstore и columnstore (*даже для одного запроса*). 
 
 **Эффективность рекомендаций индекса rowstore.** Вторая и третья гистограммы (соответствующие запросу 2 первого клиента и запросу 1 второго клиента) демонстрируют запросы, содержащие выборочные фильтры предикатов, выигрывающие от подходящих индексов rowstore. Для обоих этих запросов DTA (только rowstore) и DTA (rowstore и columnstore) рекомендуют использовать только индексы rowstore. В этих примерах также показано, что даже если DTA вызывается с возможностью рекомендовать индексы columnstore, его подход на основе затрат ресурсов гарантирует, что индекс columnstore будет рекомендован, только если он будет действительно полезен для рабочей нагрузки.
 

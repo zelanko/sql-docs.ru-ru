@@ -13,14 +13,14 @@ helpviewer_keywords:
 - saving Showplan XML events
 - events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: c7cac6673d190ab8860792a2de1c995804275570
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 34c79b9f3dad13a8927296d424d827eb693ad1dd
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458734"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505028"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Раздельное сохранение событий Showplan XML (приложение SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "86458734"
   
 10. Чтобы все события **Showplan XML** сохранялись в одном XML-файле, установите флажок **Все пакеты XML Showplan в один файл**. Чтобы для каждого события **Showplan XML** создавался отдельный XML-файл, установите флажок **Каждый пакет XML Showplan в отдельный файл**.  
   
-11. Для просмотра события **Showplan XML** в среде SQL Server Management Studio выберите в меню **Файл** пункт **Открыть**, затем выберите **Файл**. Чтобы выбрать и открыть один из файлов событий **Showplan XML**, перейдите в каталог с этими файлами. Файлы событий**Showplan XML** имеют расширение .SQLPlan.  
+11. Для просмотра события **Showplan XML** в среде SQL Server Management Studio выберите в меню **Файл** пункт **Открыть**, затем выберите **Файл**. Чтобы выбрать и открыть один из файлов событий **Showplan XML**, перейдите в каталог с этими файлами. Файлы событий **Showplan XML** имеют расширение .SQLPlan.  
 
 ## <a name="see-also"></a>См. также раздел  
  [Анализ запросов с помощью результатов инструкции Showplan в приложении SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

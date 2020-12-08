@@ -13,14 +13,14 @@ helpviewer_keywords:
 - plan guides [SQL Server], view plan guide properties
 - viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 18c1d7f663d5006cae078753e028caf133ec2c5c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2c0615501d2cb191e5c45e33bb50f3898a412fbc
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458893"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504888"
 ---
 # <a name="view-plan-guide-properties"></a>Просмотр свойств структуры плана
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "86458893"
      Если тип области равен «OBJECT», отображает имя схемы, содержащей объект.  
   
      **Тип области**  
-     Отображает тип сущности, в которой присутствует инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] . Это указывает контекст для сопоставления оператора [!INCLUDE[tsql](../../includes/tsql-md.md)] со структурой плана. Возможными значениями являются **OBJECT**, **SQL**и **TEMPLATE**.  
+     Отображает тип сущности, в которой присутствует инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] . Это указывает контекст для сопоставления оператора [!INCLUDE[tsql](../../includes/tsql-md.md)] со структурой плана. Возможными значениями являются **OBJECT**, **SQL** и **TEMPLATE**.  
   
      **Инструкция**  
      Отображает инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] , для которой необходимо применить структуру плана.  
@@ -90,7 +90,7 @@ ms.locfileid: "86458893"
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Просмотр свойств структуры плана  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
