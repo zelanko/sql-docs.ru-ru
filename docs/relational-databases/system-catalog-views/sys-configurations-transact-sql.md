@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d470cda4e0c5cf54bcce0827fff4e5f9b9d1acb7
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546849"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901067"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89546849"
 |**is_dynamic**|**bit**|1 = переменная, вступающая в силу после выполнения инструкции RECONFIGURE.|  
 |**is_advanced**|**bit**|1 = переменная отображается, только если задан параметр **Показать адванцедоптион** .|  
   
- ## <a name="remarks"></a>Примечания
+ ## <a name="remarks"></a>Remarks
   Список всех параметров конфигурации сервера см. в разделе [Параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
@@ -53,7 +53,7 @@ ms.locfileid: "89546849"
 Представление каталога sys.configуратионс можно использовать для определения config_value (столбец значений), run_value (столбец value_in_use), а также значение, определяющее, является ли параметр конфигурации динамическим (не требует перезапуска серверного ядра или столбца is_dynamic).
 
 > [!NOTE]
-> Config_value в результирующем наборе sp_configure эквивалентен столбцу **sys.configуратионс. Value** . **Run_value** эквивалентен столбцу **sys.configуратионс. value_in_use** .
+> Config_value в результирующем наборе sp_configure эквивалентен столбцу **sys.configуратионс. Value** . **Run_value** эквивалентен столбцу **urations.value_in_usesys.config** .
 
 Следующий запрос можно использовать, чтобы определить, не установлены ли какие либо настроенные значения:
 
@@ -65,9 +65,10 @@ select * from sys.configurations where value != value_in_use
 
 Существуют параметры конфигурации, в которых значения и value_in_use могут отличаться, и это ожидаемое поведение. Пример:
 
-"max server memory (МБ)" — значение по умолчанию 0 будет отображаться как value_in_use = 2147483647 "min server memory (МБ)" — значение по умолчанию, равное 0, может отображаться как value_in_use = 8 (32-разрядное) или 16 (64-разрядное). 
+"max server memory (МБ)" — значение по умолчанию, равное 0, отображается как **value_in_use** = 2147483647<br>
 
-В некоторых случаях **value_in_use** будет иметь значение 0. В этом случае "true" **value_in_use** имеет значение 8 (32-разрядное) или 16 (64-разрядное)
+"min server memory (МБ)" — значение по умолчанию 0 может отображаться как **value_in_use** = 8 (32-разрядная) или 16 (64-разрядная). В некоторых случаях **value_in_use** имеет значение 0. В этом случае "true" **value_in_use** имеет значение 8 (32-разрядное) или 16 (64-разрядное).
+
 
 Столбец **is_dynamic** можно использовать, чтобы определить, требует ли параметр конфигурации перезагрузки. is_dynamic = 1 означает, что при выполнении из командной перенастройки (T-SQL) новое значение вступит в силу немедленно (в некоторых случаях ядро сервера может не оценивать новое значение немедленно, но это происходит в обычном процессе выполнения). is_dynamic = 0 означает, что измененное значение конфигурации не вступит в силу, пока сервер не будет перезагружен, даже если была выполнена команда перенастройки (T-SQL).
 
@@ -77,7 +78,7 @@ select * from sys.configurations where value != value_in_use
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога конфигурации на уровне сервера &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b474931aad2958a4ddba3bccb20773e7f36fd0e7
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 910ee3433bfa4298412a10a58405fb27dad0b157
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753826"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900992"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, к которому добавляется расписание. *job_id* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
+`[ @job_id = ] job_id` Идентификационный номер задания, к которому добавляется расписание. *job_id* имеет тип **uniqueidentifier** и не имеет значения по умолчанию.  
   
 `[ @job_name = ] 'job_name'` Имя задания, к которому добавляется расписание. *job_name* имеет тип **nvarchar (128)** и не имеет значения по умолчанию.  
   
@@ -65,9 +65,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @name = ] 'name'` Имя расписания. *имя* имеет тип **nvarchar (128)** и не имеет значения по умолчанию.  
   
-`[ @enabled = ] enabled_flag` Указывает текущее состояние расписания. *enabled_flag* имеет тип **tinyint**и значение по умолчанию **1** (включено). Если значение **равно 0**, расписание не включено. Если расписание отключено, то задание не выполняется.  
+`[ @enabled = ] enabled_flag` Указывает текущее состояние расписания. *enabled_flag* имеет тип **tinyint** и значение по умолчанию **1** (включено). Если значение **равно 0**, расписание не включено. Если расписание отключено, то задание не выполняется.  
   
-`[ @freq_type = ] frequency_type` Значение, указывающее, когда должно выполняться задание. *frequency_type* имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений:  
+`[ @freq_type = ] frequency_type` Значение, указывающее, когда должно выполняться задание. *frequency_type* имеет **тип int**, значение по умолчанию **0** и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -96,10 +96,11 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
 |**0x1**|В указанное время|  
+|**0x2**|Секунды|  
 |**0x4**|Минуты|  
 |**0x8**|Часы|  
   
-`[ @freq_subday_interval = ] frequency_subday_interval` Число периодов *frequency_subday_type* , которые должны быть выполнены между выполнением задания. *frequency_subday_interval* имеет **тип int**и значение по умолчанию 0.  
+`[ @freq_subday_interval = ] frequency_subday_interval` Число периодов *frequency_subday_type* , которые должны быть выполнены между выполнением задания. *frequency_subday_interval* имеет **тип int** и значение по умолчанию 0.  
   
 `[ @freq_relative_interval = ] frequency_relative_interval` Далее определяется *frequency_interval* , если *frequency_type* установлен в **32** (ежемесячное относительное значение).  
   
@@ -115,19 +116,19 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* указывает на вхождение интервала. Например, если *frequency_relative_interval* имеет значение **2**, *frequency_type* имеет значение **32**, а *frequency_interval* имеет значение **3**, запланированное задание будет выполняться во второй вторник каждого месяца.  
   
-`[ @freq_recurrence_factor = ] frequency_recurrence_factor` Число недель или месяцев между запланированным выполнением задания. *frequency_recurrence_factor* используется только в том случае, если *frequency_type* имеет значение **8**, **16**или **32**. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию 0.  
+`[ @freq_recurrence_factor = ] frequency_recurrence_factor` Число недель или месяцев между запланированным выполнением задания. *frequency_recurrence_factor* используется только в том случае, если *frequency_type* имеет значение **8**, **16** или **32**. *frequency_recurrence_factor* имеет **тип int** и значение по умолчанию 0.  
   
-`[ @active_start_date = ] active_start_date` Дата начала выполнения задания. *active_start_date* имеет **тип int**и не имеет значения по умолчанию. Формат даты: ГГГГMMДД. Если задан параметр *active_start_date* , дата должна быть больше или равна 19900101.  
+`[ @active_start_date = ] active_start_date` Дата начала выполнения задания. *active_start_date* имеет **тип int** и не имеет значения по умолчанию. Формат даты: ГГГГMMДД. Если задан параметр *active_start_date* , дата должна быть больше или равна 19900101.  
   
  После создания расписания проверьте дату начала и убедитесь, что она задана правильно. Дополнительные сведения см. в подразделе «Дата начала планирования» раздела [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
-`[ @active_end_date = ] active_end_date` Дата, когда выполнение задания может быть прервано. *active_end_date* имеет **тип int**и не имеет значения по умолчанию. Формат даты: ГГГГMMДД.  
+`[ @active_end_date = ] active_end_date` Дата, когда выполнение задания может быть прервано. *active_end_date* имеет **тип int** и не имеет значения по умолчанию. Формат даты: ГГГГMMДД.  
   
-`[ @active_start_time = ] active_start_time` Время в любой день между *active_start_date* и *active_end_date* , чтобы начать выполнение задания. *active_start_time* имеет **тип int**и не имеет значения по умолчанию. Формат времени ЧЧMMСС в 24-часовом формате.  
+`[ @active_start_time = ] active_start_time` Время в любой день между *active_start_date* и *active_end_date* , чтобы начать выполнение задания. *active_start_time* имеет **тип int** и не имеет значения по умолчанию. Формат времени ЧЧMMСС в 24-часовом формате.  
   
-`[ @active_end_time = active_end_time_` Время в любой день между *active_start_date* и *active_end_date* , чтобы завершить выполнение задания. *active_end_time* имеет **тип int**и не имеет значения по умолчанию. Формат времени ЧЧMMСС в 24-часовом формате.  
+`[ @active_end_time = active_end_time_` Время в любой день между *active_start_date* и *active_end_date* , чтобы завершить выполнение задания. *active_end_time* имеет **тип int** и не имеет значения по умолчанию. Формат времени ЧЧMMСС в 24-часовом формате.  
   
-`[ @schedule_id = schedule_idOUTPUT` Запланировать идентификационный номер, назначенный для расписания, если он успешно создан. *schedule_id* является выходной переменной типа **int**и не имеет значения по умолчанию.  
+`[ @schedule_id = schedule_idOUTPUT` Запланировать идентификационный номер, назначенный для расписания, если он успешно создан. *schedule_id* является выходной переменной типа **int** и не имеет значения по умолчанию.  
   
 `[ @schedule_uid = ] _schedule_uidOUTPUT` Уникальный идентификатор расписания. *schedule_uid* является переменной типа **uniqueidentifier**.  
   
@@ -163,7 +164,7 @@ EXEC msdb.dbo.sp_add_jobschedule
         @active_start_time = 20000 -- 2:00 AM
 ```
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [Планирование задания](../../ssms/agent/schedule-a-job.md)   
  [Создание расписания](../../ssms/agent/create-a-schedule.md)   
