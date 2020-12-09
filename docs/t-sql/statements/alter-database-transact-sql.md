@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: af8f519e7fec6a440fcdce44ccebbcfab2f0e0a9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235391"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443202"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -142,13 +142,13 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>Аргументы
 
-*database_name*  — имя изменяемой базы данных.
+*database_name* — имя изменяемой базы данных.
 
 > [!NOTE]
 > Этот параметр недоступен в автономной базе данных.
 
 CURRENT   
-**Область применения** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.
 
 Определяет, что должна быть изменена текущая используемая база данных.
 
@@ -166,7 +166,7 @@ COLLATE *collation_name*
 Список имен параметров сортировки Windows и SQL см. в статье [Параметры сортировки](~/t-sql/statements/collations.md).
 
 **\<delayed_durability_option> ::=**    
-**Область применения** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.
+**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.
 
 Дополнительные сведения см. в статьях [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) и [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).
 
@@ -263,7 +263,7 @@ GO
 
 В следующем примере создается база данных `testdb`, параметры сортировки которой имеют значение `SQL_Latin1_General_CP1_CI_A`. Затем имя базы данных `testdb` изменяется на `COLLATE French_CI_AI`.
 
-**Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.
 
 ```sql
 USE master;
@@ -476,7 +476,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 |200 ГБ|Недоступно|√|√|√|√|
 |250 ГБ|Недоступно|√ (D)|√ (D)|√|√|
 |300 ГБ|Недоступно|√|√|√|√|
-|400 ГБ|Недоступно|√|√|√|√|
+|400 ГБ|Н/Д|√|√|√|√|
 |500 ГБ|Недоступно|√|√|√ (D)|√|
 |750 ГБ|Недоступно|√|√|√|√|
 |1024 ГБ|Недоступно|√|√|√|√ (D)|
@@ -950,7 +950,7 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="syntax"></a>Синтаксис
 
-### <a name="sql-pool"></a>[Пул SQL](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[Выделенный пул SQL](#tab/sqlpool)
 ```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -974,7 +974,7 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
-### <a name="sql-on-demand-preview"></a>[SQL по запросу (предварительная версия)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[Бессерверный пул SQL](#tab/sqlod)
 ```syntaxsql
 ALTER DATABASE { database_name | Current } 
 { 

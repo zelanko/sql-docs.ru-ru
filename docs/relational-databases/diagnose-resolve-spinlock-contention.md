@@ -3,18 +3,18 @@ title: Технический документ. Диагностика и уст
 description: В этой статье подробно рассматривается диагностика и устранение конфликтов спин-блокировок в SQL Server. Эта статья была изначально опубликована командой SQLCAT в корпорации Майкрософт.
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf22570ae96e0ee2a839088e6848443d0c9dddd9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 6ecce46a04943d36dc6d821d6a3457b056f00356
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811862"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506318"
 ---
 # <a name="diagnose-and-resolve-spinlock-contention-on-sql-server"></a>Диагностика и устранение конфликтов спин-блокировок на SQL Server
 
