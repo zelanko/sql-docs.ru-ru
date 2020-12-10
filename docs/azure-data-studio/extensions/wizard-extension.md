@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 2d4864a3475b8e27fd86e90fbfa690c49a0c413d
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364061"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900797"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Создание расширения мастера в Azure Data Studio
 
@@ -43,7 +43,7 @@ ms.locfileid: "91364061"
 Чтобы упростить процесс создания расширений, мы создали [генератор расширений](https://code.visualstudio.com/docs/extensions/yocode) с помощью Yeoman. Для его установки выполните следующую команду в командной строке.
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-wizard-extension"></a>Создание расширения мастера
@@ -104,7 +104,7 @@ ms.locfileid: "91364061"
 Чтобы предоставить общий доступ другим пользователям, нужно упаковать расширение в один файл. Его можно опубликовать в магазине расширений Azure Data Studio или предоставить для общего доступа другим участникам команды или сообщества. Для этого нужно установить другой пакет npm из командной строки.
 
 ```console
-npm install -g vsce`
+npm install -g vsce
 ```
 
 Измените `README.md` по желанию, перейдите к базовому каталогу расширения и выполните команду `vsce package`. При необходимости можно связать репозиторий с расширением или продолжить работу без него. Чтобы добавить его, добавьте аналогичную строку в файл `package.json`.

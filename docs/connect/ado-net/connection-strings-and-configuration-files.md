@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c5610f182adaab2197b67578e51331fd6d7ce19b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126507"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563120"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Строки подключения и файлы конфигурации
 
@@ -25,7 +25,7 @@ ms.locfileid: "96126507"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-Внедрение строк соединения в код приложения может привести к появлению уязвимых мест в системе безопасности и проблем с обслуживанием. Незашифрованные строки подключения, скомпилированные в исходный код приложения, можно просматривать с помощью средства [Ildasm.exe (IL Disassembler)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md). Кроме того, после изменения строки соединения необходимо перекомпилировать приложение. По этим причинам рекомендуется хранить строки соединения в файле конфигурации приложения.
+Внедрение строк соединения в код приложения может привести к появлению уязвимых мест в системе безопасности и проблем с обслуживанием. Незашифрованные строки подключения, скомпилированные в исходный код приложения, можно просматривать с помощью средства [Ildasm.exe (IL Disassembler)](/dotnet/framework/tools/ildasm-exe-il-disassembler). Кроме того, после изменения строки соединения необходимо перекомпилировать приложение. По этим причинам рекомендуется хранить строки соединения в файле конфигурации приложения.
 
 ## <a name="working-with-application-configuration-files"></a>Работа с файлами конфигурации приложения
 
@@ -194,5 +194,5 @@ ms.locfileid: "96126507"
 - [Построители строк подключения](connection-string-builders.md)
 - [Защита сведений о подключении](protecting-connection-information.md)
 - [Использование классов конфигурации](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Настройка приложений](/dotnet/docs/framework/configure-apps/index.md)
+- [Настройка приложений](/dotnet/framework/configure-apps/index)
 - [Администрирование веб-сайта ASP.NET](/previous-versions/aspnet/6hy1xzbw(v=vs.100))

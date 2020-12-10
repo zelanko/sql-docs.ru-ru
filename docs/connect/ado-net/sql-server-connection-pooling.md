@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419750"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563084"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Пул подключений к SQL Server (ADO.NET)
 
@@ -68,10 +68,10 @@ ms.locfileid: "96419750"
 Организатор пулов соединений обрабатывает запросы соединений путем их повторного размещения после возврата в пул. Если достигнут максимальный размер пула, а пригодные соединения недоступны, запрос помещается в очередь. Затем владелец пула пытается получить свободное подключение, пока не истечет период ожидания (**по умолчанию это 15 секунд**). Если организатор пулов не может обработать запрос до истечения времени ожидания соединения, возникнет исключение.
 
 > [!CAUTION]
-> Настоятельно рекомендуется всегда закрывать соединение после его использования, чтобы оно вернулось в пул. Это можно сделать с помощью методов `Close` или `Dispose` объекта `Connection`, либо открывая все подключения внутри инструкции `using` (C#) или `Using` (Visual Basic). Соединения, которые явно не закрыты, нельзя добавить или вернуть в пул. Дополнительные сведения см. в документации по [оператору using](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) или в [практическом руководстве по удалению системного ресурса](/dotnet/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) для Visual Basic.
+> Настоятельно рекомендуется всегда закрывать соединение после его использования, чтобы оно вернулось в пул. Это можно сделать с помощью методов `Close` или `Dispose` объекта `Connection`, либо открывая все подключения внутри инструкции `using` (C#) или `Using` (Visual Basic). Соединения, которые явно не закрыты, нельзя добавить или вернуть в пул. Дополнительные сведения см. в документации по [оператору using](/dotnet/csharp/language-reference/keywords/using-statement) или в [практическом руководстве по удалению системного ресурса](/dotnet/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource) для Visual Basic.
 
 > [!NOTE]
-> В методе `Close` вашего класса нельзя вызывать методы `Dispose` или `Connection` объектов `DataReader`, `Finalize` или любого другого управляемого объекта. В методе завершения следует только освобождать неуправляемые ресурсы, которыми ваш класс непосредственно владеет. Если класс не владеет какими-либо неуправляемыми ресурсами, не включайте в его определение метод `Finalize`. Дополнительные сведения см. в статье [Сборка мусора](/dotnet/docs/standard/garbage-collection/index.md).
+> В методе `Close` вашего класса нельзя вызывать методы `Dispose` или `Connection` объектов `DataReader`, `Finalize` или любого другого управляемого объекта. В методе завершения следует только освобождать неуправляемые ресурсы, которыми ваш класс непосредственно владеет. Если класс не владеет какими-либо неуправляемыми ресурсами, не включайте в его определение метод `Finalize`. Дополнительные сведения см. в статье [Сборка мусора](/dotnet/standard/garbage-collection/index).
 
 Дополнительные сведения о событиях, связанных с открытием и закрытием подключений, вы найдете в разделах документации по SQL Server: [Audit Login, класс событий](/sql/relational-databases/event-classes/audit-login-event-class) и [Audit Logout, класс событий](/sql/relational-databases/event-classes/audit-logout-event-class).
 

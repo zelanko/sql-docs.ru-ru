@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 091bf94f01c66b3f991c0457adcfa4d119d49167
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364101"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900877"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Создание расширения панели мониторинга в Azure Data Studio
 
@@ -44,7 +44,7 @@ ms.locfileid: "91364101"
 Чтобы упростить процесс создания расширений, мы создали [генератор расширений](https://code.visualstudio.com/docs/extensions/yocode) с помощью Yeoman. Для его установки выполните следующую команду в командной строке:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-dashboard-extension"></a>Создание расширения панели мониторинга
@@ -63,7 +63,7 @@ ms.locfileid: "91364101"
 2. **Действия на домашней странице**. Кнопки действий в верхней части панели инструментов подключения.
 3. **Мини-приложения**. Графы, которые выполняются для SQL Server.
 
-   :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Снимок экрана, на котором приведены общие сведения о панелях мониторинга.":::
+   :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Снимок экрана с точками вклада.":::
 
 ### <a name="run-the-extension-generator"></a>Запуск генератора расширений
 
@@ -77,11 +77,11 @@ ms.locfileid: "91364101"
 
 1. Введите данные в окна запросов, как показано далее, чтобы создать расширение, добавляющее вкладку на панель мониторинга сервера.
 
-   :::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Снимок экрана, на котором приведены общие сведения о панелях мониторинга.":::
+   :::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Снимок экрана, на котором показан генератор расширений.":::
 
    Доступно множество запросов, поэтому ниже приведены некоторые сведения о том, что означает каждый из них:
 
-   :::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Снимок экрана, на котором приведены общие сведения о панелях мониторинга.":::
+   :::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Снимок экрана, на котором показана блок-схема панели мониторинга.":::
 
 При выполнении предыдущих шагов создается папка. Откройте ее в Visual Studio Code, чтобы создать собственное расширение панели мониторинга.
 
@@ -108,7 +108,7 @@ ms.locfileid: "91364101"
 Чтобы предоставить общий доступ другим пользователям, нужно упаковать расширение в один файл. Его можно опубликовать в магазине Marketplace расширений Azure Data Studio или предоставить для общего доступа другим участникам команды или сообщества. Для этого нужно установить другой пакет npm из командной строки.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Внесите в файл `README.md` желаемые изменения. Затем перейдите к базовому каталогу расширения и выполните команду `vsce package`. При необходимости можно связать репозиторий с расширением или продолжить работу без него. Чтобы добавить его, добавьте аналогичную строку в файл `package.json`.
@@ -122,7 +122,7 @@ ms.locfileid: "91364101"
 
 После добавления этих строк создается файл `my-test-extension-0.0.1.vsix`, готовый для установки в Azure Data Studio.
 
-:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Снимок экрана, на котором приведены общие сведения о панелях мониторинга.":::
+:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Снимок экрана, на котором показана установка VSIX.":::
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Публикация расширения в Marketplace
 

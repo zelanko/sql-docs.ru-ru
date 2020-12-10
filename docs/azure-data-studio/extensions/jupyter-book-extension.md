@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 5d9138a5d02008cc173bc7f0b64d354d67112d3b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 9f6449c11c4033324b8f294449942b67425a737c
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364091"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900897"
 ---
 # <a name="create-a-jupyter-book-extension"></a>Создание расширения Jupyter Book
 
@@ -57,7 +57,7 @@ ms.locfileid: "91364091"
 Чтобы упростить процесс создания расширений, мы создали [генератор расширений](https://www.npmjs.com/package/generator-azuredatastudio) с помощью Yeoman. Для его установки выполните следующую команду в командной строке:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-extension"></a>Создание расширения
@@ -80,13 +80,13 @@ ms.locfileid: "91364091"
 
 Если вы хотите предоставить уже созданную книгу, укажите абсолютный путь к папке, в которой находится содержимое вашей книги. После этого вы сможете перейти к изучению расширения и его отправке.
 
-:::image type="content" source="media/jupyter-book-extension/jupyter-book-existing-book.png" alt-text="Снимок экрана, на котором показан генератор расширений.":::
+:::image type="content" source="media/jupyter-book-extension/jupyter-book-existing-book.png" alt-text="Снимок экрана, показывающий существующую книгу.":::
 
 ### <a name="use-the-sample-book"></a>Использование образца книги
 
 Если у вас нет книги или записных книжек, можно использовать предоставленный образец в генераторе.
 
-:::image type="content" source="media/jupyter-book-extension/jupyter-book-sample-path.png" alt-text="Снимок экрана, на котором показан генератор расширений.":::
+:::image type="content" source="media/jupyter-book-extension/jupyter-book-sample-path.png" alt-text="Снимок экрана, на котором показан пример книги Jupyter Book.":::
 
 В образце книги показано, как выглядит простая книга Jupyter Book. Если вы хотите узнать о настройке книги Jupyter Book, см. следующий раздел о создании новой книги с существующими записными книжками.
 
@@ -94,7 +94,7 @@ ms.locfileid: "91364091"
 
 Если у вас есть записные книжки, которые вы хотите упаковать в книгу Jupyter Book, вы можете это сделать. Генератор спрашивает, должны ли в книге быть главы, и, если да, сколько их будет и как они будут называться. Здесь показано, как выглядит процесс выбора. С помощью клавиши пробела выберите, какие записные книжки нужно поместить в каждую главу.
 
-:::image type="content" source="media/jupyter-book-extension/jupyter-book-create-book.png" alt-text="Снимок экрана, на котором показан генератор расширений.":::
+:::image type="content" source="media/jupyter-book-extension/jupyter-book-create-book.png" alt-text="Снимок экрана: создание книги Jupyter Book.":::
 
 При выполнении предыдущих шагов создается папка с новой книгой Jupyter Book. Откройте ее в Visual Studio Code, чтобы предоставить расширение Jupyter Book.
 
@@ -102,7 +102,7 @@ ms.locfileid: "91364091"
 
 В настоящее время ваш проект должен выглядеть следующим образом:
 
-   :::image type="content" source="media/jupyter-book-extension/jupyter-book-file-structure-generator.png" alt-text="Снимок экрана, на котором показан генератор расширений.":::
+   :::image type="content" source="media/jupyter-book-extension/jupyter-book-file-structure-generator.png" alt-text="Снимок экрана, на котором показана структура файла расширения.":::
 
 Файл `vsc-extension-quickstart.md` предоставляет ссылку на важные файлы. В файле `README.md` можно предоставить документацию для нового расширения. Обратите внимание на файлы `package.json`, `jupyter-book.ts`, `content` и `toc.yml`. Папка `content` содержит все файлы записных книжек или Markdown. `toc.yml` структурирует книгу Jupyter Book и формируется автоматически, если вы решили создать настраиваемую книгу Jupyter Book с помощью генератора расширений.
 
@@ -151,7 +151,7 @@ export function activate(context: vscode.ExtensionContext) {
 Чтобы предоставить общий доступ другим пользователям, нужно упаковать расширение в один файл. Его можно опубликовать в магазине Marketplace расширений Azure Data Studio или предоставить для общего доступа другим участникам команды или сообщества. Для этого нужно установить другой пакет npm из командной строки.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Внесите в файл `README.md` желаемые изменения. Затем перейдите к базовому каталогу расширения и выполните команду `vsce package`. При необходимости можно связать репозиторий с расширением или продолжить работу без него. Чтобы добавить его, добавьте аналогичную строку в файл `package.json`.
@@ -169,11 +169,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 Чтобы запустить и проверить расширение, перейдите в Azure Data Studio и откройте палитру команд, нажав клавиши **Ctrl+Shift+P**. Найдите команду **Расширения: установка из VSIX** и перейдите к папке, содержащей новое расширение. Расширение должно отображаться на панели расширения в Azure Data Studio.
 
-   :::image type="content" source="media/jupyter-book-extension/install-vsix.png" alt-text="Снимок экрана, на котором показан генератор расширений.":::
+   :::image type="content" source="media/jupyter-book-extension/install-vsix.png" alt-text="Снимок экрана, на котором показана установка VSIX.":::
 
 Снова откройте палитру команд и найдите команду, которую мы зарегистрировали, — **Запустить книгу: Test Notebook**. После запуска откроется книга Jupyter Book, упакованная с нашим расширением.
 
-   :::image type="content" source="media/jupyter-book-extension/jupyter-book-launch-ads.png" alt-text="Снимок экрана, на котором показан генератор расширений.":::
+   :::image type="content" source="media/jupyter-book-extension/jupyter-book-launch-ads.png" alt-text="Снимок экрана, на котором отображается команда notebook-command.":::
 
 Поздравляем! Вы создали свое первое расширение Jupyter Book и теперь можете предоставить его. Дополнительные сведения о книгах Jupyter Book см. в разделе [Книги с Jupyter](https://jupyterbook.org/intro.html).
 

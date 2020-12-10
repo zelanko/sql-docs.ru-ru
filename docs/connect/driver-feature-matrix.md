@@ -2,19 +2,19 @@
 title: Матрица поддержки функций драйверами
 description: Узнайте, какие популярные функции поддерживаются в драйверах для SQL Server и где можно найти сведения о них.
 ms.custom: ''
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 4fff9c04098bd0796f714d160864e4edb93613ac
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419676"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595235"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Матрица поддержки функций драйверами для Microsoft SQL Server
 
@@ -40,14 +40,14 @@ ms.locfileid: "96419676"
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Да](ado-net/sql/sqlclient-support-always-encrypted.md) | [Да](ado-net/sql/sqlclient-support-always-encrypted.md) | | [Да](ado-net/sql/sqlclient-support-always-encrypted.md) |
 | [Always Encrypted с безопасными анклавами](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Да](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | [Да](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | | [Да](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) |
 | [Проверка подлинности Azure Active Directory с использованием маркера доступа](/azure/active-directory/develop/access-tokens) | [Да](/dotnet/api/system.data.sqlclient.sqlconnection.accesstoken) | [Да](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Да](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Да](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) |
-| [Проверка подлинности Azure Active Directory с использованием пароля](/azure/sql-database/sql-database-aad-authentication) | да | да | | Да |
-| [Интегрированная проверка подлинности Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | да | да | | Да |
-| [Интерактивная проверка подлинности Azure Active Directory (MFA)](/azure/sql-database/sql-database-aad-authentication) | да | да | | Да |
-| [Проверка подлинности Azure Active Directory с использованием управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) | Да | да | | |
-| [Проверка подлинности Azure Active Directory субъекта-службы](/azure/active-directory/develop/app-objects-and-service-principals) | да | Да | | |
+| [Проверка подлинности Azure Active Directory с использованием пароля](/azure/sql-database/sql-database-aad-authentication) | [Да](ado-net/sql/azure-active-directory-authentication.md) | [Да](ado-net/sql/azure-active-directory-authentication.md) | | Да |
+| [Интегрированная проверка подлинности Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Да](ado-net/sql/azure-active-directory-authentication.md) | [Да](ado-net/sql/azure-active-directory-authentication.md) | | Да |
+| [Интерактивная проверка подлинности Azure Active Directory (MFA)](/azure/sql-database/sql-database-aad-authentication) | [Да](ado-net/sql/azure-active-directory-authentication.md) | [Да](ado-net/sql/azure-active-directory-authentication.md) | | Да |
+| [Проверка подлинности Azure Active Directory с использованием управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) | [Да](ado-net/sql/azure-active-directory-authentication.md) | [Да](ado-net/sql/azure-active-directory-authentication.md) | | |
+| [Проверка подлинности Azure Active Directory субъекта-службы](/azure/active-directory/develop/app-objects-and-service-principals) | [Да](ado-net/sql/azure-active-directory-authentication.md) | [Да](ado-net/sql/azure-active-directory-authentication.md) | | |
 | [Встроенная проверка подлинности Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | [Да](ado-net/sql/authentication-sql-server.md) | [Да](ado-net/sql/authentication-sql-server.md) | [Да](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Да](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Массовое копирование](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Да](ado-net/sql/bulk-copy-operations-sql-server.md) | [Да](ado-net/sql/bulk-copy-operations-sql-server.md) | [Да](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Да](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
-| [Метаданные о конфиденциальности и классификации данных](../relational-databases/security/sql-data-discovery-and-classification.md) | да | Да | Да | Да |
+| [Метаданные о конфиденциальности и классификации данных](../relational-databases/security/sql-data-discovery-and-classification.md) | [Да](ado-net/sql/data-classification.md) | [Да](ado-net/sql/data-classification.md) | Да | Да |
 | [Режим MARS](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Да](ado-net/sql/multiple-active-result-sets-mars.md) | [Да](ado-net/sql/multiple-active-result-sets-mars.md) | [Да](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [Да](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [Типы пространственных данных](../relational-databases/spatial/spatial-data-sql-server.md) | | да | | Да |
 | [Параметры, которые возвращают табличное значение (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Да](ado-net/sql/table-valued-parameters.md) | [Да](ado-net/sql/table-valued-parameters.md) | [Да](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [Да](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
@@ -64,7 +64,7 @@ ms.locfileid: "96419676"
 | [Интегрированная проверка подлинности Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Да](odbc/using-azure-active-directory.md) | [Да](odbc/using-azure-active-directory.md) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
 | [Интерактивная проверка подлинности Azure Active Directory (MFA)](/azure/sql-database/sql-database-aad-authentication) | [Да](odbc/using-azure-active-directory.md) | | | [Да](oledb/features/using-azure-active-directory.md) |
 | [Проверка подлинности Azure Active Directory с использованием управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) | [Да](odbc/using-azure-active-directory.md) | [Да](odbc/using-azure-active-directory.md) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
-| [Проверка подлинности Azure Active Directory субъекта-службы](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
+| [Проверка подлинности Azure Active Directory субъекта-службы](/azure/active-directory/develop/app-objects-and-service-principals) | | | | [Да](oledb/features/using-azure-active-directory.md) |
 | [Встроенная проверка подлинности Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | Да | [Да](odbc/linux-mac/using-integrated-authentication.md) | [Да](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | Да |
 | [Массовое копирование](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Да](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Да](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Да](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [Да](oledb/features/performing-bulk-copy-operations.md) |
 | [Метаданные обнаружения и классификации данных](../relational-databases/security/sql-data-discovery-and-classification.md) | [Да](odbc/data-classification.md) | [Да](odbc/data-classification.md) | [Да](jdbc/data-discovery-classification-sample.md) | |

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 03ebdbdd15adfae8e765964e8338f043999319f3
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 98127e41b5b07c38030ef27214c9c92bf7c4b4be
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428296"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761482"
 ---
 # <a name="using-commands-to-modify-data"></a>Использование команд для изменения данных
 
@@ -31,11 +31,14 @@ ms.locfileid: "96428296"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Обновление данных в источнике данных](update-data-inside-data-source.md) Инструкции по выполнению команд или хранимых процедур, позволяющих изменить данные в базе данных.
+[Обновление данных в источнике данных](update-data-inside-data-source.md)  
+Описывает выполнение команд или хранимых процедур, которые изменяют данные в базе данных.
 
-[Выполнение операций с каталогами](perform-catalog-operations.md) Инструкции по выполнению команд, позволяющих изменить схему базы данных.
+[Выполнение операций с каталогами](perform-catalog-operations.md)  
+Описывает выполнение команд, которые изменяют схему базы данных.
 
 ## <a name="see-also"></a>См. также
 
 - [Извлечение и изменение данных в ADO.NET](retrieving-modifying-data.md)
 - [Команды и параметры](commands-parameters.md)
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

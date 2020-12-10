@@ -1,7 +1,7 @@
 ---
 title: Общие сведения о модулях подготовки отчетов | Документы Майкрософт
 description: Узнайте, какие модули подготовки отчетов по данным включены в Reporting Services. Узнайте, как добавлять пользовательские модули подготовки для создания отчетов в других форматах.
-ms.date: 03/14/2017
+ms.date: 12/7/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd3bca97b438d683e325194616af123ea9fb8290
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: c14237adcb3cd45e62db0915004f51ed547c9f30
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529430"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788325"
 ---
 # <a name="rendering-extensions-overview"></a>Общие сведения о модулях подготовки отчетов
   Модуль подготовки отчетов – это компонент или модуль сервера отчетов, преобразующий данные отчета и сведения о макете в формат, определяемый устройством отображения. В состав [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] входит семь модулей подготовки отчетов: HTML, Excel, Word, CSV или текст, XML, изображения и PDF. Можно создать дополнительные модули подготовки для создания отчетов в других форматах.  
@@ -54,8 +54,6 @@ ms.locfileid: "84529430"
 -   Добавить пользовательские функции форматирования и представления, совместно используя преобразования XSL (XSLT) и выходные данные в формате XML.  
   
  Создание пользовательского модуля подготовки отчетов — это сложный процесс. Обычно модуль подготовки отчетов должен поддерживать все возможные сочетания элементов отчета; кроме того, для него необходимо внедрить сотни классов, интерфейсов, методов и свойств. Если пользователю необходимо подготовить отчет в формате, отсутствующем в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], и он решил написать собственную реализацию с использованием управляемого кода, то в коде модуля подготовки отчетов должен быть реализован интерфейс **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**, необходимый серверу отчетов.  
-  
- Дополнительную документацию и технические документы по службам [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] см. в новейших технических ресурсах на [веб-сайте служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a>См. также:  
  [Реализация модуля подготовки отчетов](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

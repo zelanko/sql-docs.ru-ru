@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: e2996b583cd1005e26e4334c9934fff79c321ee4
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 44080250d95d21cecca16ff605ca22683e5b4440
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364051"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900817"
 ---
 # <a name="create-a-jupyter-notebook-extension"></a>Создание расширения Jupyter Notebook
 
@@ -55,7 +55,7 @@ ms.locfileid: "91364051"
 Чтобы упростить процесс создания расширений, мы создали [генератор расширений](https://www.npmjs.com/package/generator-azuredatastudio) с помощью Yeoman. Для его установки выполните следующую команду в командной строке:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-extension"></a>Создание расширения
@@ -76,7 +76,7 @@ ms.locfileid: "91364051"
 
 В этом учебнике мы будем использовать пример записной книжки Python:
 
-   :::image type="content" source="media/notebook-extension/notebook-sample-generator.png" alt-text="Генератор расширений записных книжек":::
+   :::image type="content" source="media/notebook-extension/notebook-sample-generator.png" alt-text="Выбор примера Python":::
 
 Если у вас есть записные книжки, которые вы хотите отправить, укажите это в ответе. Укажите абсолютный путь к файлу, где находятся все записные книжки или файлы Markdown.
 
@@ -86,7 +86,7 @@ ms.locfileid: "91364051"
 
 В настоящее время ваш проект должен выглядеть следующим образом:
 
-   :::image type="content" source="media/notebook-extension/notebook-file-structure-generator.png" alt-text="Генератор расширений записных книжек":::
+   :::image type="content" source="media/notebook-extension/notebook-file-structure-generator.png" alt-text="Структура файла расширения":::
 
 Файл `vsc-extension-quickstart.md` предоставляет ссылку на важные файлы. В файле `README.md` можно предоставить документацию для нового расширения. Обратите внимание на файлы `package.json`, `notebook.ts` и `pySample.ipynb`.
 
@@ -136,7 +136,7 @@ export function activate(context: vscode.ExtensionContext) {
 Чтобы предоставить общий доступ другим пользователям, нужно упаковать расширение в один файл. Его можно опубликовать в магазине Marketplace расширений Azure Data Studio или предоставить для общего доступа другим участникам команды или сообщества. Для этого нужно установить другой пакет npm из командной строки.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Внесите в файл `README.md` желаемые изменения. Затем перейдите к базовому каталогу расширения и выполните команду `vsce package`. При необходимости можно связать репозиторий с расширением или продолжить работу без него. Чтобы добавить его, добавьте аналогичную строку в файл `package.json`.
@@ -154,11 +154,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 Чтобы запустить и проверить расширение, перейдите в Azure Data Studio и откройте палитру команд, нажав клавиши **Ctrl+Shift+P**. Найдите команду **Расширения: установка из VSIX** и перейдите к папке, содержащей новое расширение.
 
-   :::image type="content" source="media/notebook-extension/install-vsix.png" alt-text="Генератор расширений записных книжек":::
+   :::image type="content" source="media/notebook-extension/install-vsix.png" alt-text="Установка VSIX":::
 
 Расширение должно отображаться на панели расширения в Azure Data Studio. Снова откройте палитру команд, и вы увидите новую команду, созданную с помощью нашего расширения, **Запуск книги: Test Book**. После запуска откроется книга Jupyter Book, упакованная с нашим расширением.
 
-   :::image type="content" source="media/notebook-extension/notebook-launch-ads.png" alt-text="Генератор расширений записных книжек":::
+   :::image type="content" source="media/notebook-extension/notebook-launch-ads.png" alt-text="Записная книжка — команда":::
 
 Поздравляем! Вы создали свое первое расширение Jupyter Notebook и теперь можете предоставить его.
 
