@@ -93,6 +93,27 @@
                   href: ../connect/ado-net/update-data-inside-data-source.md
                 - name: Выполнение операций каталога
                   href: ../connect/ado-net/perform-catalog-operations.md
+        - name: Объекты DataAdapter и DataReader
+          href: ../connect/ado-net/dataadapters-datareaders.md
+          items:
+            - name: Извлечение данных с помощью DataReader
+              href: ../connect/ado-net/retrieve-data-by-datareader.md
+            - name: Заполнение набора данных DataSet с помощью DataAdapter
+              href: ../connect/ado-net/populate-dataset-from-dataadapter.md
+            - name: Параметры DataAdapter
+              href: ../connect/ado-net/dataadapter-parameters.md
+            - name: Добавление существующих ограничений к набору данных DataSet
+              href: ../connect/ado-net/add-existing-constraints-to-dataset.md
+            - name: 'Сопоставления DataAdapter, DataTable и DataColumn'
+              href: ../connect/ado-net/dataadapter-datatable-datacolumn-mappings.md
+            - name: Разбивка на страницы результатов запроса
+              href: ../connect/ado-net/paging-through-query-result.md
+            - name: Обновление источников данных с помощью DataAdapter
+              href: ../connect/ado-net/update-data-sources-with-dataadapters.md
+            - name: Обработка событий DataAdapter
+              href: ../connect/ado-net/handle-dataadapter-events.md
+            - name: Пакетные операции с использованием объектов DataAdapter
+              href: ../connect/ado-net/batch-operations-using-dataadapters.md
     - name: SQL Server и ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
