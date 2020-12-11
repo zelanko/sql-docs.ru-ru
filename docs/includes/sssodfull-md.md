@@ -1,1 +1,1 @@
-Бессерверный пул SQL (предварительная версия) в Azure Synapse Analytics
+Бессерверный пул SQL в Azure Synapse Analytics

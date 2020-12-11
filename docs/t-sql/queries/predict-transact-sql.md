@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116285"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523053"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -120,9 +120,9 @@ WITH ( <result_set_definition> )
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> Аргумент `RUNTIME = ONNX` доступен только в [Управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) и [SQL Azure для пограничных вычислений](/azure/sql-database-edge/onnx-overview).
+> Аргумент `RUNTIME = ONNX` доступен только в [Управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview), [SQL Azure для пограничных вычислений](/azure/sql-database-edge/onnx-overview) и [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is).
 
-Указывает подсистему машинного обучения, используемую для выполнения модели. Параметр `RUNTIME` всегда имеет значение `ONNX`. В SQL Azure для пограничных вычислений этот параметр является обязательным. В Управляемом экземпляре SQL Azure этот параметр является необязательным и требуется только при использовании моделей ONNX.
+Указывает подсистему машинного обучения, используемую для выполнения модели. Параметр `RUNTIME` всегда имеет значение `ONNX`. В SQL Azure для пограничных вычислений и Azure Synapse Analytics этот параметр является обязательным. В Управляемом экземпляре SQL Azure этот параметр является необязательным и требуется только при использовании моделей ONNX.
 
 **WITH ( <result_set_definition> )**
 
@@ -186,7 +186,7 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -216,6 +216,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 Прогнозирование часто используется для формирования оценки входных данных и последующей вставки прогнозируемых значений в таблицу. В следующем примере предполагается, что вызывающее приложение использует хранимую процедуру, чтобы вставить в таблицу строку, содержащую прогнозируемое значение:
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
@@ -223,6 +225,20 @@ INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
 
 - Результаты функции `PREDICT` сохраняются в таблице с именем PredictionResults. 
 - Модель сохраняется как столбец `varbinary(max)` в таблице с именем **Models**. Дополнительные сведения, такие как идентификатор и описание, сохраняются в этой таблице для идентификации модели.

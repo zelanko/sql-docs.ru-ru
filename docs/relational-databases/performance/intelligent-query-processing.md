@@ -5,23 +5,23 @@ ms.custom: seo-dt-2019
 ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+ms.openlocfilehash: d1171d4f3570c6bcfcf222043c5036de15c98241
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134872"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595145"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Интеллектуальная обработка запросов в базах данных SQL
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Семейство функций интеллектуальной обработки запросов включает средства, которые значительно повышают производительность существующих рабочих нагрузок и требуют минимальных усилий при реализации для внедрения. 
 
@@ -40,8 +40,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 В приведенной ниже таблице представлены все функции интеллектуальной обработки запросов и предъявляемые ими требования к уровню совместимости базы данных.
 
-| **Функция интеллектуальной обработки запросов** | **Поддержка в Базе данных SQL Azure** | **Поддерживается в SQL Server** |**Описание** |
-| --- | --- | --- |--- |
+| **Функция интеллектуальной обработки запросов** | **Поддерживается в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]** | **Поддерживается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** |**Описание** |
+| ---------------- | ------- | ------- | ---------------- |
 | [Адаптивные соединения в пакетном режиме](#batch-mode-adaptive-joins) | Да, при уровне совместимости 140| Да, начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] при уровне совместимости 140|При использовании адаптивных соединений тип соединения выбирается динамически во время выполнения в зависимости от фактических входных строк.|
 | [Приблизительный подсчет различных объектов](#approximate-query-processing) | Да| Да, начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|Предоставление приблизительного значения COUNT DISTINCT в сценариях обработки больших данных с сохранением производительности и низким потреблением памяти. |
 | [Пакетный режим для данных rowstore](#batch-mode-on-rowstore) | Да, при уровне совместимости 150| Да, начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], при уровне совместимости 150|Пакетный режим для рабочих нагрузок реляционного хранилища данных, ограниченных производительностью ЦП, без необходимости использовать индексы columnstore.  | 
@@ -136,7 +136,7 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 
 Действие обратной связи с временно предоставляемым буфером памяти в строковом режиме можно просмотреть с помощью события XEvent **memory_grant_updated_by_feedback**. 
 
-С момента выпуска функции обратной связи с временно предоставляемым буфером памяти в строковом режиме для фактических планов после выполнения будут отображаться два новых атрибута плана запроса: ***IsMemoryGrantFeedbackAdjusted*** и ***LastRequestedMemory***. Они добавляются в XML-элемент плана запроса *MemoryGrantInfo*. 
+С момента выпуска функции обратной связи с временно предоставляемым буфером памяти в строковом режиме для фактических планов после выполнения будут отображаться два новых атрибута плана запроса: **_IsMemoryGrantFeedbackAdjusted_* _ и _*_LastRequestedMemory_*_. Они добавляются в XML-элемент плана запроса _MemoryGrantInfo*. 
 
 *LastRequestedMemory* позволяет просмотреть предоставленный в результате выполнения предыдущего запроса объем памяти в килобайтах (КБ). Атрибут *IsMemoryGrantFeedbackAdjusted* позволяет проверить состояние обратной связи с временно предоставляемым буфером памяти для инструкции в рамках фактического плана выполнения запроса. Ниже приведены значения, отображаемые в этом атрибуте:
 
@@ -319,14 +319,14 @@ SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT  O_OrderKey,
+SELECT O_OrderKey,
     O_CustKey,
     O_OrderStatus,
     L_QUANTITY
 FROM    
     ORDERS,
     @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
+WHERE    O_ORDERKEY    =    L_ORDERKEY
     AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
@@ -391,7 +391,6 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 Даже если запрос не обращается к таблицам с индексами columnstore, обработчик запросов использует эвристику, чтобы решить, следует ли рассматривать пакетный режим. Этот эвристический анализ включает следующее:
 1. Первоначальной проверки размеров таблиц, используемых операторов и предполагаемого количества элементов во входном запросе.
 2. Дополнительных проверок, так как оптимизатор обнаруживает новые, более дешевые планы для запроса. Если эти альтернативные планы используют пакетный режим незначительно, оптимизатор прекратит изучение альтернатив с пакетным режимом.
-
 
 Если для данных rowstore используется пакетный режим, фактический режим выполнения будет обозначен как **batch mode** (пакетный режим) в плане запроса. Оператор сканирования использует пакетный режим для кучи на диске и индексов сбалансированного дерева. При этом сканировании пакетного режима можно оценить фильтры растрового изображения в пакетном режиме. Вы можете заметить в плане и другие операторы пакетного режима. Например, хэш-соединения, статические операции на основе хэша, сортировки, статистические операции с окнами, фильтры, объединение и операторы вычисления скалярного значения.
 

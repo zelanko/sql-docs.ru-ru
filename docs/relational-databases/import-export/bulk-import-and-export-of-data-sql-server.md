@@ -26,12 +26,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f90d94a11b4e026082bd3be9f25cc7ad7246df9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5802f6e2a078a50797579f2c03079802be5c097
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006666"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443047"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Массовый импорт и экспорт данных (SQL Server)
 
@@ -57,7 +57,7 @@ ms.locfileid: "86006666"
 > Правила использования файла данных с разделителями-запятыми (CSV) в качестве файла данных для массового импорта данных в SQL Server см. в статье [Подготовка данных к массовому экспорту или импорту (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
 > [!NOTE]
-> Для импорта и экспорта файлов с разделителями Хранилище данных SQL Azure поддерживает только служебную программу bcp.
+> Для импорта и экспорта файлов с разделителями Azure Synapse Analytics поддерживает только служебную программу bcp.
 
 ## <a name="format-files"></a><a name="FFs"></a> Файлы форматирования
 

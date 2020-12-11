@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 96e137f3e49ac21a38577704c2663d3de85151ff
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418031"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505148"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 
@@ -35,7 +35,7 @@ ms.locfileid: "94418031"
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Включение хранилища запросов
 
- Хранилище запросов не включено по умолчанию для новых баз данных Azure Synapse Analytics (хранилище данных SQL) и SQL Server и включено по умолчанию для новых Баз данных SQL Azure.
+ Хранилище запросов не включено по умолчанию для новых баз данных Azure Synapse Analytics и SQL Server, но включено по умолчанию для новых баз данных в службе "База данных SQL Azure".
 
 ### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Использование страницы "Хранилище запросов" в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
@@ -50,7 +50,7 @@ ms.locfileid: "94418031"
 
 ### <a name="use-transact-sql-statements"></a>Использование инструкций Transact-SQL
 
-Используйте инструкцию **ALTER DATABASE** , чтобы включить хранилище запросов для указанной базы данных. Пример:
+Используйте инструкцию **ALTER DATABASE**, чтобы включить хранилище запросов для указанной базы данных. Пример:
 
 ```sql
 SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
@@ -130,7 +130,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 Типы ожидания в хранилище запросов объединены в **категории ожидания**. Сопоставление категорий ожидания с типами ожидания доступно в [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
 
-Выберите **Статистика ожидания запросов** , чтобы открыть панель **Статистика ожидания запросов** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 или более поздней версии. Панель статистики ожидания запросов показывает диаграмму с главными категориями ожидания в хранилище запросов. Воспользуйтесь раскрывающимся меню в верхней части, чтобы выбрать критерий для времени ожидания: среднее, максимальное, минимальное, стандартное отклонение и **общее** (по умолчанию).
+Выберите **Статистика ожидания запросов**, чтобы открыть панель **Статистика ожидания запросов** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 или более поздней версии. Панель статистики ожидания запросов показывает диаграмму с главными категориями ожидания в хранилище запросов. Воспользуйтесь раскрывающимся меню в верхней части, чтобы выбрать критерий для времени ожидания: среднее, максимальное, минимальное, стандартное отклонение и **общее** (по умолчанию).
 
 ![Статистика ожидания запросов SQL Server 2017 в обозревателе объектов SSMS](../../relational-databases/performance/media/query-store-waits.PNG "Статистика ожидания запросов SQL Server 2017 в обозревателе объектов SSMS")
 
@@ -155,7 +155,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 Сведения о доступных параметрах для настройки параметров хранилища запросов см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
-Запросите представление **sys.database_query_store_options** , чтобы определить текущие параметры хранилища запросов. В представлении [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) можно посмотреть о значениях дополнительные сведения.
+Запросите представление **sys.database_query_store_options**, чтобы определить текущие параметры хранилища запросов. В представлении [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) можно посмотреть о значениях дополнительные сведения.
 
 Примеры настройки параметров конфигурации с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Управление параметрами](#OptionMgmt).
 
@@ -385,8 +385,8 @@ EXEC sp_MSforeachdb @command
 
 В примере выше используется расширенная хранимая процедура **sp_query_store_remove_query** для удаления ненужных данных. Кроме того, можно использовать следующую команду:
 
-- **sp_query_store_reset_exec_stats**  — чтобы удалить статистику времени выполнения для указанного плана;
-- **sp_query_store_remove_plan**  — чтобы удалить отдельный план.
+- **sp_query_store_reset_exec_stats** — чтобы удалить статистику времени выполнения для указанного плана;
+- **sp_query_store_remove_plan** — чтобы удалить отдельный план.
 
 ### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Аудит производительности и устранение проблем
 

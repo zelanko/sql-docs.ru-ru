@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195022"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523068"
 ---
 # <a name="move-system-databases"></a>Перемещение системных баз данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92195022"
 >  При перемещении системной базы данных с последующим перестроением базы данных master необходимо заново переместить системную базу данных, поскольку операция перестроения устанавливает все системные базы данных в расположение по умолчанию.  
 
 > [!IMPORTANT]  
->  После перемещения файлов учетная запись службы [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] должна иметь разрешение на доступ к файлам в новое расположение папки с файлами.
+>  После перемещения файлов учетная запись службы [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] должна иметь разрешение на доступ к файлам в новом расположении папки с файлами. Дополнительные сведения см. в статье [Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
     
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> Запланированное перемещение и процедура запланированного обслуживания диска  
@@ -145,7 +145,7 @@ ms.locfileid: "92195022"
 ##  <a name="moving-the-master-database"></a><a name="master"></a> Перемещение базы данных master  
  Чтобы переместить базу данных master, выполните следующие действия.  
   
-1.  В меню **Пуск** выберите **Все программы**, укажите **Microsoft SQL Server**, затем **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
+1.  В меню **Пуск** выберите **Все программы**, укажите **Microsoft SQL Server**, затем **Средства настройки** и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
 2.  Находясь в узле **Службы SQL Server** , щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например **SQL Server (MSSQLSERVER)** , и выберите пункт **Свойства**.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "92195022"
   
 2.  В диалоговом окне **Свойства сервера** выберите пункт **Настройки базы данных**.  
   
-3.  На панели **Места хранения, используемые базой данных по умолчанию**можно просмотреть текущие места хранения, используемые по умолчанию для новых файлов данных и файлов журнала.  
+3.  На панели **Места хранения, используемые базой данных по умолчанию** можно просмотреть текущие места хранения, используемые по умолчанию для новых файлов данных и файлов журнала.  
   
 4.  Остановите и запустите службу SQL Server, чтобы завершить изменение.  
   

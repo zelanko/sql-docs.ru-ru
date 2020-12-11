@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523859"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535278"
 ---
 # <a name="polybase-scale-out-groups"></a>Масштабируемые группы PolyBase
 
@@ -35,11 +35,11 @@ ms.locfileid: "92523859"
   
 ## <a name="head-node"></a>Головной узел  
 
-Головной узел содержит экземпляр SQL Server, на который отправляются запросы PolyBase. Каждая группа PolyBase может иметь только один головной узел. Головной узел — это логическая группа на экземпляре SQL Server, в которую входят ядро СУБД SQL, а также ядро PolyBase и служба перемещения данных PolyBase.
+Головной узел содержит экземпляр SQL Server, на который отправляются запросы PolyBase. Каждая группа PolyBase может иметь только один головной узел. Головной узел — это логическая группа на экземпляре SQL Server, в которую входят ядро СУБД SQL Server, а также ядро PolyBase и служба "Перемещение данных PolyBase". Для головного узла с SQL Server 2017 и SQL Server 2016 должен использоваться выпуск Enterprise. Начиная с SQL Server 2019, для головного узла PolyBase можно использовать выпуск Enterprise либо Standard.
   
-## <a name="compute-node"></a>Вычислительный узел  
+## <a name="compute-node"></a>Вычислительный узел
 
-Вычислительный узел содержит экземпляр SQL Server, который помогает выполнять масштабируемую обработку запросов к внешним данным. Вычислительный узел — это логическая группа на экземпляре SQL Server, в которую входят SQL Server и служба перемещения данных PolyBase. Группа PolyBase может включать несколько вычислительных узлов. В головном узле и вычислительных узлах должна использоваться одна и та же версия SQL Server.
+Вычислительный узел содержит экземпляр SQL Server, который помогает выполнять масштабируемую обработку запросов к внешним данным. Вычислительный узел — это логическая группа на экземпляре SQL Server, в которую входят SQL Server и служба перемещения данных PolyBase. Группа PolyBase может включать несколько вычислительных узлов. В головном узле и вычислительных узлах должна использоваться одна и та же версия SQL Server. В первом выпуске SQL Server 2016 допускалось, чтобы для вычислительных узлов использовались выпуски Enterprise или Standard. Начиная с SQL Server 2016 с пакетом обновления 1 (SP1), для вычислительный узлов могут использоваться все выпуски SQL Server.
 
 ## <a name="scale-out-reads"></a>Масштабируемое чтение
 

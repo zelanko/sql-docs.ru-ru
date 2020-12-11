@@ -1,7 +1,7 @@
 ---
 title: 'Доступ к внешним данным: хранилище BLOB-объектов Azure — PolyBase'
 description: В статье используется PolyBase на экземпляре SQL Server с хранилищем BLOB-объектов Azure. PolyBase подходит для специализированных запросов к внешним таблицам и импорта и экспорта данных.
-ms.date: 12/13/2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6621d01c9cb52d528f2d3578a128f0abada22db0
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215880"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563110"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Настройка PolyBase для доступа к внешним данным в хранилище BLOB-объектов Azure
 
@@ -55,7 +55,7 @@ ms.locfileid: "80215880"
 
 Чтобы запросить данные из источника данных Hadoop, необходимо определить внешнюю таблицу для использования в запросах Transact-SQL. Далее указаны шаги по настройке внешней таблицы.
 
-1. Создайте главный ключ в базе данных. Это необходимо для шифрования секрета учетных данных.
+1. Создайте главный ключ в базе данных. Он необходим для шифрования секрета учетных данных.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -127,7 +127,7 @@ ms.locfileid: "80215880"
 
 ### <a name="ad-hoc-queries"></a>Нерегламентированные запросы  
 
-Следующий нерегламентированный запрос объединяет реляционные данные с данными Hadoop. Он выбирает клиентов, которые ездят быстрее 35 миль/ч, объединяя структурированные данные клиента, хранящиеся в SQL Server, с данными автомобильного датчика, хранящимися в Hadoop.  
+Следующий нерегламентированный запрос объединяет реляционные данные с данными Hadoop. Он выбирает клиентов, которые ездят быстрее 35 миль/ч, и объединяет структурированные данные клиента, хранящиеся в SQL Server, с данными автомобильного датчика, хранящимися в Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -158,7 +158,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ### <a name="exporting-data"></a>Экспорт данных  
 
-Следующий запрос позволяет экспортировать данные из SQL Server в хранилище BLOB-объектов Azure. Чтобы сделать это, необходимо сначала включить экспорт PolyBase. Создайте внешнюю целевую таблицу, прежде чем экспортировать в нее данные.
+Следующий запрос позволяет экспортировать данные из SQL Server в хранилище BLOB-объектов Azure. Сначала включите функцию экспорта PolyBase. Затем создайте внешнюю целевую таблицу, прежде чем экспортировать в нее данные.
 
 ```sql
 -- Enable INSERT into external table  
@@ -186,6 +186,8 @@ SELECT T.* FROM Insured_Customers T1 JOIN CarSensor_Data T2
 ON (T1.CustomerKey = T2.CustomerKey)  
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
+
+С помощью этого метода функция экспорта PolyBase может создать несколько файлов.
 
 ## <a name="view-polybase-objects-in-ssms"></a>Просмотр объектов PolyBase в SSMS  
 

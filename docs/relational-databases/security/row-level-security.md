@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5ddd76c050e50576a446e8e404b889fcc8fa92d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 728650497849454ab7c30dae04317a750665a26c
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867968"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442959"
 ---
 # <a name="row-level-security"></a>Безопасность на уровне строк
 
@@ -110,11 +110,11 @@ ms.locfileid: "91867968"
   
  Кроме того, для каждого добавляемого предиката требуются следующие разрешения:  
   
-- Разрешения**SELECT** и **REFERENCES** для функции используются как предикат.  
+- Разрешения **SELECT** и **REFERENCES** для функции используются как предикат.  
   
-- Разрешение**REFERENCES** для целевой таблицы, которая привязывается к политике.  
+- Разрешение **REFERENCES** для целевой таблицы, которая привязывается к политике.  
   
-- Разрешение**REFERENCES** для каждого столбца из целевой таблицы, используемого в качестве аргументов.  
+- Разрешение **REFERENCES** для каждого столбца из целевой таблицы, используемого в качестве аргументов.  
   
  Политики безопасности применяются ко всем пользователям, включая пользователей dbo в базе данных. Пользователи dbo могут изменять или удалять политики безопасности, однако можно проводить аудит их изменений в политиках безопасности. Если привилегированным пользователям (например, sysadmin или db_owner) нужно видеть все строки для устранения неполадок или проверки данных, необходимо создать политику безопасности, разрешающую эти действия.  
   
@@ -208,12 +208,12 @@ CREATE TABLE Sales
  Заполните таблицу шестью строками данных, показывающими три заказа для каждого торгового представителя.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -302,8 +302,8 @@ DROP SCHEMA Security;
 
 ### <a name="prerequisites"></a>Предварительные требования
 
-1. У вас должен быть пул SQL. См. [Создание пула SQL Synapse](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. Сервер, на котором размещен пул SQL, должен быть зарегистрирован в AAD, и у вас должна быть учетная запись хранения Azure с разрешениями для участников блога хранилища. Следуйте инструкциям, которые приводятся [здесь](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. Вам потребуется выделенный пул SQL. См. статью [Создание выделенного пула SQL](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
+1. Сервер, на котором размещен выделенный пул SQL, должен быть зарегистрирован в AAD, и у вас должна быть учетная запись хранения Azure с разрешениями на уровне участника для BLOB-объектов хранилища. Следуйте инструкциям, которые приводятся [здесь](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Создайте файловую систему для учетной записи хранения Azure. Используйте Обозреватель службы хранилища для просмотра учетной записи хранения. Щелкните правой кнопкой мыши на контейнерах и выберите *Создать файловую систему*.  
 
 Выполнив все предварительные условия, создайте три учетные записи пользователей, демонстрирующие разные возможности доступа.
@@ -317,10 +317,10 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
---run in master and your SQL pool database
-CREATE USER Manager FOR LOGIN Manager;  
-CREATE USER Sales1  FOR LOGIN Sales1;  
-CREATE USER Sales2  FOR LOGIN Sales2 ;
+--run in master and your dedicated SQL pool database
+CREATE USER Manager FOR LOGIN Manager;  
+CREATE USER Sales1  FOR LOGIN Sales1;  
+CREATE USER Sales2  FOR LOGIN Sales2 ;
 ```
 
 Создайте таблицу для хранения данных.  

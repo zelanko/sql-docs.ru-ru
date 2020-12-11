@@ -21,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d282a1dca21d2b76925c12dddf3002d159aaec64
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f7911d4f096c8b90b2ee01341405acd561c46ec9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116519"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443129"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsXTPSupported|Указывает, поддерживает ли база данных выполняющуюся в памяти OLTP, то есть создание и использование таблиц, оптимизированных для памяти, и модулей, скомпилированных в собственном коде.<br /><br /> Относится к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported не зависит от наличия файловой группы MEMORY_OPTIMIZED_DATA, которая требуется для создания объектов выполняющейся в памяти OLTP.|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные, ошибка или неприменимо<br /><br /> Базовый тип данных: **int**|  
 |LastGoodCheckDbTime|Дата и время последней успешной команды DBCC CHECKDB, выполненной в указанной базе данных. <sup>1</sup> Если команда DBCC CHECKDB не была выполнена в базе данных, возвращается 1900-01-01 00:00:00.000.|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] начиная с SP2.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] начиная с накопительного пакета обновления 9 (CU9).</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] или более поздняя версия.</br>База данных SQL Azure.<br/><br/>Значение datetime<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **datetime**| 
 |LCID|Код языка Windows для параметров сортировки.|Значение кода языка (в десятичном формате).<br /><br /> Базовый тип данных: **int**|  
-|MaxSizeInBytes|Максимальный размер базы данных в байтах.|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[База данных SQL Azure и Azure Synapse Analytics (SQL DW)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) — значение зависит от целевого показателя обслуживания, если не куплено дополнительное хранилище.<br /><br />[Виртуальное ядро](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) — значение увеличивается на 1 ГБ до максимального размера.<br /><br />NULL: база данных не запущена<br /><br /> Базовый тип данных: **bigint**|  
+|MaxSizeInBytes|Максимальный размер базы данных в байтах.|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[База данных SQL Azure и Azure Synapse Analytics](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) — значение зависит от целевого показателя обслуживания, если не куплено дополнительное хранилище.<br /><br />[Виртуальное ядро](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) — значение увеличивается на 1 ГБ до максимального размера.<br /><br />NULL: база данных не запущена<br /><br /> Базовый тип данных: **bigint**|  
 |Восстановление|Модель восстановления базы данных|FULL: Модель полного восстановления<br /><br /> BULK_LOGGED: модель с неполным протоколированием<br /><br /> SIMPLE: Простая модель восстановления<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |ServiceObjective|Описывает уровень производительности базы данных в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] или [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Это может быть:<br /><br /> NULL = база данных не запущена<br /><br /> Общий (для выпусков Web или Business)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> Системный (для базы данных master)<br /><br /> Базовый тип данных: **nvarchar(32)**|  
 |ServiceObjectiveId|Идентификатор цели службы в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier**, определяющий цель службы.|  

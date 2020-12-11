@@ -1,38 +1,31 @@
 ---
-description: Последние обновления для Microsoft SQL Server
-title: Последние обновления для Microsoft SQL Server
-TOCTitle: Latest updates for Microsoft SQL Server
-ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
-ms:mtpsurl: https://technet.microsoft.com/library/Ff803383(v=MSDN.10)
-ms:contentKeyID: 31804705
-ms.date: 09/02/2020
+description: Список последних накопительных пакетов обновления и пакетов обновления с номерами сборок для Microsoft SQL Server.
+title: Последние обновления для SQL Server
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
-mtps_version: v=MSDN.10
-ms.openlocfilehash: 52db4b0919294929c393348ac64f8e854fd394c3
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 148df97bf2c353e2cf12fe8f31ef2f85f6307b7d
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670564"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443074"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Последние обновления для Microsoft SQL Server
 
-Находите обновления и управляйте ими для продуктов SQL Server в централизованном месте. Чтобы получить сведения об обновлениях и инструкции для их скачивания, ознакомьтесь с [записями блога о выпуске SQL Server](https://aka.ms/sqlreleases).
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-На этой странице отслеживаются последние обновления для всех поддерживаемых версий SQL Server. 
+В этой статье перечислены последние обновления для продуктов SQL Server. Чтобы получить сведения об обновлениях и инструкции для их скачивания, ознакомьтесь с [записями блога о выпуске SQL Server](https://aka.ms/sqlreleases).
 
-Сведения о предыдущих обновлениях см. в [записях блога о сборках SQL Server](https://sqlserverbuilds.blogspot.com/). 
-
-Дополнительные сведения о поддерживаемых продуктах см. на странице [Политика жизненного цикла поддержки Майкрософт](https://support.microsoft.com/lifecycle/). 
+Дополнительные сведения о поддерживаемых продуктах см. на странице [Политика жизненного цикла поддержки Майкрософт](/lifecycle/products/?terms=sql).
 
 ## <a name="latest-updates"></a>Последние обновления
 
-Каждая из приведенных ниже ссылок содержит сведения для всех применимых продуктов и технологий, перечисленных в разделе **Объект применения** этой страницы.
+Каждая из приведенных ниже ссылок содержит сведения для всех применимых продуктов и технологий.
 
 |Версии продукта   | Последний пакет обновления |  Последний выпуск для общего распространения (GDR) | Последнее накопительное обновление | Дата выпуска накопительного обновления (CU) | Общие рекомендации  |
 |--|--|--|--|--|--|
@@ -53,25 +46,21 @@ ms.locfileid: "91670564"
 |SQL Server 2008 R2 |Пакет обновления 2 [(статья базы знаний 2630458)](https://support.microsoft.com/kb/2630458)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 13 [(статья базы знаний 2967540)](https://support.microsoft.com/kb/2967540)|30.06.2014|[Установка SQL Server 2008 R2 с пакетом обновления 2](https://www.microsoft.com/download/details.aspx?id=30437)|
 |SQL Server 2008 |Пакет обновления 4 [(статья базы знаний 2979596)](https://support.microsoft.com/kb/2979596)|[4057114](https://support.microsoft.com/help/4057114/security-update-for-vulnerabilities-in-sql-server)|Недоступно|Недоступно|[Обслуживание SQL Server 2008](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
 |SQL Server 2008|Пакет обновления 3 [(статья базы знаний 2546951)](https://support.microsoft.com/kb/2546951)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 17 [(статья базы знаний 2958696)](https://support.microsoft.com/kb/2958696)|19.05.2014|[Обслуживание SQL Server 2008](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
-|SQL Server 2005 |Пакет обновления 4 [(статья базы знаний 2463332)](https://support.microsoft.com/kb/2463332)|Недоступно|Недоступно|Недоступно|[Установка SQL Server 2005](/previous-versions/sql/sql-server-2005/ms143516(v=sql.90))|
-|SQL Server 2000|Пакет обновления 4 [(статья базы знаний 290211)](https://support.microsoft.com/kb/290211)|Недоступно|Недоступно|Недоступно|[Установка SQL Server 2000](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
-**Узнайте, как проверять обновления:**  [Testing and Developing Supportability Roadmaps for ISV Applications](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf) (Проверка и разработка схем действий по поддержке для приложений ISV (формат PDF)).
+**Узнайте, как проверять обновления:** [Testing and Developing Supportability Roadmaps for ISV Applications](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf) (Проверка и разработка схем действий по поддержке для приложений ISV (PDF)).
 
 [!INCLUDE [sql-server-servicing-updates-version-15](../../includes/sql-server-servicing-updates-version-15.md)]
 
-### <a name="knowledge-base"></a>База знаний
+## <a name="knowledge-base"></a>База знаний
 
-  - Статья базы знаний 935897: [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](https://support.microsoft.com/kb/935897) (Команда разработчиков SQL Server предлагает добавочную модель обслуживания, позволяющую предоставлять исправления для обнаруженных проблем)
-  - Статья базы знаний 824684: [Описание стандартной терминологии, используемой для характеристики обновлений программного обеспечения Майкрософт](https://support.microsoft.com/kb/824684)
-  - Статья базы знаний 822499: [Naming schema and Fix area descriptions for SQL Server software update packages](https://support.microsoft.com/kb/822499) (Описание схемы именования и области исправления для пакетов обновления программного обеспечения Microsoft SQL Server)
-  - Статья базы знаний 321185: [Как определить версию, выпуск и уровень обновления системы SQL Server и ее компонентов](https://support.microsoft.com/kb/321185)
+- Статья базы знаний 935897: [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](https://support.microsoft.com/kb/935897) (Команда разработчиков SQL Server предлагает добавочную модель обслуживания, позволяющую предоставлять исправления для обнаруженных проблем)
+- Статья базы знаний 824684: [Описание стандартной терминологии, используемой для характеристики обновлений программного обеспечения Майкрософт](https://support.microsoft.com/kb/824684)
+- Статья базы знаний 822499: [Naming schema and Fix area descriptions for SQL Server software update packages](https://support.microsoft.com/kb/822499) (Описание схемы именования и области исправления для пакетов обновления программного обеспечения Microsoft SQL Server)
+- Статья базы знаний 321185: [Как определить версию, выпуск и уровень обновления системы SQL Server и ее компонентов](https://support.microsoft.com/kb/321185)
 
-### <a name="additional-resources"></a>Дополнительные ресурсы
+## <a name="additional-resources"></a>Дополнительные ресурсы
 
-  - [Сайт группы консультантов по SQL](/archive/blogs/sqlcat/)
-  - [Документация по SQL Server для разработчиков](../../sql-server/index.yml)
-  - [Документация по SQL Server для технических специалистов](../../sql-server/index.yml)
-  - [Центр сведений о продуктах SQL Server](https://www.microsoft.com/sqlserver/default.aspx)
-  - [Блог о сборках SQL Server](https://sqlserverbuilds.blogspot.com/)
-  - [Блоги о выпусках SQL Server](https://aka.ms/sqlreleases)
+- [Документация по SQL Server](../../sql-server/index.yml)
+- [Центр сведений о продуктах SQL Server](https://www.microsoft.com/sqlserver/default.aspx)
+- [Блоги о выпусках SQL Server](https://aka.ms/sqlreleases)
+- [Как определить версию, выпуск и уровень обновления системы SQL Server и ее компонентов](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an)

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 73f9f3a39f5a30fe611c5ec839d8d2c7172206d8
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778443"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761512"
 ---
 # <a name="azure-data-studio-extensibility"></a>Расширяемость Azure Data Studio
 
@@ -32,6 +32,9 @@ ms.locfileid: "88778443"
 ## <a name="visual-studio-code-extensibility-apis"></a>Интерфейсы API расширяемости Visual Studio Code
 
 Так как базовая платформа Azure Data Studio построена на основе Visual Studio Code, сведения об интерфейсах API расширяемости Visual Studio Code можно найти в документации по [разработке расширений](https://code.visualstudio.com/docs/extensions/overview) и [API расширений](https://code.visualstudio.com/docs/extensionAPI/overview) на веб-сайте Visual Studio Code.
+
+> [!NOTE]
+>  Выпуски Azure Data Studio тесно связаны с последней версией VS Code, но версия включенного обработчика VS Code может не совпадать с текущей версией VS Code. Например, в ноябре 2020 г. в Azure Data Studio используется обработчик VS Code версии 1.48, а текущая версия VS Code — 1.51.  Сообщение об ошибке "Unable to install extension <name> as it is not compatible with VS Code <version>" (Не удается установить расширение name, так как оно несовместимо с версией VS Code version) которое появляется при установке расширения, связано с тем, что в манифесте пакета (`package.json`) определена более поздняя версия обработчика VS Code. Вы можете проверить версию обработчика VS Code в Azure Data Studio в меню **Справка** в разделе **О программе**.
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>Управление вкладом на панели вкладок панели мониторинга
 

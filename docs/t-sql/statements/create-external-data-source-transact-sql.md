@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
-ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
+ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93417425"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443111"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ ms.locfileid: "93417425"
 - Виртуализация и загрузка данных с помощью [PolyBase][intro_pb]
 - Операции массовой загрузки с помощью `BULK INSERT` или `OPENROWSET`
 
-**Область применения** : Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+**Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -367,7 +367,7 @@ go
 
 ### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>И. Создание внешнего источника данных для массовых операций, извлекающих данные из службы хранилища Azure
 
-**Область применения** : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**Область применения**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Используйте следующий источник данных для массовых операций, выполняемых с использованием инструкций [BULK INSERT][bulk_insert] или [OPENROWSET][openrowset]. Используемые учетные данные должны задавать `SHARED ACCESS SIGNATURE` в качестве идентификатора, не должны иметь `?` в начале маркера SAS, должны иметь по крайней мере разрешение на чтение загружаемого файла (например, `srt=o&sp=r`), и иметь допустимый срок действия (все даты должны быть указаны в формате UTC). Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов][sas_token].
 
 ```sql
@@ -732,7 +732,7 @@ WITH
 
 Дополнительные примечания и инструкции при задании учетных данных:
 
-- Чтобы загрузить данные из службы хранилища Azure или Azure Data Lake Store (ADLS) Gen 2 в хранилище данных SQL, используйте ключ хранилища Azure.
+- Чтобы загрузить данные из службы хранилища Azure или Azure Data Lake Storage (ADLS) 2-го поколения в Azure Synapse Analytics, используйте ключ к хранилищу данных Azure.
 - `CREDENTIAL` требуется, только если данные были защищены. `CREDENTIAL` не является обязательным для наборов данных с возможностью анонимного доступа.
 
 Сведения о создании учетных данных уровня базы данных см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].

@@ -18,18 +18,18 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 4d1fefc10f19a4b8fda411337cd4b35a6f8f2939
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439338"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442980"
 ---
 # <a name="encrypt-a-column-of-data"></a>Шифрование столбца данных
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  В этой статье описывается шифрование столбца данных симметричным шифрованием в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Иногда это называется шифрованием на уровне столбца или ячейки. Эта функция доступна в виде предварительной версии для Azure Synapse Analytics (SQL DW).
+  В этой статье описывается шифрование столбца данных симметричным шифрованием в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Иногда это называется шифрованием на уровне столбца или ячейки. Эта функция доступна в виде предварительной версии для Azure Synapse Analytics.
 
 ## <a name="security"></a>Безопасность  
   
@@ -59,9 +59,9 @@ PASSWORD = '<some strong password>';
   
 1. В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. На стандартной панели выберите пункт **Создать запрос** .  
+2. На стандартной панели выберите пункт **Создать запрос**.  
   
-3. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить** .  
+3. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
 
     ```sql
     USE AdventureWorks2012;  
@@ -117,9 +117,9 @@ PASSWORD = '<some strong password>';
   
 1. В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. На стандартной панели выберите пункт **Создать запрос** .  
+2. На стандартной панели выберите пункт **Создать запрос**.  
   
-3. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить** .  
+3. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
     ```sql
     USE AdventureWorks2012;  
