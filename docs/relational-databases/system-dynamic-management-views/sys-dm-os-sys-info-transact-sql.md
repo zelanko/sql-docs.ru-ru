@@ -23,12 +23,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5419919b14c15615cb84d124387c98e9ba2e90a5
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 1f905eed2d4dfdbbd7167171282922739978d386
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332957"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "91834431"
 |**softnuma_configuration_desc**|**nvarchar(60)**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше.<br /><br /> OFF = функция Soft-NUMA ОТКЛЮЧЕНа<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически определяет размеры узлов NUMA для программной архитектуры NUMA<br /><br /> ВРУЧНУЮ = программная архитектура NUMA настроена вручную|
 |**process_physical_affinity**|**nvarchar (3072)** |**Применимо к:** Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] .<br /><br />Информация, которую еще нужно получить. |
 |**sql_memory_model**|**int**|**Применимо к:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 и более поздние версии.<br /><br />Указывает модель памяти, используемую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделения памяти. Не допускает значения NULL.<br /><br />1 = Стандартная модель памяти<br />2 = Блокировка страниц в памяти<br /> 3 = большие страницы в памяти;|
-|**sql_memory_model_desc**|**nvarchar(120)**|**Применимо к:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 и более поздние версии.<br /><br />Указывает модель памяти, используемую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделения памяти. Не допускает значения NULL.<br /><br />**CONVENTIONAL**  =  Стандартные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует обычную модель памяти для выделения памяти. Это модель памяти SQL по умолчанию, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы не имеет прав блокировки страниц в памяти во время запуска.<br />**LOCK_PAGES**  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует блокировку страниц в памяти для выделения памяти. Это диспетчер памяти SQL по умолчанию, когда SQL Server учетной записи службы с правами на блокировку страниц в памяти во время запуска SQL Server.<br /> **LARGE_PAGES**  =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует большие страницы в памяти для выделения памяти. SQL Server использует механизм распределения больших страниц для выделения памяти только в выпуске Enterprise Edition, когда SQL Server учетная запись службы обладает правом на блокировку страниц в памяти во время запуска сервера и если включен флаг трассировки 834.|
+|**sql_memory_model_desc**|**nvarchar(120)**|**Применимо к:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 и более поздние версии.<br /><br />Указывает модель памяти, используемую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделения памяти. Не допускает значения NULL.<br /><br />  =  Стандартные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует обычную модель памяти для выделения памяти. Это модель памяти SQL по умолчанию, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы не имеет прав блокировки страниц в памяти во время запуска.<br />  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует блокировку страниц в памяти для выделения памяти. Это диспетчер памяти SQL по умолчанию, когда SQL Server учетной записи службы с правами на блокировку страниц в памяти во время запуска SQL Server.<br />   =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует большие страницы в памяти для выделения памяти. SQL Server использует механизм распределения больших страниц для выделения памяти только в выпуске Enterprise Edition, когда SQL Server учетная запись службы обладает правом на блокировку страниц в памяти во время запуска сервера и если включен флаг трассировки 834.|
 |**pdw_node_id**|**int**|**Применимо к:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
 |**socket_count** |**int** | **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и выше.<br /><br />Указывает число разъемов процессора, доступных в системе. |  
 |**cores_per_socket** |**int** | **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и выше.<br /><br />Указывает число процессоров на каждый сокет, доступный в системе. |  
@@ -84,7 +84,7 @@ ms.locfileid: "91834431"
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
 
 ## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_stacks (Transact-SQL)
-title: sys. dm_os_stacks (Transact-SQL) | Документация Майкрософт
+title: sys.dm_os_stacks (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83b694a70145637dce66e33ea417d1afc660af8e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 04f9fe453b2f3e74a96ebd20565d92038bff4bae
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325390"
 ---
 # <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,19 +40,19 @@ ms.locfileid: "89542134"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|Уникальный адрес для данного размещения в стеке. Не допускает значение NULL.|  
-|**frame_index**|**int**|Каждая строка представляет вызов функции, который при сортировке в возрастающем порядке по индексу кадра для конкретного **stack_address**возвращает полный стек вызовов. Не допускает значение NULL.|  
+|**frame_index**|**int**|Каждая строка представляет вызов функции, который при сортировке в возрастающем порядке по индексу кадра для конкретного **stack_address** возвращает полный стек вызовов. Не допускает значение NULL.|  
 |**frame_address**|**varbinary(8)**|Адрес вызова функции. Не допускает значение NULL.|  
   
-## <a name="remarks"></a>Примечания  
- **sys. dm_os_stacks** требует наличия на сервере символов сервера и других компонентов для правильного отображения информации.  
+## <a name="remarks"></a>Комментарии  
+ **sys.dm_os_stacks** требует, чтобы символы сервера и другие компоненты присутствовали на сервере для правильного отображения информации.  
   
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
 
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

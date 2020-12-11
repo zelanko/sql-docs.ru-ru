@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_profiles (Transact-SQL)
-title: sys. dm_exec_query_profiles (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_query_profiles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b761064191f26a05d565e673428221afb4805b1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 332b554797282510463ae3ec837fb00256db31b3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330887"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "89548612"
 
 ## <a name="permissions"></a>Разрешения  
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и управляемый экземпляр Azure SQL необходимо `VIEW DATABASE STATE` разрешение и членство в `db_owner` роли базы данных.   
-На [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] отношении баз данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
    
 ## <a name="examples"></a>Примеры  
  Шаг 1. Войдите в сеанс, в котором планируется выполнить запрос, который будет анализироваться с помощью `sys.dm_exec_query_profiles` . Настройка запроса для использования профилирования `SET STATISTICS PROFILE ON` . Выполните ваш запрос в данном сеансе.  
@@ -124,7 +124,7 @@ GROUP BY node_id,physical_operator_name
 ORDER BY node_id;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
  

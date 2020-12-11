@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_properties (Transact-SQL)
-title: sys. dm_clr_properties (Transact-SQL) | Документация Майкрософт
+title: sys.dm_clr_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f966cbb5570eb1efb2068d7796ccecb4463750
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e313b3e873fbd59a53306475d0641ddbe5566703
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551311"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330023"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
-  Возвращает строку для каждого свойства, связанного с интеграцией со средой CLR программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая версию и состояние внутрипроцессной среды CLR. Размещенная среда CLR инициализируется путем запуска инструкций [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)или [DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md) или путем выполнения любой подпрограммы среды CLR, типа или триггера. Представление **sys. dm_clr_properties** не указывает, включено ли выполнение ПОЛЬЗОВАТЕЛЬСКОГО кода CLR на сервере. Выполнение пользовательского кода CLR включается с помощью хранимой процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с параметром [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) , установленным в значение 1.  
+  Возвращает строку для каждого свойства, связанного с интеграцией со средой CLR программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая версию и состояние внутрипроцессной среды CLR. Размещенная среда CLR инициализируется путем запуска инструкций [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)или [DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md) или путем выполнения любой подпрограммы среды CLR, типа или триггера. Представление **sys.dm_clr_properties** не указывает, включено ли выполнение ПОЛЬЗОВАТЕЛЬСКОГО кода CLR на сервере. Выполнение пользовательского кода CLR включается с помощью хранимой процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с параметром [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) , установленным в значение 1.  
   
- Представление **sys. dm_clr_properties** содержит столбцы « **имя** » и « **значение** ». Каждая строка в этом представлении содержит подробные сведения о свойстве внутрипроцессной среды CLR. Это представление используется для сбора информации о внутрипроцессной среде CLR, например о каталоге установки, версии и текущем состоянии этой среды. Оно помогает определить, вызвана ли неработоспособность кода интеграции со средой CLR проблемами установки CLR на серверном компьютере.  
+ Представление **sys.dm_clr_properties** содержит столбцы « **имя** » и « **значение** ». Каждая строка в этом представлении содержит подробные сведения о свойстве внутрипроцессной среды CLR. Это представление используется для сбора информации о внутрипроцессной среде CLR, например о каталоге установки, версии и текущем состоянии этой среды. Оно помогает определить, вызвана ли неработоспособность кода интеграции со средой CLR проблемами установки CLR на серверном компьютере.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "89551311"
   
  Свойство **Version** указывает версию .NET Framework и РАЗМЕЩЕННУЮ среду CLR на сервере.  
   
- Динамическое управляемое представление **sys. dm_clr_properties** может возвращать шесть разных значений для свойства **State** , которое отражает состояние [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещенной среды CLR. К ним относятся:  
+ Динамическое управляемое представление **sys.dm_clr_properties** может возвращать шесть разных значений для свойства **State** , которое отражает состояние [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещенной среды CLR. К ним относятся:  
   
 -   Mscoree is not loaded;  
   
@@ -69,13 +69,13 @@ ms.locfileid: "89551311"
   
  **Состояние CLR остановлено** , только если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находится в процессе завершения работы.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Свойства и значения этого представления могут измениться в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из-за улучшений функций интеграции со средой CLR.  
   
 ## <a name="permissions"></a>Разрешения  
   
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
 
 ## <a name="examples"></a>Примеры  
  В следующем примере происходит получение данных о внутрипроцессной среде CLR:  

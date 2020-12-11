@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_memory_cache_clock_hands (Transact-SQL)
-title: sys. dm_os_memory_cache_clock_hands (Transact-SQL) | Документация Майкрософт
+title: sys.dm_os_memory_cache_clock_hands (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 921a2c9e1b2f40c308c4f93b291d57ea1c39ef7f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bb93ff8ecf087037faf14b8bcf30533611531c31
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327109"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "89543882"
   Возвращает состояние каждой стрелки указанных часов кэша.  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_os_memory_cache_clock_hands**.  
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_os_memory_cache_clock_hands**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|Адрес кэша, связанного с часами. Не допускает значение NULL.|  
 |**name**|**nvarchar(256)**|Имя кэша. Не допускает значение NULL.|  
 |**type**|**nvarchar(60)**|Тип кэша. Допускается наличие нескольких экземпляров кэша одного типа. Не допускает значение NULL.|  
-|**clock_hand**|**nvarchar(60)**|Тип стрелки. Возможны следующие варианты.<br /><br /> Внешняя<br /><br /> Внутренние<br /><br /> Не допускает значение NULL.|  
-|**clock_status**|**nvarchar(60)**|Состояние часов. Возможны следующие варианты.<br /><br /> Приостановлена<br /><br /> Выполнение<br /><br /> Не допускает значение NULL.|  
+|**clock_hand**|**nvarchar(60)**|Тип стрелки. Возможны следующие варианты.<br /><br /> External<br /><br /> Внутренние<br /><br /> Не допускает значение NULL.|  
+|**clock_status**|**nvarchar(60)**|Состояние часов. Возможны следующие варианты.<br /><br /> Приостановлена<br /><br /> Запущен<br /><br /> Не допускает значение NULL.|  
 |**rounds_count**|**bigint**|Число проходов по кэшу для удаления элементов. Не допускает значение NULL.|  
 |**removed_all_rounds_count**|**bigint**|Число элементов, удаленных при всех проходах. Не допускает значение NULL.|  
 |**updated_last_round_count**|**bigint**|Число элементов, обновленных во время последнего прохода. Не допускает значение NULL.|  
@@ -53,13 +53,13 @@ ms.locfileid: "89543882"
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит сведения в структуре памяти, которая называется кэшем памяти. В качестве сведений, хранящихся в этом кэше, могут выступать данные, индексные записи, скомпилированные планы выполнения процедур и множество других типов сведений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы избежать повторного создания сведений, они извлекаются из кэша памяти возможное число раз и обычно удаляются из кэша в случае их сильного устаревания или в том случае, если область памяти требуется для записи новых данных. Процесс, который удаляет устаревшие сведения из памяти, называется «чистильщиком памяти». Чистильщик памяти используется регулярно, но не непрерывно. Очисткой кэша памяти управляет временной алгоритм. Каждый таймер времени временного алгоритма может управлять несколькими чистильщиками памяти, которые называются «руками». Рука таймера чистильщика времени — это текущее место расположения одной из рук чистильщика памяти.  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
- [sys. dm_os_memory_cache_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
+ [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
   
 

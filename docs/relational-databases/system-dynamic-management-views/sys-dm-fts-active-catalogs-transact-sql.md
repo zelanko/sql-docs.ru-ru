@@ -1,6 +1,6 @@
 ---
 description: sys.dm_fts_active_catalogs (Transact-SQL)
-title: sys. dm_fts_active_catalogs (Transact-SQL) | Документация Майкрософт
+title: sys.dm_fts_active_catalogs (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4545e37733448d1c26b19567c05463b014482d10
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f352af03115de658f16e56e27bc5ecf3bd900c3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324660"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,13 +56,13 @@ ms.locfileid: "88454940"
 |**row_count_in_thousands**|**int**|Оценка числа строк (в тысячах) в полнотекстовых индексах этого полнотекстового каталога.|  
 |**is_importing**|**bit**|Указывает, выполняется ли в настоящее время импорт полнотекстового каталога:<br /><br /> 1 = выполняется импорт каталога.<br /><br /> 2 = импорт каталога не выполняется.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Столбец is_importing был впервые добавлен в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
    
 ## <a name="physical-joins"></a>Физические соединения  
  ![Существенные соединения данного динамического административного представления](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "Существенные соединения данного динамического административного представления")  
@@ -71,8 +71,8 @@ ms.locfileid: "88454940"
   
 |От|Кому|Связь|  
 |----------|--------|------------------|  
-|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Один к одному|  
-|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Один к одному|  
+|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|"Одна к одной"|  
+|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|"Одна к одной"|  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает сведения об активных полнотекстовых каталогах в текущей базе данных.  

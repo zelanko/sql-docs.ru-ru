@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_trigger_stats (Transact-SQL)
-title: sys. dm_exec_trigger_stats (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_trigger_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 863498b4-849c-434d-b748-837411458738
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11498cce396d85bc35a7b15dcb441e303c30d196
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 51a83d1a812df700c2685598498312ee6b29bde0
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543978"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334146"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "89543978"
 |**object_id**|**int**|Идентификатор триггера.|  
 |**type**|**char(2)**|Тип объекта:<br /><br /> TA = триггер сборки (среда CLR)<br /><br /> TR = триггер SQL|  
 |**Type_desc**|**nvarchar(60)**|Описание типа объекта:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary (64)**|Это можно использовать для сопоставления с запросами в **представлении sys. dm_exec_query_stats** , которые были выполнены в этом триггере.|  
-|**plan_handle**|**varbinary (64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать с динамическим административным представлением **sys. dm_exec_cached_plans** .|  
+|**sql_handle**|**varbinary (64)**|Это можно использовать для сопоставления с запросами в **sys.dm_exec_query_stats** , которые были выполнены в этом триггере.|  
+|**plan_handle**|**varbinary (64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать с динамическим административным представлением **sys.dm_exec_cached_plans** .|  
 |**cached_time**|**datetime**|Время, когда триггер был добавлен в кэш.|  
 |**last_execution_time**|**datetime**|Время последнего выполнения триггера.|  
 |**execution_count**|**bigint**|Количество выполнений триггера со времени последней компиляции.|  
@@ -74,7 +74,7 @@ ms.locfileid: "89543978"
 |**max_page_server_reads**|**bigint**|Максимальное количество операций чтения сервера, которое этот триггер выполнял во время одного выполнения.<br /><br /> Область **применения**: масштабирование базы данных SQL Azure|  
 
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Динамические административные представления в среде [!INCLUDE[ssSDS](../../includes/sssds-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Во избежание раскрытия этой информации все строки, содержащие данные, не принадлежащие подключенному клиенту, отфильтровываются.  
 
 Статистика в представлении обновляется после завершения выполнения запроса.  
@@ -82,7 +82,7 @@ ms.locfileid: "89543978"
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются сведения о пяти первых триггерах, идентифицируемых по среднему затраченному времени.  
@@ -99,9 +99,9 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>См. также:  
 [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
-[sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
+[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
 [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
   

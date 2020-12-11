@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_buffer_descriptors (Transact-SQL)
-title: sys. dm_os_buffer_descriptors (Transact-SQL) | Документация Майкрософт
+title: sys.dm_os_buffer_descriptors (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe2641c33169e094b5e3cf5ae49a36508f5d4d00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c778e2e2ccc1d54a6a61110457ce6a2b0756920e
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539406"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322248"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает сведения обо всех страницах данных, расположенных в данный момент в буферном пуле [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это представление может использоваться, чтобы определить распределение страниц баз данных в буферном пуле в соответствии с базой данных, объектом или типом. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] это динамическое административное представление также возвращает сведения о страницах данных в файле расширения буферного пула. Дополнительные сведения см. в разделе [расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
- При считывании страницы данных с диска она копируется в буферный пул [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кэшируется для повторного использования. Каждая страница данных в кэше имеет один дескриптор буфера. Дескрипторы буфера уникально идентифицируют каждую страницу данных, кэшируемую в данный момент в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys. dm_os_buffer_descriptors возвращает кэшированные страницы для всех пользовательских и системных баз данных. В их число входят страницы, связанные с базой данных Resource.  
+ При считывании страницы данных с диска она копируется в буферный пул [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кэшируется для повторного использования. Каждая страница данных в кэше имеет один дескриптор буфера. Дескрипторы буфера уникально идентифицируют каждую страницу данных, кэшируемую в данный момент в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors возвращает кэшированные страницы для всех пользовательских и системных баз данных. В их число входят страницы, связанные с базой данных Resource.  
   
-> **Примечание.** Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_os_buffer_descriptors**.  
+> **Примечание.** Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -49,23 +49,23 @@ ms.locfileid: "89539406"
 |free_space_in_bytes|**int**|Объем доступного свободного места, в байтах, на странице. Допускает значение NULL.|  
 |is_modified|**bit**|1 = страница была изменена после того, как она была считана с диска. Допускает значение NULL.|  
 |numa_node|**int**|Узел с неоднородным доступом к памяти для буфера. Допускает значение NULL.|  
-|read_microsec|**bigint**|Фактическое время (в миллисекундах), необходимое для считывания страницы в буфер. Счетчик сбрасывается, если буфер используется повторно. Допускает значение NULL.|  
-|is_in_bpool_extension|**bit**|1 = страница находится в расширении буферного пула. Допускает значение NULL.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|read_microsec|**bigint**|Фактическое время (в миллисекундах), необходимое для считывания страницы в буфер. Счетчик сбрасывается, если буфер используется повторно. Допускает значение NULL.|  
+|is_in_bpool_extension|**bit**|1 = страница находится в расширении буферного пула. Допускает значение NULL.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
    
-## <a name="remarks"></a>Примечания  
- sys. dm_os_buffer_descriptors возвращает страницы, используемые базой данных ресурсов. sys. dm_os_buffer_descriptors не возвращает сведения о свободных или украденных страницах или о страницах, на которых произошли ошибки при их чтении.  
+## <a name="remarks"></a>Комментарии  
+ sys.dm_os_buffer_descriptors возвращает страницы, используемые базой данных ресурсов. sys.dm_os_buffer_descriptors не возвращает сведения о свободных или украденных страницах или о страницах, на которых произошли ошибки при их чтении.  
   
-|Исходный тип|Кому|Включено|Связь|  
+|От|Кому|Включено|Связь|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|«многие к одному»|  
-|sys.dm_os_buffer_descriptors|\<userdb>sys. allocation_units|allocation_unit_id|«многие к одному»|  
-|sys.dm_os_buffer_descriptors|\<userdb>sys. database_files|file_id|«многие к одному»|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|«многие к одному»|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|«многие к одному»|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|«многие к одному»|  
   
 ## <a name="examples"></a>Примеры  
@@ -113,7 +113,7 @@ GROUP BY name, index_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

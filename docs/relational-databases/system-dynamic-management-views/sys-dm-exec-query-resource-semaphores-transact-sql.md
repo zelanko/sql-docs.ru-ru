@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_resource_semaphores (Transact-SQL)
-title: sys. dm_exec_query_resource_semaphores (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_query_resource_semaphores (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d782c81ce803441e91d6008ae5b0117522c3286
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8c04104f41631e57a277c339151157353d0d830
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330931"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Возвращает сведения о текущем состоянии семафора запроса-ресурса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sys. dm_exec_query_resource_semaphores** предоставляет общее состояние памяти для выполнения запросов и позволяет определить, может ли система получить доступ к достаточному объему памяти. Это представление дополняет сведения о памяти, полученные из [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) , чтобы обеспечить полную картину состояния памяти сервера. **sys. dm_exec_query_resource_semaphores** возвращает одну строку для обычного семафора ресурса и другую строку для семафора ресурса малого запроса. Существует два требования для семафора небольшого запроса:  
+  Возвращает сведения о текущем состоянии семафора запроса-ресурса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sys.dm_exec_query_resource_semaphores** предоставляет общее состояние памяти для выполнения запросов и позволяет определить, может ли система получить доступ к достаточному объему памяти. Это представление дополняет сведения о памяти, полученные от [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) , чтобы получить полную картину состояния памяти сервера. **sys.dm_exec_query_resource_semaphores** возвращает одну строку для обычного семафора ресурса и другую строку для семафора ресурса малого запроса. Существует два требования для семафора небольшого запроса:  
   
 -   Запрошенный объем памяти должен быть меньше 5 МБ.  
   
 -   Стоимость запроса должна быть меньше 3 единиц затрат  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_exec_query_resource_semaphores**.  
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_exec_query_resource_semaphores**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -59,16 +59,16 @@ ms.locfileid: "89548576"
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Запросы, использующие динамические административные представления, которые содержат предложение ORDER BY или статистические функции, могут увеличить потребление памяти и таким образом устранить неполадки.  
   
- Используйте представление **sys. dm_exec_query_resource_semaphores** для устранения неполадок, но не включайте его в приложения, которые будут использовать будущие версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Используйте **sys.dm_exec_query_resource_semaphores** для устранения неполадок, но не включайте их в приложения, которые будут использовать будущие версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Регулятор ресурсов позволяет администратору базы данных распределять ресурсы сервера между пулами ресурсов, используя до 64 пулов. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версиях каждый пул ведет себя как небольшой независимый экземпляр сервера и требует двух семафоров.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_memory_grants (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
   

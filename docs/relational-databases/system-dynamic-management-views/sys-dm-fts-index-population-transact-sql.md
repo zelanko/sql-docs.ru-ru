@@ -1,6 +1,6 @@
 ---
 description: sys.dm_fts_index_population (Transact-SQL)
-title: sys. dm_fts_index_population (Transact-SQL) | Документация Майкрософт
+title: sys.dm_fts_index_population (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fd871a3f0de84d5a6a36eff7262f71062ace3a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bdcae6d4efe36e8b69ae2a211616178bba8af5f3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323951"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88474968"
 |**is_clustered_index_scan**|**bit**|Указывает, включает ли заполнение просмотр кластеризованных индексов.|  
 |**range_count**|**int**|Число поддиапазонов, на которые распараллелена операция заполнения.|  
 |**completed_range_count**|**int**|Число диапазонов, для которых обработка завершена.|  
-|**outstanding_batch_count**|**int**|Число необработанных пакетов для данного заполнения. Дополнительные сведения см. в разделе [sys. dm_fts_outstanding_batches &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
+|**outstanding_batch_count**|**int**|Число необработанных пакетов для данного заполнения. Дополнительные сведения см. в разделе [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
 |**status**|**int**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Состояние операции заполнения. Примечание. Некоторые состояния являются временными. Это может быть:<br /><br /> 3 = запускается<br /><br /> 5 = выполняется нормально<br /><br /> 7 = обработка остановлена<br /><br /> Например, это состояние появляется в процессе автоматического слияния.<br /><br /> 11 = заполнение прервано<br /><br /> 12 = извлечение данных о семантическом подобии|  
 |**status_description**|**nvarchar(120)**|Описание состояния заполнения.|  
 |**completion_type**|**int**|Состояние завершения данного заполнения.|  
@@ -55,13 +55,13 @@ ms.locfileid: "88474968"
 |**start_time**|**datetime**|Время начала заполнения.|  
 |**incremental_timestamp**|**timestamp**|Для полного заполнения содержит отметку времени его начала. Для остальных типов заполнения содержит последнюю зафиксированную контрольную точку (это значение отражает процесс заполнения).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если в дополнение к полнотекстовому индексированию включено статистическое семантическое индексирование, то выделение и заполнение семантических ключевых фраз, а также извлечение данных о подобии документов происходит одновременно с полнотекстовым индексированием. Заполнение индекса подобия документов выполняется позже, на втором этапе. Дополнительные сведения см. в разделе [Управление семантическим поиском и наблюдение за](../../relational-databases/search/manage-and-monitor-semantic-search.md)ним.  
   
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
   
 ## <a name="physical-joins"></a>Физические соединения  
  ![Существенные соединения данного динамического административного представления](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "Существенные соединения данного динамического административного представления")  
@@ -70,8 +70,8 @@ ms.locfileid: "88474968"
   
 |От|Кому|Связь|  
 |----------|--------|------------------|  
-|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Один к одному|  
-|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Один к одному|  
+|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|"Одна к одной"|  
+|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|"Одна к одной"|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|«многие к одному»|  
   
 ## <a name="see-also"></a>См. также:  

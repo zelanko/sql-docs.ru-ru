@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_plan_attributes (Transact-SQL)
-title: sys. dm_exec_plan_attributes (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 481638908fea0dbad0c593b2ca8ee28195b3eaf8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c80e576bd6f2872a2486da5fd09292609f86ba60
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546614"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331987"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Аргументы  
  *plan_handle*  
- Уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. *plan_handle* имеет тип **varbinary (64)**. Маркер плана можно получить из динамического административного представления [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) .  
+ Уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. *plan_handle* имеет тип **varbinary (64)**. Маркер плана можно получить из динамического административного представления [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) .  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -82,9 +82,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="set-options"></a>Параметры SET  
  Копии одного и того же скомпилированного плана могут отличаться только значением столбца **set_options** . Это указывает на то, что разные соединения используют разные наборы параметров SET для одного запроса. Использование разных наборов параметров, как правило, нежелательно, поскольку приводит к дополнительным компиляциям, меньшему повторному использованию планов и расширению кэша планов по причине размещения нескольких копий планов в кэш-памяти.  
@@ -167,7 +167,7 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   

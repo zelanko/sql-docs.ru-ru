@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_current_snapshot (Transact-SQL)
-title: sys. dm_tran_current_snapshot (Transact-SQL) | Документация Майкрософт
+title: sys.dm_tran_current_snapshot (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 7509d595-c0e1-4237-a5ac-b41ad934544c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9785cf52937f2e8a6ec17489d4bedd0d4726149
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c1d6681ec21993481e7ff1c395b0ed2c61eb5190
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334419"
 ---
 # <a name="sysdm_tran_current_snapshot-transact-sql"></a>sys.dm_tran_current_snapshot (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Возвращает виртуальную таблицу, которая отображает все активные транзакции в момент запуска текущей транзакции моментального снимка. Если текущая транзакция не является транзакцией моментальных снимков, данная функция не возвращает строк. представление **sys. dm_tran_current_snapshot** аналогично **sys. dm_tran_transactions_snapshot**, за исключением того, что **sys. dm_tran_current_snapshot** возвращает только активные транзакции для текущей транзакции моментальных снимков.  
+  Возвращает виртуальную таблицу, которая отображает все активные транзакции в момент запуска текущей транзакции моментального снимка. Если текущая транзакция не является транзакцией моментальных снимков, данная функция не возвращает строк. **sys.dm_tran_current_snapshot** похож на **sys.dm_tran_transactions_snapshot**, за исключением того, что **sys.dm_tran_current_snapshot** возвращает только активные транзакции для текущей транзакции моментальных снимков.  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_tran_current_snapshot**.  
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_tran_current_snapshot**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +53,7 @@ sys.dm_tran_current_snapshot
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
 
 ## <a name="examples"></a>Примеры  
  Следующий пример использует тестовый сценарий, содержащий четыре параллельные транзакции, идентифицированные порядковыми номерами (XSN), который выполняется в базе данных с параметрами ALLOW_SNAPSHOT_ISOLATION и READ_COMMITTED_SNAPSHOT, установленными в значение ON. Следующие транзакции запущены:  

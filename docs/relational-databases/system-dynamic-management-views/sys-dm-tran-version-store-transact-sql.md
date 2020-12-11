@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_version_store (Transact-SQL)
-title: sys. dm_tran_version_store (Transact-SQL) | Документация Майкрософт
+title: sys.dm_tran_version_store (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd71e1c70ef06d5e669158aea06b7f3dde720951
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d56dc48e37d7f0b03f59a1fecb024a74d3ed75cb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333055"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Возвращает виртуальную таблицу, в которой отображаются все записи о версиях в хранилище версий. выполнение процедуры **sys. dm_tran_version_store** неэффективно, так как оно запрашивает все хранилище версий, а хранилище версий может быть очень большим.  
+  Возвращает виртуальную таблицу, в которой отображаются все записи о версиях в хранилище версий. выполнение **sys.dm_tran_version_store** неэффективно, так как оно запрашивает все хранилище версий, а хранилище версий может быть очень большим.  
   
  Каждая запись версии хранится в виде двоичных данных вместе с некоторыми сведениями о состоянии и отслеживании. Как и в таблицах базы данных, записи в хранилище версий хранятся в страницах размером 8192 байта. Если размер записи превышает 8192 байта, она разбивается на две различные записи.  
   
- Так как запись версии хранится в двоичном виде, не возникает проблем с разными параметрами сортировки из разных баз данных. Используйте представление **sys. dm_tran_version_store** для поиска предыдущих версий строк в двоичном представлении в том виде, в котором они существуют в хранилище версий.  
+ Так как запись версии хранится в двоичном виде, не возникает проблем с разными параметрами сортировки из разных баз данных. Используйте **sys.dm_tran_version_store** , чтобы найти предыдущие версии строк в двоичном представлении в том виде, в котором они существуют в хранилище версий.  
   
   
 ## <a name="syntax"></a>Синтаксис  
@@ -62,7 +62,7 @@ sys.dm_tran_version_store
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
   
 ## <a name="examples"></a>Примеры  
  Следующий пример использует тестовый сценарий, содержащий четыре параллельные транзакции, идентифицированные порядковыми номерами (XSN), который выполняется в базе данных с параметрами ALLOW_SNAPSHOT_ISOLATION и READ_COMMITTED_SNAPSHOT, установленными в значение ON. Следующие транзакции запущены:  
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
   
  Выход показывает, что транзакция XSN-57 создала три версии строк из одной таблицы, а XSN-58 — одну версию строки из другой таблицы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_session_space_usage (Transact-SQL)
-title: sys. dm_db_session_space_usage (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_session_space_usage (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/16/2015
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 571b3a474e8b6f40745ca0534d40b76dea4dd0fb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0e8871d698b008488a87ccdda86e9abc72f24a2e
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330141"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "89550339"
 >  Это представление применимо только к [базе данных tempdb](../../relational-databases/databases/tempdb-database.md).  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_db_session_space_usage**.  
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_db_session_space_usage**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**smallint**|Идентификатор сеанса.<br /><br /> **session_id** сопоставляется с **session_id** в [sys. dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).|  
+|**session_id**|**smallint**|Идентификатор сеанса.<br /><br /> **session_id** сопоставляется **session_id** в [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).|  
 |**database_id**|**smallint**|Идентификатор базы данных.|  
 |**user_objects_alloc_page_count**|**bigint**|Число страниц, зарезервированных или выделенных для пользовательских объектов в данном сеансе.|  
 |**user_objects_dealloc_page_count**|**bigint**|Число страниц, освобожденных пользовательскими объектами или более не зарезервированных для них в данном сеансе.|  
@@ -53,16 +53,16 @@ ms.locfileid: "89550339"
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  В этом представлении при подсчете выделенных и освобожденных страниц IAM-страницы не учитываются.  
   
  В начале сеанса счетчики страниц устанавливаются в ноль (0). Счетчики отслеживают общее число страниц, выделенных и освобожденных для уже завершенных в этом сеансе задач. Счетчики обновляются только при завершении задачи; они не отражают состояние выполняющихся задач.  
   
  В каждый момент времени у сеанса может быть несколько запросов. Запрос может создавать несколько потоков и задач, если это параллельный запрос к базе данных.  
   
- Дополнительные сведения о сеансах, запросах и задачах см. в разделе [sys. dm_exec_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md), [sys. dm_exec_requests &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)и [sys. dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).  
+ Дополнительные сведения о сеансах, запросах и задачах см. в статьях [sys.dm_exec_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md), [sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)и [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).  
   
 ## <a name="user-objects"></a>Пользовательские объекты  
  Следующие объекты включаются в счетчики страниц пользовательских объектов.  
@@ -93,7 +93,7 @@ ms.locfileid: "89550339"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|Исходный тип|Кому|Связь|  
+|От|Кому|Связь|  
 |----------|--------|------------------|  
 |dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|"Одна к одной"|  
   
@@ -102,8 +102,8 @@ ms.locfileid: "89550339"
  [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
  [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys. dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
- [sys. dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_file_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   

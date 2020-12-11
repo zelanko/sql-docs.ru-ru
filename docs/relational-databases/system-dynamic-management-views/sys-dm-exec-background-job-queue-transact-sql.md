@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_background_job_queue (Transact-SQL)
-title: sys. dm_exec_background_job_queue (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_background_job_queue (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4499bbffd3e5b14eb870db2bf55e639188c08912
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b60bed7d0e0126b8ac765c2fc910d75da6475a01
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334570"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Возвращает строку для каждого задания обработчика запросов, запланированного для асинхронного (фонового) выполнения.  
   
-> **ПРИМЕЧАНИЕ.** Чтобы вызвать эту функцию из **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** или **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , используйте имя **sys. dm_pdw_nodes_exec_background_job_queue**.  
+> **ПРИМЕЧАНИЕ.** Чтобы вызвать эту функцию из **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** или **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , используйте имя **sys.dm_pdw_nodes_exec_background_job_queue**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -54,9 +54,9 @@ ms.locfileid: "89534182"
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Это представление возвращает сведения только для заданий асинхронного обновления статистики. Дополнительные сведения о асинхронном обновлении статистики см. в разделе [Statistics](../../relational-databases/statistics/statistics.md).  
   
  Значения **object_id1** до **object_id4** зависят от типа запроса задания. Значение этих столбцов при разных типах заданий указано в следующей таблице.  
@@ -76,7 +76,7 @@ GROUP BY database_id;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Статистика](../../relational-databases/statistics/statistics.md)   

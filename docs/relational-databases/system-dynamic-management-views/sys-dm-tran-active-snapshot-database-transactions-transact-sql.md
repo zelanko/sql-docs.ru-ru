@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
-title: sys. dm_tran_active_snapshot_database_transactions (Transact-SQL) | Документация Майкрософт
+title: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f9d0d8b71bf4c4a1dac1ecdefd5422137a3a755
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 537cc5a047536c682d8eb6f61d8d4811ccba1a73
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330675"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "89550251"
  Это динамическое административное представление не включает в себя системные транзакции.  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -75,10 +75,10 @@ sys.dm_tran_active_snapshot_database_transactions
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
 
-## <a name="remarks"></a>Примечания  
- **sys. dm_tran_active_snapshot_database_transactions** сообщает транзакции, которым назначен последовательный номер транзакции (XSN). Порядковый номер XSN назначается при первом доступе транзакции к хранилищу версий. В следующих примерах показано, как в базе данных, для которой включена изоляция моментальных снимков или READ COMMITTED с использованием управления версиями строк, транзакции назначается номер XSN.  
+## <a name="remarks"></a>Комментарии  
+ **sys.dm_tran_active_snapshot_database_transactions** сообщает транзакции, которым назначен последовательный номер транзакции (XSN). Порядковый номер XSN назначается при первом доступе транзакции к хранилищу версий. В следующих примерах показано, как в базе данных, для которой включена изоляция моментальных снимков или READ COMMITTED с использованием управления версиями строк, транзакции назначается номер XSN.  
   
 -   Если транзакция выполняется на упорядочиваемом уровне изоляции, номер XSN назначается при первом выполнении транзакцией какой-либо инструкции, например операции UPDATE, в ходе которой создается версия строки.  
   
@@ -144,7 +144,7 @@ elapsed_time_seconds
 333  
 ```  
   
- Следующая информация оценивает результаты из **sys. dm_tran_active_snapshot_database_transactions**:  
+ Следующая информация оценивает результаты **sys.dm_tran_active_snapshot_database_transactions**:  
   
 -   XSN-57: так как эта транзакция не выполняется при изоляции моментального снимка, это `is_snapshot` значение и `first_snapshot_sequence_num` `0` . Аргумент `transaction_sequence_num` показывает, что данной транзакции был присвоен порядковый номер, поскольку параметр READ_COMMITTED_SNAPSHOT или ALLOW_SNAPSHOT_ISOLATION (или оба) имеют значение ON.  
   
