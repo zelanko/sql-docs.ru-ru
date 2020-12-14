@@ -21,13 +21,13 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06299f367f987cfc716154f4d26ffb8e5e07a868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c8643c40f7b62c0a0fdc3d85d32111d05ee955f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760418"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405170"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Определение схемы с заметками сопоставления в диаграмме обновления (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "85760418"
 >  Настоящая документация предназначена для тех, кто знаком с шаблонами и поддержкой схем сопоставления в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. [в разделе Введение в схемы XSD с Заметками &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Дополнительные сведения о устаревших приложениях, использующих XDR, см. [в разделе схемы XDR с Заметками &#40;не рекомендуется в SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Работа с типами данных  
- Если схема задает тип данных **Image**, **binary**или **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (с помощью **SQL: DataType**) и не указывает тип данных XML, диаграмма обновления предполагает, что тип данных XML — **двоичный Base 64**. Если данные имеют тип **bin. base** , необходимо явно указать тип (**DT: Type = bin. base** или **Type = "xsd: hexBinary"**).  
+ Если схема задает тип данных **Image**, **binary** или **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (с помощью **SQL: DataType**) и не указывает тип данных XML, диаграмма обновления предполагает, что тип данных XML — **двоичный Base 64**. Если данные имеют тип **bin. base** , необходимо явно указать тип (**DT: Type = bin. base** или **Type = "xsd: hexBinary"**).  
   
- Если схема указывает тип данных **DateTime**, **Date**или **time** XSD, необходимо также указать соответствующий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных с помощью **SQL: datatype = "DateTime"**.  
+ Если схема указывает тип данных **DateTime**, **Date** или **time** XSD, необходимо также указать соответствующий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных с помощью **SQL: datatype = "DateTime"**.  
   
  При обработке параметров типа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **money** необходимо явно указать **SQL: datatype = "Money"** на соответствующем узле схемы сопоставления.  
   
@@ -325,7 +325,7 @@ ms.locfileid: "85760418"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

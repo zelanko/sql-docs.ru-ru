@@ -1,6 +1,6 @@
 ---
 description: sys.database_role_members (Transact-SQL)
-title: sys. database_role_members (Transact-SQL) | Документация Майкрософт
+title: sys.database_role_members (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 443df263f534d6f15648caacb5a810a0c15e555a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 603ecd155e076b4f8798e7d5259eee902e4eab79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482157"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405694"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Возвращает одну строку для каждого члена каждой роли базы данных.  Пользователи базы данных, роли приложений и другие роли базы данных могут быть членами роли базы данных. Чтобы добавить членов в роль, используйте инструкцию [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) с `ADD MEMBER` параметром. Присоединитесь к [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) , чтобы получить имена `principal_id` значений.
+  Возвращает одну строку для каждого члена каждой роли базы данных.  Пользователи базы данных, роли приложений и другие роли базы данных могут быть членами роли базы данных. Чтобы добавить членов в роль, используйте инструкцию [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) с `ADD MEMBER` параметром. Присоединитесь к [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) , чтобы вернуть имена `principal_id` значений.
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -58,7 +58,7 @@ WHERE DP1.type = 'R'
 ORDER BY DP1.name;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

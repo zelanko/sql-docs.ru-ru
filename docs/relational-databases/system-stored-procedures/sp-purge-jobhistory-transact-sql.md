@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c804e5fbeb61a62ae7a615d09085e0dea8ee61d0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6d65e13bdcf03aab38786b519dfaeb6e58004a27
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535046"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404292"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,14 +44,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_name = ] 'job_name'` Имя задания, для которого удаляются записи журнала. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
+`[ @job_name = ] 'job_name'` Имя задания, для которого удаляются записи журнала. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
 > [!NOTE]  
 >  Члены предопределенной роли сервера **sysadmin** или члены предопределенной роли базы данных **SQLAgentOperatorRole** могут выполнять **sp_purge_jobhistory** без указания *job_name* или *job_id*. Если пользователи **sysadmin** не указали эти аргументы, журнал заданий для всех локальных и многосерверных заданий удаляется в течение времени, указанного в *oldest_date*. Если пользователи **SQLAgentOperatorRole** не указывают эти аргументы, журнал заданий для всех локальных заданий удаляется в течение времени, заданного *oldest_date*.  
   
-`[ @job_id = ] job_id` Идентификационный номер задания для удаляемых записей. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. Сведения о том, как пользователи **sysadmin** и **SQLAgentOperatorRole** могут использовать этот аргумент, см. в примечании в описании ** \@ job_name** .  
+`[ @job_id = ] job_id` Идентификационный номер задания для удаляемых записей. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. Сведения о том, как пользователи **sysadmin** и **SQLAgentOperatorRole** могут использовать этот аргумент, см. в примечании в описании **\@ job_name** .  
   
-`[ @oldest_date = ] oldest_date` Самая старая запись, сохраняемая в журнале. *oldest_date* имеет тип **DateTime**и значение по умолчанию NULL. Если указано *oldest_date* , **sp_purge_jobhistory** удаляет только записи, которые старше указанного значения.  
+`[ @oldest_date = ] oldest_date` Самая старая запись, сохраняемая в журнале. *oldest_date* имеет тип **DateTime** и значение по умолчанию NULL. Если указано *oldest_date* , **sp_purge_jobhistory** удаляет только записи, которые старше указанного значения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -67,7 +67,7 @@ sp_purge_jobhistory
   
  Другим пользователям, включая члены **SQLAgentUserRole** и Members **SQLAgentReaderRole**, необходимо явно предоставить разрешение EXECUTE на **sp_purge_jobhistory**. После предоставления разрешения EXECUTE на эту хранимую процедуру данные пользователи могут удалять из журнала заданий только те задания, владельцами которых они являются.  
   
- Предопределенные роли базы данных **SQLAgentUserRole**, **SQLAgentReaderRole**и **SQLAgentOperatorRole** находятся в базе данных **msdb** . Дополнительные сведения о разрешениях см. в разделе агент SQL Server предопределенные [роли базы данных](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Предопределенные роли базы данных **SQLAgentUserRole**, **SQLAgentReaderRole** и **SQLAgentOperatorRole** находятся в базе данных **msdb** . Дополнительные сведения о разрешениях см. в разделе агент SQL Server предопределенные [роли базы данных](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -98,7 +98,7 @@ EXEC dbo.sp_purge_jobhistory ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
