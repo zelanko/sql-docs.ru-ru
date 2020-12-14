@@ -114,6 +114,28 @@
               href: ../connect/ado-net/handle-dataadapter-events.md
             - name: Пакетные операции с использованием объектов DataAdapter
               href: ../connect/ado-net/batch-operations-using-dataadapters.md
+        - name: Транзакции и параллельность
+          href: ../connect/ado-net/transactions-and-concurrency.md
+          items:
+            - name: Локальные транзакции
+              href: ../connect/ado-net/local-transactions.md
+            - name: Распределенные транзакции
+              href: ../connect/ado-net/distributed-transactions.md
+            - name: Интеграция System.Transactions с SQL Server
+              href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
+            - name: Оптимистическая блокировка
+              href: ../connect/ado-net/optimistic-concurrency.md
+        - name: Извлечение сведений о схеме базы данных
+          href: ../connect/ado-net/retrieving-database-schema-information.md
+          items:
+            - name: Метод GetSchema и коллекции схем
+              href: ../connect/ado-net/getschema-and-schema-collections.md
+            - name: Ограничения схемы
+              href: ../connect/ado-net/schema-restrictions.md
+            - name: Общие коллекции схем
+              href: ../connect/ado-net/common-schema-collections.md
+            - name: "Коллекции схем SQL\_Server"
+              href: ../connect/ado-net/sql-server-schema-collections.md
     - name: SQL Server и ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:

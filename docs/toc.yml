@@ -1736,7 +1736,7 @@
               href: relational-databases/indexes/columnstore-indexes-query-performance.md
             - name: Операционная аналитика в реальном времени
               href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-            - name: Azure Synapse Analytics
+            - name: "Azure Synapse\_Analytics"
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: Дефрагментация
               href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
@@ -9956,6 +9956,9 @@
           href: linux/sql-server-linux-run-sql-server-agent-job.md
         - name: "Настройка проверки подлинности\_AD"
           href: linux/sql-server-linux-active-directory-authentication.md
+          items:
+            - name: "Настройка проверки подлинности\_AD с помощью adutil"
+              href: linux/sql-server-linux-ad-auth-adutil-tutorial.md
         - name: Создание экземпляра отказоустойчивого кластера
           href: linux/sql-server-linux-shared-disk-cluster-configure.md
           items:
@@ -10021,6 +10024,8 @@
               href: linux/sql-server-linux-configure-msdtc-docker.md
             - name: Устранение неполадок с контейнерами Docker
               href: linux/sql-server-linux-docker-container-troubleshooting.md
+            - name: "Настройка проверки подлинности\_AD с помощью adutil"
+              href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
         - name: Разработка
           href: linux/sql-server-linux-develop-overview.md
           items:
@@ -10265,7 +10270,7 @@
                   href: samples/wide-world-importers-oltp-install-configure.md
                 - name: функции SQL Server
                   href: samples/wide-world-importers-oltp-use-of-sql-server-features.md
-            - name: Azure Synapse Analytics
+            - name: "Azure Synapse\_Analytics"
               items:
                 - name: Каталог базы данных
                   href: samples/wide-world-importers-dw-database-catalog.md
