@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc8e947c60f8a1225b9079cbd55ec9d8a617b712
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bb0fc659d82024dbbc52dc777b9f6ae5da3062ac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957007"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477335"
 ---
 # <a name="syssql_logins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91957007"
   
  Список столбцов, наследуемых этим представлением, см. в разделе [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Столбцы `owning_principal_id` и `is_fixed_role` не наследуются от sys.server_principals.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Чтобы просмотреть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имена входа для проверки подлинности и имена входа для проверки подлинности Windows, см. раздел [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Если пользователи автономной базы данных включены, то подключения могут выполняться без имен входа. Чтобы определить эти учетные записи, см. раздел  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  

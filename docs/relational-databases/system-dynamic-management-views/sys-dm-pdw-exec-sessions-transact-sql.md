@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d155f836abb975b39ef7b2396057a43e59686f9b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 1e5fc3af931460de84dde4467b803226dcd6d431
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035350"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482563"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "92035350"
 |is_transactional|**bit**|Захватывает, находится ли в данный момент сеанс в пределах транзакции.|0 для автоматической фиксации, 1 — для транзакций.|  
 |client_id|**nvarchar(255)**|Захватывает сведения о клиенте для сеанса.|Любая допустимая строка.|  
 |app_name|**nvarchar(255)**|Захватывает сведения об имени приложения, которые дополнительно задаются в рамках процесса подключения.|Любая допустимая строка.|  
-|sql_spid|**int**|Идентификационный номер SPID. Используйте `session_id` этот сеанс. Используйте `sql_spid` столбец, чтобы присоединиться к **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> Предупреждение. Этот столбец содержит закрытые SPID. ** \* \* \* \* **||  
+|sql_spid|**int**|Идентификационный номер SPID. Используйте `session_id` этот сеанс. Используйте `sql_spid` столбец, чтобы присоединиться к **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> Предупреждение. Этот столбец содержит закрытые SPID. **\* \* \* \***||  
   
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a5656cac26865f58549e6531e371970b8afe205
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c2e09f62858865c9ae1420efff17b0a3a0de9736
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753547"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482432"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91753547"
 |**CHECK_OPTION**|**varchar (** 7 **)**|Тип инструкции WITH CHECK OPTION. CASCADE, если первоначальное представление было создано с помощью инструкции WITH CHECK OPTION. Иначе возвращается значение NONE.|  
 |**IS_UPDATABLE**|**varchar (** 2 **)**|Указывает, можно ли обновлять это представление. Всегда возвращает NO.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные представления &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)   
  [Представления информационной схемы &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
+ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475850"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480185"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88475850"
 Этот шаблон включает в себя узлы и границы, которые необходимо многократно просматривать, пока не будет достигнут нужный узел или пока не будет выполнено максимальное число итераций, указанное в шаблоне. При каждом выполнении запроса результат выполнения этого шаблона будет упорядоченной коллекцией узлов, а границы проходят по пути от начального узла к конечному. Это шаблон синтаксиса регулярных выражений, и поддерживаются следующие два квантификатора шаблонов:
 
 * **"+"**: Повторите шаблон 1 или более раз. Действие прекращается, как только будет найден кратчайший путь.
-* **{1, n}**: Повторите шаблон 1 до n раз. Завершите работу, как только будет найден самый короткий.
+* **{1,n}** : от 1 до "n" повторов шаблона. Завершите работу, как только будет найден самый короткий.
 
 ## <a name="last_node"></a>LAST_NODE
 Функция LAST_NODE () позволяет создавать цепочки для двух шаблонов прохода произвольной длины. Его можно использовать в сценариях, где:    
@@ -210,9 +210,9 @@ FROM (
 WHERE Q.levels = 2
 ```
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [СОВПАДЕНИе (SQL Graph)](../../t-sql/queries/match-sql-graph.md)    
- [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [Вставить (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT (граф SQL)](../../t-sql/statements/insert-sql-graph.md)  
  [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Работа с графами в SQL Server 2017)     
  

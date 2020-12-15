@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_memory_grants (Transact-SQL)
-title: sys. dm_exec_query_memory_grants (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/19/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da496a91a9ed3fa6a391d0862de7eb7fde391480
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b38c73b671329a13923604965f9529113d0549d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546622"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477285"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89546622"
  Динамические административные представления в среде [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Во избежание раскрытия этой информации все строки, содержащие данные, не принадлежащие подключенному клиенту, отфильтровываются. Кроме того, значения в столбцах **scheduler_id**, **wait_order**, **pool_id**, **group_id** фильтруются. значение столбца установлено в NULL.  
   
 > [!NOTE]  
-> Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_exec_query_memory_grants**.  
+> Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_exec_query_memory_grants**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -75,14 +75,14 @@ ms.locfileid: "89546622"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
    
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Обычный сценарий отладки для времени ожидания запроса может выглядеть следующим образом:  
   
 -   Проверьте общее состояние системной памяти с помощью представлений [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) и различных счетчиков производительности.  
   
 -   Проверьте резервирование памяти в процессе выполнения запроса в представлении **sys.dm_os_memory_clerks**, где `type = 'MEMORYCLERK_SQLQERESERVATIONS'`.  
   
--   Проверьте наличие запросов, ожидающих<sup>1</sup> для грантов, с помощью **sys. dm_exec_query_memory_grants**.  
+-   Проверьте наличие запросов, ожидающих <sup>1</sup> для грантов, с помощью **sys.dm_exec_query_memory_grants**.  
   
     ```sql  
     --Find all queries waiting in the memory queue  
@@ -91,7 +91,7 @@ ms.locfileid: "89546622"
     
     <sup>1</sup> В этом случае типом ожидания, как правило, является RESOURCE_SEMAPHORE. Дополнительные сведения см. в разделе [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
--   Поиск в кэше для запросов с предоставлением памяти с помощью [sys. dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) и [sys. dm_exec_query_plan &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   Поиск в кэше для запросов с предоставлением памяти с помощью [sys.dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) и [sys.dm_exec_query_plan &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
     ```sql  
     -- retrieve every query plan from the plan cache  
@@ -117,10 +117,10 @@ ms.locfileid: "89546622"
   
  Запросы, использующие динамические административные представления, включающие `ORDER BY` или агрегаты, могут увеличить потребление памяти и, таким же, приводят к проблеме, которую они устраняют.  
   
- Регулятор ресурсов позволяет администратору базы данных распределять ресурсы сервера между пулами ресурсов, используя до 64 пулов. Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , каждый пул ведет себя как небольшой независимый экземпляр сервера и требует 2 семафора. Число строк, возвращаемых из **sys. dm_exec_query_resource_semaphores** , может быть не более чем в 20 раз больше, чем количество строк, возвращаемых в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+ Регулятор ресурсов позволяет администратору базы данных распределять ресурсы сервера между пулами ресурсов, используя до 64 пулов. Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , каждый пул ведет себя как небольшой независимый экземпляр сервера и требует 2 семафора. Число строк, возвращаемых из **sys.dm_exec_query_resource_semaphores** , может доставлять до 20 раз больше, чем строк, возвращаемых в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
- [sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
  [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)   

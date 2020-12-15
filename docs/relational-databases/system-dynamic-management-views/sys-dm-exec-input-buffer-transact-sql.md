@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_input_buffer (Transact-SQL)
-title: sys. dm_exec_input_buffer (Transact-SQL) | Документация Майкрософт
+description: sys.dm_exec_input_buffer (Transact-SQL)
+title: sys.dm_exec_input_buffer (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fecdc698dc7015ab47e5a8c97b3990c7e5bf1f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 68673cb11ce5a003b2c9317939942b1d602095be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536958"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477265"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
@@ -48,7 +48,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 - [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
 
-*request_id* Request_id из [sys. dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* имеет **тип int**.
+*request_id* Request_id из [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* имеет **тип int**.
 
 ## <a name="table-returned"></a>Возвращаемая таблица
 
@@ -70,9 +70,9 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 > [!IMPORTANT]
 > Выполнение этого динамического административного представления вне SQL Server Management Studio в базе данных SQL Azure без разрешений владельца (например, в триггере, хранимой процедуре или функции) вызывает ошибку разрешения в базе данных master.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-Эту функцию динамического управления можно использовать в сочетании с sys. dm_exec_sessions или sys. dm_exec_requests, выполняя **CROSS APPLY**.
+Эту функцию динамического управления можно использовать в сочетании с sys.dm_exec_sessions или sys.dm_exec_requests, выполняя **перекрестное применение**.
 
 ## <a name="examples"></a>Примеры
 
@@ -97,7 +97,7 @@ WHERE es.session_id > 50;
 GO
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)

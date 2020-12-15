@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46360eac7080f92f98ba3f081b7cd9ec505f12c9
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 481e104f4762638fb4c71a548c3a390e1babe762
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753579"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478935"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "91753579"
 |**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
 |**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные представления &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)   
  [Представления информационной схемы &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   

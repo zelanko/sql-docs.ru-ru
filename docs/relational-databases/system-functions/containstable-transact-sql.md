@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8222058b5e26dd8e2d1c932705889ec0ee6d68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482523"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -256,7 +256,7 @@ GO
   
  `GO`  
   
-### <a name="e-specifying-the-language-argument"></a>E. Указание аргумента LANGUAGE  
+### <a name="e-specifying-the-language-argument"></a>Д. Указание аргумента LANGUAGE  
  Следующий пример демонстрирует использование аргумента `LANGUAGE`.  
   
 ```  
@@ -281,7 +281,7 @@ GO
 > [!NOTE]  
 >  Аргумент LANGUAGE *language_term* не требуется для использования *top_n_by_rank.*  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ограничение результатов поиска по РАНГу](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
  [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   

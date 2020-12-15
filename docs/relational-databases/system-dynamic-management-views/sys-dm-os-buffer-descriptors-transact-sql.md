@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c778e2e2ccc1d54a6a61110457ce6a2b0756920e
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 23f4db8f365aabc51ced7fc0d2ebfb9c5f94a788
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97322248"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482765"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "97322248"
 ## <a name="remarks"></a>Комментарии  
  sys.dm_os_buffer_descriptors возвращает страницы, используемые базой данных ресурсов. sys.dm_os_buffer_descriptors не возвращает сведения о свободных или украденных страницах или о страницах, на которых произошли ошибки при их чтении.  
   
-|От|Кому|Включено|Связь|  
+|От|Кому|включить|Связь|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|«многие к одному»|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|«многие к одному»|  

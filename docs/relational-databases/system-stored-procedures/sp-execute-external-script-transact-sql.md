@@ -20,52 +20,52 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: cceb8ad1df56eabaf0aa9507187e71b8db15bcaa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155076"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482368"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Хранимая процедура **sp_execute_external_script** выполняет скрипт, предоставленный в качестве входного аргумента для процедуры, и используется с [службы машинного обучения](../../machine-learning/sql-server-machine-learning-services.md) и [расширениями языка](../../language-extensions/language-extensions-overview.md). 
 
 Для Службы машинного обучения, [Python](../../machine-learning/concepts/extension-python.md) и [R](../../machine-learning/concepts/extension-r.md) поддерживают языки. Для расширений языка Java поддерживается, но должна быть определена с помощью [создания внешнего языка](../../t-sql/statements/create-external-language-transact-sql.md).
 
-Для выполнения **sp_execute_external_script**необходимо сначала установить службы машинного обучения или расширения языка. Дополнительные сведения см. в статьях [установка SQL Server службы машинного обучения (Python и R) в Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) и [Linux](../../linux/sql-server-linux-setup-machine-learning.md)или [Установка расширений языка SQL Server в Windows](../../language-extensions/install/windows-java.md) и [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
+Для выполнения **sp_execute_external_script** необходимо сначала установить службы машинного обучения или расширения языка. Дополнительные сведения см. в статьях [установка SQL Server службы машинного обучения (Python и R) в Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) и [Linux](../../linux/sql-server-linux-setup-machine-learning.md)или [Установка расширений языка SQL Server в Windows](../../language-extensions/install/windows-java.md) и [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Хранимая процедура **sp_execute_external_script** выполняет скрипт, предоставленный в качестве входного аргумента для процедуры, и используется с [Службы машинного обучения](../../machine-learning/sql-server-machine-learning-services.md) в SQL Server 2017.
 
 Для Службы машинного обучения, [Python](../../machine-learning/concepts/extension-python.md) и [R](../../machine-learning/concepts/extension-r.md) поддерживают языки.
 
-Для выполнения **sp_execute_external_script**необходимо сначала установить службы машинного обучения. Дополнительные сведения см. [в разделе Install SQL Server службы машинного обучения (Python и R) в Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
+Для выполнения **sp_execute_external_script** необходимо сначала установить службы машинного обучения. Дополнительные сведения см. [в разделе Install SQL Server службы машинного обучения (Python и R) в Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Хранимая процедура **sp_execute_external_script** выполняет скрипт, предоставленный в качестве входного аргумента для процедуры, и используется со [службами R](../../machine-learning/r/sql-server-r-services.md) в SQL Server 2016.
 
 Для служб R поддерживается язык  [r](../../machine-learning/concepts/extension-r.md) .
 
-Для выполнения **sp_execute_external_script**необходимо сначала установить службы R Services. Дополнительные сведения см. [в разделе Install SQL Server службы машинного обучения (Python и R) в Windows](../../machine-learning/install/sql-r-services-windows-install.md).
+Для выполнения **sp_execute_external_script** необходимо сначала установить службы R Services. Дополнительные сведения см. [в разделе Install SQL Server службы машинного обучения (Python и R) в Windows](../../machine-learning/install/sql-r-services-windows-install.md).
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Хранимая процедура **sp_execute_external_script** выполняет скрипт, предоставленный в качестве входного аргумента для процедуры, и используется с [службы машинного обучения в управляемый экземпляр Azure SQL](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 Для Службы машинного обучения, [Python](../../machine-learning/concepts/extension-python.md) и [R](../../machine-learning/concepts/extension-r.md) поддерживают языки.
 
-Для выполнения **sp_execute_external_script**необходимо сначала включить службы машинного обучения. Дополнительные сведения см. в [документации по службы машинного обучения в Azure SQL управляемый экземпляр](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+Для выполнения **sp_execute_external_script** необходимо сначала включить службы машинного обучения. Дополнительные сведения см. в [документации по службы машинного обучения в Azure SQL управляемый экземпляр](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ## <a name="syntax"></a>Синтаксис
 
 ```
@@ -82,7 +82,7 @@ sp_execute_external_script
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 ## <a name="syntax-for-sql-server-2017-and-earlier"></a>Синтаксис для SQL Server 2017 и более ранних версий
 
 ```
@@ -99,27 +99,27 @@ sp_execute_external_script
 ::: moniker-end
 
 ## <a name="arguments"></a>Аргументы
- ** \@ Language** = N '*язык*'  
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
- Указывает язык скрипта. *язык* имеет тип **sysname**. Допустимые значения: **R**, **Python**и любой язык, определенный с помощью [создания внешнего языка](../../t-sql/statements/create-external-language-transact-sql.md) (например, Java).
+ **\@ Language** = N '*язык*'  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
+ Указывает язык скрипта. *язык* имеет тип **sysname**. Допустимые значения: **R**, **Python** и любой язык, определенный с помощью [создания внешнего языка](../../t-sql/statements/create-external-language-transact-sql.md) (например, Java).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
  Указывает язык скрипта. *язык* имеет тип **sysname**. В SQL Server 2017 допустимыми значениями являются **R** и **Python**.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
  Указывает язык скрипта. *язык* имеет тип **sysname**. В SQL Server 2016 единственным допустимым значением является **R**.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
  Указывает язык скрипта. *язык* имеет тип **sysname**. В Управляемый экземпляр SQL Azure допустимыми значениями являются **R** и **Python**.
 ::: moniker-end
 
- ** \@ script** = N "*Скрипт*" внешний язык скрипта, указанный в качестве входных литералов или переменных. *script* имеет тип **nvarchar (max)**.  
+ **\@ script** = N "*Скрипт*" внешний язык скрипта, указанный в качестве входных литералов или переменных. *script* имеет тип **nvarchar (max)**.  
 
 `[ @input_data_1 =  N'input_data_1' ]` Задает входные данные, используемые внешним скриптом в форме [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса. Тип данных *input_data_1* — **nvarchar (max)**.
 
 `[ @input_data_1_name = N'input_data_1_name' ]` Задает имя переменной, используемой для представления запроса, определенного параметром @input_data_1 . Тип данных переменной во внешнем скрипте зависит от языка. В случае с R входная переменная является кадром данных. В случае Python входные данные должны быть табличными. *input_data_1_name* имеет тип **sysname**.  Значение по умолчанию — *InputDataSet*.  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 `[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` Используется для построения моделей отдельных секций. Указывает имя столбца, используемого для упорядочивания результирующего набора, например по названию продукта. Тип данных переменной во внешнем скрипте зависит от языка. В случае с R входная переменная является кадром данных. В случае Python входные данные должны быть табличными.
 
 `[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` Используется для построения моделей отдельных секций. Указывает имя столбца, используемого для сегментирования данных, таких как географическая область или дата. Тип данных переменной во внешнем скрипте зависит от языка. В случае с R входная переменная является кадром данных. В случае Python входные данные должны быть табличными. 
@@ -142,16 +142,16 @@ sp_execute_external_script
 > [!IMPORTANT]
 > Дерево запросов управляется машинным обучением SQL, и пользователи не могут выполнять произвольные операции с запросом.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Используйте **sp_execute_external_script** для выполнения скриптов, написанных на поддерживаемом языке. Поддерживаемые языки — это **Python** и **R** , используемые с службы машинного обучения, а также любой язык, определенный с помощью [создания внешнего языка](../../t-sql/statements/create-external-language-transact-sql.md) (например, Java), используемого с расширениями языка.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Используйте **sp_execute_external_script** для выполнения скриптов, написанных на поддерживаемом языке. Поддерживаемые языки — **Python** и **R** в SQL Server 2017 службы машинного обучения.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Используйте **sp_execute_external_script** для выполнения скриптов, написанных на поддерживаемом языке. Единственным поддерживаемым языком является **R** в SQL Server 2016 R Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Используйте **sp_execute_external_script** для выполнения скриптов, написанных на поддерживаемом языке. Поддерживаемые языки — **Python** и **R** в Azure SQL управляемый экземпляр службы машинного обучения.
 ::: moniker-end
 
@@ -159,7 +159,7 @@ sp_execute_external_script
 
 В дополнение к возврату результирующего набора можно возвращать скалярные значения, используя выходные параметры.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 Вы можете управлять ресурсами, используемыми внешними скриптами, настроив внешний пул ресурсов. Дополнительные сведения см. в статье [Создание внешнего пула ресурсов &#40;&#41;Transact-SQL ](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Сведения о рабочей нагрузке можно получить из представлений каталога регулятора ресурсов, представления динамического административного представления и счетчиков. Дополнительные сведения см. в статьях [Resource Governor представления каталога &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource Governor связанные динамические административные представления &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)и [SQL Server, External Scripts Object](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
 ::: moniker-end
 
@@ -167,7 +167,7 @@ sp_execute_external_script
 
 Отслеживайте выполнение скрипта с помощью [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) и [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ### <a name="parameters-for-partition-modeling"></a>Параметры моделирования секций
 
 Можно задать два дополнительных параметра, которые позволяют моделировать секционированные данные, где секции основаны на одном или нескольких столбцах, которые позволяют естественно сегментировать набор данных в логические секции, созданные и используемые только во время выполнения скрипта. Столбцы, содержащие повторяющиеся значения для Age, Gender, географического региона, даты или времени, представляют собой несколько примеров, которые применяются к секционированным наборам данных.
@@ -195,7 +195,7 @@ sp_execute_external_script
 
 Следующие типы данных не поддерживаются при использовании входного запроса или параметров **sp_execute_external_script** процедуры и возвращают ошибку неподдерживаемого типа.  
 
-В качестве обходного **CAST** решения [!INCLUDE[tsql](../../includes/tsql-md.md)] перед отправкой в внешний скрипт необходимо привести столбец или значение к поддерживаемому типу.  
+В качестве обходного  решения [!INCLUDE[tsql](../../includes/tsql-md.md)] перед отправкой в внешний скрипт необходимо привести столбец или значение к поддерживаемому типу.  
   
 + **курсор**  
   
@@ -288,7 +288,7 @@ GO
 
 Заголовки столбцов, используемые в коде Python, не выводятся в SQL Server; Поэтому для указания имен столбцов и типов данных, используемых SQL, используйте инструкцию WITH RESULT.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 ### <a name="c-generate-an-r-model-based-on-data-from-sql-server"></a>В. Создание модели R на основе данных из SQL Server  
 
 В следующем примере создается хранимая процедура, которая использует **sp_execute_external_script** для создания модели IRI и возврата модели.  
@@ -322,7 +322,7 @@ GO
 
 Для оценки можно также применять собственную функцию [PREDICT](../../t-sql/queries/predict-transact-sql.md), которая обычно выполняется быстрее, так как не вызывает среду выполнения Python или R.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 + [Машинное обучение SQL](../../machine-learning/index.yml)
 + [Расширения языка SQL Server](../../language-extensions/language-extensions-overview.md). 

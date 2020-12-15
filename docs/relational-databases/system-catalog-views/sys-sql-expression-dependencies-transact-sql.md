@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 012d3d8b944b162e317bee53f4f25dcaaf5a1541
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2a9810d1c1fbda616b6dec588375529f4cbbb15c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006425"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477415"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>Представление каталога sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "92006425"
 |Представление|Да|Да|  
 |Фильтруемый индекс|Да**|Нет|  
 |Статистика фильтрации|Да**|Нет|  
-|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Да|Да|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] хранимая процедура * * _|Да|Да|  
 |Хранимая процедура CLR|Нет|Да|  
 |Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
 |Определяемая пользователем функция CLR|Нет|Да|  
@@ -92,11 +92,11 @@ ms.locfileid: "92006425"
 |Коллекция схем XML|Нет|Да|  
 |Функция секционирования|Нет|Да|  
   
- \* Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого столбца, проверочного ограничения или ограничения по умолчанию.  
+ \_ Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого столбца, проверочного ограничения или ограничения по умолчанию.  
   
  **Каждый столбец, используемый в предикате фильтра, отслеживается как ссылающаяся сущность.  
   
- *** Пронумерованные хранимые процедуры с целочисленным значением больше 1 не отслеживаются в качестве ссылающихся или упоминаемых сущностей.  
+ * * _. Пронумерованные хранимые процедуры с целочисленным значением больше 1 не отправляются как ссылающуюся или ссылаемую сущность.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DEFINITION в базе данных и разрешение SELECT на представление sys.sql_expression_dependencies в базе данных. По умолчанию разрешение SELECT предоставляется только членам предопределенной роли базы данных db_owner. Если разрешения SELECT и VIEW DEFINITION предоставлены другому пользователю, он может просматривать все зависимости в базе данных.  
@@ -154,7 +154,7 @@ CREATE DATABASE db1;
 GO  
 USE db1;  
 GO  
-CREATE PROCEDURE p1 AS SELECT * FROM db2.s1.t1;  
+CREATE PROCEDURE p1 AS SELECT _ FROM db2.s1.t1;  
 GO  
 CREATE PROCEDURE p2 AS  
     UPDATE db3..t3  

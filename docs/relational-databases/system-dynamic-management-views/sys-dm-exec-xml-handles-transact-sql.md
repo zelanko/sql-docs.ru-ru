@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_xml_handles (Transact-SQL)
-title: sys. dm_exec_xml_handles (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_xml_handles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl
 ms.author: pelopes
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57347d66ba5bf0438b40696433a4eb5c0d6124bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0433126f43a14aa12521c0a65cd1b4aca8441ac6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489878"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482665"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -54,14 +54,14 @@ dm_exec_xml_handles (session_id | 0 )
 |**document_id**|**int**|Идентификатор XML-документа, возвращаемый **sp_xml_preparedocument**.|  
 |**namespace_document_id**|**int**|Идентификатор внутреннего маркера, используемый для документа связанного пространства имен, переданного в качестве третьего параметра для **sp_xml_preparedocument**. NULL, если документ пространства имен отсутствует.|  
 |**sql_handle**|**varbinary (64)**|Дескриптор текста кода SQL, в котором был определен дескриптор.|  
-|**statement_start_offset**|**int**|Число символов в выполняемом в данный момент пакете или хранимой процедуре, в которой происходит вызов **sp_xml_preparedocument** . Можно использовать вместе с **sql_handle**, **statement_end_offset**и функцией динамического управления **sys. dm_exec_sql_text** , чтобы получить текущую выполняемую инструкцию для запроса.|  
-|**statement_end_offset**|**int**|Число символов в выполняемом в данный момент пакете или хранимой процедуре, в которой происходит вызов **sp_xml_preparedocument** . Можно использовать вместе с **sql_handle**, **statement_start_offset**и функцией динамического управления **sys. dm_exec_sql_text** , чтобы получить текущую выполняемую инструкцию для запроса.|  
+|**statement_start_offset**|**int**|Число символов в выполняемом в данный момент пакете или хранимой процедуре, в которой происходит вызов **sp_xml_preparedocument** . Можно использовать вместе с **sql_handle**, **statement_end_offset** и функцией динамического управления **sys.dm_exec_sql_text** , чтобы получить текущую выполняемую инструкцию для запроса.|  
+|**statement_end_offset**|**int**|Число символов в выполняемом в данный момент пакете или хранимой процедуре, в которой происходит вызов **sp_xml_preparedocument** . Можно использовать вместе с **sql_handle**, **statement_start_offset** и функцией динамического управления **sys.dm_exec_sql_text** , чтобы получить текущую выполняемую инструкцию для запроса.|  
 |**creation_time**|**datetime**|Отметка времени вызова **sp_xml_preparedocument** .|  
 |**original_document_size_bytes**|**bigint**|Размер непроанализированного XML-документа в байтах.|  
 |**original_namespace_document_size_bytes**|**bigint**|Размер непроанализированного документа пространства имен XML в байтах. NULL, если документ пространства имен отсутствует.|  
 |**num_openxml_calls**|**bigint**|Число вызовов инструкции OPENXML с данным дескриптором документа.|  
 |**row_count**|**bigint**|Число строк, возвращенных всеми предыдущими вызовами инструкции OPENXML для данного дескриптора документа.|  
-|**dormant_duration_ms**|**bigint**|Число миллисекунд, прошедших с момента последнего вызова инструкции OPENXML. Если функция OPENXML не была вызвана, функция возвращает миллисекунды с момента вызова **sp_xml_preparedocumen**t.|  
+|**dormant_duration_ms**|**bigint**|Число миллисекунд, прошедших с момента последнего вызова инструкции OPENXML. Если функция OPENXML не была вызвана, функция возвращает миллисекунды с момента вызова **sp_xml_preparedocumen** t.|  
   
 ## <a name="remarks"></a>Комментарии  
  Время существования **sql_handles** , используемое для получения текста SQL, который выполнил вызов **sp_xml_preparedocument** в динамическом режиме кэшированный план, используемый для выполнения запроса. Если текст запроса в кэше недоступен, извлечь данные с помощью сведений, возвращаемых этой функцией, невозможно. Это может произойти при выполнении множества больших пакетов.  
@@ -76,7 +76,7 @@ dm_exec_xml_handles (session_id | 0 )
 SELECT * FROM sys.dm_exec_xml_handles(0);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <br>[Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
  <br>[Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
  <br>[sp_xml_preparedocument (Transact-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)

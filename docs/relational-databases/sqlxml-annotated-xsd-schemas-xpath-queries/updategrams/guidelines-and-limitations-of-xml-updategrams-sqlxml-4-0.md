@@ -13,13 +13,13 @@ ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb774fd8dbb05b52e4f57fcf78d4ecd4c923ccb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 71bd56145c0ef26736a7b567db22b783ea258e1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790655"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479195"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>Правила и ограничения диаграмм обновления XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85790655"
     Empty update, no updatable rows found   Transaction aborted  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

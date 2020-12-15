@@ -1,6 +1,6 @@
 ---
 description: sys.dm_external_script_execution_stats
-title: sys. dm_external_script_execution_stats | Документация Майкрософт
+title: sys.dm_external_script_execution_stats | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/25/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c8244de0efc2bdd3dc506e5e1ebcddcd4843dea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 32a35224dd40cfc33bdc3c8bb0c93fd5a783966a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489927"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482695"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88489927"
 
 Для Python это динамическое административное представление отслеживает количество вызовов Python, выполненных в экземпляре.
 
-Отсчет начинается при установке и включении компонента на экземпляре и накапливается до тех пор, пока файл с данными о состоянии не будет удален или перезаписан администратором. Таким образом, в общем случае сбросить значения в поле *counter_value*нельзя. Если вы хотите отслеживать использование по сеансу, времени календаря или другим интервалам, рекомендуется перехватывать счетчики с занесением в таблицу.
+Отсчет начинается при установке и включении компонента на экземпляре и накапливается до тех пор, пока файл с данными о состоянии не будет удален или перезаписан администратором. Таким образом, в общем случае сбросить значения в поле *counter_value* нельзя. Если вы хотите отслеживать использование по сеансу, времени календаря или другим интервалам, рекомендуется перехватывать счетчики с занесением в таблицу.
 
 ### <a name="registration-of-external-script-functions-in-r"></a>Регистрация внешних функций скриптов в R
 
@@ -97,7 +97,7 @@ FROM sys.dm_external_script_execution_stats
 WHERE language = 'Python';
 ```  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 + [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)

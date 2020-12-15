@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_sql_text (Transact-SQL)
-title: sys. dm_exec_sql_text (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_sql_text (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95db0c9386b8c3f1befda89c68635e37f32a1eb5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0f15f149cadf6f1fd98526bd4eb27606fc929561
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539437"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482755"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,9 +69,9 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 -   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -79,14 +79,14 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |-----------------|---------------|-----------------|  
 |**DBID**|**smallint**|Идентификатор базы данных.<br /><br /> Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.|  
 |**objectid**|**int**|Идентификатор объекта.<br /><br /> Имеет значение NULL для нерегламентированных и подготовленных инструкций SQL.|  
-|**number**|**smallint**|Для пронумерованной хранимой процедуры этот столбец возвращает ее номер. Дополнительные сведения см. в разделе [sys. numbered_procedures &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Имеет значение NULL для нерегламентированных и подготовленных инструкций SQL.|  
+|**number**|**smallint**|Для пронумерованной хранимой процедуры этот столбец возвращает ее номер. Дополнительные сведения см. в разделе [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Имеет значение NULL для нерегламентированных и подготовленных инструкций SQL.|  
 |**Шифрование**|**bit**|1 = текст SQL зашифрован.<br /><br /> 0 = текст SQL не зашифрован.|  
 |**text**|**nvarchar (Max** **)**|Текст SQL-запроса.<br /><br /> Имеет значение NULL для зашифрованных объектов.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
 Для нерегламентированных запросов дескрипторы SQL являются хэш-значениями на основе текста SQL, отправляемого на сервер, и могут исходить из любой базы данных. 
 
 Для таких объектов баз данных, как хранимые процедуры, триггеры или функции, дескрипторы SQL создаются на основе идентификатора базы данных, идентификатора объекта, а также номера объекта. 
@@ -112,7 +112,7 @@ Handle Plan — это хэш-значение, полученное из ско
       ```
       
   2.  Использование **CROSS APPLY**.  
-    Sql_handle из **sys. dm_exec_requests** будут переданы в представление **sys. Dm_exec_sql_text** с помощью **CROSS APPLY**. Откройте новое окно запроса и передайте SPID, определенный на шаге 1. В этом примере SPID имеет значение `59` .
+    Sql_handle из **sys.dm_exec_requests** будут переданы **sys.dm_exec_sql_text** с помощью **CROSS APPLY**. Откройте новое окно запроса и передайте SPID, определенный на шаге 1. В этом примере SPID имеет значение `59` .
 
         ```sql
         SELECT t.*
@@ -122,7 +122,7 @@ Handle Plan — это хэш-значение, полученное из ско
          ```      
  
   2.  Передача **sql_handle** напрямую.  
-Получение **sql_handle** из **sys. dm_exec_requests**. Затем передайте **sql_handle** непосредственно в **sys. dm_exec_sql_text**. Откройте новое окно запроса и передайте SPID, определенный в шаге 1, в **sys. dm_exec_requests**. В этом примере SPID имеет значение `59` . Затем передайте возвращенный **sql_handle** в качестве аргумента в **sys. dm_exec_sql_text**.
+Получите **sql_handle** от **sys.dm_exec_requests**. Затем передайте **sql_handle** непосредственно в **sys.dm_exec_sql_text**. Откройте новое окно запроса и передайте SPID, определенный на шаге 1, в **sys.dm_exec_requests**. В этом примере SPID имеет значение `59` . Затем передайте возвращаемый **sql_handle** в качестве аргумента в **sys.dm_exec_sql_text**.
 
         ```sql
         -- acquire sql_handle
@@ -182,10 +182,11 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
 ## <a name="see-also"></a>См. также раздел  
  [Динамические административные представления и функции (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys. dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
- [sys. dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
- [sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [Использование инструкции Apply](../../t-sql/queries/from-transact-sql.md#using-apply)   [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [sys.dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
+ [sys.dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [Использование инструкции APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   
+ [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

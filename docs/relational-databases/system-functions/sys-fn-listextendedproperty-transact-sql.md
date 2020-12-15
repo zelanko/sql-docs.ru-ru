@@ -1,6 +1,6 @@
 ---
 description: sys.fn_listextendedproperty (Transact-SQL)
-title: sys. fn_listextendedproperty (Transact-SQL) | Документация Майкрософт
+title: sys.fn_listextendedproperty (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd891bcfdaddfb42e2b55e1b69e3f320563c1ba7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3efd2428f9eeae241c0ec9be497c854ba0d91417
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427826"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478955"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,11 +93,11 @@ fn_listextendedproperty (
 |objtype|**sysname**|  
 |objname|**sysname**|  
 |name|**sysname**|  
-|value|**sql_variant**|  
+|значение|**sql_variant**|  
   
  Возвращение пустой таблицы означает отсутствие у объекта расширенных свойств или отсутствие у пользователя разрешений на просмотр этих свойств. При возвращении расширенных свойств самой базы данных столбцы objtype и objname принимают значения NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если значение для *property_name* равно null или по умолчанию, fn_listextendedproperty возвращает все свойства для указанного объекта.  
   
  Если указан тип объекта, а значение, соответствующее имени объекта, равно NULL или значению по умолчанию, функция fn_listextendedproperty возвращает все расширенные свойства всех объектов заданного типа.  
@@ -182,6 +182,6 @@ GO
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys. extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

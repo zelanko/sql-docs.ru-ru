@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_sessions (Transact-SQL)
-title: sys. dm_exec_sessions (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_sessions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7b50b83a71df6485afae83fb371abb04209898ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539456"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482795"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Возвращает по одной строке на каждый прошедший проверку подлинности сеанс, подключенный к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys. dm_exec_sessions — это представление области сервера, в котором отображаются сведения обо всех активных соединениях пользователей и внутренних задачах. Эти сведения включают в себя данные о версии клиента, имени клиентской программы, времени входа, имени входа пользователя, текущих настройках сеанса и т.д. Для первоначального ознакомления с текущей нагрузкой системы и определения интересующего сеанса используйте представление sys.dm_exec_sessions, после чего более подробные сведения об этом сеансе могут быть получены с помощью других динамических административных представлений или функций динамического управления.  
+  Возвращает по одной строке на каждый прошедший проверку подлинности сеанс, подключенный к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_exec_sessions — это представление области сервера, в котором отображаются сведения обо всех активных подключениях пользователей и внутренних задачах. Эти сведения включают в себя данные о версии клиента, имени клиентской программы, времени входа, имени входа пользователя, текущих настройках сеанса и т.д. Для первоначального ознакомления с текущей нагрузкой системы и определения интересующего сеанса используйте представление sys.dm_exec_sessions, после чего более подробные сведения об этом сеансе могут быть получены с помощью других динамических административных представлений или функций динамического управления.  
   
- Динамические административные представления sys. dm_exec_connections, sys. dm_exec_sessions и sys. dm_exec_requests сопоставляются с системной таблицей [sys.sys](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
+ Динамические административные представления sys.dm_exec_connections, sys.dm_exec_sessions и sys.dm_exec_requests сопоставляются с системной таблицей [sys.sys](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
   
-> **Примечание.** Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_exec_sessions**.  
+> **Примечание.** Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Имя столбца|Тип данных|Описание и сведения о конкретной версии|  
 |-----------------|---------------|-----------------|  
@@ -94,11 +94,11 @@ ms.locfileid: "89539456"
   
 ## <a name="permissions"></a>Разрешения  
 Все могут просматривать свои сведения о сеансе.  
-** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** `VIEW SERVER STATE` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Для просмотра всех сеансов на сервере требуется разрешение.  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Требуется `VIEW DATABASE STATE` для просмотра всех подключений к текущей базе данных. `VIEW DATABASE STATE` не может быть предоставлено в `master` базе данных. 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** `VIEW SERVER STATE` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Для просмотра всех сеансов на сервере требуется разрешение.  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Требуется `VIEW DATABASE STATE` для просмотра всех подключений к текущей базе данных. `VIEW DATABASE STATE` не может быть предоставлено в `master` базе данных. 
   
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если включен параметр конфигурации сервера « **стандартные условия соответствия** », статистика входа отображается в следующих столбцах.  
   
 -   last_successful_logon  
@@ -115,12 +115,12 @@ ms.locfileid: "89539456"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|Исходный тип|Кому|Подключить/Применить|Связь|  
+|От|Кому|Подключить/Применить|Связь|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Один к нулю или один ко многим.|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Один к нулю или один ко многим.|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|Один к нулю или один ко многим.|  
-|sys.dm_exec_sessions|[sys. dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Один к нулю или один ко многим.|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Один к нулю или один ко многим.|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|"Одна к одной"|  
   
 ## <a name="examples"></a>Примеры  
@@ -184,7 +184,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

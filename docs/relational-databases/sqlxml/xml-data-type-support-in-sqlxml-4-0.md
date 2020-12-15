@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dbebdd4908b4721ce91cd5994a6a25975ebdd42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0c2400239b5ad8d19733b1fa74f7750c6edc4382
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665503"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479185"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Поддержка типов данных xml в SQLXML 4.0
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85665503"
   
 -   При синтаксическом анализе XML SQLXML 4.0 использует поддержку, предусмотренную в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **XML-** столбец может быть либо сопоставлен как ТИПИЗИРОВАНный XML, либо как нетипизированный XML. В обоих случаях SQLXML 4.0 не проверяет входной XML.  Если входной XML недопустим или имеет неверный формат, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает об этом SQLXML и передает пользователю сведения об ошибках, возвращенные сервером.  
   
--   SQLXML 4.0 зависит от ограниченной поддержки DTD, реализованной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]позволяет использовать внутреннее определение DTD в данных типа данных **XML** , которое может использоваться для предоставления значений по умолчанию и для замены ссылок на сущности их расширенным содержимым. SQLXML передает XML-данные серверу «как есть» (в том числе внутренние DTD). Можно преобразовывать определения DTD в документы схем XML (XSD) при помощи инструментов сторонних компаний и загружать эти данные вместе со встроенными схемами XSD в базу данных.  
+-   SQLXML 4.0 зависит от ограниченной поддержки DTD, реализованной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет использовать внутреннее определение DTD в данных типа данных **XML** , которое может использоваться для предоставления значений по умолчанию и для замены ссылок на сущности их расширенным содержимым. SQLXML передает XML-данные серверу «как есть» (в том числе внутренние DTD). Можно преобразовывать определения DTD в документы схем XML (XSD) при помощи инструментов сторонних компаний и загружать эти данные вместе со встроенными схемами XSD в базу данных.  
   
 -   SQLXML 4,0 не сохраняет инструкции по обработке XML-декларации (например,) в зависимости от поведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Вместо этого XML-декларация рассматривается как директива для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] средства синтаксического анализа XML, и его атрибуты (версия, кодировка и автономность) теряются после преобразования данных в тип данных **XML** . Все XML-данные хранятся в кодировке UCS-2. Все остальные инструкции по обработке в экземпляре XML сохраняются; они разрешены в **XML-** столбце и могут поддерживаться SQLXML.  
   

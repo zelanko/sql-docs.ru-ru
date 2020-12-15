@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81f55a758949f3be55c70d55b06d5c7860f407d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b05c7d20deb1108e5e4c7f74fffce42072ba8515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499119"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478065"
 ---
 # <a name="using-statement-parameters"></a>Использование параметров инструкции
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "88499119"
   
 -   Повышать степень взаимодействия с пользователем при конструировании критериев запроса.  
   
--   Управление данными типа **Text**, **ntext**и **Image** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] конкретными типами данных C.  
+-   Управление данными типа **Text**, **ntext** и **Image** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] конкретными типами данных C.  
   
- Например, таблица **Parts** содержит столбцы с именами **PartID**, **Description**и **Price**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
+ Например, таблица **Parts** содержит столбцы с именами **PartID**, **Description** и **Price**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -54,7 +54,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  Ссылка на каждый маркер параметра осуществляется по порядковому номеру; параметры нумеруются слева направо. Первый слева параметр в инструкции SQL имеет порядковый номер 1; следующий — 2 и т. д.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Привязка параметров](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dee5ef30ca260855c9df6a7823e7dce605c3ff72
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f976f9be51d688833a09e5faaae42b8864ecc274
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534817"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482386"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,12 +47,12 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>Аргументы  
 `[ @resample = ] 'resample'` Указывает, что **sp_updatestats** будет использовать параметр ресамплинг инструкции [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Если параметр **"ресамплинг"** не указан, **sp_updatestats** обновляет статистику с использованием выборки по умолчанию. **ресамплинг** имеет тип **varchar (8)** со ЗНАЧЕНИЕМ по умолчанию No.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_updatestats** выполняется `UPDATE STATISTICS` путем указания `ALL` ключевого слова для всех определяемых пользователем и внутренних таблиц в базе данных. sp_updatestats отображает сообщения, указывающие ход выполнения. По завершении обновления выдается отчет о том, что обновление статистики произведено для всех таблиц.  
   
 **sp_updatestats** обновляет статистику отключенных некластеризованных индексов и не обновляет статистику отключенных кластеризованных индексов.  
   
-Для дисковых таблиц **sp_updatestats** обновляет статистику на основе сведений о **modification_counter** в представлении каталога **sys. dm_db_stats_properties** , обновляя статистику, когда по крайней мере одна строка была изменена. Статистика для таблиц, оптимизированных для памяти, всегда обновляется при выполнении **sp_updatestats**. Поэтому не выполняйте **sp_updatestats** больше, чем требуется.  
+Для дисковых таблиц **sp_updatestats** обновляет статистику на основе сведений о **modification_counter** в представлении каталога **sys.dm_db_stats_properties** , обновляя статистику, когда по крайней мере одна строка была изменена. Статистика для таблиц, оптимизированных для памяти, всегда обновляется при выполнении **sp_updatestats**. Поэтому не выполняйте **sp_updatestats** больше, чем требуется.  
   
 **sp_updatestats** может активировать перекомпиляцию хранимых процедур или другого скомпилированного кода. Однако **sp_updatestats** может не вызвать перекомпиляцию, если для таблиц, на которые имеются ссылки, и индексов на них доступен только один план запроса. Повторная компиляция в этих случаях будет не нужна даже при обновлении статистики.  
   
@@ -60,7 +60,7 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 ## <a name="permissions"></a>Разрешения  
 
-Для запуска **sp_updatestats**пользователь должен быть владельцем базы данных (а `dbo` не только членом роли `db_owner` ) или членом предопределенной роли сервера sysadmin.
+Для запуска **sp_updatestats** пользователь должен быть владельцем базы данных (а `dbo` не только членом роли `db_owner` ) или членом предопределенной роли сервера sysadmin.
 
 ## <a name="examples"></a>Примеры  
 В следующем примере обновляется статистика для таблиц в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -74,7 +74,7 @@ EXEC sp_updatestats;
 ## <a name="automatic-index-and-statistics-management"></a>Автоматическое управление индексами и статистикой
 Используйте такие решения, как [Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), чтобы автоматически управлять дефрагментацией индексов и обновлениями статистики для одной базы данных или нескольких. Эта процедура автоматически выбирает, следует ли перестроить или реорганизовать индекс, сверяясь с уровнем фрагментации и другими параметрами, и обновляет статистику на основе линейных пороговых значений.
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   

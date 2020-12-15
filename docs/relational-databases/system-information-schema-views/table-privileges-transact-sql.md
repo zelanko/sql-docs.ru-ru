@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8fcdf7061685dacbd578e995164e3658fd22b45
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e339b35742e95d6c55a10c161831835c04557393
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753917"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478895"
 ---
 # <a name="table_privileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91753917"
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Тип прав доступа.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Определяет, может ли участник, предоставлять разрешения другим пользователям.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные представления &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)   
  [Представления информационной схемы &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

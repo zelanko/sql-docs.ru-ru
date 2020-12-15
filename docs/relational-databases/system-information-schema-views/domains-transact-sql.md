@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c7237d75abfcc67dc1045896cd095cea4f78123
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1621d12ef0382f4df071d41a8bc3f84b447c8b20
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753634"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482455"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "91753634"
 |**DATETIME_PRECISION**|**smallint**|Код подтипа для **DateTime** и типа данных **интервала** ISO. Для других типов данных этот столбец возвращает значение NULL.|  
 |**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|Действительный текст определения инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные представления &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)   
  [Представления информационной схемы &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sysнаборов символов &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
