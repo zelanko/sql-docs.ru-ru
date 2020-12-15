@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_indexes (Transact-SQL)
-title: sys. fulltext_indexes (Transact-SQL) | Документация Майкрософт
+title: sys.fulltext_indexes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b57b7f507e5721647ca44b7f75388fc5ce8de57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7c9b04a81d537c0b82a7a1bccb76b429d896ba13
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401660"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482905"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,17 +40,17 @@ ms.locfileid: "88401660"
 |**unique_index_id**|**int**|Идентификатор соответствующего уникального индекса (не полнотекстового), который используется для связи полнотекстового индекса и строк.|  
 |**fulltext_catalog_id**|**int**|Идентификатор полнотекстового каталога, в котором находится полнотекстовый индекс.|  
 |**is_enabled**|**bit**|1 = полнотекстовый индекс включен.|  
-|**change_tracking_state**|**char (1)**|Состояние отслеживания изменений.<br /><br /> M = вручную<br /><br /> A = автоматически<br /><br /> O = отключено|  
+|**change_tracking_state**|**char(1)**|Состояние отслеживания изменений.<br /><br /> M = вручную<br /><br /> A = автоматически<br /><br /> O = отключено|  
 |**change_tracking_state_desc**|**nvarchar(60)**|Описание состояния отслеживания изменений.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
 |**has_crawl_completed**|**bit**|Последнее сканирование (заполнение) полнотекстового индекса завершено.|  
-|**crawl_type**|**char (1)**|Тип текущего или последнего сканирования.<br /><br /> F = полное сканирование<br /><br /> I = постепенное сканирование на основе отметки времени<br /><br /> U = сканирование обновления на основе уведомлений<br /><br /> P = полное сканирование приостановлено.|  
+|**crawl_type**|**char(1)**|Тип текущего или последнего сканирования.<br /><br /> F = полное сканирование<br /><br /> I = постепенное сканирование на основе отметки времени<br /><br /> U = сканирование обновления на основе уведомлений<br /><br /> P = полное сканирование приостановлено.|  
 |**crawl_type_desc**|**nvarchar(60)**|Описание типа текущего или последнего сканирования.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|Начало текущего или последнего сканирования.<br /><br /> NULL = Нет.|  
 |**crawl_end_date**|**datetime**|Окончание текущего или последнего сканирования.<br /><br /> NULL = Нет.|  
 |**incremental_timestamp**|**Binary (8)**|Значение отметки времени для использования при следующем постепенном сканировании.<br /><br /> NULL = Нет.|  
 |**stoplist_id**|**int**|Идентификатор [списка стоп-слов](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) , связанного с данным полнотекстовым индексом.|  
 |**data_space_id**|**int**|Файловая группа, в которой расположен полнотекстовый индекс.|  
-|**property_list_id**|**int**|Идентификатор списка свойств поиска, связанного с данным полнотекстовым индексом. Значение NULL указывает на отсутствие списка свойств поиска, связанного с данным полнотекстовым индексом. Чтобы получить дополнительные сведения об этом списке свойств поиска, используйте представление каталога [&#41;инструкции sys. registered_search_property_lists &#40;Transact-SQL ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) .|  
+|**property_list_id**|**int**|Идентификатор списка свойств поиска, связанного с данным полнотекстовым индексом. Значение NULL указывает на отсутствие списка свойств поиска, связанного с данным полнотекстовым индексом. Чтобы получить дополнительные сведения об этом списке свойств поиска, используйте представление каталога [&#41;sys.registered_search_property_lists &#40;Transact-SQL ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) .|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
@@ -70,9 +70,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys. fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
- [sys. fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
- [sys. fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
+ [sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
+ [sys.fulltext_index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
+ [sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Создание и управление полнотекстовыми индексами](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
