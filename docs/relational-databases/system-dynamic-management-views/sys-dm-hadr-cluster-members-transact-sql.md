@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_cluster_members (Transact-SQL)
-title: sys. dm_hadr_cluster_members (Transact-SQL) | Документация Майкрософт
+title: sys.dm_hadr_cluster_members (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c7e182c4b8efb2ecc882c0e81bb1c1863b310a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d7c9f7b1145eec5d9c0c7f3644f18e8de7739b11
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546575"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468465"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  Если на узле WSFC, где размещен локальный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с включенной поддержкой [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], имеется кворум WSFC, то возвращаются по строке для каждого из составляющих кворум элементов и состояние каждого из них. Сюда входят все узлы в кластере (возвращаемые функцией **клустеренум** с типом CLUSTER_ENUM_NODE), а также диск или файловый ресурс-свидетель, если таковые имеются. Возвращаемая для определенного элемента строка содержит сведения о состоянии такого элемента. Например, для кластера из пяти узлов с кворумом "Большинство узлов", когда один узел не работает, при запросе к **sys. dm_hadr_cluster_members** из экземпляра сервера, который включен для этого узла, расположенного [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] на узле с кворумом, **sys. dm_hadr_cluster_members** отражает состояние узла "NODE_DOWN".  
+  Если на узле WSFC, где размещен локальный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с включенной поддержкой [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], имеется кворум WSFC, то возвращаются по строке для каждого из составляющих кворум элементов и состояние каждого из них. Сюда входят все узлы в кластере (возвращаемые функцией **клустеренум** с типом CLUSTER_ENUM_NODE), а также диск или файловый ресурс-свидетель, если таковые имеются. Возвращаемая для определенного элемента строка содержит сведения о состоянии такого элемента. Например, для кластера из пяти узлов с кворумом большинства узлов, в котором не работает один узел, при запросе **sys.dm_hadr_cluster_members** из экземпляра сервера, который включен для [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] этого узла, находится на узле с кворумом, **sys.dm_hadr_cluster_members** отражает состояние узла "NODE_DOWN".  
   
  Если узел WSFC не набирает кворум, строки не возвращаются.  
   

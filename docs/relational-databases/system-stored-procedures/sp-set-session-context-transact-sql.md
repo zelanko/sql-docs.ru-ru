@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 462c857e6067e6431248e86edb72d007e56d84e7
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2145297325aa71aad6a235e93254bbc2857d8afc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734609"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468295"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -44,18 +44,18 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>Аргументы  
  [ @key =] Н'кэй '  
- Заданный ключ типа **sysname** . Максимальный размер ключа составляет 128 байт.  
+ Заданный ключ типа **sysname**. Максимальный размер ключа составляет 128 байт.  
   
  [ @value =] "значение"  
- Значение для указанного ключа типа **sql_variant** . При установке значения NULL освобождается память. Максимальный размер 8 000 байт.  
+ Значение для указанного ключа типа **sql_variant**. При установке значения NULL освобождается память. Максимальный размер 8 000 байт.  
   
  [ @read_only =] {0 | 1}  
- Флаг типа **bit** . Если значение равно 1, то в этом логическом подключении нельзя снова изменить значения для указанного ключа. При значении 0 (по умолчанию) значение может быть изменено.  
+ Флаг типа **bit**. Если значение равно 1, то в этом логическом подключении нельзя снова изменить значения для указанного ключа. При значении 0 (по умолчанию) значение может быть изменено.  
   
 ## <a name="permissions"></a>Разрешения  
  Любой пользователь может задать контекст сеанса для своего сеанса.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Как и в случае с другими хранимыми процедурами, в качестве параметров могут передаваться только литералы и переменные (не выражения и вызовы функций).  
   
  Общий размер контекста сеанса ограничен 1 МБ. Если задать значение, которое приводит к превышению этого ограничения, выполнение инструкции завершится ошибкой. Вы можете наблюдать за общим использованием памяти в [sys.dm_os_memory_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  

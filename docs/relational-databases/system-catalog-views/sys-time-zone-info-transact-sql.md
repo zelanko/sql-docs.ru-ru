@@ -1,6 +1,6 @@
 ---
-description: sys. time_zone_info (Transact-SQL)
-title: sys. time_zone_info (Transact-SQL) | Документация Майкрософт
+description: sys.time_zone_info (Transact-SQL)
+title: sys.time_zone_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2018
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51f3fd600b3c2c78caf437e758ece03aa325d29a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d88603b0f7da691633f14211a14204bf14b32aac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544991"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466955"
 ---
-# <a name="systime_zone_info-transact-sql"></a>sys. time_zone_info (Transact-SQL)
+# <a name="systime_zone_info-transact-sql"></a>sys.time_zone_info (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Возвращает сведения о поддерживаемых часовых поясах. Все часовые пояса, установленные на компьютере, хранятся в следующем кусте реестра:  
@@ -38,7 +38,7 @@ ms.locfileid: "89544991"
 |**current_utc_offset**|**nvarchar (12)**|Текущее смещение до UTC. Например, **+ 01:00** или **-07:00**.|  
 |**is_currently_dst**|**bit**|Значение true, если в настоящее время выполняется наблюдение за летним временем.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [GETUTCDATE &#40;Transact-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
  [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e338ba67bdd2535f54e4678b4ff013c768571da8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868454"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465105"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91868454"
   
  Если эти параметры заданы, сервер автоматически закрывает курсор, когда обнаруживает, что была получена последняя строка. Приложение по-прежнему должно вызывать [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) (SQL_CLOSE) или [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md), но драйверу не нужно отсылать уведомление о закрытии на сервер.  
   
- Если список выбора содержит столбец **Text**, **ntext**или **Image** , то однопроходный курсор преобразуется в динамический курсор, а **SQLGetData** — разрешено.  
+ Если список выбора содержит столбец **Text**, **ntext** или **Image** , то однопроходный курсор преобразуется в динамический курсор, а **SQLGetData** — разрешено.  
   
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  Атрибут SQL_SOPT_SS_DEFER_PREPARE определяет, была ли инструкция подготовлена немедленно или отложена до выполнения **SQLExecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) или [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) . В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 и более ранних версиях это свойство не учитывается (подготовка не откладывается). Значение аргумента *ValuePtr* имеет тип SQLLEN.  

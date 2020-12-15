@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6bb8e372ffa6a9bea01052f4185040dd9942157
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: e3caee2593f6b02688ab82fcfd72686670c493dd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549824"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466815"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>Аргументы  
  *server*  
- Удаляемый сервер. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию. *сервер* должен существовать.  
+ Удаляемый сервер. Аргумент *server* имеет тип **sysname** и не имеет значения по умолчанию. *сервер* должен существовать.  
   
  *droplogins*  
  Указывает, что связанные имена входа удаленного и связанного сервера для *сервера* также должны быть удалены, если указан **droplogins** . **`@droplogins`** имеет **тип char (10)** и значение по умолчанию NULL.  
@@ -50,7 +50,7 @@ sp_dropserver [ @server = ] 'server'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  При запуске **sp_dropserver** на сервере со связанными удаленными и связанными записями входа, или в качестве издателя репликации, возвращается сообщение об ошибке. Чтобы удалить все имена входа удаленных и связанных серверов для сервера при удалении сервера, используйте аргумент **droplogins** .  
   
  **sp_dropserver** не может выполняться внутри определяемой пользователем транзакции.  

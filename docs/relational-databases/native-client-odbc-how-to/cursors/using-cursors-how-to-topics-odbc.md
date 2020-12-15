@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c0d9e876427ab633ee3d113f9cde4be27aeea49
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9d93722989d2adbe269dc809b506337a8a184b49
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494057"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467745"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Использование инструкций по курсорам (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Чтобы использовать курсоры, сначала необходимо задать атрибуты соединения и инструкции, которые управляют режимом работы курсоров ODBC. Курсоры позволяют приложению получать несколько строк для каждой выборки и выполнять инструкции UPDATE, INSERT и DELETE для текущего положения курсора.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Использование курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   

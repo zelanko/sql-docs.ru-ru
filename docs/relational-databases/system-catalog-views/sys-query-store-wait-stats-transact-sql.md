@@ -1,6 +1,6 @@
 ---
-description: sys. query_store_wait_stats (Transact-SQL)
-title: sys. query_store_wait_stats (Transact-SQL) | Документация Майкрософт
+description: sys.query_store_wait_stats (Transact-SQL)
+title: sys.query_store_wait_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc28729ef4f3743e945f782fed0409057e90224a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2ab48b6155e26873c22a3b951ef65705d3addd79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537322"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466925"
 ---
-# <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
+# <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
@@ -36,8 +36,8 @@ ms.locfileid: "89537322"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Идентификатор строки, представляющей статистику ожидания для plan_id, runtime_stats_interval_id, execution_type и wait_category. Он уникален только за прошлые интервалы статистики времени выполнения. Для текущего активного интервала может существовать несколько строк, представляющих статистику ожидания для плана, на который ссылается plan_id, с типом выполнения, представленным execution_type, и категорией ожидания, представленной wait_category. Как правило, одна строка представляет статистику ожидания, записанную на диск, а другие (s) — состояние в памяти. Таким образом, чтобы получить фактическое состояние для каждого интервала, необходимо объединить метрики, группировать по plan_id, runtime_stats_interval_id, execution_type и wait_category. |  
-|**plan_id**|**bigint**|Внешний ключ. Присоединяет к [sys. query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Внешний ключ. Присоединяет к [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|Внешний ключ. Присоединение к [sys.query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Внешний ключ. Присоединение к [sys.query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Типы ожидания распределяются по категориям в таблице ниже, а затем время ожидания вычисляется по этим категориям ожидания. Для различных категорий ожидания требуется другой анализ для устранения проблемы, но типы ожидания из одной категории ведут к аналогичным действиям по устранению неполадок, а предоставление соответствующего запроса в дополнение к ожиданиям — отсутствие элемента, чтобы успешно завершить большую часть такого исследования.|
 |**wait_category_desc**|**nvarchar(128)**|Текстовое описание поля "Категория ожидания" см. в таблице ниже.|
 |**execution_type**|**tinyint**|Определяет тип выполнения запроса:<br /><br /> 0 — регулярное выполнение (успешно завершено)<br /><br /> 3. инициированное клиентом прерывание выполнения<br /><br /> 4 — выполнение прерванного исключения|  
@@ -53,20 +53,20 @@ ms.locfileid: "89537322"
 
 "%" используется в качестве подстановочного знака
   
-|Целочисленное значение|Категория ожидания|Типы ожидания включают в категорию|  
+|Целое значение|Категория ожидания|Типы ожидания включают в категорию|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Неизвестно |  
+|**0**;|**Unknown**|Неизвестно |  
 |**1**|**ЦП**|SOS_SCHEDULER_YIELD|
 |**2**|**Рабочий поток**|THREADPOOL|
 |**3**|**Блокировка**|LCK_M_%|
-|**4**|**Периода**|LATCH_%|
+|**4**|**Кратковременная блокировка**|LATCH_%|
 |**5**|**Кратковременная блокировка буфера**|PAGELATCH_%|
 |**6**|**Операции ввода-вывода буфера**|PAGEIOLATCH_%|
-|**7**|**Компиляции***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**SQL CLR**|CLR%, SQLCLR%|
+|**7**|**Компиляция** _|RESOURCE_SEMAPHORE_QUERY_COMPILE|
+|_ *8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**Зеркальное отображение**|ДБМИРРОР%|
 |**10**|**Транзакция**|ТРАНЗАКЦИИ%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
+|**11**|**Бездействие**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**PreEmptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(но не BROKER_RECEIVE_WAITFOR)**|
 |**14**|**Ввод-вывод журнала транзакций**|LOGMGR, ЛОГБУФФЕР, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
@@ -86,7 +86,7 @@ ms.locfileid: "89537322"
 
  Требуется разрешение `VIEW DATABASE STATE`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)

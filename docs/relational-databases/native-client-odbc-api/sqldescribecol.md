@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b75eeeb466c8b611437cc0984b1c50fbc3130953
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f85320fff9c44a1904ea3500b32b0d9305237b99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810039"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465334"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Для выполненных инструкций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйверу ODBC для собственного клиента не требуется запрашивать сервер для описания столбцов в результирующем наборе. В этом случае **SQLDescribeCol** не вызывает обмен данными с сервером. Как и [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)и[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md), вызов **SQLDescribeCol** в подготовленных, но не выполненных инструкциях создает обмен данными между серверами.  
+  Для выполненных инструкций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйверу ODBC для собственного клиента не требуется запрашивать сервер для описания столбцов в результирующем наборе. В этом случае **SQLDescribeCol** не вызывает обмен данными с сервером. Как и [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)и [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md), вызов **SQLDescribeCol** в подготовленных, но не выполненных инструкциях создает обмен данными между серверами.  
   
  Когда инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] или пакет инструкций возвращает несколько результирующих наборов строк, то столбец, на который ссылается исходный столбец, можно создать в отдельной таблице или сослаться на абсолютно другой столбец результирующего набора. **SQLDescribeCol** должен вызываться для каждого набора. При изменении результирующего набора приложение должно осуществить повторную привязку значений данных перед выборкой результатов строк. Дополнительные сведения об обработке запросов, возвращающих несколько результирующих наборов, см. в разделе [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "91810039"
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>Поддержка функцией SQLDescribeCol улучшенных возможностей работы с данными в формате даты-времени  
  Для типов даты-времени возвращаются следующие значения.  
   
-| attribute | *дататипептр* | *колумнсизептр* | *деЦималдигитсптр* |  
+| Атрибут | *дататипептр* | *колумнсизептр* | *деЦималдигитсптр* |  
 | --------- | ------------- |---------------- | ------------------ |  
 |DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
@@ -50,7 +50,7 @@ ms.locfileid: "91810039"
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqldescribecol-support-for-large-clr-udts"></a>Поддержка функцией SQLDescribeCol определяемых пользователем типов больших данных CLR  
- **SQLDescribeCol** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLDescribeCol** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [типы больших User-Defined CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Функция SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md)   

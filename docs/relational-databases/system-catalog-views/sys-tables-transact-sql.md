@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d87bd3ec1361cbe3c038ff57bdde31c5593a4dbb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1ed3eb33c3e7c1f54787d71c3d70bbb8ea10b810
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544018"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466995"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "89544018"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |\<inherited columns>||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|lob_data_space_id|**int**|Ненулевое значение — это идентификатор пространства данных (файловой группы или схемы секционирования), хранящего данные больших двоичных объектов (LOB) для этой таблицы. Примерами типов данных LOB являются **varbinary (max)**, **varchar (max)**, **Geography**или **XML**.<br /><br /> 0 = таблица не содержит данных LOB.|  
-|filestream_data_space_id|**int**|Идентификатор пространства данных для файловой группы FILESTREAM или схемы секционирования, состоящей из файловых групп FILESTREAM.<br /><br /> Чтобы сообщить имя файловой группы FILESTREAM, выполните запрос `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables можно объединить со следующими представлениями по условию filestream_data_space_id = data_space_id.<br /><br /> -sys. FILEGROUP<br /><br /> -sys. partition_schemes<br /><br /> -sys. indexes<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (присоединение filegroup_id)|  
+|lob_data_space_id|**int**|Ненулевое значение — это идентификатор пространства данных (файловой группы или схемы секционирования), хранящего данные больших двоичных объектов (LOB) для этой таблицы. Примерами типов данных LOB являются **varbinary (max)**, **varchar (max)**, **Geography** или **XML**.<br /><br /> 0 = таблица не содержит данных LOB.|  
+|filestream_data_space_id|**int**|Идентификатор пространства данных для файловой группы FILESTREAM или схемы секционирования, состоящей из файловых групп FILESTREAM.<br /><br /> Чтобы сообщить имя файловой группы FILESTREAM, выполните запрос `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables можно объединить со следующими представлениями по условию filestream_data_space_id = data_space_id.<br /><br /> -sys. FILEGROUP<br /><br /> — sys.partition_schemes<br /><br /> -sys. indexes<br /><br /> — sys.allocation_units<br /><br /> — sys.fulltext_catalogs<br /><br /> — sys.data_spaces<br /><br /> — sys.destination_data_spaces<br /><br /> — sys.master_files<br /><br /> — sys.database_files<br /><br /> -backupfilegroup (присоединение filegroup_id)|  
 |max_column_id_used|**int**|Максимальный идентификатор столбца, когда-либо использованный в таблице.|  
 |lock_on_bulk_load|**bit**|Таблица заблокирована при массовой загрузке. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |uses_ansi_nulls|**bit**|Таблица была создана при установленном параметре SET ANSI_NULLS = ON.|  
@@ -48,7 +48,7 @@ ms.locfileid: "89544018"
 |has_unchecked_assembly_data|**bit**|1 = таблица содержит материализованные данные, зависящие от сборки, определение которых изменилось во время последней операции ALTER ASSEMBLY. Будет сброшено в значение 0 после следующей успешной операции DBCC CHECKDB или DBCC CHECKTABLE.|  
 |text_in_row_limit|**int**|Максимальное число байтов, разрешенное для текста в строке.<br /><br /> 0 = параметр текста в строке не установлен. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |large_value_types_out_of_row|**bit**|1 = типы больших значений хранятся вне строк. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
-|is_tracked_by_cdc|**bit**|1 = в таблице включена система отслеживания измененных данных. Дополнительные сведения см. в разделе [sys. sp_cdc_enable_table &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
+|is_tracked_by_cdc|**bit**|1 = в таблице включена система отслеживания измененных данных. Дополнительные сведения см. в разделе [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
 |lock_escalation|**tinyint**|Значение параметра LOCK_ESCALATION для таблицы.<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
 |lock_escalation_desc|**nvarchar(60)**|Текстовое описание параметра lock_escalation для таблицы. Возможные значения: TABLE, AUTO и DISABLE.|  
 |is_filetable|**bit**|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = таблица имеет тип FileTable.<br /><br /> Дополнительные сведения о таблицах FileTable см. в разделе [Таблицы FileTable (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).|  

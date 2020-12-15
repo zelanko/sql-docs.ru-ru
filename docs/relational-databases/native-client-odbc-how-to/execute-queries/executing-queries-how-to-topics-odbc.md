@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b8789b6bedd67171af12a5b240f566e012b2397
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d4c74f8d40be0a0269d3241aefc0b2e4d43adc0f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423804"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467725"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Инструкции по выполнению запросов (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Выполнение инструкции SQL в приложении ODBC требует выделения дескриптора инструкции, установки атрибутов инструкции и подготовки и выполнения инструкции SQL.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Использование оператора &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
   

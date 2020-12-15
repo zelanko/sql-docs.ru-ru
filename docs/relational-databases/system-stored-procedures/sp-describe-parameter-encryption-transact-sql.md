@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35bf38e3c6ac85fe27af595571785f8d34a6f0d4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b06ee1588fe46b04348d2e9595eb72206f7b57d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646494"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466825"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 
@@ -43,12 +43,12 @@ sp_describe_parameter_encryption
   
 ## <a name="arguments"></a>Аргументы  
  [ \@ tsql =] ' Transact-SQL_batch '  
- Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transact-SQL_batch может иметь тип nvarchar (n) или nvarchar (max).  
+ Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transact-SQL_batch могут быть nvarchar (n) или nvarchar (max).  
   
  [ \@ params =] н'параметерс '  
- * \@ params* предоставляет строку объявления для параметров пакета Transact-SQL, который аналогичен sp_executesql. Параметры могут быть nvarchar (n) или nvarchar (max).  
+ *\@ params* предоставляет строку объявления для параметров пакета Transact-SQL, который аналогичен sp_executesql. Параметры могут быть nvarchar (n) или nvarchar (max).  
   
- — Одна строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] _batch. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — это заполнитель, указывающий дополнительные определения параметров. Каждый параметр, указанный в инструкции, должен быть определен в * \@ параметре params*. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, * \@ параметр params* не требуется. Значением по умолчанию для этого аргумента является NULL.  
+ — Одна строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] _batch. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — это заполнитель, указывающий дополнительные определения параметров. Каждый параметр, указанный в инструкции, должен быть определен в *\@ параметре params*. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, *\@ параметр params* не требуется. Значением по умолчанию для этого аргумента является NULL.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  значение 0 указывает на успешное выполнение. Что-то еще указывает на сбой.  
@@ -66,7 +66,7 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|Идентификатор строки в результирующем наборе.|  
 |**database_id**|**int**|Идентификатор базы данных.|  
-|**column_encryption_key_id**|**int**|Идентификатор ключа шифрования столбца. Примечание. Этот идентификатор обозначает строку в представлении каталога [sys. column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
+|**column_encryption_key_id**|**int**|Идентификатор ключа шифрования столбца. Примечание. Этот идентификатор обозначает строку в [sys.column_encryption_keys &#40;представлении каталога&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
 |**column_encryption_key_version**|**int**|Зарезервировано для будущего использования. В настоящее время всегда содержит 1.|  
 |**column_encryption_key_metadata_version**|**Binary (8)**|Отметка времени, представляющая время создания ключа шифрования столбца.|  
 |**column_encryption_key_encrypted_value**|**varbinary (4000)**|Зашифрованное значение ключа шифрования столбца.|  
@@ -79,7 +79,7 @@ sp_describe_parameter_encryption
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|Идентификатор строки в результирующем наборе.|  
-|**parameter_name**|**sysname**|Имя одного из параметров, указанных в аргументе * \@ params* .|  
+|**parameter_name**|**sysname**|Имя одного из параметров, указанных в аргументе *\@ params* .|  
 |**column_encryption_algorithm**|**tinyint**|Код, указывающий алгоритм шифрования, настроенный для столбца, параметр соответствует. В настоящее время поддерживаются следующие значения: 2 для **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Код, указывающий тип шифрования, настроенный для столбца, параметр соответствует. Поддерживаются такие значения:<br /><br /> 0 — открытый текст (столбец не зашифрован)<br /><br /> 1 — случайное шифрование<br /><br /> 2 — детерминированное шифрование.|  
 |**column_encryption_key_ordinal**|**int**|Код строки в первом результирующем наборе. Строка, на которую указывает ссылка, описывает ключ шифрования столбца, настроенный для столбца, параметр соответствует.|  
@@ -157,7 +157,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|\@c1|1|1|  
+|1|\@тогда|1|1|  
   
  (Продолжение результатов.)  
   
@@ -165,7 +165,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Разработка приложения с помощью Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 42e11b7c4a973312cb71756d0e67cc964664410e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867992"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469465"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>Перечисление SQL Server Native Client OLE DB источников данных (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91867992"
   
 5.  Выберите строки путем вызова метода **IRowset::GetNextRows**.  
   
-6.  Получите данные из копии строки, находящейся в наборе строк, путем вызова метода **IRowset::GetData**и обработайте их.  
+6.  Получите данные из копии строки, находящейся в наборе строк, путем вызова метода **IRowset::GetData** и обработайте их.  
   
 ## <a name="example"></a>Пример  
  Скомпилируйте с библиотекой ole32.lib и выполните следующий листинг кода C++. Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  

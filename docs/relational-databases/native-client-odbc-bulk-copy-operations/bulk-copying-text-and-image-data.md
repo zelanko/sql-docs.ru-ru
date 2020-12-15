@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55635292fab4a720e706cb62797bce4d1a1ce378
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0bba2a0229b16cade0e36d3684637e5d1818babe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455968"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465045"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Массовое копирование данных text и image
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Значения типа Large **Text**, **ntext**и **Image** копируются с помощью функции [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) . Код [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для столбца **Text**, **ntext**или **Image** с указателем *pData* , имеющим значение null, что означает, что данные будут предоставлены в **bcp_moretext**. Важно указать точную длину данных, предоставляемых для каждого столбца типа **Text**, **ntext**или **Image** в каждой строке с массовым копированием. Если длина данных столбца отличается от длины столбца, указанного в [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), используйте [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) , чтобы задать для длины правильное значение. [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) отправляет все данные, не являющиеся**текстовыми**, не-**ntext**и не являющиеся**изображениями** ; Затем вызывается **bcp_moretext** для отправки данных типа **Text**, **ntext**или **Image** в отдельных единицах. Функции операций с массовым копированием определяют, что все данные были отправлены для текущего столбца **Text**, **ntext**или **Image** , если сумма длин данных, отправленных с помощью **bcp_moretext** , равна длине, указанной в последней **bcp_collen** или **bcp_bind**.  
+  Значения типа Large **Text**, **ntext** и **Image** копируются с помощью функции [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) . Код [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для столбца **Text**, **ntext** или **Image** с указателем *pData* , имеющим значение null, что означает, что данные будут предоставлены в **bcp_moretext**. Важно указать точную длину данных, предоставляемых для каждого столбца типа **Text**, **ntext** или **Image** в каждой строке с массовым копированием. Если длина данных столбца отличается от длины столбца, указанного в [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), используйте [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) , чтобы задать для длины правильное значение. [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) отправляет все данные, не являющиеся **текстовыми**, не-**ntext** и не являющиеся **изображениями** ; Затем вызывается **bcp_moretext** для отправки данных типа **Text**, **ntext** или **Image** в отдельных единицах. Функции операций с массовым копированием определяют, что все данные были отправлены для текущего столбца **Text**, **ntext** или **Image** , если сумма длин данных, отправленных с помощью **bcp_moretext** , равна длине, указанной в последней **bcp_collen** или **bcp_bind**.  
   
- **bcp_moretext** не имеет параметра для задания столбца. Если в строке имеется несколько столбцов типа **Text**, **ntext**или **Image** , **bcp_moretext** работает с столбцами типа **Text**, **ntext**или **Image** , начиная с столбца с наименьшим порядковым номером и Переходя к столбцу с наибольшим порядковым номером. **bcp_moretext** переходит от одного столбца к другому, когда сумма значений длины отправленных данных равна длине, указанной в последней **bcp_collen** или **bcp_bind** для текущего столбца.  
+ **bcp_moretext** не имеет параметра для задания столбца. Если в строке имеется несколько столбцов типа **Text**, **ntext** или **Image** , **bcp_moretext** работает с столбцами типа **Text**, **ntext** или **Image** , начиная с столбца с наименьшим порядковым номером и Переходя к столбцу с наибольшим порядковым номером. **bcp_moretext** переходит от одного столбца к другому, когда сумма значений длины отправленных данных равна длине, указанной в последней **bcp_collen** или **bcp_bind** для текущего столбца.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение операций с массовым копированием &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

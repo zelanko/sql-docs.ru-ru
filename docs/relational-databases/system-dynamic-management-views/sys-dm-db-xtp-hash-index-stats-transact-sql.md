@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_hash_index_stats (Transact-SQL)
-title: sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 310fb757ca9956ac3206ac3d9bff0cc99c857a87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542273"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468485"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "89542273"
 Длинные цепочки могут негативно повлиять на производительность всех операций DML в отдельных строках, в том числе SELECT и INSERT. Короткие цепочки и большое число пустых контейнеров указывают на то, что значение bucket_count слишком велико. Это приводит к снижению производительности просмотра индекса.  
   
 > [!WARNING]
-> **sys. dm_db_xtp_hash_index_stats** сканирует всю таблицу. Таким образом, если в базе данных есть большие таблицы, **sys. dm_db_xtp_hash_index_stats** может занять длительное время.  
+> **sys.dm_db_xtp_hash_index_stats** сканирует всю таблицу. Таким образом, если в базе данных есть большие таблицы, **sys.dm_db_xtp_hash_index_stats** может занять длительное время.  
   
-Дополнительные сведения см. в статье [хэш-индексы для таблиц, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Дополнительные сведения см. в статье [хэш-индексы для Memory-Optimized таблиц](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
 |Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "89542273"
   ORDER BY [table], [index];  
 ``` 
 
-Дополнительные сведения о том, как интерпретировать результаты этого запроса, см. в разделе [Устранение неполадок хэш-индексов для оптимизированных для памяти таблиц](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Дополнительные сведения о том, как интерпретировать результаты этого запроса, см. в разделе [Устранение неполадок хэш-индексов для Memory-Optimized таблиц](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>Б. Статистика хэш-индекса для внутренних таблиц
 
@@ -125,7 +125,7 @@ ms.locfileid: "89542273"
   ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

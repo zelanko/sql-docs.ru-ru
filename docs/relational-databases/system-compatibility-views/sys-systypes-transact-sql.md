@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b5e4f2d0974889d0ce4158648b2fc44692926b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9bd2a68f151a136a5bb9de7efd170c7178d8001e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88375230"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464675"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88375230"
 |**xscale**|**tinyint**|Внутренний масштаб, используемый сервером. Не для использования в запросах.|  
 |**tdefault**|**int**|Идентификатор хранимой процедуры, содержащей проверку целостности для этого типа данных.|  
 |**поддомен**|**int**|Идентификатор хранимой процедуры, содержащей проверку целостности для этого типа данных.|  
-|**такой**|**smallint**|Идентификатор схемы владельца типа.<br /><br /> Для баз данных, обновленных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентификатор схемы эквивалентен идентификатору владельца.<br /><br /> ** \* \* Важно \* ! \* ** при использовании любой из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкций DDL необходимо использовать представление каталога [sys. types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) вместо **типовsys.sys**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Вызывает переполнение или возвращает значение NULL, если количество пользователей и ролей превышает 32 767.|  
+|**такой**|**smallint**|Идентификатор схемы владельца типа.<br /><br /> Для баз данных, обновленных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентификатор схемы эквивалентен идентификатору владельца.<br /><br /> **\* \* Важно \* ! \*** при использовании любой из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкций DDL необходимо использовать представление каталога [sys. types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) вместо **типовsys.sys**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Вызывает переполнение или возвращает значение NULL, если количество пользователей и ролей превышает 32 767.|  
 |**процессу**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**коллатионид**|**int**|Если на основе символов, **коллатионид** является идентификатором параметров сортировки текущей базы данных; в противном случае он имеет значение NULL.|  
 |**usertype**|**smallint**|Идентификатор пользовательского типа. Вызывает переполнение или возвращает значение NULL, если количество типов данных превышает 32 767.|  
-|**перемен**|**bit**|Тип данных с переменной длиной.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|**variable**|**bit**|Тип данных с переменной длиной.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
 |**allownulls**|**bit**|Указывает для этого типа данных возможность принимать значения NULL по умолчанию. Это значение по умолчанию переопределяется, если допустимость значений NULL задана с помощью [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
 |**type**|**tinyint**|Тип данных физического хранилища.|  
 |**printfmt**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

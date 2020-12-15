@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7215c4d2727ece82b223e7546480fafc5808bc32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 46829a2b33ee00aa986f73126a9ab2f4cf1a896d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448301"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467545"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>Имена участника-службы в клиентских соединениях (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88448301"
   
 |Функция-член|Description|  
 |---------------------|-----------------|  
-|IDataInitialize::GetDataSource|Параметр*pwszInitializationString* может содержать новые ключевые слова **ServerSPN** и **FailoverPartnerSPN**.|  
+|IDataInitialize::GetDataSource|Параметр *pwszInitializationString* может содержать новые ключевые слова **ServerSPN** и **FailoverPartnerSPN**.|  
 |IDataInitialize::GetInitializationString|Если свойства SSPROP_INIT_SERVERSPN и SSPROP_INIT_FAILOVERPARTNERSPN не имеют значений по умолчанию, они будут включены в строку инициализации с помощью параметра *ppwszInitString* в виде ключевых слов для **ServerSPN** и **FailoverPartnerSPN**. В противном случае эти ключевые слова не будут включены в строку инициализации.|  
 |IDBInitialize::Initialize|Если запрос включается путем установки свойства DBPROP_INIT_PROMPT в свойствах инициализации источника данных, будет отображаться диалоговое окно входа OLE DB. Это позволяет ввести имена участников-служб как для основного сервера, так и для его партнера по обеспечению отработки отказа.<br /><br /> Строка поставщика в свойстве DPPROP_INIT_PROVIDERSTRING, если установлена, будет распознавать новые ключевые слова **ServerSPN** и **FailoverPartnerSPN** , и использовать их значения (при их наличии) для инициализации свойств SSPROP_INIT_SERVER_SPN и SSPROP_INIT_FAILOVER_PARTNER_SPN.<br /><br /> Можно вызвать метод IDBProperties::SetProperties, чтобы установить свойства SSPROP_INIT_SERVER_SPN и SSPROP_INIT_FAILOVER_PARTNER_SPN перед вызовом IDBInitialize::Initialize. Это является альтернативой использованию строки поставщика.<br /><br /> Если свойство устанавливается в нескольких местах, заданное программно значение имеет приоритет над значением, указанным в строке поставщика. Значение, заданное в строке инициализации, имеет приоритет над значением, заданным в диалоговом окне входа.<br /><br /> Если одно ключевое слово появляется в строке поставщика несколько раз, приоритет имеет первое значение.|  
 |IDBProperties::GetProperties|Чтобы получить значения новых свойств инициализации источника данных SSPROP_INIT_SERVERSPN и SSPROP_INIT_FAILOVERPARTNERSPN, а также новых свойств источника данных SSPROP_AUTHENTICATIONMETHOD и SSPROP_MUTUALLYAUTHENTICATED, можно вызвать IDBProperties::GetProperties.|  

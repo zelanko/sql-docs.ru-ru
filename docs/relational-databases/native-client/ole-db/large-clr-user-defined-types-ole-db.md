@@ -1,5 +1,5 @@
 ---
-description: Большие определяемые пользователем типы данных CLR в SQL Server Native Client (OLE DB)
+description: Большие типы User-Defined CLR в SQL Server Native Client (OLE DB)
 title: Большие определяемые пользователем типы данных CLR (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5342dcab8dee628f074963a7ddc56a0ecc1d940
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 95552d965ab09f34c134ad82dd7d84966ee65fd6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328290"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467605"
 ---
-# <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>Большие определяемые пользователем типы данных CLR в SQL Server Native Client (OLE DB)
+# <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>Большие типы User-Defined CLR в SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом разделе описываются изменения OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], связанные с поддержкой больших определяемых пользователем типов данных среды CLR.  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственном клиенте см. в разделе [типы больших пользовательских данных CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Пример см. в статье [об использовании больших определяемых пользователем типов CLR в OLE DB](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственном клиенте см. в разделе [крупные типы User-Defined CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Пример см. в статье [об использовании больших определяемых пользователем типов CLR в OLE DB](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Формат данных  
  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует значение ~0 для представления значений с неограниченным размером типа больших объектов. Значение ~0 также представляет размер определяемых пользователем типов данных CLR, превышающий 8 000 байт.  

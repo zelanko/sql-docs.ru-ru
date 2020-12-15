@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a71502f608c1e283831bfb43f80aab6727bd77a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5e307020d2ec76457d8f813a076f3f41b0207907
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448629"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465015"
 ---
 # <a name="using-data-files-and-format-files"></a>Использование файлов данных и файлов форматирования
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "88448629"
   
  Чтобы создать файл данных, в котором данные столбца хранятся в другом формате, чем в таблице, вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) , чтобы указать, сколько столбцов будет изменено, а затем вызовите [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) для каждого столбца, формат которого необходимо изменить. Это выполняется после вызова **bcp_init** , но перед вызовом **bcp_exec**. **bcp_colfmt** указывает формат, в котором данные столбца хранятся в файле данных. Его можно использовать при выполнении операций копирования или извлечения. Для установки признаков конца строки и столбца можно также использовать **bcp_colfmt** . Например, если в данных нет символов табуляции, можно создать файл с разделителями-символами табуляции с помощью **bcp_colfmt** , чтобы задать символ табуляции в качестве признака конца для каждого столбца.  
   
- При выполнении операций с массовым копированием и использованием **bcp_colfmt**можно легко создать файл форматирования с описанием созданного файла данных, вызвав [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) после последнего вызова **bcp_colfmt**.  
+ При выполнении операций с массовым копированием и использованием **bcp_colfmt** можно легко создать файл форматирования с описанием созданного файла данных, вызвав [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) после последнего вызова **bcp_colfmt**.  
   
  При выполнении операции с массовым копированием из файла данных, описанного в файле форматирования, прочтите файл форматирования, вызвав [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) после **bcp_init** , но до **bcp_exec**.  
   
  Функция **bcp_control** управляет несколькими параметрами при выполнении операции копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из файла данных. **bcp_control** задает параметры, такие как максимальное количество ошибок перед завершением, строка в файле, с которой начинается копирование, строка, которую нужно присвоить, и размер пакета.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение операций с массовым копированием &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

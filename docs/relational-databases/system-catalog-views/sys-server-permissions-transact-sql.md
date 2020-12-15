@@ -1,6 +1,6 @@
 ---
 description: sys.server_permissions (Transact-SQL)
-title: sys. server_permissions (Transact-SQL) | Документация Майкрософт
+title: sys.server_permissions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/20/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8f0541d743ea7feaa8991c2b085173b4c6e8f40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bc833da8d53eadd88152e603777b4799ac30938f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376940"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464665"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "88376940"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Определяет класс субъекта, в котором существует разрешение.<br /><br /> 100 = Сервер<br /><br /> 101 = Сервер-участник<br /><br /> 105 = Конечная точка|  
-|**class_desc**|**nvarchar(60)**|Описание класса, на который существует разрешение. Принимает одно из следующих значений:<br /><br /> **СЕРВЕРОМ**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **КОНЕЧНОЙ**|  
+|**class_desc**|**nvarchar(60)**|Описание класса, на который существует разрешение. Одно из следующих значений:<br /><br /> **СЕРВЕРОМ**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|Идентификатор защищаемого объекта, на который существует разрешение, интерпретируемое согласно классу объекта. Как правило, это просто идентификатор, который применяется к тому, что представляет собой этот класс. Интерпретация нестандартных значений следующая:<br /><br /> 100 = всегда 0|  
 |**minor_id**|**int**|Вторичный идентификатор субъекта, в котором существует разрешение, интерпретируемое согласно классу объекта.|  
 |**grantee_principal_id**|**int**|Идентификатор сервера-участника, на который предоставляются разрешения.|  
 |**grantor_principal_id**|**int**|Идентификатор сервера-участника, который предоставляет эти разрешения.|  
 |**type**|**char (4)**|Тип разрешения сервера. Список типов разрешений см. в следующей таблице.|  
 |**permission_name**|**nvarchar(128)**|Имя разрешения.|  
-|**state**|**char (1)**|Состояние разрешения:<br /><br /> D = запретить<br /><br /> R = отменить<br /><br /> G = предоставить<br /><br /> W = Разрешить с аргументом Grant|  
+|**state**|**char(1)**|Состояние разрешения:<br /><br /> D = запретить<br /><br /> R = отменить<br /><br /> G = предоставить<br /><br /> W = Разрешить с аргументом Grant|  
 |**state_desc**|**nvarchar(60)**|Описание состояния разрешения:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |Тип разрешения|Имя разрешения|Применяется к защищаемому объекту|  

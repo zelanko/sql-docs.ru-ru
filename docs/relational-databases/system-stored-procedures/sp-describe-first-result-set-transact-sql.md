@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cc2e3bef68a6900d5b9735ef3a5f8a050a34361
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c95a79bb42cbc3ab32a5521682aacc8f4f9079d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548142"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466915"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Возвращает метаданные для первого возможного результирующего набора [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета. Возвращает пустой результирующий набор, если пакет не вернул результатов. Вызывает ошибку, если [!INCLUDE[ssDE](../../includes/ssde-md.md)] не может определить метаданные для первого запроса, который будет выполнен при выполнении статического анализа. Динамическое административное представление [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) возвращает одну и ту же информацию.  
+  Возвращает метаданные для первого возможного результирующего набора [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета. Возвращает пустой результирующий набор, если пакет не вернул результатов. Вызывает ошибку, если [!INCLUDE[ssDE](../../includes/ssde-md.md)] не может определить метаданные для первого запроса, который будет выполнен при выполнении статического анализа. Динамическое административное представление [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) возвращает одну и ту же информацию.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ \@tsql = ] 'Transact-SQL_batch'` Одна или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact-SQL_batch* может иметь тип **nvarchar (***n***)** или **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Одна или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact-SQL_batch* может иметь тип **nvarchar (**_n_*_)_* или **nvarchar (max)**.  
   
 `[ \@params = ] N'parameters'`\@params предоставляет строку объявления для параметров [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, что аналогично sp_executesql. Параметры могут быть **nvarchar (n)** или **nvarchar (max)**.  
   
@@ -58,7 +58,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   Если задано значение 2, то каждый запрос анализируется так, как если бы он использовался для подготовки или выполнения курсора. Тогда в качестве сведений об исходном столбце возвращаются имена представлений.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **sp_describe_first_result_set** всегда возвращает нулевое состояние в случае успешного выполнения. Если процедура вызывает ошибку, а процедура вызвана как RPC, то возвращаемое состояние заполняется типом ошибки, описанным в столбце error_type sys. dm_exec_describe_first_result_set. Если процедура вызывается из [!INCLUDE[tsql](../../includes/tsql-md.md)], то возвращаемое значение всегда равно нулю, даже при наличии ошибок.  
+ **sp_describe_first_result_set** всегда возвращает нулевое состояние в случае успешного выполнения. Если процедура вызывает ошибку, а процедура вызвана как RPC, то возвращаемое состояние заполняется типом ошибки, описанным в столбце error_type sys.dm_exec_describe_first_result_set. Если процедура вызывается из [!INCLUDE[tsql](../../includes/tsql-md.md)], то возвращаемое значение всегда равно нулю, даже при наличии ошибок.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Эти общие метаданные возвращаются в виде результирующего набора с одной строкой для каждого столбца в результирующих метаданных. Каждая строка описывает тип и допустимость значений NULL в столбце в формате, описанном в следующем разделе. Если первая инструкция не существует для каждого пути управления, возвращается результирующий набор с нулем строк.  
@@ -105,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Для внутреннего использования.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Для внутреннего использования.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_describe_first_result_set** гарантирует, что если процедура возвращает первые метаданные результирующего набора для (гипотетического) пакета а и, если впоследствии выполняется пакет (a), пакет будет либо (1) выдаст ошибку времени оптимизации, (2) вызывает ошибку времени выполнения, (3) не возвращает результирующий набор или (4) возвращает первый результирующий набор с теми же метаданными, описанными **sp_describe_first_result_set**.  
   
  Имя, допустимость значений NULL и тип данных могут различаться. Если **sp_describe_first_result_set** возвращает пустой результирующий набор, то гарантируется, что пакетное выполнение вернет не результирующие наборы.  
@@ -399,8 +399,8 @@ N'
   
  Result: **int NULL** , так как dbo. T1. a и S1. T1. a имеют тип **int** и разную допустимость значений NULL.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

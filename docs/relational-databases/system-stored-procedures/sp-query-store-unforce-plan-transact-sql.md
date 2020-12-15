@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7dec52b433bacd7d289708fa3e705771c07f7939
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c07d581a603c25f7d222564a67636dbe23819bb0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547476"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468355"
 ---
 # <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 
@@ -44,14 +44,14 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @query_id = ] query_id` Идентификатор запроса. *query_id* имеет тип **bigint**и не имеет значения по умолчанию.  
+`[ @query_id = ] query_id` Идентификатор запроса. *query_id* имеет тип **bigint** и не имеет значения по умолчанию.  
   
-`[ @plan_id = ] plan_id` Идентификатор плана запроса, который больше не будет применен. *plan_id* имеет тип **bigint**и не имеет значения по умолчанию.  
+`[ @plan_id = ] plan_id` Идентификатор плана запроса, который больше не будет применен. *plan_id* имеет тип **bigint** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение **ALTER** на базу данных.
@@ -74,7 +74,7 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_unforce_plan 3, 3;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   

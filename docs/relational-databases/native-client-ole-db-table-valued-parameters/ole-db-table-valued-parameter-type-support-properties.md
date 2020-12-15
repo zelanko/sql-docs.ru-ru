@@ -1,6 +1,6 @@
 ---
-description: OLE DB поддержки типов возвращающих табличное значение параметров в SQL Server Native Client (свойства)
-title: OLE DB типа возвращающего табличное значение параметра (свойства)
+description: OLE DB поддержка типов параметров Table-Valued в SQL Server Native Client (свойства)
+title: Тип параметра Table-Valued OLE DB (свойства)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96fdbd152eacf5a23f530f5bd5caa7cebb801980
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4eb8247110cdd4c69c1bf4b93c35417d0b575db1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482628"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469285"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>OLE DB поддержки типов возвращающих табличное значение параметров в SQL Server Native Client (свойства)
+# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>OLE DB поддержка типов параметров Table-Valued в SQL Server Native Client (свойства)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В данном разделе приводятся сведения о свойствах и наборах свойств OLE DB, связанных с объектами наборов строк для возвращающего табличное значение параметра.  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c49367f78a257b1ba4e19d9916b590a67991d1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7af34bd1bbe065012b18826f7edaec31940d1e50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536719"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466875"
 ---
 # <a name="sp_createstats-transact-sql"></a>Хранимая процедура sp_createstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89536719"
   
  Процедура sp_createstats полезна для таких задач, как тестирование производительности, когда существенно важно время выполнения запросов и недопустимо ожидание построения статистики по отдельным столбцам оптимизатором запросов. В большинстве случаев нет необходимости использовать sp_createstats. Оптимизатор запросов создает статистику по одному столбцу, если это необходимо для улучшения планов запросов, если параметр **AUTO_CREATE_STATISTICS** имеет значение ON.  
   
- Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md). Дополнительные сведения о формировании статистики по отдельным столбцам см. в описании параметра **AUTO_CREATE_STATISTICS** в разделе [Параметры инструкции ALTER DATABASE SET &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md). Дополнительные сведения о формировании статистики по отдельным столбцам см. в описании параметра **AUTO_CREATE_STATISTICS** в разделе [Параметры инструкции ALTER DATABASE SET &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +63,7 @@ sp_createstats
 ## <a name="result-sets"></a>Результирующие наборы  
  Каждая новая статистика имеет имя, совпадающее со столбцом, по которому она создается.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  sp_createstats не создает или не обновляет статистику по столбцам, которые являются первым столбцом в существующем объекте статистики;  Сюда входит первый столбец статистики, созданный для индексов, столбцы с статистикой по отдельным столбцам, созданные с помощью AUTO_CREATE_STATISTICS параметр, и первый столбец статистики, созданный с помощью инструкции CREATE STATISTICS. sp_createstats не создает статистику по первым столбцам отключенных индексов, если этот столбец не используется в другом включенном индексе. sp_createstats не создает статистику по таблицам с отключенным кластеризованным индексом.  
   
  Если таблица содержит набор столбцов, то хранимая процедура sp_createstats не создает статистику по разреженным столбцам. Дополнительные сведения о наборах столбцов и разреженных столбцах см. в разделе [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md) и [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md).  

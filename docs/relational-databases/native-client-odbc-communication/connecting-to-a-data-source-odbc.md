@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba7ad5c6c822bff351c09d264b25310e8ca51990
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dabf2e0c4fe2f23ad5dee576c73a2bafdb67a8be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425136"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464955"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Соединение с источником данных (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88425136"
   
  Строка подключения **SQLDriverConnect** содержит ряд пар "ключевое слово-значение", которые указывают все сведения о соединении, поддерживаемые драйвером ODBC. Каждый драйвер поддерживает стандартные ключевые слова ODBC (DSN, FILEDSN, DRIVER, UID, PWD и SAVEFILE) в дополнение к специальным ключевым словам драйвера для указания всей информации о соединении, поддерживаемой драйвером. **SQLDriverConnect** можно использовать для подключения без источника данных. Например, приложение, которое предназначено для создания подключения "без DSN" к экземпляру, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может вызывать **SQLDriverConnect** со строкой подключения, определяющей идентификатор входа, пароль, сетевую библиотеку, имя сервера для подключения и используемую базой данных по умолчанию.  
   
- При использовании **SQLDriverConnect**существует два варианта запроса сведений о подключении для пользователя.  
+ При использовании **SQLDriverConnect** существует два варианта запроса сведений о подключении для пользователя.  
   
 -   Диалоговое окно приложения  
   
@@ -72,7 +72,7 @@ ms.locfileid: "88425136"
      Можно создать код приложения, чтобы передать допустимый обработчик окна в **SQLDriverConnect** и установить параметр *DriverCompletion* в значение SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT или SQL_DRIVER_COMPLETE_REQUIRED. Затем драйвер формирует диалоговое окно для получения от пользователя информации о соединении. Этот метод упрощает код приложения.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
- **SQLBrowseConnect**, например **SQLDriverConnect**, использует строку подключения. Однако с помощью **SQLBrowseConnect**приложение может итеративно создавать полную строку соединения с источником данных во время выполнения. Это позволяет приложению:  
+ **SQLBrowseConnect**, например **SQLDriverConnect**, использует строку подключения. Однако с помощью **SQLBrowseConnect** приложение может итеративно создавать полную строку соединения с источником данных во время выполнения. Это позволяет приложению:  
   
 -   строить собственные диалоговые окна для запроса этой информации, сохраняя таким образом управление своим пользовательским интерфейсом;  
   
@@ -82,7 +82,7 @@ ms.locfileid: "88425136"
   
  Когда **SQLBrowseConnect** завершает успешное подключение, он возвращает строку подключения, которую можно использовать при последующих вызовах **SQLDriverConnect**.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента всегда возвращает SQL_SUCCESS_WITH_INFO для успешных **SQLConnect**, **SQLDriverConnect**или **SQLBrowseConnect**. Когда приложение ODBC вызывает **SQLGetDiagRec** после получения SQL_SUCCESS_WITH_INFO, оно может получать следующие сообщения:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента всегда возвращает SQL_SUCCESS_WITH_INFO для успешных **SQLConnect**, **SQLDriverConnect** или **SQLBrowseConnect**. Когда приложение ODBC вызывает **SQLGetDiagRec** после получения SQL_SUCCESS_WITH_INFO, оно может получать следующие сообщения:  
   
  5701  
  Показывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помещает пользовательский контекст в базу данных по умолчанию, которая определена в источнике данных, или в базу данных, определенную для идентификатора входа, который использовался в соединении, если источник данных не имеет базы данных по умолчанию.  

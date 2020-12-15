@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66fc82b8253c5bb9eeac669bf88846737b315d91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455981"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465065"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Массовое копирование из переменных приложения
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88455981"
   
  Все три из этих методов можно использовать в одном вызове **bcp_bind** , в этом случае используется спецификация, которая приводит к наименьшему объему копируемых данных.  
   
- Параметр **bcp_bind**_типа_ bcp_bind использует идентификаторы типов данных DB-Library, а не типы данных ODBC. Идентификаторы типов данных DB-Library определяются в sqlncli. h для использования с функцией ODBC **bcp_bind** .  
+ Параметр _типа_ bcp_bind использует идентификаторы типов данных DB-Library, а не типы данных ODBC. DB-Library идентификаторы типов данных определяются в sqlncli. h для использования с функцией ODBC **bcp_bind** .  
   
  Функции массового копирования данных поддерживают не все типы данных ODBC C. Например, функции с массовым копированием не поддерживают структуру ODBC SQL_C_TYPE_TIMESTAMP, поэтому используйте [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) для преобразования данных ODBC SQL_TYPE_TIMESTAMP в переменную SQL_C_CHAR. Если затем использовать **bcp_bind** с параметром *типа* SQLCHARACTER для привязки переменной к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбцу **DateTime** , функции с массовым копированием преобразуют предложение escape-метки в символьной переменной в правильный формат DateTime.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88455981"
   
 |Тип данных ODBC SQL|Тип данных ODBC C|параметр *типа* bcp_bind|Тип данных SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**символов**<br /><br /> **char**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
 |SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **character varying**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
@@ -78,7 +78,7 @@ ms.locfileid: "88455981"
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **Двоичные переменные**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  

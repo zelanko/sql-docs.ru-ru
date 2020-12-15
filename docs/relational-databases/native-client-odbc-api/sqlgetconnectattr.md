@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 966d76cd9d0582cc94d3419714c4368e24a68eac
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f988f8fa6b09a3efd895499bfa1a367e0bb44774
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810798"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465185"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "91810798"
 |SQL_SUCCESS|Подключение выполнено успешно. Идентификатор соединения клиента будет находиться в выходном буфере.|  
   
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
- Атрибут SQL_COPT_SS_PERF_DATA возвращает указатель на структуру SQLPERF, содержащую текущую статистику производительности драйвера. Если ведение журнала производительности не включено, функция**SQLGetConnectAttr** возвращает значение NULL. Драйвер не обновляет статистику в структуре SQLPERF динамически. Каждый раз, когда возникает необходимость обновить статистику производительности, вызывайте функцию **SQLGetConnectAttr** .  
+ Атрибут SQL_COPT_SS_PERF_DATA возвращает указатель на структуру SQLPERF, содержащую текущую статистику производительности драйвера. Если ведение журнала производительности не включено, функция **SQLGetConnectAttr** возвращает значение NULL. Драйвер не обновляет статистику в структуре SQLPERF динамически. Каждый раз, когда возникает необходимость обновить статистику производительности, вызывайте функцию **SQLGetConnectAttr** .  
   
 |Значение|Описание|  
 |-----------|-----------------|  

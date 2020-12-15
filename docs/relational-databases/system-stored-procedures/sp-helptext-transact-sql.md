@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4461c311c32c1f500a4481b36f4a17d0be0134bf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e6d2fbb2311392ee046b4aad84705b8ccd91a48c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468375"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ## <a name="arguments"></a>Аргументы  
 `[ @objname = ] 'name'` Полное или неполное имя определяемого пользователем объекта в области схемы. Кавычки требуются, только если определяется уточненный объект. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. Объект должен находиться в текущей базе данных. *Name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
-`[ @columnname = ] 'computed_column_name'` Имя вычисляемого столбца, для которого отображаются сведения об определении. Таблица, содержащая столбец, должна быть указана в качестве *имени*. Аргумент *column_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @columnname = ] 'computed_column_name'` Имя вычисляемого столбца, для которого отображаются сведения об определении. Таблица, содержащая столбец, должна быть указана в качестве *имени*. Аргумент *column_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -54,8 +54,8 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 |-----------------|---------------|-----------------|  
 |**Text**|**nvarchar(255)**|Определение объекта|  
   
-## <a name="remarks"></a>Примечания  
- Процедура sp_helptext отображает определение, которое используется для создания объекта во множестве строк. Каждая строка содержит 255 символов определения на языке [!INCLUDE[tsql](../../includes/tsql-md.md)]. Определение находится в столбце **определения** в представлении каталога [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .  
+## <a name="remarks"></a>Комментарии  
+ Процедура sp_helptext отображает определение, которое используется для создания объекта во множестве строк. Каждая строка содержит 255 символов определения на языке [!INCLUDE[tsql](../../includes/tsql-md.md)]. Определение находится в столбце **определения** в представлении каталога [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**. Определения системных объектов видимы для всех. Определения пользовательских объектов видимы владельцу объекта или получателям, которым предоставлено одно из следующих разрешений: ALTER, CONTROL, TAKE OWNERSHIP или VIEW DEFINITION.  

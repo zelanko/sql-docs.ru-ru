@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_transactions (Transact-SQL)
-title: sys. dm_db_xtp_transactions (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_xtp_transactions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01f918c14409cdb23c017aaadb6432f18b25e67f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d9ac99aa3429c6f8e61828783dce6166efa43b20
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534342"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468455"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89534342"
 |Состояние|**int**|Состояние транзакции:<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|Описание состояния транзакции.|  
 |набор по|**int**|Результат транзакции. Допустимы следующие значения:<br /><br /> 0 — ВЫПОЛНЯЕТСЯ<br /><br /> 1 — УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> 2 — ОШИБКА<br /><br /> 3 — ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> 4 — ПРОВЕРКА ЗАВЕРШЕНА С ОШИБКОЙ (RR)<br /><br /> 5 — ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> 6 — ОТКАТ|  
-|result_desc|**nvarchar**|Результат транзакции. Допустимы следующие значения:<br /><br /> ВЫПОЛНЯЕТСЯ<br /><br /> УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> ошибка<br /><br /> ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (RR)<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> ROLLBACK|  
+|result_desc|**nvarchar**|Результат транзакции. Допустимы следующие значения:<br /><br /> ВЫПОЛНЯЕТСЯ<br /><br /> УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> ОШИБКА<br /><br /> ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (RR)<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|Только для внутреннего применения|  
 |is_speculative|**bit**|Только для внутреннего применения|  
 |is_prepared|**bit**|Только для внутреннего применения|  
@@ -65,7 +65,7 @@ ms.locfileid: "89534342"
 |commit_dependency_total_attempt_count|**int**|Только для внутреннего применения|  
 |scan_area|**int**|Только для внутреннего применения|  
 |scan_area_desc|**nvarchar**|Только для внутреннего применения|  
-|scan_location|**int**|Только для внутреннего применения.|  
+|scan_location|**int**|Только для внутреннего использования.|  
 |dependent_1_address|**varbinary(8)**|Только для внутреннего применения|  
 |dependent_2_address|**varbinary(8)**|Только для внутреннего применения|  
 |dependent_3_address|**varbinary(8)**|Только для внутреннего применения|  
@@ -78,7 +78,7 @@ ms.locfileid: "89534342"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

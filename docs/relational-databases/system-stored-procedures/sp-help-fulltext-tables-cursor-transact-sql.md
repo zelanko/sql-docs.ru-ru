@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c5f4c8e96eecd770190be5efcc42799ed3958
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ca07485062d39e2fa547e524e2b0368b19e9b577
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548057"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468405"
 ---
 # <a name="sp_help_fulltext_tables_cursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89548057"
   Использует курсор для возврата списка таблиц, которые зарегистрированы для полнотекстового индексирования.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте новое представление каталога **sys. fulltext_indexes** . Дополнительные сведения см. в разделе [sys. fulltext_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте новое представление каталога **sys.fulltext_indexes** . Дополнительные сведения см. в разделе [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="arguments"></a>Аргументы  
 `[ @cursor_return = ] @cursor_variable OUTPUT` Выходная переменная типа **cursor**. Этот курсор является динамическим, прокручиваемым и доступным только для чтения.  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Имя полнотекстового каталога. Аргумент *fulltext_catalog_name* имеет тип **sysname**и значение по умолчанию NULL. Если параметр *fulltext_catalog_name* опущен или имеет значение null, возвращаются все таблицы с полнотекстовым индексом, связанные с базой данных. Если указано *fulltext_catalog_name* , но *table_name* ОПУЩЕНО или имеет значение null, сведения о полнотекстовом индексе извлекаются для каждой таблицы с полнотекстовым индексом, связанной с этим каталогом. Если указаны и *fulltext_catalog_name* , и *table_name* , то возвращается строка, если *table_name* связана с *fulltext_catalog_name*; в противном случае возникает ошибка.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Имя полнотекстового каталога. Аргумент *fulltext_catalog_name* имеет тип **sysname** и значение по умолчанию NULL. Если параметр *fulltext_catalog_name* опущен или имеет значение null, возвращаются все таблицы с полнотекстовым индексом, связанные с базой данных. Если указано *fulltext_catalog_name* , но *table_name* ОПУЩЕНО или имеет значение null, сведения о полнотекстовом индексе извлекаются для каждой таблицы с полнотекстовым индексом, связанной с этим каталогом. Если указаны и *fulltext_catalog_name* , и *table_name* , то возвращается строка, если *table_name* связана с *fulltext_catalog_name*; в противном случае возникает ошибка.  
   
 `[ @table_name = ] 'table_name'` Имя таблицы из одной или двух частей, для которой запрашиваются полнотекстовые метаданные. *table_name* имеет тип **nvarchar (517)** и значение по умолчанию NULL. Если указан только *table_name* , то возвращается только строка, соответствующая *table_name* .  
   

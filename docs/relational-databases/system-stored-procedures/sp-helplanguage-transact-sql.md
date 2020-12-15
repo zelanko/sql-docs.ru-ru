@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0e28b9c039bd620780930a2795914432bf07669
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b40e6caf31616f7dc1749a80746ea4ab2b9039ed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535222"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468385"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @language = ] 'language'` Имя альтернативного языка, для которого отображаются сведения. *Language* имеет тип **sysname**и значение по умолчанию NULL. Если указан *язык* , возвращаются сведения об указанном языке. Если язык не указан, возвращаются сведения обо всех языках в представлении совместимости **sys.sysязыков** .  
+`[ @language = ] 'language'` Имя альтернативного языка, для которого отображаются сведения. *Language* имеет тип **sysname** и значение по умолчанию NULL. Если указан *язык* , возвращаются сведения об указанном языке. Если язык не указан, возвращаются сведения обо всех языках в представлении совместимости **sys.sysязыков** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -82,7 +82,7 @@ sp_helplanguage French;
 sp_helplanguage;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)   
  [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md)   
