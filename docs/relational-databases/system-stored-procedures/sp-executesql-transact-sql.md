@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eac2107c22781c278e173992d8994fc68fea981
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005759"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428083"
 ---
 # <a name="sp_executesql-transact-sql"></a>Хранимая процедура sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ sp_executesql [ @stmt = ] statement
  Значение для первого параметра, определенного в строке параметров. Это значение может быть константой или переменной в Юникоде. Для каждого параметра, входящего в stmt, должно быть указано значение параметра \@ . Значения не требуются, если [!INCLUDE[tsql](../../includes/tsql-md.md)] в инструкции или пакете в \@ stmt нет параметров.  
   
  [ OUT | OUTPUT ]  
- Показывает, что параметр процедуры является выходным. параметры **Text**, **ntext**и **Image** можно использовать в качестве выходных параметров, если только процедура не является процедурой среды CLR. Выходным параметром с ключевым словом OUTPUT может быть заполнитель курсора, если процедура не является процедурой CLR.  
+ Показывает, что параметр процедуры является выходным. параметры **Text**, **ntext** и **Image** можно использовать в качестве выходных параметров, если только процедура не является процедурой среды CLR. Выходным параметром с ключевым словом OUTPUT может быть заполнитель курсора, если процедура не является процедурой CLR.  
   
  *n*  
  Заполнитель для значений дополнительных параметров. Значения могут быть только константами и переменными. Значения не могут представлять собой сложные выражения, такие как функции или выражения, построенные с помощью операторов.  

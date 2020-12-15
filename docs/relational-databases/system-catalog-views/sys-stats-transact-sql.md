@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3461f2f9b46d5933f92782151d2debdc3189711
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a7fab86d3cb05a7b2ce30b6be589c3e7ac1290eb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545131"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429654"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Содержит по одной строке для каждого объекта статистики, существующего для таблиц, индексов и индексированных представлений в базе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый индекс будет иметь соответствующую строку статистики с тем же именем и идентификатором (**index_id**  =  **stats_id**), но не каждая строка статистики имеет соответствующий индекс.  
   
- Представление каталога [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) предоставляет статистические данные для каждого столбца в базе данных. Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md).  
+ Представление каталога [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) предоставляет статистические данные для каждого столбца в базе данных. Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ WHERE s.object_id = OBJECT_ID('HumanResources.Employee');
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Статистика](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys. dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  
 

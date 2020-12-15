@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfac86a5cb8000203873f2434212bf2b50749a6d
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d51d0f1f2e15bcf6db3be6d7afee6010e9454a4e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810100"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427438"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -44,13 +44,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 #### <a name="parameters"></a>Параметры  
  *table_id*  
- Идентификатор объекта полнотекстовой индексированной таблицы. При указании недопустимого *table_id*возвращается ошибка. Сведения о получении идентификатора объекта таблицы см. в разделе [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).  
+ Идентификатор объекта полнотекстовой индексированной таблицы. При указании недопустимого *table_id* возвращается ошибка. Сведения о получении идентификатора объекта таблицы см. в разделе [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).  
   
  *DocId*  
  Внутренний идентификатор документа (DocId), который соответствует значению ключа. При использовании недопустимого значения *docid* не происходит возврата значений.  
   
  *key*  
- Значение полнотекстового ключа из указанной таблицы. При использовании недопустимого значения *key* не происходит возврата значений. Дополнительные сведения о значениях полнотекстовых ключей см. в разделе [Управление полнотекстовыми индексами](../search/create-and-manage-full-text-indexes.md).  
+ Значение полнотекстового ключа из указанной таблицы. При использовании недопустимого значения *key* не происходит возврата значений. Дополнительные сведения о значениях полнотекстовых ключей см. в разделе [Управление индексами Full-Text](../search/create-and-manage-full-text-indexes.md).  
   
 > [!IMPORTANT]  
 >  Дополнительные сведения об использовании одного, двух или трех параметров см. в подразделе «Примечания» далее в этом разделе.  
@@ -63,7 +63,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|Столбец внутреннего идентификатора документа (DocId), который соответствует значению ключа.|  
-|Клавиши|*|Значение полнотекстового ключа из указанной таблицы.<br /><br /> Если в таблице сопоставлений отсутствуют полнотекстовые ключи, то возвращается пустой набор строк.|  
+|Ключ|*|Значение полнотекстового ключа из указанной таблицы.<br /><br /> Если в таблице сопоставлений отсутствуют полнотекстовые ключи, то возвращается пустой набор строк.|  
   
  <sup>*</sup> Тип данных для ключа совпадает с типом данных полнотекстового ключевого столбца в базовой таблице.  
   

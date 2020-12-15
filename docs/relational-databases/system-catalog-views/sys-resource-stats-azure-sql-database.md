@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: eea603b089c93b86b92ac39a22d0c6e9c64b49d9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 835fcabe9a247efb7cf280eb89a0baefd4076640
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91807024"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429130"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91807024"
 |max_worker_percent|**Decimal (5, 2)**|Максимальное число одновременных рабочих процессов (запросов) в процентах на основе ограничения уровня служб базы данных.<br /><br /> Максимальное значение для интервала в 5 минут вычисляется на основе 15-секундных счетчиков одновременных рабочих ролей.|  
 |max_session_percent|**Decimal (5, 2)**|Максимальное количество одновременных сеансов в процентах, основанное на ограничении уровня служб базы данных.<br /><br /> Максимальное значение для интервала в 5 минут вычисляется на основе 15-секундных счетчиков одновременных сеансов.|  
 |dtu_limit|**int**|Текущее максимальное значение DTU базы данных для этой базы данных в течение этого интервала. |
-|xtp_storage_percent|**Decimal (5, 2)**|Использование хранилища для выполняющейся в памяти OLTP в процентах от ограничения уровня службы (в конце интервала отчетности). Сюда входит память, используемая для хранения следующих объектов OLTP в памяти: оптимизированных для памяти таблиц, индексов и табличных переменных. Он также включает память, используемую для обработки операций ALTER TABLE.<br /><br /> Возвращает 0, если выполняющаяся в памяти OLTP не используется в базе данных.|
+|xtp_storage_percent|**Decimal (5, 2)**|Использование хранилища для In-Memory OLTP в процентах от ограничения уровня службы (в конце интервала отчетов). Сюда входит память, используемая для хранения следующих In-Memory объектов OLTP: оптимизированных для памяти таблиц, индексов и табличных переменных. Он также включает память, используемую для обработки операций ALTER TABLE.<br /><br /> Возвращает 0, если In-Memory OLTP не используется в базе данных.|
 |avg_login_rate_percent|**Decimal (5, 2)**|Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.|
 |avg_instance_cpu_percent|**Decimal (5, 2)**|Среднее использование ЦП базы данных в процентах от процесса базы данных SQL.|
 |avg_instance_memory_percent|**Decimal (5, 2)**|Среднее использование памяти базы данных в процентах от процесса базы данных SQL.|
