@@ -9,19 +9,19 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011812"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420171"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Новые возможности в системе платформы аналитики — масштабируемое хранилище данных MPP
 Узнайте о новых возможностях в последних обновлениях устройств для Microsoft Analytics Platform System (ТД). ТД — это масштабное локальное устройство, которое размещает MPP SQL Server Parallel Data Warehouse. 
 
-::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016-au7 "
 <a name="h2-aps-cu7.7"></a>
-## <a name="aps-cu77"></a>ТД CU 7.7
+## <a name="aps-cu77"></a>APS CU7.7
 Дата выпуска — Ноябрь 2020
 
 ### <a name="scvmm2016"></a>SCVMM2016
@@ -147,7 +147,7 @@ from cte;
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Заменяет некоторые вызовы метаданных объектами каталога
 Использование объектов каталога для вызовов метаданных вместо использования SMO демонстрирует улучшение производительности в ТД. Начиная с CU 7.1, некоторые из этих вызовов метаданных теперь используют объекты каталога по умолчанию. Это поведение можно отключить с помощью [переключателя функций](appliance-feature-switch.md) , если клиенты, использующие запросы метаданных, могут столкнуться с проблемами.
 
-### <a name="bug-fixes"></a>Исправленные ошибки
+### <a name="bug-fixes"></a>Исправления ошибок
 Обновление до SQL Server 2016 с пакетом обновления 2 (SP2) CU2 с ТД CU 7.1. Обновление устраняет некоторые проблемы, описанные ниже.
 
 | Заголовок | Описание |
@@ -179,7 +179,7 @@ from cte;
 Корпорация Майкрософт рекомендует всем клиентам установить обновленную версию BIOS. Корпорация Майкрософт оценивает влияние затенения виртуальных адресов ядра (квас), косвенного обращения к таблице страниц ядра (КПТИ) и смягчение прогнозов ветвей (ИБП) на различных рабочих нагрузках SQL в различных средах. В некоторых рабочих нагрузках измерения значительно снижены. В зависимости от результатов рекомендация заключается в том, что вы тестируете воздействие обновления BIOS на производительность, прежде чем развертывать их в рабочей среде. См. SQL Server руководстве [здесь](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
-::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016 "
 <a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 В этом разделе описаны новые возможности для ТД 2016-AU6.

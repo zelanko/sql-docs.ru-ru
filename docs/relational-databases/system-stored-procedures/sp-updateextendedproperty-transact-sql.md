@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52c91c09c440402df383253996e660d7abdb317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13d9b45efd0fc75e1e17ea0ec5b21537fae71971
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551182"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427299"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,10 +54,10 @@ sp_updateextendedproperty
   
 ## <a name="arguments"></a>Аргументы  
  [ @name =] {'*property_name*'}  
- Имя свойства, которое необходимо обновить. Аргумент *property_name* имеет тип **sysname**и не может иметь значение null.  
+ Имя свойства, которое необходимо обновить. Аргумент *property_name* имеет тип **sysname** и не может иметь значение null.  
   
  [ @value =] {'*значение*'}  
- Значение, связанное со свойством. *значение* равно **sql_variant**и значение по умолчанию NULL. Размер *значения* не может превышать 7 500 байт.  
+ Значение, связанное со свойством. *значение* равно **sql_variant** и значение по умолчанию NULL. Размер *значения* не может превышать 7 500 байт.  
   
  [ @level0type =] {'*level0_object_type*'}  
  Пользователь или тип, определяемый пользователем. *level0_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимые входные данные: сборка, контракт, уведомление о событии, ФАЙЛовая группа, тип сообщения, функция СЕКЦИОНИРОВАНия, схема СЕКЦИОНИРОВАНия, структура плана, привязка удаленной службы, маршрут, схема, служба, пользователь, триггер, тип и значение NULL.  
@@ -78,12 +78,12 @@ sp_updateextendedproperty
  Тип объекта уровня 2. *level2_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимые входные данные: COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER и NULL.  
   
  [ @level2name =] {'*level2_object_name*'}  
- Имя указанного типа объекта уровня 2. Аргумент *level2_object_name* имеет тип **sysname**и значение по умолчанию NULL.  
+ Имя указанного типа объекта уровня 2. Аргумент *level2_object_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  С целью указания расширенных свойств объекты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] распределены по трем уровням (0, 1 и 2). Уровень 0 является высшим уровнем и определяется как «объекты в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней. Ссылки на объект определенного уровня должны быть уточнены именами объектов более высокого уровня, в которых они содержатся или которым они принадлежат.  
   
  При наличии допустимого *property_name* и *значения*, если все типы и имена объектов имеют значение null, то обновляемое свойство принадлежит текущей базе данных.  
@@ -138,9 +138,9 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sys. extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   
