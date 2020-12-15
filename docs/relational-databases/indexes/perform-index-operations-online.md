@@ -15,13 +15,13 @@ ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8bb42554935076679107d78ee5c2eed0b838797
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3b54f8e3f4cc2656469aaccabe810a89cb661e5c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470468"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407395"
 ---
 # <a name="perform-index-operations-online"></a>Выполнение операции с индексами в сети
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,9 +84,9 @@ ms.locfileid: "88470468"
   
 5.  Щелкните правой кнопкой мыши индекс, который нужно перестроить в режиме "в сети", и выберите **Свойства**.  
   
-6.  В разделе **Выбор страницы**щелкните **Параметры**.  
+6.  В разделе **Выбор страницы** щелкните **Параметры**.  
   
-7.  Выберите свойство **Разрешить обработку DML в сети**и выберите из списка значение **True** .  
+7.  Выберите свойство **Разрешить обработку DML в сети** и выберите из списка значение **True** .  
   
 8.  Нажмите кнопку **ОК**.  
   
