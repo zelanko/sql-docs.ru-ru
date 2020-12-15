@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fcd6eb55e54880365952491224e1b9511c8c561
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6182c18b9f85b2b11a5813a11131b7a5efb3bbbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891984"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463365"
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -116,7 +116,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Если значение свойств SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT и SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS не равно NULL, то при каждом выполнении этой команды на сервер отправляется заголовок потока табличных данных уведомлений о запросах, содержащий три атрибута, указанных выше. Если значение любого из них равно NULL, заголовок не отправляется и возвращается SQL_SUCCESS_WITH_INFO. Проверка выполняется для [функции SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md), **SqlExecDirect**и **SqlExecute**, которая завершается ошибкой, если атрибуты являются недопустимыми. Точно так же, когда эти атрибуты уведомлений о запросах отправляются для версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] младше [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], выполнение завершается неудачей с SQL_SUCCESS_WITH_INFO.  
+ Если значение свойств SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT и SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS не равно NULL, то при каждом выполнении этой команды на сервер отправляется заголовок потока табличных данных уведомлений о запросах, содержащий три атрибута, указанных выше. Если значение любого из них равно NULL, заголовок не отправляется и возвращается SQL_SUCCESS_WITH_INFO. Проверка выполняется для [функции SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md), **SqlExecDirect** и **SqlExecute**, которая завершается ошибкой, если атрибуты являются недопустимыми. Точно так же, когда эти атрибуты уведомлений о запросах отправляются для версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] младше [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], выполнение завершается неудачей с SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  Подготовка инструкций никогда не вызывает запуска подписки; подписка может быть запущена выполнением инструкции.  

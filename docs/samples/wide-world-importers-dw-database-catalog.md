@@ -10,13 +10,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: e246d516d3c05b9a2c6725f7fd3e3f787066b8aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112434"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461405"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Каталог базы данных WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "79112434"
 |схема|Описание|
 |-----------------------------|---------------------|
 |Измерение|Таблицы измерений.|
-|Факты|Таблицы фактов.|  
+|Факты| Таблицы фактов.|  
 |Интеграция|Промежуточные таблицы и другие объекты, необходимые для ETL.|  
 
 ## <a name="tables"></a>Таблицы
@@ -46,7 +46,7 @@ WideWorldImportersDW содержит следующие таблицы изме
 
 |Таблица|Исходные таблицы|
 |-----------------------------|---------------------|
-|Город|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Дата|Новая таблица со сведениями о датах, включая финансовый год (на основе 1 ноября начала финансового года).|
 |Сотрудник|`Application.People`.|
@@ -63,7 +63,7 @@ WideWorldImportersDW имеет следующие таблицы фактов. 
 |-----------------------------|---------------------|---------------------|
 |Порядок|`Sales.Orders` и `Sales.OrderLines`|Продажи продавцов, средств выбора и упаковки и времени на выбор заказов. Кроме того, в небольших складских ситуациях, ведущих к обратным заказам.|
 |Sale|`Sales.Invoices` и `Sales.InvoiceLines`|Даты продаж, даты доставки, рентабельность с течением времени, рентабельность по менеджеру по продажам.|
-|Приобретение|`Purchasing.PurchaseOrderLines`|Ожидаемое и фактическое время опережения|
+|Purchase|`Purchasing.PurchaseOrderLines`|Ожидаемое и фактическое время опережения|
 |Транзакция|`Sales.CustomerTransactions` и `Purchasing.SupplierTransactions`|Измерение дат проблем и дат финализации и сумм.|
 |Перемещение|`Warehouse.StockTransactions`|Перемещения с течением времени.|
 |Удерживаемые акции|`Warehouse.StockItemHoldings`|Уровни и стоимость запасов в наличии.|
@@ -92,7 +92,7 @@ WideWorldImportersDW имеет следующие таблицы фактов. 
 Процедуры, используемые в процессе ETL, попадают в следующие категории:
 - Вспомогательные процедуры для пакета ETL — все процедуры Get *.
 - Процедуры, используемые пакетом ETL для переноса промежуточных данных в таблицы DW — все процедуры миграции *.
-- `PopulateDateDimensionForYear`— Принимает год и гарантирует, что все даты в этом году будут заполнены в `Dimension.Date` таблице.
+- `PopulateDateDimensionForYear` — Принимает год и гарантирует, что все даты в этом году будут заполнены в `Dimension.Date` таблице.
 
 ### <a name="sequences-schema"></a>Схема последовательностей
 

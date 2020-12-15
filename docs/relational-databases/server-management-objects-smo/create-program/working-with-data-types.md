@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99ac0e206244404d1f4155acdd10c0a35df6e719
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1939f6608b6175463103fce2a69a3d5936346605
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420308"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463005"
 ---
 # <a name="working-with-data-types"></a>Работа с типами данных
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88420308"
   
 -   Используйте один из статических членов <xref:Microsoft.SqlServer.Management.Smo.DataType> класса, например **int**. Факт будет возвращать экземпляр <xref:Microsoft.SqlServer.Management.Smo.DataType> объекта.  
   
- Объект <xref:Microsoft.SqlServer.Management.Smo.DataType> имеет несколько свойств, описывающих тип данных. Например, свойство <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> задает тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Постоянные величины, представляющие типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], приведены в перечислении <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>. Это относится к таким типам данных, как **varchar**, **nchar**, **currency**, **integer**, **float**и **datetime**.  
+ Объект <xref:Microsoft.SqlServer.Management.Smo.DataType> имеет несколько свойств, описывающих тип данных. Например, свойство <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> задает тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Постоянные величины, представляющие типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], приведены в перечислении <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>. Это относится к таким типам данных, как **varchar**, **nchar**, **currency**, **integer**, **float** и **datetime**.  
   
  После установления типа данных необходимо задать для данных конкретные свойства. Например, если это тип **nchar** , необходимо задать в свойстве **Length** длину строковых данных. Тоже относится к числовым значениям, для которых необходимо задать точность и масштаб.  
   

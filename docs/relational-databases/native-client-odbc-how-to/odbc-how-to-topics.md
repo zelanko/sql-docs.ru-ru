@@ -11,20 +11,20 @@ ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a6d643708d3c2417a19becf071a4aef71972972
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f799ebd43da7bcf1e543479dbf636c7a9052a9b9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868881"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439995"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Для использования драйвера ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо предусмотреть возможность создания источников данных ODBC и убедиться в том, что на сервере находится правильная версия хранимых процедур каталога. Для написания приложения ODBC, в котором используется SQL Server, необходимо знать, как выделять дескрипторы ODBC, устанавливать атрибуты, соединяться с экземпляром SQL Server, выполнять запросы и вычислять результаты.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Инструкции по настройке драйвера ODBC SQL Server](./configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   

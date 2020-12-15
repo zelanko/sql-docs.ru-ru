@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ef98244eec97fda5d0d11220348dbd4f14dcf61
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 013cd061a96bd4f199591fa65f15718d27056d89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006516"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440571"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -56,9 +56,9 @@ sp_droprolemember 'role' ,
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] 'role'` Имя роли, из которой удаляется элемент. Аргумент *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* должна существовать в текущей базе данных.  
+`[ @rolename = ] 'role'` Имя роли, из которой удаляется элемент. Аргумент *Role* имеет тип **sysname** и не имеет значения по умолчанию. *роль* должна существовать в текущей базе данных.  
   
-`[ @membername = ] 'security_account'` Имя учетной записи безопасности, удаляемой из роли. Аргумент *security_account* имеет тип **sysname**и не имеет значения по умолчанию. *security_account* может быть пользователь базы данных, другая роль базы данных, имя входа Windows или группа Windows. *security_account* должен существовать в текущей базе данных.  
+`[ @membername = ] 'security_account'` Имя учетной записи безопасности, удаляемой из роли. Аргумент *security_account* имеет тип **sysname** и не имеет значения по умолчанию. *security_account* может быть пользователь базы данных, другая роль базы данных, имя входа Windows или группа Windows. *security_account* должен существовать в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

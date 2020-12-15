@@ -20,19 +20,19 @@ ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2a3d57bb4ba8c36778d3d4e552d9a69bd285db9e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: e303099001b1708b6227547fdd68e94dba5c5eee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542601"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459890"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Содержит статистику для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] событий **подключения к** базе данных, предоставляя обзор успешных и неудачных попыток подключения к базе данных. Дополнительные сведения о событиях подключения см. в статье типы событий в [sys. event_log &#40;&#41;базы данных SQL Azure ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Содержит статистику для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] событий **подключения к** базе данных, предоставляя обзор успешных и неудачных попыток подключения к базе данных. Дополнительные сведения о событиях подключения см. в разделе Типы событий в [sys.event_log &#40;базе данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 |Статистика|Тип|Описание|  
 |---------------|----------|-----------------|  
@@ -40,12 +40,12 @@ ms.locfileid: "89542601"
 |**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. **End_time** всегда находится в течение 5 минут позже, чем соответствующая **start_time** в той же строке.|  
 |**success_count**|**int**|Число успешных соединений.|  
-|**total_failure_count**|**int**|Общее число неудачных попыток соединения. Это сумма **connection_failure_count**, **terminated_connection_count**и **throttled_connection_count**и не включает события взаимоблокировки.|  
+|**total_failure_count**|**int**|Общее число неудачных попыток соединения. Это сумма **connection_failure_count**, **terminated_connection_count** и **throttled_connection_count** и не включает события взаимоблокировки.|  
 |**connection_failure_count**|**int**|Количество сбоев входа.|  
 |**terminated_connection_count**|**int**|**_Применимо только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число прерванных соединений.|  
 |**throttled_connection_count**|**int**|**_Применимо только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число регулируемых соединений.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий
 
@@ -80,7 +80,7 @@ start_time                    end_time
 
  Это представление может содержать не все сведения о подключениях и ошибках:  
   
-- Это представление не включает все [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ошибки базы данных, которые могут возникнуть, только указанные в типах событий в [sys. event_log &#40;&#41;базы данных SQL Azure ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+- Это представление не включает все [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ошибки базы данных, которые могут возникнуть, только те, которые указаны в [sys.event_log &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 - Если в центре обработки данных возникает сбой компьютера [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , в таблице событий может отсутствовать небольшой объем данных.  
   
@@ -92,7 +92,7 @@ start_time                    end_time
   
 ## <a name="example"></a>Пример
 
- В следующем примере показан запрос **sys. database_connection_stats** , который возвращает сводку по подключениям к базе данных, которые произошли между полуднем 9/25/2011 и полудня в 9/28/2011 (UTC). По умолчанию результаты запроса сортируются по **start_time** (по возрастанию).  
+ В следующем примере показан запрос **sys.database_connection_stats** для возврата сводки о подключениях к базе данных, которые произошли между полуднем 9/25/2011 и полудня в 9/28/2011 (UTC). По умолчанию результаты запроса сортируются по **start_time** (по возрастанию).  
   
 ```sql
 SELECT *  
@@ -100,7 +100,7 @@ FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25 12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [Устранение неполадок подключения к Базе данных SQL Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   

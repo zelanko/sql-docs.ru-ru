@@ -1,6 +1,6 @@
 ---
 description: sys.partition_range_values (Transact-SQL)
-title: sys. partition_range_values (Transact-SQL) | Документация Майкрософт
+title: sys.partition_range_values (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924640e4f30a47ecacb911567ab8f6d766bf4182
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0617f01056af48341e616f10fca1cadabdf98299
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551541"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458518"
 ---
 # <a name="syspartition_range_values-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89551541"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|Идентификатор функции секционирования для данного граничного значения диапазона.|  
 |**boundary_id**|**int**|Идентификатор (порядковый номер, начиная с 1) кортежа граничных значений. Самое левое граничное значение имеет идентификатор 1.|  
-|**parameter_id**|**int**|Идентификатор параметра функции, которому соответствует данное значение. Значения в этом столбце соответствуют столбцам **parameter_id** представления каталога **sys. partition_parameters** для любого конкретного **function_id**.|  
+|**parameter_id**|**int**|Идентификатор параметра функции, которому соответствует данное значение. Значения в этом столбце соответствуют столбцам **parameter_id** представления каталога **sys.partition_parameters** для любого конкретного **function_id**.|  
 |**value**|**sql_variant**|Фактическое граничное значение.|  
   
 ## <a name="permissions"></a>Разрешения  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c67769e4afd62c4b69628a263f3485ee63081a2a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a356ea0603d096fc339495f028b1e4f86af81f92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892014"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463385"
 ---
 # <a name="changing-sql-server-native-client-passwords-programmatically"></a>Программное изменение SQL Server Native Client паролей
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "91892014"
 ### <a name="odbc-user-interface-password-expiration"></a>Пользовательский интерфейс ODBC истечения срока действия пароля  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает истечение срока действия пароля через изменения, внесенные в диалоговые окна **SQL Server login** .  
   
- Если [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) вызывается и для параметра **DriverCompletion** задано значение SQL_DRIVER_NOPROMPT, то попытка первоначального подключения завершится неудачей, если срок действия пароля истек. При последующих вызовах **SqlError** или **SQLGETDIAGREC**возвращаются значение SQLSTATE 28000 и значение машинного кода ошибки 18487.  
+ Если [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) вызывается и для параметра **DriverCompletion** задано значение SQL_DRIVER_NOPROMPT, то попытка первоначального подключения завершится неудачей, если срок действия пароля истек. При последующих вызовах **SqlError** или **SQLGETDIAGREC** возвращаются значение SQLSTATE 28000 и значение машинного кода ошибки 18487.  
   
  Если для **DriverCompletion** задано любое другое значение, пользователь видит диалоговое окно **входа SQL Server** , независимо от того, истек ли срок действия пароля. Чтобы сменить пароль, пользователь может нажать кнопку **Параметры** и установить флажок **Сменить пароль**.  
   

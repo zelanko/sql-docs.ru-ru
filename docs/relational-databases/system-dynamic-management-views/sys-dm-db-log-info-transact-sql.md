@@ -1,6 +1,6 @@
 ---
-description: sys. dm_db_log_info (Transact-SQL)
-title: sys. dm_db_log_info (Transact-SQL) | Документация Майкрософт
+description: sys.dm_db_log_info (Transact-SQL)
+title: sys.dm_db_log_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447666"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440829"
 ---
-# <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
+# <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Возвращает сведения о [файле виртуального журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) журнала транзакций. Примечание. все файлы журнала транзакций объединяются в выходные данные таблицы. Каждая строка выходных данных представляет собой VLF в журнале транзакций и предоставляет сведения, относящиеся к этому VLF в журнале.
@@ -110,7 +110,7 @@ FROM cte_vlf_cnt
 GO
 ```
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   

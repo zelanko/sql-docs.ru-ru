@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f664a072461674f47157265a770c154550b440b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 365df99f56d247e5d7fd5e262e8045c9ff0a8083
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448309"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462015"
 ---
 # <a name="using-database-mirroring-in-sql-server-native-client"></a>Использование зеркального отображения базы данных в SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88448309"
 > [!NOTE]  
 >  Следует явно задать базу данных, которая будет использоваться в соединении, если эту возможность нужно использовать в DSN-именах, строке соединения, свойстве или атрибуте соединения. Если этого не сделать, собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не будет пытаться отработать отказ базы данных-участника.   
 >   
->  Зеркальное отображение является функциональностью базы данных. Приложения, работающие с несколькими базами данных, возможно, не смогут применить эту функциональность.  
+>  Зеркальное отображение является функциональностью базы данных. Приложения, работающие с несколькими базами данных, возможно, не смогут применить эту функциональность.   
 >   
 >  Кроме того, в именах сервера не учитывается регистр клавиатуры, но имена баз данных зависят от регистра клавиатуры. Поэтому следует убедиться, что в DSN-именах и строках соединения используются символы с одинаковым регистром.  
   

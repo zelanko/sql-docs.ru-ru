@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 568cda98a1bbb55e5c4f3e07bd53592ff642f0bd
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753696"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440669"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (база данных SQL Azure)
 
@@ -44,7 +44,7 @@ ms.locfileid: "91753696"
 |роль|**tinyint**|Роль георепликации, одна из следующих:<br /><br /> 0 = основной. Database_id ссылается на базу данных-источник в партнерстве георепликации.<br /><br /> 1 = вторичный.  Database_id ссылается на базу данных-источник в партнерстве георепликации.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Вторичный тип, один из следующих:<br /><br /> 0 = Нет. База данных-получатель недоступна до отработки отказа.<br /><br /> 1 = только для чтения. База данных-получатель доступна только для клиентских подключений с ApplicationIntent = ReadOnly.<br /><br /> 2= все. База данных-получатель доступна любому клиентскому подключению.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|Нет<br /><br /> Все<br /><br /> Только для чтения|  
+|secondary_allow_connections _desc|**nvarchar(256)**|Нет<br /><br /> All<br /><br /> Только для чтения|  
   
 ## <a name="permissions"></a>Разрешения
 
@@ -66,7 +66,7 @@ SELECT
 FROM sys.geo_replication_links;  
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [CREATE DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.dm_geo_replication_link_status &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   

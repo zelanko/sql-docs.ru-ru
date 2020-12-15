@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1b31e142760e6799b743ab8771cc52c068d1b3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 468de09dbbf49b14f1794de5956df7e6125407fa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243885"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461985"
 ---
 # <a name="using-multiple-active-result-sets-mars-in-sql-server-native-client"></a>Использование режима MARS в SQL Server Native Client
 
@@ -59,7 +59,7 @@ ms.locfileid: "87243885"
   
  Режим MARS дает возможность поочередно выполнять несколько запросов с использованием одного соединения. Иначе говоря, существует возможность выполнения пакета с одновременным выполнением других запросов. Впрочем, надо отметить, что режим MARS определяется в терминах чередования, а не в терминах параллельного выполнения.  
   
- Инфраструктура режима MARS предоставляет возможность поочередного выполнения нескольких пакетов, хотя выполнение может переключаться лишь в четко определенных пунктах. Кроме того, почти все инструкции должны выполняться атомарным образом внутри пакета. Инструкции, которые возвращают строки клиенту, которые иногда называют *точками*получения, могут чередовать выполнение до завершения, пока строки отправляются клиенту, например:  
+ Инфраструктура режима MARS предоставляет возможность поочередного выполнения нескольких пакетов, хотя выполнение может переключаться лишь в четко определенных пунктах. Кроме того, почти все инструкции должны выполняться атомарным образом внутри пакета. Инструкции, которые возвращают строки клиенту, которые иногда называют *точками* получения, могут чередовать выполнение до завершения, пока строки отправляются клиенту, например:  
   
 -   SELECT  
   

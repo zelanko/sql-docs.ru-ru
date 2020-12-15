@@ -1,6 +1,6 @@
 ---
-description: sys. masked_columns (Transact-SQL)
-title: sys. masked_columns (Transact-SQL) | Документация Майкрософт
+description: sys.masked_columns (Transact-SQL)
+title: sys.masked_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -18,36 +18,36 @@ helpviewer_keywords:
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8c61cfbce42517f63729f35e159b479b3120f6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5a146c289ddd50484a515413571cc67588b687d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537375"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458500"
 ---
-# <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-SQL)
+# <a name="sysmasked_columns-transact-sql"></a>sys.masked_columns (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  Используйте представление **sys. masked_columns** для запроса столбцов таблицы, к которым применена функция динамического маскирования данных. Это представление наследуется из представления **sys.columns** . Оно возвращает все столбцы в представлении **sys.columns** , а также столбцы **is_masked** и **masking_function** , указывающие, маскирован ли столбец, и если да, то какая функция маскирования определена. В этом представлении отображаются только столбцы, к которым применена функция маскирования.  
+  Используйте представление **sys.masked_columns** для запроса столбцов таблицы, к которым применена функция динамического маскирования данных. Это представление наследуется из представления **sys.columns** . Оно возвращает все столбцы в представлении **sys.columns** , а также столбцы **is_masked** и **masking_function** , указывающие, маскирован ли столбец, и если да, то какая функция маскирования определена. В этом представлении отображаются только столбцы, к которым применена функция маскирования.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта, которому принадлежит этот столбец.|  
 |name|**sysname**|Имя столбца. Уникален в пределах объекта.|  
 |column_id|**int**|Идентификатор столбца. Уникален в пределах объекта.<br /><br /> Идентификаторы столбца могут быть непоследовательными.|  
-|**sys. masked_columns** возвращает много столбцов, наследуемых от **sys. Columns**.|Различная|Дополнительные определения столбцов см. в разделе [sys. columns &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) .|  
+|**sys.masked_columns** возвращает много столбцов, наследуемых от **sys. Columns**.|Различная|Дополнительные определения столбцов см. в разделе [sys. columns &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) .|  
 |is_masked|**bit**|Указывает, является ли столбец маскированным. 1 означает маскирование.|  
 |masking_function|**nvarchar(4000)**|Функция маскирования для столбца.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="permissions"></a>Разрешения  
  Это представление возвращает сведения о таблицах, в которых пользователь имеет определенное разрешение для таблицы или пользователь имеет разрешение VIEW ANY DEFINITION.  
   
 ## <a name="example"></a>Пример  
- Следующий запрос соединяет **sys. masked_columns** с **sys. Tables** , чтобы получить сведения обо всех маскированных столбцах.  
+ Следующий запрос присоединяет **sys.masked_columns** к **sys. Tables** , чтобы получить сведения обо всех маскированных столбцах.  
   
 ```  
 SELECT tbl.name as table_name, c.name AS column_name, c.is_masked, c.masking_function  
@@ -57,7 +57,7 @@ JOIN sys.tables AS tbl
 WHERE is_masked = 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [динамическое маскирование данных](../../relational-databases/security/dynamic-data-masking.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   

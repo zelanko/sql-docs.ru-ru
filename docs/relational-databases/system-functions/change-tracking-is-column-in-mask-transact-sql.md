@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c774b419283ea0d4799ef89c8628095424f169bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e1961dec1f32006d7a4b3d91b7b8763f34ce3514
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498216"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440623"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |0|Указанный столбец отсутствует в списке *change_columns* .|  
 |1|Указанный столбец находится в списке *change_columns* .|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK не выполняет никаких проверок для проверки значения *column_id* или того, что параметр *change_columns* был получен из таблицы, из которой было получено *column_id* .  
   
 ## <a name="examples"></a>Примеры  
@@ -73,7 +73,7 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
   
 ## <a name="see-also"></a>См. также:  
  [Функции отслеживания изменений (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [&#40;"CHANGETABLE" Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
+ [CHANGETABLE (Transact-SQL)](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

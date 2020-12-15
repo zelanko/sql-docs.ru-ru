@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55f25dad90002ea50ba797a7960f22cfee5055c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: aadc6c5b5548b2fccb3c37fdc9eb06a9baf69dcc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543378"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440540"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ## <a name="arguments"></a>Аргументы  
 `[ @tabname = ] 'qualified_table_name'` Имя таблицы из одной или двух частей. Таблица должна существовать в текущей базе данных. Таблица должна содержать полнотекстовый индекс. *qualified_table_name* имеет тип **nvarchar (517)** и не имеет значения по умолчанию.  
   
-`[ @colname = ] 'column_name'` Имя столбца в *qualified_table_name*. Столбец должен быть столбцом типа character, **varbinary (max)** или **Image** и не может быть вычисляемым столбцом. Аргумент *column_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @colname = ] 'column_name'` Имя столбца в *qualified_table_name*. Столбец должен быть столбцом типа character, **varbinary (max)** или **Image** и не может быть вычисляемым столбцом. Аргумент *column_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может создавать полнотекстовые индексы текстовых данных, хранящихся в столбцах, имеющих тип данных **varbinary (max)** или **Image** . Изображения и рисунки не индексируются.  
@@ -62,12 +62,12 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 |**add**|Добавляет *column_name* *qualified_table_name* в неактивный полнотекстовый индекс таблицы. Это действие активирует полнотекстовое индексирование столбца.|  
 |**тени**|Удаляет *column_name* *qualified_table_name* из неактивного полнотекстового индекса таблицы.|  
   
-`[ @language = ] 'language_term'` Язык данных, хранящихся в столбце. Список языков, входящих в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [sys. fulltext_languages &#40;&#41;TRANSACT-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'` Язык данных, хранящихся в столбце. Список языков, входящих в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Указывайте значение «Neutral», если столбец содержит данные на нескольких языках или на языке, который не поддерживается. Значение по умолчанию задается параметром конфигурации «default full-text language».  
   
-`[ @type_colname = ] 'type_column_name'` Имя столбца в *qualified_table_name* , содержащего тип документа *column_name*. Этот столбец должен иметь **тип char**, **nchar**, **varchar**или **nvarchar**. Он используется только в том случае, если тип данных *column_name* имеет тип **varbinary (max)** или **Image**. Аргумент *type_column_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @type_colname = ] 'type_column_name'` Имя столбца в *qualified_table_name* , содержащего тип документа *column_name*. Этот столбец должен иметь **тип char**, **nchar**, **varchar** или **nvarchar**. Он используется только в том случае, если тип данных *column_name* имеет тип **varbinary (max)** или **Image**. Аргумент *type_column_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_stats_properties (Transact-SQL)
-title: sys. dm_db_stats_properties (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_stats_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1039850e4322003ddfedd5407d18ab6170077c42
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f412097e74c8230ee7fe9941e48f39b034c2ebca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537046"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462745"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Возвращает статистические свойства указанного объекта базы данных (таблицы или индексированного представления) из текущей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для секционированных таблиц см. аналогичный [sys. dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md). 
+  Возвращает статистические свойства указанного объекта базы данных (таблицы или индексированного представления) из текущей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для секционированных таблиц см. Похожие [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md). 
  
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,14 +61,14 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |persisted_sample_percent|**float**|Процент материализованной выборки используется для обновлений статистики, где явно не указан процент выборки. Если значение равно нулю, процент материализованной выборки не устанавливается для этой статистики.<br /><br /> **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> Замечания  
- **sys. dm_db_stats_properties** возвращает пустой набор строк при любом из следующих условий:  
+ **sys.dm_db_stats_properties** возвращает пустой набор строк при любом из следующих условий:  
   
 -   **object_id** или **stats_id** имеет значение null.    
 -   Указанный объект не найден или не соответствует таблице или индексированному представлению.    
 -   Указанный идентификатор статистики не соответствует имеющейся статистике для указанного идентификатора объекта статистики.    
 -   Текущий пользователь не имеет разрешений на просмотр объекта статистики.  
   
- Такое поведение обеспечивает безопасного использования представления **sys. dm_db_stats_properties** при перекрестном применении к строкам в таких представлениях, как **sys. Objects** и **sys. stats**.  
+ Такое поведение обеспечивает безопасного использования **sys.dm_db_stats_properties** при перекрестном применении к строкам в таких представлениях, как **sys. Objects** и **sys. stats**.  
  
 Дата обновления статистики хранится в [большом двоичном объекте статистики](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) вместе с [гистограммой](../../relational-databases/statistics/statistics.md#histogram) и [вектором плотности](../../relational-databases/statistics/statistics.md#density), а не в метаданных. Если данные не считываются для создания статистических данных, то большой двоичный объект статистики не создается, дата недоступна, а *last_updated* столбец имеет значение null. Это происходит с отфильтрованной статистикой, для которой предикат не возвращает ни одной строки, или с новыми пустыми таблицами.
   
@@ -105,7 +105,7 @@ CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp
 WHERE modification_counter > 1000;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Динамические административные представления и функции, связанные с объектом, &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   

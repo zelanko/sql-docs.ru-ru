@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dce3adf92772a69875a644a2dc23344b6b139f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243905"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461995"
 ---
 # <a name="using-large-value-types-in-sql-server-native-client"></a>Использование типов больших значений в SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  До выхода [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] работа с типами данных больших значений требовала особой обработки. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]введен описатель **Max** для типов данных **varchar**, **nvarchar** и **varbinary** , чтобы обеспечить хранение значений размером до 2 ^ 31-1 байт. Столбцы и [!INCLUDE[tsql](../../../includes/tsql-md.md)] переменные таблицы могут указывать типы данных **varchar (max)**, **nvarchar (max)** или **varbinary (max)** .  
+  До выхода [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] работа с типами данных больших значений требовала особой обработки. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] введен описатель **Max** для типов данных **varchar**, **nvarchar** и **varbinary** , чтобы обеспечить хранение значений размером до 2 ^ 31-1 байт. Столбцы и [!INCLUDE[tsql](../../../includes/tsql-md.md)] переменные таблицы могут указывать типы данных **varchar (max)**, **nvarchar (max)** или **varbinary (max)** .  
   
 > [!NOTE]  
 >  Типы больших значений могут иметь максимальный размер от 1 до 8 КБ или они могут быть указаны как неограниченные.  
@@ -701,7 +701,7 @@ _ExitProcessResultSet:
   
 -   Значение "unlimited", которое в случае со столбцом **varchar (max)** равно 0.  
   
- Стандартные правила преобразования применяются к столбцу типа **varchar (max)** , что означает, что любое преобразование, допустимое для столбца **varchar (** 2000 **)** , также будет допустимым для столбца **varchar (max)** . То же относится к столбцам **nvarchar(max)** и **varbinary(max)**.  
+ Стандартные правила преобразования применяются к столбцу типа **varchar (max)** , что означает, что любое преобразование, допустимое для столбца **varchar (** 2000 **)** , также будет допустимым для столбца **varchar (max)** . То же относится к столбцам **nvarchar(max)** и **varbinary(max)** .  
   
  Ниже приведен список функций ODBC API, которые были улучшены для работы с типами больших значений:  
   

@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c014f76aac1544e16ec693277a034779f75883cd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2d2b3de8cf86e7597c944b827326dd070bc2ffce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255618"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461555"
 ---
 # <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure синапсе Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92255618"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Журналы действий, затрагиваемые **sp_pdw_log_user_data_masking** , являются определенными [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналами действий. **sp_pdw_log_user_data_masking** не влияет на журналы транзакций базы данных или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журналы ошибок.  
   
- **Фон:** В журналах действий конфигурации по умолчанию [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] содержит полные [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции и в некоторых случаях может содержать данные пользователей, содержащиеся в таких операциях, как **INSERT**, **Update**и **SELECT** . В случае возникновения проблемы на устройстве это позволяет анализировать условия, вызвавшие проблему, без необходимости воспроизведения проблемы. Чтобы предотвратить запись данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, клиенты могут включить маскировку данных пользователя с помощью этой хранимой процедуры. Инструкции по-прежнему будут записываться в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, но все литералы в инструкциях, которые могут содержать пользовательские данные, будут замаскированы; заменяются некоторыми предопределенными константными значениями.  
+ **Фон:** В журналах действий конфигурации по умолчанию [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] содержит полные [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции и в некоторых случаях может содержать данные пользователей, содержащиеся в таких операциях, как **INSERT**, **Update** и **SELECT** . В случае возникновения проблемы на устройстве это позволяет анализировать условия, вызвавшие проблему, без необходимости воспроизведения проблемы. Чтобы предотвратить запись данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, клиенты могут включить маскировку данных пользователя с помощью этой хранимой процедуры. Инструкции по-прежнему будут записываться в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, но все литералы в инструкциях, которые могут содержать пользовательские данные, будут замаскированы; заменяются некоторыми предопределенными константными значениями.  
   
  Если на устройстве включено прозрачное шифрование данных, Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий включается автоматически.  
   
@@ -42,7 +42,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 #### <a name="parameters"></a>Параметры  
-`[ @masking_mode = ] masking_mode` Определяет, включено ли маскирование прозрачных данных пользователя журнала шифрования данных. *masking_mode* имеет **тип int**и может принимать одно из следующих значений:  
+`[ @masking_mode = ] masking_mode` Определяет, включено ли маскирование прозрачных данных пользователя журнала шифрования данных. *masking_mode* имеет **тип int** и может принимать одно из следующих значений:  
   
 -   0 = отключено, данные пользователя отображаются в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий.  
   
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  При **sp_pdw_ log_user_data_masking** без параметров возвращается текущее состояние маскировки данных пользователя журнала TDE на устройстве в качестве скалярного результирующего набора.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий позволяет заменить литералы предопределенными константными значениями в инструкциях **SELECT** и DML, так как они могут содержать пользовательские данные. Установка *masking_mode* в значение 1 не маскирует метаданные, такие как имена столбцов или имена таблиц. Если присвоить параметру *masking_mode* значение 2, то инструкции с метаданными, например имена столбцов или имена таблиц, удаляются.  
   
  Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий реализуется следующим образом:  

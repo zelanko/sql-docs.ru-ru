@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bf4383d8b0f6be0d3242d91c935559f8c98ff00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 54419481ea32fb3b1a5cfc896f16bf4db974c0fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498881"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462055"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Поддержка разреженных столбцов в собственном клиенте SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88498881"
 |Определение, является ли столбец разреженным.|Просмотрите столбец SS_IS_SPARSE результирующего набора SQLColumns (ODBC).<br /><br /> Обратитесь к столбцу SS_IS_SPARSE результирующего набора строк схемы DBSCHEMA_COLUMNS (ODBC).<br /><br /> Этот сценарий невозможен в приложении, которое использует собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] более ранней версии, чем [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Однако такое приложение может запрашивать системные представления.|  
 |Определение, является ли столбец элементом **column_set**.|Просмотрите столбец SS_IS_COLUMN_SET результирующего набора SQLColumns. Или обратитесь к конкретному атрибуту столбца [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL_CA_SS_IS_COLUMN_SET (ODBC).<br /><br /> Обратитесь к столбцу SS_IS_COLUMN_SET набора строк схемы DBSCHEMA_COLUMNS. Или просмотрите *dwFlags*, возвращенный IColumnsinfo::GetColumnInfo или DBCOLUMNFLAGS в наборе строк, возвращаемом IColumnsRowset::GetColumnsRowset. Для **column_set** столбцов будет задано DBCOLUMNFLAGS_SS_ISCOLUMNSET (OLE DB).<br /><br /> Этот сценарий невозможен в приложении, которое использует собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] более ранней версии, чем [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Однако такое приложение может запрашивать системные представления.|  
 |Импорт и экспорт разреженных столбцов программой BCP для таблиц без **column_set**.|Отличий от предыдущих версий собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в поведении нет.|  
-|Импорт и экспорт разреженных столбцов программой BCP для таблиц с **column_set**.|**column_set** импортируется и экспортируется так же, как XML; то есть **varbinary(max)**, если он привязан как двоичный тип, или как **nvarchar(max)**, если он привязан как тип **char** или **типа wchar**.<br /><br /> Столбцы, являющиеся элементами набора разреженных столбцов **column_set**, не экспортируются как отдельные столбцы. Они экспортируются только в составе значения столбца **column_set**.|  
+|Импорт и экспорт разреженных столбцов программой BCP для таблиц с **column_set**.|**column_set** импортируется и экспортируется так же, как XML; то есть **varbinary(max)** , если он привязан как двоичный тип, или как **nvarchar(max)** , если он привязан как тип **char** или **типа wchar**.<br /><br /> Столбцы, являющиеся элементами набора разреженных столбцов **column_set**, не экспортируются как отдельные столбцы. Они экспортируются только в составе значения столбца **column_set**.|  
 |Поведение **queryout** для программы BCP.|Отличий от предыдущих версий собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в обработке столбцов с явно заданными именами нет.<br /><br /> Сценарии, задействующие импорт и экспорт между таблицами с различными схемами, могут потребовать специальной обработки.<br /><br /> Дополнительные сведения о программе BCP см. в подразделе «Поддержка массового копирования (BCP) для разреженных столбцов» далее в данном разделе.|  
   
 ## <a name="down-level-client-behavior"></a>Работа в клиентах низкого уровня  
@@ -56,7 +56,7 @@ ms.locfileid: "88498881"
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>Поддержка массового копирования (BCP) для разреженных столбцов  
  В ODBC или OLE DB для разреженных столбцов или **column_set** функций не существует изменений в API BCP.  
   
- Если таблица содержит **column_set**, то разреженные столбцы не обрабатываются как отдельные столбцы. Значения всех разреженных столбцов включаются в значение столбца **column_set**, который экспортируется таким же способом, как XML-столбец, то есть как **varbinary(max)**, если привязан как двоичному типу, или как **nvarchar(max)**, если привязан тип **char** или **wchar**). При импорте значение **column_set** должно соответствовать схеме **column_set**.  
+ Если таблица содержит **column_set**, то разреженные столбцы не обрабатываются как отдельные столбцы. Значения всех разреженных столбцов включаются в значение столбца **column_set**, который экспортируется таким же способом, как XML-столбец, то есть как **varbinary(max)** , если привязан как двоичному типу, или как **nvarchar(max)** , если привязан тип **char** или **wchar**). При импорте значение **column_set** должно соответствовать схеме **column_set**.  
   
  Для операций **queryout** нет изменений в способе обработки столбцов, на которые имеются явные ссылки. Поведение столбцов **column_set** совпадает с поведением XML-столбцов, и разреженность не имеет значения для обработки именованных разреженных столбцов.  
   

@@ -29,13 +29,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15274c3b46ac7b0dfb3e9f43fad0dd1174f5fbbf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6c050a6b34781fc6312e7d410aeccace29e3dc84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775761"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461765"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Указание связей при помощи sql:relationship (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "85775761"
   
  Чтобы указать имена таблиц и необходимые сведения о соединении, в заметке **SQL: relationship** указаны следующие атрибуты. Эти атрибуты являются допустимыми только с **\<sql:relationship>** элементом.  
   
- **Name**  
+ **Имя**  
  Указывает уникальное имя связи.  
   
  **Родительский объект**  
  Задает родительскую связь (таблицу). Это необязательный атрибут. Если он не указан, то имя родительской таблицы будет получено из дочерней иерархии в документе. Если схема указывает две иерархии «родители-потомки», использующие те же **\<sql:relationship>** , но разные родительские элементы, то родительский атрибут не указывается в **\<sql:relationship>** . Эти сведения будут получены из иерархии в схеме.  
   
- **parent-key**  
+ **родительский ключ**  
  Указывает родительский ключ для родителя. Если родительский ключ состоит из нескольких столбцов, то они должны быть перечислены через пробелы. Между значениями, заданными для ключа, состоящего из нескольких столбцов, и соответствующего дочернего ключа, существует позиционное сопоставление.  
   
  **Дочерний**  

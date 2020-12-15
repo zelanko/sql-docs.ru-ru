@@ -1,6 +1,6 @@
 ---
 description: Подключение к базе данных SQL Azure с помощью SQL Server Native Client
-title: Подключение к Базе данных SQL Azure
+title: Соединение с базой данных SQL Azure
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -10,13 +10,13 @@ ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b5335f05060bf40431621dc3c45cfb11e22c914
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ab4f4836d2d0979e6eed68a297f0d583dd612719
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868414"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462075"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Подключение к базе данных SQL Azure с помощью SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

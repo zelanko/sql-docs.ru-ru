@@ -24,20 +24,20 @@ helpviewer_keywords:
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d11d28460905bcf1581aeaa56777b72f987f8452
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c98fb2a27f34e81fdc2c50ce9463d170e1df398d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890805"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463325"
 ---
 # <a name="creating-a-driver-application"></a>Создание приложения драйвера
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В архитектуре ODBC имеется четыре компонента, которые выполняют следующие функции.  
   
-|Компонент|Компонент|  
+|Компонент|Функция|  
 |---------------|--------------|  
 |Приложение|Вызывает функции ODBC для связи с источником данных ODBC, поставляет инструкции SQL и обрабатывает результирующие наборы.|  
 |Диспетчер драйверов|Управляет связью между приложением и всеми драйверами ODBC, используемыми приложением.|  
@@ -70,7 +70,7 @@ ms.locfileid: "91890805"
   
 -   выполнять операции массового копирования;  
   
--   Операции управления большими данными (в столбцах**varchar (max)**, **nvarchar (max)** и **varbinary (max)** )  
+-   Операции управления большими данными (в столбцах **varchar (max)**, **nvarchar (max)** и **varbinary (max)** )  
   
 -   использовать логику повторного соединения для облегчения отработки отказа при настроенном зеркальном отображении базы данных;  
   

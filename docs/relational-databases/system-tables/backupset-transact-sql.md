@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3271963cf5a07e88b6209bd2b7316ab40f43bc05
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328592"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461535"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "93328592"
 |**is_copy_only**|**bit**|1 = резервная копия только для копирования. Дополнительные сведения см. в разделе [Резервные копии только для копирования (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|Идентификатор начальной вилки восстановления. Это соответствует **значение firstrecoveryforkid** RESTORE HEADERONLY.<br /><br /> Для резервных копий данных **first_recovery_fork_guid** равно **last_recovery_fork_guid**.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|Идентификатор конечной вилки восстановления. Это соответствует **RecoveryForkID** RESTORE HEADERONLY.<br /><br /> Для резервных копий данных **first_recovery_fork_guid** равно **last_recovery_fork_guid**.|  
-|**fork_point_lsn**|**numeric(25,0)**|Если **first_recovery_fork_guid** не равно **last_recovery_fork_guid** , это регистрационный номер в журнале для точки ветвления. В противном случае значение равно NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Если **first_recovery_fork_guid** не равно **last_recovery_fork_guid**, это регистрационный номер в журнале для точки ветвления. В противном случае значение равно NULL.|  
 |**database_guid**|**uniqueidentifier**|Уникальный идентификатор базы данных. Это соответствует **биндингид** RESTORE HEADERONLY. При восстановлении базы данных назначается новое значение.|  
 |**family_guid**|**uniqueidentifier**|Уникальный идентификатор оригинальной базы данных в момент создания. Это значение остается неизменным при восстановлении базы данных, даже если ей присваивается другое имя.|  
 |**differential_base_lsn**|**numeric(25,0)**|Основной регистрационный номер транзакции в журнале для разностного резервного копирования. Для разностной резервной копии с одной на основе; изменения с номерами LSN больше или равными **differential_base_lsn** включаются в разностную резервную копию.<br /><br /> Для многобазовой разностной резервной копии значение равно NULL, а базовый номер LSN должен быть определен на уровне файла (см. раздел [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Для неразностных типов резервного копирования значение всегда равно NULL.|  

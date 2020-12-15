@@ -22,13 +22,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 926f9588ad5bf9a29490a84017f3317f8ec5c424
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0e457aa6c1d1e16e96682f19898e22813254e9ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750779"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461805"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Преобразования типов данных и аннотации SQL: DataType (SQLXML 4,0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,38 +62,38 @@ ms.locfileid: "85750779"
 |**bigint**|**long**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
-|**char**|**string**|  
+|**char**|**строка**|  
 |**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
-|**изображение**|**base64Binary**|  
+|**image**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**decimal**|  
-|**nchar**|**string**|  
-|**ntext**|**string**|  
-|**nvarchar**|**string**|  
+|**nchar**|**строка**|  
+|**ntext**|**строка**|  
+|**nvarchar**|**строка**|  
 |**numeric**|**decimal**|  
 |**real**|**float**|  
 |**smalldatetime**|**dateTime**|  
 |**smallint**|**short**|  
 |**smallmoney**|**decimal**|  
-|**sql_variant**|**string**|  
-|**sysname**|**string**|  
-|**text**|**string**|  
+|**sql_variant**|**строка**|  
+|**sysname**|**строка**|  
+|**text**|**строка**|  
 |**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**string**|  
-|**uniqueidentifier**|**string**|  
+|**varchar**|**строка**|  
+|**uniqueidentifier**|**строка**|  
   
 ## <a name="sqldatatype-annotation"></a>Заметка sql:datatype  
  Для указания типа данных используется аннотация **SQL: DataType** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта заметка должна быть указана в следующих случаях:  
   
--   Выполняется массовый запуск в **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбец типа DateTime из XSD **DateTime**, **Date**или **time** Type. В этом случае необходимо задать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных столбца с помощью **SQL: datatype = "DateTime"**. Это правило применяется только для диаграмм обновления.  
+-   Выполняется массовый запуск в  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбец типа DateTime из XSD **DateTime**, **Date** или **time** Type. В этом случае необходимо задать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных столбца с помощью **SQL: datatype = "DateTime"**. Это правило применяется только для диаграмм обновления.  
   
 -   Выполняется массовый запуск в столбце [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа **uniqueidentifier** , а ЗНАЧЕНИЕМ XSD является GUID, включающий фигурные скобки ({и}). При указании **SQL: datatype = "uniqueidentifier"** фигурные скобки удаляются из значения перед вставкой в столбец. Если **SQL: DataType** не указан, значение отправляется вместе с фигурными скобками, а Вставка или обновление завершается ошибкой.  
   
--   Тип данных XML **base64Binary** сопоставляется с различными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типами данных (**binary**, **Image**или **varbinary**). Чтобы соотнести тип данных XML **base64Binary** с конкретным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типом данных, используйте аннотацию **SQL: DataType** . Эта заметка указывает явный тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбца, которому сопоставляется атрибут. Это полезно, если данные сохраняются в базах данных. Указав аннотацию **SQL: DataType** , можно определить явный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
+-   Тип данных XML **base64Binary** сопоставляется с различными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типами данных (**binary**, **Image** или **varbinary**). Чтобы соотнести тип данных XML **base64Binary** с конкретным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типом данных, используйте аннотацию **SQL: DataType** . Эта заметка указывает явный тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбца, которому сопоставляется атрибут. Это полезно, если данные сохраняются в базах данных. Указав аннотацию **SQL: DataType** , можно определить явный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
   
  Обычно в схеме рекомендуется указывать **тип данных SQL: DataType** .  
   
