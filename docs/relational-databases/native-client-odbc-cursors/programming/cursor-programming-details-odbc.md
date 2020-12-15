@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59e71b9d5c091be993207dbd04d08a418c58fe28
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1a2a7455b8500db174bc0b310a38b00b32f5cb38
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423896"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438607"
 ---
 # <a name="cursor-programming-details-odbc"></a>Подробные сведения о программировании курсоров (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Выбор правильного типа курсора может повысить производительность приложения. При определенных условиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может неявно преобразовать тип курсора при выполнении инструкции SQL, которая не поддерживается типом запрашиваемого курсора.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Неявные преобразования курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
   
 -   [Использование автоматической выборки с помощью курсоров ODBC](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)  
   
--   [Однопроходные курсоры &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
+-   [Быстрые Forward-Only курсоры &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Использование курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  

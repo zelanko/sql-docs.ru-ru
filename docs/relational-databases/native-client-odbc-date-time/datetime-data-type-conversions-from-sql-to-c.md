@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b317f23ef9e960fe407e68ef108f31ba0fcfa2c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c7434c34d2e39ae85ecc11ebf5603f825672a919
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420638"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438547"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Преобразования типа данных datetime из SQL в C
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88420638"
   
 |Символ|Значение|  
 |------------|-------------|  
-|ОК|Проблемы преобразования отсутствуют.|  
+|OK|Проблемы преобразования отсутствуют.|  
 |1|Применяются правила, использовавшиеся до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |2|Начальные и конечные пробелы пропускаются.|  
 |3|Выполняется синтаксический анализ строки, при котором из нее извлекается дата, время, часовой пояс или смещение часового пояса, при этом допускается точность задания долей секунды до 9 десятичных знаков. Если при анализе обнаруживается смещение часового пояса, то время преобразуется к часовому поясу клиента. Если во время этого преобразования возникает ошибка, создается диагностическая запись с кодом SQLSTATE 22018 и сообщением «Переполнение поля даты и времени».|  

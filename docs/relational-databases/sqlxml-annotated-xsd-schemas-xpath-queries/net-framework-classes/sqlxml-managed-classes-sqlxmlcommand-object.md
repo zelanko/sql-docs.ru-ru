@@ -31,13 +31,13 @@ ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c3c3c829b49f52476498e744c91fa5c1af37b6b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c5736ffab10bc0be104f06dbd6627d48aa45cd98
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767538"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439665"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Управляемые классы SQLXML — объект SqlXmlCommand
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -109,7 +109,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Идентифицирует тип команды. Это свойство используется для задания типа команды, которую нужно выполнить. Значения в следующей таблице задают тип команды. Рабочий пример см. в разделе [доступ к функциям SQLXML в среде .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |Склксмлкоммандтипе. SQL|Выполняет команду SQL (например, `SELECT * FROM Employees FOR XML AUTO`).|  
 |Склксмлкоммандтипе. XPath|Выполняет команду XPath (например, `Employees[@EmployeeID=1]`).|  
@@ -118,7 +118,7 @@ public SqlXmlCommand(string cnString)
 |Склксмлкоммандтипе. Диаграмма обновления|Выполняет диаграмму обновления.|  
 |Склксмлкоммандтипе. DiffGram|Выполняет дельту.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlXmlParameter &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)   
  [Объект Склксмладаптер &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
   

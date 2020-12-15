@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 2ab1c51c53282b5f245cf7da0d33cf4f797bf53a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810250"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439469"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -76,7 +76,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>Комментарии  
  `sp_execute_remote` параметры должны быть указаны в определенном порядке, как описано в разделе синтаксис выше. Если параметры вводятся не в этом порядке, будет выдано сообщение об ошибке.  
   
- `sp_execute_remote` поведение аналогично [выполнению &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) в отношении пакетов и области имен. Инструкция или пакет Transact-SQL в параметре sp_execute_remote * \@ stmt* не компилируются до тех пор, пока не будет выполнена инструкция sp_execute_remote.  
+ `sp_execute_remote` поведение аналогично [выполнению &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) в отношении пакетов и области имен. Инструкция или пакет Transact-SQL в параметре sp_execute_remote *\@ stmt* не компилируются до тех пор, пока не будет выполнена инструкция sp_execute_remote.  
   
  `sp_execute_remote` добавляет дополнительный столбец к результирующему набору с именем "$ShardName", который содержит имя удаленной базы данных, которая создала строку.  
   

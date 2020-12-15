@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f472c3354e2cfefe10aeeedd8935360e3a4751a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8b3a9c15979d162ca345a0d440f7093c4bd15ad9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868267"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439841"
 ---
 # <a name="overview-smo"></a>Общие сведения об SMO
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "91868267"
   
  Обычным методом выполнения является непосредственное выполнение. Инструкции передаются экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] непосредственно по получении. Выполнение после сбора является альтернативным методом.  
   
- Выполнение после сбора дает возможность собирать пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые обычно выполняются. В результате программист модели объектов SMO может отложить скрипт, сохранить его для выполнения в более поздний период или выполнить предварительный просмотр скрипта для конечного пользователя. Так, инструкции **create database**, **create table**и **create index** могут быть переданы в одном пакете и затем выполнены как три последовательных шага. Этой функцией управляет пользователь с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
+ Выполнение после сбора дает возможность собирать пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые обычно выполняются. В результате программист модели объектов SMO может отложить скрипт, сохранить его для выполнения в более поздний период или выполнить предварительный просмотр скрипта для конечного пользователя. Так, инструкции **create database**, **create table** и **create index** могут быть переданы в одном пакете и затем выполнены как три последовательных шага. Этой функцией управляет пользователь с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
   
  **Поставщик WMI**  
   

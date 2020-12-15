@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3cdb3abec9d762f06016c9f620840e99d339c7c
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ec31170ac813f9a1901e5fe5dd6f58a66ea47475
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384703"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439464"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,26 +45,26 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @pktable_name =] " *pktable_name* "  
+ [ @pktable_name =] "*pktable_name*"  
  Имя таблицы с первичным ключом, применяемое для возврата сведений о каталоге. Аргумент *pktable_name* имеет тип **sysname** и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Необходимо указать этот параметр, параметр *fktable_name* или оба.  
   
- [ @pktable_owner =] " *pktable_owner* "  
+ [ @pktable_owner =] "*pktable_owner*"  
  Имя владельца таблицы (с первичным ключом), используемой для возврата сведений о каталоге. Аргумент *pktable_owner* имеет тип **sysname** и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если *pktable_owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если параметр *pktable_owner* не указан и текущий пользователь не владеет таблицей с указанным *pktable_name* , процедура ищет таблицу с указанным *pktable_name* владельцем базы данных. Если такая таблица существует, возвращаются ее столбцы.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если параметр *pktable_owner* не указан и текущий пользователь не владеет таблицей с указанным *pktable_name*, процедура ищет таблицу с указанным *pktable_name* владельцем базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   
- [ @pktable_qualifier =] " *pktable_qualifier* "  
- Имя квалификатора таблицы (с первичным ключом). Аргумент *pktable_qualifier* имеет тип sysname и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц, состоящие из трех частей ( *Qualifier.Owner.Name* ). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] квалификатор представляет собой имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
+ [ @pktable_qualifier =] "*pktable_qualifier*"  
+ Имя квалификатора таблицы (с первичным ключом). Аргумент *pktable_qualifier* имеет тип sysname и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц, состоящие из трех частей (*Qualifier.Owner.Name*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] квалификатор представляет собой имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
- [ @fktable_name =] " *fktable_name* "  
+ [ @fktable_name =] "*fktable_name*"  
  Имя таблицы (с внешним ключом), применяемое для возврата сведений о каталоге. Аргумент *fktable_name* имеет тип sysname и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Необходимо указать этот параметр, параметр *pktable_name* или оба.  
   
- [ @fktable_owner =] " *fktable_owner* "  
+ [ @fktable_owner =] "*fktable_owner*"  
  Имя владельца таблицы (с внешним ключом), применяемое для возврата сведений о каталоге. Аргумент *fktable_owner* имеет тип **sysname** и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если *fktable_owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если параметр *fktable_owner* не указан и текущий пользователь не владеет таблицей с указанным *fktable_name* , процедура ищет таблицу с указанным *fktable_name* владельцем базы данных. Если такая таблица существует, возвращаются ее столбцы.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если параметр *fktable_owner* не указан и текущий пользователь не владеет таблицей с указанным *fktable_name*, процедура ищет таблицу с указанным *fktable_name* владельцем базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   
- [ @fktable_qualifier =] " *fktable_qualifier* "  
+ [ @fktable_qualifier =] "*fktable_qualifier*"  
  Имя квалификатора таблицы (с внешним ключом). Аргумент *fktable_qualifier* имеет тип **sysname** и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] квалификатор представляет собой имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

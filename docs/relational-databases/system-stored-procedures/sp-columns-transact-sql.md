@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7a46f76385a724f1aa8622ac85301cdc7e12b6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7257b24d2908ea17977c0b08f0517d65d2481979
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006507"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439489"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,17 +52,17 @@ sp_columns [ @table_name = ] object
   
  Если текущий пользователь является владельцем объекта с указанным именем, то возвращаются столбцы этого объекта. Если *владелец* не указан и текущий пользователь не владеет объектом с указанным *объектом*, **sp_columns** ищет объект с указанным *объектом* , принадлежащим владельцу базы данных. Если таковой существует, возвращаются столбцы этого объекта.  
   
-`[ \@table_qualifier = ] qualifier` Имя квалификатора объекта. *квалификатор* имеет тип **sysname**и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена объектов (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых продуктах он представляет имя сервера в среде базы данных объекта.  
+`[ \@table_qualifier = ] qualifier` Имя квалификатора объекта. *квалификатор* имеет тип **sysname** и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена объектов (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых продуктах он представляет имя сервера в среде базы данных объекта.  
   
 `[ \@column_name = ] column` Является одним столбцом и используется, когда требуется только один столбец сведений о каталоге. *столбец* имеет тип **nvarchar (384)** и значение по умолчанию NULL. Если *столбец* не указан, возвращаются все столбцы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *столбце столбец* представляет имя столбца, указанное в таблице **syscolumns** . Поиск совпадений по шаблону поддерживается. Для максимальной совместимости клиент шлюза должен использовать только стандартное согласование SQL-92 (символы-шаблоны % и _).  
   
-`[ \@ODBCVer = ] ODBCVer` Используемая версия ODBC. *Одбквер* имеет **тип int**и значение по умолчанию 2. Это значение соответствует ODBC версии 2. Допустимы значения 2 или 3. Различия в поведении версий 2 и 3 см. в спецификации ODBC **SQLColumns** .  
+`[ \@ODBCVer = ] ODBCVer` Используемая версия ODBC. *Одбквер* имеет **тип int** и значение по умолчанию 2. Это значение соответствует ODBC версии 2. Допустимы значения 2 или 3. Различия в поведении версий 2 и 3 см. в спецификации ODBC **SQLColumns** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Хранимая процедура каталога **sp_columns** эквивалентна **SQLColumns** в ODBC. Возвращаемые результаты упорядочиваются по **TABLE_QUALIFIER**, **table_owner**и **table_name**.  
+ Хранимая процедура каталога **sp_columns** эквивалентна **SQLColumns** в ODBC. Возвращаемые результаты упорядочиваются по **TABLE_QUALIFIER**, **table_owner** и **table_name**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

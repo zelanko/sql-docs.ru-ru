@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1eb4580f3654b12f09b39e2fadf2167a9f9e561
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a2fbc7fe209653a142ea887999fc95310f29e30b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869332"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438357"
 ---
 # <a name="prepared-execution"></a>Подготовленное выполнение
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "91869332"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сокращается разница в производительности между прямым и подготовленным выполнением с помощью улучшенных алгоритмов для обнаружения и повторного использования планов выполнения из **SQLExecDirect**. В результате некоторые преимущества производительности выполнения подготовленных инструкций распространяются на прямое выполнение инструкций. Дополнительные сведения см. в разделе [прямое выполнение](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также обеспечивает собственную поддержку подготовленного выполнения. План выполнения строится на основе **SQLPrepare** и более поздних версий при вызове **SQLExecute** . Поскольку [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не требуется создавать временные хранимые процедуры в **SQLPrepare**, дополнительные издержки на системные таблицы в **базе данных tempdb**отсутствуют.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также обеспечивает собственную поддержку подготовленного выполнения. План выполнения строится на основе **SQLPrepare** и более поздних версий при вызове **SQLExecute** . Поскольку [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не требуется создавать временные хранимые процедуры в **SQLPrepare**, дополнительные издержки на системные таблицы в **базе данных tempdb** отсутствуют.  
   
- По соображениям производительности подготовка инструкции откладывается до вызова **SQLExecute** или операции метасвойства (например, [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) или [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) в ODBC). Это поведение по умолчанию. Любые ошибки в подготавливаемой инструкции неизвестны до выполнения инструкции или до выполнения операции над метасвойством. Установив атрибут инструкции SQL_SOPT_SS_DEFER_PREPARE в специфичное для ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] значение SQL_DP_OFF, можно отключить это поведение по умолчанию.  
+ По соображениям производительности подготовка инструкции откладывается до вызова **SQLExecute** или операции метасвойства (например, [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) или [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) в ODBC). Это поведение установлено по умолчанию. Любые ошибки в подготавливаемой инструкции неизвестны до выполнения инструкции или до выполнения операции над метасвойством. Установив атрибут инструкции SQL_SOPT_SS_DEFER_PREPARE в специфичное для ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] значение SQL_DP_OFF, можно отключить это поведение по умолчанию.  
   
- В случае отложенной подготовки вызов метода **SQLDescribeCol** или **SQLDescribeParam** перед вызовом **SQLExecute** создает дополнительный обмен данными с сервером. В **SQLDescribeCol**драйвер УДАЛЯЕТ предложение WHERE из запроса и отправляет его на сервер с параметром SET FMTONLY ON для получения описания столбцов в первом результирующем наборе, возвращенном запросом. В **SQLDescribeParam**драйвер вызывает сервер, чтобы получить описание выражений или столбцов, на которые ссылаются маркеры параметров в запросе. Этот метод также имеет несколько ограничений, таких как невозможность обработки параметров вложенных запросов.  
+ В случае отложенной подготовки вызов метода **SQLDescribeCol** или **SQLDescribeParam** перед вызовом **SQLExecute** создает дополнительный обмен данными с сервером. В **SQLDescribeCol** драйвер УДАЛЯЕТ предложение WHERE из запроса и отправляет его на сервер с параметром SET FMTONLY ON для получения описания столбцов в первом результирующем наборе, возвращенном запросом. В **SQLDescribeParam** драйвер вызывает сервер, чтобы получить описание выражений или столбцов, на которые ссылаются маркеры параметров в запросе. Этот метод также имеет несколько ограничений, таких как невозможность обработки параметров вложенных запросов.  
   
  Чрезмерное использование **SQLPrepare** с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвером ODBC для собственного клиента снижает производительность, особенно при подключении к более ранним версиям SQL Server. Не следует использовать подготовленное выполнение для инструкций, исполняемых один раз. Подготовленное выполнение медленнее, чем прямое выполнение, для однократного выполнения инструкции, потому что оно требует дополнительного обращения клиента к серверу. В предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] оно также создает временную хранимую процедуру.  
   
