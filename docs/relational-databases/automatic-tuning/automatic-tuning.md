@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 57a595a2bcb78d86c3a770db6b584974c229a0df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808592"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483656"
 ---
 # <a name="automatic-tuning"></a>Автоматическая настройка
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -101,7 +101,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 В [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] среде можно найти регрессию выбора плана с помощью системных представлений хранилища запросов. Начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] , программа [!INCLUDE[ssde_md](../../includes/ssde_md.md)] обнаруживает и отображает возможные регрессии выбора планов и рекомендуемые действия, которые должны применяться в [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) динамического административного представления. Динамическое административное представление отображает сведения о проблеме, важность проблемы и подробные сведения, такие как идентифицированный запрос, идентификатор регрессионного плана, идентификатор плана, который использовался в качестве базового для сравнения, и [!INCLUDE[tsql_md](../../includes/tsql-md.md)] инструкцию, которая может быть выполнена для устранения проблемы.
 
-| type | description | DATETIME | score | подробности | ... |
+| тип | description | DATETIME | score | подробности | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Время ЦП изменено с 4 мс до 14 мс | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Время ЦП изменено с 37 МС на 84 МС | 16.03.2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

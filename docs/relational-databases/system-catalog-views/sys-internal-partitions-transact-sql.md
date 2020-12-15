@@ -1,6 +1,6 @@
 ---
-description: sys. internal_partitions (Transact-SQL)
-title: sys. internal_partitions (Transact-SQL) | Документация Майкрософт
+description: sys.internal_partitions (Transact-SQL)
+title: sys.internal_partitions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
@@ -13,15 +13,15 @@ dev_langs:
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7e6f8d248ef4d000c98a664148a5a5b33f0786b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0b55887eadaf25aa254c8b693619df0f22411718
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484756"
 ---
-# <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
+# <a name="sysinternal_partitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -61,7 +61,7 @@ on i.object_id = p.object_id
 WHERE p.object_id = OBJECT_ID ( '<table name' ) ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

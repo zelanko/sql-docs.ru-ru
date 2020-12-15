@@ -1,5 +1,5 @@
 ---
-description: Создание набора строк возвращающего табличное значение параметра в SQL Server Native Client
+description: Создание набора строк параметра Table-Valued в SQL Server Native Client
 title: Создание набора строк возвращающего табличное значение параметра (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bf030073ce8b8a22fe605ef54ea521253aa3337
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 65215eebf7a0e8dd91529f5a231f8597cadfda2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482580"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483145"
 ---
-# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>Создание набора строк возвращающего табличное значение параметра в SQL Server Native Client
+# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>Создание набора строк параметра Table-Valued в SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Несмотря на то, что потребители могут предоставить для возвращающих табличные значения параметров любой объект набора строк, типичные объекты наборов строк реализуются для конечных хранилищ данных и таким образом предоставляют ограниченную производительность. По этой причине поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает пользователям создавать специализированный объект набора строк на основе данных в памяти. Этот специальный объект набора строк в памяти — это новый COM-объект, называемый набором строк возвращающего табличное значение параметра. Он предлагает функциональные возможности, аналогичные набору параметров.  

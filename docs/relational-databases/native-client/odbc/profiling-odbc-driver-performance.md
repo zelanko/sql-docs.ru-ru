@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6db94d769171bd5335253611758da5234f6d5a7c
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bb392177fdd4364b17c93b9e5abba1fc9e421766
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483125"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Создание профилей производительности драйвера ODBC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,13 +72,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Сеть  
   
--   время;  
+-   Время  
   
  В следующей таблице приведены описания полей структуры данных SQLPERF, также относящиеся к файлу журнала производительности.  
   
 ### <a name="application-profile-statistics"></a>Статистика профиля приложения  
   
-|Поле SQLPERF|Description|  
+|Поле SQLPERF|Описание|  
 |-------------------|-----------------|  
 |TimerResolution|Минимальное разрешение времени с часов сервера в миллисекундах. Обычно возвращается 0 (ноль). Это значение учитывается только в тех случаях, когда сообщается большое число. Если минимальное разрешение часов сервера больше, чем вероятные интервалы какой-либо статистики по таймеру, эти статистические данные могут оказаться завышенными.|  
 |SQLidu|Количество инструкций INSERT, DELETE и UPDATE после SQL_PERF_START.|  
@@ -116,7 +116,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Статистика по времени  
   
-|Поле SQLPERF|Description|  
+|Поле SQLPERF|Описание|  
 |-------------------|-----------------|  
 |msExecutionTime|Общее количество времени, затраченного драйвером на обработку после SQL_PERF_START, включая время на ожидание ответов от сервера.|  
 |msNetworkServerTime|Общее количество времени, затраченного драйвером на ожидание ответов от сервера.|  

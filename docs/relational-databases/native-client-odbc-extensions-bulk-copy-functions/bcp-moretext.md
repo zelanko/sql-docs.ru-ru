@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be359426c5ea5125b2fcec991f8ed06b1732e12f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9ccfce33bc58ea146c0e7383bba00625260740b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448585"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483335"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ RETCODE bcp_moretext (
 ## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Эта функция может использоваться в сочетании с [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) и [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) для копирования длинных значений данных переменной длины, которые SQL Serverся в нескольких меньших фрагментах. **bcp_moretext** можно использовать со столбцами, имеющими следующие SQL Server типов данных: **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, определяемого пользователем типа (UDT) и XML. **bcp_moretext** не поддерживает преобразования данных, указанные данные должны соответствовать типу данных целевого столбца.  
   
  Если **bcp_bind** вызывается с параметром *pData* , отличным от NULL, для типов данных, поддерживаемых **bcp_moretext**, **bcp_sendrow** отправляет все значение данных, независимо от длины. Однако, если **bcp_bind** имеет параметр *pData* NULL для поддерживаемых типов данных, **bcp_moretext** можно использовать для копирования данных сразу после успешного возврата из **bcp_sendrow** , указывающих на то, что все связанные столбцы с данными уже обработаны.  

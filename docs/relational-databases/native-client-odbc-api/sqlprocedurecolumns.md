@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7717ba25c3df87dbb7400eff5b4b6d293541664
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1291d988e5fc5e7d4bd3e5f26fc58e048d96612b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485026"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Функция**SQLProcedureColumns** возвращает одну строку, содержащую атрибуты возвращенного значения всех хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Функция **SQLProcedureColumns** возвращает одну строку, содержащую атрибуты возвращенного значения всех хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Функция**SQLProcedureColumns** возвращает значение SQL_SUCCESS, указывая, существуют ли значения, соответствующие параметрам *CatalogName*, *SchemaName*, *ProcName*и *ColumnName* . Функция**SQLFetch** возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
+ Функция **SQLProcedureColumns** возвращает значение SQL_SUCCESS, указывая, существуют ли значения, соответствующие параметрам *CatalogName*, *SchemaName*, *ProcName* и *ColumnName* . Функция **SQLFetch** возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
   
- Функцию**SQLProcedureColumns** можно выполнить для статического серверного курсора. При попытке выполнить функцию **SQLProcedureColumns** для обновляемого (динамического или набора ключей) курсора будет возвращено значение SQL_SUCCESS_WITH_INFO, которое указывает на то, что тип курсора был изменен.  
+ Функцию **SQLProcedureColumns** можно выполнить для статического серверного курсора. При попытке выполнить функцию **SQLProcedureColumns** для обновляемого (динамического или набора ключей) курсора будет возвращено значение SQL_SUCCESS_WITH_INFO, которое указывает на то, что тип курсора был изменен.  
   
  В следующей таблице перечислены столбцы, возвращенные результирующим набором, и описывается, как они были расширены для обработки типов данных **udt** и **xml** с помощью драйвера ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91868030"
  Дополнительные общие сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>Поддержка функцией SQLProcedureColumns определяемых пользователем типов больших данных CLR  
- Функция**SQLProcedureColumns** поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [типы больших User-Defined CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Функция **SQLProcedureColumns** поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [типы больших User-Defined CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Функция SQLProcedureColumns](../../odbc/reference/syntax/sqlprimarykeys-function.md)   

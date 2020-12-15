@@ -1,6 +1,6 @@
 ---
 description: sys.dm_resource_governor_workload_groups (Transact-SQL)
-title: sys. dm_resource_governor_workload_groups (Transact-SQL) | Документация Майкрософт
+title: sys.dm_resource_governor_workload_groups (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/15/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27116016633e9a7d12bf87c39f1bb6e6fc6cd4bd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 696543b1fc06090609a6404f228970e02a540a8e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543890"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484616"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89543890"
   Возвращает статистику группы рабочей нагрузки и текущую конфигурацию группы рабочей нагрузки в памяти. Это представление можно объединить с представлением sys.dm_resource_governor_resource_pools для получения имени пула ресурсов.  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_resource_governor_workload_groups**.  
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_resource_governor_workload_groups**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -69,8 +69,8 @@ ms.locfileid: "89543890"
 |request_max_memory_grant_percent_numeric|**float**|**Применимо к**: начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Текущее значение параметра максимального объема предоставляемой памяти, в процентах, для отдельного запроса. Не допускает значение NULL.| 
 |pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
-## <a name="remarks"></a>Примечания  
- Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть метаданные сохраненной конфигурации, используйте представление каталога [&#41;инструкции sys. resource_governor_workload_groups &#40;Transact-SQL ](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
+## <a name="remarks"></a>Комментарии  
+ Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть метаданные сохраненной конфигурации, используйте представление каталога [&#41;sys.resource_governor_workload_groups &#40;Transact-SQL ](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
   
  При `ALTER RESOURCE GOVERNOR RESET STATISTICS` успешном выполнении следующие счетчики сбрасываются: `statistics_start_time` , `total_request_count` ,, `total_queued_request_count` , `total_cpu_limit_violation_count` `total_cpu_usage_ms` , `max_request_cpu_time_ms` , `total_lock_wait_count` , `total_lock_wait_time_ms` , `total_query_optimization_count` , `total_suboptimal_plan_generation_count` , `total_reduced_memgrant_count` и `max_request_grant_memory_kb` . Счетчику `statistics_start_time` присваивается значение текущей системной даты и времени, а другим счетчикам присваивается нулевое значение (0).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "89543890"
   
 ## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [sys. resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   

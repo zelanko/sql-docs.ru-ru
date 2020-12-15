@@ -1,6 +1,6 @@
 ---
 description: Определяемые пользователем типы данных больших значений CLR (ODBC)
-title: Большие определяемые пользователем типы данных CLR (ODBC) | Документация Майкрософт
+title: Большие типы User-Defined CLR (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 52944d98e4e3141ffbe036b1166b083195ea7fb4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428166"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483165"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Определяемые пользователем типы данных больших значений CLR (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428166"
   
  Пример, демонстрирующий поддержку ODBC для больших определяемых пользователем типов CLR, см. в разделе [Поддержка больших определяемых пользователем типов](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в SQL Server Native Client см. в разделе [типы больших пользовательских данных CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в SQL Server Native Client см. в разделе [типы больших User-Defined CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
   
 ## <a name="data-format"></a>Формат данных  
  Собственный клиент SQL Server использует значение SQL_SS_LENGTH_UNLIMITED для обозначения того, что размер столбца больше чем 8000 байт для типов больших объектов. Начиная с SQL Server 2008, при размере столбца больше 8000 байт для определяемых пользователем типов данных больших значений CLR используется такое же значение.  
@@ -89,7 +89,7 @@ ms.locfileid: "88428166"
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_DISPLAY_SIZE|2*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DISPLAY_SIZE|2 *n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LITERAL_PREFIX|"0x"|"0x"|  

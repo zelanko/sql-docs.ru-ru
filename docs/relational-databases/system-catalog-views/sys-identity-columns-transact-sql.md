@@ -1,6 +1,6 @@
 ---
 description: sys.identity_columns (Transact-SQL)
-title: sys. identity_columns (Transact-SQL) | Документация Майкрософт
+title: sys.identity_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 97ee01e6-9c9e-4fd9-884b-68b4084669d5
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67282343c26f607ef0d6f44401cdf2a1c291fafd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 195768c830e13f2cb61f04bff9fe67f6eefe6dc4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420138"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484766"
 ---
 # <a name="sysidentity_columns-transact-sql"></a>sys.identity_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Содержит по одной строке для каждого столбца, который является столбцом идентификаторов.  
   
- Представление **sys. identity_columns** наследует строки из представления **sys. Columns** . Представление **sys. identity_columns** возвращает столбцы в представлении **sys. Columns** , а также столбцы **seed_value**, **increment_value**, **LAST_VALUE**и **is_not_for_replication** . Дополнительные сведения см. в разделе [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+ Представление **sys.identity_columns** наследует строки из представления **sys. Columns** . Представление **sys.identity_columns** возвращает столбцы в представлении **sys. Columns** , а также столбцы **seed_value**, **increment_value**, **LAST_VALUE** и **is_not_for_replication** . Дополнительные сведения см. в разделе [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<columns inherited from sys.columns>**||Представление **sys. identity_columns** возвращает все столбцы в представлении **sys. Columns** . Оно также возвращает дополнительные столбцы, описанные далее. Описание столбцов, наследуемых представлением **sys. identity_columns** из **sys. Columns**, см. в разделе [sys. Columns &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).|  
+|**\<columns inherited from sys.columns>**||Представление **sys.identity_columns** возвращает все столбцы в представлении **sys. Columns** . Оно также возвращает дополнительные столбцы, описанные далее. Описание столбцов, наследуемых **sys.identity_columns** представлением из **sys. Columns**, см. в разделе [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).|  
 |**seed_value**|**sql_variant**|Начальное значение для столбца идентификаторов. Тип данных начального значения является тем же, что и тип данных самого столбца.|  
 |**increment_value**|**sql_variant**|Значение приращения для столбца идентификаторов. Тип данных начального значения является тем же, что и тип данных самого столбца.|  
 |**last_value**|**sql_variant**|Последнее значение, сформированное для данного столбца идентификаторов. Тип данных начального значения является тем же, что и тип данных самого столбца.|  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c32343c060eab0d70ba3bbc4419d30809ae745c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7e325b7e88b2958b8870151516f991f27ba79e44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448587"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483345"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ RETCODE bcp_init (
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *szTable*  
- Имя таблицы базы данных, в которую (или из которой) выполняется копирование. Это имя также может включать имя базы данных или владельца. Например, **Pubs. Gracie. titles**, **Pubs.. заголовки**, **Gracie. titles**и **titles** — это имена юридических таблиц.  
+ Имя таблицы базы данных, в которую (или из которой) выполняется копирование. Это имя также может включать имя базы данных или владельца. Например, **Pubs. Gracie. titles**, **Pubs.. заголовки**, **Gracie. titles** и **titles** — это имена юридических таблиц.  
   
  Если *eDirection* имеет значение DB_OUT, *сзтабле* также может быть именем представления базы данных.  
   
@@ -224,7 +224,7 @@ int main() {
   
 ```  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

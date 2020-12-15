@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9943b2c5e05d9cdc90efa8752aedf933ec624db9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a777ec24b0099e6ad4c98ed4f9d42d38f785de36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87241675"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484936"
 ---
 # <a name="creating-sql-server-native-client-tables"></a>Создание SQL Server Native Client таблиц
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87241675"
   
  Когда потребители задают имя таблицы в члене *pwszName* объединения *uname* в параметре *PTableID* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу с таким именем. Имя таблицы подчиняется ограничениям для имен таблиц, принятым в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и может указывать на постоянную таблицу, а также локальную или глобальную временную таблицу. Дополнительные сведения см. в разделе [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Параметр *ppTableID* может иметь значение NULL.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента может создавать имена постоянных или временных таблиц. Когда потребитель устанавливает для параметра *pTableID* значение NULL и задает *ppTableID* для указания на допустимый DBID \* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB Native Client Возвращает созданное имя таблицы в *pwszName* члене *uname* объединения DBID, на которое указывает значение *ppTableID*. Чтобы создать временную, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственную клиентскую OLE DBную таблицу с именем поставщика, потребитель включает свойство таблицы OLE DB DBPROP_TBL_TEMPTABLE в набор свойств таблицы, указанный в параметре *rgPropertySets* . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента — именованные временные таблицы являются локальными.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента может создавать имена постоянных или временных таблиц. Когда потребитель устанавливает для параметра *pTableID* значение NULL и задает *ppTableID* для указания на допустимый DBID \* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB Native Client Возвращает созданное имя таблицы в *pwszName* члене *uname* объединения DBID, на которое указывает значение *ppTableID*. Чтобы создать временную, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственную клиентскую OLE DBную таблицу с именем поставщика, потребитель включает свойство таблицы OLE DB DBPROP_TBL_TEMPTABLE в набор свойств таблицы, указанный в параметре *rgPropertySets* . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB собственного клиента — именованные временные таблицы являются локальными.  
   
  Функция **CreateTable** возвращает значение DB_E_BADTABLEID, если член *eKind* параметра *pTableID* не указывает на DBKIND_NAME.  
   
