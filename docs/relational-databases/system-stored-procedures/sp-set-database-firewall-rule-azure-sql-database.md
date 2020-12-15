@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b6f9130a4250bdb6f9c250bacbcaaa3943eeef3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: edbe51dc6694a94fcf68b012153e065906ce2208
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810507"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472645"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Создает или обновляет правила брандмауэра уровня базы данных для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Правила брандмауэра базы данных можно настроить для базы данных **master** и для пользовательских баз данных на [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Правила брандмауэра базы данных особенно полезны при использовании пользователей автономной базы данных. Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Создает или обновляет правила брандмауэра уровня базы данных для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Правила брандмауэра базы данных можно настроить для базы данных **master** и для пользовательских баз данных на [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Правила брандмауэра базы данных особенно полезны при использовании пользователей автономной базы данных. Дополнительные сведения см. в статье [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   

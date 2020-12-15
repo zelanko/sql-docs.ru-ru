@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_index_columns (Transact-SQL)
-title: sys. fulltext_index_columns (Transact-SQL) | Документация Майкрософт
+title: sys.fulltext_index_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c1dbd0b4885ef9c1320a505eba17b21b5c8964c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c514fbfd5d82038995bb6db006a9013c28674202
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460656"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472985"
 ---
 # <a name="sysfulltext_index_columns-transact-sql"></a>sys.fulltext_index_columns (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88460656"
 |**object_id**|**int**|Идентификатор объекта, частью которого является этот столбец.|  
 |**column_id**|**int**|Идентификатор столбца, который является частью полнотекстового индекса.|  
 |**type_column_id**|**int**|Идентификатор столбца типа, в котором хранятся предоставленные пользователем расширения файла-". doc", ". xls" и т. д. для документа в заданной строке. Столбец типа указан только для тех столбцов, данные которых требуют фильтрации во время полнотекстового индексирования. Значение NULL, если не применимо. Дополнительные сведения см. в разделе [Настройка фильтров для поиска и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md).|  
-|**language_id**|**int**|Код языка, у которого средство разбиения по словам используется для индексации этого полнотекстового столбца.<br /><br /> 0 = нейтральный<br /><br /> Дополнительные сведения см. в разделе [sys. fulltext_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).|  
+|**language_id**|**int**|Код языка, у которого средство разбиения по словам используется для индексации этого полнотекстового столбца.<br /><br /> 0 = нейтральный<br /><br /> Дополнительные сведения см. в разделе [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).|  
 |**statistical_semantics**|**int**|1 = для этого столбца, помимо полнотекстового индексирования, включена статистическая семантика.|  
   
 ## <a name="permissions"></a>Разрешения  

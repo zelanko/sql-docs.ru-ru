@@ -2,18 +2,18 @@
 title: История драйверов для Microsoft SQL Server | Документация Майкрософт
 description: На этой странице описываются все технологии Майкрософт для подключения к данным на сервере SQL Server.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 12/08/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5db99b78cc5c5d251baee6028d1c9bc4e7448bf
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: dee1514230f3e0ce0f0ba4c0d3af904cc90c9720
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885771"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933813"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>История драйверов для Microsoft SQL Server
 
@@ -21,11 +21,11 @@ ms.locfileid: "82885771"
 
 ## <a name="odbc"></a>ODBC
 
-Есть три поколения Microsoft ODBC Driver for SQL Server. Первый драйвер ODBC "SQL Server" по-прежнему входит в состав [компонентов доступа к данным Windows DAC](#microsoft-or-windows-data-access-components). Использовать этот драйвер при разработке новых продуктов не рекомендуется. Начиная с SQL Server 2005 [SQL Server Native Client](#sql-server-native-client) содержит интерфейс ODBC и драйвер ODBC, поставляемый в составе версий от SQL Server 2005 до версии SQL Server 2012. Использовать этот драйвер при разработке новых продуктов не рекомендуется. После SQL Server 2012 появился драйвер [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server). Именно в него добавляются все новые серверные возможности и компоненты.
+Есть три поколения Microsoft ODBC Driver for SQL Server. Первый драйвер ODBC "SQL Server" по-прежнему входит в состав [компонентов доступа к данным Windows DAC](#microsoft-or-windows-data-access-components). Этот драйвер не рекомендуется использовать в новых разработках. Начиная с SQL Server 2005 [SQL Server Native Client](#sql-server-native-client) содержит интерфейс ODBC и драйвер ODBC, поставляемый в составе версий от SQL Server 2005 до версии SQL Server 2012. Этот драйвер также не рекомендуется использовать в новых разработках. После SQL Server 2012 появился драйвер [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server). Именно в него добавляются все новые серверные возможности и компоненты.
 
 ### <a name="sql-server-native-client"></a>собственный клиент SQL Server
 
-SQL Server Native Client — это изолированная библиотека, которая используется как для OLE DB, так и для ODBC. SQL Server Native Client (SNAC) входил в состав с SQL Server 2005 по SQL Server 2012. SQL Server Native Client можно использовать для приложений, которым нужны новые возможности, появившиеся в версиях с SQL Server 2005 до SQL Server 2012. (Компоненты доступа к данным Microsoft/Windows не обновляются для этих новых функций в SQL Server.) Для новых возможностей, введенных после SQL Server 2012, SQL Server Native Client обновляться не будет. Если вам нужны новые возможности SQL Server, переходите на Microsoft ODBC Driver for SQL Server или Microsoft OLE DB для SQL Server.
+SQL Server Native Client — это изолированная библиотека, которая используется как для OLE DB, так и для ODBC. SQL Server Native Client (SNAC) входил в состав с SQL Server 2005 по SQL Server 2012. SQL Server Native Client можно использовать для приложений, которым нужны новые возможности, появившиеся в версиях с SQL Server 2005 до SQL Server 2012. (Компоненты доступа к данным Microsoft/Windows не обновляются для этих новых функций в SQL Server.) Для новых возможностей, введенных после SQL Server 2012, SQL Server Native Client обновляться не будет. Если вам нужны новые возможности SQL Server, переходите на Microsoft ODBC Driver for SQL Server или Microsoft OLE DB для SQL Server.
 
 Полное описание SQL Server Native Client см. в [документации SQL Server Native Client](../relational-databases/native-client/sql-server-native-client-programming.md).
 
@@ -35,11 +35,19 @@ SQL Server Native Client — это изолированная библиоте
 
 ## <a name="ole-db"></a>OLE DB
 
-Существует три поколения поставщиков Microsoft OLE DB для SQL Server. Microsoft OLE DB Provider for SQL Server (SQLOLEDB) по-прежнему поставляется в составе [компонентов доступа к данным Windows](#microsoft-or-windows-data-access-components). В этот поставщик не будут добавляться новые возможности, и его не рекомендуется использовать при разработке новых продуктов. Начиная с SQL Server 2005 [SQL Server Native Client](#sql-server-native-client) содержит интерфейс поставщика OLE DB (SQLNCLI) и является поставщиком OLE DB, который поставляется в версиях с SQL Server 2005 по SQL Server 2017. [С 2011 года он считается устаревшими](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access) и мы не рекомендуем использовать этот драйвер для разработки новых приложений. В 2017 году технология доступа к данным OLE DB была снова [объявлена рекомендуемой и на 2018 год был запланирован новый выпуск ](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server). Новый поставщик OLE DB называется Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL) и именно он поддерживается в настоящее время.
+Существует три поколения поставщиков Microsoft OLE DB для SQL Server. Microsoft OLE DB Provider for SQL Server (SQLOLEDB) по-прежнему поставляется в составе [компонентов доступа к данным Windows](#microsoft-or-windows-data-access-components). В этот поставщик не будут добавляться новые возможности, и его не рекомендуется использовать при разработке новых продуктов. Начиная с SQL Server 2005 [SQL Server Native Client](#sql-server-native-client) содержит интерфейс поставщика OLE DB (SQLNCLI) и является поставщиком OLE DB, который поставляется в версиях с SQL Server 2005 по SQL Server 2017. [С 2011 года он считается устаревшим](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access) и мы не рекомендуем использовать этот драйвер для разработки новых приложений. В 2017 году технология доступа к данным OLE DB была [объявлена рекомендуемой и на 2018 год был запланирован новый выпуск ](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server). Новый поставщик OLE DB называется Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL) и именно он поддерживается в настоящее время.
 
 ## <a name="adonet"></a>ADO.NET
 
-ADO.NET впервые появился в составе платформы Microsoft.NET. Этот компонент поддерживается и постоянно улучшается и по сей день. Это основной компонент платформы Microsoft .NET Framework. Дополнительные сведения см. в статье [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md) (Microsoft ADO.NET для SQL Server).
+ADO.NET — это набор классов, определяющих интерфейс для доступа к любым типам источников данных, как реляционных, так и нереляционных. ADO.NET впервые появился в составе платформы Microsoft.NET. Этот компонент продолжает поддерживаться и улучшаться в .NET. Библиотека SqlClient — это поставщик данных ADO.NET, который обеспечивает подключение к источникам данных SQL Server и SQL Azure.
+
+### <a name="systemdatasqlclient"></a>System.Data.SqlClient
+
+System.Data.SqlClient входит в состав .NET Framework и .NET Core. До 2019 года он получал регулярные обновления компонентов. После объявления о будущих планах по развитию [.NET Core, .NET Framework](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) и [платформы .NET в целом](https://devblogs.microsoft.com/dotnet/introducing-net-5/) потребовалось выделить разработку SqlClient в пакет за пределами .NET. System.Data.SqlClient по-прежнему поддерживается, но не получает обновления компонентов и не рекомендуется к использованию в новых разработках.
+
+### <a name="microsoftdatasqlclient"></a>Microsoft.Data.SqlClient
+
+Поставщик данных Microsoft SqlClient для SQL Server, [представленный в 2019 году](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/), является поставщиком данных ADO.NET, который поддерживает приложения, предназначенные для .NET Framework, .NET Core и .NET Standard. Дополнительные сведения о пространстве имен Microsoft.Data.SqlClient см. в разделе [Microsoft ADO.NET для SQL Server](ado-net/microsoft-ado-net-sql-server.md).
 
 ## <a name="jdbc"></a>JDBC
 
@@ -67,7 +75,7 @@ ADO.NET впервые появился в составе платформы Mic
 
 ## <a name="microsoft-or-windows-data-access-components"></a>Компоненты доступа к данным Microsoft или Windows
 
-Компоненты доступа к данным Microsoft/Windows (MDAC/WDAC) поставляются вместе с Windows. Они обеспечивают обратную совместимость приложений, но не входят в текущий стек технологий SQL Server. Новые возможности в компоненты MDAC/WDAC добавляться не будут, и их не рекомендуется использовать для разработки новых приложений.
+Компоненты доступа к данным Microsoft/Windows (MDAC/WDAC) поставляются вместе с Windows. Они обеспечивают обратную совместимость приложений, но не входят в текущий стек технологий SQL Server. Новые возможности в компоненты MDAC/WDAC добавляться не будут, и их не рекомендуется использовать для разработки новых приложений.
 
 В этом документе стек MDAC/WDAC можно разделить на следующие компоненты с точки зрения технологий и продуктов:
 
@@ -79,8 +87,8 @@ ADO.NET впервые появился в составе платформы Mic
 
 MDAC/WDAC содержит следующие компоненты:
 
-* **ODBC**. Microsoft Open Database Connectivity (ODBC) — это интерфейс языка программирования C, позволяющий приложениям получать доступ к данным из различных систем управления базами данных (СУБД). Приложения, использующие этот API-интерфейс, ограничены только доступом к реляционным источникам данных.
-* **OLE DB**. OLE DB — это набор COM-интерфейсов для доступа к данным в различных хранилищах данных. Поставщики OLE DB дают возможность работать с данными в базах данных, файловых системах, хранилищах сообщений, службах каталогов, рабочих процессах и хранилищах документов.
+* **ODBC**. Microsoft Open Database Connectivity (ODBC) — это интерфейс языка программирования C, позволяющий приложениям получать доступ к данным из систем управления базами данных (СУБД) различных типов. Приложения, использующие этот API-интерфейс, ограничены только доступом к реляционным источникам данных.
+* **OLE DB**. OLE DB — это набор COM-интерфейсов для доступа к данным в хранилищах данных различных типов. Поставщики OLE DB дают возможность работать с данными в базах данных, файловых системах, хранилищах сообщений, службах каталогов, рабочих процессах и хранилищах документов.
 * **ADO**. Объекты данных ActiveX (ADO) предоставляют модель программирования высокого уровня. Несмотря на то, что ADO дает чуть меньшую производительность, чем код для OLE DB или ODBC, ADO легко освоить и использовать. Этот компонент можно использовать в языках сценариев, таких как Microsoft Visual Basic Scripting Edition (VBScript) или Microsoft JScript.
 * **ADOMD**. ADO многомерных данных (ADOMD) используется с поставщиками многомерных данных, такими как поставщик Microsoft OLAP, также известный как поставщик Microsoft Analysis Services. С момента выпуска MDAC 2.0 существенные улучшения в компонент не вносились.
 * **ADOX**. Расширения ADO для языка DDL и безопасности (ADOX) позволяют создавать и изменять определения баз данных, таблиц, индексов или хранимых процедур. ADOX можно использовать с любым поставщиком. Поставщик OLE DB для Microsoft Jet обеспечивает полную поддержку ADOX, а поставщик OLE DB для Microsoft SQL Server предоставляет ограниченную поддержку.
@@ -105,10 +113,10 @@ MDAC/WDAC содержит следующие компоненты:
   > [!NOTE]
   > Приложения SQL Server также могут получить доступ к файлам системы Office 2007 и более ранней версии из подключений к разнородным данным SQL Server и возможностей служб интеграции, с помощью драйвера системы Office 2007. Кроме того, 64-разрядные приложения SQL Server могут получать доступ к 32-разрядным файлам Jet и системы Office 2007, используя 32-разрядные службы SQL Server Integration Services (SSIS) в 64-разрядной среде Windows.
 
-* **MSDADS**. С помощью поставщика Microsoft OLE DB Provider for Data Shaping (MSDADS) в приложении можно создавать иерархические связи между ключами, полями или наборами строк. С момента выпуска MDAC 2.1 в него не вносились существенные улучшения. Этот поставщик является нерекомендуемым. Корпорация Майкрософт рекомендует использовать XML вместо MSDADS.
+* **Поставщик Microsoft OLE DB Provider for Data Shaping (MSDADS).** С помощью поставщика MSDADS в приложении можно создавать иерархические связи между ключами, полями или наборами строк. С момента выпуска MDAC 2.1 в него не вносились существенные улучшения. Этот поставщик является нерекомендуемым. Корпорация Майкрософт рекомендует использовать XML вместо MSDADS.
 * **Oracle ODBC and Oracle OLE DB**. Драйвер Microsoft Oracle ODBC (Oracle ODBC) и поставщик OLE DB для Oracle (Майкрософт) (Oracle OLE DB) предоставляют доступ к серверам базы данных Oracle. Они создаются с помощью интерфейса Oracle Call Interface (OCI) версии 7 и обеспечивают полную поддержку Oracle 7. Кроме того, он использует эмуляцию Oracle 7, чтобы предоставить ограниченную поддержку для баз данных Oracle 8. Oracle больше не поддерживает приложения, использующие OCI версии 7. Эти технологии являются нерекомендуемыми. При использовании источников данных Oracle следует перейти на предоставляемый Oracle драйвер и поставщик.
-* **RDS**. Remote Data Services (RDS) — это собственный механизм Microsoft для доступа к удаленным объектам ADO Recordset через Интернет или интрасеть. Технология RDS является нерекомендуемой; существенные изменения в возможности RDS 2.1 не вносились. Корпорация Майкрософт выпустила .NET Framework, которая обладает широкими возможностями SOAP и заменяет компоненты RDS. После Windows 7 все серверные компоненты RDS будут удалены из операционной системы.
-* **JRO**. Объекты репликации Jet (JRO) являются нерекомендуемыми. JRO используется в ADO с базами данных Jet ( *.mdb) для создания и сжатия баз данных Jet (.mdb) и выполнения Jet Replication Management. MDAC 2.7 будет последним выпуском. JRO не будет доступен в 64-разрядной операционной системе Windows. JRO не поддерживается в формате файлов Microsoft Access 2007 (* .accdb).
+* **Служба Remote Data Service (RDS).** RDS — это собственный механизм Microsoft для доступа к удаленным объектам ADO Recordset через Интернет или интрасеть. Технология RDS является нерекомендуемой; существенные изменения в возможности RDS 2.1 не вносились. Корпорация Майкрософт выпустила .NET Framework, которая обладает широкими возможностями SOAP и заменяет компоненты RDS. После Windows 7 все серверные компоненты RDS будут удалены из операционной системы.
+* **Объекты репликации Jet (JRO).** JRO не рекомендуется к использованию. JRO используется в ADO с базами данных Jet ( *.mdb) для создания и сжатия баз данных Jet (.mdb) и выполнения Jet Replication Management. MDAC 2.7 будет последним выпуском. JRO не будет доступен в 64-разрядной операционной системе Windows. JRO не поддерживается в формате файлов Microsoft Access 2007 (* .accdb).
 * **Поддержка 16-разрядных ODBC**. При использовании 16-разрядных приложений следует перейти на 32-разрядное приложение. 16-разрядные функции являются нерекомендуемыми и удаляются из 64-разрядных операционных систем. Дополнительные сведения см. в [статье базы знаний 896458](https://support.microsoft.com/kb/896458).
 * **Простой поставщик OLEDB (MSDAOSP)** . Простой поставщик OLEDB предлагает платформу для быстрого создания поставщиков OLE DB с простыми данными. MSDAOSP является нерекомендуемым.
 * **Библиотека курсоров ODBC**. Библиотека курсоров ODBC (ODBCCR32.dll) предоставляет ограниченные курсоры данных на стороне клиента. Библиотека курсоров ODBC является нерекомендуемой; в качестве замены приложение может использовать реализации курсоров на стороне сервера.
@@ -140,7 +148,7 @@ MDAC/WDAC содержит следующие компоненты:
 
 * **DB-Library**. DB-Library — это модель программирования для SQL Server, которая содержит программный интерфейс C. С момента выхода SQL Server 6.5 в библиотеке DB-Library улучшения в возможности не вносились. Его последний выпуск — SQL Server 2000, и он не будет перенесен в 64-разрядную операционную систему Windows.
 * **Embedded SQL (E-SQL)** . E-SQL — это модель программирования для SQL Server, которая позволяет внедрять инструкции Transact-SQL в код Visual C. Начиная с SQL Server 6.5, в E-SQL улучшения в возможности не вносились Его последний выпуск — SQL Server 2000, и он не будет перенесен в 64-разрядную операционную систему Windows.
-* **Объекты доступа к данным (DAO)** . DAO предоставляет доступ к базам данных JET (Access). Этот программный интерфейс можно использовать в языках Microsoft Visual Basic, Microsoft Visual C++, а также в языках сценариев. Он входил в состав Microsoft Office 2000 и Office XP. DAO 3.6 — это последняя версия этой технологии. Она не будет доступна в 64-разрядной операционной системе Windows.
+* **Объекты доступа к данным (DAO)** . DAO предоставляет доступ к базам данных JET (Access). Этот программный интерфейс можно использовать в языках Microsoft Visual Basic, Microsoft Visual C++, а также в языках сценариев. Он входил в состав Microsoft Office 2000 и Office XP. DAO 3.6 — это последняя версия этой технологии. Он не будет доступен в 64-разрядной операционной системе Windows.
 * **Remote Data Objects (RDO)** . RDO разрабатывалась специально для доступа к удаленным реляционным источникам данных ODBC и упрощает использование ODBC без сложного кода приложения. Она входила в состав Microsoft Visual Basic версий 4, 5 и 6. RDO версии 2.0 была последней версией этой технологии.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -18,13 +18,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 06/10/2016
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94773e515b4bb184b1ff669c2bddb05c5723e208
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 21b823aeaa319263a3e90a3ddd917e9605506c0c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067369"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472865"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 
@@ -46,12 +46,12 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>Аргументы  
  *\@tsql*  
- Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* может иметь тип **nvarchar (**_n_*_)_* или **nvarchar (max)** .  
+ Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* может иметь тип **nvarchar (**_n_*_)_* или **nvarchar (max)**.  
   
  *\@params*  
- \@params предоставляет строку объявления для параметров [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, аналогично sp_executesql. Параметры могут быть **nvarchar (n)** или **nvarchar (max)** .  
+ \@params предоставляет строку объявления для параметров [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, аналогично sp_executesql. Параметры могут быть **nvarchar (n)** или **nvarchar (max)**.  
   
- — Одна строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch* . Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — это заполнитель, указывающий дополнительные определения параметров. Каждый параметр, указанный в stmt, должен быть определен в \@ параметре params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, \@ параметр params не требуется. Значением по умолчанию для этого аргумента является NULL.  
+ — Одна строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — это заполнитель, указывающий дополнительные определения параметров. Каждый параметр, указанный в stmt, должен быть определен в \@ параметре params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, \@ параметр params не требуется. Значением по умолчанию для этого аргумента является NULL.  
   
  *\@include_browse_information*  
  Если имеет значение 1, то каждый запрос анализируется так, как будто он имеет параметр FOR BROWSE для запроса. Возвращаются дополнительные ключевые столбцы и сведения об исходной таблице.  
@@ -67,7 +67,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_nullable**|**bit**|Содержит следующие значения.<br /><br /> Значение 1, если в столбце допускаются значения NULL.<br /><br /> Значение 0, если в столбце не допускаются значения NULL.<br /><br /> Значение 1, если невозможно определить, допускаются ли в столбце значения NULL.|  
 |**system_type_id**|**int**|Содержит system_type_id типа данных столбца, как указано в представлении sys. types. Для типов CLR, даже если system_type_name возвращает NULL, этот столбец вернет значение 240.|  
 |**system_type_name**|**nvarchar(256)**|Содержит имя и аргументы (длина, точность, масштаб и т. д.), указанные для типа данных столбца.<br /><br /> Если тип данных является пользовательским псевдонимом, то здесь указывается базовый системный тип данных.<br /><br /> Если тип данных является определенным пользователем типом CLR, то в этом столбце возвращается NULL.|  
-|**max_length**|**smallint**|Максимальная длина столбца (в байтах).<br /><br /> -1 = тип данных столбца — **varchar (max)** , **nvarchar (max)** , **varbinary (max)** или **XML** .<br /><br /> Для **текстовых** столбцов значение **max_length** будет равно 16, а значение задается **sp_tableoption "text in row"** .|  
+|**max_length**|**smallint**|Максимальная длина столбца (в байтах).<br /><br /> -1 = тип данных столбца — **varchar (max)**, **nvarchar (max)**, **varbinary (max)** или **XML**.<br /><br /> Для **текстовых** столбцов значение **max_length** будет равно 16, а значение задается **sp_tableoption "text in row"**.|  
 |**precision**|**tinyint**|Точность столбца, если он является числовым. В противном случае возвращается 0.|  
 |**масштаб**|**tinyint**|Масштаб значений столбца в случае числового выражения. В противном случае возвращается 0.|  
 |**collation_name**|**sysname**|Имя параметров сортировки столбца, если он символьный. В противном случае возвращается NULL.|  
@@ -104,7 +104,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type_desc**|**nvarchar(60)**|Содержит короткую строку в верхнем регистре, представляющую возвращаемую ошибку. Сопоставляется с error_type. См. список под замечаниями.|  
   
 ## <a name="remarks"></a>Комментарии  
- В этой функции используется тот же алгоритм, что и в процедуре **sp_describe_first_result_set** . Дополнительные сведения см. в разделе [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ В этой функции используется тот же алгоритм, что и в процедуре **sp_describe_first_result_set**. Дополнительные сведения см. в разделе [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  В следующей таблице содержится список типов ошибок и их описания  
   
@@ -119,7 +119,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |7|EXTENDED_PROCEDURE|Результат не удалось определить из-за того, что расширенная хранимая процедура потенциально могла вернуть первый результат.|  
 |8|UNDECLARED_PARAMETER|Не удалось определить результат, так как тип данных одного или нескольких столбцов результирующего набора может зависеть от необъявленного параметра.|  
 |9|RECURSION|Не удается определить результат, так как в пакете содержится рекурсивная инструкция.|  
-|10|TEMPORARY_TABLE|Результат не удалось определить из-за того, что пакет содержит временную таблицу и не поддерживается хранимой процедурой **sp_describe_first_result_set** .|  
+|10|TEMPORARY_TABLE|Результат не удалось определить из-за того, что пакет содержит временную таблицу и не поддерживается хранимой процедурой **sp_describe_first_result_set**.|  
 |11|UNSUPPORTED_STATEMENT|Результат не удалось определить из-за того, что пакет содержит инструкцию, не поддерживаемую хранимой процедурой **sp_describe_first_result_set** (FETCH, REVERT и т. д.).|  
 |12|OBJECT_TYPE_NOT_SUPPORTED|\@Переданный функции OBJECT_ID не поддерживается (т. е. не является хранимой процедурой)|  
 |13|OBJECT_DOES_NOT_EXIST|\@Object_id, переданный функции, не найден в системном каталоге.|  
@@ -128,9 +128,9 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  Требуется разрешение для выполнения \@ аргумента tsql.  
   
 ## <a name="examples"></a>Примеры  
- Дополнительные примеры в разделе [sp_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) можно адаптировать для использования **sys.dm_exec_describe_first_result_set** .  
+ Дополнительные примеры в разделе [sp_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) можно адаптировать для использования **sys.dm_exec_describe_first_result_set**.  
   
-### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>А. Возврат сведений об отдельной инструкции Transact-SQL  
+### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. Возврат сведений об отдельной инструкции Transact-SQL  
  Следующий код возвращает сведения о результатах инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  
@@ -171,7 +171,7 @@ N'@CustomerID int', 0) AS a;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

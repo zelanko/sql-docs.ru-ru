@@ -1,6 +1,6 @@
 ---
 description: sys.crypt_properties (Transact-SQL)
-title: sys. crypt_properties (Transact-SQL) | Документация Майкрософт
+title: sys.crypt_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4feac22b04fb06053441e046fd9f35ece6dbd33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09372a367d3469ffa0d2de6a4ea97bb1bbe10c34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469984"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473045"
 ---
 # <a name="syscrypt_properties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88469984"
 |**class**|**tinyint**|Задает класс, для которого существует свойство.<br /><br /> 1 = Объект или столбец<br /> 5 = Сборка|  
 |**class_desc**|**nvarchar(60)**|Описание класса, для которого существует свойство.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|Идентификатор предмета, для которого существует свойство, интерпретируемое согласно классу|  
-|**отпечатк**|**varbinary(32)**|Хэш SHA-1 используемого сертификата или асимметричного ключа.|  
+|**thumbprint**|**varbinary(32)**|Хэш SHA-1 используемого сертификата или асимметричного ключа.|  
 |**crypt_type**|**char (4)**|Тип шифрования.<br /><br /> СПВК = подписан закрытым ключом сертификата<br /><br /> SPVC = подписано асимметричным закрытым ключом<br /><br /> CPVC = Подпись закрытым ключом сертификата<br /><br /> CPVA = Подпись закрытым асимметричным ключом|  
 |**crypt_type_desc**|**nvarchar(60)**|Описание типа шифрования.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY|  
 |**crypt_property**|**varbinary(max)**|Подписанные или зашифрованные биты. Для подписанного модуля это биты сигнатуры модуля.|  

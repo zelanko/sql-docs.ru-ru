@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5ae01aef91edd1a7fe45c9203be407dbf7620c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2478558cdb8df2de852fcdd4654c90d51b8356a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455927"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473635"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,7 +88,7 @@ RETCODE bcp_colfmt (
   
  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] символьных и двоичных типов данных *cbUserData* может быть SQL_VARLEN_DATA, SQL_NULL_DATA, 0 или положительным значением. Если *cbUserData* SQL_VARLEN_DATA, система использует либо индикатор длины, если он присутствует, либо последовательность признаков конца для определения длины данных. Если задан и признак длины, и последовательность признака конца, то при массовом копировании используется значение, применение которого вызывает копирование данных наименьшего объема. Если *cbUserData* имеет SQL_VARLEN_DATA, то типом данных является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] символьный или двоичный тип, и не указан ни индикатор длины, ни последовательность признаков конца, система возвращает сообщение об ошибке.  
   
- Если значение *cbUserData* больше или равно 0, то система рассматривает значение *cbUserData* как максимальную длину данных. Но если в дополнение к положительному значению для *cbUserData*указан признак длины или последовательность признака конца, то система определяет объем данных методом, который приведет к копированию наименьшего объема данных.  
+ Если значение *cbUserData* больше или равно 0, то система рассматривает значение *cbUserData* как максимальную длину данных. Но если в дополнение к положительному значению для *cbUserData* указан признак длины или последовательность признака конца, то система определяет объем данных методом, который приведет к копированию наименьшего объема данных.  
   
  Значение *cbUserData* представляет объем данных в байтах. Если символьные данные представлены строкой знаков в Юникоде, то положительное значение параметра *cbUserData* представляет количество символов, умноженное на размер символа в байтах.  
   
@@ -127,9 +127,9 @@ RETCODE bcp_colfmt (
   
 -   длина дополнительной последовательности байт, служащей признаком конца.  
   
- Каждый вызов **bcp_colfmt** задает формат для одного столбца пользовательского файла. Например, чтобы изменить параметры по умолчанию для трех столбцов в файле пользовательских данных, состоящий из пяти столбцов, сначала вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, а затем вызовите **bcp_colfmt** пять раз, и три из этих вызовов задавая свой собственный формат. Для оставшихся двух вызовов задайте для *еусердататипе* значение 0, а для свойств *кбиндикатор*, *cbUserData*и *кбусердататерм* — 0, SQL_VARLEN_DATA и 0 соответственно. Эта процедура копирует все пять столбцов. Для трех применяется заданный измененный формат, а для двух оставшихся — формат по умолчанию.  
+ Каждый вызов **bcp_colfmt** задает формат для одного столбца пользовательского файла. Например, чтобы изменить параметры по умолчанию для трех столбцов в файле пользовательских данных, состоящий из пяти столбцов, сначала вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, а затем вызовите **bcp_colfmt** пять раз, и три из этих вызовов задавая свой собственный формат. Для оставшихся двух вызовов задайте для *еусердататипе* значение 0, а для свойств *кбиндикатор*, *cbUserData* и *кбусердататерм* — 0, SQL_VARLEN_DATA и 0 соответственно. Эта процедура копирует все пять столбцов. Для трех применяется заданный измененный формат, а для двух оставшихся — формат по умолчанию.  
   
- Для *кбиндикатор*значение 8 означает, что тип больших значений теперь является допустимым. Если для поля, которому соответствует столбец с новым типом max, указан префикс, его значение можно установить только в 8. Дополнительные сведения см. в разделе [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
+ Для *кбиндикатор* значение 8 означает, что тип больших значений теперь является допустимым. Если для поля, которому соответствует столбец с новым типом max, указан префикс, его значение можно установить только в 8. Дополнительные сведения см. в разделе [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   
  Функция **bcp_columns** должна вызываться перед вызовами функции **bcp_colfmt**.  
   
@@ -146,7 +146,7 @@ RETCODE bcp_colfmt (
   
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

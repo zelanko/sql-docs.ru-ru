@@ -2,7 +2,7 @@
 title: Основные сведения об управлении параллелизмом
 description: Сведения об управлении параллелизмом и сохранении целостности базы данных при разработке многопользовательского приложения с использованием OLE DB Driver for SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: c44f52697fa8048a8c7db2286c3e69114f658152
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435305"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900947"
 ---
 # <a name="understanding-concurrency-control"></a>Основные сведения об управлении параллелизмом
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "87435305"
   Под управлением параллелизмом подразумевают различные техники, которые используются для сохранения целостности базы данных, когда несколько пользователей обновляют строки одновременно. Неверный параллелизм может привести к проблемам, таким как чтение фантомных данных, чтение недействительных данных и неповторяемые чтения. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] реализует интерфейсы всех механизмов параллелизма, используемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для разрешения этих проблем.  
   
 > [!NOTE]  
->  Дополнительные сведения о параллелизме [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе "Управление параллельным доступом к данным" электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Дополнительные сведения о параллелизме [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе ["Управление параллельным доступом к данным"](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#managing-concurrent-data-access).  
   
 ## <a name="remarks"></a>Remarks  
  Драйвер JDBC поддерживает следующие типы параллелизма.  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_log_stats (Transact-SQL)
-title: sys. dm_db_log_stats (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_log_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98c8b45ccde39b7155443b1ef7fabd994f6b26ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5a5ea85a212e33a3e26ef295cc4d38c84967560a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550310"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472835"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "89550310"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |Идентификатор базы данных |  
-|recovery_model |**nvarchar(60)**   |   Модель восстановления базы данных. Ниже перечислены возможные значения. <br /> ПРОСТОЙ<br /> BULK_LOGGED <br /> FULL |  
+|recovery_model |**nvarchar(60)**   |   Модель восстановления базы данных. Возможные значения: <br /> ПРОСТОЙ<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   Текущий начальный [регистрационный номер транзакции в журнале](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) в журнале транзакций.|  
 |log_end_lsn    |**nvarchar(24)**   |   Регистрационный [номер транзакции в журнале (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) последней записи журнала в журнале транзакций.|  
 |current_vlf_sequence_number    |**bigint** |   Текущий порядковый номер [файла виртуального журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) во время выполнения.|  
@@ -62,7 +62,7 @@ ms.locfileid: "89550310"
 |total_log_size_mb  |**float**  |   Общий размер журнала транзакций в МБ. |  
 |active_vlf_count   |**bigint** |   Общее число активных [виртуальных файлов журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) в журнале транзакций.|  
 |active_log_size_mb |**float**  |   Общий размер журнала активных транзакций в МБ.|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   Причина усечения журнала задержки. Значение совпадает со  `log_reuse_wait_desc` столбцом `sys.databases` .  (Более подробное объяснение этих значений см. [в журнале транзакций](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Ниже перечислены возможные значения. <br />NOTHING;<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />РЕПЛИКАЦИЯ<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />ДРУГИЕ ВРЕМЕННЫЕ |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   Причина усечения журнала задержки. Значение совпадает со  `log_reuse_wait_desc` столбцом `sys.databases` .  (Более подробное объяснение этих значений см. [в журнале транзакций](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Возможные значения: <br />NOTHING;<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />РЕПЛИКАЦИЯ<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />ДРУГИЕ ВРЕМЕННЫЕ |  
 |log_backup_time    |**datetime**   |   Время последнего резервного копирования журнала транзакций.|   
 |log_backup_lsn |**nvarchar(24)**   |   [Номер LSN](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)последней резервной копии журнала транзакций.|   
 |log_since_last_log_backup_mb   |**float**  |   Размер журнала в МБ с момента последнего резервного копирования журнала транзакций [(номер LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
@@ -73,7 +73,7 @@ ms.locfileid: "89550310"
 |recovery_vlf_count |**bigint** |   Общее число [файлов виртуального журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) для восстановления при отработке отказа или перезапуске сервера. |  
 
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 При запуске `sys.dm_db_log_stats` базы данных, участвующей в группе доступности в качестве вторичной реплики, будет возвращено только подмножество полей, описанных выше.  В настоящее время `database_id` `recovery_model` `log_backup_time` при выполнении в базе данных-получателе будут возвращаться только, и.   
 
 ## <a name="permissions"></a>Разрешения  

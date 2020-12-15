@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adf2a1eb88397acbbc8e092eb320e15f239ae8f2
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cad75b88b14fd9bc64acbbd8b167619d3dbcc2e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834522"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472885"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>\_рекомендации по настройке sys.DM DB \_ \_ (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "91834522"
 
  `currentValue` поле в `state` столбце может иметь следующие значения:
  
- | Состояние | Описание |
+ | Status | Описание |
  |--------|-------------|
  | `Active` | Рекомендация активна и еще не применена. Пользователь может принять сценарий рекомендаций и выполнить его вручную. |
  | `Verifying` | Рекомендация применяется, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] а внутренний процесс проверки сравнивает производительность принудительного плана с регрессивным планом. |

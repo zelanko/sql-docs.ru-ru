@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21cab8507af433b39a6be6e35063d8a89c713af3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 42b33bd1c94d9cf4d99a7f9061517d5d3de39b3a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868874"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473525"
 ---
 # <a name="process-odbc-errors-odbc"></a>Обработка ошибок ODBC (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Для получения сообщений ODBC можно использовать две функции ODBC: [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) и [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Для получения в полях диагностики **SQLState**, **pfNative**и **ErrorMessage** сведений, касающихся ODBC, вызывайте функцию [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) до тех пор, пока она не вернет значение SQL_NO_DATA. Чтобы получить отдельные поля, можно вызвать функцию [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) для каждой записи диагностики. Все зависящие от драйвера поля нужно получить с помощью функции **SQLGetDiagField**.  
+  Для получения сообщений ODBC можно использовать две функции ODBC: [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) и [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Для получения в полях диагностики **SQLState**, **pfNative** и **ErrorMessage** сведений, касающихся ODBC, вызывайте функцию [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) до тех пор, пока она не вернет значение SQL_NO_DATA. Чтобы получить отдельные поля, можно вызвать функцию [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) для каждой записи диагностики. Все зависящие от драйвера поля нужно получить с помощью функции **SQLGetDiagField**.  
   
  [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) и [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) обрабатываются диспетчером драйверов ODBC, а не отдельным драйвером. Диспетчер драйверов ODBC не кэширует зависящие от драйвера поля диагностики, пока не будет установлено соединение. Вызов функции [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) для зависящих от драйвера полей диагностики невозможен до установления соединения. Это касается и команд соединения ODBC, даже если они возвращают значение SQL_SUCCESS_WITH_INFO. Зависящие от драйвера поля диагностики будут недоступны до следующего вызова функции ODBC.  
   

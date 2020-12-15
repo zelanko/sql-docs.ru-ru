@@ -1,6 +1,6 @@
 ---
 description: sys.fn_check_object_signatures (Transact-SQL)
-title: sys. fn_check_object_signatures (Transact-SQL) | Документация Майкрософт
+title: sys.fn_check_object_signatures (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dc2f5c8700bef804b77e97917250152988baf7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 652f7d896d68097d081d209fd6617a8a3b389eb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481837"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472775"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -53,7 +53,7 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- Аргумент \@*class* имеет тип **sysname**.  
+ \@Аргумент *Class* имеет тип **sysname**.  
   
  { \@ *Thumbprint* }  
  Хэш SHA-1 сертификата, с помощью которого был зашифрован ключ, или идентификатор GUID асимметричного ключа, которым был зашифрован этот ключ. \@*отпечаток* имеет тип **varbinary (20)**.  
@@ -92,7 +92,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

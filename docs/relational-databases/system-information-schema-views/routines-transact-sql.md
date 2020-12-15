@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aad968588ff8e7ed454b35d74ce992cae0f9d836
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2d83c5ef33d9d1a050b531ef1b4a5ee2dc60d4e9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753996"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472845"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "91753996"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Определенное имя каталога. Это имя совпадает с ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Определенное имя схемы.<br /><br /> Важно. не используйте INFORMATION_SCHEMA представления для определения схемы объекта. ** \* \* \* \* ** INFORMATION_SCHEMA представления представляют только подмножество метаданных объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Определенное имя схемы.<br /><br /> Важно. не используйте INFORMATION_SCHEMA представления для определения схемы объекта. **\* \* \* \*** INFORMATION_SCHEMA представления представляют только подмножество метаданных объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Определенное имя каталога. Это имя совпадает с ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Имя каталога функции.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Имя схемы, содержащей эту функцию.<br /><br /> Важно. не используйте INFORMATION_SCHEMA представления для определения схемы объекта. ** \* \* \* \* ** INFORMATION_SCHEMA представления представляют только подмножество метаданных объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Имя схемы, содержащей эту функцию.<br /><br /> Важно. не используйте INFORMATION_SCHEMA представления для определения схемы объекта. **\* \* \* \*** INFORMATION_SCHEMA представления представляют только подмножество метаданных объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Имя функции.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Возвращает значение PROCEDURE для хранимой процедуры и FUNCTION для функций.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
@@ -91,7 +91,7 @@ ms.locfileid: "91753996"
 |CREATED|**datetime**|Время создания процедуры.|  
 |LAST_ALTERED|**datetime**|Время последнего изменения функции.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные представления &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)   
  [Представления информационной схемы &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f142f5de6f5580e7b0e21658e4b3c276984cd88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f1c547cee24397cc9cc1c0b139bd728aef92c2b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474706"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472785"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ CHANGETABLE (
   
  *last_sync_version* следует проверить, чтобы убедиться, что он не устарел, так как некоторые или все сведения об изменениях могли быть очищены в соответствии с периодом хранения, настроенным для базы данных. Дополнительные сведения см. в статьях [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) и [Параметры ALTER DATABASE SET &#40;transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- *Таблица*версий, {<primary_key_values>}  
+ *Таблица* версий, {<primary_key_values>}  
  Возвращает информацию о последнем изменении указанной строки. Значения первичного ключа должны идентифицировать строку. <primary_key_values> определяет столбцы первичного ключа и задает значения. Имена первичных ключевых столбцов могут быть указаны в любом порядке.  
   
  *Таблица*  
@@ -210,11 +210,11 @@ WHERE
         0);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции отслеживания изменений (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

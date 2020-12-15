@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521113"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469975"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Размещение базы данных MDS на управляемом экземпляре
 
@@ -139,13 +139,13 @@ ms.locfileid: "94521113"
 
 1. На странице **Конфигурация базы данных** в выберите [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **выбрать базу данных**.
 
-1. Выберите **подключить** , выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных и нажмите кнопку **ОК**.
+1. Выберите **подключить**, выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных и нажмите кнопку **ОК**.
 
    ![Снимок экрана: диалоговое окно "подключение к базе данных".](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
 
 1. В [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] выберите **веб-конфигурация** в левой области.
 
-1. В списке веб **-сайт** выберите **веб-сайт по умолчанию** , а затем щелкните **создать** , чтобы создать веб-приложение.
+1. В списке веб **-сайт** выберите **веб-сайт по умолчанию**, а затем щелкните **создать** , чтобы создать веб-приложение.
 
    ![Снимок экрана: диалоговое окно "диспетчер конфигурации Master Data Services".](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
 
@@ -163,7 +163,7 @@ ms.locfileid: "94521113"
 
 1. В области **веб-конфигурация** в окне **веб-приложение** выберите созданное приложение и нажмите кнопку **выбрать** в разделе **связать приложение с базой данных** .
 
-1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Нажмите кнопку **ОК**.
+1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Выберите **ОК**.
 
    Настройка веб-сайта завершена. Теперь на странице **веб-конфигурация** отображается выбранный веб-сайт, созданное веб-приложение и [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] база данных, связанная с приложением.
 
@@ -214,7 +214,7 @@ MDS также поддерживает проверку подлинности 
 
 1. На странице **Конфигурация базы данных** в выберите [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **выбрать базу данных**.
 
-1. Выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, связанную с веб-приложением. Выберите **подключить** , а затем нажмите кнопку **ОК**.
+1. Выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, связанную с веб-приложением. Выберите **подключить**, а затем нажмите кнопку **ОК**.
 
    ![Снимок экрана: диалоговое окно "подключение к базе данных службы основных данных".](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_ConnectDBName")
 

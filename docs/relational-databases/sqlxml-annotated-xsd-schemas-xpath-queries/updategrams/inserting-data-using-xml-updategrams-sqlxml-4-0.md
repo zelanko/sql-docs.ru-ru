@@ -34,13 +34,13 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac801a52e89e60bb05d1431de77078fa750f6d34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790599"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473115"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -67,16 +67,16 @@ ms.locfileid: "85790599"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<before>Блок  
+## <a name="before-block"></a>\<before> Блок  
  **\<before>** Блок можно опустить для операции вставки. Если необязательный атрибут **Mapping-Schema** не указан, то объект **\<ElementName>** , указанный в диаграмма обновления, сопоставляется с таблицей базы данных, а дочерние элементы или атрибуты сопоставляются со столбцами в таблице.  
   
-## <a name="after-block"></a>\<after>Блок  
+## <a name="after-block"></a>\<after> Блок  
  В блоке можно указать одну или несколько записей **\<after>** .  
   
  Если **\<after>** блок не предоставляет значение для определенного столбца, диаграмма обновления использует значение по умолчанию, указанное в схеме с заметками (если указана схема). Если в схеме не указано значение по умолчанию для столбца, диаграмма обновления не указывает явное значение для этого столбца, а вместо этого присваивает [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] этому столбцу значение по умолчанию (если указано). Если не существует значения по умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и столбец допускает значение NULL, то диаграмма обновления задает для столбца значение NULL. Если столбец не имеет значения по умолчанию и не допускает значение NULL, команда завершается ошибкой и диаграмма обновления возвращает ошибку. Необязательный атрибут **атрибута updg: returnid '** используется для возвращения значения идентификатора, формируемого системой при добавлении записи в таблицу со столбцом типа Identity.  
   
 ## <a name="updgid-attribute"></a>Атрибут updg:id  
- Если диаграмма обновления вставляет только записи, диаграмма обновления не требует атрибута **атрибута updg: ID** . Дополнительные сведения о **атрибута updg: ID**см. в статье [Обновление данных с помощью XML-диаграмм обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ Если диаграмма обновления вставляет только записи, диаграмма обновления не требует атрибута **атрибута updg: ID** . Дополнительные сведения о **атрибута updg: ID** см. в статье [Обновление данных с помощью XML-диаграмм обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 ## <a name="updgat-identity-attribute"></a>Атрибут updg:at-identity  
  Когда диаграмма обновления вставляет запись в таблицу, имеющую столбец типа IDENTITY, диаграмма обновления может записать присвоенное системой значение, используя необязательный атрибут **атрибута updg: at-identity** . Диаграмма обновления может потом использовать это значение в последующих операциях. После выполнения диаграмма обновления можно вернуть значение идентификатора, созданное путем указания атрибута **атрибута updg: returnid '** .  
@@ -728,7 +728,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

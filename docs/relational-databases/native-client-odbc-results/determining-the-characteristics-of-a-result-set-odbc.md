@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81554f5b82a37ab2c1597234e434ae396cc4c129
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 643daf45e784e8ec3622939186ec1942d7960fac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465326"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473535"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Определение характеристик результирующего набора (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88465326"
   
 -   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) или [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) для описания столбца в результирующем наборе.  
   
- Хорошо спроектированные приложения пишутся с предположением, что результирующий набор неизвестен, и используют для привязки столбцов в результирующем наборе данные, возвращаемые этими функциями. Приложение может вызвать эти функции в любое время после подготовки или выполнения инструкции. Однако для оптимальной производительности приложение должно вызывать **SQLColAttribute**, **SQLDescribeCol**и **SQLNumResultCols** после выполнения инструкции.  
+ Хорошо спроектированные приложения пишутся с предположением, что результирующий набор неизвестен, и используют для привязки столбцов в результирующем наборе данные, возвращаемые этими функциями. Приложение может вызвать эти функции в любое время после подготовки или выполнения инструкции. Однако для оптимальной производительности приложение должно вызывать **SQLColAttribute**, **SQLDescribeCol** и **SQLNumResultCols** после выполнения инструкции.  
   
  Можно выполнять несколько одновременных вызовов метаданных. Эти процедуры системного каталога, лежащие в основе реализаций API-интерфейса каталога ODBC, могут вызываться драйвером ODBC во время использования им статических серверных курсоров. Это позволяет приложениям одновременно обрабатывать несколько вызовов функций каталога ODBC.  
   

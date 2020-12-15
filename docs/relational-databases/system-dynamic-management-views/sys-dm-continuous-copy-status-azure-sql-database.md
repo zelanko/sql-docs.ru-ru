@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 69dfbde65d00f3d6995d1bce784a46a64515f8fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834272"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472895"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -57,9 +57,9 @@ ms.locfileid: "91834272"
   
  Если отношение непрерывного копирования к базе данных завершается, строка для этой базы данных в представлении **sys.dm_continuous_copy_status** исчезает.  
   
- Как и представление **sys.dm_database_copies** , **sys.dm_continuous_copy_status** отражает состояние отношения непрерывного копирования, в котором база данных является первичной или активной базой данных-получателем. В отличие **sys.dm_database_copies**от sys.dm_database_copies **sys.dm_continuous_copy_status** содержит несколько столбцов, содержащих сведения об операциях и производительности. К этим столбцам относятся **last_replication**и **replication_lag_sec**..  
+ Как и представление **sys.dm_database_copies** , **sys.dm_continuous_copy_status** отражает состояние отношения непрерывного копирования, в котором база данных является первичной или активной базой данных-получателем. В отличие от sys.dm_database_copies **sys.dm_continuous_copy_status** содержит несколько столбцов, содержащих сведения об операциях и производительности. К этим столбцам относятся **last_replication** и **replication_lag_sec**..  
   
 ## <a name="see-also"></a>См. также:  
  [sys.dm_database_copies &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Активные хранимые процедуры георепликации &#40;Transact-SQL&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Активные Geo-Replication хранимые процедуры &#40;Transact-SQL&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
