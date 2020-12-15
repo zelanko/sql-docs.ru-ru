@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130900"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405741"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Настройка шифрования столбцов с помощью Always Encrypted с пакетом приложения уровня данных 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "96130900"
 ## <a name="performance-considerations"></a>Рекомендации по производительности
 Для выполнения криптографических операций средство, используемое для развертывания DACPAC, должно переместить данные за пределы базы данных. Средство создает в базе данных новую таблицу (или таблицы) с требуемой конфигурацией, загружает все данные из исходных таблиц, выполняет запрошенные криптографические операции, отправляет данные в новую таблицу, а затем меняет местами исходную и новую таблицы. Выполнение криптографических операций может занимать много времени. В течение этого периода база данных недоступна для записи транзакций. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Если вы используете [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] и для экземпляра SQL Server настроен безопасный анклав, можно выполнять криптографические операции на месте без перемещения данных из базы данных. См. статью [Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-configure-encryption.md). Обратите внимание, что шифрование на месте недоступно для развертываний DACPAC.

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de602d5a975cb04c6c2f1496f0fcf01eae5a85a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39a4d0a6136990cdb583a432757503099f61cfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485379"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97403600"
 ---
 # <a name="get-information-about-dml-triggers"></a>Получение сведений о триггерах DML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88485379"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Необходимо быть членом роли **public**. Определения пользовательских объектов видимы владельцу объекта или получателям, которым предоставлено одно из следующих разрешений: ALTER, CONTROL, TAKE OWNERSHIP или VIEW DEFINITION. Эти разрешения неявно предоставляются членам предопределенных ролей базы данных **db_owner**, **db_ddladmin**и **db_securityadmin** .  
+ Необходимо быть членом роли **public**. Определения пользовательских объектов видимы владельцу объекта или получателям, которым предоставлено одно из следующих разрешений: ALTER, CONTROL, TAKE OWNERSHIP или VIEW DEFINITION. Эти разрешения неявно предоставляются членам предопределенных ролей базы данных **db_owner**, **db_ddladmin** и **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Необходимо разрешение VIEW DEFINITION в базе данных и разрешение SELECT на представление **sys.sql_expression_dependencies** в базе данных. По умолчанию разрешение SELECT предоставляется только членам предопределенной роли базы данных **db_owner** . Если разрешения SELECT и VIEW DEFINITION предоставлены другому пользователю, он может просматривать все зависимости в базе данных.  
@@ -59,7 +59,7 @@ ms.locfileid: "88485379"
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>Просмотр определения триггера DML  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
 2.  Разверните нужную базу данных, разверните узел **Таблицы**, а затем разверните таблицу, содержащую триггер, для которого нужно просмотреть определение.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "88485379"
 
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Просмотр зависимостей триггера DML  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
 2.  Разверните нужную базу данных, разверните узел **Таблицы**, а затем разверните таблицу, содержащую триггер и зависимости, которые нужно просмотреть.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88485379"
   
      Чтобы просмотреть объекты, от которых зависит триггер DML, выберите пункт **Объекты, от которых зависит \<DML trigger name>** . Объекты отображаются в области **Зависимости** . Разверните каждый узел, чтобы просмотреть все объекты.  
   
-5.  Чтобы получить сведения об объекте, который появляется в области **Зависимости** , щелкните его. В поле **Выбранный объект** сведения указываются в полях **Имя**, **Тип**и **Тип зависимости** .  
+5.  Чтобы получить сведения об объекте, который появляется в области **Зависимости** , щелкните его. В поле **Выбранный объект** сведения указываются в полях **Имя**, **Тип** и **Тип зависимости** .  
   
 6.  Нажмите кнопку **ОК** , чтобы закрыть окно **Зависимости объекта**.  
   

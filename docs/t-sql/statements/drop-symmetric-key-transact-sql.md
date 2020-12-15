@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e18319e45c3d397e4283013ec31bb3c98424c892
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f07f4d02c005ee89b24a323111c05789dbbd9fac
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96131092"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901047"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,9 +54,8 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  Удаляет ключ расширенного управления ключами с устройства расширенного управления ключами. Дополнительные сведения о расширенном управлении ключами см. в разделе [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>Комментарии  
- Если ключ является открытым в текущем сеансе, то инструкция завершится с ошибками.  
   
- Если асимметричный ключ был сопоставлен с ключом расширенного управления ключами на устройстве расширенного управления ключами, а параметр **REMOVE PROVIDER KEY** не был указан, то ключ будет удален из базы данных, но не с устройства; также будет выдано предупреждение.  
+Если асимметричный ключ был сопоставлен с ключом расширенного управления ключами на устройстве расширенного управления ключами, а параметр **REMOVE PROVIDER KEY** не был указан, то ключ будет удален из базы данных, но не с устройства; также будет выдано предупреждение.  
   
 ## <a name="permissions"></a>Разрешения  
  Требует разрешение CONTROL на симметричный ключ.  

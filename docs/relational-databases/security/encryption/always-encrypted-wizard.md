@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 27af6771eeccf660b1eac623f80e663d93e411b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866688"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406035"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Настройка шифрования столбцов с помощью мастера Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91866688"
 > [!NOTE]
 > Выполнение криптографических операций может занимать много времени. В течение этого периода база данных недоступна для записи транзакций. PowerShell — это рекомендуемое средство для криптографических операций в больших таблицах. См. [Настройка шифрования столбцов с помощью мастера Always Encrypted с PowerShell](configure-column-encryption-using-powershell.md).
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Если вы используете [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] и для экземпляра SQL Server настроен безопасный анклав, можно выполнять криптографические операции на месте без перемещения данных из базы данных. См. статью [Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-configure-encryption.md). Обратите внимание, что мастер не поддерживает шифрование на месте.
