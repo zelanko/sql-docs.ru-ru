@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6e0bbfd3acbc7616fca0f180d6de3238a724231
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767163"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489724"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Получение и Настройка резервного сервера для параллельного хранилища данных
 В этой статье описывается, как настроить систему Windows, не поддерживающую устройства, в качестве сервера резервного копирования для использования с функциями резервного копирования и восстановления в системе аналитики (ТД) и Parallel Data Warehouse (PDW).  
@@ -120,9 +120,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 Дополнительные сведения см. в разделе: 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)   
   
--   [ВОССТАНОВЛЕНИЕ БАЗЫ ДАННЫХ](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
+-   [ВОССТАНОВЛЕНИЕ БАЗЫ ДАННЫХ](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Уведомления о безопасности  
 Сервер архивации не присоединен к частному домену для устройства. Он находится в вашей сети и не имеет отношения доверия между доменом и частным доменом устройства.  
@@ -140,7 +140,7 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 Чтобы удалить сетевые учетные данные из PDW, используйте хранимую процедуру [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) .  
   
-Чтобы получить список всех сетевых учетных данных, хранящихся в SQL Server PDW, используйте динамическое административное представление [sys. dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) .  
+Чтобы получить список всех сетевых учетных данных, хранящихся в SQL Server PDW, используйте динамическое административное представление [sys.dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) .  
   
 ### <a name="secure-communications"></a>Безопасное соединение  
   
@@ -149,5 +149,5 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
 - Требовать вход в соединение. 
 - На сервере загрузки установите следующий параметр групповой политики в области политики безопасности \ локальные параметры: Клиент сети Microsoft: Цифровая подпись (всегда): включена.  
   
-## <a name="see-also"></a>См. также  
-[Архивация и восстановление](backup-and-restore-overview.md)  
+## <a name="see-also"></a>См. также:  
+[Резервное копирование и восстановление](backup-and-restore-overview.md)  

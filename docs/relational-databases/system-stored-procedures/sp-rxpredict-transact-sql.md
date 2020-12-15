@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 55514f89487a06e16413f199f744013d2c4f8c90
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fb1f2af32479ef295d578b3fd6f0f7581524d960
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461505"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489534"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -58,13 +58,13 @@ sp_rxPredict  ( @model, @input )
 Чтобы включить использование хранимой процедуры, в экземпляре необходимо включить SQLCLR.
 
 > [!NOTE]
-> Для енабинг этого параметра существуют последствия безопасности. Используйте альтернативную реализацию, например функцию [прогнозирования Transact-SQL](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017) , если на сервере невозможно включить SQLCLR.
+> Включение этого параметра связано с вопросами безопасности. Используйте альтернативную реализацию, например функцию [прогнозирования Transact-SQL](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017&preserve-view=true) , если на сервере невозможно включить SQLCLR.
 
 Пользователю требуется `EXECUTE` разрешение на базу данных.
 
 ### <a name="supported-algorithms"></a>Поддерживаемые алгоритмы
 
-Чтобы создать и обучить модель, используйте один из поддерживаемых алгоритмов для R или Python, предоставляемый [SQL Server службы машинного обучения (R или Python)](../../machine-learning/sql-server-machine-learning-services.md), [SQL Server 2016 r Services](../../machine-learning/r/sql-server-r-services.md), [SQL Server Machine Learning Server (автономный) (r или Python)](../../machine-learning/r/r-server-standalone.md)или [SQL Server 2016 R Server (изолированный)](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016).
+Чтобы создать и обучить модель, используйте один из поддерживаемых алгоритмов для R или Python, предоставляемый [SQL Server службы машинного обучения (R или Python)](../../machine-learning/sql-server-machine-learning-services.md), [SQL Server 2016 r Services](../../machine-learning/r/sql-server-r-services.md), [SQL Server Machine Learning Server (автономный) (r или Python)](../../machine-learning/r/r-server-standalone.md)или [SQL Server 2016 R Server (изолированный)](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016&preserve-view=true).
 
 #### <a name="r-revoscaler-models"></a>R: модели RevoScaleR
 

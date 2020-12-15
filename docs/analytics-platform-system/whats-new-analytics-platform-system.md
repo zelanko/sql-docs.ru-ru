@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 590ca4149bc93fd2c22d04f22c3c47b7389245a2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97420171"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489611"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Новые возможности в системе платформы аналитики — масштабируемое хранилище данных MPP
 Узнайте о новых возможностях в последних обновлениях устройств для Microsoft Analytics Platform System (ТД). ТД — это масштабное локальное устройство, которое размещает MPP SQL Server Parallel Data Warehouse. 
@@ -45,13 +45,13 @@ ms.locfileid: "97420171"
 Дата выпуска — сентябрь 2019
 
 ### <a name="alter-external-data-source"></a>Изменение внешнего источника данных
-Клиенты смогут изменять определение внешнего источника данных с помощью обновления CU 7.5. Клиенты с узлом имен Hadoop с высоким уровнем доступности теперь могут изменять источник данных для изменения аргументов при отработке отказа. Для ТД можно изменить только расположение, RESOURCE_MANAGER_LOCATION и УЧЕТные данные. Дополнительные сведения см. в разделе [Изменение внешнего источника данных](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017) .
+Клиенты смогут изменять определение внешнего источника данных с помощью обновления CU 7.5. Клиенты с узлом имен Hadoop с высоким уровнем доступности теперь могут изменять источник данных для изменения аргументов при отработке отказа. Для ТД можно изменить только расположение, RESOURCE_MANAGER_LOCATION и УЧЕТные данные. Дополнительные сведения см. в разделе [Изменение внешнего источника данных](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017&preserve-view=true) .
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>Поддержка CDH 5,15 и 5,16 с Polybase
 Polybase на ТД с обновлением CU 7.5 теперь поддерживает версии CDH 5,15 и 5,16 для распространения Hadoop из Cloudera. Используйте вариант 6 для версий CDH 5. x. 
 
 ### <a name="try_convert-and-try_cast-support"></a>Поддержка Try_Convert и Try_Cast
-CU 7,5 APS теперь поддерживает функции [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017) и [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017) TSQL. Обе эти функции возвращают значение, преобразованное в указанный тип данных, если преобразование выполнено. в противном случае возвращает значение null.
+CU 7,5 APS теперь поддерживает функции [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017&preserve-view=true) и [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017&preserve-view=true) TSQL. Обе эти функции возвращают значение, преобразованное в указанный тип данных, если преобразование выполнено. в противном случае возвращает значение null.
 
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4

@@ -15,18 +15,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: c6e5a3878011de396568c4649ea5575635e96aec
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523881"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489558"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Оценка готовности SQL Serverного пространства данных для переноса в базу данных SQL Azure с помощью Помощник по миграции данных
 
 Миграция сотен экземпляров SQL Server и тысяч баз данных в базу данных SQL Azure, предлагаемая нашей платформой как услуга (PaaS), является значительной задачей. Чтобы максимально упростить процесс, необходимо быть уверенным в том, что относительная готовность к миграции. Определение низкого уровня фруктов, включая серверы и базы данных, полностью готовые или требующие минимальных усилий для подготовки к миграции, упрощает и ускоряет работу.
 
-В этой статье приводятся пошаговые инструкции по использованию [Помощник по миграции данных](./dma-overview.md?view=sql-server-2017) для суммирования результатов готовности и их последующей поверхности в центре [миграции Azure](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
+В этой статье приводятся пошаговые инструкции по использованию [Помощник по миграции данных](./dma-overview.md) для суммирования результатов готовности и их последующей поверхности в центре [миграции Azure](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -46,12 +46,12 @@ ms.locfileid: "92523881"
 
    ![Служба "миграция Azure" — Запуск оценки](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-hub-assess.png)
 
-4. В области **базы данных**в разделе **Приступая к работе**выберите **Добавить средства**.
+4. В области **базы данных** в разделе **Приступая к работе** выберите **Добавить средства**.
 
    ![Служба "миграция Azure" — Добавление средств](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tools.png)
 
 5. На вкладке **Миграция проекта** выберите подписку Azure и группу ресурсов (если у вас еще нет группы ресурсов, создайте ее).
-6. В разделе **сведения о проекте**укажите имя проекта и географию, в котором нужно создать проект.
+6. В разделе **сведения о проекте** укажите имя проекта и географию, в котором нужно создать проект.
 
     ![Диалоговое окно "миграция Azure — Добавление средства"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tool-dialog.png)
 
@@ -66,7 +66,7 @@ ms.locfileid: "92523881"
 
     Метаданные, собранные с локальных виртуальных машин, хранятся только в регионе, который задан для проекта. При выполнении миграции можно выбрать любой целевой регион.
 
-7. Нажмите кнопку **Далее**и добавьте средство оценки.
+7. Нажмите кнопку **Далее** и добавьте средство оценки.
 
    > [!NOTE]
    > При создании проекта необходимо добавить хотя бы один инструмент оценки или миграции.
@@ -79,7 +79,7 @@ ms.locfileid: "92523881"
 
     ![Служба "миграция Azure" — Выбор средства миграции](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
-10. На странице **Проверка и добавление инструментов**проверьте параметры и нажмите кнопку **Добавить инструменты**.
+10. На странице **Проверка и добавление инструментов** проверьте параметры и нажмите кнопку **Добавить инструменты**.
 
     ![Вкладка "миграция Azure" — "Проверка и добавление инструментов"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-tools.png)
 
@@ -87,7 +87,7 @@ ms.locfileid: "92523881"
 
 ## <a name="assess-and-upload-assessment-results"></a>Оценка и передача результатов оценки
 
-После успешного создания проекта миграции в разделе **средства оценки**в поле **Azure Migration: Оценка базы данных** приведены инструкции по скачиванию и использованию средства помощник по миграции данных.
+После успешного создания проекта миграции в разделе **средства оценки** в поле **Azure Migration: Оценка базы данных** приведены инструкции по скачиванию и использованию средства помощник по миграции данных.
 
    ![Добавлено средство "миграция Azure — оценка"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
@@ -101,7 +101,7 @@ ms.locfileid: "92523881"
 
     Если вы обновляете локальный экземпляр SQL Server до более поздней версии SQL Server или для SQL Server, размещенного на виртуальной машине Azure, задайте для параметра Тип исходного и целевого сервера значение **SQL Server**. Задайте тип целевого сервера **Azure sql управляемый экземпляр** для оценки готовности целевой базы данных SQL Azure (PaaS).
 
-3. Нажмите кнопку **Создать**.
+3. Нажмите кнопку **создания**.
 
    ![Интерфейс Помощник по миграции данных службы "миграция Azure"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -178,7 +178,7 @@ ms.locfileid: "92523881"
 
    ![Миграция Azure — проверка блокирования миграции](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 * [Помощник по миграции данных (DMA)](../dma/dma-overview.md)
 * [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)

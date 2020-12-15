@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947934"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489500"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Указание подходящего номера SKU базы данных SQL Azure или Управляемый экземпляр для локальной базы данных
 
@@ -44,7 +44,7 @@ ms.locfileid: "94947934"
 - Убедитесь, что на компьютере установлен [PowerShell версии 5,1](https://www.microsoft.com/download/details.aspx?id=54616) или более поздней, который необходим для выполнения всех сценариев. Сведения о том, как узнать, какая версия PowerShell установлена на компьютере, см. в статье [Загрузка и установка Windows PowerShell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
   > [!NOTE]
   > Для сбора сведений о компьютере Скрипт сбора данных использует командлет Get-WmiObject, который был признан устаревшим в PowerShell 6. Чтобы запустить этот скрипт в PowerShell 6 или 7, необходимо заменить командлеты WMI более новыми командлетами CIM.
-- Убедитесь, что на компьютере установлен модуль Azure PowerShell. Дополнительные сведения см. в статье [Установка модуля Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Убедитесь, что на компьютере установлен модуль Azure PowerShell. Дополнительные сведения см. в статье [Установка модуля Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
 - Убедитесь, что файл **SkuRecommendationDataCollectionScript.ps1** PowerShell, необходимый для получения счетчиков производительности, установлен в папку DMA.
 - Убедитесь, что компьютер, на котором вы будете выполнять этот процесс, имеет разрешения администратора на компьютере, на котором размещаются базы данных.
 
@@ -237,6 +237,6 @@ HTML-файл содержит эти сведения в графическом
     > [!NOTE]
     > Создание управляемых экземпляров в подсети (особенно в первый раз) может занять несколько часов. После запуска скрипта подготовки с помощью PowerShell можно проверить состояние развертывания на портале Azure.
 
-## <a name="next-step"></a>Следующий шаг
+## <a name="next-step"></a>Дальнейшие действия
 
-- Полный список команд для запуска DMA из CLI см. в статье [запуск помощник по миграции данных из командной строки](./dma-commandline.md?view=sql-server-2017).
+- Полный список команд для запуска DMA из CLI см. в статье [запуск помощник по миграции данных из командной строки](./dma-commandline.md).
