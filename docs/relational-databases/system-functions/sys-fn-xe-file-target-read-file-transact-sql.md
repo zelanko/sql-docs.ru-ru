@@ -1,6 +1,6 @@
 ---
 description: sys.fn_xe_file_target_read_file (Transact-SQL)
-title: sys. fn_xe_file_target_read_file (Transact-SQL) | Документация Майкрософт
+title: sys.fn_xe_file_target_read_file (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9edd7d5181979beb5bbbc0e4069aac31d9b302bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e5a79b5e3f9ded81069364ec144a8e88fede811d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469854"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474725"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 
   
 ## <a name="remarks"></a>Комментарии  
- Чтение больших результирующих наборов путем исполнения **sys. fn_xe_file_target_read_file** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к ошибке. Используйте **результаты в файловый** режим (**CTRL + SHIFT + F**), чтобы экспортировать большие результирующие наборы в файл и прочитать файл с помощью другого средства.  
+ Чтение больших результирующих наборов путем исполнения **sys.fn_xe_file_target_read_file** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к ошибке. Используйте **результаты в файловый** режим (**CTRL + SHIFT + F**), чтобы экспортировать большие результирующие наборы в файл и прочитать файл с помощью другого средства.  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
@@ -94,7 +94,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\metafile.xem', null, null);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления расширенных событий](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Представления каталога расширенных событий &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  

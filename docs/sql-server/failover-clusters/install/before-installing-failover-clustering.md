@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd95dd20cf72900a85c675c0e6b89689553d55f5
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127670"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999251"
 ---
 # <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "96127670"
   
 -   Удаленное администрирование должно быть разрешено.  
   
--   Для порта [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверьте конфигурацию сети [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для протокола TCP/IP для экземпляра, который требуется разблокировать, при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Для обеспечения соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по протоколу TCP после установки необходимо включить TCP-порт для IPALL. По умолчанию браузер SQL Server ведет прослушивание UDP-соединений по порту 1434.  
+- Для экземпляров SQL Server, использующих порт, отличный от порта по умолчанию, используйте конфигурацию сети в диспетчере конфигурации SQL Server, чтобы определить порт, используемый экземпляром SQL Server, который нужно разблокировать. Включите TCP-порт для IPALL в брандмауэре, если хотите подключиться к экземпляру SQL Server с помощью [службы обозревателя SQL Server](../../../tools/configuration-manager/sql-server-browser-service.md), которая использует IP-адрес, отличный от того, на котором установлен кластеризованный экземпляр, и порт UDP 1434. 
   
 -   К числу операций по установке отказоустойчивого кластера относится правило, которое проверяет порядок привязки к сети. Даже в случаях, когда порядок привязки выглядит правильным, в системе могут оказаться отключенные или фантомные конфигурации сетевых адаптеров. Фантомные конфигурации сетевых адаптеров могут повлиять на порядок привязки, и в результате правило порядка привязки выдаст предупреждение. Чтобы избежать такой ситуации, выполните следующие действия для обнаружения и удаления отключенных сетевых адаптеров.  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fb15ad9040276302586efc1b9661ff1e08e62e2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 184328e9b6d5c197b06f89f151942535a90f7f91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548431"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474655"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ sp_addextendedproperty
  Имя свойства, которое необходимо добавить. *property_name* имеет тип **sysname** и не может иметь значение null. Имена могут также включать пустые или не являющиеся алфавитно-цифровыми строки символов, а также двоичные значения.  
   
  [ @value =] {'*значение*'}  
- Значение, связываемое со свойством. *значение* равно **sql_variant**и значение по умолчанию NULL. Размер аргумента *value* не может превышать 7 500 байт.  
+ Значение, связываемое со свойством. *значение* равно **sql_variant** и значение по умолчанию NULL. Размер аргумента *value* не может превышать 7 500 байт.  
   
  [ @level0type =] {'*level0_object_type*'}  
  Тип объекта уровня 0. *level0_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL.  
@@ -74,18 +74,18 @@ sp_addextendedproperty
  [ @level1type =] {'*level1_object_type*'}  
  Тип объекта уровня 1. *level1_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимыми входными значениями являются агрегат, значение по умолчанию, функция, логическое имя файла, процедура, очередь, правило, последовательность, синоним, таблица, TABLE_TYPE, тип, представление, коллекция схем XML и значение NULL.    
  [ @level1name =] {'*level1_object_name*'}  
- Имя указанного типа объекта уровня 1. Аргумент *level1_object_name* имеет тип **sysname**и значение по умолчанию NULL.  
+ Имя указанного типа объекта уровня 1. Аргумент *level1_object_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
  [ @level2type =] {'*level2_object_type*'}  
  Тип объекта уровня 2. *level2_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимые входные данные: COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER и NULL.  
   
  [ @level2name =] {'*level2_object_name*'}  
- Имя указанного типа объекта уровня 2. Аргумент *level2_object_name* имеет тип **sysname**и значение по умолчанию NULL.  
+ Имя указанного типа объекта уровня 2. Аргумент *level2_object_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Чтобы указывать расширенные свойства, объекты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] классифицируются по трем уровням: 0, 1 и 2. Уровень 0 является самым высоким и определен как «объекты, содержащиеся в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней.  
   
  Ссылки на объект определенного уровня должны быть уточнены именами объектов более высокого уровня, в которых они содержатся или которым они принадлежат. Например, при добавлении расширенного свойства к столбцу таблицы (уровень 2) необходимо также задать имя таблицы (уровень 1), содержащей этот столбец, а также схему (уровень 0), содержащую таблицу.  
@@ -100,7 +100,7 @@ sp_addextendedproperty
  Расширенные свойства реплицируются только во время начальной синхронизации между издателем и подписчиком. При добавлении или изменении расширенного свойства после начальной синхронизации эти изменения не реплицируются. Дополнительные сведения об репликации объектов базы данных см. в разделе [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 ## <a name="schema-vs-user"></a>Схема и  Пользователь  
- Не рекомендуется указывать тип USER в качестве типа уровня 0 при применении расширенного свойства к объекту базы данных, так как это может вызвать неоднозначность при разрешении имен. Например, предположим, что пользователь Владимир владеет двумя схемами (Vladimir и MySchema) и в обеих этих схемах содержится таблица с именем MyTable. Если Мэри добавляет расширенное свойство в таблицу MyTable и указывает ** @level0type = N'USER '**, ** @level0name = Mary**, то неясно, к какой таблице применяется расширенное свойство. Чтобы обеспечить обратную совместимость, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применит свойство к таблице, содержащейся в схеме Mary.  
+ Не рекомендуется указывать тип USER в качестве типа уровня 0 при применении расширенного свойства к объекту базы данных, так как это может вызвать неоднозначность при разрешении имен. Например, предположим, что пользователь Владимир владеет двумя схемами (Vladimir и MySchema) и в обеих этих схемах содержится таблица с именем MyTable. Если Мэри добавляет расширенное свойство в таблицу MyTable и указывает **@level0type = N'USER '**, **@level0name = Mary**, то неясно, к какой таблице применяется расширенное свойство. Чтобы обеспечить обратную совместимость, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применит свойство к таблице, содержащейся в схеме Mary.  
   
 ## <a name="permissions"></a>Разрешения  
  Члены предопределенных ролей базы данных db_owner и db_ddladmin могут добавлять расширенные свойства в любой объект со следующим исключением: db_ddladmin не может добавлять свойства в саму базу данных, а также для пользователей или ролей.  
@@ -236,9 +236,9 @@ EXEC sys.sp_addextendedproperty
 @level0name = N'CustomApp';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   

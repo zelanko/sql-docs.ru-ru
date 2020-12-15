@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f60adc4bdd8e8d3cdfc7f44751854b97a2f7345
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 16a51a2578718db33e27a5c0c027f607eb4d37fc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474645"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  После того как произойдет блокировка приложения, только первые 32 символа могут быть получены в виде обычного текста; остаток будет хэширован.  
   
  [ @LockMode =] "*lock_mode*"  
- Надо ли получить режим блокировки для указанного ресурса. *lock_mode* имеет тип **varchar (32)** и не имеет значения по умолчанию. Значение может быть любым из следующих: **Shared**, **Update**, **IntentShared**, **IntentExclusive**или **Exclusive**. Дополнительные сведения см. в разделе [режимы блокировки](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
+ Надо ли получить режим блокировки для указанного ресурса. *lock_mode* имеет тип **varchar (32)** и не имеет значения по умолчанию. Значение может быть любым из следующих: **Shared**, **Update**, **IntentShared**, **IntentExclusive** или **Exclusive**. Дополнительные сведения см. в разделе [режимы блокировки](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner =] "*lock_owner*"  
  Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. *lock_owner* имеет тип **varchar (32)**. Значением может быть **Transaction** (по умолчанию) или **Session**. Если *lock_owner* значение — **Transaction**, по умолчанию или указывается явным образом, sp_getapplock необходимо выполнять в рамках транзакции.  
@@ -79,7 +79,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |–3|Запрос блокировки был выбран как жертва взаимоблокировки.|  
 |— 999|Указывает ошибку при проверке параметра или другую ошибку вызова.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Блокировки, помещенные на ресурс, связаны либо с текущей транзакцией, либо с текущим сеансом. Блокировки, связанные с текущей транзакцией, снимаются, когда транзакция фиксируется или откатывается. Блокировки, связанные с сеансом, освобождаются при выходе из сеанса. Когда сервер завершает работу по какой либо причине, освобождаются все блокировки.  
   
  Ресурс блокировки, созданный процедурой sp_getapplock, создается в текущей базе данных сеанса. Каждый ресурс блокировки определяется объединенными значениями следующих аргументов.  
@@ -112,7 +112,7 @@ GO
   
  Взаимоблокировка с блокировкой приложения не откатывает транзакцию, запросившую блокировку приложения. Любой откат, который может потребоваться как результат возвращаемого значения, должен быть сделан вручную. Следовательно, рекомендуется включить в код проверку на ошибки с тем, чтобы в случае возврата определенного значения (например -3) могла быть запущена инструкция ROLLBACK TRANSACTION или предпринято другое действие.  
   
- Пример:  
+ Например:  
   
 ```  
 USE AdventureWorks2012;  
@@ -164,7 +164,7 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  

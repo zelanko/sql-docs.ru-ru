@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c9d03578a2eab318be1669303e9a8b741eb3779
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 8a859571ef9f4682c4c8556038247dc21d47eb50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059442"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474615"
 ---
 # <a name="sp_datatype_info_90-azure-synapse-analytics"></a>sp_datatype_info_90 (Azure синапсе Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -38,9 +38,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>Аргументы  
-`[ @data_type = ] data_type` Номер кода для указанного типа данных. Для получения списка всех типов данных пропустите этот аргумент. *data_type* имеет **тип int**и значение по умолчанию 0.  
+`[ @data_type = ] data_type` Номер кода для указанного типа данных. Для получения списка всех типов данных пропустите этот аргумент. *data_type* имеет **тип int** и значение по умолчанию 0.  
   
-`[ @ODBCVer = ] odbc_version` Используемая версия ODBC. *odbc_version* имеет тип **tinyint**и значение по умолчанию 2.  
+`[ @ODBCVer = ] odbc_version` Используемая версия ODBC. *odbc_version* имеет тип **tinyint** и значение по умолчанию 2.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  Нет  
@@ -57,7 +57,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**varchar (** 32 **)**|Описание параметров создания типа данных. Например, **десятичный** тип "точность, масштаб", **float** имеет значение null, а **varchar** — "max_length".|  
 |NULLABLE|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значения NULL допускаются.<br /><br /> 0 = значения NULL не допускаются.|  
 |CASE_SENSITIVE|**smallint**|Чувствительность к регистру.<br /><br /> 1 = все столбцы этого типа чувствительны к регистру (для параметров сортировки).<br /><br /> 0 = все столбцы этого типа не чувствительны к регистру.|  
-|SEARCHABLE|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  
+|ДОСТУПНЫЙ ДЛЯ ПОИСКА|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  
 |UNSIGNED_ATTRIBUTE|**smallint**|Знак типа данных.<br /><br /> 1 = тип данных без знака.<br /><br /> 0 = тип данных со знаком.|  
 |MONEY|**smallint**|Указывает тип данных **money** .<br /><br /> 1 = тип данных **money** .<br /><br /> 0 = не тип данных **money** .|  
 |AUTO_INCREMENT|**smallint**|Автоматическое приращение.<br /><br /> 1 = автоматическое приращение выполняется.<br /><br /> 0 = автоматическое приращение не выполняется.<br /><br /> NULL = атрибут неприменим.<br /><br /> Приложение может вставлять значение в столбец с этим атрибутом, но не может обновлять значения такого столбца. За исключением типа данных **bit** , AUTO_INCREMENT допустимы только для типов данных, относящихся к категориям точных числовых и приблизительных числовых типов данных.|  
@@ -86,7 +86,7 @@ EXEC sp_datatype_info_90 -9;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры Azure синапсе Analytics](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   

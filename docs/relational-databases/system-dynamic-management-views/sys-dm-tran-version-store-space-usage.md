@@ -1,6 +1,6 @@
 ---
-description: sys. dm_tran_version_store_space_usage (Transact-SQL)
-title: sys. dm_tran_version_store_space_usage (Transact-SQL) | Документация Майкрософт
+description: sys.dm_tran_version_store_space_usage (Transact-SQL)
+title: sys.dm_tran_version_store_space_usage (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,22 +20,22 @@ ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3e40c6fd2ce7da44c2d6e347c7bcc0729ab0236
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2fb83ffddba629b35f60bc930dc1525af7037244
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322970"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474795"
 ---
-# <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys. dm_tran_version_store_space_usage (Transact-SQL)
+# <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Возвращает таблицу, в которой отображается общее пространство tempdb, используемое записями хранилища версий для каждой базы данных. представление **sys. dm_tran_version_store_space_usage** является эффективным и недорогостоящим для запуска, так как не выполняет переходы по отдельным записям хранилища версий и возвращает общее используемое пространство хранилища версий в базе данных tempdb на одну базу.
+Возвращает таблицу, в которой отображается общее пространство tempdb, используемое записями хранилища версий для каждой базы данных. **sys.dm_tran_version_store_space_usage** является эффективным и недорогостоящим для выполнения, так как он не переходит по отдельным записям хранилища версий и возвращает общее используемое пространство хранилища версий в базе данных tempdb для каждой базы.
   
 Каждая запись с версиями хранится в виде двоичных данных вместе с некоторыми сведениями об отслеживании или состоянии. Как и в таблицах базы данных, записи в хранилище версий хранятся в страницах размером 8192 байта. Если размер записи превышает 8192 байта, она разбивается на две различные записи.  
   
-Так как запись версии хранится в двоичном виде, не возникает проблем с разными параметрами сортировки из разных баз данных. Используйте представление **sys. dm_tran_version_store_space_usage** , чтобы отслеживать и планировать размер базы данных tempdb в зависимости от используемого пространства хранилища версий, в котором хранятся данные в экземпляре SQL Server.
+Так как запись версии хранится в двоичном виде, не возникает проблем с разными параметрами сортировки из разных баз данных. Используйте **sys.dm_tran_version_store_space_usage** , чтобы отслеживать и планировать размер базы данных tempdb в зависимости от используемого пространства хранилища версий, в котором хранятся базы в экземпляре SQL Server.
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

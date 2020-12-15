@@ -1,7 +1,7 @@
 ---
 title: Источники данных, поддерживаемые службами Reporting Services | Документация Майкрософт
 description: Сведения о различных источниках данных, поддерживаемых службами Reporting Services, включая Microsoft SQL Server, Oracle и ODBC.
-ms.date: 05/21/2020
+ms.date: 11/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b8fb15c2fb479471000fc9979c691761e4d81cd
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: 34d5618950a96fd275a334dd78d914ee7e036c2f
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328559"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788403"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -104,7 +104,7 @@ ms.locfileid: "93328559"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|OLEDB|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OledbClient|Да|Да|SQL Server 2012 и выше.|Да|Да|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[ODBC](#ODBC)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OdbcClient|Да|Да|SQL Server 2012 и выше.|Да|Да|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[База данных SQL Microsoft Azure](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Н/Д|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Да|Да|
-|Azure Synapse Analytics|[База данных SQL Microsoft Azure](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Н/Д|Azure Synapse Analytics|Да|Да| 
+|Azure Synapse Analytics|[База данных SQL Microsoft Azure](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Н/Д|Azure Synapse Analytics|Да|Да| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] (модуль)|[Параллельные хранилища данных Microsoft](#PWD)|Нерекомендуемый модуль обработки данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Недоступно|Недоступно|Н/Д|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|Нет|N|  
 |Многомерная или табличная база данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Службы Microsoft SQL Server Analysis Services](#AnalysisServices)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Использует ADOMD.NET|Да|Да|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и более поздние версии|Да|Да|  
 |Набор данных Power BI Premium (начиная с Reporting Services версии 2019 и Сервера отчетов Power BI от января 2020 г.) |[Службы Microsoft SQL Server Analysis Services](#AnalysisServices)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Использует ADOMD.NET|Да|Да|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и более поздние версии|Да|Да|
@@ -173,12 +173,14 @@ ms.locfileid: "93328559"
  
  Для источников данных Azure Analysis Services и набора данных Power BI Premium обратите внимание, что многофакторная проверка подлинности должна быть отключена для учетных данных, используемых для подключения к источнику данных. Если в вашей среде необходимо включить многофакторную проверку подлинности, обратитесь к разделу <a href="/azure/active-directory/conditional-access/overview">Условный доступ Azure Active Directory</a>, чтобы узнать, как отключить многофакторную проверку подлинности для учетных данных, используемых в источнике данных.
   
+ При использовании в качестве источника данных набора данных Power BI Premium поддерживаются только режим импорта и DirectQuery.
+  
  При соединении с источником данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] модуль обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает параметры с несколькими значениями и сопоставляет свойства ячеек и элементов с расширенными свойствами, поддерживаемыми [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
  Вы можете также создавать модели на основе источников данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ###  <a name="ole-db-data-processing-extension"></a><a name="OLEDBAll"></a> OLE DB Data Processing Extension  
- Модуль обработки данных OLE DB требует выбора дополнительного уровня поставщика данных в зависимости от версии источника данных, который необходимо использовать в отчете. Если конкретный поставщик данных не выбран, предоставляется поставщик по умолчанию. Выберите конкретный поставщик данных в диалоговом окне **Свойства соединения** , открыть которое можно, нажав кнопку **Изменить** в диалоговых окнах "Источник данных" или "Общий источник данных".  
+ Модуль обработки данных OLE DB требует выбора дополнительного уровня поставщика данных в зависимости от версии источника данных, который необходимо использовать в отчете. Если конкретный поставщик данных не выбран, предоставляется поставщик по умолчанию. Выберите конкретный поставщик данных в диалоговом окне **Свойства соединения**, открыть которое можно, нажав кнопку **Изменить** в диалоговых окнах "Источник данных" или "Общий источник данных".  
   
  Дополнительные сведения о соответствующем конструкторе запросов OLE DB см. в разделах [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Дополнительные сведения об определенной поддержке поставщиков OLE DB см. в статье [Конструктор Visual Studio .NET поддерживает отдельных поставщиков данных OLE DB](https://support.microsoft.com/default.aspx/kb/811241) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

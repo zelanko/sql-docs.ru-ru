@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412546"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934036"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>Учебник по R. Обучение и сохранение модели
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "92412546"
   
    + Этот скрипт R вызывает функцию R **glm** для создания модели логистической регрессии.
   
-     Двоичная переменная _tipped_ применяется в качестве столбца *меток* или результатов, и модель компонуется с использованием следующих столбцов характеристик:  _passenger_count_ , _trip_distance_ , _trip_time_in_secs_ и _direct_distance_.
+     Двоичная переменная _tipped_ применяется в качестве столбца *меток* или результатов, и модель компонуется с использованием следующих столбцов характеристик:  _passenger_count_, _trip_distance_, _trip_time_in_secs_ и _direct_distance_.
   
    + Модель обучения, сохраненная в переменной R `logitObj`, сериализуется и возвращается в качестве выходного параметра.
 
@@ -87,7 +87,7 @@ ms.locfileid: "92412546"
 
 Поскольку хранимая процедура уже включает в себя определение входных данных, указывать входной запрос не требуется.
 
-1. Для обучения и развертывания модели R вызовите хранимую процедуру и вставьте ее в таблицу базы данных _nyc_taxi_models_ , чтобы ее можно было использовать для будущих прогнозов:
+1. Для обучения и развертывания модели R вызовите хранимую процедуру и вставьте ее в таблицу базы данных _nyc_taxi_models_, чтобы ее можно было использовать для будущих прогнозов:
 
    ```sql
    DECLARE @model VARBINARY(MAX);
@@ -95,13 +95,13 @@ ms.locfileid: "92412546"
    INSERT INTO nyc_taxi_models (name, model) VALUES('RTrainLogit_model', @model);
    ```
 
-2. Следите за сообщениями, которые должны передаваться в поток R **stdout** , в окне **Сообщения** среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]: 
+2. Следите за сообщениями, которые должны передаваться в поток R **stdout**, в окне **Сообщения** среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]: 
 
    "Сообщения STDOUT из внешнего сценария: Прочитано строк: 1193025, всего обработано строк: 1193025, общее время обработки блока: 0,093 с"
 
 3. После выполнения инструкции откройте таблицу *nyc_taxi_models*. Обработка данных и компоновка модели может занять некоторое время.
 
-   Вы увидите, что была добавлена одна новая строка, которая содержит сериализованную модель в столбце _model_ и имя модели **TrainLog_model** в столбце _name_.
+   Вы увидите, что была добавлена одна новая строка, которая содержит сериализованную модель в столбце _model_ и имя модели **RTrainLogit_model** в столбце _name_.
 
    ```text
    model                        name

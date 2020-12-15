@@ -11,13 +11,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: bc36846a62b8b71e0e21d7ea61d088a0f16c674d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 89daf919af43c130c23477596e34d6a19654fd12
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035187"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474765"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys.dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "92035187"
 |effective_request_max_resource_grant_percent|**Decimal (5, 2)**|Эффективное значение времени выполнения для request_max_resource_grant_percent группы рабочей нагрузки, учитывая конфигурацию всех групп рабочей нагрузки.||
 |||||
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
  [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

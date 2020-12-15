@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 2038883693288a75f9e2dbe17d80b6b9c7474343
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 933b7749218e71a66cdc6d0a25666be32c8badfe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753730"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474755"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -47,27 +47,27 @@ ms.locfileid: "91753730"
 |**min_cpu**|tinyint|Значение MIN_CPU_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_cpu**|tinyint|Значение MAX_CPU_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**cap_cpu**|tinyint|Значение CAP_CPU_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
-|**min_cores**|smallint|Только для внутреннего применения.|
+|**min_cores**|smallint|Только для внутреннего использования.|
 |**max_dop**|smallint|Значение MAX_DOP для группы рабочей нагрузки пользователя. См. раздел [Создание группы рабочей нагрузки](../../t-sql/statements/create-workload-group-transact-sql.md).|
 |**min_memory**|INT|Значение MIN_MEMORY_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_memory**|INT|Значение MAX_MEMORY_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_sessions**|INT|Максимальное число сеансов, разрешенное в группе рабочей нагрузки пользователя.|
 |**max_memory_grant**|INT|Значение REQUEST_MAX_MEMORY_GRANT_PERCENT для группы рабочей нагрузки пользователя. См. раздел [Создание группы рабочей нагрузки](../../t-sql/statements/create-workload-group-transact-sql.md).|
-|**max_db_memory**|INT|Только для внутреннего применения.|
-|**govern_background_io**|bit|Только для внутреннего применения.|
+|**max_db_memory**|INT|Только для внутреннего использования.|
+|**govern_background_io**|bit|Только для внутреннего использования.|
 |**min_db_max_size_in_mb**|BIGINT|Минимальное max_size значение для файла данных в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**max_db_max_size_in_mb**|BIGINT|Максимальное max_size значение для файла данных в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**default_db_max_size_in_mb**|BIGINT|Значение max_size по умолчанию для файла данных в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**db_file_growth_in_mb**|BIGINT|Шаг роста по умолчанию для файла данных в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**initial_db_file_size_in_mb**|BIGINT|Размер по умолчанию для нового файла данных в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**log_size_in_mb**|BIGINT|Размер по умолчанию для нового файла журнала в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
-|**instance_cap_cpu**|INT|Только для внутреннего применения.|
+|**instance_cap_cpu**|INT|Только для внутреннего использования.|
 |**instance_max_log_rate**|BIGINT|Ограничение скорости создания журнала для экземпляра SQL Server, в байтах в секунду. Применяется ко всему журналу, созданному экземпляром, включая `tempdb` и другие системные базы данных. В эластичном пуле применяется к журналу, созданному всеми базами данных в пуле.|
 |**instance_max_worker_threads**|INT|Ограничение рабочего потока для экземпляра SQL Server.|
 |**replica_type**|INT|Тип реплики, где 0 — первичный, а 1 — вторичный.|
 |**max_transaction_size**|BIGINT|Максимальное пространство журнала, используемое любой транзакцией, в КБ.|
-|**checkpoint_rate_mbps**|INT|Только для внутреннего применения.|
-|**checkpoint_rate_io**|INT|Только для внутреннего применения.|
+|**checkpoint_rate_mbps**|INT|Только для внутреннего использования.|
+|**checkpoint_rate_io**|INT|Только для внутреннего использования.|
 |**last_updated_date_utc**|DATETIME|Дата и время последнего изменения параметра или его перенастройки в формате UTC.|
 |**primary_group_id**|INT|Идентификатор группы рабочей нагрузки для пользовательской рабочей нагрузки на первичной реплике и во вторичных репликах.|
 |**primary_group_max_workers**|INT|Ограничение рабочего потока для группы рабочей нагрузки пользователя.|
@@ -80,15 +80,15 @@ ms.locfileid: "91753730"
 |**primary_log_commit_fee**|INT|Тариф на фиксацию контроля частоты журналов для группы рабочей нагрузки пользователя в байтах. Плата за фиксацию увеличивает размер каждой операции ввода-вывода журнала на фиксированное значение только в целях учета скорости журнала. Фактические операции ввода-вывода журнала в хранилище не увеличиваются.|
 |**primary_pool_max_workers**|INT|Ограничение рабочего потока для пула ресурсов рабочей нагрузки пользователя.|
 |**pool_max_io**|INT|Максимальный предел операций ввода-вывода в секунду для пула ресурсов рабочей нагрузки пользователя.|
-|**govern_db_memory_in_resource_pool**|bit|Только для внутреннего применения.|
-|**volume_local_iops**|INT|Только для внутреннего применения.|
-|**volume_managed_xstore_iops**|INT|Только для внутреннего применения.|
-|**volume_external_xstore_iops**|INT|Только для внутреннего применения.|
-|**volume_type_local_iops**|INT|Только для внутреннего применения.|
-|**volume_type_managed_xstore_iops**|INT|Только для внутреннего применения.|
-|**volume_type_external_xstore_iops**|INT|Только для внутреннего применения.|
-|**volume_pfs_iops**|INT|Только для внутреннего применения.|
-|**volume_type_pfs_iops**|INT|Только для внутреннего применения.|
+|**govern_db_memory_in_resource_pool**|bit|Только для внутреннего использования.|
+|**volume_local_iops**|INT|Только для внутреннего использования.|
+|**volume_managed_xstore_iops**|INT|Только для внутреннего использования.|
+|**volume_external_xstore_iops**|INT|Только для внутреннего использования.|
+|**volume_type_local_iops**|INT|Только для внутреннего использования.|
+|**volume_type_managed_xstore_iops**|INT|Только для внутреннего использования.|
+|**volume_type_external_xstore_iops**|INT|Только для внутреннего использования.|
+|**volume_pfs_iops**|INT|Только для внутреннего использования.|
+|**volume_type_pfs_iops**|INT|Только для внутреннего использования.|
 |||
 
 ## <a name="permissions"></a>Разрешения

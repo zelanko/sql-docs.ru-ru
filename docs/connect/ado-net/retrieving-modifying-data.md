@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d6e4d6c298c632c446e1671b5d9adabaa19e0776
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419755"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761492"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Извлечение и изменение данных в ADO.NET
 
@@ -27,13 +27,23 @@ ms.locfileid: "96419755"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Подключение к источнику данных](connecting-to-data-source.md). Инструкции по установке подключения к источнику данных и работе с событиями подключения.
+[подключение к источнику данных](connecting-to-data-source.md);  
+Описывается установка подключения к источнику данных и работа с событиями подключения.
 
-[Строки подключений](connection-strings.md). Описание различных аспектов использования строк подключения, в том числе ключевых слов строк подключения и сведений для защиты, а также их хранения и извлечения.
+[Строки подключения](connection-strings.md)  
+Содержит разделы, в которых описываются различные аспекты использования строк подключения, в том числе ключевых слов строки подключения, сведения о безопасности, их хранение и извлечение.
 
-[Организация пулов подключений](connection-pooling.md). Описание объединения подключений в пулы для поставщика данных Microsoft SqlClient для SQL Server.
+[Организация пулов соединений](connection-pooling.md)  
+Описание объединения подключений в пулы для поставщика данных Microsoft SqlClient для SQL Server.
+
+[Команды и параметры](commands-parameters.md)  
+Содержит разделы, в которых описывается создание команд и построителей команд, настройка параметров и выполнение команд для извлечения и изменения данных.
+
+[Объекты DataAdapter и DataReader](dataadapters-datareaders.md)  
+Содержит разделы, в которых описываются объекты DataReader, DataAdapter, параметры, обработка событий объекта и выполнение пакетных операций.
 
 ## <a name="see-also"></a>См. также
 
 - [Сопоставления типов данных в ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server и ADO.NET](./sql/index.md)
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

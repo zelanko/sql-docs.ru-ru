@@ -1,6 +1,6 @@
 ---
 description: sys.fn_virtualfilestats (Transact-SQL)
-title: sys. fn_virtualfilestats (Transact-SQL) | Документация Майкрософт
+title: sys.fn_virtualfilestats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fedf4b7412578bb73a717d1646f29ac1471b14ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5cb40699cf7c4ba8c2391ea12d0c060f2c388986
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481820"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474745"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Возвращает статистику ввода-вывода для файлов базы данных, включая файлы журналов. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эти сведения также доступны в динамическом административном представлении [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
+  Возвращает статистику ввода-вывода для файлов базы данных, включая файлы журналов. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эти сведения также доступны в динамическом административном представлении [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
  Идентификатор базы данных. Аргумент *database_id* имеет тип **int** и не имеет значения по умолчанию. Укажите значение NULL, чтобы вернуть сведения для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *file_id* | ЗАКАНЧИВАЮЩ  
- Идентификатор файла. *file_id* имеет **тип int**и не имеет значения по умолчанию. Чтобы получить сведения обо всех файлах в базе данных, укажите значение NULL.  
+ Идентификатор файла. *file_id* имеет **тип int** и не имеет значения по умолчанию. Чтобы получить сведения обо всех файлах в базе данных, укажите значение NULL.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -65,7 +65,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**IoStallWriteMS**|**bigint**|Общее количество времени, в миллисекундах, затраченного пользователями на ожидание выполнения операций записи в файл.|  
 |**IoStallMS**|**bigint**|Сумма **иосталлреадмс** и **иосталлвритемс**.|  
 |**FileHandle**|**bigint**|Значение дескриптора файла.|  
-|**BytesOnDisk**|**bigint**|Физический размер файла на диске (в байтах).<br /><br /> Для файлов базы данных это значение совпадает с **размером** в **sys. database_files**, но выражается в байтах, а не на страницах.<br /><br /> Для разреженных файлов моментального снимка базы данных это пространство, используемое операционной системой для данного файла.|  
+|**BytesOnDisk**|**bigint**|Физический размер файла на диске (в байтах).<br /><br /> Для файлов базы данных это значение совпадает с **размером** в **sys.database_files**, но выражается в байтах, а не на страницах.<br /><br /> Для разреженных файлов моментального снимка базы данных это пространство, используемое операционной системой для данного файла.|  
   
 ## <a name="remarks"></a>Комментарии  
  **fn_virtualfilestats** — это системная функция, возвращающая табличное значение, которая предоставляет статистические сведения, например общее количество операций ввода-вывода, выполненных над файлом. Эту функцию можно использовать для контроля времени, затрачиваемого пользователями на ожидание выполнения чтения или записи в файл. Эта функция также помогает выявить файлы, над которыми выполняется много операций ввода-вывода.  
@@ -102,9 +102,9 @@ FROM fn_virtualfilestats(NULL,NULL);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [FILE_IDEX (Transact-SQL)](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-title: sys. dm_exec_describe_first_result_set_for_object (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9600439c2f3d58d38cea393886ed90a55e5e7d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fb51b9913b8a45b582520174cf98a226918d6aa3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550322"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474915"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Эта функция динамического управления принимает в @object_id качестве параметра и описывает первый результирующий набор метаданных для модуля с таким идентификатором. Заданный параметр @object_id может быть идентификатором [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. Если же передан идентификатор любого другого объекта (представления, функции, таблицы или процедуры CLR), то в столбцах ошибки результата будет содержаться ошибка.  
   
- представление **sys. dm_exec_describe_first_result_set_for_object** имеет то же определение результирующего набора, что и [sys. Dm_exec_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) , и аналогично [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set_for_object** имеет то же определение результирующего набора, что и [sys.dm_exec_describe_first_result_set &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) и аналогично [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sys.dm_exec_describe_first_result_set_for_object
  @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] Хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. @object_id имеет тип **int**.  
   
  *\@include_browse_information*  
- @include_browse_information является **битом**типа. Если имеет значение 1, то каждый запрос анализируется так, как будто он имеет параметр FOR BROWSE для запроса. Возвращает дополнительные ключевые столбцы и сведения об исходной таблице.  
+ @include_browse_information является **битом** типа. Если имеет значение 1, то каждый запрос анализируется так, как будто он имеет параметр FOR BROWSE для запроса. Возвращает дополнительные ключевые столбцы и сведения об исходной таблице.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
  Эти общие метаданные возвращаются в виде результирующего набора с одной строкой для каждого столбца в результирующих метаданных. Каждая строка описывает тип и допустимость значений NULL в столбце в формате, описанном в следующем разделе. Если первая инструкция не существует для каждого пути управления, возвращается результирующий набор с нулем строк.  
@@ -97,7 +97,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|Содержит целое число, представляющее возвращаемую ошибку. Соответствует error_type_desc. См. список под замечаниями.|  
 |**error_type_desc**|**nvarchar(60)**|Содержит короткую строку в верхнем регистре, представляющую возвращаемую ошибку. Сопоставляется с error_type. См. список под замечаниями.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  В этой функции используется тот же алгоритм, что и в процедуре **sp_describe_first_result_set**. Дополнительные сведения см. в разделе [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  В следующей таблице содержится список типов ошибок и их описания  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>Б. Объединение функции sys.dm_exec_describe_first_result_set_for_object с таблицей или представлением  
- В следующем примере используются как представление каталога sys. процедур, так и функция **sys. dm_exec_describe_first_result_set_for_object** для отображения метаданных для результирующих наборов всех хранимых процедур в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базе данных.  
+ В следующем примере используются как представление каталога sys. процедур, так и функция **sys.dm_exec_describe_first_result_set_for_object** для отображения метаданных для результирующих наборов всех хранимых процедур в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базе данных.  
   
 ```  
 USE AdventureWorks2012;  
@@ -155,6 +155,6 @@ GO
 ## <a name="see-also"></a>См. также:  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

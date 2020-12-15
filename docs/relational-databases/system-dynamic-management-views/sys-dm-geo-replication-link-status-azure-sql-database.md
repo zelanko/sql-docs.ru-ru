@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cb9936ce01a68055b7f050ddc7dbdb21a9802438
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834250"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474855"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (база данных SQL Azure)
 
@@ -44,7 +44,7 @@ ms.locfileid: "91834250"
 |роль|**tinyint**|Роль георепликации, одна из следующих:<br /><br /> 0 = основной. Database_id ссылается на базу данных-источник в партнерстве георепликации.<br /><br /> 1 = вторичный.  Database_id ссылается на базу данных-источник в партнерстве георепликации.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Вторичный тип, один из следующих:<br /><br /> 0 = прямые подключения не разрешены для базы данных-получателя, и база данных недоступна для чтения.<br /><br /> 2 = все соединения разрешены для базы данных в реплике-получателе REPL; икатион для доступа только для чтения.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Нет<br /><br /> Все|  
+|secondary_allow_connections_desc|**nvarchar(256)**|Нет<br /><br /> All|  
 |last_commit|**datetimeoffset**|Время последней фиксации транзакции в базе данных. При получении в базе данных источника указывает время последней фиксации в базе данных источника. При получении в базе данных-получателе указывает время последней фиксации в базе данных-получателе. При получении в базе данных-получателе, когда первичная реплика канала репликации находится в недоступном виде, она указывает до того, как будет перехвачена дополнительная точка.|
   
 > [!NOTE]  
