@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d649592bb7cdce47c511971db641c9d9c3f7b96
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 20a5d9007efce1cf5f39c8a25975ebd521aefb2e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081453"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476125"
 ---
 # <a name="ibcpsessionbcpcolfmt-native-client-ole-db-provider"></a>IBCPSession:: BCPColFmt (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ HRESULT BCPColFmt(
   
 -   длина дополнительной последовательности байт, служащей признаком конца.  
   
- При каждом вызове метода **BCPColFmt** задается формат для одного поля в файле пользователя. Например, чтобы изменить значения по умолчанию трех полей в файле данных пользователя, состоящем из пяти полей, сначала вызовите метод `BCPColumns(5)`, а затем метод **BCPColFmt** пять раз и в трех из этих вызовов задайте нужный формат. При оставшихся двух вызовах для параметра *eUserDataType* установите значение BCP_TYPE_DEFAULT, а параметрам *cbIndicator*, *cbUserData*и *cbUserDataTerm* присвойте значения 0, BCP_VARIABLE_LENGTH и 0 соответственно. Эта процедура копирует все пять столбцов. Для трех применяется заданный измененный формат, а для двух оставшихся — формат по умолчанию.  
+ При каждом вызове метода **BCPColFmt** задается формат для одного поля в файле пользователя. Например, чтобы изменить значения по умолчанию трех полей в файле данных пользователя, состоящем из пяти полей, сначала вызовите метод `BCPColumns(5)`, а затем метод **BCPColFmt** пять раз и в трех из этих вызовов задайте нужный формат. При оставшихся двух вызовах для параметра *eUserDataType* установите значение BCP_TYPE_DEFAULT, а параметрам *cbIndicator*, *cbUserData* и *cbUserDataTerm* присвойте значения 0, BCP_VARIABLE_LENGTH и 0 соответственно. Эта процедура копирует все пять столбцов. Для трех применяется заданный измененный формат, а для двух оставшихся — формат по умолчанию.  
   
 > [!NOTE]  
 >  Необходимо вызывать метод [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) перед любым вызовом метода **BCPColFmt**. Метод **BCPColFmt** необходимо вызывать по одному разу для каждого столбца из файла пользователя. При вызове метода **BCPColFmt** более одного раза для любого столбца из файла пользователя возникает ошибка.  
@@ -94,7 +94,7 @@ HRESULT BCPColFmt(
   
  Для символьных и двоичных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр **cbUserData** может иметь значение BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 или любое положительное значение. Если параметру **cbUserData** присвоено значение BCP_LENGTH_VARIABLE, то для определения длины данных система использует либо признак длины при его наличии, либо последовательность с признаком конца. Если задан и признак длины, и последовательность признака конца, то при массовом копировании используется значение, применение которого вызывает копирование данных наименьшего объема. Если параметру **cbUserData** присвоено значение BCP_LENGTH_VARIABLE, то данные принадлежат к символьному или двоичному типу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а если не указаны ни признак длины, ни последовательность с признаком конца, система возвращает сообщение об ошибке.  
   
- Если значение **cbUserData** больше или равно 0, то система рассматривает значение **cbUserData** как максимальную длину данных. Но если в дополнение к положительному значению для **cbUserData**указан признак длины или последовательность признака конца, то система определяет объем данных методом, который приведет к копированию наименьшего объема данных.  
+ Если значение **cbUserData** больше или равно 0, то система рассматривает значение **cbUserData** как максимальную длину данных. Но если в дополнение к положительному значению для **cbUserData** указан признак длины или последовательность признака конца, то система определяет объем данных методом, который приведет к копированию наименьшего объема данных.  
   
  Значение **cbUserData** представляет объем данных в байтах. Если символьные данные представлены строкой знаков в Юникоде, то положительное значение параметра **cbUserData** представляет количество символов, умноженное на размер символа в байтах.  
   
@@ -130,6 +130,6 @@ HRESULT BCPColFmt(
  Ошибка, связанная с нехваткой памяти.  
   
 ## <a name="see-also"></a>См. также:  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

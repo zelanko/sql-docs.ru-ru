@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_memory_consumers (Transact-SQL)
-title: sys. dm_db_xtp_memory_consumers (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 321297a2590a18ed7e51364b3f532076f90ce740
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a962925e0a359055286b6598914cd3e79cf8036c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542247"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474975"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -47,14 +47,14 @@ ms.locfileid: "89542247"
 |allocated_bytes|**bigint**|Число байтов, зарезервированных для этого потребителя памяти.|  
 |used_bytes|**bigint**|Число байтов, используемых этим потребителем. Относится только к varheap.|  
 |allocation_count|**int**|Количество выделений.|  
-|partition_count|**int**|Только для внутреннего применения.|  
-|sizeclass_count|**int**|Только для внутреннего применения.|  
-|min_sizeclass|**int**|Только для внутреннего применения.|  
-|max_sizeclass|**int**|Только для внутреннего применения.|  
+|partition_count|**int**|Только для внутреннего использования.|  
+|sizeclass_count|**int**|Только для внутреннего использования.|  
+|min_sizeclass|**int**|Только для внутреннего использования.|  
+|max_sizeclass|**int**|Только для внутреннего использования.|  
 |memory_consumer_address|**varbinary**|Внутренний адрес потребителя памяти. Только для внутреннего использования.|  
 |xtp_object_id|**bigint**|Идентификатор объекта выполняющейся в памяти OLTP, соответствующий таблице, оптимизированной для памяти.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  На выходе выделения пространства на уровнях базы данных представляют собой пользовательские таблицы, индексы и системные таблицы. VARHEAP с object_id = NULL относится к памяти, выделенной для таблицы со столбцами переменной длины.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -65,7 +65,7 @@ ms.locfileid: "89542247"
  Системные таблицы возвращаются только для пользователей с разрешением VIEW DATABASE STATE.  
   
 ## <a name="general-remarks"></a>Общие замечания  
- Если оптимизированная для памяти таблица имеет индекс columnstore, система использует некоторые внутренние таблицы, которые потребляют некоторый объем памяти, чтобы отслеживанию данных для индекса columnstore. Дополнительные сведения об этих внутренних таблицах и примерах запросов, демонстрирующих использование памяти, см. в статье [sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+ Если оптимизированная для памяти таблица имеет индекс columnstore, система использует некоторые внутренние таблицы, которые потребляют некоторый объем памяти, чтобы отслеживанию данных для индекса columnstore. Дополнительные сведения об этих внутренних таблицах и примерах запросов, в которых показано потребление памяти, см. [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
 ## <a name="examples"></a>Примеры  
@@ -112,7 +112,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- Общий объем памяти, выделенный и используемый в этом динамическом административном представлении, совпадает с уровнем объекта в [sys. dm_db_xtp_table_memory_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ Общий объем памяти, выделенный и используемый из этого динамического административного представления, совпадает с уровнем объекта в [sys.dm_db_xtp_table_memory_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   
@@ -124,7 +124,7 @@ total_allocated_MB   total_used_MB
 1358                 1191  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

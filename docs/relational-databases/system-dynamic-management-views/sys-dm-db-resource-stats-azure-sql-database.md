@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 0f1a31c5822ca8d3d7a18eed49145d37a07b49ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833705"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475015"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "91833705"
 |avg_cpu_percent|**Decimal (5, 2)**|Средний уровень использования вычислительных мощностей в процентах от предела для уровня службы.|  
 |avg_data_io_percent|**Decimal (5, 2)**|Среднее использование операций ввода-вывода данных в процентах от ограничения уровня службы. Сведения о масштабировании баз данных см. [в статье Статистика использования ресурсов при вводе](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)-выводе.|  
 |avg_log_write_percent|**Decimal (5, 2)**|Среднее число операций записи в журнал транзакций (в Мбит/с) в процентах от пределов уровня службы.|  
-|avg_memory_usage_percent|**Decimal (5, 2)**|Средний уровень использования памяти в процентах от предела для уровня службы.<br /><br /> Сюда входит память, используемая для страниц буферного пула и хранения объектов OLTP в памяти.|  
-|xtp_storage_percent|**Decimal (5, 2)**|Использование хранилища для выполняющейся в памяти OLTP в процентах от ограничения уровня службы (в конце интервала отчетности). Сюда входит память, используемая для хранения следующих объектов OLTP в памяти: оптимизированных для памяти таблиц, индексов и табличных переменных. Он также включает память, используемую для обработки операций ALTER TABLE.<br /><br /> Возвращает 0, если выполняющаяся в памяти OLTP не используется в базе данных.|  
+|avg_memory_usage_percent|**Decimal (5, 2)**|Средний уровень использования памяти в процентах от предела для уровня службы.<br /><br /> Сюда входит память, используемая для страниц буферного пула и хранения объектов In-Memory OLTP.|  
+|xtp_storage_percent|**Decimal (5, 2)**|Использование хранилища для In-Memory OLTP в процентах от ограничения уровня службы (в конце интервала отчетов). Сюда входит память, используемая для хранения следующих In-Memory объектов OLTP: оптимизированных для памяти таблиц, индексов и табличных переменных. Он также включает память, используемую для обработки операций ALTER TABLE.<br /><br /> Возвращает 0, если In-Memory OLTP не используется в базе данных.|  
 |max_worker_percent|**Decimal (5, 2)**|Максимальное число одновременных рабочих процессов (запросов) в процентах от предела уровня служб базы данных.|  
 |max_session_percent|**Decimal (5, 2)**|Максимальное число одновременных сеансов в процентах от ограничения уровня служб базы данных.|  
 |dtu_limit|**int**|Текущее максимальное значение DTU базы данных для этой базы данных в течение этого интервала. Для баз данных, использующих модель на основе виртуальное ядро, этот столбец имеет значение NULL.|

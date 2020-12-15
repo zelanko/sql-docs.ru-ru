@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_index_fragments (Transact-SQL)
-title: sys. fulltext_index_fragments (Transact-SQL) | Документация Майкрософт
+title: sys.fulltext_index_fragments (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 953bf5145712d81acf0ed193719d290cc2397e43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5e0f1882c6840048e3308120e6b8768897b43d6b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475185"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88401370"
 |row_count|**int**|Количество индивидуальных строк фрагмента.|  
 |status|**int**|Состояние фрагмента одно из следующих:<br /><br /> 0 — только что создан и еще не использован;<br /><br /> 1 — используется для вставки во время заполнения или слияния полнотекстового индекса;<br /><br /> 4 — закрыт. Готов к запросу;<br /><br /> 6 — используется для входа слияния и готов к запросу;<br /><br /> 8 — помечен для удаления. Не будет использоваться для запросов и как вход слияния.<br /><br /> Состояние 4 или 6 означает, что фрагмент является частью логического полнотекстового индекса и может быть запрошен. Это значит, что это *запрашиваемый* фрагмент.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Представление каталога sys.fulltext_index_fragments можно использовать для запроса о числе фрагментов, составляющих полнотекстовый индекс. Если полнотекстовый запрос работает медленно, можно использовать представление sys.fulltext_index_fragments, чтобы получить число запрашиваемых фрагментов (с состоянием, равным 4 или 6) полнотекстового индекса следующим образом:  
   
 ```  

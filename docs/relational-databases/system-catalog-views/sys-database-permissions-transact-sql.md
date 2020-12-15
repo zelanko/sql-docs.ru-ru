@@ -1,6 +1,6 @@
 ---
 description: sys.database_permissions (Transact-SQL)
-title: sys. database_permissions (Transact-SQL) | Документация Майкрософт
+title: sys.database_permissions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc503cec67334a95a7e5e06e19a3b6eb722e27f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0af3adae81e4f0bb9489e3534427dfe03efebf09
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469989"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475255"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "88469989"
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Указывает класс, на который существует разрешение.<br /><br /> 0 = база данных;<br />1 = объект или столбец<br />3 = схема<br />4 = Участник базы данных<br />5 = сборка — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.<br />6 = Тип<br />10 = коллекция схем XML — <br />                      **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />15 = тип сообщения — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.<br />16 = контракт службы — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.<br />17 = служба — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.<br />18 = привязка удаленной службы — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.<br />19 = маршрут — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.<br />23 = полнотекстовый каталог — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.<br />24 = симметричный ключ — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.<br />25 = сертификат **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.<br />26 = асимметричный ключ — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.|  
 |**class_desc**|**nvarchar(60)**|Описание класса, на который существует разрешение.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|Идентификатор предмета, на который существует разрешение, интерпретируется в соответствии с классом. Обычно **major_id** — это просто тип идентификатора, который применяется к представлению класса. <br /><br /> 0 = сама база данных; <br /><br /> >0 = Object-ID для пользовательских объектов <br /><br /> \<0 = Object-ID для системных объектов |  
+|**major_id**|**int**|Идентификатор предмета, на который существует разрешение, интерпретируется в соответствии с классом. Обычно **major_id** — это просто тип идентификатора, который применяется к представлению класса. <br /><br /> 0 = сама база данных; <br /><br /> >0 = Object-IDs для объектов пользователя <br /><br /> \<0 = Object-IDs для системных объектов |  
 |**minor_id**|**int**|Вторичный идентификатор предмета, на который существует разрешение, интерпретируется согласно классу. Часто **minor_id** равен нулю, так как для класса объекта нет доступной подкатегории. В противном случае это идентификатор столбца таблицы.|  
 |**grantee_principal_id**|**int**|Идентификатор участника базы данных, которому предоставлено разрешение.|  
 |**grantor_principal_id**|**int**|Идентификатор участника базы данных, который предоставил данное разрешение.|  
 |**type**|**char (4)**|Тип разрешения в базе данных. Список типов разрешений см. в следующей таблице.|  
 |**permission_name**|**nvarchar(128)**|Имя разрешения.|  
-|**state**|**char (1)**|Состояние разрешения:<br /><br /> D = запретить<br /><br /> R = отменить<br /><br /> G = предоставить<br /><br /> W = параметр Grant With Grant|  
+|**state**|**char(1)**|Состояние разрешения:<br /><br /> D = запретить<br /><br /> R = отменить<br /><br /> G = предоставить<br /><br /> W = параметр Grant With Grant|  
 |**state_desc**|**nvarchar(60)**|Описание состояния разрешения:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>Разрешения базы данных   
@@ -167,7 +167,7 @@ JOIN sys.schemas AS s
 ```  
     
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Securables](../../relational-databases/security/securables.md)   
  [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

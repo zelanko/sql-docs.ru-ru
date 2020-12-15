@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95e4d3b3b1b06810fc1e60564a4ad7c84e85189a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 169f0069565c3d1f6561d6edc8e8b459fc77ac9a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486550"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475265"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,19 +43,19 @@ ms.locfileid: "88486550"
 |**is_active_for_begin_dialog**|**bit**|Если значение равно 1, то данный сертификат применяется для инициализации зашифрованных диалоговых окон службы.|  
 |**issuer_name**|**nvarchar (442)**|Имя поставщика сертификата.|  
 |**cert_serial_number**|**nvarchar (64)**|Регистрационный номер сертификата.|  
-|**sid**|**varbinary(85)**|Идентификатор SID имени входа для данного сертификата.|  
+|**трансляцию**|**varbinary(85)**|Идентификатор SID имени входа для данного сертификата.|  
 |**string_sid**|**nvarchar(128)**|Строковое представление идентификатора SID имени входа для данного сертификата|  
 |**subject**|**nvarchar(4000)**|Субъект сертификата.|  
 |**expiry_date**|**datetime**|Дата окончания срока действия сертификата.|  
 |**start_date**|**datetime**|Дата выпуска сертификата.|  
-|**отпечатк**|**varbinary(32)**|Хэш сертификата SHA-1. Хэш SHA-1 является глобально уникальным.|  
+|**thumbprint**|**varbinary(32)**|Хэш сертификата SHA-1. Хэш SHA-1 является глобально уникальным.|  
 |**attested_by**|**nvarchar(260)**|Только для системного использования.|  
 |**pvt_key_last_backup_date**|**datetime**|Дата и время последнего экспорта закрытого ключа сертификата.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
