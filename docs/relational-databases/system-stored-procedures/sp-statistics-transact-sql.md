@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b22227de702e787f183a7ec15e3b26d685fd6cb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ab64c4fa1ea96390631508130ba9a7b57d8a8493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005954"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410558"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,15 +49,15 @@ sp_statistics [ @table_name = ] 'table_name'
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>Аргументы  
-`[ @table_name = ] 'table_name'` Указывает таблицу, используемую для возврата сведений о каталоге. Аргумент *table_name* имеет тип **sysname**и не имеет значения по умолчанию. Сопоставление по шаблону не поддерживается.  
+`[ @table_name = ] 'table_name'` Указывает таблицу, используемую для возврата сведений о каталоге. Аргумент *table_name* имеет тип **sysname** и не имеет значения по умолчанию. Сопоставление по шаблону не поддерживается.  
   
-`[ @table_owner = ] 'owner'` Имя владельца таблицы, используемой для возврата сведений о каталоге. Аргумент *table_owner* имеет тип **sysname**и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если параметр *owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
+`[ @table_owner = ] 'owner'` Имя владельца таблицы, используемой для возврата сведений о каталоге. Аргумент *table_owner* имеет тип **sysname** и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если параметр *owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущий пользователь является владельцем таблицы с указанным именем, возвращаются индексы таблицы. Если *владелец* не указан и текущий пользователь не владеет таблицей с указанным *именем*, эта процедура ищет таблицу с указанным *именем* , принадлежащую владельцу базы данных. Если владелец существует, возвращаются индексы этой таблицы.  
   
-`[ @table_qualifier = ] 'qualifier'` Имя квалификатора таблицы. *квалификатор* имеет тип **sysname**и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот аргумент представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
+`[ @table_qualifier = ] 'qualifier'` Имя квалификатора таблицы. *квалификатор* имеет тип **sysname** и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот аргумент представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
-`[ @index_name = ] 'index_name'` Имя индекса. Аргумент *index_name* имеет тип **sysname**и значение по умолчанию%. Поиск совпадений по шаблону поддерживается.  
+`[ @index_name = ] 'index_name'` Имя индекса. Аргумент *index_name* имеет тип **sysname** и значение по умолчанию%. Поиск совпадений по шаблону поддерживается.  
   
 `[ @is_unique = ] 'is_unique'` Указывает, должны ли возвращаться только уникальные индексы (если **Y**). *is_unique* имеет **тип char (1)** и значение по умолчанию **N**.  
   
@@ -81,7 +81,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|Позиция столбца в индексе.|  
 |**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Этот столбец всегда возвращает значение.|  
 |**COLLATION**|**char(1)**|Порядок сортировки. Возможны следующие варианты:<br /><br /> A = по возрастанию<br /><br /> D = по убыванию<br /><br /> NULL = неприменимо|  
-|**CARDINALITY**|**int**|Число строк в таблице или уникальных значений в индексе.|  
+|**КОЛИЧЕСТВА элементов**|**int**|Число строк в таблице или уникальных значений в индексе.|  
 |**СМ**|**int**|Число страниц для хранения индекса или таблицы.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
   
@@ -89,13 +89,13 @@ sp_statistics [ @table_name = ] 'table_name'
  None  
   
 ## <a name="remarks"></a>Remarks  
- Индексы в результирующем наборе отображаются в возрастающем порядке по столбцам **NON_UNIQUE**, **Type**, **index_name**и **SEQ_IN_INDEX**.  
+ Индексы в результирующем наборе отображаются в возрастающем порядке по столбцам **NON_UNIQUE**, **Type**, **index_name** и **SEQ_IN_INDEX**.  
   
  Кластеризованный индекс — это индекс, при котором физический порядок хранения данных таблицы соответствует последовательности индекса. Это соответствует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] кластеризованным индексам.  
   
  Хешированный индекс обеспечивает поиск по полному совпадению или диапазону. Для поиска по шаблону он не используется.  
   
- **sp_statistics** эквивалентен **SQLStatistics** в ODBC. Возвращаемые результаты упорядочиваются по **NON_UNIQUE**, **типу**, **INDEX_QUALIFIER**, **index_name**и **SEQ_IN_INDEX**. Дополнительные сведения см. в [справочнике по API ODBC](../../odbc/reference/syntax/odbc-reference.md).  
+ **sp_statistics** эквивалентен **SQLStatistics** в ODBC. Возвращаемые результаты упорядочиваются по **NON_UNIQUE**, **типу**, **INDEX_QUALIFIER**, **index_name** и **SEQ_IN_INDEX**. Дополнительные сведения см. в [справочнике по API ODBC](../../odbc/reference/syntax/odbc-reference.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
