@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: d60c081eecf88868db4541bc79960bf1bbd8723c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892404"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412967"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (база данных SQL Azure)
 
@@ -39,7 +39,7 @@ ms.locfileid: "91892404"
   
  Представление `sys.event_log` содержит следующие столбцы.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных. Если подключение завершилось ошибкой и пользователь не указал имя базы данных, то этот столбец остается пустым.|  
 |**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -48,7 +48,7 @@ ms.locfileid: "91892404"
 |**event_type**|**nvarchar (64)**|Тип события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_subtype**|**int**|Подтип произошедшего события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_subtype_desc**|**nvarchar (64)**|Описание подтипа события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
-|**severity**|**int**|Степень серьезности ошибки. Доступны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
+|**severity**|**int**|Степень серьезности ошибки. Возможны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
 |**event_count**|**int**|Количество раз, которое произошло это событие для указанной базы данных в течение указанного интервала времени (**start_time** и **end_time**).|  
 |**description**|**nvarchar(max)**|Подробное описание события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**additional_data**|**XML**|*Примечание. это значение всегда равно NULL для базы данных SQL Azure версии 12. Дополнительные сведения о получении событий взаимоблокировок для версии 12 см. в разделе " [примеры](#Deadlock) ".*<br /><br /> Для событий **взаимоблокировок** этот столбец содержит граф взаимоблокировок. Этот столбец содержит значение NULL для других типов событий. |  
@@ -83,13 +83,13 @@ ms.locfileid: "91892404"
 |**установлен**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс был завершен в связи с чрезмерным использованием базы данных TEMPDB. Попробуйте изменить запрос, чтобы сократить объем использования временных таблиц. Дополнительные сведения см. в разделе [ограничения ресурсов](/previous-versions/azure/dn338081(v=azure.100)).|  
 |**установлен**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс был завершен в связи с чрезмерным использованием объема журнала транзакций. Рекомендуется сократить число строк, изменяемых в одной транзакции. Дополнительные сведения см. в разделе [ограничения ресурсов](/previous-versions/azure/dn338081(v=azure.100)).|  
 |**установлен**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс был завершен в связи с чрезмерным использованием памяти. Рекомендуется изменить запрос, сократив число обрабатываемых строк. Дополнительные сведения см. в разделе [ограничения ресурсов](/previous-versions/azure/dn338081(v=azure.100)).|  
-|**ядре**|**взаимоблокировка**|0|**взаимоблокировка**|2|Возникла взаимоблокировка.|  
+|**ядре**|**блокировку**|0|**блокировку**|2|Возникла взаимоблокировка.|  
   
 ## <a name="permissions"></a>Разрешения
 
  Пользователи с разрешением на доступ к базе данных **master** имеют доступ только для чтения к этому представлению.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий
 
@@ -231,4 +231,4 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>См. также:
 
- [Расширенные события в базе данных SQL Azure](/azure/azure-sql/database/xevent-db-diff-from-svr)  
+ [Расширенные события в Базе данных SQL Azure](/azure/azure-sql/database/xevent-db-diff-from-svr)  

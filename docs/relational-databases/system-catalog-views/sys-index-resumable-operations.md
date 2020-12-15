@@ -1,6 +1,6 @@
 ---
-description: sys. index_resumable_operations (Transact-SQL)
-title: sys. index_resumable_operations (Transact-SQL) | Документация Майкрософт
+description: sys.index_resumable_operations (Transact-SQL)
+title: sys.index_resumable_operations (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/12/2019
 ms.prod: sql
@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6878ccf5d267c265ca7bd90120c1bfc227f16ed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 97f0c09e20da61cce1904b17ae830e5ab24abb98
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546775"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412755"
 ---
-# <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
+# <a name="sysindex_resumable_operations-transact-sql"></a>sys.index_resumable_operations (Transact-SQL)
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
-**sys. index_resumable_operations** — это системное представление, которое отслеживает и проверяет текущее состояние выполнения возобновляемого перестроения индекса или создания.  
+**sys.index_resumable_operations** — это системное представление, которое отслеживает и проверяет текущее состояние выполнения возобновляемого перестроения индекса или создания.  
 Область **применения**: SQL Server (2017 и более поздние версии) и база данных SQL Azure.
   
 |Имя столбца|Тип данных|Описание|  

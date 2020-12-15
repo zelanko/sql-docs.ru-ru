@@ -25,13 +25,13 @@ ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81b6570f0301d501f1f8899da70e60f04f1c5c44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 44f7bf464742b1863ebc62a5def3f484932b52c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415836"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Скрытие элементов и атрибутов при помощи sql:hide
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85750753"
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Указание sql:hide для атрибута  
- Схема XSD в этом примере состоит из **\<Person.Contact>** элемента с атрибутами **ContactID**, **FirstName**и **LastName** .  
+ Схема XSD в этом примере состоит из **\<Person.Contact>** элемента с атрибутами **ContactID**, **FirstName** и **LastName** .  
   
  **\<Person.Contact>** Элемент имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты **\<Person.Contact>** элемента имеют простой тип и сопоставляются со столбцами с теми же именами в контакттабле в базе данных AdventureWorks. В схеме заметка **SQL: Hide** задается для атрибута **ContactID** . Если для этой схемы задан запрос XPath, то объект **ContactID** не возвращается в XML-документе.  
   

@@ -15,13 +15,13 @@ ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 544a8741557c222577f124014d6a04a9d066add1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e69adfb9fcd75592f25595c70741864ba4493af
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649766"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415142"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Основные сведения об использовании запросов XPath (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "85649766"
   
 -   **Типы данных**  
   
-     SQLXML 4,0 имеет ограничения на реализацию **строк**XPath, **чисел**и **логических** типов данных. Дополнительные сведения см. в разделе [типы данных XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+     SQLXML 4,0 имеет ограничения на реализацию **строк** XPath, **чисел** и **логических** типов данных. Дополнительные сведения см. в разделе [типы данных XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
 -   **Запросы перекрестного произведения**  
   
@@ -92,25 +92,25 @@ ms.locfileid: "85649766"
 ## <a name="supported-functionality"></a>Поддерживаемые функции  
  В следующей таблице приведены возможности языка XPath, реализованные в SQLXML 4.0.  
   
-|Функция|Элемент|Ссылка на образцы запросов|  
+|Компонент|Элемент|Ссылка на образцы запросов|  
 |-------------|----------|----------------------------|  
-|Оси|**атрибуты**, **дочерние**, **родительские**и **собственные** оси|[Указание осей в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
+|Оси|**атрибуты**, **дочерние**, **родительские** и **собственные** оси|[Указание осей в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Предикаты с логическими значениями, включая последовательные и вложенные предикаты.||[Указание арифметических операторов в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Все реляционные операторы|=,! =, <, \<=, > , >=|[Указание реляционных операторов в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Арифметические операторы|+, -, *, div|[Указание арифметических операторов в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|арифметические операторы;|+, -, *, div|[Указание арифметических операторов в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Явные функции преобразования|**Number ()**, **String ()**, **Boolean ()**|[Указание явных функций преобразования в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|логические операторы|AND, OR|[Указание логических операторов в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Логические операторы|AND, OR|[Указание логических операторов в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |логические функции|**true ()**, **false ()**, **NOT ()**|[Указание логических функций в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |переменные XPath||[Указание переменных XPath в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>Неподдерживаемые функциональные возможности  
  В следующей таблице приведены функции языка XPath, не реализованные в SQLXML 4.0.  
   
-|Функция|Элемент|  
+|Компонент|Элемент|  
 |-------------|----------|  
 |Оси|**предка**, **предка или-Self**, **потомка**, **потомка или самого себя (//)**, **следующего**, следующего **элемента**, **пространство имен**, **предшествующее**, **предшествующее одноуровневый**|  
 |Предикаты с числовыми значениями||  
-|Арифметические операторы|mod|  
+|арифметические операторы;|mod|  
 |Функции узлов|**предка**, **предка или-Self**, **потомка**, **потомка или самого себя (//)**, **следующего**, следующего **элемента**, **пространство имен**, **предшествующее**, **предшествующее одноуровневый**|  
 |Строковые функции|**String ()**, **concat ()**, **начало-с ()**, **Contains ()**, **substring-Before ()**, substring **-After ()**, substring **()**, **string-length ()**, **нормализация ()**, **сдвиг ()**|  
 |логические функции|**lang ()**|  
@@ -121,7 +121,7 @@ ms.locfileid: "85649766"
   
 -   XPath может содержать такие символы, как < или &, которые имеют особые значения в XML (а шаблон — это XML-документ). Эти символы необходимо отформатировать с помощью & кодировки XML или указать XPath в URL-адресе.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование запросов XPath в SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
   
   

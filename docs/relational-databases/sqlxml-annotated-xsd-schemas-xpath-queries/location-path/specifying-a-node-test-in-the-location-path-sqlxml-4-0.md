@@ -16,17 +16,17 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0b7934b73589f71e5152bff33b2080c6eeb353e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b8fdee8bdc7f3fbc3281ecab7682efdc8378bbdf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649745"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414917"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Задание проверки узла в пути доступа (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  Проверка узла задает тип узла, выбранного на шаге доступа. Каждая ось (**дочерний**, **родительский**, **атрибут**или **Self**) имеет тип основного узла. Для оси **атрибута** типом основного узла является **\<attribute>** . Для **родительских**, **дочерних**и **собственных** осей тип основного узла — **\<element>** .  
+  Проверка узла задает тип узла, выбранного на шаге доступа. Каждая ось (**дочерний**, **родительский**, **атрибут** или **Self**) имеет тип основного узла. Для оси **атрибута** типом основного узла является **\<attribute>** . Для **родительских**, **дочерних** и **собственных** осей тип основного узла — **\<element>** .  
   
 > [!NOTE]  
 >  Шаблон проверки узла * (например `child::*`) не поддерживается.  
