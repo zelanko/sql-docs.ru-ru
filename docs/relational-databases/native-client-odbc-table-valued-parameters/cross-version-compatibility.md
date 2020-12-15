@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd023dd4ea24bb6749406e59542f9670c8cd2556
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 686078a764e47c922c36f22b94adcbcba0fab90f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97436159"
 ---
 # <a name="cross-version-compatibility"></a>Совместимость версий
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88475753"
   
  Если клиентское приложение, скомпилированное с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента 10,0 или более поздней версии, пытается использовать возвращающие табличное значение параметры при соединении с экземпляром сервера, выпущенным ранее [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент обнаружит это, а вызовы SQLBindCol, SQLBindParameter, склсетдескфиелдс и SQLSetDescRec будут завершаться ошибкой с кодом SQLSTATE 07006, а сообщение "нарушение атрибута ограниченного типа данных (версия SQL Server для этого соединения не поддерживает  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

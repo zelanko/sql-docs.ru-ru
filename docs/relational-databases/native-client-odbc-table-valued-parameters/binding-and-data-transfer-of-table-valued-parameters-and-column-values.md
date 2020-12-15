@@ -1,6 +1,6 @@
 ---
-title: Передача данных возвращающих табличное значение параметров
-description: Описание Передача данных возвращающих табличное значение параметров
+title: Передача данных параметров Table-Valued
+description: Описание Передача данных параметров Table-Valued
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: native-client
@@ -11,12 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/01/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0be2ffbfb7160d5be8f5ebb2a2ed688103a54b4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 19a7f22cd26ea4988364d51ff70300cdbf42d365
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004613"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97436162"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Привязка и передача данных возвращающих табличное значение параметров и значений столбцов
 
@@ -78,7 +79,7 @@ ms.locfileid: "86004613"
 
 Для переменной привязки строк строки передаются пакетами во время выполнения, а приложение передает строки драйверу по требованию. Это похоже на данные времени выполнения для отдельных значений параметров. Для переменной привязки строк приложение выполняет следующие действия.  
 
-1. Привязывает параметры и столбцы возвращающих табличное значение параметров, как описано в шагах 1 и 3 предыдущего раздела «Фиксированная привязка строк возвращающего табличное значение параметра».  
+1. Привязывает параметры и столбцы возвращающих табличное значение параметров, как описано в шагах 1 – 3 предыдущего раздела «Фиксированная привязка строк параметра Table-Valued».  
 
 2. Задает *StrLen_or_IndPtr* или SQL_DESC_OCTET_LENGTH_PTR всех возвращающих табличное значение параметров, которые должны быть переданы во время выполнения для SQL_DATA_AT_EXEC. Если ни один из этих параметров не задан, параметр обрабатывается, как описано в предыдущем разделе.  
 
