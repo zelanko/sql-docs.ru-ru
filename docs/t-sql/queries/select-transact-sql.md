@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faece054ca8f125e8c3594eb588ffa8cf97ddc16
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e67547c75424708ca0e934175cc0183afb0bd37d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344902"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439086"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92344902"
   
  [ [HAVING *условие_поиска*](../../t-sql/queries/select-having-transact-sql.md) ]  
   
- [ [ORDER BY *выражение_упорядочения* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
+ [ [ORDER BY *выражение_упорядочения* [ ASC | DESC ]](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
  Операторы [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md), [EXCEPT и INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) можно использовать между запросами, чтобы сравнить их результаты или объединить в один результирующий набор.  
   
@@ -187,10 +187,10 @@ SELECT <select_criteria>
 > [!WARNING]
 > Как правило, применяется предыдущая последовательность. Однако в редких случаях может быть указана другая последовательность.
 >
-> Например, предположим, что в представлении есть кластеризованный индекс и представление исключает некоторые строки таблицы, а для списка столбцов SELECT представления используется инструкция CONVERT, которая изменяет тип данных с *varchar* на *integer* . В этом случае CONVERT может выполняться до выполнения предложения WHERE. Это нестандартное поведение. Если это имеет значение в вашем случае, можно изменить представление, чтобы исключить использование другой последовательности. 
+> Например, предположим, что в представлении есть кластеризованный индекс и представление исключает некоторые строки таблицы, а для списка столбцов SELECT представления используется инструкция CONVERT, которая изменяет тип данных с *varchar* на *integer*. В этом случае CONVERT может выполняться до выполнения предложения WHERE. Это нестандартное поведение. Если это имеет значение в вашем случае, можно изменить представление, чтобы исключить использование другой последовательности. 
 
 ## <a name="permissions"></a>Разрешения  
- Для выборки данных требуется разрешение **SELECT** на таблицу или представление, которое может быть унаследовано из области более высокого уровня, например разрешение **SELECT** на схему или разрешение **CONTROL** на таблицу. Или необходимо быть членом предопределенных ролей базы данных **db_datareader** или **db_owner** либо предопределенной роли сервера **sysadmin** . Для создания новой таблицы с помощью **SELECT INTO** необходимо также разрешение **CREATE TABLE** и разрешение **ALTER SCHEMA** для схемы, которой принадлежит новая таблица.  
+ Для выборки данных требуется разрешение **SELECT** на таблицу или представление, которое может быть унаследовано из области более высокого уровня, например разрешение **SELECT** на схему или разрешение **CONTROL** на таблицу. Или необходимо быть членом предопределенных ролей базы данных **db_datareader** или **db_owner** либо предопределенной роли сервера **sysadmin**. Для создания новой таблицы с помощью **SELECT INTO** необходимо также разрешение **CREATE TABLE** и разрешение **ALTER SCHEMA** для схемы, которой принадлежит новая таблица.  
   
 ## <a name="examples"></a>Примеры:   
 В следующих примерах используется база данных [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].

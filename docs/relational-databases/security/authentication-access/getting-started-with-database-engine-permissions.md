@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864476"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460059"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,15 +81,13 @@ ms.locfileid: "91864476"
   
 #### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>Если пользователь будет подключаться к только к одной базе данных  
   
-1.  Создайте имя входа для групп Windows. (При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пропустите шаги, относящиеся к Active Directory, и создайте имена входа для проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
+1.  В базе данных пользователей создайте пользователя автономной базы данных для группы Windows. (При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пропустите шаги, относящиеся к Active Directory, и создайте проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для пользователя автономной базы данных.)  
   
-2.  В базе данных пользователей создайте пользователя автономной базы данных для группы Windows. (При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пропустите шаги, относящиеся к Active Directory, и создайте проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для пользователя автономной базы данных.)  
+1.  В базе данных пользователей создайте одну или несколько определяемых пользователем ролей базы данных, представляющих аналогичные функции. Например, финансовый аналитик и аналитик продаж.  
   
-3.  В базе данных пользователей создайте одну или несколько определяемых пользователем ролей базы данных, представляющих аналогичные функции. Например, финансовый аналитик и аналитик продаж.  
+1.  Добавьте пользователей базы данных в одну или несколько определяемых пользователем ролей базы данных.  
   
-4.  Добавьте пользователей базы данных в одну или несколько определяемых пользователем ролей базы данных.  
-  
-5.  Предоставьте разрешения для определяемых пользователем ролей базы данных.  
+1.  Предоставьте разрешения для определяемых пользователем ролей базы данных.  
   
  Как правило, результатом на этом этапе является пользователь Windows, являющийся членом группы Windows. Группа Windows имеет имя входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Имя входа сопоставляется с удостоверением пользователя в базе данных пользователей. Пользователь является членом роли базы данных. Теперь необходимо добавить разрешения для роли.  
   

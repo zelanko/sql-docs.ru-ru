@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: 16f81a4ac6265d37cb9e5d50a6500ca68740e394
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670527"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438847"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
 
@@ -89,7 +89,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | Устаревшая функция | Замена | Имя функции | Идентификатор функции |
 |--------------------|-------------|--------------|------------|
-| **SET ROWCOUNT** для инструкций **INSERT**, **UPDATE**и **DELETE** . | Ключевое слово TOP | SET ROWCOUNT | 109 |
+| **SET ROWCOUNT** для инструкций **INSERT**, **UPDATE** и **DELETE** . | Ключевое слово TOP | SET ROWCOUNT | 109 |
 | Табличная подсказка HOLDLOCK без скобок. | Используйте HOLDLOCK со скобками. | Табличная подсказка HOLDLOCK без скобок. | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Функции, не рекомендуемые в будущей версии SQL Server
@@ -124,7 +124,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | Устаревшая функция | Замена | Имя функции |
 |--------------------|-------------|--------------|
 | sp_addtype <br /><br /> хранимая процедура sp_droptype|CREATE TYPE<br /><br /> DROP TYPE | sp_addtype<br /><br /> хранимая процедура sp_droptype |
-| Синтаксис**timestamp** для типа данных **rowversion** . | Синтаксис типа данных**rowversion** . | timestamp |
+| Синтаксис **timestamp** для типа данных **rowversion** . | Синтаксис типа данных **rowversion** . | timestamp |
 | Возможность вставлять значения NULL в столбцы типа **timestamp** . | Используйте вместо этого DEFAULT. | INSERT NULL в столбцах TIMESTAMP. |
 | Параметр таблицы «text in row».|Используйте типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** . Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Параметр таблицы «text in row» |
 | Типы данных:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Используйте типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** .|Типы данных: **text**, **ntext** или **image** |
@@ -270,7 +270,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | Устаревшая функция | Замена | Имя функции |
 |--------------------|-------------|--------------|
-| уведомление**net send** .<br /><br />Уведомление по пейджеру | Уведомление по электронной почте<br /><br />Уведомление по электронной почте | None |
+| уведомление **net send** .<br /><br />Уведомление по пейджеру | Уведомление по электронной почте<br /><br />Уведомление по электронной почте | None |
 
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
@@ -329,7 +329,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | Ссылки на столбцы с трех- и четырехкомпонентными именами. | Использование двухкомпонентных имен совместимо со стандартом.|Имя столбца, состоящее более чем из двух компонентов |
 | Строка, заключенная в кавычки, использовалась как псевдоним столбца для выражения в списке SELECT:<br /><br />'*string_alias*' = *выражение* | *expression* [AS] *псевдоним_столбца*<br /><br />*expression* [AS] [*псевдоним_столбца*]<br /><br />*expression* [AS] "*псевдоним_столбца*"<br /><br />*expression* [AS] '*псевдоним_столбца*'<br /><br />*column_alias* = *выражение* | Строковые литералы в качестве псевдонимов столбцов |
 | Нумерованные процедуры | Нет. Не используйте. | ProcNums |
-| Синтаксис*table_name.index_name* в инструкции DROP INDEX|Синтаксис*index_name* ON *table_name* в инструкции DROP INDEX.|DROP INDEX с двухкомпонентным именем |
+| Синтаксис *table_name.index_name* в инструкции DROP INDEX|Синтаксис *index_name* ON *table_name* в инструкции DROP INDEX.|DROP INDEX с двухкомпонентным именем |
 | Инструкции Transact-SQL не заканчиваются точкой с запятой.|Инструкции Transact-SQL заканчиваются точкой с запятой ( ; ). | None |
 | GROUP BY ALL|Используйте решение с оператором UNION или производной таблицей для каждого случая отдельно. | GROUP BY ALL |
 | ROWGUIDCOL в качестве имени столбца в инструкциях DML.|Используйте $rowguid.|ROWGUIDCOL |

@@ -9,13 +9,13 @@ ms.topic: language-reference
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e97f98a4e9080ceffdf4925c4467bfc27fc40d9
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 826265f7d04ac96c3e2c9dcdc4a144bb1ca382c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300148"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439009"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -109,7 +109,7 @@ FROM <file_spec> [ ,...2 ]
 
 ## <a name="permissions"></a>Разрешения
 
-Требуется разрешение `CREATE EXTERNAL LANGUAGE`. По умолчанию любой пользователь с учетной записью **dbo** , являющийся членом роли **db_owner** , имеет разрешения на создание внешнего языка. Другим пользователям необходимо явным образом предоставить разрешение с помощью инструкции [GRANT](./grant-database-permissions-transact-sql.md), указав CREATE EXTERNAL LANGUAGE в качестве привилегии.
+Требуется разрешение `CREATE EXTERNAL LANGUAGE`. По умолчанию любой пользователь с учетной записью **dbo**, являющийся членом роли **db_owner**, имеет разрешения на создание внешнего языка. Другим пользователям необходимо явным образом предоставить разрешение с помощью инструкции [GRANT](./grant-database-permissions-transact-sql.md), указав CREATE EXTERNAL LANGUAGE в качестве привилегии.
 
 Для изменения библиотеки требуется отдельное разрешение `ALTER ANY EXTERNAL LANGUAGE`.
 
@@ -153,7 +153,7 @@ GO
 ```
 ### <a name="c-grant-permissions-to-execute-external-script"></a>В. Предоставление разрешений на выполнение внешнего скрипта
 
-В приведенном ниже примере субъекту **mylogin** предоставляется доступ для выполнения скрипта с использованием внешнего языка **Java** .
+В приведенном ниже примере субъекту **mylogin** предоставляется доступ для выполнения скрипта с использованием внешнего языка **Java**.
 
 ```sql
 GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f117b284799ba4849131254b90a018a397824e7b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 24be57e6e964fea4ddb0f050480dbe79353ddcd2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006325"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459982"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92006325"
 ### <a name="accepted-instances"></a>Правильные экземпляры  
  Чтобы экземпляр **CurvePolygon** был принят, он должен быть либо пустым, либо содержать только принимаемые кольца дуги. Принимаемое кольцо дуги удовлетворяет следующим требованиям.  
   
-1.  Является принятым экземпляром **LineString**, **CircularString**или **CompoundCurve** . Дополнительные сведения о принятых экземплярах см. в разделах [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)и [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
+1.  Является принятым экземпляром **LineString**, **CircularString** или **CompoundCurve** . Дополнительные сведения о принятых экземплярах см. в разделах [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)и [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
   
 2.  Имеет минимум четыре точки.  
   
@@ -77,7 +77,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
 3.  Каждое кольцо должно содержать минимум четыре точки.  
 4.  Каждое кольцо должно принадлежать к приемлемому типу кривой.  
   
-Кроме того, экземпляры**CurvePolygon** должны удовлетворять особым критериям в зависимости от того, к какому типу данных они принадлежат, **geometry** или **geography** .  
+Кроме того, экземпляры **CurvePolygon** должны удовлетворять особым критериям в зависимости от того, к какому типу данных они принадлежат, **geometry** или **geography** .  
   
 #### <a name="geometry-data-type"></a>Тип данных Geometry  
 Допустимый экземпляр **geometryCurvePolygon** должен иметь следующие атрибуты:  

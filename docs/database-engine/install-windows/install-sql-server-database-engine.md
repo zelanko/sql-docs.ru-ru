@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e25eac581730b8d4950ca49af8b7edbf61433e5f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 052ff4a8c3d47ba702db0e60aaee5d47817de734
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125951"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438795"
 ---
 # <a name="install-sql-server-database-engine"></a>Установка ядра СУБД SQL
 
@@ -39,15 +39,15 @@ ms.locfileid: "96125951"
   
 -   [Репликация SQL Server](../../relational-databases/replication/sql-server-replication.md) ― это необязательный компонент  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-ver15"
 -   [Службы машинного обучения](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R и Python) и [расширения языка](../..//language-extensions/install/windows-java.md) (Java) — это необязательные компоненты.
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 -   [Службы машинного обучения (в базе данных)](../../machine-learning/install/sql-machine-learning-services-windows-install.md) с использованием R и Python — это необязательный компонент.
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016 <=sql-server-2016"
 -   [Службы R (в базе данных)](../../machine-learning/install/sql-r-services-windows-install.md) — это необязательный компонент.
 ::: moniker-end
 

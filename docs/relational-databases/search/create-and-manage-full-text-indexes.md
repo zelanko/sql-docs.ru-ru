@@ -13,13 +13,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 501be7ed93ec7be0edd55d95bf7bd0b5bce229d8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493863"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460097"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Создание и управление полнотекстовыми индексами
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -166,7 +166,7 @@ GO
  В этом примере возвращается столбец результирующего набора с именем `Unique Key Column`, в котором отображается одна строка с именем уникального ключевого столбца таблицы Document, DocumentNode. Обратите внимание, что если этот запрос содержал недопустимое имя индекса, имя индекса не соответствует таблице, таблица не существует и пр., то будет возвращено значение NULL.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Индексирование столбцов varbinary(max) и xml  
- Если для столбца типа **varbinary(max)** , **varbinary**или **xml** создан полнотекстовый индекс, то обращаться к нему с запросами можно при использовании полнотекстовых предикатов (CONTAINS и FREETEXT) и функций (CONTAINSTABLE и FREETEXTTABLE), как и к любым другим столбцам с полнотекстовым индексом.
+ Если для столбца типа **varbinary(max)** , **varbinary** или **xml** создан полнотекстовый индекс, то обращаться к нему с запросами можно при использовании полнотекстовых предикатов (CONTAINS и FREETEXT) и функций (CONTAINSTABLE и FREETEXTTABLE), как и к любым другим столбцам с полнотекстовым индексом.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>Индексирование данных типа varbinary(max) и varbinary  
  В одном столбце типа **varbinary(max)** или **varbinary** могут храниться документы различных типов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает любые типы документов, для которых в операционной системе доступен установленный фильтр. Тип каждого документа определяется по расширению имени файла этого документа. Например, при работе с DOC-файлом при полнотекстовом поиске будет использоваться фильтр, который поддерживает документы Microsoft Word. Чтобы получить список доступных типов документов, выполните запрос к представлению каталога [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
@@ -189,11 +189,11 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  В таблице с полнотекстовым индексом можно вручную отключить и повторно включить полнотекстовое индексирование, используя среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
-1.  Разверните группу серверов, узел **Базы данных**и базу данных, содержащую таблицу, для которой нужно включить полнотекстовое индексирование.  
+1.  Разверните группу серверов, узел **Базы данных** и базу данных, содержащую таблицу, для которой нужно включить полнотекстовое индексирование.  
   
-2.  Разверните узел **Таблицы**и щелкните правой кнопкой мыши таблицу, которую нужно отключить или повторно включить для полнотекстового индексирования.  
+2.  Разверните узел **Таблицы** и щелкните правой кнопкой мыши таблицу, которую нужно отключить или повторно включить для полнотекстового индексирования.  
   
-3.  Выберите **Полнотекстовый индекс**и щелкните **Отключить полнотекстовое индексирование** или **Включить полнотекстовое индексирование**.  
+3.  Выберите **Полнотекстовый индекс** и щелкните **Отключить полнотекстовое индексирование** или **Включить полнотекстовое индексирование**.  
   
 ##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> Удаление полнотекстового индекса из таблицы  
   

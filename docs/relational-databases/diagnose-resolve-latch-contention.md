@@ -8,13 +8,13 @@ ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a1ce0e4a54810730935b4a93aef72edfa404d88
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 75f999052eecd750d548cb6d383eafe5375ed130
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506455"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440149"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Диагностика и устранение конфликтов кратковременных блокировок на SQL Server
 
@@ -70,10 +70,10 @@ ms.locfileid: "96506455"
 |Режим кратковременной блокировки |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
 |**KP**  |Да       |Да      |Да       |Да       |Нет|
-|**SH**  |Да       |Да      |Да       |N       |Нет|
-|**UP**  |Да       |Да      |N       |N       |Нет|
-|**EX**  |Да       |N      |N       |N       |Нет|
-|**DT**  |Нет       |N      |N       |N       |Нет|
+|**SH**  |Да       |Да      |Да       |Нет       |Нет|
+|**UP**  |Да       |Да      |Нет       |Нет       |Нет|
+|**EX**  |Да       |Нет      |Нет       |Нет       |Нет|
+|**DT**  |Нет       |Нет      |Нет       |Нет       |Нет|
 
 ## <a name="sql-server-superlatches-and-sublatches"></a>Кратковременные блокировки SQL Server и superLatch и sublatch
 
