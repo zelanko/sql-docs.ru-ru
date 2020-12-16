@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84adfac47c755bccee6603a632dfa44aa2c151b2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e5de0ea599650792feef01508c1eed54aed68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867359"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465435"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Атомарные блоки в собственных процедурах
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91867359"
   
  Если отсутствуют активные транзакции в сеансе, то **BEGIN ATOMIC** запускает новую транзакцию. Если вне блока не возникло исключение, то транзакция будет зафиксирована в конце блока. Если блок вызывает исключение (то есть исключение не обрабатывается и не перехватывается внутри блока), то будет произведен откат этой транзакции. Для транзакций, которые охватывают один блок ATOMIC (одна хранимая процедура, скомпилированная в собственном коде), нет необходимости записывать явные инструкции **BEGIN TRANSACTION** и **COMMIT** или **ROLLBACK** .  
   
- Все хранимые процедуры, скомпилированные в собственном коде, поддерживают конструкции **TRY**, **CATCH**и **THROW** для обработки ошибок. Функция**RAISERROR** не поддерживается.  
+ Все хранимые процедуры, скомпилированные в собственном коде, поддерживают конструкции **TRY**, **CATCH** и **THROW** для обработки ошибок. Функция **RAISERROR** не поддерживается.  
   
  Следующий пример иллюстрирует работу функции обработки ошибок с блоками ATOMIC и хранимыми процедурами, скомпилированными в собственном коде:  
   
@@ -136,7 +136,7 @@ GO
   
 |Обязательный параметр|Описание|  
 |----------------------|-----------------|  
-|**TRANSACTION ISOLATION LEVEL**|Поддерживаются значения **SNAPSHOT**, **REPEATABLEREAD**и **SERIALIZABLE**.|  
+|**TRANSACTION ISOLATION LEVEL**|Поддерживаются значения **SNAPSHOT**, **REPEATABLEREAD** и **SERIALIZABLE**.|  
 |**LANGUAGE**|Определяет форматы даты и времени и системных сообщений. Все языки и псевдонимы в [sys.syslanguages & #40; Transact-SQL & #41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)поддерживаются.|  
   
  Следующие параметры являются необязательными.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998998"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465525"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-файлы форматирования (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -270,12 +270,12 @@ ms.locfileid: "85998998"
   
 |Категория типа|\<COLUMN> Типы данных|Обязательные XML-атрибуты<br /><br /> для типа данных|Необязательные XML-атрибуты<br /><br /> для типа данных|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|исправление|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**и **SQLUNIQUEID**|Нет.|NULLABLE|  
+|исправление|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT** и **SQLUNIQUEID**|Нет.|NULLABLE|  
 |Переменное число|**SQLDECIMAL** и **SQLNUMERIC**|Нет.|NULLABLE, PRECISION, SCALE|  
-|Большой объект (LOB)|**SQLIMAGE**, **CharLOB**, **SQLTEXT**и **SQLUDT**|Нет.|NULLABLE|  
+|Большой объект (LOB)|**SQLIMAGE**, **CharLOB**, **SQLTEXT** и **SQLUDT**|Нет.|NULLABLE|  
 |Большой символьный объект (CLOB)|**SQLNTEXT**|Нет.|NULLABLE|  
 |Двоичная строка|**SQLBINARY** и **SQLVARYBIN**|Нет.|NULLABLE, LENGTH|  
-|Строка символов|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**и **SQLNVARCHAR**|Нет.|NULLABLE, LENGTH|  
+|Строка символов|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR** и **SQLNVARCHAR**|Нет.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
 >  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные посылаются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные посылаются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные посылаются без преобразования).  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ea0d7aca2659d16bc761cfd4dc2146a96f977622
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6627a09a602f9d75cd742f967ba9e8cb6f05ca7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423618"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464825"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>Общие действия, для которых необходима обновленная резервная копия
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  Если резервное копирование журналов выполняется регулярно, любые изменения, касающиеся репликации, будут заноситься в резервные копии журнала. Если резервные копии журналов не создаются, выполняйте резервное копирование базы данных публикации, базы данных распространителя, базы данных подписки, баз данных **msdb**и **master** после внесения изменений в схему или топологию репликации.  
+  Если резервное копирование журналов выполняется регулярно, любые изменения, касающиеся репликации, будут заноситься в резервные копии журнала. Если резервные копии журналов не создаются, выполняйте резервное копирование базы данных публикации, базы данных распространителя, базы данных подписки, баз данных **msdb** и **master** после внесения изменений в схему или топологию репликации.  
   
 ## <a name="publication-database"></a>База данных публикации  
  Рекомендуется создавать резервную копию базы данных публикации после:  
@@ -110,6 +110,6 @@ ms.locfileid: "88423618"
   
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Создание резервной копии и восстановление из копий реплицируемых баз данных](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
+ [Создание резервных копий реплицируемых баз данных и восстановление из них](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   
   
