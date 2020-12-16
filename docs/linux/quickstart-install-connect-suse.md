@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: c9ac655959814370058059e86814d4ae1abcbc9a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: bd721eb2dc71fe768edfb21da5c94881fc879a07
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496990"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471645"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство. Установка SQL Server и создание базы данных в SUSE Linux Enterprise Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "92496990"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 В этом кратком руководстве вы установите SQL Server 2019 в SUSE Linux Enterprise Server (SLES) версии 12. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
@@ -43,14 +43,14 @@ ms.locfileid: "92496990"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Требуется компьютер, на котором установлена ОС SLES версии 12 с пакетом обновления 2 (SP2) и имеется **по крайней мере 2 ГБ** памяти. Должна использоваться файловая система **XFS** или **EXT4** . Другие файловые системы, например **BTRFS** , не поддерживаются.
+Требуется компьютер, на котором установлена ОС SLES версии 12 с пакетом обновления 2 (SP2) и имеется **по крайней мере 2 ГБ** памяти. Должна использоваться файловая система **XFS** или **EXT4**. Другие файловые системы, например **BTRFS**, не поддерживаются.
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-Требуется компьютер, на котором установлена ОС SLES версии 12 с пакетом обновления 2, 3, 4 или 5 (SP2, SP3, SP4 или SP5) и имеется **по крайней мере 2 ГБ** памяти. Должна использоваться файловая система **XFS** или **EXT4** . Другие файловые системы, например **BTRFS** , не поддерживаются.
+Требуется компьютер, на котором установлена ОС SLES версии 12 с пакетом обновления 2, 3, 4 или 5 (SP2, SP3, SP4 или SP5) и имеется **по крайней мере 2 ГБ** памяти. Должна использоваться файловая система **XFS** или **EXT4**. Другие файловые системы, например **BTRFS**, не поддерживаются.
 
 ::: moniker-end
 
@@ -68,7 +68,7 @@ ms.locfileid: "92496990"
 
 ## <a name="install-sql-server-2017"></a><a id="install"></a>Установка SQL Server 2017
 
-Чтобы настроить SQL Server 2017 в SLES, выполните следующие команды в терминале для установки пакета **mssql-server** :
+Чтобы настроить SQL Server 2017 в SLES, выполните следующие команды в терминале для установки пакета **mssql-server**:
 
 1. Скачайте файл конфигурации репозитория Microsoft SQL Server 2017 SLES:
 
@@ -119,7 +119,7 @@ ms.locfileid: "92496990"
    systemctl status mssql-server
    ```
 
-6. Если вы планируете подключаться удаленно, может потребоваться открыть в брандмауэре TCP-порт SQL Server (по умолчанию 1433). Если вы используете брандмауэр SuSE, необходимо изменить файл конфигурации **/etc/sysconfig/SuSEfirewall2** . Измените запись **FW_SERVICES_EXT_TCP** , добавив номер порта SQL Server.
+6. Если вы планируете подключаться удаленно, может потребоваться открыть в брандмауэре TCP-порт SQL Server (по умолчанию 1433). Если вы используете брандмауэр SuSE, необходимо изменить файл конфигурации **/etc/sysconfig/SuSEfirewall2**. Измените запись **FW_SERVICES_EXT_TCP**, добавив номер порта SQL Server.
 
    ```
    FW_SERVICES_EXT_TCP="1433"
@@ -129,11 +129,11 @@ ms.locfileid: "92496990"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server-2019"></a><a id="install"></a>Установка SQL Server 2019
 
-Чтобы настроить SQL Server 2019 в SLES, выполните следующие команды в терминале для установки пакета **mssql-server** :
+Чтобы настроить SQL Server 2019 в SLES, выполните следующие команды в терминале для установки пакета **mssql-server**:
 
 1. Скачайте файл конфигурации репозитория Microsoft SQL Server 2019 SLES:
 
@@ -174,7 +174,7 @@ ms.locfileid: "92496990"
    systemctl status mssql-server
    ```
 
-6. Если вы планируете подключаться удаленно, может потребоваться открыть в брандмауэре TCP-порт SQL Server (по умолчанию 1433). Если вы используете брандмауэр SuSE, необходимо изменить файл конфигурации **/etc/sysconfig/SuSEfirewall2** . Измените запись **FW_SERVICES_EXT_TCP** , добавив номер порта SQL Server.
+6. Если вы планируете подключаться удаленно, может потребоваться открыть в брандмауэре TCP-порт SQL Server (по умолчанию 1433). Если вы используете брандмауэр SuSE, необходимо изменить файл конфигурации **/etc/sysconfig/SuSEfirewall2**. Измените запись **FW_SERVICES_EXT_TCP**, добавив номер порта SQL Server.
 
    ```
    FW_SERVICES_EXT_TCP="1433"
@@ -202,7 +202,7 @@ ms.locfileid: "92496990"
    sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
-1. Для удобства добавьте путь `/opt/mssql-tools/bin/` в переменную среды **PATH** . Это позволит запускать программы, не указывая полный путь. Выполните следующие команды, чтобы изменить переменную среды **PATH** как для сеансов входа в систему, так и для интерактивных сеансов и сеансов без входа в систему.
+1. Для удобства добавьте путь `/opt/mssql-tools/bin/` в переменную среды **PATH**. Это позволит запускать программы, не указывая полный путь. Выполните следующие команды, чтобы изменить переменную среды **PATH** как для сеансов входа в систему, так и для интерактивных сеансов и сеансов без входа в систему.
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

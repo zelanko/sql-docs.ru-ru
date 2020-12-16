@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b44d9306d08d1e75f1d0f0477e0c58c207bd70e8
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a3c1a21e36d379bca1875ee96865f9affe2151ad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300868"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471925"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -139,21 +139,21 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  WITH \<common_table_expression>  
  Определяет временный именованный результирующий набор, также называемый обобщенным табличным выражением, определенным в области инструкции INSERT. Результирующий набор получается из инструкции SELECT. Дополнительные сведения см. в разделе [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP ( *expression* ) [ PERCENT ]  
+ TOP (*expression*) [ PERCENT ]  
  Задает число или процент вставляемых случайных строк. *expression* может быть либо числом, либо процентом от числа строк. Дополнительные сведения см. в разделе [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).  
   
  INTO  
  Необязательное ключевое слово, которое можно использовать между ключевым словом INSERT и целевой таблицей.  
   
  *server_name*  
- **Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Имя связанного сервера, на котором расположены таблица или представление. *server_name* может указываться как имя [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или с помощью функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md).  
   
- Когда *server_name* указывается как имя связанного сервера, необходимо указать *database_name* и *schema_name* . Если *server_name* указано с помощью OPENDATASOURCE, то аргументы *database_name* и *schema_name* могут применяться не ко всем источникам данных, в зависимости от возможностей поставщика OLE DB, который обращается к удаленному объекту.  
+ Когда *server_name* указывается как имя связанного сервера, необходимо указать *database_name* и *schema_name*. Если *server_name* указано с помощью OPENDATASOURCE, то аргументы *database_name* и *schema_name* могут применяться не ко всем источникам данных, в зависимости от возможностей поставщика OLE DB, который обращается к удаленному объекту.  
   
  *database_name*  
- **Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Имя базы данных.  
   
@@ -165,10 +165,10 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  В качестве источника таблицы в инструкции INSERT можно использовать [табличную](../../t-sql/data-types/table-transact-sql.md) переменную внутри своей области.  
   
- Представление, на которое ссылается аргумент *table_or_view_name* , должно быть обновляемым и ссылаться только на одну базовую таблицу в предложении FROM в представлении. Например, инструкция INSERT в многотабличном представлении должна использовать аргумент *column_list* , который ссылается только на столбцы из одной базовой таблицы. Дополнительные сведения об обновляемых представлениях см. в разделе [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
+ Представление, на которое ссылается аргумент *table_or_view_name*, должно быть обновляемым и ссылаться только на одну базовую таблицу в предложении FROM в представлении. Например, инструкция INSERT в многотабличном представлении должна использовать аргумент *column_list*, который ссылается только на столбцы из одной базовой таблицы. Дополнительные сведения об обновляемых представлениях см. в разделе [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Либо функция [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md), либо функция [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Использование этих функций зависит от возможностей поставщика OLE DB, который обращается к удаленному объекту.  
   
@@ -182,16 +182,16 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  Указание подсказки TABLOCK для целевой таблицы инструкции INSERT приведет к тем же последствиям, что и указание подсказки TABLOCKX. К таблице будет применена монопольная блокировка.  
   
- ( *column_list* )  
+ (*column_list*)  
  Список, состоящий из одного или нескольких столбцов, в которые вставляются данные. Список *column_list* должен быть заключен в круглые скобки, а его элементы должны разделяться запятыми.  
   
- Если столбец не внесен в *column_list* , то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен обеспечить значение, основанное на определении столбца; в противном случае строку нельзя будет загрузить. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] автоматически задает значение для столбца, если столбец имеет следующие характеристики.  
+ Если столбец не внесен в *column_list*, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен обеспечить значение, основанное на определении столбца; в противном случае строку нельзя будет загрузить. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] автоматически задает значение для столбца, если столбец имеет следующие характеристики.  
   
 -   Имеется свойство IDENTITY. Используется следующее значение приращения для идентификатора.  
   
 -   Имеется стандартное значение. Используется стандартное значение для столбца.  
   
--   Имеет тип данных **timestamp** . В этом случае используется текущее значение отметки времени.  
+-   Имеет тип данных **timestamp**. В этом случае используется текущее значение отметки времени.  
   
 -   Допускает значение NULL. Используется значение NULL.  
   
@@ -202,10 +202,10 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 Предложение OUTPUT  
  Возвращает вставленные строки во время операции вставки. Результаты могут возвращаться в обрабатывающее приложение или вставляться в таблицу или табличную переменную для дальнейшей обработки.  
   
- Предложение OUTPUT не поддерживается инструкциями DML, которые ссылаются на локальные секционированные представления, распределенные секционированные представления или удаленные таблицы, или инструкциями INSERT, содержащими аргумент *execute_statement* . Предложение OUTPUT INTO не поддерживается в инструкциях INSERT, содержащих предложение \<dml_table_source>. Дополнительные сведения об аргументах и поведении этого предложения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).
+ Предложение OUTPUT не поддерживается инструкциями DML, которые ссылаются на локальные секционированные представления, распределенные секционированные представления или удаленные таблицы, или инструкциями INSERT, содержащими аргумент *execute_statement*. Предложение OUTPUT INTO не поддерживается в инструкциях INSERT, содержащих предложение \<dml_table_source>. Дополнительные сведения об аргументах и поведении этого предложения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
- Позволяет использовать один или несколько списков вставляемых значений данных. Для каждого столбца в *column_list* , если этот параметр указан, или в таблице должно быть одно значение. Список значений должен быть заключен в скобки.  
+ Позволяет использовать один или несколько списков вставляемых значений данных. Для каждого столбца в *column_list*, если этот параметр указан, или в таблице должно быть одно значение. Список значений должен быть заключен в скобки.  
   
  Если значения в списке идут в порядке, отличном от порядка следования столбцов в таблице, или не для каждого столбца таблицы определено значение, то необходимо использовать аргумент *column_list* для явного указания столбца, в котором хранится каждое входное значение.  
   
@@ -217,7 +217,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  *expression*  
  Константа, переменная или выражение. Выражение не может содержать инструкцию EXECUTE.  
   
- При ссылке на типы данных символов Юникода **nchar** , **nvarchar** и **ntext** выражение ' *expression* ' должно начинаться с заглавной буквы 'N'. Если префикс «N» не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнит преобразование строки в кодовую страницу, соответствующую параметрам сортировки базы данных или столбца, действующим по умолчанию. Любые символы, не входящие в эту кодовую страницу, будут утрачены.  
+ При ссылке на типы данных символов Юникода **nchar**, **nvarchar** и **ntext** выражение '*expression*' должно начинаться с заглавной буквы 'N'. Если префикс «N» не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнит преобразование строки в кодовую страницу, соответствующую параметрам сортировки базы данных или столбца, действующим по умолчанию. Любые символы, не входящие в эту кодовую страницу, будут утрачены.  
   
  *derived_table*  
  Любая допустимая инструкция SELECT, возвращающая строки данных, которые загружаются в таблицу. Инструкция SELECT не может содержать обобщенное табличное выражение (CTE).  
@@ -227,7 +227,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  Параметры RESULT SETS инструкции EXECUTE нельзя указывать в инструкции INSERT…EXEC.  
   
- Если аргумент *execute_statement* используется с инструкцией INSERT, каждый результирующий набор должен быть совместим со столбцами в таблице или списке *column_list* .  
+ Если аргумент *execute_statement* используется с инструкцией INSERT, каждый результирующий набор должен быть совместим со столбцами в таблице или списке *column_list*.  
   
  Аргумент *execute_statement* может применяться для выполнения хранимых процедур на том же сервере или на сервере, расположенном удаленно. На удаленном сервере выполняется процедура, результирующий набор возвращается на локальный сервер и загружается в таблицу на локальном сервере. В распределенной транзакции нельзя выполнить инструкцию *execute_statement* для связанного сервера с замыканием на себя, если при соединении включен режим MARS (множественный активный результирующий набор).  
   
@@ -263,35 +263,35 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  Любое предложение WHERE, содержащее допустимый критерий поиска \<search_condition>, фильтрующий строки, которые возвращены аргументом \<dml_statement_with_output_clause>. Дополнительные сведения см. в разделе [Условие поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md). При использовании в этом контексте критерий \<search_condition> не должен содержать вложенных запросов, определяемых пользователем скалярных функций, выполняющих доступ к данным, агрегатных функций, TEXTPTR или предикатов полнотекстового поиска. 
   
  DEFAULT VALUES  
- **Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Заполняет новую строку значениями по умолчанию, определенными для каждого столбца.  
   
  BULK  
-**Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Используется внешними средствами для передачи потока двоичных данных. Этот параметр не предназначен для использования с такими средствами, как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL или программными интерфейсами для доступа к данным, такими как Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  FIRE_TRIGGERS  
- **Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Указывает, что при передаче потока двоичных данных будут выполняться триггеры INSERT, определенные для целевой таблицы. Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  CHECK_CONSTRAINTS  
- **Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Указывает, что при передаче потока двоичных данных будет выполняться проверка всех ограничений целевой таблицы или представления. Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  KEEPNULLS  
- **Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Указывает, что пустые столбцы во время передачи потока двоичных данных должны сохранить значение NULL. Дополнительные сведения см. в разделе [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  KILOBYTES_PER_BATCH = kilobytes_per_batch  
- Определяет приблизительное число килобайт данных в пакете как *kilobytes_per_batch* . Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
+ Определяет приблизительное число килобайт данных в пакете как *kilobytes_per_batch*. Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
- ROWS_PER_BATCH = *rows_per_batch*  
- **Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+ ROWS_PER_BATCH =*rows_per_batch*  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Указывает приблизительное число строк в потоке двоичных данных. Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
@@ -347,7 +347,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 ## <a name="data-types"></a>Типы данных  
  При вставке строк необходимо учитывать поведение следующих типов данных:  
   
--   Если значение загружается в столбцы с типом данных **char** , **varchar** и **varbinary** , то заполнение или усечение конечных пробелов (пробелы для **char** и **varchar** , нули для **varbinary** ) определяется параметром SET ANSI_PADDING, определенным для столбца при создании таблицы. Дополнительные сведения см. в разделе [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+-   Если значение загружается в столбцы с типом данных **char**, **varchar** и **varbinary**, то заполнение или усечение конечных пробелов (пробелы для **char** и **varchar**, нули для **varbinary**) определяется параметром SET ANSI_PADDING, определенным для столбца при создании таблицы. Дополнительные сведения см. в разделе [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
      В следующей таблице показаны операции по умолчанию для параметра SET ANSI_PADDING, установленного в значение OFF.  
   
@@ -357,11 +357,11 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
     |**varchar**|Удаление конечных пробелов до последнего непробельного символа или до одного пробела, если строка состоит только из пробелов.|  
     |**varbinary**|Удаление конечных нулей.|  
   
--   Если пустая строка (' ') загружена в столбец с типом данных **varchar** или **text** , то операцией по умолчанию будет загрузка строки нулевой длины.  
+-   Если пустая строка (' ') загружена в столбец с типом данных **varchar** или **text**, то операцией по умолчанию будет загрузка строки нулевой длины.  
   
 -   Вставка значения NULL в столбец **text** или **image** не приводит ни к созданию допустимого текстового указателя, ни к предварительному распределению 8-килобайтной текстовой страницы.  
   
--   Столбцы, созданные с типом данных **uniqueidentifier** , содержат двоичные 16-байтные значения специального формата. В отличие от столбцов идентификаторов [!INCLUDE[ssDE](../../includes/ssde-md.md)] не создает автоматически значения для столбцов с типом данных **uniqueidentifier** . При вставке переменные с типом данных **uniqueidentifier** и константы строк в форме *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (36 символов, включая дефисы, где *x* является шестнадцатеричной цифрой в диапазоне 0–9 или a–f) могут быть использованы для столбцов **uniqueidentifier** . Например, 6F9619FF-8B86-D011-B42D-00C04FC964FF является допустимым значением переменной или столбца **uniqueidentifier** . Используйте функцию [NEWID()](../../t-sql/functions/newid-transact-sql.md) для получения идентификатора GUID.  
+-   Столбцы, созданные с типом данных **uniqueidentifier**, содержат двоичные 16-байтные значения специального формата. В отличие от столбцов идентификаторов [!INCLUDE[ssDE](../../includes/ssde-md.md)] не создает автоматически значения для столбцов с типом данных **uniqueidentifier**. При вставке переменные с типом данных **uniqueidentifier** и константы строк в форме *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (36 символов, включая дефисы, где *x* является шестнадцатеричной цифрой в диапазоне 0–9 или a–f) могут быть использованы для столбцов **uniqueidentifier**. Например, 6F9619FF-8B86-D011-B42D-00C04FC964FF является допустимым значением переменной или столбца **uniqueidentifier**. Используйте функцию [NEWID()](../../t-sql/functions/newid-transact-sql.md) для получения идентификатора GUID.  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>Вставка значений в столбцы определяемого пользователем типа  
  Вставлять значения в столбцы определяемого пользователем типа можно следующими способами.  
@@ -466,7 +466,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
  Примеры в этом разделе описывают методы вставки значений в столбцы, которые определяются с помощью свойства IDENTITY, значения DEFAULT или с помощью типов данных, таких как **uniqueidentifer** или столбцов определяемого пользователем типа.  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>Г. Вставка данных в таблицу со столбцами, имеющими значение по умолчанию  
- В следующем примере показана вставка строк в таблицу со столбцами, для которых автоматически создается значение или которые имеют значение по умолчанию. `Column_1` — это вычисляемый столбец, который автоматически создает значение, объединяя строку со значением, вставленным в столбец `column_2`. Столбец `Column_2` определен с ограничением по умолчанию. Если для этого столбца не указано значение, используется значение по умолчанию. Столбец `Column_3` имеет тип данных **rowversion** , который автоматически создает уникальное, последовательно увеличиваемое двоичное число. Столбец `Column_4` не формирует значения автоматически. Если значение для этого столбца отсутствует, то вставляется значение NULL. Инструкция INSERT вставляет строки, которые содержат значения для некоторых столбцов, но не для всех. В последней инструкции INSERT столбцы не указаны, и поэтому вставляются только значения по умолчанию с помощью предложения DEFAULT VALUES.  
+ В следующем примере показана вставка строк в таблицу со столбцами, для которых автоматически создается значение или которые имеют значение по умолчанию. `Column_1` — это вычисляемый столбец, который автоматически создает значение, объединяя строку со значением, вставленным в столбец `column_2`. Столбец `Column_2` определен с ограничением по умолчанию. Если для этого столбца не указано значение, используется значение по умолчанию. Столбец `Column_3` имеет тип данных **rowversion**, который автоматически создает уникальное, последовательно увеличиваемое двоичное число. Столбец `Column_4` не формирует значения автоматически. Если значение для этого столбца отсутствует, то вставляется значение NULL. Инструкция INSERT вставляет строки, которые содержат значения для некоторых столбцов, но не для всех. В последней инструкции INSERT столбцы не указаны, и поэтому вставляются только значения по умолчанию с помощью предложения DEFAULT VALUES.  
   
 ```sql
 CREATE TABLE dbo.T1   
@@ -724,9 +724,9 @@ GO
  В примерах в этом разделе описаны способы вставки в удаленную целевую таблицу с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../functions/opendatasource-transact-sql.md).  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>Н. Вставка данных в удаленную таблицу с использованием связанного сервера  
- В следующем примере в удаленную таблицу вставляются строки. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Имя связанного сервера, `MyLinkServer`, затем определяется как часть четырехчастного имени объекта в форме *server.catalog.schema.object* .  
+ В следующем примере в удаленную таблицу вставляются строки. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Имя связанного сервера, `MyLinkServer`, затем определяется как часть четырехчастного имени объекта в форме *server.catalog.schema.object*.  
   
-**Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
 ```sql
 USE master;  
@@ -755,7 +755,7 @@ GO
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>О. Вставка данных в удаленную таблицу с помощью функции OPENQUERY  
  В следующем примере выполняется вставка строки в удаленную таблицу с помощью вызова функции [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md), возвращающей набор строк. В этом примере используется имя связанного сервера, созданного в предыдущем примере.  
   
-**Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -766,9 +766,9 @@ GO
 ```  
   
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>П. Вставка данных в удаленную таблицу с помощью функции OPENDATASOURCE  
- В следующем примере выполняется вставка строки в удаленную таблицу с помощью вызова функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), возвращающей набор строк. Определите допустимое имя сервера для источника данных, используя формат *server_name* или *server_name\instance_name* .  
+ В следующем примере выполняется вставка строки в удаленную таблицу с помощью вызова функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), возвращающей набор строк. Определите допустимое имя сервера для источника данных, используя формат *server_name* или *server_name\instance_name*.  
   
-**Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -785,7 +785,7 @@ GO
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>Т. Вставка во внешнюю таблицу, созданную с помощью PolyBase  
  Вы можете экспортировать данные из SQL Server в службу хранилища Azure или Hadoop. Для этого сначала необходимо создать внешнюю таблицу, которая указывает на целевой файл или каталог. Затем используйте инструкцию INSERT INTO, чтобы экспортировать данные из локальной таблицы SQL Server во внешний источник данных. При выполнении инструкции INSERT INTO создается целевой файл или каталог (если его не существует), а результаты выполнения инструкции SELECT экспортируются в указанное расположение в заданном формате.  Дополнительные сведения см. в разделе [Приступая к работе с PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
-**Применимо к** : [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 -- Create an external table.   
@@ -861,7 +861,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>Ф. Использование функции OPENROWSET с параметром BULK для массовой загрузки данных а таблицу  
  В следующем примере выполняется вставка строки в таблицу из файла данных вызовом функции OPENQUERY. Для оптимизации производительности указывается табличная подсказка IGNORE_TRIGGERS. Дополнительные примеры см. в разделе [Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-**Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
@@ -881,7 +881,7 @@ FROM OPENROWSET (
 #### <a name="s-using-the-tablock-hint-to-specify-a-locking-method"></a>Х. Использование подсказки TABLOCK для указания метода блокировки  
  В следующем примере показано, как монопольная блокировка (Х) применяется к таблице Production.Location и сохраняется до завершения инструкции UPDATE.  
   
-**Применимо к** : [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].  
   
 ```sql
 INSERT INTO Production.Location WITH (XLOCK)  

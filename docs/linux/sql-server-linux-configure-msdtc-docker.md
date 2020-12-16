@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5529412dd1c575f25fb372aba3428edcce55431a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f8487b4246a349169891f68e4068ad233f78d21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900081"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471635"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Использование распределенных транзакций с SQL Server в Docker
 
@@ -55,7 +55,7 @@ docker run `
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 В приведенном ниже примере показано, как использовать эти переменные среды для извлечения и запуска одиночного контейнера SQL Server 2019, настроенного для MSDTC. Это позволяет ему взаимодействовать с любым приложением на любых узлах.
 

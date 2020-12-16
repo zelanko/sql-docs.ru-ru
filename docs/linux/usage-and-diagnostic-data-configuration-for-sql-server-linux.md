@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: bfc63894d7e2ada81ca230c1a66d32bd49d6d91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115743"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471405"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Настройка сбора данных об использовании и данных диагностики для SQL Server на Linux
 
@@ -83,7 +83,7 @@ SQL Server 2017 всегда собирает и отправляет свед�
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Добавьте файл `mssql.conf` со строками `[telemetry]` и `customerfeedback = false` в каталог узла:
 
@@ -176,7 +176,7 @@ Microsoft SQL Server 2017 включает в себя функции, кото
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Целевой каталог для новых журналов локального аудита будет находиться в контейнере. Создайте целевой каталог для новых журналов локального аудита в каталоге узла на вашем компьютере. В следующем примере создается каталог **/audit**:
 

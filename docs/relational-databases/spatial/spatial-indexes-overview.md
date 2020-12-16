@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006276"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473145"
 ---
 # <a name="spatial-indexes-overview"></a>Общие сведения о пространственных индексах
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92006276"
 ##  <a name="about-spatial-indexes"></a><a name="about"></a> О пространственных индексах  
   
 ###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Декомпозиция индексированного пространства в сеточную иерархию  
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]пространственные индексы строятся с помощью сбалансированных деревьев, что означает, что индексы должны представлять двумерные пространственные данные в линейном порядке сбалансированных деревьев. Поэтому перед считыванием данных в пространственный индекс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проводит иерархическую декомпозицию пространства. В процессе создания индекса происходит *декомпозиция* пространства в четырехуровневую *сеточную иерархию*. Эти уровни называют *Уровень 1* (верхний), *Уровень 2*, *Уровень 3*и *Уровень 4*.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]пространственные индексы строятся с помощью сбалансированных деревьев, что означает, что индексы должны представлять двумерные пространственные данные в линейном порядке сбалансированных деревьев. Поэтому перед считыванием данных в пространственный индекс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проводит иерархическую декомпозицию пространства. В процессе создания индекса происходит *декомпозиция* пространства в четырехуровневую *сеточную иерархию*. Эти уровни называют *Уровень 1* (верхний), *Уровень 2*, *Уровень 3* и *Уровень 4*.  
   
  Каждый последующий уровень содержит дальнейшую декомпозицию уровня выше, так что каждая ячейка уровня выше содержит полную сетку следующего уровня. На заданном уровне все сетки имеют одинаковое число ячеек на обеих осях (например, 4x4 или 8x8), и все ячейки имеют одинаковый размер.  
   

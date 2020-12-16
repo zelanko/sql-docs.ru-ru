@@ -18,13 +18,13 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: fa517d2ee19d4adc5a6d9acff56ed6f240acc1ee
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest'
+ms.openlocfilehash: 43d5d214f1720513955c27c45349da74afe3888e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005781"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473365"
 ---
 # <a name="what-is-polybase"></a>Что такое PolyBase?
 
@@ -44,7 +44,7 @@ PolyBase отправляет некоторые вычисления на уз�
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 PolyBase позволяет экземпляру SQL Server обрабатывать запросы Transact-SQL, которые считывают данные из внешних источников. SQL Server 2016 и более поздних версий может получать доступ к внешним данным в Hadoop и хранилище BLOB-объектов Azure. Начиная с SQL Server 2019, PolyBase можно использовать для доступа к внешним данным в [SQL Server](polybase-configure-sql-server.md), [Oracle](polybase-configure-oracle.md), [Teradata](polybase-configure-teradata.md) и [MongoDB](polybase-configure-mongodb.md).
 
@@ -109,7 +109,7 @@ PolyBase поддерживает перечисленные ниже сцена
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

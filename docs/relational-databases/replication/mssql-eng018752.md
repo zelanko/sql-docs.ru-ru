@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ed7d71fb9c4e1306826c281806c66db38285e06d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 50ff8dde3d4c15217630500b07786674b518afc1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868625"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473395"
 ---
 # <a name="mssql_eng018752"></a>MSSQL_ENG018752
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91868625"
 |Текст сообщения|К базе данных одновременно может быть подключен лишь один агент чтения журнала или процедура, относящаяся к журналу (sp_repldone, sp_replcmds и sp_replshowcmds). Если выполняется процедура, относящаяся к журналу, удалите подключение, по которому выполнялась процедура, или выполните для этого подключения процедуру sp_replflush, прежде чем запустить агент чтения журнала или выполнить другую процедуру, относящуюся к журналу.|  
   
 ## <a name="explanation"></a>Объяснение  
- Попытка выполнить одну из следующих процедур: **sp_repldone**, **sp_replcmds**, или **sp_replshowcmds**в рамках более одного текущего соединения. Хранимые процедуры [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md) и [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) используются агентом чтения журнала для обнаружения и обновления сведений о реплицированных транзакциях в опубликованной базе данных. Хранимая процедура [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md) используется для устранения некоторых проблем, возникающих при репликации транзакций.  
+ Попытка выполнить одну из следующих процедур: **sp_repldone**, **sp_replcmds**, или **sp_replshowcmds** в рамках более одного текущего соединения. Хранимые процедуры [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md) и [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) используются агентом чтения журнала для обнаружения и обновления сведений о реплицированных транзакциях в опубликованной базе данных. Хранимая процедура [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md) используется для устранения некоторых проблем, возникающих при репликации транзакций.  
   
  Данная ошибка возникает в следующих случаях:  
   
@@ -44,20 +44,20 @@ ms.locfileid: "91868625"
   
      Если имеется несколько агентов, возможно, один из них является результатом зависшего процесса.  
   
--   Если запущен агент чтения журнала для опубликованной базы данных и пользователь выполняет процедуру **sp_repldone**, **sp_replcmds**или **sp_replshowcmds** в той же самой базе данных, возникает ошибка в приложении, в котором выполнялась хранимая процедура (например, **sqlcmd**).  
+-   Если запущен агент чтения журнала для опубликованной базы данных и пользователь выполняет процедуру **sp_repldone**, **sp_replcmds** или **sp_replshowcmds** в той же самой базе данных, возникает ошибка в приложении, в котором выполнялась хранимая процедура (например, **sqlcmd**).  
   
--   Если для опубликованной базы данных агент чтения журнала не запущен и пользователь выполняет процедуру **sp_repldone**, **sp_replcmds**или **sp_replshowcmds** , а затем не закрывает соединение, через которое процедура выполнялась, то при попытке агента чтения журнала подключиться к базе данных возникает ошибка.  
+-   Если для опубликованной базы данных агент чтения журнала не запущен и пользователь выполняет процедуру **sp_repldone**, **sp_replcmds** или **sp_replshowcmds** , а затем не закрывает соединение, через которое процедура выполнялась, то при попытке агента чтения журнала подключиться к базе данных возникает ошибка.  
   
 ## <a name="user-action"></a>Действие пользователя  
  Выполнение следующих шагов может помочь устранить проблему. Если на каком-либо шаге можно запустить агент чтения журнала без ошибок, то в выполнении оставшихся шагов нет необходимости.  
   
 -   Проверьте журнал агента чтения журнала. Возможно, имеются другие ошибки, вызывающие данную ошибку. Сведения о просмотре состояния агента и сведений об ошибках в мониторе репликации см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
--   Проверьте, есть ли в выходных данных процедуры [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) идентификаторы процессов (SPIDs), подключенных к опубликованной базе данных. Закройте все соединения, для которых могла выполняться процедура **sp_repldone**, **sp_replcmds**или **sp_replshowcmds**.  
+-   Проверьте, есть ли в выходных данных процедуры [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) идентификаторы процессов (SPIDs), подключенных к опубликованной базе данных. Закройте все соединения, для которых могла выполняться процедура **sp_repldone**, **sp_replcmds** или **sp_replshowcmds**.  
   
 -   Перезапустите агент чтения журнала. Дополнительные сведения см. в статье [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   Перезапустите службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (введите ее в кластер в режиме «вне сети» или «в сети») на распространителе. Если существует возможность, что запланированное задание могло выполнять процедуру **sp_repldone**, **sp_replcmds**или **sp_replshowcmds** из каких-либо других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , перезапустите также агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для этих экземпляров. Дополнительные сведения см. в статье [Запуск, остановка или приостановка службы агента SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md).  
+-   Перезапустите службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (введите ее в кластер в режиме «вне сети» или «в сети») на распространителе. Если существует возможность, что запланированное задание могло выполнять процедуру **sp_repldone**, **sp_replcmds** или **sp_replshowcmds** из каких-либо других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , перезапустите также агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для этих экземпляров. Дополнительные сведения см. в статье [Запуск, остановка или приостановка службы агента SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md).  
   
 -   В издателе в базе данных публикации выполните процедуру [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md), а затем перезапустите агент чтения журнала.  
   

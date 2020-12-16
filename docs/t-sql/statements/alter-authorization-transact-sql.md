@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ada149941022761d0135adff7b1b65db592cc48
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1afee97fd7b7c70d30def7383e4b83453b90f19b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067467"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472035"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -130,33 +130,33 @@ ALTER AUTHORIZATION ON
     
 |Class|Продукт|    
 |-|-|    
-|OBJECT|**Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздние версии, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
-|ASSEMBLY|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ASYMMETRIC KEY|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|AVAILABILITY GROUP |**Область применения** : SQL Server 2012 и выше.|
-|CERTIFICATE|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|CONTRACT|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
-|DATABASE|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION для баз данных](#AlterDB) ниже.|    
-|ENDPOINT|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
-|FULLTEXT CATALOG|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|FULLTEXT STOPLIST|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|MESSAGE TYPE|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
-|REMOTE SERVICE BINDING|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
-|ROLE|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ROUTE|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
-|SCHEMA|**Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздние версии, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
-|SEARCH PROPERTY LIST|**Применимо к** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|SERVER ROLE|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
-|SERVICE|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
-|SYMMETRIC KEY|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|TYPE|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|XML SCHEMA COLLECTION|**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|OBJECT|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздние версии, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|ASSEMBLY|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|ASYMMETRIC KEY|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|AVAILABILITY GROUP |**Область применения**: SQL Server 2012 и выше.|
+|CERTIFICATE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|CONTRACT|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
+|DATABASE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION для баз данных](#AlterDB) ниже.|    
+|ENDPOINT|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
+|FULLTEXT CATALOG|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|FULLTEXT STOPLIST|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|MESSAGE TYPE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
+|REMOTE SERVICE BINDING|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
+|ROLE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|ROUTE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
+|SCHEMA|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздние версии, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|SEARCH PROPERTY LIST|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|SERVER ROLE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
+|SERVICE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
+|SYMMETRIC KEY|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|TYPE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|XML SCHEMA COLLECTION|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
     
  *entity_name*    
  Имя сущности.    
     
  *principal_name* | SCHEMA OWNER    
- Имя субъекта безопасности, который будет являться собственником сущности. Объекты базы данных должны принадлежать субъекту базы данных; пользователю базы данных или роли. Объекты сервера (такие как базы данных) должны принадлежать субъекту сервера (имя для входа). Определите **SCHEMA OWNER** в качестве *principal_name* , чтобы показать, что объект должен принадлежать участнику, который владеет схемой объекта.    
+ Имя субъекта безопасности, который будет являться собственником сущности. Объекты базы данных должны принадлежать субъекту базы данных; пользователю базы данных или роли. Объекты сервера (такие как базы данных) должны принадлежать субъекту сервера (имя для входа). Определите **SCHEMA OWNER** в качестве *principal_name*, чтобы показать, что объект должен принадлежать участнику, который владеет схемой объекта.    
     
 ## <a name="remarks"></a>Remarks    
  Инструкция ALTER AUTHORIZATION может использоваться для изменения владельца любой сущности, у которой он есть. Владение содержащимися в базе данных сущностями можно передать любому участнику уровня базы данных. Владение сущностями уровня сервера можно передать только участникам уровня сервера.    
@@ -196,7 +196,7 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|Участник должен представлять собой имя входа в систему.|    
   
 ## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> ALTER AUTHORIZATION для баз данных  
-**ПРИМЕНИМО К** : [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**ПРИМЕНИМО К**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>Для SQL Server:  
 **Требования к новому владельцу:**    
 Новый участник-владелец должен быть одним из следующих:  
@@ -206,7 +206,7 @@ ALTER AUTHORIZATION ON
 -   пользователь Windows, проходящий проверку подлинности с использованием имени входа для проверки подлинности Windows, представляющего группу Windows.  
   
 **Требования к пользователю, выполняющему инструкцию ALTER AUTHORIZATION**  
-Если вы не являетесь членом предопределенной роли сервера **sysadmin** , вам требуется как минимум разрешение TAKE OWNERSHIP для базы данных и разрешение IMPERSONATE для имени входа нового владельца.   
+Если вы не являетесь членом предопределенной роли сервера **sysadmin**, вам требуется как минимум разрешение TAKE OWNERSHIP для базы данных и разрешение IMPERSONATE для имени входа нового владельца.   
 
 ### <a name="for-azure-sql-database"></a>Для базы данных SQL Azure  
 **Требования к новому владельцу:**    
@@ -334,7 +334,7 @@ GO
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>Г. Передача владения конечной точкой имени входа в SQL Server    
  В следующем примере владение конечной точкой `CantabSalesServer1` передается `JaePak`. Так как конечная точка представляет собой защищаемую сущность уровня сервера, ее можно передать только участнику уровня сервера.    
     
-**Область применения** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.    
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.    
     
 ```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
@@ -352,7 +352,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```    
     
 ### <a name="f-changing-the-owner-of-a-database"></a>Е. Изменение владельца базы данных    
- **Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
+ **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
     
  В следующем примере показано, как изменить владельца базы данных `Parts` на имя входа `MichikoOsada`.    
     
