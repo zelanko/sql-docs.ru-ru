@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4cf6107c1e200620f1ba48f4e774c440ccdcd7a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 68783d1da202771f39ec232cd9ba5cf1586ef48e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006621"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481225"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Руководство по проектированию индексов columnstore
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -180,8 +180,8 @@ ms.locfileid: "92006621"
 |Создание высокопроизводительных индексов сolumnstore для хранилищ данных|[Columnstore indexes — data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md) (Хранилище данных для индексов columnstore)|Описывает использование индексов сбалансированного дерева в таблицах columnstore для создания высокопроизводительных запросов к хранилищу данных.|  
 |Использование индекса сбалансированного дерева для принудительного применения ограничения первичного ключа к индексу columnstore.|[Columnstore indexes — data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md) (Хранилище данных для индексов columnstore)|Показано, как объединить индексы сбалансированного дерева и columnstore для принудительного применения ограничений первичного ключа к индексу columnstore.|  
 |Удаление индекса columnstore.|[DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)|Для удаления индекса columnstore используется стандартный синтаксис DROP INDEX, применяемый индексами сбалансированного дерева. При удалении кластеризованного индекса columnstore таблица columnstore преобразуется в кучу.|  
-|Удаление строки из индекса columnstore|[DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|Используйте синтаксис [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) для удаления строки.<br /><br /> Строка**columnstore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помечает строку как логически удаленную, но не возвращает физическое хранилище для строки до тех пор, пока индекс не будет перестроен.<br /><br /> Строка**deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] логически и физически удаляет строку.|  
-|Обновление строки в индексе columnstore|[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)|Используйте синтаксис [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) для обновления строки.<br /><br /> Строка**columnstore** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помечает строку как логически удаленную, а затем вставляет обновленную строку в deltastore.<br /><br /> Строка**deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновляет строку в deltastore.|  
+|Удаление строки из индекса columnstore|[DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|Используйте синтаксис [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) для удаления строки.<br /><br /> Строка **columnstore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помечает строку как логически удаленную, но не возвращает физическое хранилище для строки до тех пор, пока индекс не будет перестроен.<br /><br /> Строка **deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] логически и физически удаляет строку.|  
+|Обновление строки в индексе columnstore|[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)|Используйте синтаксис [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) для обновления строки.<br /><br /> Строка **columnstore** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помечает строку как логически удаленную, а затем вставляет обновленную строку в deltastore.<br /><br /> Строка **deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновляет строку в deltastore.|  
 |Принудительное перемещение всех строк из deltastore в columnstore|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|Инструкция ALTER INDEX с параметром REBUILD перемещает все строки в columnstore.|  
 |Дефрагментация индекса columnstore|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ... REORGANIZE дефрагментирует индексы columnstore в оперативном режиме.|  
 |Слияние таблиц с индексами columnstore.|[MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)|

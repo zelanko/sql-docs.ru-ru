@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60c06966368720b4d996c32be221cf37d805a381
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807517"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478355"
 ---
 # <a name="shrink-a-database"></a>Сжатие базы данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,11 +82,11 @@ ms.locfileid: "87807517"
   
 #### <a name="to-shrink-a-database"></a>Сжатие базы данных  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
   
-2.  Разверните узел **Базы данных**и щелкните правой кнопкой мыши базу данных, которую нужно сжать.  
+2.  Разверните узел **Базы данных** и щелкните правой кнопкой мыши базу данных, которую нужно сжать.  
   
-3.  В меню наведите указатель на пункт **Задачи**, **Сжать**и выберите команду **База данных**.  
+3.  В меню наведите указатель на пункт **Задачи**, **Сжать** и выберите команду **База данных**.  
   
      **База данных**  
      Отображает имя выбранной базы данных.  

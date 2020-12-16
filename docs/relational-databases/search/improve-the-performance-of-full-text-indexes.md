@@ -17,13 +17,13 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 79368864ef41860d725772ee9136bb1e66e82790
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868077"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479505"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Улучшение производительности полнотекстовых индексов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +137,7 @@ ms.locfileid: "91868077"
 |x64|*F* = *число диапазонов сканирования* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **Примечания о формулах**
-1.  Если параллельно выполняется несколько полных заполнений, то требования к памяти fdhost.exe для каждого из них следует вычислять отдельно, как *F1*, *F2*и т. д. Затем вычислить *M* как _T_ **-** sigma **(** _F_i **)** .  
+1.  Если параллельно выполняется несколько полных заполнений, то требования к памяти fdhost.exe для каждого из них следует вычислять отдельно, как *F1*, *F2* и т. д. Затем вычислить *M* как _T_ **-** sigma **(** _F_i **)** .  
 2.  500 МБ — это ориентировочный объем памяти, необходимый другим процессам в системе. Если система выполняет дополнительную работу, то это значение следует соответствующим образом увеличить.  
 3.  .*ism_size* равно 8 МБ для платформ x64.  
   

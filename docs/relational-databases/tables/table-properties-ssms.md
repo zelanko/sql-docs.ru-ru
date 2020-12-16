@@ -18,13 +18,13 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f41013db7cbd871ef132c3c0a3bad8a772511022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344060"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480785"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 
@@ -55,7 +55,7 @@ ms.locfileid: "92344060"
  **Дата создания**  
  Дата и время создания таблицы.  
   
- **имя** ;  
+ **имя**;  
  Имя таблицы.  
   
  **Схема**  
@@ -86,11 +86,11 @@ ms.locfileid: "92344060"
  В большинстве случаев предотвращает укрупнение блокировки. Блокировки уровня таблицы запрещены не полностью. Например, при сканировании таблицы, которая не имеет кластеризованного индекса на уровне изоляции SERIALIZABLE, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен установить блокировку таблицы для защиты целостности данных.  
   
  **Таблица реплицирована**  
- Указывает на то, что таблица реплицирована в другую базу данных при помощи репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Допустимые значения — **True** или **False** .  
+ Указывает на то, что таблица реплицирована в другую базу данных при помощи репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Допустимые значения — **True** или **False**.  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Страница отслеживания изменений  
  **Отслеживание изменений**  
- Указывает, разрешено ли отслеживание изменений для этой таблицы. Значение по умолчанию равно **False** .  
+ Указывает, разрешено ли отслеживание изменений для этой таблицы. Значение по умолчанию равно **False**.  
   
  Этот параметр доступен только в том случае, если отслеживание изменений разрешено для базы данных.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "92344060"
  Корневая папка для FileTable.  
   
  **Пространство имен FileTable включено**  
- Если это значение равно **True** , значит таблица — FileTable. Если изменить это значение на **False** , FileTable изменяется на обычную пользовательскую таблицу. Если впоследствии потребуется вновь преобразовать таблицу в FileTable, то перед преобразованием таблица должна пройти проверку согласованности FileTable.  
+ Если это значение равно **True**, значит таблица — FileTable. Если изменить это значение на **False**, FileTable изменяется на обычную пользовательскую таблицу. Если впоследствии потребуется вновь преобразовать таблицу в FileTable, то перед преобразованием таблица должна пройти проверку согласованности FileTable.  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> Страница хранилища  
  Отображаются относящиеся к хранению свойства выбранной таблицы.  
@@ -137,7 +137,7 @@ ms.locfileid: "92344060"
  Имя файловой группы, содержащей таблицу.  
   
  **Таблица секционирована**  
- Допустимые значения — **True** и **False** .  
+ Допустимые значения — **True** и **False**.  
   
  **Файловая группа файлового потока**  
  Укажите имя файловой группы данных FILESTREAM, если таблица содержит столбец **varbinary(max)** , в котором есть атрибут FILESTREAM. Значение по умолчанию — файловая группа данных FILESTREAM.  
@@ -146,7 +146,7 @@ ms.locfileid: "92344060"
   
 ### <a name="general"></a>Общие сведения  
  **Включен формат хранения Vardecimal**  
- Если задано **True** , это доступное только для чтения значение указывает, что типы данных **decimal** и **numeric** хранятся в формате vardecimal. Изменить его можно параметром **vardecimal storage format** хранимой процедуры [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
+ Если задано **True**, это доступное только для чтения значение указывает, что типы данных **decimal** и **numeric** хранятся в формате vardecimal. Изменить его можно параметром **vardecimal storage format** хранимой процедуры [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
   
  **Место, занимаемое индексом**  
  Объем свободного места в мегабайтах, занимаемого индексами в таблице. Это значение не включает занимаемое XML-индексом пространство для таблицы. Если XML-индексы относятся к таблице, используйте вместо этого процедуру [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  

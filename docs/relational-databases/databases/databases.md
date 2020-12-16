@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d69fbd48f7d7f713d9a10806c65c144fff84d6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d1550e59cfa9579cf2c7bf38cdbc8c688b447b69
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87361604"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478375"
 ---
 # <a name="databases"></a>Базы данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "87361604"
         [Удаление базы данных](../../relational-databases/databases/delete-a-database.md)  
     :::column-end:::
     :::column:::
-        [Удаление файлов данных или журнала из базы данных](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
+        [Удаление файлов данных или журналов из базы данных](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
         [Отображение сведений о месте на диске, занимаемом данными и журналами базы данных](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
         [Увеличение размера базы данных](../../relational-databases/databases/increase-the-size-of-a-database.md)  
         [Переименование базы данных](../../relational-databases/databases/rename-a-database.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "87361604"
         [Просмотр списка баз данных в экземпляре SQL Server](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)  
         [Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
         [Использование мастера планов обслуживания](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
-        [Создание псевдонима определяемого пользователем типа данных](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)  
+        [Создание псевдонима для пользовательского типа данных](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)  
         [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)  
     :::column-end:::
 :::row-end:::

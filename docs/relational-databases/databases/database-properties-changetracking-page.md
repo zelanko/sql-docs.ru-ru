@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7129094815add7f3f49aaa5e99b353b3f656a848
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cfe6b46da2124235f4f2e62e70e13ec486f1b6c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193025"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480305"
 ---
 # <a name="database-properties-changetracking-page"></a>Свойства базы данных (страница «Отслеживание изменений»)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92193025"
  Значение по умолчанию — 2.  
   
  **Единицы измерения срока хранения**  
- Указывает единицы изменения для значения параметра «Срок хранения». Может быть выбрано одно из следующих значений: **Дней**, **Часов**или **Минут**. Значение по умолчанию — **Дней**.  
+ Указывает единицы изменения для значения параметра «Срок хранения». Может быть выбрано одно из следующих значений: **Дней**, **Часов** или **Минут**. Значение по умолчанию — **Дней**.  
   
  Минимальный срок хранения составляет 1 минуту. Максимальный срок хранения не предусмотрен.  
   

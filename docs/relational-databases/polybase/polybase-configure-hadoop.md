@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+monikerRange: '>= sql-server-2016'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b51b896610ae74b5d3e30cc2a9e078611202fe17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c42f763957fd7245bff60293b790ab11a833c3ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882614"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480015"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настройка PolyBase для доступа к внешним данным в Hadoop
 
@@ -28,7 +28,7 @@ ms.locfileid: "85882614"
 - Если вы не установили PolyBase, см. раздел [Установка PolyBase](polybase-installation.md). Необходимые условия описываются в статье, посвященной установке.
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 - Начиная с SQL Server 2019, необходимо также [включать компонент PolyBase](polybase-installation.md#enable).
 

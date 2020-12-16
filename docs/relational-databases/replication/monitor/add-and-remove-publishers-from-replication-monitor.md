@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08857f964f652c5663cda32ce442cf34e201c80c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 7c6121b21be6a0a0d49581ebfcc4d637e7fd2f27
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86907370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481025"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Добавление и удаление издателей в мониторе репликации
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "86907370"
   
 6.  Чтобы задать параметры обновления и соединения для издателя, выберите издатель в сетке и измените параметры требуемым образом. Дополнительные сведения об обновлении параметров см. в разделе [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
   
-7.  Выберите группу, в которой должен отображаться издатель в мониторе репликации. Чтобы создать группу, щелкните **Создать группу**и введите ее имя группы. Затем выберите группу в списке **Отображать эти издатели в следующей группе** .  
+7.  Выберите группу, в которой должен отображаться издатель в мониторе репликации. Чтобы создать группу, щелкните **Создать группу** и введите ее имя группы. Затем выберите группу в списке **Отображать эти издатели в следующей группе** .  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "86907370"
   
 6.  Чтобы задать параметры обновления и соединения для издателя, выберите издатель в сетке и измените параметры требуемым образом. Дополнительные сведения об обновлении параметров см. в разделе [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
   
-7.  Выберите группу, в которой должен отображаться издатель в мониторе репликации. Чтобы создать группу, щелкните **Создать группу**и введите ее имя группы. Затем выберите группу в списке **Отображать эти издатели в следующей группе** .  
+7.  Выберите группу, в которой должен отображаться издатель в мониторе репликации. Чтобы создать группу, щелкните **Создать группу** и введите ее имя группы. Затем выберите группу в списке **Отображать эти издатели в следующей группе** .  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -75,7 +75,7 @@ ms.locfileid: "86907370"
   
 6.  Чтобы задать параметры обновления и соединения для издателя, выберите издатель в сетке и измените параметры требуемым образом. Дополнительные сведения об обновлении параметров см. в разделе [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
   
-7.  Выберите группу, в которой должны отображаться издатели в мониторе репликации. Чтобы создать группу, щелкните **Создать группу**и введите ее имя группы. Затем выберите группу в списке **Отображать эти издатели в следующей группе** .  
+7.  Выберите группу, в которой должны отображаться издатели в мониторе репликации. Чтобы создать группу, щелкните **Создать группу** и введите ее имя группы. Затем выберите группу в списке **Отображать эти издатели в следующей группе** .  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

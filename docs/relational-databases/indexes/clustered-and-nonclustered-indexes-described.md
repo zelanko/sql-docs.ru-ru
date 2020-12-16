@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d64eedf43ee8ef64a5a2e5e958df02ea8e20b2cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e70793cab3740089246cc3e1f0738f559566e3f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428426"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481195"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Описания кластеризованных и некластеризованных индексов
 
@@ -32,7 +32,7 @@ ms.locfileid: "88428426"
 
 - Кластеризованный
 
-  - Кластеризованные индексы сортируют и хранят строки данных в таблицах или представлениях на основе их ключевых значений. Этими значениями являются столбцы, включенные в определение индекса. Существует только один кластеризованный индекс для каждой таблицы, так как строки данных могут храниться в единственном порядке.  
+  - Кластеризованные индексы сортируют и хранят строки данных в таблицах или представлениях на основе их ключевых значений. Этими значениями являются столбцы, включенные в определение индекса. Существует только один кластеризованный индекс для каждой таблицы, так как строки данных могут храниться в единственном порядке.  
   - Строки данных в таблице хранятся в порядке сортировки только в том случае, если таблица содержит кластеризованный индекс. Если у таблицы есть кластеризованный индекс, то таблица называется кластеризованной. Если у таблицы нет кластеризованного индекса, то строки данных хранятся в неупорядоченной структуре, которая называется кучей.
 
 - Некластеризованный
@@ -67,7 +67,7 @@ ms.locfileid: "88428426"
 > [!IMPORTANT]
 > Дополнительные сведения о правилах и принципах проектирования индексов см. в статье [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
-## <a name="related-content"></a>См. также
+## <a name="related-content"></a>Связанное содержимое
 
 - [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)
 - [Создание кластеризованных индексов](../../relational-databases/indexes/create-clustered-indexes.md)

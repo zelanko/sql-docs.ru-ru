@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10379c4109cd786dfbc2cdc81a0cb78e04a264da
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 398e9dee801465cffd85d3ce65f0e344318b4cf1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869324"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481245"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Создание хранимых процедур, скомпилированных в собственном коде
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ GO
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**SCHEMABINDING**|Скомпилированная в собственном коде хранимая процедура должна быть привязана к схеме объектов, на которые она ссылается. Это означает, что таблицы, на которые ссылается процедура, не могут быть удалены. Таблицы, на которые имеются ссылки в процедуре, должны содержать имя схемы, а подстановочные знаки (\*) в запросах недопустимы (то есть не нужно использовать выражения наподобие `SELECT * from...`). Параметр**SCHEMABINDING** поддерживается только для хранимых процедур, скомпилированных в собственном коде, в этой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**SCHEMABINDING**|Скомпилированная в собственном коде хранимая процедура должна быть привязана к схеме объектов, на которые она ссылается. Это означает, что таблицы, на которые ссылается процедура, не могут быть удалены. Таблицы, на которые имеются ссылки в процедуре, должны содержать имя схемы, а подстановочные знаки (\*) в запросах недопустимы (то есть не нужно использовать выражения наподобие `SELECT * from...`). Параметр **SCHEMABINDING** поддерживается только для хранимых процедур, скомпилированных в собственном коде, в этой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**BEGIN ATOMIC**|Тело хранимой процедуры, скомпилированной в собственном коде, должно представлять собой только один блок ATOMIC. Блоки ATOMIC гарантируют атомарное выполнение хранимой процедуры. Если процедура вызывается вне контекста активной транзакции, то запускает новую транзакцию, которая фиксируется после блока ATOMIC. Блоки ATOMIC в хранимых процедурах, скомпилированных в собственном коде, имеют два обязательных параметра:<br /><br /> **TRANSACTION ISOLATION LEVEL**. См. раздел [Уровни изоляции транзакций у оптимизированных для памяти таблиц](/previous-versions/sql/sql-server-2016/dn133175(v=sql.130)) , содержащий описание поддерживаемых уровней изоляции.<br /><br /> **LANGUAGE**. Для хранимой процедуры необходимо назначить один из доступных языков или псевдонимов языка.|  
   
 ## <a name="see-also"></a>См. также:  

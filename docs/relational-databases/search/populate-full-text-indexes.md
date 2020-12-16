@@ -24,13 +24,13 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6331623da6672b0b39ec7ca432201cd9a482b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac09b96cf93144ebf2b615bbd73db36c673eb5ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404140"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479465"
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

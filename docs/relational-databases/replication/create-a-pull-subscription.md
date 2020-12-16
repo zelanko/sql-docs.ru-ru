@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ca2d2b650e8691e34445a4b239fb6eff71b25557
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: a84517056baaf5cf4738add3e85a9297b82ec408
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869106"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480035"
 ---
 # <a name="create-a-pull-subscription"></a>Создание подписки по запросу
 
@@ -143,7 +143,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
         > [!NOTE]  
         >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **\@job_login** и **\@job_password** всегда указываются учетные данные Windows. Агент слияния всегда создает локальное соединение с подписчиком с использованием встроенной проверки подлинности Windows. По умолчанию агент установит соединение с распространителем и издателем с помощью встроенной проверки подлинности Windows.  
   
-    -   Значение **0** для параметра **\@distributor_security_mod**e и данные учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **\@distributor_login** и **\@distributor_password**, если для соединения с распространителем нужно использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (необязательно).  
+    -   Значение **0** для параметра **\@distributor_security_mod** e и данные учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **\@distributor_login** и **\@distributor_password**, если для соединения с распространителем нужно использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (необязательно).  
   
     -   Значение **0** для параметра **\@publisher_security_mode** и данные учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**, если для соединения с издателем нужно использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (необязательно).  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 83c9ffd0daca07588bc1b559c7fa3a16acb115e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: b8eab851e7bde95fa0ab6aaf2ee75ae0ffc6d0a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498731"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481015"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88498731"
 ## <a name="explanation"></a>Объяснение  
  Эта ошибка может произойти, если истинны одно или оба из следующих условий:  
   
--   Отсутствует в **msdb..MSdistributiondbs**вход для указанной базы данных распространителя.  
+-   Отсутствует в **msdb..MSdistributiondbs** вход для указанной базы данных распространителя.  
   
 -   Отсутствует или некорректен вход для локального сервера в базу данных **master** .  
   

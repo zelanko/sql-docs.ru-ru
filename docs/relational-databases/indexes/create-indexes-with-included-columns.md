@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b7c552fa3955818c8d9978802f950f07f8a6bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ce010e0093e234c9095c440f3283b8c7942c78bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408270"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480055"
 ---
 # <a name="create-indexes-with-included-columns"></a>Создание индексов с включенными столбцами
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "88408270"
   
 -   Вычисляемые столбцы, являющиеся детерминированными, в том числе точными или неточными, могут быть неключевыми столбцами. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   Вычисляемые столбцы, полученные на основе типов данных **image**, **ntext**и **text** , могут быть неключевыми столбцами, если тип данных этого вычисляемого столбца допустим в качестве неключевого индексного столбца.  
+-   Вычисляемые столбцы, полученные на основе типов данных **image**, **ntext** и **text** , могут быть неключевыми столбцами, если тип данных этого вычисляемого столбца допустим в качестве неключевого индексного столбца.  
   
 -   Неключевые столбцы можно удалить из таблицы только после удаления из этой таблицы индекса.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88408270"
   
     -   изменение поведения столбца в отношении значения NULL с NOT NULL на NULL;  
   
-    -   увеличение длины столбцов типов **varchar**, **nvarchar**и **varbinary** .  
+    -   увеличение длины столбцов типов **varchar**, **nvarchar** и **varbinary** .  
   
 ###  <a name="security"></a><a name="Security"></a> безопасность  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88408270"
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Создание индекса с неключевыми столбцами  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

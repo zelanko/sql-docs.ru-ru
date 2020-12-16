@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c7e4f4589fa5d6c4e2758a2b259ff8e6129904f7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 843ce787a060481f933376470ef431c6c8e8df08
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869073"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479745"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -458,7 +458,7 @@ ms.locfileid: "91869073"
   
     -   Чтобы при соединении агента с подписчиком использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с подписчиком использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **false**и укажите учетные данные входа подписчика в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Чтобы при соединении агента с подписчиком использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **false** и укажите учетные данные входа подписчика в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
         >  Агент всегда соединяется с распространителем с учетными данными Windows, указанными в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
@@ -481,7 +481,7 @@ ms.locfileid: "91869073"
   
     -   Чтобы при соединении агента с распространителем использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с распространителем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **false**и укажите учетные данные входа распространителя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Чтобы при соединении агента с распространителем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **false** и укажите учетные данные входа распространителя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
         >  Агент всегда соединяется с подписчиком с учетными данными Windows, указанными в <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
@@ -504,11 +504,11 @@ ms.locfileid: "91869073"
   
     -   Чтобы при соединении агента с распространителем использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с распространителем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **false**и укажите учетные данные входа распространителя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Чтобы при соединении агента с распространителем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **false** и укажите учетные данные входа распространителя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
     -   Чтобы при соединении агента с издателем использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с издателем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> значение **false**и укажите учетные данные входа издателя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Чтобы при соединении агента с издателем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> значение **false** и укажите учетные данные входа издателя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
         >  Агент всегда соединяется с подписчиком с учетными данными Windows, указанными в <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
@@ -531,11 +531,11 @@ ms.locfileid: "91869073"
   
     -   Чтобы при соединении агента с подписчиком использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с подписчиком использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **false**и укажите учетные данные входа подписчика в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Чтобы при соединении агента с подписчиком использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **false** и укажите учетные данные входа подписчика в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
     -   Чтобы при соединении агента с издателем использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с издателем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> значение **false**и укажите учетные данные входа издателя в полях <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Чтобы при соединении агента с издателем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> значение **false** и укажите учетные данные входа издателя в полях <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
         >  Агент всегда соединяется с распространителем с учетными данными Windows, указанными в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
