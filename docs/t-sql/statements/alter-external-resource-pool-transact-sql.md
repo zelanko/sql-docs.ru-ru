@@ -17,31 +17,31 @@ ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6279d5eae855c87e7f93cb47e3b2fb55bfcc2dba
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: de8fe4503436963094dde524c7fb65a677e91826
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283528"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464145"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Изменяет внешний пул Resource Governor, указывающий ресурсы, которые могут использоваться внешними процессами. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Для [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] в [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] внешний пул управляет `rterm.exe`, `BxlServer.exe` и другими сформированными процессами.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 Для [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] внешний пул управляет `rterm.exe`, `python.exe`, `BxlServer.exe` и другими сформированными процессами.
 ::: moniker-end
 
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Синтаксис
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
@@ -56,7 +56,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
  ```syntaxsql
 
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
@@ -87,7 +87,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 Имя существующего определяемого пользователем внешнего пула ресурсов или внешнего пула ресурсов по умолчанию, создаваемого при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 Если слово "default" используется с инструкцией `ALTER EXTERNAL RESOURCE POOL`, оно должно быть заключено в кавычки ("") или квадратные скобки ([]) во избежание конфликта с системным зарезервированным словом `DEFAULT`.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 MAX_CPU_PERCENT =*value*  
 Указывает максимальную среднюю пропускную способность ЦП для всех запросов во внешнем пуле ресурсов при возникновении состязания за ресурсы ЦП. *value* — целое число. Диапазон допустимых значений для *value* — от 1 до 100.
 
@@ -98,7 +98,7 @@ MAX_PROCESSES =*value*
 Указывает максимально допустимое количество процессов для внешнего пула ресурсов. Укажите 0, чтобы задать неограниченный порог для пула, который впоследствии ограничивается только ресурсами компьютера.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 MAX_CPU_PERCENT =*value*  
 Указывает максимальную среднюю пропускную способность ЦП для всех запросов во внешнем пуле ресурсов при возникновении состязания за ресурсы ЦП. *value* — целое число. Диапазон допустимых значений для *value* — от 1 до 100.
 
@@ -127,7 +127,7 @@ MAX_PROCESSES =*value*
 ## <a name="examples"></a>Примеры
 
 Следующая инструкция изменяет внешний пул, ограничивая загрузку ЦП 50 процентами, а максимальный объем памяти — 25 процентами доступной памяти на компьютере.
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (
@@ -140,7 +140,7 @@ GO
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (

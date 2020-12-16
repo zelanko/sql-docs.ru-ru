@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cc3f414e9e771eb48734a2c8c188d28ac8bc321
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 188610b1f6eef0835bf20f7b86e99647df699539
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035867"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464225"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Предложение FROM и JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -429,7 +429,7 @@ ON (p.ProductID = v.ProductID);
   
     Значения в *right_table_source* зависят от *left_table_source*. *right_table_source* может быть представлено примерно в следующем виде: `TVF(left_table_source.row)`, где `TVF` является функцией с табличным значением.  
   
-2.  Объединяет результирующие наборы, предоставляемые для каждой строки при оценке *right_table_source* с left_table_source*left_table_source*, посредством выполнения операции UNION ALL.  
+2.  Объединяет результирующие наборы, предоставляемые для каждой строки при оценке *right_table_source* с left_table_source *left_table_source*, посредством выполнения операции UNION ALL.  
   
     Список столбцов, полученный в результате выполнения оператора APPLY, представляет собой набор столбцов из *left_table_source*, объединенный со списком столбцов из *right_table_source*.  
   

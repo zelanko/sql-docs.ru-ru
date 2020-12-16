@@ -10,13 +10,13 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 006a0577292ba825a3d28cd63cc573ac35cc5771
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: bca91a8745a36c845fd3ef7e08e1d0139b37bd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300427"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464155"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -115,7 +115,7 @@ ALTER EXTERNAL LANGUAGE language_name
 
 ## <a name="permissions"></a>Разрешения
 
-Требуется разрешение `ALTER ANY EXTERNAL LANGUAGE`. По умолчанию любой пользователь с учетной записью **dbo** , являющийся членом роли **db_owner** , имеет разрешения на изменение внешнего языка. Другим пользователям необходимо явным образом предоставить разрешение с помощью инструкции [GRANT](./grant-database-permissions-transact-sql.md), указав ALTER ANY EXTERNAL LANGUAGE в качестве привилегии.
+Требуется разрешение `ALTER ANY EXTERNAL LANGUAGE`. По умолчанию любой пользователь с учетной записью **dbo**, являющийся членом роли **db_owner**, имеет разрешения на изменение внешнего языка. Другим пользователям необходимо явным образом предоставить разрешение с помощью инструкции [GRANT](./grant-database-permissions-transact-sql.md), указав ALTER ANY EXTERNAL LANGUAGE в качестве привилегии.
 
 ## <a name="examples"></a>Примеры
 

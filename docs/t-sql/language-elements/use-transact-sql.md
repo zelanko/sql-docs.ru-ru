@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1bbcdf4244c81eac74e2206d06f5704b92ebb93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 27e6f62e7b867fcae8d97a080ead87daf5536b7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92191148"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464205"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -51,7 +51,7 @@ USE { database_name }
   
  В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметр базы данных может ссылаться только на текущую базу данных. Если указана база данных, отличная от текущей, инструкция `USE` не переключается между базами данных и возвращается код ошибки 40508. Для смены базы данных следует непосредственно подключиться к базе данных. В верхней части этой страницы инструкция USE помечена как неприменимая к базе данных SQL, поскольку даже если инструкция `USE`входит в состав пакета, она не выполняет никаких действий.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  При подключении имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа автоматически подключается к базе данных по умолчанию и получает контекст безопасности пользователя базы данных. Если для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь базы данных не был создан, имя входа подключается как «гость». Если пользователь базы данных не имеет разрешения CONNECT на базу данных, инструкция USE завершится ошибкой. Если с именем входа не была связана никакая база данных по умолчанию, то для него базой данных по умолчанию будет установлена база данных master.  
   
  Инструкция USE выполняется как на стадии компиляции, так и на стадии выполнения и вступает в силу немедленно. Иными словами, инструкции, которые содержатся в пакете после инструкции USE, будут выполнены в контексте указанной базы данных.  

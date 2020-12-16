@@ -17,30 +17,30 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d2a53c17787810aa3ebdd47c64810caab42844c2
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 15cae5bf8c97de6170c11cfc991afdb31033963d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300448"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464165"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Изменяет содержимое существующей внешней библиотеки пакетов.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 > [!NOTE]
 > В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и внешние языки на платформах Windows и Linux поддерживаются в SQL Server 2019 и более поздних версиях.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current"
 > [!NOTE]
-> В Управляемом экземпляре SQL Azure библиотеку можно изменить, удалив ее, а затем установив измененную версию с помощью пакета **sqlmlutils** . Дополнительные сведения о **sqlmlutils** см. в статьях [Установка пакетов Python с помощью sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) и [Установка новых пакетов R с помощью sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
+> В Управляемом экземпляре SQL Azure библиотеку можно изменить, удалив ее, а затем установив измененную версию с помощью пакета **sqlmlutils**. Дополнительные сведения о **sqlmlutils** см. в статьях [Установка пакетов Python с помощью sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) и [Установка новых пакетов R с помощью sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## <a name="syntax-for-sql-server-2019"></a>Синтаксис для SQL Server 2019
 
 ```syntaxsql
@@ -83,7 +83,7 @@ WITH ( LANGUAGE = <language> )
 }
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## <a name="syntax-for-sql-server-2017"></a>Синтаксис для SQL Server 2017
 
 ```syntaxsql
@@ -114,7 +114,7 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 ## <a name="syntax-for-azure-sql-managed-instance"></a>Синтаксис для Управляемого экземпляра SQL Azure
 
 ```syntaxsql
@@ -155,7 +155,7 @@ WITH ( LANGUAGE = <language> )
 
 Указывает имя пользователя или роли, которой принадлежит внешняя библиотека.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 **file_spec**
 
 Указывает содержимое пакета для конкретной платформы. Поддерживается только один файл артефакта на платформу.
@@ -173,47 +173,47 @@ WITH ( LANGUAGE = <language> )
 
 Вместо этого можно передать содержимое пакета в качестве переменной в двоичном формате.
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 **platform = WINDOWS**
 
 Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы.
 В SQL Server 2017 поддерживается только платформа Windows.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **platform**
 
 Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы. 
 В SQL Server 2019 поддерживаются платформы Windows и Linux.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 **LANGUAGE = 'R'**
 
 Задает язык пакета. Язык R поддерживается в SQL Server 2017.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 **language**
 
 Задает язык пакета. Значение может быть **R** или **Python** в Управляемом экземпляре SQL Azure.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **language**
 
-Задает язык пакета. Значением может быть **R** , **Python** или название внешнего языка (см. раздел [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
+Задает язык пакета. Значением может быть **R**, **Python** или название внешнего языка (см. раздел [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>Remarks
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 В языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP для Windows. В SQL Server 2017 поддерживается только платформа Windows.  
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 При использовании файла в языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP. 
 
 Для языка Python необходимо подготовить пакет в WHL- или ZIP-файле в виде файла с ZIP-архивом. Если пакет уже является ZIP-файлом, он должен быть включен в новый ZIP-файл. Отправка пакета в качестве WHL- или ZIP-файла напрямую в настоящее время не поддерживается.
@@ -221,17 +221,17 @@ WITH ( LANGUAGE = <language> )
 
 Инструкция `ALTER EXTERNAL LIBRARY` только загружает биты библиотеки в базу данных. Измененная библиотека устанавливается при выполнении кода в [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), который вызывает библиотеку.
 
-Набор пакетов, называемых *системными пакетами* , устанавливается в экземпляре SQL предварительно. Пользователь не может добавлять, обновлять и удалять системные пакеты.
+Набор пакетов, называемых *системными пакетами*, устанавливается в экземпляре SQL предварительно. Пользователь не может добавлять, обновлять и удалять системные пакеты.
 
 ## <a name="permissions"></a>Разрешения
 
-По умолчанию разрешение на запуск ALTER EXTERNAL LIBRARY имеет пользователь **dbo** или любой член роли **db_owner** . Кроме того, внешнюю библиотеку может изменять пользователь, который ее создал.
+По умолчанию разрешение на запуск ALTER EXTERNAL LIBRARY имеет пользователь **dbo** или любой член роли **db_owner**. Кроме того, внешнюю библиотеку может изменять пользователь, который ее создал.
 
 ## <a name="examples"></a>Примеры
 
 В следующем примере изменяется внешняя библиотека `customPackage`.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 ### <a name="replace-the-contents-of-a-library-using-a-file"></a>Замена содержимого библиотеки с помощью файла
 
 В следующем примере изменяется внешняя библиотека `customPackage` с помощью сжатого ZIP-файла, содержащего обновленные биты.
@@ -253,7 +253,7 @@ EXEC sp_execute_external_script
 ```
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 В языке Python пример также выполняется при замене `'R'` на `'Python'`.
 ::: moniker-end
 
@@ -266,7 +266,7 @@ ALTER EXTERNAL LIBRARY customLibrary
 SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 В языке Python пример также выполняется при замене `'R'` на `'Python'`.
 ::: moniker-end
 
