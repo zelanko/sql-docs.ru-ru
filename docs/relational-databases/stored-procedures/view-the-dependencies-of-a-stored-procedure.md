@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b59fe000bb72cdfb7286c5efba0de009439c555
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2d0a64ac9fd8ed3f9ac09f269a4026ed797b5af2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332203"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466985"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Просмотр зависимостей хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "87332203"
  Системная функция: **sys.dm_sql_referencing_entities**  
  Эта функция используется для отображения объектов, зависящих от процедуры.  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
 2.  Разверните узел **Базы данных**, разверните базу данных, в которой находится процедура.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "87332203"
  Системная функция: **sys.dm_sql_referenced_entities**  
  Эта функция используется для отображения объектов, от которых зависит процедура.  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
 2.  Разверните узел **Базы данных**, разверните базу данных, в которой находится процедура.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "87332203"
  Это представление можно использовать для отображения объектов, от которых зависит процедура или которые зависят от процедуры.  
   
  Отображение объектов зависит от процедуры.  
- 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+ 1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
 2.  Разверните узел **Базы данных**, разверните базу данных, в которой находится процедура.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "87332203"
     ```  
   
  Отображение объектов, от которых зависит процедура.  
- 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
+ 1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
 2.  Разверните узел **Базы данных**, разверните базу данных, в которой находится процедура.  
   

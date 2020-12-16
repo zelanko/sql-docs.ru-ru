@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 591b33a5ad44a242fde2377c86002ea1f5b5931a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3b29f98ad39d34935d65530841f8e81063233791
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719520"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468725"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Синхронизация подписки с помощью диспетчера синхронизации Windows
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "85719520"
   
     -   **Идентификация**  
   
-    -   **Имя входа подписчика**, **Имя входа распространителя**и **Имя входа издателя** (только для репликации слиянием)  
+    -   **Имя входа подписчика**, **Имя входа распространителя** и **Имя входа издателя** (только для репликации слиянием)  
   
     -   **Данные о веб-сервере** (для подписок на публикацию слиянием на подписчиках, использующих SQL Server 2005 или более поздние версии)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "85719520"
      Затем выбранная строка применяется к издателю или к подписчику; строка распространяется на другие узлы в топологии во время последующих синхронизаций.  
   
 > [!NOTE]  
->  Правки применяются, только если они являются частью строки, которая выбрана для разрешения конфликта. Например, если правки вносятся от имени **Издателя**и затем выбирается **Принять вариант подписчика**, правки отклоняются.  
+>  Правки применяются, только если они являются частью строки, которая выбрана для разрешения конфликта. Например, если правки вносятся от имени **Издателя** и затем выбирается **Принять вариант подписчика**, правки отклоняются.  
   
 ## <a name="see-also"></a>См. также:  
  [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  

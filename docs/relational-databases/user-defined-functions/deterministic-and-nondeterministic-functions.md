@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2665ab9b5a30209a123056664921334ce3c8367
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eebd2896dc1931e03dd121867ee09c1940d02d36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485318"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466715"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Детерминированные и недетерминированные функции
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "88485318"
 |Компонент|Комментарии|  
 |--------------|--------------|  
 |все агрегатные функции|Все агрегатные функции являются детерминированными, если они не указаны с помощью предложения OVER или ORDER BY. Список этих функций см. в разделе [Агрегатные функции (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md).|  
-|CAST|Детерминированные, за исключением использования их с данными типа **datetime**, **smalldatetime**и **sql_variant**.|  
+|CAST|Детерминированные, за исключением использования их с данными типа **datetime**, **smalldatetime** и **sql_variant**.|  
 |CONVERT|Детерминирована, кроме следующих случаев.<br /><br /> <br /><br /> Тип источника — **sql_variant**.<br /><br /> Конечный тип — **sql_variant** , и его исходный тип недетерминирован.<br /><br /> Исходный или конечный тип — **datetime** или **smalldatetime**, другой исходный или конечный тип — строка символов, и задан недетерминированный стиль. Чтобы быть детерминированным, параметр стиля должен быть константой. Кроме того, стили, которые меньше или равны 100, являются недетерминированными, за исключением стилей 20 и 21. Стили более 100 являются детерминированными, за исключением стилей 106, 107, 109 и 113.|  
 |CHECKSUM|Детерминирована, за исключением CHECKSUM(*).|  
 |ISDATE|Детерминирована, только если используется с функцией CONVERT, при этом параметр стиля CONVERT задан, но не равен 0, 100, 9 или 109.|  

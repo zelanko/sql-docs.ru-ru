@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 2a75dec86a197a5a0c4f4029a947ad801b1f2271
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364701"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467395"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>обновить скрипты репликации (программирование репликации на языке Transact-SQL)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,31 +37,31 @@ ms.locfileid: "93364701"
   
  Улучшения в области безопасности, повышающие управляемость разрешений за счет предоставления пользователю возможности явно задавать учетные записи [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, от которых выполняются задания агента репликации, затронут следующие хранимые процедуры в существующих скриптов.  
   
--   **sp_addpublication_snapshot** :  
+-   **sp_addpublication_snapshot**:  
   
      Теперь при вызове хранимой процедуры [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) для формирования задания пользователь должен в параметрах `@job_login` и `@job_password` передать учетные данные Windows, с которыми будет запускаться агент моментальных снимков на распространителе.  
   
--   **sp_addpushsubscription_agent** :  
+-   **sp_addpushsubscription_agent**:  
   
      Теперь пользователь должен выполнять хранимую процедуру [sp_addpushsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md), чтобы явным образом добавить задание и передать учетные данные Windows (в параметрах `@job_login` и `@job_password`), с которыми задание агента распространителя будет выполняться на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это выполнялось автоматически при создании принудительной подписки.  
   
--   **sp_addmergepushsubscription_agent** :  
+-   **sp_addmergepushsubscription_agent**:  
   
      Теперь пользователь должен выполнить процедуру [sp_addpushsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md), чтобы явным образом добавить задание и передать учетные данные Windows (в параметрах `@job_login` и `@job_password`), с использованием которых задание агента слияния будет выполняться на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это выполнялось автоматически при создании принудительной подписки.  
   
--   **sp_addpullsubscription_agent** :  
+-   **sp_addpullsubscription_agent**:  
   
      Теперь при вызове хранимой процедуры [sp_addpullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) для формирования задания пользователь должен в параметрах `@job_login` и `@job_password` передать учетные данные Windows, с которыми будет запускаться агент распространителя на подписчике.  
   
--   **sp_addmergepullsubscription_agent** :  
+-   **sp_addmergepullsubscription_agent**:  
   
      Теперь при вызове хранимой процедуры [sp_addmergepullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) для формирования задания пользователь должен в параметрах `@job_login` и `@job_password` передать учетные данные Windows, с которыми будет запускаться агент слияния на подписчике.  
   
--   **sp_addlogreader_agent** :  
+-   **sp_addlogreader_agent**:  
   
      Теперь пользователь должен вызвать хранимую процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md), чтобы вручную добавить задание и передать учетные данные Windows, с использованием которых агент чтения журнала будет выполняться на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это делалось автоматически при создании публикации транзакций.  
   
--   **sp_addqreader_agent** :  
+-   **sp_addqreader_agent**:  
   
      Теперь пользователь должен вызвать хранимую процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md), чтобы вручную добавить задание и передать учетные данные Windows, с использованием которых агент чтения очереди будет выполняться на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это производилось автоматически при создании публикации транзакций, поддерживающей обновление посредством очередей.  
   

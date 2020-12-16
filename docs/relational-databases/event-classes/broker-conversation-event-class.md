@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f77b2cff9793f7e6be200423dd6bc23377814635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88410230"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468025"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation, класс событий
 
@@ -32,7 +32,7 @@ ms.locfileid: "88410230"
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
-|**DatabaseID**|**int**|Идентификатор базы данных, указанный в инструкции USE *database* . Идентификатор базы данных по умолчанию, указанный в том случае, если инструкция USE *базы данных*не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию **DB_ID** .|3|Да|  
+|**DatabaseID**|**int**|Идентификатор базы данных, указанный в инструкции USE *database* . Идентификатор базы данных по умолчанию, указанный в том случае, если инструкция USE *базы данных* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию **DB_ID** .|3|Да|  
 |**EventClass**|**int**|Тип захваченного класса событий. Всегда **124** для класса событий **Broker:Conversation**.|27|Нет|  
 |**EventSequence**|**int**|Порядковый номер этого события.|51|Нет|  
 |**EventSubClass**|**nvarchar**|Тип подкласса события. Предоставляет дополнительные сведения о каждом классе событий.|21|Да|  
