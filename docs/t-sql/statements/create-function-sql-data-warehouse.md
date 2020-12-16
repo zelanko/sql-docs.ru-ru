@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47073d130f6a3881c7765d74f40fa06658b02f78
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 5d969da45ab53a82d71cea4d852a69f4bbc10999
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067389"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476625"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,8 +106,8 @@ RETURNS TABLE
  *parameter_data_type*  
  Тип данных параметра. Для функций [!INCLUDE[tsql](../../includes/tsql-md.md)] допускаются все скалярные типы данных, которые поддерживаются в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Тип данных timestamp (rowversion) не поддерживается.  
   
- [ = *default* ]  
- Значение по умолчанию для аргумента. Если определено значение *default* , то функция выполняется даже в том случае, если для данного параметра значение не указано.  
+ [ =*default* ]  
+ Значение по умолчанию для аргумента. Если определено значение *default*, то функция выполняется даже в том случае, если для данного параметра значение не указано.  
   
  Если параметр функции имеет значение по умолчанию, то для него должно быть указано ключевое слово DEFAULT для получения функцией значения по умолчанию. Применение ключевого слова DEFAULT следует отличать от использования аргументов со значениями по умолчанию в хранимых процедурах, когда не указанный аргумент неявно принимает значение по умолчанию.  
   
@@ -122,11 +122,11 @@ RETURNS TABLE
  *scalar_expression*  
  Указывает скалярное значение, возвращаемое скалярной функцией.  
 
- *select_stmt* **Область применения** : Azure Synapse Analytics  
+ *select_stmt* **Область применения**: Azure Synapse Analytics  
  Единственная инструкция SELECT, которая определяет возвращаемое значение встроенной функции с табличным значением (предварительная версия).
 
- TABLE **Область применения** : Azure Synapse Analytics  
- Указывает, что возвращаемым значением функции с табличным значением (TVF) является таблица. Функциям с табличным значением могут передаваться только константы и @ *local_variables*.
+ TABLE **Область применения**: Azure Synapse Analytics  
+ Указывает, что возвращаемым значением функции с табличным значением (TVF) является таблица. Функциям с табличным значением могут передаваться только константы и @*local_variables*.
 
  Во встроенных функциях с табличным значением (предварительная версия) возвращаемое значение TABLE определяется единственной инструкцией SELECT. Встроенные функции не имеют соответствующих возвращаемых переменных.
   
@@ -244,7 +244,7 @@ RETURN
 );
 GO
 ```
-Эту функцию можно вызвать, чтобы получить все объекты представления ( **V** ), следующим образом:
+Эту функцию можно вызвать, чтобы получить все объекты представления (**V**), следующим образом:
 ```sql
 select * from dbo.ModulesByType('V');
 ```

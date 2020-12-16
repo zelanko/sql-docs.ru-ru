@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a433735d5989a9708c9ca59ba92051634e1c2eed
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e89b0fb2445901ec981a5bdfa238cbd31704a039
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868746"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473955"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Импорт данных в собственном и символьном формате из предыдущих версий SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91868746"
 ## <a name="interpretation-of-data-types"></a>Интерпретация типов данных  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях была добавлена поддержка некоторых новых типов данных. Если нужно импортировать новый тип данных в более раннюю версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , эти данные необходимо сохранить в формате, который могут прочитать старые клиенты **bcp** . Следующая таблица содержит сведения о том, как новые типы данных преобразуются для совместимости с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Новые типы данных в SQL Server 2005|Совместимые типы данных в версии 6*x*|Совместимые типы данных в версии 70|Совместимые типы данных в версии 80|  
+|Новые типы данных в SQL Server 2005|Совместимые типы данных в версии 6 *x*|Совместимые типы данных в версии 70|Совместимые типы данных в версии 80|  
 |---------------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|  
 |**bigint**|**decimal**|**decimal**|*|  
 |**sql_variant**|**text**|**nvarchar(4000)**|*|  
@@ -58,12 +58,12 @@ ms.locfileid: "91868746"
  При массовом экспорте данных ключом **-V80** данные типов **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , XML и определяемый пользователем тип в собственном режиме хранятся с 4-байтовым префиксом, как данные **text**, **image** и **ntext**, вместо 8-байтового префикса, используемого по умолчанию в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях.  
   
 ## <a name="copying-date-values"></a>Копирование значений данных  
- Программа**bcp** использует API-интерфейс массового копирования ODBC. Таким образом, для импорта значений дат в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа **bcp** использует формат данных ODBC (*гггг-мм-дд чч:мм:сс*[ *.f...* ]).  
+ Программа **bcp** использует API-интерфейс массового копирования ODBC. Таким образом, для импорта значений дат в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа **bcp** использует формат данных ODBC (*гггг-мм-дд чч:мм:сс*[ *.f...* ]).  
   
  Команда **bcp** экспортирует файлы данных в символьном формате с помощью формата ODBC по умолчанию для значений **datetime** и **smalldatetime** . Например, столбец типа **datetime** , содержащий дату `12 Aug 1998` , копируется с помощью массового копирования в файл данных в качестве строки символов `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  При импорте данных в поле **smalldatetime** с помощью программы **bcp**нужно убедиться, что значение секунд равно 00,000; в противном случае во время операции возникнет ошибка. Тип данных **smalldatetime** содержит только значения с точностью до минуты. В данном случае инструкции BULK INSERT и INSERT ... SELECT * FROM OPENROWSET(BULK...) не приведут к ошибке, но усекут значение секунд.  
+>  При импорте данных в поле **smalldatetime** с помощью программы **bcp** нужно убедиться, что значение секунд равно 00,000; в противном случае во время операции возникнет ошибка. Тип данных **smalldatetime** содержит только значения с точностью до минуты. В данном случае инструкции BULK INSERT и INSERT ... SELECT * FROM OPENROWSET(BULK...) не приведут к ошибке, но усекут значение секунд.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Использование форматов данных для массового импорта или экспорта**  

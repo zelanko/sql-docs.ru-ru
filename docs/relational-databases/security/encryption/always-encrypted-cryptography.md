@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cc6c779f441934e76108a71445078386dc4d567
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 630732f9f1d56292a72ddd180ee536008c4ecf83
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866920"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475595"
 ---
 # <a name="always-encrypted-cryptography"></a>Шифрование Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91866920"
   
  Чтобы скрыть шаблоны, в алгоритме **AEAD_AES_256_CBC_HMAC_SHA_256** используется метод применения блочного шифра, в котором исходные значения шифруются с использованием вектора инициализации (IV). Полное описание режима CBC можно найти по адресу [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
- Алгоритм**AEAD_AES_256_CBC_HMAC_SHA_256** вычисляет значение зашифрованного текста для заданного значения открытого текста с помощью следующих шагов.  
+ Алгоритм **AEAD_AES_256_CBC_HMAC_SHA_256** вычисляет значение зашифрованного текста для заданного значения открытого текста с помощью следующих шагов.  
   
 ### <a name="step-1-generating-the-initialization-vector-iv"></a>Шаг 1. Создание вектора инициализации  
  Технология постоянного шифрования поддерживает два метода шифрования с помощью алгоритма **AEAD_AES_256_CBC_HMAC_SHA_256**:  

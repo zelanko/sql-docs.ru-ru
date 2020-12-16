@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f441380805e443cc13617a5477d3083ee1dc62d5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8584c274304757724d0eceb88a91257112ef694a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006258"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474005"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>Форматирование файлов для импорта и экспорта данных (SQL Server)
 
@@ -106,7 +106,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 - завершающие символы или длины префиксов отличаются в столбцах файла данных.
 
 > [!NOTE]
-> Если файл форматирования отсутствует и в команде **bcp** задан параметр формата данных ( **-n**, **-c**, **-w**или **-N**) либо в операции BULK INSERT задан параметр DATAFILETYPE, указанный формат данных используется как метод интерпретации полей в файле данных по умолчанию.
+> Если файл форматирования отсутствует и в команде **bcp** задан параметр формата данных ( **-n**, **-c**, **-w** или **-N**) либо в операции BULK INSERT задан параметр DATAFILETYPE, указанный формат данных используется как метод интерпретации полей в файле данных по умолчанию.
 
 ## <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи
 

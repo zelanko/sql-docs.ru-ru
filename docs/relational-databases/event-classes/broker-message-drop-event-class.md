@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 828791161e2ca6dd493941e3759284510c2c3bb1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7d3096ecd47192b56743bc3cd9eb925a34aa1784
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487006"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476195"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Класс событий Broker:Message Undeliverable
 
@@ -35,7 +35,7 @@ ms.locfileid: "88487006"
 |**BigintData2**|**bigint**|Порядковый номер последнего успешно подтвержденного сообщения.|53|Нет|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|**Error**|**int**|Идентификационный номер сообщения в **sys.messages** для текста в событии.|31|нет|  
+|**Error**|**int**|Идентификационный номер сообщения в **sys.messages** для текста в событии.|31|Нет|  
 |**EventClass**|**int**|Тип захваченного класса событий. Всегда равен **160** для класса событий **Broker:MessageUndeliverable**.|27|нет|  
 |**EventSequence**|**int**|Порядковый номер этого события.|51|нет|  
 |**EventSubClass**|**nvarchar**|Указывает, было ли недоставленное сообщение упорядоченным. Может принимать одно из следующих двух значений:<br /><br /> **Упорядоченное сообщение**. Недоставленное сообщение было упорядоченным.<br /><br /> **Неупорядоченное сообщение**. Недоставленное сообщение не было упорядоченным.|21|Да|  

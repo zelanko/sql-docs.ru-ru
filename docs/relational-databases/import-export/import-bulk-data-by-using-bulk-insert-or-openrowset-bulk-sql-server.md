@@ -21,14 +21,14 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
 ms.date: 09/25/2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a9f62a8a6aa679624e78def2dd5bea1ddeb7f5db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4afac2fde54524d5440d33d8ff2bf4cdc9062521
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715405"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473975"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>Импорт данных в SQL Server при помощи инструкции BULK INSERT или OPENROWSET(BULK...)
 
@@ -89,7 +89,7 @@ ms.locfileid: "85715405"
 
 Предположим, пользователь вошел в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с проверкой подлинности Windows. Чтобы иметь возможность воспользоваться BULK INSERT или OPENROWSET для импорта данных из файла данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , учетная запись должна иметь доступ на чтение этого файла данных. Если же пользователь имеет доступ к файлу данных, то он может импортировать данные из файла в таблицу даже в том случае, когда процесс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не имеет прав доступа к файлу. Пользователь не должен предоставлять процессу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] права на доступ к файлу.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows могут быть настроены таким образом, чтобы экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мог выполнять соединение с другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредством переадресации учетных данных пользователя Windows, прошедшего проверку подлинности. Такой подход называется *олицетворением* или *делегированием*. При использовании инструкции BULK INSERT или OPENROWSET очень важно понимать, каким образом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и более поздних версиях обеспечивается безопасность при олицетворении пользователя. Это позволяет хранить файл данных не на том компьютере, на котором вошел пользователь или работает процесс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Например, если пользователь на **компьютере_A** имеет доступ к файлу данных на **компьютере_B**и делегирование учетных данных было соответствующим образом настроено, этот пользователь может подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенному на **компьютере_C**, получить доступ к файлу данных на **компьютере_B**и выполнить массовый импорт данных из этого файла в таблицу на **компьютере_C**.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows могут быть настроены таким образом, чтобы экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мог выполнять соединение с другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредством переадресации учетных данных пользователя Windows, прошедшего проверку подлинности. Такой подход называется *олицетворением* или *делегированием*. При использовании инструкции BULK INSERT или OPENROWSET очень важно понимать, каким образом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и более поздних версиях обеспечивается безопасность при олицетворении пользователя. Это позволяет хранить файл данных не на том компьютере, на котором вошел пользователь или работает процесс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Например, если пользователь на **компьютере_A** имеет доступ к файлу данных на **компьютере_B** и делегирование учетных данных было соответствующим образом настроено, этот пользователь может подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенному на **компьютере_C**, получить доступ к файлу данных на **компьютере_B** и выполнить массовый импорт данных из этого файла в таблицу на **компьютере_C**.
 
 ## <a name="bulk-importing-to-sql-server-from-a-remote-data-file"></a>Массовый импорт в SQL Server из удаленного файла данных
 
@@ -167,13 +167,13 @@ WITH ( TYPE = BLOB_STORAGE,
 );
 
 INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
 ```
 
 > [!IMPORTANT]

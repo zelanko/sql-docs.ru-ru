@@ -11,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7014f349998781dcd890e84a77deb4732fe028c9
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f03f5dc54c525e850c7654c5860fb56d35ad75c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127724"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475605"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Настройка шифрования столбцов с помощью Always Encrypted с PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 В этой статье описаны шаги по настройке целевой конфигурации постоянного шифрования для столбцов базы данных с помощью командлета [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (в модуле *SqlServer* PowerShell). Командлет **Set-SqlColumnEncryption** изменяет схему целевой базы данных и данные, хранящиеся в выбранных столбцах. В зависимости от целевых параметров шифрования, указанных для столбцов и текущей конфигурации шифрования, хранимые в столбце данные могут быть зашифрованы, повторно зашифрованы или расшифрованы.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Если вы используете [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] и для экземпляра SQL Server настроен безопасный анклав, можно выполнять криптографические операции на месте без перемещения данных из базы данных. См. статью [Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-configure-encryption.md). Обратите внимание, что PowerShell не поддерживает шифрование на месте.

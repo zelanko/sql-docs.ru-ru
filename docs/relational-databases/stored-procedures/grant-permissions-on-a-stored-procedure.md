@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 343ad174485697864a4f253f0c4d6352b8b12abb
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b7a5b7631a2c3122bc97a2c93c9d6c0ae202bb04
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332602"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475285"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>Предоставление разрешений на хранимую процедуру
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,11 +59,11 @@ ms.locfileid: "87332602"
   
 3.  Разверните узел **Хранимые процедуры**, щелкните правой кнопкой мыши процедуру для предоставления разрешений и выберите **Свойства**.  
   
-4.  В пункте **Свойства хранимой процедуры**выберите страницу **Разрешения** .  
+4.  В пункте **Свойства хранимой процедуры** выберите страницу **Разрешения** .  
   
 5.  Для предоставления разрешений пользователю, роли базы данных или роли приложения нажмите кнопку **Поиск**.  
   
-6.  В пункте **Выбрать пользователей или ролей**нажмите **Типы объектов** для необходимого добавления или исключения пользователей и ролей.  
+6.  В пункте **Выбрать пользователей или ролей** нажмите **Типы объектов** для необходимого добавления или исключения пользователей и ролей.  
   
 7.  Нажмите кнопку **Обзор** , чтобы показать список пользователей или ролей. Выберите пользователей или роли, которым следует предоставить разрешения.  
   

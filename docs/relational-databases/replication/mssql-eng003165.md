@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e0ac70ecaddb16dd22f1e97ed56ff7ca47488019
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 778661a1ff29f8813a000606d4d49be3c7105643
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88379850"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475835"
 ---
 # <a name="mssql_eng003165"></a>MSSQL_ENG003165
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88379850"
   
 -   Если резервная копия восстанавливается в другую базу данных или на другой сервер, ошибка указывает на то, что не удалось должным образом удалить настройки репликации (если база данных или сервер иные, настройки репликации удаляются по умолчанию).  
   
- Возможно, ошибка возникла в результате несовпадения состояний восстановленной базы данных и одной или нескольких системных баз данных, содержащих метаданные репликации: **msdb**, **master**или базы данных распространителя.  
+ Возможно, ошибка возникла в результате несовпадения состояний восстановленной базы данных и одной или нескольких системных баз данных, содержащих метаданные репликации: **msdb**, **master** или базы данных распространителя.  
   
 ## <a name="user-action"></a>Действие пользователя  
  Для разрешения этой проблемы:  

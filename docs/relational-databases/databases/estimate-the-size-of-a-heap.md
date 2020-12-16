@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 31a157c04afc4890c8818a118c83f5a3c5458e84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002960"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474115"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Оценка размера кучи
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "86002960"
      Добавленные к значению **_Max_Var_Size_** байты необходимы для отслеживания каждого столбца переменной длины. Эта формула исходит из предположения, что все столбцы переменной длины заполнены на 100 %. Если предполагается, что будет использовано меньше места для хранения столбца изменяемой длины, можно изменить значение **_Max_Var_Size_** в процентах от общей изменяемой длины для более точного подсчета общего размера таблицы.  
   
     > [!NOTE]  
-    >  Можно сочетать столбцы **varchar**, **nvarchar**, **varbinary**или **sql_variant** , в результате чего общая ширина определенной таблицы превысит 8 060 байт. Длина каждого из этих столбцов должна быть в пределах 8000 байт для столбцов типа **varchar**, **nvarchar, varbinary** или **sql_variant**. Тем не менее их общая ширина в таблице может превышать предел в 8 060 байт.  
+    >  Можно сочетать столбцы **varchar**, **nvarchar**, **varbinary** или **sql_variant** , в результате чего общая ширина определенной таблицы превысит 8 060 байт. Длина каждого из этих столбцов должна быть в пределах 8000 байт для столбцов типа **varchar**, **nvarchar, varbinary** или **sql_variant**. Тем не менее их общая ширина в таблице может превышать предел в 8 060 байт.  
   
      Если в таблице нет столбцов переменной ширины, присвойте параметру **_Variable_Data_Size_** значение 0.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "86002960"
   
 -   Значения LOB  
   
-     Алгоритм точного определения места, используемого для хранения значений данных типа LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml**и **image** сложен. Достаточно просто прибавить ожидаемую среднюю величину значений LOB к общему размеру кучи.  
+     Алгоритм точного определения места, используемого для хранения значений данных типа LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml** и **image** сложен. Достаточно просто прибавить ожидаемую среднюю величину значений LOB к общему размеру кучи.  
   
 -   Сжатие  
   

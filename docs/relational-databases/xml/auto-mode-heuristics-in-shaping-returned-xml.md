@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 99a1858ce4784c9a320258689827110e0df3dd8e
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: b4683364ed4f2a27d5b9f25f3e368dfd40ef56aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529390"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474545"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Эвристические методы режима AUTO, используемые при формировании возвращаемого XML-кода
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Режим AUTO определяет основанную на запросе структуру возвращаемого XML. При определении схемы вложения элементов применяемые в режиме AUTO эвристические процедуры сравнивают значения столбцов в соседних строках. Сравниваются столбцы всех типов, за исключением **ntext**, **text**, **image**и **xml**. Проводится также сравнение столбцов **(n)varchar(max)** и **varbinary(max)** .  
+Режим AUTO определяет основанную на запросе структуру возвращаемого XML. При определении схемы вложения элементов применяемые в режиме AUTO эвристические процедуры сравнивают значения столбцов в соседних строках. Сравниваются столбцы всех типов, за исключением **ntext**, **text**, **image** и **xml**. Проводится также сравнение столбцов **(n)varchar(max)** и **varbinary(max)** .  
   
  В следующем примере иллюстрируются эвристики режима AUTO, определяющие структуру результирующего XML:  
   

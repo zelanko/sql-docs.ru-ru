@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 703b8dc32bf2dfb1c67191466cd56c5333c94222
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 50892f2cdefcbab8fe29aea732cc839c128dc11a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88380260"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475855"
 ---
 # <a name="mssql_eng002601"></a>MSSQL_ENG002601
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "88380260"
   
 -   Ошибка возникает во время вставки в системную таблицу **MSmerge_contents**.  
   
-     Эта ошибка может возникнуть вследствие неверного значения свойства **join_unique_key**фильтра соединения. Это свойство должно быть установлено равным TRUE, только если соединенный столбец в родительской таблице является уникальным. Если это свойство установлено равным TRUE, но столбец не является уникальным, возникает эта ошибка. Дополнительные сведения об установке данного свойства см. в разделе [Определение и изменение фильтра соединения между статьями публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     Эта ошибка может возникнуть вследствие неверного значения свойства **join_unique_key** фильтра соединения. Это свойство должно быть установлено равным TRUE, только если соединенный столбец в родительской таблице является уникальным. Если это свойство установлено равным TRUE, но столбец не является уникальным, возникает эта ошибка. Дополнительные сведения об установке данного свойства см. в разделе [Определение и изменение фильтра соединения между статьями публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и событиям (репликация)](../../relational-databases/replication/errors-and-events-reference-replication.md)  

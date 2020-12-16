@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976bfdb47aae7037e3a7636299ff98e4a1424944
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 60a5fb875bf2ae69a4f87c543476b91844738276
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004281"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475585"
 ---
 # <a name="server-level-roles"></a>Роли уровня сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "92004281"
 |**public**|Каждое имя для входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] принадлежит к роли сервера **public**. Если для участника на уровне сервера не были предоставлены или запрещены конкретные разрешения на защищаемый объект, он наследует разрешения роли public на этот объект. Разрешения роли public следует назначать только тому объекту, который будет доступен всем пользователям. Нельзя изменить членство в роли public.<br /><br /> **Примечание**. Роль **public** реализуется не так, как другие роли. В разрешениях может быть отказано, они могут предоставляться либо отменяться для предопределенных ролей public.|  
   
 > [!IMPORTANT] 
-> Большинство разрешений, предоставляемых следующими ролями сервера, не применимы к Synapse SQL — **processadmin**, **serveradmin**, **setupadmin**и **diskadmin**.
+> Большинство разрешений, предоставляемых следующими ролями сервера, не применимы к Synapse SQL — **processadmin**, **serveradmin**, **setupadmin** и **diskadmin**.
   
 ## <a name="permissions-of-fixed-server-roles"></a>Разрешения Предопределенных Ролей Сервера  
  Каждая предопределенная роль сервера обладает определенными разрешениями, назначенными ей. На следующем рисунке показаны разрешения, назначенные ролям сервера.   

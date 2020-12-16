@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332619"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475305"
 ---
 # <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "87332619"
   
 -   Установка, очистка и контроль автоматического выполнения  
   
-     Помечать процедуру для автоматического выполнения может только системный администратор (**sa**). Кроме того, процедура должна находиться в базе данных **master** , принадлежать пользователю **sa**и не иметь входных или выходных параметров.  
+     Помечать процедуру для автоматического выполнения может только системный администратор (**sa**). Кроме того, процедура должна находиться в базе данных **master** , принадлежать пользователю **sa** и не иметь входных или выходных параметров.  
   
      Используйте процедуру [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) чтобы:  
   
@@ -132,9 +132,9 @@ ms.locfileid: "87332619"
   
 #### <a name="to-execute-a-stored-procedure"></a>Выполнение хранимой процедуры  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], разверните его, а затем разверните узел **Базы данных**.  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], разверните его, а затем разверните узел **Базы данных**.  
   
-2.  Разверните нужную базу данных, разверните узлы **Программирование**и **Хранимые процедуры**.  
+2.  Разверните нужную базу данных, разверните узлы **Программирование** и **Хранимые процедуры**.  
   
 3.  Щелкните правой кнопкой мыши определяемую пользователем хранимую процедуру и выберите команду **Выполнить хранимую процедуру**.  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 10b0edeac4c84d11eb1bafe43ef884b76734f784
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 123936b94066af78dce6cd9c2f8a4cdeec7f2fbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470217"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475705"
 ---
 # <a name="mssql_repl027183"></a>MSSQL_REPL027183
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88470217"
   
 -   Для фильтрации используется фрагментация индекса столбцов.  
   
--   Большие объединенные таблицы метаданных, например **MSmerge_tombstone**, **MSmerge_contents**и **MSmerge_genhistory**.  
+-   Большие объединенные таблицы метаданных, например **MSmerge_tombstone**, **MSmerge_contents** и **MSmerge_genhistory**.  
   
 -   Фильтруемые таблицы, не соединенные уникальным ключом, и фильтры соединения, использующие большое количество таблиц.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88470217"
   
 -   Укажите наименьшее возможное значение срока хранения данной публикации, потому что репликация не может выполнять очистку метаданных в базах данных публикации и подписок, пока не истечет срок хранения. Дополнительные сведения см. в разделе [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
--   Обслуживая репликацию слиянием, иногда проверяйте увеличение размера системных таблиц, связанных с репликацией слиянием: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**и **MSmerge_past_partition_mappings**. Время от времени проводите повторную индексацию этих таблиц. Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+-   Обслуживая репликацию слиянием, иногда проверяйте увеличение размера системных таблиц, связанных с репликацией слиянием: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings** и **MSmerge_past_partition_mappings**. Время от времени проводите повторную индексацию этих таблиц. Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Убедитесь в том, что столбцы, используемые для фильтрации, надлежащим образом проиндексированы, и при необходимости перестройте такие индексы заново. Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   

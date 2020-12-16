@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ca3b994cb831e78807b8aeb44c5fe6f8fc454f41
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 18a1e26d8e89f5e9913c3d1d645e98d7c7c988af
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001201"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473945"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или значений по умолчанию при массовом импорте данных (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -197,7 +197,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
 
 ### <a name="using-bulk-insert-and-keeping-null-values-without-a-format-file"></a>**Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и сохранение значений NULL без файла форматирования**<a name="bulk_null"></a>
-Аргумент**KEEPNULLS** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Аргумент **KEEPNULLS** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
 USE TestDatabase;
@@ -254,7 +254,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
 ### <a name="using-bulk-insert-and-using-default-values-with-a-non-xml-format-file"></a>**Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
-Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Аргумент **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
 USE TestDatabase;
@@ -272,7 +272,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
 ### <a name="using-openrowsetbulk-and-keeping-null-values-with-a-non-xml-format-file"></a>**Использование инструкции [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и сохранение значений NULL с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
-Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Аргумент **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
 USE TestDatabase;
@@ -291,7 +291,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
 ### <a name="using-openrowsetbulk-and-using-default-values-with-a-non-xml-format-file"></a>**Использование инструкции [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
-Табличное указание**KEEPDEFAULTS** и аргумент **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Табличное указание **KEEPDEFAULTS** и аргумент **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
 USE TestDatabase;

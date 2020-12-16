@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f878144b8b7ff86636ff778ec586a0382ca801cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009920"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474065"
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "86009920"
 > [!NOTE]  
 >  Версия служебной программы **bcp** (Bcp.exe), которая используется для чтения файла форматирования, должна соответствовать версии, используемой при создании этого файла форматирования, или более поздней версии. Например, служебная программа [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**, но служебная программа [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** не может считать файл форматирования версии 11.0, созданный служебной программой [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**.  
   
- В этом разделе описано применение программы [bcp](../../tools/bcp-utility.md) для создания файла форматирования для таблицы. Файл форматирования основан на заданных параметрах типов данных ( **-n**, **-c**, **-w**или **-N**) и разделителях таблиц или представлений.  
+ В этом разделе описано применение программы [bcp](../../tools/bcp-utility.md) для создания файла форматирования для таблицы. Файл форматирования основан на заданных параметрах типов данных ( **-n**, **-c**, **-w** или **-N**) и разделителях таблиц или представлений.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Создание файла форматирования в формате, отличном от XML  
  Чтобы создать файл форматирования с помощью служебной программы **bcp** , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** . Параметр **format** также требует наличия параметра **-f** , например:  
@@ -267,7 +267,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
  Сведения о синтаксисе файлов такого формата см. в статье [Файлы формата XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md). Дополнительные сведения об использовании собственных данных см. в статье [Использование собственного формата для импорта и экспорта данных (SQL Server)](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>Сопоставление полей данных со столбцами таблицы  
- Созданный при помощи служебной программы **bcp**файл форматирования надлежащим образом отображает все столбцы таблицы. Его можно изменить, переставив или исключив некоторые из строк. Это позволяет согласовать файл форматирования с файлом данных, если поля в нем не сопоставлены непосредственно со столбцами таблицы. Дополнительные сведения см. в следующих разделах:  
+ Созданный при помощи служебной программы **bcp** файл форматирования надлежащим образом отображает все столбцы таблицы. Его можно изменить, переставив или исключив некоторые из строк. Это позволяет согласовать файл форматирования с файлом данных, если поля в нем не сопоставлены непосредственно со столбцами таблицы. Дополнительные сведения см. в следующих разделах:  
   
 -   [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

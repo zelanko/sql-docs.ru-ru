@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810467"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474575"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>темпоральные таблицы с системным управлением версиями и таблицы с оптимизацией памяти
 
@@ -49,7 +49,7 @@ ms.locfileid: "91810467"
 - Вы можете принудительно выполнить сброс данных, вызвав [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).
 - Если **SYSTEM_VERSIONING = OFF** или схема таблицы с системным управлением версиями изменяется (столбцы добавляются, удаляются или изменяются), все содержимое промежуточного внутреннего буфера перемещается в таблицу журнала на диске.
 - Запрос данных журнала выполняется на уровне изоляции моментального снимка и всегда возвращает объединение промежуточного буфера в памяти и дисковой таблицы без дубликатов.
-- Операции**ALTER TABLE** , которые изменяют схему таблицы внутренне, должны выполнить сброс данных, что может увеличить время выполнения операции.
+- Операции **ALTER TABLE** , которые изменяют схему таблицы внутренне, должны выполнить сброс данных, что может увеличить время выполнения операции.
 
 ## <a name="the-internal-memory-optimized-staging-table"></a>Внутренняя промежуточная таблица, оптимизированная для памяти
 

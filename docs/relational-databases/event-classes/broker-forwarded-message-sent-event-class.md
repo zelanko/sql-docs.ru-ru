@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5558faa578a76f32e2bd0fdfc2e7906603a0116
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bb738df03a1e4ea5e9472a6bf0ff2646756d500d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330870"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476235"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent, класс событий
 
@@ -33,7 +33,7 @@ ms.locfileid: "88330870"
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BigintData1|**bigint**|Порядковый номер сообщения.|52|Нет|  
 |ClientProcessID|**int**|Идентификатор, присвоенный компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
-|DatabaseID|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database*не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных «Имя сервера» захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
+|DatabaseID|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных «Имя сервера» захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |DBUserName|**nvarchar**|Идентификатор экземпляра посредника для службы, отправившей сообщение.|40|Нет|  
 |EventClass|**int**|Тип захваченного класса событий. Для класса событий Broker:Forwarded Message Sent всегда равен 139.|27|Нет|  
 |EventSequence|**int**|Порядковый номер этого события.|51|Нет|  
@@ -53,7 +53,7 @@ ms.locfileid: "88330870"
 |ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , подвергаемого трассировке.|26|Нет|  
 |SPID|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |StartTime|**datetime**|Время начала события, если доступно.|14|Да|  
-|Успешно|**int**|Количество времени, затраченного на процесс перенаправления.|23|Нет|  
+|Success|**int**|Количество времени, затраченного на процесс перенаправления.|23|Нет|  
 |TargetLoginName|**nvarchar**|Сетевой адрес, по которому экземпляр отправляет сообщение. Обратите внимание, что он может отличаться от конечного места назначения сообщения.|42|Нет|  
 |TargetUserName|**nvarchar**|Имя вызывающей службы для сообщения.|39|нет|  
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|нет|  

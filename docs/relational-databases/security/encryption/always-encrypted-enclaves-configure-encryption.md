@@ -10,13 +10,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bb922b1dc85706e0630dd3d67dcb33459c490124
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: de9860fdf161d9ed43a1ae2c63e1210dd2079e42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91863701"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477715"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "91863701"
 
 Шифрование на месте позволяет также активировать операции шифрования с помощью инструкции [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md), что невозможно без анклава.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные условия
 Ниже приведены поддерживаемые криптографические операции и требования для ключей шифрования столбцов, используемых для этих операций.
 - Шифрование столбца с открытым текстом. Ключ шифрования столбца, используемый для шифрования столбца, должен поддерживать анклав.
 - Повторное шифрование зашифрованного столбца с помощью нового типа шифрования или (и) нового ключа шифрования столбца. Ключ шифрования текущего столбца и новый ключ шифрования столбца (если он отличается от текущего) оба должны поддерживать анклав.
@@ -45,7 +45,7 @@ ms.locfileid: "91863701"
 > [!NOTE]
 > В настоящее время мастер [Always Encrypted](always-encrypted-wizard.md) и командлет [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) не поддерживают шифрование на месте и всегда загружают данные для криптографических операций, даже если ваша конфигурация соответствует приведенным выше требованиям. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Дальнейшие действия
 - [Настройка шифрования столбцов на месте с помощью Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [Создание и использование индексов в столбце с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-create-use-indexes.md)
 - [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md)
