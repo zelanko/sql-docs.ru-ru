@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8e5da6272ce3bb60852e10f3bac9cd3fa9a1435f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9597b6c0811ff2fe917a2282b43e677b74eebd4f
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426866"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490074"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "88426866"
  Определяет столбец, связанный с определением DEFAULT уровня таблицы.  
   
  WITH VALUES  
- При добавлении столбца AND ограничение DEFAULT, если столбец допускает значения NULL с использованием WITH VALUES, задает для существующих строк значение нового столбца в качестве значения, указанного в DEFAULT *constant_expression*. Если добавляемый столбец не допускает значения NULL, для существующих строк значение столбца всегда будет присваиваться в качестве значения, предоставляемого в DEFAULT *constant expression*. Начиная с SQL Server 2012, может использоваться операция с метаданными [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ При добавлении столбца AND ограничение DEFAULT, если столбец допускает значения NULL с использованием WITH VALUES, задает для существующих строк значение нового столбца в качестве значения, указанного в DEFAULT *constant_expression*. Если добавляемый столбец не допускает значения NULL, для существующих строк значение столбца всегда будет присваиваться в качестве значения, предоставляемого в DEFAULT *constant expression*. Начиная с SQL Server 2012, может использоваться операция с метаданными [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
 При использовании в ситуации, когда связанный столбец не добавляется, никакого эффекта не будет. 
   
  CHECK  

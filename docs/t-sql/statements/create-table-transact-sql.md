@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 9fb4195047df5e996cbef4a3fbceb1367172df6b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521174"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490084"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 
@@ -420,7 +420,7 @@ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **П
 - Инструкция [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) преобразует кучу в кластеризованный индекс. В этом случае можно указать другую файловую группу FILESTREAM, схему секционирования или значение NULL.
 - Инструкция [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) преобразует кластеризованный индекс в кучу. В этом случае можно указать другую файловую группу FILESTREAM, схему секционирования или значение **"default"** .
 
-Для файловой группы в предложении `FILESTREAM_ON <filegroup>` либо для каждой файловой группы FILESTREAM, упомянутой в схеме секционирования, должен быть определен файл. Этот файл должен быть определен с помощью инструкции[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.
+Для файловой группы в предложении `FILESTREAM_ON <filegroup>` либо для каждой файловой группы FILESTREAM, упомянутой в схеме секционирования, должен быть определен файл. Этот файл должен быть определен с помощью инструкции[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.
 
 Дополнительные сведения о FILESTREAM см. в [этой статье](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
 
