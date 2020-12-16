@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c4b159f41f998155d4013413e69346ab0c4a239
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6a81d2b397418a934e51a7e9e0f8491d10e0cdba
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89517020"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462595"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Вопросы производительности оптимизированных для памяти темпоральных таблиц с системным управлением версиями
 
@@ -36,7 +36,7 @@ ms.locfileid: "89517020"
 - Период активации для задачи записи данных на диск не настраивается, но можно принудительно выполнить этот процесс посредством вызова [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).
 - Рассмотрите возможность использования кластеризованного columnstore для хранения таблицы журнала на диске, особенно если планируется выполнять аналитические запросы к данным журнала, использующие агрегатные или ранжирующие функций. В этом случае кластеризованный индекс columnstore будет оптимальным решением для таблицы журнала, так как он обеспечивает качественное сжатие данных и приспособлен для операций вставки, что хорошо согласуется с методом формирования данных журнала.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [Создание оптимизированной для памяти темпоральной таблицы с системным управлением версиями](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)

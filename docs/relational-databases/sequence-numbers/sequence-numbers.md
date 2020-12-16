@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e1196ec8ea240f2e8a9210657a60f967e4b7c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d29cae171cad8f0da3c53a708112167a0a17f749
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490467"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463065"
 ---
 # <a name="sequence-numbers"></a>Порядковые номера
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -86,7 +86,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="examples"></a>Примеры  
  Дополнительные примеры см. в статьях [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md), [NEXT VALUE FOR (Transact-SQL)](../../t-sql/functions/next-value-for-transact-sql.md) и [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md).  
   
-### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. Использование порядкового номера в одной таблице  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>А) Использование порядкового номера в одной таблице  
  В следующем примере создается схема с именем Test, таблица с именем Orders и последовательность с именем CountBy1, а затем строки вставляются в таблицу с помощью функции NEXT VALUE FOR.  
   
 ```  
@@ -131,7 +131,7 @@ GO
   
  `3        Brake   1`  
   
-### <a name="b-calling-next-value-for-before-inserting-a-row"></a>Б. Вызов NEXT VALUE FOR до вставки строки  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>Б) Вызов NEXT VALUE FOR до вставки строки  
  В следующем примере с помощью таблицы `Orders` , созданной в примере А, объявляется переменная с именем `@nextID`, а затем с помощью функции NEXT VALUE FOR этой переменной присваивается следующий доступный порядковый номер. Предполагается, что в приложении выполняется некоторая обработка заказа, например заказчику сообщается номер `OrderID` потенциального заказа, а затем проводится проверка заказа. Независимо от времени, затрачиваемого на такую обработку, и от числа других заказов, добавляемых во время обработки, исходный номер сохраняется для использования в этом соединении. Наконец, инструкция `INSERT` добавляет заказ в таблицу `Orders` .  
   
 ```  

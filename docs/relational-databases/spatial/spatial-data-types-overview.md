@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006216"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462965"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
 
@@ -151,7 +151,7 @@ LS Length    CS Length
 5.65685...   6.28318...
 ```
 
-Экземпляры **CircularString** используют меньшее число точек для хранения границ кривой и обеспечивают большую точность, чем экземпляры **LineString**. Экземпляры **CircularString** удобны для хранения круговых границ, например область поиска радиусом в 20 миль от указанной точки. Объекты**LineString** хорошо подходят для хранения линейных границ, например городского квартала.  
+Экземпляры **CircularString** используют меньшее число точек для хранения границ кривой и обеспечивают большую точность, чем экземпляры **LineString**. Экземпляры **CircularString** удобны для хранения круговых границ, например область поиска радиусом в 20 миль от указанной точки. Объекты **LineString** хорошо подходят для хранения линейных границ, например городского квартала.  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Сравнение типов LineString и CompoundCurve
 
@@ -187,7 +187,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
-Экземпляры**CompoundCurve** позволяют использовать компоненты **LineString** и **CircularString** , поэтому необходимо знать только две точки сегментов линии среза круговой диаграммы.  В этом примере кода показано, как использовать тип **CompoundCurve** для хранения той же фигуры:
+Экземпляры **CompoundCurve** позволяют использовать компоненты **LineString** и **CircularString** , поэтому необходимо знать только две точки сегментов линии среза круговой диаграммы.  В этом примере кода показано, как использовать тип **CompoundCurve** для хранения той же фигуры:
 
 ```sql
 DECLARE @g geometry;
@@ -197,7 +197,7 @@ SELECT @g.ToString(), @g.STLength();
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Сравнение типов Polygon и CurvePolygon
 
-Экземпляры**CurvePolygon** могут использовать экземпляры **CircularString** и **CompoundCurve** instances when defining their exterior и interior rings. Экземпляры **многоугольников** этого делать не могут.
+Экземпляры **CurvePolygon** могут использовать экземпляры **CircularString** и **CompoundCurve** instances when defining their exterior и interior rings. Экземпляры **многоугольников** этого делать не могут.
 
 ## <a name="see-also"></a>См. также раздел
 

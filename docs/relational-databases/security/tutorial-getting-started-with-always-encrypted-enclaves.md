@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 99b04548244da3bda45346e7aa4a7c4d72481789
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868160"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463095"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство по Always Encrypted с безопасными анклавами в SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -285,7 +285,7 @@ ms.locfileid: "91868160"
     1. Создайте новый экземпляр SSMS.
     1. В диалоговом окне **Соединение с сервером** укажите имя сервера, выберите метод аутентификации и введите учетные данные.
     1. Нажмите кнопку **Параметры >>** и выберите вкладку **Always Encrypted**.
-    1. Установите флажок **Включить Always Encrypted (шифрование столбцов)** и укажите URL-адрес аттестации анклава (например, ht<span>tp://</span>hgs.bastion.local/Attestation).
+    1. Установите флажок **Включить Always Encrypted (шифрование столбцов)** и укажите URL-адрес аттестации анклава (например, ht <span>tp://</span>hgs.bastion.local/Attestation).
     1. Выберите **Подключиться**.
     1. Если отобразится запрос на включение параметризации для запросов Always Encrypted, нажмите кнопку **Включить**.
 

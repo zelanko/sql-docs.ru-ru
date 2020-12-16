@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e56eb0ffcc4996ddd6903f2e79c14947b9a450
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a5225cdec356cbefc3df6abae58ae4cd512445b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485413"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461515"
 ---
 # <a name="manage-trigger-security"></a>Управление безопасностью триггеров
 
@@ -50,7 +50,7 @@ GO
 ## <a name="trigger-security-best-practices"></a>Способы защиты триггеров  
  Чтобы предотвратить выполнение кода триггера с повышенными правами доступа, примите следующие меры.  
   
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 -   Проверьте базу данных и экземпляр сервера на наличие триггеров DDL и DDL. Для этого выполните соответствующие запросы к представлениям каталогов [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) и [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . Следующий запрос возвращает все триггеры DML и DDL уровня базы данных в текущей базе данных, а также все триггеры DDL уровня сервера на экземпляре сервера.  
   
@@ -65,7 +65,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 -   Проверьте базу данных на наличие триггеров DDL и DDL. Для этого выполните соответствующие запросы к представлению каталога [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). Следующий запрос возвращает все триггеры DML и триггеры DDL уровня базы данных в текущей базе данных:  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
-ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest'
+ms.openlocfilehash: 83205b4a11be46888f8c7da8f29c84494d012740
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96523053"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460857"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "96523053"
 
 ## <a name="syntax"></a>Синтаксис
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ```syntaxsql
 PREDICT  
@@ -60,7 +60,7 @@ MODEL = @model | model_literal
 
 ::: moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 ```syntaxsql
 PREDICT  
@@ -95,19 +95,19 @@ WITH ( <result_set_definition> )
 
 **MODEL**
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017"
 Параметр `MODEL` используется для указания модели, используемой для оценки и прогнозирования. Модель указывается как переменная или литерал или скалярное выражение.
 
 Функция `PREDICT` поддерживает модели, обученные с помощью пакетов [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) и [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md).
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Параметр `MODEL` используется для указания модели, используемой для оценки и прогнозирования. Модель указывается как переменная или литерал или скалярное выражение.
 
 В Управляемом экземпляре SQL Azure `PREDICT` поддерживает модели в формате [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) или модели, обученные с помощью пакетов [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) и [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md).
 ::: moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 Параметр `MODEL` используется для указания модели, используемой для оценки и прогнозирования. Модель указывается как переменная, литерал, скалярное выражение или скалярный вложенный запрос.
 
 В Azure Synapse Analytics `PREDICT` поддерживает модели в формате [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html).
@@ -139,7 +139,7 @@ WITH ( <result_set_definition> )
 
 Сообщения об ошибках, связанные с данными, моделью или форматом столбца, выводятся функцией прогнозирования, связанной с моделью.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017"
 ## <a name="remarks"></a>Remarks
 
 Функция `PREDICT` поддерживается во всех выпусках SQL Server 2017 и более поздних версий на Windows и Linux. Для использования функции `PREDICT` не требуется включать [Службы машинного обучения](../../machine-learning/sql-server-machine-learning-services.md).
@@ -147,13 +147,13 @@ WITH ( <result_set_definition> )
 
 ### <a name="supported-algorithms"></a>Поддерживаемые алгоритмы
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017"
 Используемая модель должна быть создана с помощью одного из поддерживаемых алгоритмов из пакета [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) или [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md). Список поддерживаемых в настоящее время моделей см. в разделе [Собственная оценка с помощью функции T-SQL PREDICT](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 Поддерживаются алгоритмы, которые можно преобразовать в формат модели [ONNX](https://onnx.ai/).
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Поддерживаются алгоритмы, которые можно преобразовать в формат модели [ONNX](https://onnx.ai/), и модели, созданные с помощью одного из поддерживаемых алгоритмов из пакета [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) или [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md). Список поддерживаемых в настоящее время алгоритмов в пакетах RevoScaleR и revoscalepy см. в разделе [Собственная оценка с помощью функции T-SQL PREDICT](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 ::: moniker-end
 
@@ -169,7 +169,7 @@ WITH ( <result_set_definition> )
 
 Этот пример ссылается на функцию `PREDICT` в предложении `FROM` инструкции `SELECT`:
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ```sql
 SELECT d.*, p.Score
@@ -179,7 +179,7 @@ FROM PREDICT(MODEL = @model,
 
 :::moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
@@ -198,7 +198,7 @@ FROM PREDICT(MODEL = @model,
 - Псевдоним **p**, указанный для функции `PREDICT`, используется для ссылки на прогнозируемый столбец, возвращаемый функцией `PREDICT`. Имя столбца должно совпадать с именем выходных данных для модели.
 - Все столбцы входных данных и прогнозируемые столбцы доступны для вывода в инструкции SELECT.
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 Предыдущий пример запроса можно переписать для создания представления, указав `MODEL` в качестве скалярного вложенного запроса:
 
@@ -216,7 +216,7 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 Прогнозирование часто используется для формирования оценки входных данных и последующей вставки прогнозируемых значений в таблицу. В следующем примере предполагается, что вызывающее приложение использует хранимую процедуру, чтобы вставить в таблицу строку, содержащую прогнозируемое значение:
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
@@ -228,7 +228,7 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 
 :::moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
@@ -249,6 +249,6 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score
 ## <a name="next-steps"></a>Дальнейшие действия
 
 - [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md) (Собственная оценка с использованием функции PREDICT T-SQL)
-::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current"
 -   [Дополнительные сведения о моделях ONNX](/azure/machine-learning/concept-onnx#get-onnx-models)
 ::: moniker-end

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a433fbfe50e2a673ab29595729f7c8b83f9444ae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4b57082f1ce4f76e191c0237e80f404199a9ac4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538223"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462645"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Изменение схемы темпоральной таблицы с системным управлением версиями
 
@@ -58,7 +58,7 @@ ALTER TABLE dbo.Department
 
 ### <a name="important-remarks"></a>Важные замечания
 
-- Чтобы изменить схему темпоральной таблицы, требуется разрешение**CONTROL** на текущую и прежнюю таблицы.
+- Чтобы изменить схему темпоральной таблицы, требуется разрешение **CONTROL** на текущую и прежнюю таблицы.
 - Во время выполнения операции **ALTER TABLE** схема обеих таблиц блокируется системой.
 - Указанные изменения схемы распространяются на прежнюю таблицу соответствующим образом (в зависимости от типа изменений).
 - Чтобы добавить столбец, который не допускает значений NULL, или изменить существующий столбец, который допускает значения NULL, необходимо указать значение по умолчанию для существующих строк. Система создаст дополнительное значение по умолчанию с таким же значением и применит его к прежним таблицам. Добавление **DEFAULT** в непустую таблицу — это операция, связанная с размером данных. Она предоставляется во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , кроме Enterprise Edition (в этом выпуске это операция с метаданными).

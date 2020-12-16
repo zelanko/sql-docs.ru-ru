@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9f3b61dd27e8519ca85038711e838c1265bdb70
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9c3bc8fa926b1c2d91d43dddca6a14f51873f5e2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193344"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462335"
 ---
 # <a name="lt-less-than-transact-sql"></a>&lt; (меньше) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +80,7 @@ DepartmentID Name
   
 ```  
   
-### <a name="b-using--to-compare-two-variables"></a>Б. Использование < для сравнения двух переменных  
+### <a name="b-using--to-compare-two-variables"></a>Б) Использование < для сравнения двух переменных  
   
 ```sql  
 DECLARE @a INT = 45, @b INT = 40;  
@@ -98,7 +98,7 @@ FALSE
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IIF (Transact-SQL)](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  

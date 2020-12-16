@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4f6dc92d2d77f453f6838ebe990ed5426c665689
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723217"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460477"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Устранение неполадок хэш-индексов для оптимизированных для памяти таблиц
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -174,7 +174,7 @@ go
 - Вставляет уникальные значения в индекс первичного ключа и в *ix_OrderSequence*.  
 - Вставляет несколько сотен тысяч строк, представляющих всего 8 различных значений `StatusCode`. Следовательно, существует высокая доля дублирования значений в индексе *ix_StatusCode*.  
   
-Если число контейнеров не является оптимальным, изучите следующие выходные данные инструкции SELECT из **sys.dm_db_xtp_hash_index_stats**для решения проблемы. Для этих результатов мы добавили `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` в операцию SELECT, скопированную из раздела Г.1.  
+Если число контейнеров не является оптимальным, изучите следующие выходные данные инструкции SELECT из **sys.dm_db_xtp_hash_index_stats** для решения проблемы. Для этих результатов мы добавили `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` в операцию SELECT, скопированную из раздела Г.1.  
   
 Результаты операции `SELECT` отображаются после кода и искусственно разбиваются на две таблицы более узких результатов для более удобного отображения.  
   

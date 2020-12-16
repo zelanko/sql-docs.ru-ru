@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7fbaf22758dcf62d2159e63ee3af3c0507f3f607
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907392"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460577"
 ---
 # <a name="set-or-change-the-database-collation"></a>Установка и изменение параметров сортировки базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,23 +48,21 @@ ms.locfileid: "92907392"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
--   Параметры сортировки Windows только для Юникода могут использоваться лишь с предложением COLLATE для применения параметров сортировки к данным типов **nchar** , **nvarchar** и **ntext** на уровне столбца и на уровне выражения. Их нельзя использовать с предложением COLLATE для изменения параметров сортировки базы данных или экземпляра сервера.  
+-   Параметры сортировки Windows только для Юникода могут использоваться лишь с предложением COLLATE для применения параметров сортировки к данным типов **nchar**, **nvarchar** и **ntext** на уровне столбца и на уровне выражения. Их нельзя использовать с предложением COLLATE для изменения параметров сортировки базы данных или экземпляра сервера.  
   
 -   Если указанные или используемые объектом по ссылке параметры сортировки используют кодовую страницу, не поддерживаемую Windows, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выдаст ошибку.  
 
--   После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить, используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Их можно изменить только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
-  
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 Имена поддерживаемых параметров сортировки вы можете найти в статьях [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) и [Имя параметров сортировки SQL Server (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)или воспользоваться системной функцией [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
 Если изменяются параметры сортировки базы данных, то изменяется следующее:  
   
--   Все столбцы типа **char** , **varchar** , **text** , **nchar** , **nvarchar** или **ntext** в системных таблицах заменяются новым параметром сортировки.  
+-   Все столбцы типа **char**, **varchar**, **text**, **nchar**, **nvarchar** или **ntext** в системных таблицах заменяются новым параметром сортировки.  
   
--   Все существующие параметры типа **char** , **varchar** , **text** , **nchar** , **nvarchar** или **ntext** и возвращаемые скалярные значения для хранимых процедур и определяемых пользователем функций заменяются новым параметром сортировки.  
+-   Все существующие параметры типа **char**, **varchar**, **text**, **nchar**, **nvarchar** или **ntext** и возвращаемые скалярные значения для хранимых процедур и определяемых пользователем функций заменяются новым параметром сортировки.  
   
--   Системные типы данных **char** , **varchar** , **text** , **nchar** , **nvarchar** или **ntext** и все определяемые пользователем типы данных, основанные на этих системных типах данных, заменяются новым параметром сортировки по умолчанию.  
+-   Системные типы данных **char**, **varchar**, **text**, **nchar**, **nvarchar** или **ntext** и все определяемые пользователем типы данных, основанные на этих системных типах данных, заменяются новым параметром сортировки по умолчанию.  
   
 Вы можете изменить параметры сортировки любых новых объектов, созданных в пользовательской базе данных, с помощью предложения `COLLATE` инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Эта инструкция **не изменяет** параметры сортировки столбцов в любых существующих пользовательских таблицах. Они могут быть изменены с помощью предложения `COLLATE` инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
 
@@ -97,7 +95,7 @@ ms.locfileid: "92907392"
 ###  <a name="security"></a><a name="Security"></a> безопасность  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
- Чтобы создать базу данных, требуется разрешение `CREATE DATABASE` в базе данных **master** , разрешение `CREATE ANY DATABASE` либо `ALTER ANY DATABASE`.  
+ Чтобы создать базу данных, требуется разрешение `CREATE DATABASE` в базе данных **master**, разрешение `CREATE ANY DATABASE` либо `ALTER ANY DATABASE`.  
   
  Чтобы изменить параметры сортировки имеющейся базы данных, требуется разрешение `ALTER` в базе данных.  
   

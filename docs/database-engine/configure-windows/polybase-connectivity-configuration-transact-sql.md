@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b3daf000381fbfaa5481ae18f348bd987689e46b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 71c71e4809b573dae9507b52bc3d32e5b6f5142e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84938987"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460747"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Конфигурация подключения к PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -47,10 +47,10 @@ RECONFIGURE
   
 ## <a name="arguments"></a>Аргументы  
  [ **@configname=** ] **'** _option\_name_ **'**  
- Имя параметра конфигурации. Аргумент*option_name* имеет тип **varchar(35)** , значение по умолчанию — NULL. Если этот параметр отсутствует, возвращается список всех параметров.  
+ Имя параметра конфигурации. Аргумент *option_name* имеет тип **varchar(35)** , значение по умолчанию — NULL. Если этот параметр отсутствует, возвращается список всех параметров.  
   
  [ **@configvalue=** ] **"** _значение_ **"**  
- Новое значение параметра конфигурации. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Максимальное значение зависит от конкретного параметра.  
+ Новое значение параметра конфигурации. Аргумент *value* имеет тип **int** и значение по умолчанию NULL. Максимальное значение зависит от конкретного параметра.  
   
  **'hadoop connectivity'**  
  Указывает тип источника данных Hadoop для всех подключений из PolyBase к кластерам Hadoop или хранилищу BLOB-объектов Azure (WASB). Этот параметр необходим для создания внешнего источника данных для внешней таблицы. Дополнительные сведения см. в разделе [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md),  
