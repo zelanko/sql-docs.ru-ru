@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfa866c6c03234a28fbccb14a2c45cea2571090
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 81929c8da672e9294d276b5b562e55886a1c3515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918502"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469005"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений схем в базы данных публикации
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "86918502"
   
 -   Уровень изоляции «read uncommitted» не является поддерживаемым уровнем изоляции при выполнении DDL в опубликованной таблице.  
   
--   Аргумент**SET CONTEXT_INFO** не следует использовать для изменения контекста транзакций, изменения схемы выполняются для опубликованных объектов.  
+-   Аргумент **SET CONTEXT_INFO** не следует использовать для изменения контекста транзакций, изменения схемы выполняются для опубликованных объектов.  
   
 #### <a name="adding-columns"></a>Добавление столбцов  
   
@@ -151,7 +151,7 @@ ms.locfileid: "86918502"
         |**hierarchyid**|Разрешить изменения|Блокировать изменения|Блокировать изменения|  
         |**geography** и **geometry**|Разрешить изменения|Разрешить изменения*|Блокировать изменения|  
         |**файловый поток**|Разрешить изменения|Блокировать изменения|Блокировать изменения|  
-        |**date**, **time**, **datetime2**и **datetimeoffset**|Разрешить изменения|Разрешить изменения*|Блокировать изменения|  
+        |**date**, **time**, **datetime2** и **datetimeoffset**|Разрешить изменения|Разрешить изменения*|Блокировать изменения|  
   
          \* Подписчики SQL Server Compact преобразуют эти типы данных на подписчике.  
   
