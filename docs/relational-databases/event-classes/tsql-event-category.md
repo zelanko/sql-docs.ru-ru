@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3e5584fbb893543a0f0c1652a215d3bd4f363d1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c8c162dcc6321c158363edc2dd35a34a9e8430d4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867264"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483446"
 ---
 # <a name="tsql-event-category"></a>Категория событий TSQL
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,6 +40,6 @@ ms.locfileid: "91867264"
 |[Класс событий Unprepare SQL](../../relational-databases/event-classes/unprepare-sql-event-class.md)|Указывает, что SqlClient, ODBC, OLE DB или DB-Library удалили подготовленные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |[Класс событий XQuery Static Type](../../relational-databases/event-classes/xquery-static-type-event-class.md)|Возникает, если сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет выражение XQuery.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по Transact-SQL &#40;ядро СУБД&#41;](../../t-sql/language-reference.md)  
   

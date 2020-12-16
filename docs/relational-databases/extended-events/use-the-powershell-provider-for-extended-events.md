@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b89a8841bd679b9100e43b0b8d7d79dc6bb8165
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 034142392069443993c5d987b8aed80231c229fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868582"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481335"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Использование поставщика PowerShell для расширенных событий
 
@@ -28,9 +28,9 @@ ms.locfileid: "91868582"
 
   Управлять расширенными событиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с помощью поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Вложенная папка XEvent находится на диске SQLSERVER. Получить доступ к папке можно одним из следующих способов.  
   
--   В командной строке введите команду **sqlps**и нажмите клавишу ВВОД. Введите **cd xevent**и нажмите клавишу ВВОД. Из этого расположения с помощью команд **cd** и **dir** (или командлетов **Set-Location** и **Get-Childitem** ) можно перейти к нужному серверу и экземпляру по его имени.  
+-   В командной строке введите команду **sqlps** и нажмите клавишу ВВОД. Введите **cd xevent** и нажмите клавишу ВВОД. Из этого расположения с помощью команд **cd** и **dir** (или командлетов **Set-Location** и **Get-Childitem** ) можно перейти к нужному серверу и экземпляру по его имени.  
   
--   В обозревателе объектов разверните узел имени экземпляра, разверните узел **Управление**, щелкните правой кнопкой мыши **Расширенные события**и выберите команду **Запустить PowerShell**. Оболочка PowerShell будет запущена в следующем пути:  
+-   В обозревателе объектов разверните узел имени экземпляра, разверните узел **Управление**, щелкните правой кнопкой мыши **Расширенные события** и выберите команду **Запустить PowerShell**. Оболочка PowerShell будет запущена в следующем пути:  
   
      PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91868582"
   
 -   Скрипты должны сохраняться с расширением PS1.  
   
--   Политика выполнения PowerShell должна разрешать выполнения скриптов. Чтобы задать политику выполнения, воспользуйтесь командлетом **Set-Executionpolicy** . (Для получения дополнительных сведений введите **get-help set-executionpolicy -detailed**и нажмите клавишу ВВОД.)  
+-   Политика выполнения PowerShell должна разрешать выполнения скриптов. Чтобы задать политику выполнения, воспользуйтесь командлетом **Set-Executionpolicy** . (Для получения дополнительных сведений введите **get-help set-executionpolicy -detailed** и нажмите клавишу ВВОД.)  
   
  Следующий скрипт создает новый сеанс с именем «TestSession».  
   

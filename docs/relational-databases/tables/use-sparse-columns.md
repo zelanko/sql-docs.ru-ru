@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b422f4c34831c570b3ed6d9d54bcdb90d1d86754
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645941"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482340"
 ---
 # <a name="use-sparse-columns"></a>Использование разреженных столбцов
 
@@ -125,7 +125,7 @@ ms.locfileid: "88645941"
 ## <a name="restrictions-for-using-sparse-columns"></a>Ограничения на использование разреженных столбцов  
  Разреженные столбцы могут иметь любой тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Они работают так же, как и другие столбцы, но со следующими ограничениями.  
   
--   Разреженный столбец должен допускать значения NULL и не может иметь свойств ROWGUIDCOL или IDENTITY. Разреженный столбец не может иметь следующие типы данных: **text**, **ntext**, **image**, **timestamp**, определяемый пользователем тип данных, **geometry**или **geography**; также он не может иметь атрибут FILESTREAM.  
+-   Разреженный столбец должен допускать значения NULL и не может иметь свойств ROWGUIDCOL или IDENTITY. Разреженный столбец не может иметь следующие типы данных: **text**, **ntext**, **image**, **timestamp**, определяемый пользователем тип данных, **geometry** или **geography**; также он не может иметь атрибут FILESTREAM.  
   
 -   Разреженный столбец не может иметь значения по умолчанию.  
   

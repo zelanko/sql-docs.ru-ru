@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 116d2f34bef990cca174117238981bb7e87917b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868778"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481345"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Целевые объекты для расширенных событий в SQL Server
 
@@ -146,12 +146,12 @@ CREATE EVENT SESSION [event_counter_1]
 
 
 - Укажите параметр *filename =* в предложении ADD TARGET.
-    - Файл должен иметь расширение**XEL** .
+    - Файл должен иметь расширение **XEL** .
 
 
 - Выбранное вами имя файла используется системой в качестве префикса, к которому добавляется длинное целое число на основе даты и времени, за которым следует расширение XEL.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
 > База данных SQL Azure поддерживает хранение файлов `xel` только в хранилище BLOB-объектов Azure. 
@@ -232,7 +232,7 @@ SELECT f.*
 ```
 
 
-Для SQL Server **2014**данные выводит инструкция SELECT, аналогичная приведенной ниже. После SQL Server 2014 XEM-файлы больше не используются.
+Для SQL Server **2014** данные выводит инструкция SELECT, аналогичная приведенной ниже. После SQL Server 2014 XEM-файлы больше не используются.
 
 
 ```
@@ -252,7 +252,7 @@ SELECT f.*
 #### <a name="data-stored-in-the-event_file-target"></a>Данные, хранящиеся в целевом объекте event_file
 
 
-Далее приведен отчет по результатам использования инструкции SELECT для **sys.fn_xe_file_target_read_file**в SQL Server 2016.
+Далее приведен отчет по результатам использования инструкции SELECT для **sys.fn_xe_file_target_read_file** в SQL Server 2016.
 
 
 ```
@@ -289,7 +289,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - Например, slots=59 округляется до 64.
 
 
-### <a name="action-example-for-histogram"></a>Пример*действия* для histogram
+### <a name="action-example-for-histogram"></a>Пример *действия* для histogram
 
 
 В предложении TARGET...SET следующая инструкция CREATE EVENT SESSION Transact-указывает назначение целевого параметра **source_type=1**. 1 означает, что целевой объект histogram отслеживает действие.

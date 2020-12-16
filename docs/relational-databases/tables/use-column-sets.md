@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79625148ed44c2003c74d393502129fe15a112f5
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d9d295edae69bc3354bab3151808fa5c4ff0ca7a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96125082"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482332"
 ---
 # <a name="use-column-sets"></a>Использование наборов столбцов
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -143,7 +143,7 @@ GO
 ## <a name="examples"></a>Примеры  
  В следующих примерах в таблице документа содержится обычный набор столбцов `DocID` и `Title`. Производственной группе необходимы столбцы `ProductionSpecification` и `ProductionLocation` для всех рабочих документов. Группе сбыта необходим столбец `MarketingSurveyGroup` для документов сбыта.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Создание таблицы с набором столбцов  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>А) Создание таблицы с набором столбцов  
  В следующем примере создается таблица, в которой используются разреженные столбцы и содержится набор столбцов `SpecialPurposeColumns`. В этом примере в таблицу вставляются две строки, а затем из таблицы выбираются данные.  
   
 > [!NOTE]  
@@ -164,7 +164,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>Б. Вставка данных в таблицу с использованием имен разреженных столбцов  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>Б) Вставка данных в таблицу с использованием имен разреженных столбцов  
  В следующих примерах в таблицу, созданную в примере А, вставляются две строки. В примерах используются имена разреженных столбцов; набор столбцов не упоминается.  
   
 ```sql  
@@ -258,7 +258,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md)  
   
   

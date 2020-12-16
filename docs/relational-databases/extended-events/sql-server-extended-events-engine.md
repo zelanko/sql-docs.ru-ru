@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9178b6246c32c54aee6979bec00bac8b53e700fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 339e6ada7ae707d4bb48f5b1d3c1eb3b52e94e72
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756860"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481375"
 ---
 # <a name="sql-server-extended-events-engine"></a>Подсистема расширенных событий SQL Server
 
@@ -44,7 +44,7 @@ ms.locfileid: "85756860"
   
 -   Каждому процессу Windows соответствует один или несколько модулей (**процесс Win32**, **модуль Win32**). Они называются *двоичными* или *исполняемыми модулями*.  
   
--   Каждый модуль процесса Windows содержит один или несколько пакетов расширенных событий (**пакет**), который содержит один или несколько объектов расширенных событий (**тип**, **цель**, **действие**, **сопоставление**, **предикат**и **событие**).  
+-   Каждый модуль процесса Windows содержит один или несколько пакетов расширенных событий (**пакет**), который содержит один или несколько объектов расширенных событий (**тип**, **цель**, **действие**, **сопоставление**, **предикат** и **событие**).  
   
 -   Процесс может содержать только один экземпляр подсистемы расширенных событий (**подсистема расширенных событий**), который выполняет указанные ниже действия.  
   
