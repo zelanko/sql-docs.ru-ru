@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6c431669d89f87c49cfd96d48e6b3c53c8d866e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7acb5296f5cfcefd5c39c9ceb643a1076c11bfbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548881"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484476"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Изменение данных в темпоральной таблице с системным управлением версиями
 
@@ -53,7 +53,7 @@ ms.locfileid: "89548881"
          ) ;
    ```
 
-- Если в инструкции**INSERT** вы все же указываете столбцы **PERIOD** в списке столбцов, в качестве их значения необходимо указать **DEFAULT**.
+- Если в инструкции **INSERT** вы все же указываете столбцы **PERIOD** в списке столбцов, в качестве их значения необходимо указать **DEFAULT**.
 
   ```sql
   INSERT INTO [dbo].[Department]
@@ -191,11 +191,11 @@ AND Department.DeptID = 10 ;
 
 ## <a name="deleting-data"></a>Удаление данных
 
-Данные в текущей таблице удаляются с помощью регулярной инструкции **DELETE** . В удаленных строках в столбец периода окончания будет подставлено время начала базовой транзакции. Когда **SYSTEM_VERSIONING = ON**, удалять строки напрямую из таблицы журнала нельзя. Чтобы удалить строки из текущей таблицы и таблицы журнала, задайте **SYSTEM_VERSIONING = OFF** . Но в этом случае система не будет вести журнал изменений. Когда**SWITCH PARTITION IN**, **TRUNCATE** , **SWITCH PARTITION OUT** (для текущей таблицы) и **SWITCH PARTITION IN**(для таблицы журнала) не работают.
+Данные в текущей таблице удаляются с помощью регулярной инструкции **DELETE** . В удаленных строках в столбец периода окончания будет подставлено время начала базовой транзакции. Когда **SYSTEM_VERSIONING = ON**, удалять строки напрямую из таблицы журнала нельзя. Чтобы удалить строки из текущей таблицы и таблицы журнала, задайте **SYSTEM_VERSIONING = OFF** . Но в этом случае система не будет вести журнал изменений. Когда **SWITCH PARTITION IN**, **TRUNCATE** , **SWITCH PARTITION OUT** (для текущей таблицы) и **SWITCH PARTITION IN**(для таблицы журнала) не работают.
 
 ## <a name="using-merge-to-modify-data-in-temporal-table"></a>Изменение данных в темпоральной таблице с помощью слияния
 
-Операция**MERGE** имеет такие же ограничения, что и инструкции **INSERT** и **UPDATE** относительно столбцов **PERIOD** .
+Операция **MERGE** имеет такие же ограничения, что и инструкции **INSERT** и **UPDATE** относительно столбцов **PERIOD** .
 
 ```sql
 CREATE TABLE DepartmentStaging (DeptId INT, DeptName varchar(50));

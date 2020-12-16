@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 380fa9b4cb6941b438d0308be38956659862ce50
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6fbf5782ff67b3406cffad808b27c47112a48d97
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115472"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489864"
 ---
 # <a name="deploy-and-connect-to-sql-server-docker-containers"></a>Развертывание контейнеров Docker в SQL Server и подключение к ним
 
@@ -45,8 +45,8 @@ ms.locfileid: "92115472"
 
 Для извлечения и запуска образов контейнеров Docker для SQL Server 2017 и SQL Server 2019 необходимо выполнить предварительные требования и действия, описываемые в следующем кратком руководстве:
 
-- [Запуск образа контейнера с SQL Server 2017 в Docker](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Запуск образа контейнера с SQL Server 2019 в Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Запуск образа контейнера с SQL Server 2017 в Docker](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
+- [Запуск образа контейнера с SQL Server 2019 в Docker](quickstart-install-connect-docker.md?view=sql-server-ver15&preserve-view=true)
 
 Эта статья посвящена настройке и содержит дополнительные сценарии использования, описываемые в следующих разделах.
 
@@ -245,7 +245,7 @@ Packages
 Эти действия также можно использовать для перехода на более раннюю версию существующего контейнера. Например, вы можете выполнить откат или перейти на более раннюю версию контейнера для устранения неполадок или тестирования. Чтобы перейти на более раннюю версию контейнера, необходимо использовать метод обеспечения сохраняемости для папки данных. Выполните действия, описываемые в разделе, посвященном [обновлению](#upgrade), однако при запуске контейнера укажите название тега, соответствующее более старой версии.
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> Запуск образов контейнеров на основе RHEL
 
@@ -348,7 +348,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 В следующем примере создаются два контейнера SQL Server 2019, которые сопоставляются с портами **1401** и **1402** на главном компьютере.
 
@@ -426,12 +426,12 @@ docker pull mcr.microsoft.com/mssql/server:<image_tag>
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- Сведения о начале работы с образами контейнеров с SQL Server 2017 в Docker можно найти в [кратком руководстве](quickstart-install-connect-docker.md?view=sql-server-2017)
+- Сведения о начале работы с образами контейнеров с SQL Server 2017 в Docker можно найти в [кратком руководстве](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - Сведения о начале работы с образами контейнеров с SQL Server 2019 в Docker можно найти в [кратком руководстве](quickstart-install-connect-docker.md?view=sql-server-ver15)
 

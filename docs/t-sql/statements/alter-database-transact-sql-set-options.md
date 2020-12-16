@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 8050d90cfac0081629f4b7c1d18e2ff0aeb2b770
-ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
+ms.openlocfilehash: 67c728b2620205a6dfa854c8328df6ea462bd673
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94983128"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489934"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -53,7 +53,7 @@ ms.locfileid: "94983128"
 
 В следующей строке выберите имя продукта, который вас интересует. На этой веб-странице отобразится другой контент, относящийся к выбранному продукту.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -1251,17 +1251,17 @@ NO_WAIT
 |\<cursor_option>|Да|Нет|
 |\<auto_option>|Да|нет|
 |\<sql_option>|Да|Нет|
-|\<recovery_option>|Да|нет|
+|\<recovery_option>|Да|Нет|
 |\<target_recovery_time_option>|нет|Да|
-|\<database_mirroring_option>|нет|Нет|
-|ALLOW_SNAPSHOT_ISOLATION|нет|Нет|
-|READ_COMMITTED_SNAPSHOT|нет|Да|
+|\<database_mirroring_option>|Нет|Нет|
+|ALLOW_SNAPSHOT_ISOLATION|Нет|Нет|
+|READ_COMMITTED_SNAPSHOT|Нет|Да|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|
-|\<service_broker_option>|Да|нет|
+|\<service_broker_option>|Да|Нет|
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|
 |\<parameterization_option>|Да|Да|
 |\<change_tracking_option>|Да|Да|
-|\<db_encryption_option>|Да|нет|
+|\<db_encryption_option>|Да|Нет|
 
 Кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищается при установке одного из следующих параметров.
 
@@ -1472,7 +1472,7 @@ SET QUERY_STORE = ON
 - [Зеркальное отображение базы данных ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
 - [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)
 - [Статистика](../../relational-databases/statistics/statistics.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [Включение и отключение отслеживания изменений](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
@@ -1483,11 +1483,11 @@ SET QUERY_STORE = ON
 - [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* База данных SQL \*_** &nbsp;
@@ -2220,20 +2220,20 @@ NO_WAIT
 
 |Категория параметров|Может быть указан с другими параметрами|Можно использовать предложение WITH \<termination>.|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|Да|нет|
+|\<auto_option>|Да|Нет|
 |\<change_tracking_option>|Да|Да|
 |\<cursor_option>|Да|нет|
-|\<db_encryption_option>|Да|нет|
+|\<db_encryption_option>|Да|Нет|
 |\<db_update_option>|Да|Да|
 |\<db_user_access_option>|Да|Да|
 |\<delayed_durability_option>|Да|Да|
 |\<parameterization_option>|Да|Да|
-|ALLOW_SNAPSHOT_ISOLATION|нет|нет|
-|READ_COMMITTED_SNAPSHOT|нет|Да|
+|ALLOW_SNAPSHOT_ISOLATION|Нет|нет|
+|READ_COMMITTED_SNAPSHOT|Нет|Да|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|
-|\<sql_option>|Да|нет|
-|\<target_recovery_time_option>|нет|Да|
+|\<sql_option>|Да|Нет|
+|\<target_recovery_time_option>|Нет|Да|
 
 ## <a name="examples"></a>Примеры
 
@@ -2378,11 +2378,11 @@ SET QUERY_STORE = ON
 - [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
@@ -3172,11 +3172,11 @@ SET QUERY_STORE = ON
 - [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)

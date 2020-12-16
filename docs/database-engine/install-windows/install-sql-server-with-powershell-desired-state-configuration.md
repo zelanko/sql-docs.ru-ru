@@ -10,13 +10,13 @@ ms.technology: install
 ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a9770cd648fe804ee973878adee27b2d55080d0
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 7fb3e4847bef4b14fe7ce68b800b9cc8e95a5a64
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671067"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489568"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Установка SQL Server с помощью PowerShell Desired State Configuration
 
@@ -44,7 +44,7 @@ ms.locfileid: "91671067"
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>Установка DSC-ресурса SqlServerDsc
 
-DSC-ресурс [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) можно скачать в [коллекции PowerShell](https://www.powershellgallery.com/) с помощью командлета [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1). 
+DSC-ресурс [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) можно скачать в [коллекции PowerShell](https://www.powershellgallery.com/) с помощью командлета [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1&preserve-view=true). 
 
 > [!NOTE]
 > Для установки модуля служба PowerShell должна быть запущена **от имени администратора**.

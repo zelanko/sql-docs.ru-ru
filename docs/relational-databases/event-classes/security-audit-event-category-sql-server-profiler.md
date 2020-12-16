@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 910671ecefc7a52f86a7e025492c3e5ec1371e65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330440"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485366"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Категория событий Security Audit (приложение SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88330440"
 |[Класс событий Audit DBCC](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Указывает, что была выполнена команда DBCC.|  
 |[Класс событий Audit Fulltext](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Указывает, что произошло полнотекстовое событие.|  
 |[Класс событий Audit Login Change Password](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Указывает, что пользователь изменил пароль, используемый для входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Класс событий Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Указывает, что для изменения свойства имени входа была использована хранимая процедура **sp_defaultdb**, **sp_defaultlanguage**или инструкция ALTER LOGIN.|  
+|[Класс событий Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Указывает, что для изменения свойства имени входа была использована хранимая процедура **sp_defaultdb**, **sp_defaultlanguage** или инструкция ALTER LOGIN.|  
 |[Класс событий Audit Login](../../relational-databases/event-classes/audit-login-event-class.md)|Указывает, что пользователь успешно выполнил вход на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Класс событий Audit Login Failed](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Указывает, что пользователь выполнил попытку входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которая завершилась неудачно.|  
 |[Класс событий Audit Login GDR](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|Указывает, что право входа в систему [!INCLUDE[msCoName](../../includes/msconame-md.md)] было добавлено или удалено.|  

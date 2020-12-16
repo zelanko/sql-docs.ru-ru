@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5919aa313147b54e52289aa0c1d530a5f0064aab
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: fe89a97c1fb13d9446b0fe07f04c7399b42a439e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195356"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489774"
 ---
 # <a name="oracle-source"></a>Источник Oracle
 
@@ -162,7 +162,7 @@ ms.locfileid: "92195356"
 **Действия при ошибке**
 
 Выберите способ обработки ошибок в потоке источником Oracle: пропустить ошибку, перенаправить строку или вызвать сбой компонента.
-**Дополнительные сведения см. в статье** [Обработка ошибок в данных](./error-handling-in-data.md?view=sql-server-2017)
+**Дополнительные сведения см. в статье** [Обработка ошибок в данных](./error-handling-in-data.md)
 
 **Усечение**
 

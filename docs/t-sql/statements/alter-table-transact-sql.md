@@ -60,13 +60,13 @@ helpviewer_keywords:
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cef7fd2ddbcc95789ddb8a306538b6dfdaf29c5
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: aff544048da8bb09a2fd488d26a7bd1f69cf8f56
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521191"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489598"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -785,7 +785,7 @@ SET **(** FILESTREAM_ON = { *partition_scheme_name* \| *filestream_filegroup_nam
 
 Если указан аргумент *partition_scheme_name*, применяются правила для [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Таблица должна быть уже секционирована для строк данных, а схема секционирования должна использовать те же функции секционирования и столбцы, которые используются в схеме секционирования FILESTREAM.
 
-Аргумент *filestream_filegroup_name* указывает имя файловой группы FILESTREAM. В файловой группе следует определить один файл для файловой группы с помощью инструкции [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.
+Аргумент *filestream_filegroup_name* указывает имя файловой группы FILESTREAM. В файловой группе следует определить один файл для файловой группы с помощью инструкции [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.
 
 **"** default **"** указывает файловую группу FILESTREAM с заданным свойством DEFAULT. При отсутствии файловой группы FILESTREAM возникает ошибка.
 

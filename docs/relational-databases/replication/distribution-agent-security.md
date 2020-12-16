@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dfad45eb3d0fcbf67e88c6ffbf5a120e1d179c16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 5cfa887d79c8ecc2e4c0fa5b0fbea498bae176c3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498828"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484896"
 ---
 # <a name="distribution-agent-security"></a>Безопасность агента распространителя
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2016"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 В диалоговом окне **Безопасность агента распространителя** можно указать учетную запись Windows, с которой будет работать агент распространителя. Агент распространителя работает на распространителе для принудительных подписок и на подписчике для подписок по запросу. Учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows также называется *учетной записью процесса*, так как с этой учетной записью работает процесс агента. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88498828"
   
  Если при установке соединений производится олицетворение учетной записи процесса, требуются дополнительные разрешения. См. далее разделы **Соединение с распространителем** и **Соединение с подписчиком** .  
   
- Невозможно указать**Учетную запись процесса** для подписок по запросу на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], так как агент распространителя не работает на экземплярах выпуска [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ Невозможно указать **Учетную запись процесса** для подписок по запросу на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], так как агент распространителя не работает на экземплярах выпуска [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
  **Пароль** и **Подтверждение пароля**  
  Введите пароль для учетной записи Windows.  
@@ -105,7 +105,7 @@ Persist Security Info=False;Connection Pooling=True;
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)  
 ::: moniker-end
   
-::: monikerRange="azuresqldb-mi-current"
+::: moniker range="azuresqldb-mi-current"
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 В диалоговом окне **Безопасность агента распространения** можно указать учетную запись проверки подлинности SQL, с которой будет работать агент распространения. Агент распространителя работает на распространителе для принудительных подписок и на подписчике для подписок по запросу.  Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  
   

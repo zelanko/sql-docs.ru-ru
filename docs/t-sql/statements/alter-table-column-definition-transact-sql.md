@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28472efd6747239910630388133bdfe3ca95a6a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f4ff1708cf4c3986a90aff1b4c8048879bf0658e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547814"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489485"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -157,7 +157,7 @@ DEFAULT
  Символьное значение, NULL или системная функция, используемая в качестве значения столбца по умолчанию. Если используется в сочетании со столбцом определяемого пользователем типа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], то реализация типа должна поддерживать неявное преобразование выражения *constant_expression* в определяемый пользователем тип.  
   
 WITH VALUES   
- При добавлении столбца AND ограничение DEFAULT, если столбец допускает значения NULL с использованием WITH VALUES, задает для существующих строк значение нового столбца в качестве значения, указанного в DEFAULT *constant_expression*. Если добавляемый столбец не допускает значения NULL, для существующих строк значение столбца всегда будет присваиваться в качестве значения, предоставляемого в DEFAULT *constant expression*. Начиная с SQL Server 2012, может использоваться операция с метаданными [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ При добавлении столбца AND ограничение DEFAULT, если столбец допускает значения NULL с использованием WITH VALUES, задает для существующих строк значение нового столбца в качестве значения, указанного в DEFAULT *constant_expression*. Если добавляемый столбец не допускает значения NULL, для существующих строк значение столбца всегда будет присваиваться в качестве значения, предоставляемого в DEFAULT *constant expression*. Начиная с SQL Server 2012, может использоваться операция с метаданными [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
 При использовании в ситуации, когда связанный столбец не добавляется, никакого эффекта не будет.
  
  Указывает, что значение, указанное в выражении DEFAULT *constant_expression*, сохраняется в новом столбце, добавляемом к существующим строкам. Если добавленный столбец допускает значения NULL и указан оператор WITH VALUES, новый столбец, добавленный к существующим строкам, заполняется значением по умолчанию. Если предложение WITH VALUES не указано для столбцов, допускающих значение NULL, новый столбец для существующих строк заполняется значением NULL. Если новый столбец не допускает значения NULL, значение по умолчанию сохраняется во всех строках независимо от того, указан оператор WITH VALUES или нет.  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f636cfad5425ec24a41984ddf3b650439b5c13a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: edc3d1c699000e72dd963fc7b115edb72904329a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484506"
 ---
 # <a name="create-primary-keys"></a>Создание первичных ключей
 
@@ -49,7 +49,7 @@ ms.locfileid: "88646370"
 ### <a name="to-create-a-primary-key"></a>Создание первичного ключа
 
 1. В обозревателе объектов щелкните правой кнопкой мыши таблицу, в которую необходимо добавить ограничение уникальности, и выберите **Конструктор**.
-2. В **Конструкторе таблиц**щелкните селектор строк для столбца базы данных, который необходимо определить в качестве первичного ключа. Чтобы выделить несколько столбцов, нажмите и удерживайте клавишу CTRL и щелкните селекторы строк для остальных столбцов.
+2. В **Конструкторе таблиц** щелкните селектор строк для столбца базы данных, который необходимо определить в качестве первичного ключа. Чтобы выделить несколько столбцов, нажмите и удерживайте клавишу CTRL и щелкните селекторы строк для остальных столбцов.
 3. Щелкните правой кнопкой мыши средство выбора строк столбца и выберите команду **Задать первичный ключ**.
 
 > [!CAUTION]

@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: acbd75ed614f6f7a2c018fb537b01528fe166e80
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: d4e641516f39c738b9cab10bffc51e577598539b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496959"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489466"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -51,11 +51,11 @@ ms.locfileid: "92496959"
 [!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
   
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Управляемый экземпляр SQL \*_** &nbsp;
@@ -72,11 +72,11 @@ ms.locfileid: "92496959"
 [!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Управляемый экземпляр SQL](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
@@ -161,15 +161,15 @@ ALTER WORKLOAD GROUP wgDataLoads WITH
 
 Время, когда параметры вступят в силу, будет отличаться в зависимости от свойств изменяемой группы рабочей нагрузки.
 
-**Importance или query_execution_timeout** . Для importance и query_execution_timeout неклассифицированные запросы получают новые значения конфигурации.  Ожидающие и текущие запросы будут выполняться с прежней конфигурацией.  Запрос `ALTER WORKLOAD GROUP` выполняется сразу вне зависимости от текущих запросов в группе рабочей нагрузки.
+**Importance или query_execution_timeout**. Для importance и query_execution_timeout неклассифицированные запросы получают новые значения конфигурации.  Ожидающие и текущие запросы будут выполняться с прежней конфигурацией.  Запрос `ALTER WORKLOAD GROUP` выполняется сразу вне зависимости от текущих запросов в группе рабочей нагрузки.
 
-**Request_min_resource_grant_percent или request_max_resource_grant_percent** . Для request_min_resource_grant_percent и request_max_resource_grant_percent выполняющиеся запросы используют прежнюю конфигурацию.  Ожидающие и неклассифицированные запросы получают новые значения конфигурации.  Запрос `ALTER WORKLOAD GROUP` выполняется сразу вне зависимости от текущих запросов в группе рабочей нагрузки.
+**Request_min_resource_grant_percent или request_max_resource_grant_percent**. Для request_min_resource_grant_percent и request_max_resource_grant_percent выполняющиеся запросы используют прежнюю конфигурацию.  Ожидающие и неклассифицированные запросы получают новые значения конфигурации.  Запрос `ALTER WORKLOAD GROUP` выполняется сразу вне зависимости от текущих запросов в группе рабочей нагрузки.
 
-**Min_percentage_resource или cap_percentage_resource** . Для min_percentage_resource и cap_percentage_resource выполняющиеся запросы используют прежнюю конфигурацию.  Ожидающие и неклассифицированные запросы получают новые значения конфигурации. 
+**Min_percentage_resource или cap_percentage_resource**. Для min_percentage_resource и cap_percentage_resource выполняющиеся запросы используют прежнюю конфигурацию.  Ожидающие и неклассифицированные запросы получают новые значения конфигурации. 
 
 Для изменения min_percentage_resource и cap_percentage_resource требуется очистка выполняющихся запросов в изменяемой группе рабочей нагрузки.  При уменьшении min_percentage_resource освобожденные ресурсы возвращаются в общий пул, что позволяет запросам из других групп рабочей нагрузки использовать эти ресурсы.  И наоборот, при увеличении min_percentage_resource потребуется ожидание, пока выполнятся запросы, использующие только необходимые ресурсы из общего пула.  Операция изменения группы рабочей нагрузки будет иметь приоритетный доступ к общим ресурсам по отношению к другим запросам, ожидающим выполнения в общем пуле.  Если сумма min_percentage_resource превышает 100 %, запрос ALTER WORKLOAD GROUP немедленно завершится сбоем. 
 
-**Действие блокировки** . Для изменения группы рабочей нагрузки необходима глобальная блокировка всех таких групп.  Запрос на изменение группы рабочей нагрузки помещается в очередь вслед за уже отправленными запросами на создание или удаление таких групп.  Если сразу отправляется целый пакет инструкций ALTER, то эти инструкции обрабатываются в порядке их отправки.  
+**Действие блокировки**. Для изменения группы рабочей нагрузки необходима глобальная блокировка всех таких групп.  Запрос на изменение группы рабочей нагрузки помещается в очередь вслед за уже отправленными запросами на создание или удаление таких групп.  Если сразу отправляется целый пакет инструкций ALTER, то эти инструкции обрабатываются в порядке их отправки.  
 
 ## <a name="see-also"></a>См. также раздел
 

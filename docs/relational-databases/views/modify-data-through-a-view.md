@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ffc0703257542807d88f011a8522b18e3b5e48e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d606d4a6cad0668f3692af38a1ec7d2f2a1f1db6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485357"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484406"
 ---
 # <a name="modify-data-through-a-view"></a>Изменение данных через представление
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88485357"
   
 #### <a name="to-modify-table-data-through-a-view"></a>Изменение данных таблицы с помощью представления  
   
-1.  В **обозревателе объектов**разверните базу данных, содержащую представление, а затем разверните **Представления**.  
+1.  В **обозревателе объектов** разверните базу данных, содержащую представление, а затем разверните **Представления**.  
   
 2.  Щелкните правой кнопкой мыши представление и выберите **Изменить 200 верхних строк**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "88485357"
   
 #### <a name="to-update-table-data-through-a-view"></a>Обновление данных таблицы с помощью представления  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88485357"
   
 #### <a name="to-insert-table-data-through-a-view"></a>Вставка данных таблицы с помощью представления  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

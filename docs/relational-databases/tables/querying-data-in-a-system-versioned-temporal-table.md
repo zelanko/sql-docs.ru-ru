@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f25698110307ca4539b0939ad8c1f0cb9696145b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1efbdca9b0d3d7919cf3e3f54837decd37bdf5b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537837"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484446"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Запрос данных в темпоральной таблице с системным управлением версиями
 
@@ -35,7 +35,7 @@ ms.locfileid: "89537837"
 - CONTAINED IN (<start_date_time>, <end_date_time>)
 - ALL
 
-Предложение**FOR SYSTEM_TIME** можно указывать независимо для каждой таблицы в запросе. Его можно использовать в обобщенных табличных выражениях, функциях с табличными значениями и хранимых процедурах. При использовании псевдонима таблицы с темпоральной таблицей предложение **FOR SYSTEM_TIME** должно быть задано между именем темпоральной таблицы и псевдонимом (см. второй пример в разделе "Запрос на определенное время с использованием вложенного предложения AS OF" ниже).
+Предложение **FOR SYSTEM_TIME** можно указывать независимо для каждой таблицы в запросе. Его можно использовать в обобщенных табличных выражениях, функциях с табличными значениями и хранимых процедурах. При использовании псевдонима таблицы с темпоральной таблицей предложение **FOR SYSTEM_TIME** должно быть задано между именем темпоральной таблицы и псевдонимом (см. второй пример в разделе "Запрос на определенное время с использованием вложенного предложения AS OF" ниже).
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Запрос на определенное время с использованием вложенного предложения AS OF
 

@@ -19,19 +19,19 @@ helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 51db0074dda0a311dfbea84f51144d8b48ab90ce
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: e86f0221b1acbf6cfe7b946a60e1b147dfbe7151
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496890"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489138"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -52,11 +52,11 @@ ms.locfileid: "92496890"
 [!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
   
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-workload-group-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Управляемый экземпляр SQL \*_** &nbsp;
@@ -73,11 +73,11 @@ ms.locfileid: "92496890"
 [!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-workload-group-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Управляемый экземпляр SQL](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
@@ -141,7 +141,7 @@ WITH
 |||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
-Задает максимальный объем ресурсов, выделяемых для каждого запроса. *value*  — это необязательный десятичный параметр со значением по умолчанию, равным значению request_min_resource_grant_percent. Значение *value* должно быть больше или равно значению request_min_resource_grant_percent. Если значение request_max_resource_grant_percent больше значения request_min_resource_grant_percent и доступны системные ресурсы, для запроса выделяются дополнительные ресурсы.
+Задает максимальный объем ресурсов, выделяемых для каждого запроса. *value* — это необязательный десятичный параметр со значением по умолчанию, равным значению request_min_resource_grant_percent. Значение *value* должно быть больше или равно значению request_min_resource_grant_percent. Если значение request_max_resource_grant_percent больше значения request_min_resource_grant_percent и доступны системные ресурсы, для запроса выделяются дополнительные ресурсы.
 
 *IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>        
 Указывает важность запроса по умолчанию в группе рабочей нагрузки. Важность представлена одним из следующих значений, причем значением по умолчанию является NORMAL.

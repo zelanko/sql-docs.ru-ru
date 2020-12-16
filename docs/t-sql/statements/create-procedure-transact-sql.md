@@ -46,13 +46,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11718e97ac633b108c6cf49c27d2d47ea0d0ee94
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99697c6bb3e3b9eb8de2f3e6c41e092539cb79b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300260"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483926"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -64,7 +64,7 @@ ms.locfileid: "92300260"
 - содержать программные инструкции, которые выполняют операции в базе данных, в том числе вызывающие другие процедуры;
 - возвращать значение состояния вызывающей процедуре или пакету, таким образом передавая сведения об успешном или неуспешном завершении (и причины последнего).
 
-Используйте эту инструкцию для создания постоянной процедуры в текущей базе данных или временной процедуры в базе данных **tempdb** .
+Используйте эту инструкцию для создания постоянной процедуры в текущей базе данных или временной процедуры в базе данных **tempdb**.
 
 > [!NOTE]
 > В этом разделе рассматривается интеграция среды CLR .NET Framework с SQL Server. Интеграция со средой CLR не применяется к [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Azure.
@@ -148,38 +148,38 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 
 OR ALTER
 
-**Область применения** : Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)).
+**Область применения**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)).
 
 Изменяет процедуру, если она уже существует.
 
-*schema_name*  — имя схемы, к которой относится процедура. Процедуры привязаны к схеме. Если имя схемы не указано при создании процедуры, то автоматически назначается схема по умолчанию для пользователя, который создает процедуру.
+*schema_name* — имя схемы, к которой относится процедура. Процедуры привязаны к схеме. Если имя схемы не указано при создании процедуры, то автоматически назначается схема по умолчанию для пользователя, который создает процедуру.
 
-*procedure_name*  — имя процедуры. Имена процедур должны соответствовать требованиям, предъявляемым к [идентификаторам](../../relational-databases/databases/database-identifiers.md), и должны быть уникальными в схеме.
+*procedure_name* — имя процедуры. Имена процедур должны соответствовать требованиям, предъявляемым к [идентификаторам](../../relational-databases/databases/database-identifiers.md), и должны быть уникальными в схеме.
 
 При задании имен для процедур не следует пользоваться префиксом **sp_** . Этим префиксом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозначаются системные процедуры. Использование этого префикса может нарушить работу кода приложения, если обнаружится системная процедура с таким же именем.
 
-Локальную или глобальную временную процедуру можно создать, указав один символ номера (#) перед  *procedure_name* ( *#procedure_name* ) для локальных временных процедур и два символа номера для глобальных временных процедур ( *##procedure_name* ). Локальная временная процедура видима только соединению, которое создало процедуру, и удаляется, когда это соединение закрывается. Глобальная временная процедура доступна для всех соединений и удаляется при завершении последнего сеанса, в котором она использовалась. Для процедур CLR нельзя задавать временные имена.
+Локальную или глобальную временную процедуру можно создать, указав один символ номера (#) перед *procedure_name* ( *#procedure_name*) для локальных временных процедур и два символа номера для глобальных временных процедур ( *##procedure_name*). Локальная временная процедура видима только соединению, которое создало процедуру, и удаляется, когда это соединение закрывается. Глобальная временная процедура доступна для всех соединений и удаляется при завершении последнего сеанса, в котором она использовалась. Для процедур CLR нельзя задавать временные имена.
 
 Полное имя процедуры или глобальной временной процедуры не может содержать более 128 символов (с учетом символов ##). Полное имя локальной временной процедуры с учетом символа # не может содержать более 116 символов.
 
 **;** *число*
 
-**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Необязательный целочисленный аргумент, используемый для группирования одноименных процедур. Все сгруппированные процедуры можно удалить, выполнив одну инструкцию DROP PROCEDURE.
 
 > [!NOTE]
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
-В нумерованных процедурах нельзя использовать определяемые пользователем типы данных  **xml** и CLR, и их нельзя использовать в структуре плана.
+В нумерованных процедурах нельзя использовать определяемые пользователем типы данных **xml** и CLR, и их нельзя использовать в структуре плана.
 
-**@** *parameter*  — параметр, объявленный в процедуре. Укажите имя параметра, начинающееся со знака **@** . Имя параметра должно соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Параметры являются локальными в пределах процедуры; в разных процедурах могут быть использованы одинаковые имена параметров.
+**@** *parameter* — параметр, объявленный в процедуре. Укажите имя параметра, начинающееся со знака **@** . Имя параметра должно соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Параметры являются локальными в пределах процедуры; в разных процедурах могут быть использованы одинаковые имена параметров.
 
 Можно объявить от 1 до 2100 параметров. При выполнении процедуры значение каждого из объявленных параметров должно быть указано пользователем, если для параметра не определено значение по умолчанию или значение не задано равным другому параметру. Если процедура содержит [возвращающие табличное значение параметры](../../relational-databases/tables/use-table-valued-parameters-database-engine.md), а в вызове отсутствует параметр, передается пустая таблица. Параметры могут использоваться только в качестве выражений-констант; они не могут использоваться вместо имен таблиц, столбцов или других объектов базы данных. Дополнительные сведения см. в разделе [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).
 
 Параметры не могут быть объявлены, если указан параметр FOR REPLICATION.
 
-[ _type\_schema\_name_ **.** ] *data_type*  — тип данных параметра и схема, к которой относится этот тип.
+[ _type\_schema\_name_ **.** ] *data_type* — тип данных параметра и схема, к которой относится этот тип.
 
 **Рекомендации по процедурам [!INCLUDE[tsql](../../includes/tsql-md.md)]**
 
@@ -191,16 +191,16 @@ OR ALTER
 
 - Все собственные типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеющие эквиваленты в управляемом коде, можно использовать в качестве параметров. Дополнительные сведения о соответствии между типами среды CLR и системными типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Сопоставление данных параметров CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md). Дополнительные сведения о системных типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и их синтаксисе см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).
 
-- Возвращающие табличное значение типы данных и типы данных  **cursor** не могут служить параметрами.
+- Возвращающие табличное значение типы данных и типы данных **cursor** не могут служить параметрами.
 - Если тип параметра является определяемым пользователем типом данных CLR, то необходимо иметь связанное с этим типом разрешение EXECUTE.
 
-VARYING — указывает результирующий набор, поддерживаемый в качестве выходного параметра. Этот параметр динамически формируется процедурой, и его содержимое может различаться. Область применения — только параметры **cursor** . Этот параметр недопустим для процедур CLR.
+VARYING — указывает результирующий набор, поддерживаемый в качестве выходного параметра. Этот параметр динамически формируется процедурой, и его содержимое может различаться. Область применения — только параметры **cursor**. Этот параметр недопустим для процедур CLR.
 
-*default*  — значение параметра по умолчанию. Если для некоторого параметра определено значение по умолчанию, то процедуру можно выполнить без указания значения этого параметра. Значение по умолчанию должно быть константой или может быть равно NULL. Значение константы может иметь вид шаблона, что позволяет использовать ключевое слово LIKE при передаче параметра в процедуру.
+*default* — значение параметра по умолчанию. Если для некоторого параметра определено значение по умолчанию, то процедуру можно выполнить без указания значения этого параметра. Значение по умолчанию должно быть константой или может быть равно NULL. Значение константы может иметь вид шаблона, что позволяет использовать ключевое слово LIKE при передаче параметра в процедуру.
 
 Значения по умолчанию записываются в столбец **sys.parameters.default** только для процедур CLR. В случае параметров процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] этот столбец содержит значения NULL.
 
-OUT | OUTPUT — показывает, что параметр является выходным. Используйте выходные параметры для возврата значений коду, вызвавшему процедуру. Параметры **text** , **ntext** и **image** не могут быть выходными, если процедура не является процедурой CLR. Выходным параметром с ключевым словом OUTPUT может быть заполнитель курсора, если процедура не является процедурой CLR. Возвращающий табличное значение тип данных не может быть указан в качестве выходного параметра процедуры.
+OUT | OUTPUT — показывает, что параметр является выходным. Используйте выходные параметры для возврата значений коду, вызвавшему процедуру. Параметры **text**, **ntext** и **image** не могут быть выходными, если процедура не является процедурой CLR. Выходным параметром с ключевым словом OUTPUT может быть заполнитель курсора, если процедура не является процедурой CLR. Возвращающий табличное значение тип данных не может быть указан в качестве выходного параметра процедуры.
 
 READONLY — указывает, что параметр не может быть обновлен или изменен в тексте процедуры. Если тип параметра является возвращающим табличное значение типом, то должно быть указано ключевое слово READONLY.
 
@@ -210,7 +210,7 @@ RECOMPILE — указывает, что [!INCLUDE[ssDE](../../includes/ssde-md
 
 ENCRYPTION
 
-**Область применения** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Показывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет запутывание исходного текста инструкции CREATE PROCEDURE. Результат запутывания не виден непосредственно ни в одном представлении каталога [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пользователи, не имеющие доступа к системным таблицам или файлам баз данных, не смогут получить запутанный текст, однако этот текст доступен привилегированным пользователям, которые либо смогут обращаться к системным таблицам через [порт DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md), либо будут иметь непосредственный доступ к файлам баз данных. Кроме того, пользователи, имеющие право на подключение отладчика к серверному процессу, могут получить расшифрованный текст процедуры из памяти во время выполнения. Дополнительные сведения о доступе к метаданным системы см. в статье [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).
 
@@ -218,7 +218,7 @@ ENCRYPTION
 
 Процедуры, созданные с этим аргументом, не могут быть опубликованы как часть репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-EXECUTE AS *clause*  — определяет контекст безопасности, в котором должна быть выполнена процедура.
+EXECUTE AS *clause* — определяет контекст безопасности, в котором должна быть выполнена процедура.
 
 Для скомпилированных в собственном коде хранимых процедур, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], отсутствуют ограничения на предложение EXECUTE AS. В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предложения SELF, OWNER и *user_name* поддерживаются с помощью хранимых процедур, скомпилированных в собственном коде.
 
@@ -226,17 +226,17 @@ EXECUTE AS *clause*  — определяет контекст безопасн
 
 FOR REPLICATION
 
-**Область применения** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Указывает, что процедура создается для репликации. Следовательно, ее нельзя выполнять на подписчике. Процедура, созданная с параметром FOR REPLICATION, используется в качестве фильтра и выполняется только в процессе репликации. Параметры не могут быть объявлены, если указан параметр FOR REPLICATION. Параметр FOR REPLICATION нельзя указывать для процедур CLR. Параметр RECOMPILE не учитывается для процедур, созданных с параметром FOR REPLICATION.
 
-Процедура `FOR REPLICATION` имеет тип объекта **RF** в представлениях **sys.objects** и **sys.procedures** .
+Процедура `FOR REPLICATION` имеет тип объекта **RF** в представлениях **sys.objects** и **sys.procedures**.
 
-{ [ BEGIN ] *sql_statement* [;] [ ... *n* ] [ END ] } — одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], составляющих текст процедуры. Инструкции можно заключить в необязательные ключевые слова BEGIN и END. Дополнительные сведения см. далее в разделах "Рекомендации", "Общие замечания" и "Ограничения".
+{ [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] } — одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], составляющих текст процедуры. Инструкции можно заключить в необязательные ключевые слова BEGIN и END. Дополнительные сведения см. далее в разделах "Рекомендации", "Общие замечания" и "Ограничения".
 
 EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 
-**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 Указывает метод сборки [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для процедуры CLR, на которую создается ссылка. Аргумент *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и существовать как класс в сборке. Если класс имеет квалифицированное имя пространства имен, которое использует точку ( **.** ) для разделения частей пространства имен, имя класса разделено скобками ( **[]** ) или кавычками ( **""** ). Указанный метод класса должен быть статическим.
 
@@ -247,7 +247,7 @@ EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 
 ATOMIC WITH
 
-**Применимо к** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Указывает атомарное выполнение хранимой процедуры. Изменения принимаются, либо все изменения откатываются с исключением. Блок ATOMIC WITH требуется для скомпилированных в собственном коде хранимых процедур.
 
@@ -273,25 +273,25 @@ ATOMIC WITH
 
 NATIVE_COMPILATION
 
-**Применимо к** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Указывает, что процедура компилируется в собственном режиме. NATIVE_COMPILATION, SCHEMABINDING и EXECUTE AS можно указывать в любом порядке. Дополнительные сведения см. в статье [Хранимые процедуры, скомпилированные в собственном коде](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 SCHEMABINDING
 
-**Применимо к** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Гарантирует, что таблицы, на которые ссылается процедура, нельзя удалить или изменить. SCHEMABINDING требуется для хранимых процедур, скомпилированных в собственном коде. Дополнительные сведения см. в статье [Хранимые процедуры, скомпилированные в собственном коде](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md). Ограничения SCHEMABINDING такие же, как и для определяемых пользователем функций. Дополнительные сведения см. в подразделе SCHEMABINDING раздела [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md).
 
 LANGUAGE = [N] 'language'
 
-**Применимо к** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Эквивалентно параметру сеанса [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md). LANGUAGE = [N] 'language' (обязательный параметр).
 
 TRANSACTION ISOLATION LEVEL
 
-**Применимо к** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Требуется для хранимых процедур, скомпилированных в собственном коде. Указывает уровень изоляции транзакции для хранимой процедуры. Существуют следующие варианты выбора.
 
@@ -309,7 +309,7 @@ SNAPSHOT — указывает, что данные, считанные люб
 
 DATEFIRST = *number*
 
-**Применимо к** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Указывает первый день недели в виде числа от 1 до 7. DATEFIRST — необязательный параметр. Если он не указан, то значение выводится из указанного языка.
 
@@ -317,7 +317,7 @@ DATEFIRST = *number*
 
 DATEFORMAT = *format*
 
-**Применимо к** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Указывает порядок частей даты (месяца, дня и года) для интерпретации символьных строк date, smalldatetime, datetime, datetime2 и datetimeoffset. DATEFORMAT — необязательный параметр. Если он не указан, то значение выводится из указанного языка.
 
@@ -325,7 +325,7 @@ DATEFORMAT = *format*
 
 DELAYED_DURABILITY = { OFF | ON }
 
-**Применимо к** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Фиксации транзакции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть полностью устойчивыми, использовать настройки по умолчанию или быть отложенными устойчивыми.
 
@@ -396,7 +396,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 Внутри процедуры может быть указана любая инструкция SET, за исключением SET SHOWPLAN_TEXT и SET SHOWPLAN_ALL. Эти инструкции могут встречаться только в пакете. Выбранный параметр SET остается в силе до завершения процедуры, после чего восстанавливает прежнее значение.
 
 > [!NOTE]
-> Значение SET ANSI_WARNINGS не учитывается при передаче параметров процедуре или определяемой пользователем функции, а также при объявлении и задании переменных в инструкции пакета. Например, если объявить переменную как **char** (3), а затем присвоить ей значение длиннее трех символов, данные будут усечены до размера переменной, а инструкция INSERT или UPDATE завершится без ошибок.
+> Значение SET ANSI_WARNINGS не учитывается при передаче параметров процедуре или определяемой пользователем функции, а также при объявлении и задании переменных в инструкции пакета. Например, если объявить переменную как **char**(3), а затем присвоить ей значение длиннее трех символов, данные будут усечены до размера переменной, а инструкция INSERT или UPDATE завершится без ошибок.
 
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
@@ -440,7 +440,7 @@ GO
 
 |Представление|Описание|
 |----------|-----------------|
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Возвращает определение процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)]. Текст процедуры, созданной с параметром ENCRYPTION, нельзя увидеть при помощи представления каталога **sys.sql_modules** .|
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Возвращает определение процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)]. Текст процедуры, созданной с параметром ENCRYPTION, нельзя увидеть при помощи представления каталога **sys.sql_modules**.|
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Возвращает сведения о процедуре CLR.|
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Возвращает сведения о параметрах, которые определены в процедуре|
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|Возвращает объекты, на которые ссылается процедура.|
@@ -459,7 +459,7 @@ GO
 
 ### <a name="permissions"></a>Разрешения
 
-Требуется разрешение **CREATE PROCEDURE** на базу данных и разрешение **ALTER** на схему, в которой создается процедура, либо членство в предопределенной роли базы данных **db_ddladmin** .
+Требуется разрешение **CREATE PROCEDURE** на базу данных и разрешение **ALTER** на схему, в которой создается процедура, либо членство в предопределенной роли базы данных **db_ddladmin**.
 
 Для хранимых процедур CLR пользователь должен владеть сборкой, на которую ссылается предложение EXTERNAL NAME, или иметь разрешение **REFERENCES** на эту сборку.
 
@@ -545,7 +545,7 @@ GO
 
 В следующем примере создается процедура `GetPhotoFromDB`, ссылающаяся на метод `GetPhotoFromDB` класса `LargeObjectBinary` из сборки `HandlingLOBUsingCLR`. Перед созданием процедуры сборка `HandlingLOBUsingCLR` регистрируется в локальной базе данных.
 
-**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (если используется сборка, созданная с помощью *assembly_bits* ).
+**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (если используется сборка, созданная с помощью *assembly_bits*).
 
 ```sql
 CREATE ASSEMBLY HandlingLOBUsingCLR
@@ -665,10 +665,10 @@ SET @ComparePrice = @MaxPrice;
 GO
 ```
 
-Процедура `uspGetList` возвращает из базы данных [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] список товаров (велосипедов) стоимостью менее `$700`. Параметры `OUTPUT``@Cost` и `@ComparePrices` используются с языком управления выполнением для вывода информации в окне **Сообщения** .
+Процедура `uspGetList` возвращает из базы данных [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] список товаров (велосипедов) стоимостью менее `$700`. Параметры `OUTPUT``@Cost` и `@ComparePrices` используются с языком управления выполнением для вывода информации в окне **Сообщения**.
 
 > [!NOTE]
-> Переменная OUTPUT должна быть определена при создании процедуры и при использовании переменной. Имена параметра и переменной могут быть разными, однако типы данных и порядок расположения параметров должны совпадать, если только не используется `@ListPrice` = *variable* .
+> Переменная OUTPUT должна быть определена при создании процедуры и при использовании переменной. Имена параметра и переменной могут быть разными, однако типы данных и порядок расположения параметров должны совпадать, если только не используется `@ListPrice` = *variable*.
 
 ```sql
 DECLARE @ComparePrice MONEY, @Cost MONEY;
@@ -886,7 +886,7 @@ DROP PROCEDURE Production.uspDeleteWorkOrder;
 
 В следующем примере создается процедура `HumanResources.uspEncryptThis`.
 
-**Применимо к** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, база данных SQL.
+**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, база данных SQL.
 
 ```sql
 CREATE PROCEDURE HumanResources.uspEncryptThis

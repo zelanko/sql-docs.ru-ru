@@ -9,13 +9,13 @@ ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 60ee13c6715362ba821575a3f8b9f9d5bc3e2bfa
-ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
+ms.openlocfilehash: 6e4aa3285f8f74dc9eaa46c52c64ee281f839edf
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589333"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489814"
 ---
 # <a name="secure-sql-server-docker-containers"></a>Защита контейнеров Docker в SQL Server
 
@@ -186,12 +186,12 @@ chown -R 10001:0 <database file dir>
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- Сведения о начале работы с образами контейнеров с SQL Server 2017 в Docker можно найти в [кратком руководстве](quickstart-install-connect-docker.md?view=sql-server-2017)
+- Сведения о начале работы с образами контейнеров с SQL Server 2017 в Docker можно найти в [кратком руководстве](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - Сведения о начале работы с образами контейнеров с SQL Server 2019 в Docker можно найти в [кратком руководстве](quickstart-install-connect-docker.md?view=sql-server-ver15)
 

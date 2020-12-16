@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3c05cd8fbf9ae131bbb1bc61f18acab043a8228
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dc115153671a4cd8aed490205b19f4a21c9e8949
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126207"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489509"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -153,7 +153,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>Б. Дополнительные примеры
 
-Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе **Ж. Создание базы данных и назначение имени и параметров сортировки** статьи [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) и в разделе **Ф. Изменение параметров сортировки столбца** статьи [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).
+Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе **Ж. Создание базы данных и назначение имени и параметров сортировки** статьи [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md#examples) и в разделе **Ф. Изменение параметров сортировки столбца** статьи [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).
 
 ## <a name="see-also"></a>См. также:
 
@@ -161,7 +161,7 @@ Chiapas
 - [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)
 - [Очередность параметров сортировки](../../t-sql/statements/collation-precedence-transact-sql.md)
 - [Константы](../../t-sql/data-types/constants-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [Тип табличных данных](../../t-sql/data-types/table-transact-sql.md)

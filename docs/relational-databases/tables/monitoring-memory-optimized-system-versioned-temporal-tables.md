@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add320eaae050b84184b5db11b5e09083b910000
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e593417e5b88037ad3fddbfba4a8cb99ddb50e94
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548874"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484466"
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>Мониторинг оптимизированных для памяти темпоральных таблиц с системным управлением версиями
 
@@ -102,7 +102,7 @@ GROUP BY TemporalTableSchema, TemporalTableName
 ;
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [Создание оптимизированной для памяти темпоральной таблицы с системным управлением версиями](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)

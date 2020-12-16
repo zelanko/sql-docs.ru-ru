@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 191c89d1fdced6ad1581dadff1e4ed92f397f640
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 158184ea961aa8938bb0eb2b6f94890dd1eddbfa
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92194726"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489874"
 ---
 # <a name="teradata-destination"></a>Назначение Teradata
 
@@ -223,7 +223,7 @@ ms.locfileid: "92194726"
 
 Выберите порядок обработки ошибок в потоке назначением Teradata: пропустить ошибку, перенаправить строку или вызвать сбой компонента.
 
-**См. также**: [Обработка ошибок в данных](./error-handling-in-data.md?view=sql-server-2017)
+**См. также**: [Обработка ошибок в данных](./error-handling-in-data.md)
 
 **Усечение**
 
