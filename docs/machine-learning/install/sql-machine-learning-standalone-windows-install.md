@@ -8,21 +8,21 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d446416076160642f86c035082481d318479d594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956818"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471185"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Установите R Server или сервер машинного обучения (изолированный) с помощью программы установки SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Программа установки SQL Server поддерживает вариант установки автономного сервера машинного обучения **как общего компонента**, то есть за пределами SQL Server. Он называется **сервер машинного обучения (изолированный)** и включает Python и R. 
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Программа установки SQL Server поддерживает вариант установки автономного сервера машинного обучения **как общего компонента**, то есть за пределами SQL Server. В SQL Server 2016 эта функция называется **R Server (изолированный)** .  
 ::: moniker-end
 
@@ -59,7 +59,7 @@ ms.locfileid: "91956818"
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="run-setup"></a>Запуск программы установки
 
 Для локальных установок необходимо запускать программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо использовать учетную запись домена с разрешениями на чтение и выполнение для удаленной общей папки.
@@ -69,13 +69,13 @@ ms.locfileid: "91956818"
 2. Перейдите на вкладку **Установка** и выберите **Установка сервера машинного обучения (изолированного)** .
     
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Установка изолированного сервера машинного обучения](media/2017setup-installation-page-mlsvr.png "Начните установку сервера машинного обучения (изолированного)")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Установка изолированного сервера машинного обучения](media/2019setup-installation-page-mlsvr.png "Начните установку сервера машинного обучения (изолированного)")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
 
 3. После завершения проверки правил примите условия лицензионного соглашения SQL Server и выберите новую установку.
 
@@ -86,13 +86,13 @@ ms.locfileid: "91956818"
     - **R** и **Python** выбраны по умолчанию. Можно снять выделение с любого языка, но рекомендуется установить хотя бы один из поддерживаемых языков.
 
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Выбор компонентов R или Python](media/2017setup-features-page-mlsvr-rpy.png "Начните установку сервера машинного обучения (изолированного)")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Выбор компонентов R или Python](media/2019setup-features-page-mlsvr-rpy.png "Начните установку сервера машинного обучения (изолированного)")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
     
    Все прочие параметры нужно игнорировать. 
     
@@ -228,7 +228,7 @@ ms.locfileid: "91956818"
 + [Краткое руководство. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Руководство. Аналитические функции в базе данных для разработчиков R](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Разработчики на языке Python могут узнать, как использовать Python с SQL Server, изучив следующие руководства.
 
 + [Учебник по Python. Прогнозирование проката лыж с помощью линейной регрессии в Службах машинного обучения SQL Server](../tutorials/python-ski-rental-linear-regression-deploy-model.md)

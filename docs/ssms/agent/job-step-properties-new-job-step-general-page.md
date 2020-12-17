@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c7575152ff23cec3096c9f5e1e22f1f0ea1a8094
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e13935b59d22a6184de14a29910117b9611ad4cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036564"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466475"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Свойства шага задания — создание шага задания (страница "Общие")
 
@@ -30,7 +30,7 @@ ms.locfileid: "92036564"
 
 Эта страница используется для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или для определения нового шага задания.  
   
-Для перехода к данной странице в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] разверните агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , щелкните правой кнопкой мыши **Задания**, выберите пункт **Создать задание**, страницу **Шаги** и нажмите кнопку **Создать**. Перейти к этой странице можно также, щелкнув правой кнопкой мыши задание в обозревателе объектов, наведя курсор мыши на пункт **Свойства**, затем выбрав страницу **Шаги** и нажав кнопку **Создать**, **Вставить**или **Изменить**.  
+Для перехода к данной странице в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] разверните агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , щелкните правой кнопкой мыши **Задания**, выберите пункт **Создать задание**, страницу **Шаги** и нажмите кнопку **Создать**. Перейти к этой странице можно также, щелкнув правой кнопкой мыши задание в обозревателе объектов, наведя курсор мыши на пункт **Свойства**, затем выбрав страницу **Шаги** и нажав кнопку **Создать**, **Вставить** или **Изменить**.  
   
 ## <a name="options"></a>Параметры  
 **Имя шага**  

@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 67c8c2c34ff49df4c9be7bea9dc1015d4bcebedd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412567"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470175"
 ---
 # <a name="r-tutorial-create-data-features"></a>Учебник по R. Создание характеристик данных
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "92412567"
 
 ## <a name="about-feature-engineering"></a>Сведения о формировании признаков
 
-После нескольких циклов исследования данных вы собрали определенной объем аналитической информации и готовы переходить к *формированию характеристик* . Процесс создания значимых признаков на основе необработанных данных — важнейший этап при создании аналитических моделей.
+После нескольких циклов исследования данных вы собрали определенной объем аналитической информации и готовы переходить к *формированию характеристик*. Процесс создания значимых признаков на основе необработанных данных — важнейший этап при создании аналитических моделей.
 
 В этом наборе данных значения расстояний основаны на показаниях счетчиков и необязательно отражают расстояние по карте или фактическое расстояние поездки. Поэтому необходимо вычислить прямое расстояние между местами посадки и высадки с помощью координат, доступных в исходном наборе данных по работе такси в Нью-Йорке. Это можно сделать с помощью [формулы гаверсинуса](https://en.wikipedia.org/wiki/Haversine_formula) в пользовательской функции [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
@@ -58,9 +58,9 @@ ms.locfileid: "92412567"
 
 Функция _fnCalculateDistance_ должна была быть скачана и зарегистрирована в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в рамках подготовки к работе с этим учебником. Вкратце изучите код.
   
-1. В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]последовательно разверните узлы **Программируемость** , **Функции** и **Скалярные функции** .   
+1. В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]последовательно разверните узлы **Программируемость**, **Функции** и **Скалярные функции**.   
 
-2. Щелкните правой кнопкой мыши функцию _fnCalculateDistance_ , а затем выберите команду **Изменить** , чтобы открыть скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] в новом окне запроса.
+2. Щелкните правой кнопкой мыши функцию _fnCalculateDistance_, а затем выберите команду **Изменить** , чтобы открыть скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] в новом окне запроса.
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
@@ -92,9 +92,9 @@ ms.locfileid: "92412567"
 
 ## <a name="generate-the-features-using-_fnengineerfeatures_"></a>Формирование признаков с помощью функции _fnEngineerFeatures_
 
-Для добавления вычисленных значений в таблицу, которую можно использовать для обучения модели, применяется другая функция: _fnEngineerFeatures_ . Эта новая функция вызывает ранее созданную функцию T-SQL _fnCalculateDistance_ для получения прямого расстояния между местами посадки и высадки. 
+Для добавления вычисленных значений в таблицу, которую можно использовать для обучения модели, применяется другая функция: _fnEngineerFeatures_. Эта новая функция вызывает ранее созданную функцию T-SQL _fnCalculateDistance_ для получения прямого расстояния между местами посадки и высадки. 
 
-1. Изучите код пользовательской функции T-SQL _fnEngineerFeatures_ , которая должна была быть создана для вас в рамках подготовки к работе с этим пошаговым руководством.
+1. Изучите код пользовательской функции T-SQL _fnEngineerFeatures_, которая должна была быть создана для вас в рамках подготовки к работе с этим пошаговым руководством.
   
    ```sql
    CREATE FUNCTION [dbo].[fnEngineerFeatures] (  

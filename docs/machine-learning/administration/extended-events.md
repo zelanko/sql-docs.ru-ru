@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12839d5c10e5ba50cc1b57b297ee1afa9569fe15
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 2cd28eaa17a52e0e0ae525f5977dbd5f6a26bf64
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115717"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471365"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Мониторинг скриптов Python и R с использованием расширенных событий в службах машинного обучения SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -85,7 +85,7 @@ AND p.name = 'SQLSatellite';
 
 Службы машинного обучения SQL Server запускают некоторые службы, которые выполняются вне процесса SQL Server. Чтобы записывать события, связанные с этими внешними процессами, необходимо создать файл конфигурации трассировки событий и поместить его в тот же каталог, в котором находится исполняемый файл для процесса.  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!IMPORTANT]
 > Начиная с версии SQL Server 2019 механизм изоляции изменился. Поэтому необходимо предоставить соответствующие разрешения для каталога, в котором хранится файл конфигурации трассировки событий. Дополнительные сведения о настройке этих разрешений см. в разделе [Разрешения для файлов программы | SQL Server 2019 в Windows: изменения в изоляции в Службах машинного обучения](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end

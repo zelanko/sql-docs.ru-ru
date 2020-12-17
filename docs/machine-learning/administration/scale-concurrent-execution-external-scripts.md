@@ -8,20 +8,20 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: cc6a081be3d3dd410d43ab36cde98ce6ff47eca1
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 833f89a2a39fa95999ac98f718769eb425d9d21f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173315"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471345"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Масштабирование параллельного выполнения внешних сценариев в Службах машинного обучения SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Узнайте о рабочих учетных записях для Служб машинного обучения SQL Server и о том, как изменить конфигурацию по умолчанию, чтобы масштабировать количество параллельных выполнений внешних сценариев.
 
-Чтобы *могла выполнять задачи, в процессе установки Служб машинного обучения создается новый*пул учетных записей пользователей[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] Windows. Эти рабочие учетные записи предназначены для того, чтобы изолировать работу пользователей SQL Server, которые одновременно выполняют внешние сценарии.
+Чтобы *могла выполнять задачи, в процессе установки Служб машинного обучения создается новый* пул учетных записей пользователей[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] Windows. Эти рабочие учетные записи предназначены для того, чтобы изолировать работу пользователей SQL Server, которые одновременно выполняют внешние сценарии.
 
 > [!Note]
 > В SQL Server 2019 в группе **SQLRUserGroup** теперь содержится только один член, которым является единственная учетная запись службы панели запуска SQL Server, а не несколько рабочих учетных записей. В этой статье описываются рабочие учетные записи для SQL Server 2016 и 2017.

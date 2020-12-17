@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c9d971efb90f51562bfa59c73802e577dd8d511
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 60119db288040111668868692eb5f3c6f1ce458c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870403"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470435"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Учебник по Python. Развертывание модели для классификации клиентов с использованием машинного обучения SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 В четвертой и заключительной части этого цикла учебников вы развернете модель кластеризации, разработанную в Python, в базе данных с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 В четвертой и заключительной части этой серии руководств будет выполняться развертывание модели кластеризации, разработанной в Python, в базе данных с помощью Служб машинного обучения SQL Server.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 В четвертой и заключительной части этой серии руководств будет выполняться развертывание модели кластеризации, разработанной в Python, в базе данных с помощью Служб машинного обучения управляемого экземпляра SQL Azure.
 ::: moniker-end
 

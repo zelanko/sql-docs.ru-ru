@@ -8,13 +8,13 @@ ms.date: 08/06/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c43c5e252c016d8d2094dc2b26d6e87fe3f05749
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: e7480b4d31685be402c98892557ddfb5f7db0ab5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869964"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470985"
 ---
 # <a name="tips-for-using-r-packages"></a>Советы по использованию пакетов R
 
@@ -36,11 +36,11 @@ ms.locfileid: "94869964"
 
 Существует несколько источников пакетов R, например [CRAN](https://cran.r-project.org/) и [Bioconductor](https://www.bioconductor.org/). На официальном сайте для языка R (<https://www.r-project.org/>) перечислены многие такие ресурсы. Корпорация Майкрософт предлагает [MRAN](https://mran.microsoft.com/) для версий R с открытым исходным кодом ([MRO](https://mran.microsoft.com/open)) и других пакетов. Многие пакеты публикуются на портале GitHub, где можно получить исходный код.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 Пакеты R работают на нескольких вычислительных платформах. Убедитесь, что устанавливаемые версии являются двоичными файлами Windows.
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 Пакеты R работают на нескольких вычислительных платформах. Убедитесь, что устанавливаемые версии являются двоичными файлами Linux.
 ::: moniker-end
 
@@ -90,9 +90,9 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 ## <a name="see-also"></a>См. также раздел
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [Установка пакетов с инструментами R](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [Установка новых пакетов R с помощью sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

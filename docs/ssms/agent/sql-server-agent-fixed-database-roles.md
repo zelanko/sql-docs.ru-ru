@@ -20,13 +20,13 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c59f04c31e6400f58d872a98da8498ca6ec38ff5
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: dd46f133a98263a721e0dfb56a7bd5cc25c591cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235681"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474365"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Предопределенные роли базы данных агента SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "93235681"
 > [!IMPORTANT]  
 > В [Управляемом экземпляре Azure SQL](/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет следующие предопределенные роли базы данных **msdb** , предоставляющие администраторам возможности более точного управления доступом к агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Далее приводятся роли, в порядке от имеющих наименьшие права к имеющим большие права доступа.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет следующие предопределенные роли базы данных **msdb**, предоставляющие администраторам возможности более точного управления доступом к агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Далее приводятся роли, в порядке от имеющих наименьшие права к имеющим большие права доступа.  
   
 -   **SQLAgentUserRole**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "93235681"
 Роль **SQLAgentReaderRole** имеет все разрешения роли **SQLAgentUserRole** , а также разрешения на просмотр списка имеющихся многосерверных заданий, их свойств и их журнала. Члены этой роли могут также просматривать не только информацию о заданиях и расписаниях заданий, которыми они владеют, но и список всех имеющихся заданий, расписаний заданий и их свойств. Члены роли **SQLAgentReaderRole** не могут изменять владельцев заданий для получения доступа к не принадлежащим им заданиям. В обозревателе объектов среды **членам роли** SQLAgentReaderRole [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] виден только узел **Задания**.  
   
 > [!IMPORTANT]  
-> При предоставлении доступа к прокси-объектам участникам **ролей** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaserole** , оцените, как это повлияет на безопасность. Члены роли **SQLAgentReaderRole** автоматически являются членами роли **SQLAgentUserRole**. Это означает, что члены роли **SQLAgentReaderRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были предоставлены роли **SQLAgentUserRole** , и могут использовать эти учетные записи.  
+> При предоставлении доступа к прокси-объектам участникам **ролей** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaserole**, оцените, как это повлияет на безопасность. Члены роли **SQLAgentReaderRole** автоматически являются членами роли **SQLAgentUserRole**. Это означает, что члены роли **SQLAgentReaderRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были предоставлены роли **SQLAgentUserRole** , и могут использовать эти учетные записи.  
   
 В следующей таблице приводится сводка разрешений роли **SQLAgentReaderRole** на объекты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -94,7 +94,7 @@ ms.locfileid: "93235681"
 В обозревателе объектов среды **членам роли** SQLAgentOperatorRole **видны узлы** Задания **,** Предупреждения **,** Операторы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и **Учетные записи-посредники**. Членам этой роли не доступен только узел **Журналы ошибок** .  
   
 > [!IMPORTANT]  
-> При предоставлении доступа к прокси-объектам участникам **ролей** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaserole** , оцените, как это повлияет на безопасность. Члены роли **SQLAgentOperatorRole** автоматически являются членами ролей **SQLAgentUserRole** и **SQLAgentReaderRole**. Это означает, что члены роли **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были предоставлены роли **SQLAgentUserRole** или **SQLAgentReaderRole** , и могут использовать эти учетные записи.  
+> При предоставлении доступа к прокси-объектам участникам **ролей** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaserole**, оцените, как это повлияет на безопасность. Члены роли **SQLAgentOperatorRole** автоматически являются членами ролей **SQLAgentUserRole** и **SQLAgentReaderRole**. Это означает, что члены роли **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были предоставлены роли **SQLAgentUserRole** или **SQLAgentReaderRole** , и могут использовать эти учетные записи.  
   
 В следующей таблице приводится сводка разрешений роли **SQLAgentOperatorRole** на объекты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -102,7 +102,7 @@ ms.locfileid: "93235681"
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |Создать/изменить/удалить|нет|нет|Да (только собственные задания)<br /><br />Нельзя изменить владельца задания.|нет|Да (только расписания собственных заданий)|нет|  
 |Просмотреть список (перечислить)|Да|Да<br /><br />Можно получить список доступных операторов для использования в процедуре **sp_notify_operator** и в диалоговом окне **Свойства задания** среды Management Studio.|Да|Да|Да|Да|  
-|Включить/выключить|нет|нет|Да<br /><br />Члены роли **SQLAgentOperatorRole** могут включать и выключать не принадлежащие им локальные задания с помощью хранимой процедуры **sp_update_job** и заданием значений для параметров **\@enabled** и **\@job_id** (или **\@job_name** ). Если член этой роли определяет другие параметры для этой хранимой процедуры, выполнение завершится неудачно.|нет|Да<br /><br />Члены роли **SQLAgentOperatorRole** могут включать и выключать не принадлежащие им расписания с помощью хранимой процедуры **sp_update_schedule** и заданием значений для параметров **\@enabled** и **\@schedule_id** (или **\@name** ). Если член этой роли определяет другие параметры для этой хранимой процедуры, выполнение завершится неудачно.|Неприменимо|  
+|Включить/выключить|нет|нет|Да<br /><br />Члены роли **SQLAgentOperatorRole** могут включать и выключать не принадлежащие им локальные задания с помощью хранимой процедуры **sp_update_job** и заданием значений для параметров **\@enabled** и **\@job_id** (или **\@job_name**). Если член этой роли определяет другие параметры для этой хранимой процедуры, выполнение завершится неудачно.|нет|Да<br /><br />Члены роли **SQLAgentOperatorRole** могут включать и выключать не принадлежащие им расписания с помощью хранимой процедуры **sp_update_schedule** и заданием значений для параметров **\@enabled** и **\@schedule_id** (или **\@name**). Если член этой роли определяет другие параметры для этой хранимой процедуры, выполнение завершится неудачно.|Неприменимо|  
 |Просмотреть свойства|Да|Да|Да|Да|Да|Да|  
 |Изменение свойств|нет|нет|Да (только собственные задания)|нет|Да (только расписания собственных заданий)|нет|  
 |Выполнить/остановить/начать|Неприменимо|Неприменимо|Да|Нет|Неприменимо|Неприменимо|  

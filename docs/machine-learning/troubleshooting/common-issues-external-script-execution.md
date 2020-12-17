@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: b57fdb3abd3482d6a395e1e6690f2e628a2a3e9e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194526"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470685"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Устранение проблем со службой панели запуска и выполнением внешних скриптов в SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -77,7 +77,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 В этом разделе перечислены наиболее распространенные сообщения об ошибках, возвращаемые панелью запуска.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>"Не удается запустить среду выполнения для скрипта R"
 
 Если группа Windows для пользователей R (также используемая для Python) не может войти в экземпляр, где выполняются службы R Services, могут отобразиться следующие ошибки:
@@ -186,12 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 Чтобы устранить эту проблему, необходимо переустановить пакет в библиотеку экземпляров SQL Server.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 >[!NOTE]
 >Если вы обновили экземпляр SQL Server 2016 для использования последней версии Microsoft R, расположение библиотеки по умолчанию отличается. Дополнительные сведения см. в статье [об использовании программы SqlBindR для обновления экземпляра служб R Services](../install/upgrade-r-and-python.md).
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Завершение работы панели запуска из-за несовпадающих библиотек DLL
 
 Если вы устанавливаете ядро СУБД с другими компонентами, устанавливаете исправление для сервера, а затем добавляете компонент Машинного обучения с использованием исходного носителя, может быть установлена неправильная версия компонентов Машинного обучения. Когда панель запуска обнаруживает несовпадение версий, она завершает работу и создает файл дампа.

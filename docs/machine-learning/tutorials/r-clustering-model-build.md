@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 62c7a271a7caf3afa588a48c0ac54ef86a38f785
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: a8520c1ac48b88fe0aaf66096b76cdc7b705a272
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870344"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470225"
 ---
 # <a name="tutorial-build-a-clustering-model-in-r-with-sql-machine-learning"></a>Руководство по созданию модели кластеризации в R с помощью машинного обучения SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 В третьей части этого цикла учебников, состоящего из четырех частей, вы создадите модель k-средних для кластеризации в R. В следующей части данного цикла вы развернете эту модель в базе данных с использованием Служб машинного обучения SQL Server.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 В третьей части этого цикла учебников, состоящего из четырех частей, вы создадите модель k-средних для кластеризации в R. В следующей части данного цикла вы развернете эту модель в базе данных с использованием Служб машинного обучения SQL Server.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 В третьей части этого цикла учебников, состоящего из четырех частей, вы создадите модель k-средних для кластеризации в R. В следующей части данного цикла вы развернете эту модель в базе данных с использованием служб SQL Server R Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 В третьей части этого цикла учебников, состоящего из четырех частей, вы создадите модель k-средних для кластеризации в R. В следующей части из этой серии описывается, как развернуть эту модель в базе данных с помощью Служб машинного обучения в управляемом экземпляре SQL Azure.
 ::: moniker-end
 

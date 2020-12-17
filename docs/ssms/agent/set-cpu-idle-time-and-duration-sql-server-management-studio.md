@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab8d7167e81b5a7cdf665f1312b1b414d95d9f7b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0fcfaa029005d9b45be6ce9c6e242e4e7cc0de42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037797"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472295"
 ---
 # <a name="set-cpu-idle-time-and-duration"></a>Задание времени и длительности простоя ЦП
 
@@ -40,9 +40,9 @@ ms.locfileid: "92037797"
   
 1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]и разверните его.  
   
-2.  Щелкните правой кнопкой мыши **Агент SQL Server**, выберите **Свойства**и перейдите на страницу **Дополнительно** .  
+2.  Щелкните правой кнопкой мыши **Агент SQL Server**, выберите **Свойства** и перейдите на страницу **Дополнительно** .  
   
-3.  В области **Условие бездействия ЦП**выполните следующие действия.  
+3.  В области **Условие бездействия ЦП** выполните следующие действия.  
   
     -   Установите флажок **Определите условие бездействия ЦП**.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c082a4dc31ffcbed20a4b5c855346dd8d52f2056
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1cc420302bb8d1610adcc1848fda226c4c55b492
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935100"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472475"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Устранение неполадок при установке служб Reporting Services
 
@@ -49,7 +49,7 @@ ms.locfileid: "91935100"
   
  Программа установки больше не проверяет наличие служб IIS или [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требуются компоненты MDAC 2.0 и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] версии 2.0. Если эти компоненты не установлены, то будет произведена их установка.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ##  <a name="troubleshoot-problems-with-sharepoint-mode-installations"></a><a name="bkmk_tshoot_sharepoint"></a> Устранение неполадок с установкой в режиме интеграции с SharePoint  
   
@@ -222,7 +222,7 @@ ms.locfileid: "91935100"
   
 1.  Откройте редактор реестра следующим образом.  
   
-    1.  Нажмите кнопку **Пуск**и выберите пункт **Выполнить**.  
+    1.  Нажмите кнопку **Пуск** и выберите пункт **Выполнить**.  
   
     2.  В диалоговом окне **Выполнить** в поле **Открыть** введите **regedit**.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "91935100"
  После исправления 64-разрядного экземпляра или повторного добавления разделов реестра вручную можно использовать системный монитор для настройки объектов производительности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], которые необходимо мониторить.  
   
 ###  <a name="reportserverexternalurl-and-passthroughcookies-configuration-properties-are-not-configured-after-an-upgrade-from-sql-server-2005"></a><a name="ConfigPropsMissing"></a> Свойства настройки ReportServerExternalURL и PassThroughCookies не настраиваются после обновления с переходом от версии SQL Server 2005  
- При обновлении с переходом от [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] к службам [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]свойства конфигурации **ReportServerExternalURL** и **PassThroughCookies** не настраиваются процессом обновления. **ReportServerExternalURL** — это необязательное свойство, и его следует задавать, только если вы используете веб-части SharePoint 2.0, а пользователи должны иметь возможность получить отчет и открыть его в новом окне браузера. Дополнительные сведения о **ReportServerExternalURL** см. в статье [URL-адреса файлов конфигурации (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Свойство**PassThroughCookies** необходимо только при использовании нестандартного метода проверки подлинности. Дополнительные сведения о **PassThroughCookies** см. в статье [Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+ При обновлении с переходом от [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] к службам [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]свойства конфигурации **ReportServerExternalURL** и **PassThroughCookies** не настраиваются процессом обновления. **ReportServerExternalURL** — это необязательное свойство, и его следует задавать, только если вы используете веб-части SharePoint 2.0, а пользователи должны иметь возможность получить отчет и открыть его в новом окне браузера. Дополнительные сведения о **ReportServerExternalURL** см. в статье [URL-адреса файлов конфигурации (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Свойство **PassThroughCookies** необходимо только при использовании нестандартного метода проверки подлинности. Дополнительные сведения о **PassThroughCookies** см. в статье [Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 > [!NOTE]  
 >  При использовании нестандартной проверки подлинности рекомендуется произвести миграцию установки, а не выполнять обновление. Дополнительные сведения о переносе [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  

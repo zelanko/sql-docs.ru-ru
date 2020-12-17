@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 5190cc4e8525daf79354005132705ae1a27b32a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636164"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471115"
 ---
 # <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>Автономная установка компонентов Python и R SQL Server для Служб машинного обучения на компьютерах без доступа к Интернету
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91636164"
 
 На изолированном сервере функции машинного обучения и языка R/Python добавляются через CAB-файлы. 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 ## <a name="sql-server-2019-offline-install"></a>Автономная установка SQL Server 2019
 
 Чтобы установить службы машинного обучения SQL Server (R и Python) на изолированном сервере, сначала скачайте первоначальный выпуск SQL Server и соответствующие CAB-файлы для поддержки R и Python. Даже если планируется немедленно обновить сервер для использования последнего накопительного обновления, сначала необходимо установить первоначальный выпуск.
@@ -63,7 +63,7 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## <a name="sql-server-2017-offline-install"></a>Автономная установка SQL Server 2017
 
 Чтобы установить службы машинного обучения SQL Server (R и Python) на изолированном сервере, сначала скачайте первоначальный выпуск SQL Server и соответствующие CAB-файлы для поддержки R и Python. Даже если планируется немедленно обновить сервер для использования последнего накопительного обновления, сначала необходимо установить первоначальный выпуск.
@@ -92,7 +92,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="sql-server-2016-offline-install"></a>Автономная установка SQL Server 2016
 
@@ -132,7 +132,7 @@ Release  | Microsoft R Open | Microsoft R Server |
 
 3. Когда мастер установки отобразит страницу лицензирования для компонентов R или Python с открытым исходным кодом, нажмите кнопку **Принять**. Принятие условий лицензионного соглашения позволяет перейти к следующему шагу.
 
-4. При получении доступа к странице **автономной установки** в **Путь установки**укажите папку, содержащую CAB-файлы, скопированные ранее.
+4. При получении доступа к странице **автономной установки** в **Путь установки** укажите папку, содержащую CAB-файлы, скопированные ранее.
 
 5. Продолжайте работу, следуя инструкциям на экране, чтобы завершить установку.
 
@@ -142,7 +142,7 @@ Release  | Microsoft R Open | Microsoft R Server |
 
 Мы рекомендуем применить последнее накопительное обновление к компонентам ядра СУБД и машинного обучения. Накопительные обновления устанавливаются с помощью программы установки. 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 1. Начните с базового экземпляра. Накопительные обновления можно применять только к существующим установкам изначального выпуска SQL Server.
 
 2. На подключенном к Интернету устройстве щелкните ссылку пакета накопительного обновления для вашей версии SQL Server:
@@ -150,7 +150,7 @@ Release  | Microsoft R Open | Microsoft R Server |
    + Обновления SQL Server 2019 *(обновления еще не доступны для 2019)*
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. Начните с базового экземпляра. Накопительные обновления можно применять только к существующим установкам изначального выпуска SQL Server.
 
 2. На подключенном к Интернету устройстве щелкните ссылку пакета накопительного обновления для вашей версии SQL Server:
@@ -158,7 +158,7 @@ Release  | Microsoft R Open | Microsoft R Server |
    + [Обновления SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. Начните с базового экземпляра. Накопительные обновления можно применять только к существующим установкам изначального выпуска SQL Server 2016, SQL Server 2016 SP 1 или SQL Server 2016 SP 2.
 
 2. На подключенном к Интернету устройстве щелкните ссылку пакета накопительного обновления для вашей версии SQL Server:
@@ -193,7 +193,7 @@ Release  | Microsoft R Open | Microsoft R Server |
 
 ## <a name="post-install-configuration"></a>Настройка после установки
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 После завершения установки перезапустите службу, а затем настройте сервер, чтобы включить выполнение сценария:
 
 + [Включение выполнения внешнего сценария](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
@@ -204,7 +204,7 @@ Release  | Microsoft R Open | Microsoft R Server |
 + [Требуется дополнительная настройка](sql-machine-learning-services-windows-install.md#additional-configuration)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 После завершения установки перезапустите службу, а затем настройте сервер, чтобы включить выполнение сценария:
 
 + [Включение выполнения внешнего сценария](sql-r-services-windows-install.md#bkmk_enableFeature)

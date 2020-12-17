@@ -10,13 +10,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d33b6442ef66a6be4d1ff600fe583947981a017f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036488"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474265"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Открытие редактора (среда SQL Server Management Studio)
 
@@ -37,7 +37,7 @@ ms.locfileid: "92036488"
  В этом разделе объясняется, как открыть различные редакторы в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>С помощью меню «Файл/Создать»  
- В меню **Файл** выберите пункт **Создать**и выберите один из следующих вариантов запуска редакторов запросов.  
+ В меню **Файл** выберите пункт **Создать** и выберите один из следующих вариантов запуска редакторов запросов.  
   
 -   **Запрос в текущем соединении** — открывает новое окно редактора, тип которого связан с текущим соединением в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Окно редактора использует те же сведения проверки подлинности, что и текущее соединение. Например, если выбрать в обозревателе объектов экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , а затем использовать вариант **Запрос в текущем соединении**, среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] откроет редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , соединенный с тем же экземпляром и использующий те же сведения проверки подлинности.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "92036488"
 -   Щелкните правой кнопкой узел базы данных и выберите команду **Создать запрос**. Откроется окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , связанное с тем же экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , причем окну будет присвоен контекст той же базы данных.  
   
 ### <a name="using-solution-explorer"></a>Использование обозревателя решений  
- В **обозревателе решений**разверните папку, щелкните правой кнопкой мыши требуемый элемент в папке, затем выберите команду **Открыть** либо дважды щелкните элемент или файл.  
+ В **обозревателе решений** разверните папку, щелкните правой кнопкой мыши требуемый элемент в папке, затем выберите команду **Открыть** либо дважды щелкните элемент или файл.  
   
 ### <a name="using-template-browser-to-open-the-database-engine-query-editor"></a>Использование средства просмотра шаблонов для открытия редактора запросов компонента Database Engine  
   

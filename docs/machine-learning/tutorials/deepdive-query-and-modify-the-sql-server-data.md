@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d66452796f3c3cd669784ae7233fb9dcf8e5bc5c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 9938cdeca70e4fd7a97c9ce8b9d38035022ce714
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195106"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470565"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Запрос и изменение данных SQL Server (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -127,7 +127,7 @@ Var 9: fraudRisk, Type: integer
     Var 9: fraudRisk, Type: integer
     ```
 
-Теперь три указанные вами переменные (*gender*, *state*и *cardholder*) обрабатываются как факторы.
+Теперь три указанные вами переменные (*gender*, *state* и *cardholder*) обрабатываются как факторы.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

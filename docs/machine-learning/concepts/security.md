@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.custom: contperfq1, seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3704d0faa89ffbc2151f31aa6e41b320e0d33ca0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870022"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471305"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Архитектура безопасности для платформы расширяемости в Службах машинного обучения SQL Server
 
@@ -72,7 +72,7 @@ ms.locfileid: "94870022"
 
 <a name="launchpad"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Службы, используемые во внешней обработке (панель запуска)
 
@@ -88,7 +88,7 @@ SQL Server также поддерживает сопоставление удо
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Службы, используемые во внешней обработке (панель запуска)
 
@@ -104,7 +104,7 @@ SQL Server также поддерживает сопоставление удо
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="services-used-in-external-processing"></a>Службы, используемые во внешней обработке
 
@@ -118,7 +118,7 @@ SQL Server также поддерживает сопоставление удо
 
 <a name="sqlrusergroup"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="identities-used-in-processing-sqlrusergroup"></a>Удостоверения, используемые при обработке (SQLRUserGroup)
 
@@ -148,7 +148,7 @@ SQL Server также поддерживает сопоставление удо
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="appcontainer-isolation"></a>Изоляция AppContainer
 
@@ -165,7 +165,7 @@ SQL Server также поддерживает сопоставление удо
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="identity-mapping"></a>Сопоставление удостоверений
 
@@ -189,7 +189,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 <a name="implied-authentication"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="implied-authentication-loopback-requests"></a>Неявная проверка подлинности (запросы с зацикливанием)
 
@@ -209,7 +209,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="implied-authentication-loopback-requests"></a>Неявная проверка подлинности (запросы с зацикливанием)
 
@@ -227,7 +227,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="implied-authentication-loopback-requests"></a>Неявная проверка подлинности (запросы с зацикливанием)
 

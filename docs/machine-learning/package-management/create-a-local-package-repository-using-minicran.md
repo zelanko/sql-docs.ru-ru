@@ -9,13 +9,13 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a23b12f1cd42a1c6f67a09708481134d8d893d4
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: a0edb79e6e23f713767da060fc580ac92c3daaee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870472"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471175"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Создание локального репозитория пакетов R с помощью miniCRAN
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -112,7 +112,7 @@ pdb[, c("Package", "Version", "License")]
 
 После создания локального репозитория с нужными пакетами переместите репозиторий пакетов на компьютер SQL Server. В следующей процедуре описывается установка пакетов с помощью средств R.
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > Для установки пакетов рекомендуется использовать **sqlmlutils**. См. статью [Установка новых пакетов R с помощью sqlmlutils](install-additional-r-packages-on-sql-server.md).
 ::: moniker-end
@@ -125,21 +125,21 @@ pdb[, c("Package", "Version", "License")]
 
 2. Откройте средство R, связанное с экземпляром (например, можно использовать RGUI. exe). Щелкните правой кнопкой мыши и выберите команду **Запуск от имени администратора**, чтобы разрешить средству вносить обновления в систему.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    - Например, расположением файлов по умолчанию для RGUI является `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    - Например, расположением файлов для RGUI является `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    - Например, расположением файлов для RGUI является `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
 3. Получите путь к библиотеке экземпляров и добавьте его в список путей к библиотекам.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    Например,
 
    ```R
@@ -148,7 +148,7 @@ pdb[, c("Package", "Version", "License")]
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    Например,
 
    ```R
@@ -157,7 +157,7 @@ pdb[, c("Package", "Version", "License")]
 
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    Например,
 
    ```R

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a6435b5e113d7ac79546e415479acb47e1c90b89
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 9ef302fbbcc11fa5363538092f35b65a94906b8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235720"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466645"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных
 
@@ -39,7 +39,7 @@ ms.locfileid: "87235720"
   
 3.  Прокрутите список до конца и щелкните **Параметры сайта**.  
   
-4.  В разделе служб **Reporting Services**щелкните **Управление предупреждениями об изменении данных**.  
+4.  В разделе служб **Reporting Services** щелкните **Управление предупреждениями об изменении данных**.  
   
 5.  Щелкните стрелку вниз рядом со списком **Просмотр предупреждений для пользователя** и выберите пользователя, чьи предупреждения требуется просмотреть.  
   

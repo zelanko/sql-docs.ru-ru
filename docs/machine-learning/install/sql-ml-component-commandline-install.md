@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 7c9fb33f32a5807f46136ec1ede69386927621ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96122759"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471145"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Установка Служб машинного обучения с R и Python в SQL Server из командной строки
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "96122759"
 
 При установке из командной строки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает полностью тихий режим (включается параметром **/Q**) и простой тихий режим (включается параметром **/QS**). При указании параметра **/QS** показывается только ход выполнения, не запрашивается ввод данных и не выводятся сообщения об обнаруженных ошибках. Параметр **/QS** поддерживается только в случае, когда указан режим **/Action=install**.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 | Аргументы | Описание |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Устанавливает версию в базе данных: Службы SQL Server R (в базе данных)  |
@@ -52,7 +52,7 @@ ms.locfileid: "96122759"
 | /MRCACHEDIRECTORY | Для автономной установки указывает папку, которая содержит CAB-файлы компонентов R. |
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 | Аргументы | Описание |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Устанавливает версию в базе данных: Службы машинного обучения SQL Server (в базе данных)  |
@@ -67,7 +67,7 @@ ms.locfileid: "96122759"
 | /MPYCACHEDIRECTORY | Зарезервировано для последующего использования. Используйте %TEMP% для сохранения CAB-файлов компонента Python для установки на компьютере, где нет подключения к Интернету. |
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 | Аргументы | Описание |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Устанавливает версию в базе данных: Службы машинного обучения SQL Server (в базе данных)  |
@@ -92,7 +92,7 @@ ms.locfileid: "96122759"
 > [!IMPORTANT]
 > После установки остаются два дополнительных этапа настройки. Интеграция не будет завершена до выполнения этих задач. Инструкции см. в разделе [Задачи, выполняемые после установки](#post-install).
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>Службы машинного обучения SQL Server: ядро СУБД, расширенная аналитика с Python и R
 
 Для параллельной установки экземпляра ядра СУБД укажите имя экземпляра и имя для входа администратора (Windows). Включает функции для установки основных и языковых компонентов, а также принятие всех условий лицензирования.
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 ### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>Службы R в SQL: ядро СУБД и расширенная аналитика с помощью R
 
 Для параллельной установки экземпляра ядра СУБД укажите имя экземпляра и имя для входа администратора (Windows). Включает функции для установки основных и языковых компонентов, а также принятие всех условий лицензирования.
@@ -141,13 +141,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 Для завершения установки требуются еще две задачи:
 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 1. Перезапустите компонент ядро СУБД.
 
 1. Службы машинного обучения SQL Server: Перед использованием этой функции необходимо включить внешние сценарии. Следуйте инструкциям в разделе [Установка служб машинного обучения SQL Server (в базе данных)](sql-machine-learning-services-windows-install.md) в качестве следующего шага. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. Перезапустите компонент ядро СУБД.
 
 1. Службы R SQL Server: Перед использованием этой функции необходимо включить внешние сценарии. Следуйте инструкциям в разделе [Установка служб R SQL Server (в базе данных)](sql-r-services-windows-install.md) в качестве следующего шага. 
@@ -177,7 +177,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 Изолированный сервер — это "общий компонент", не привязанный к экземпляру ядра СУБД. В следующих примерах показан допустимый синтаксис для установки изолированного сервера.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Сервер машинного обучения SQL Server поддерживает Python и R на изолированном сервере:
 
 ```cmd
@@ -185,7 +185,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Сервер R SQL Server доступен только для R:
 
 ```cmd
