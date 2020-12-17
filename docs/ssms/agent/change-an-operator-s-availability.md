@@ -23,13 +23,13 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9192b3b68c649b7e8e45f13b5b95a91aea1ff8a1
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 60ade9965f92b1c9ff5e459f1af109bd37c6a9c5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035727"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482270"
 ---
 # <a name="change-an-operator39s-availability"></a>Изменение доступности оператора
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "92035727"
   
 #### <a name="to-change-an-operators-availability"></a>Изменение доступности оператора  
   
-1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть сервер, содержащий оператора, которого нужно включить или отключить.  
+1.  В **обозревателе объектов** щелкните значок «плюс», чтобы развернуть сервер, содержащий оператора, которого нужно включить или отключить.  
   
 2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "92035727"
   
 #### <a name="to-change-an-operators-availability"></a>Изменение доступности оператора  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

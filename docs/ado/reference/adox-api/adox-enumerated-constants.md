@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1def9c0445551376aec56c36c554b9c74b15c02f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d4a6ab82630c058db9bbb0b05ca9ee5713a4c8ab
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985715"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641184"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX Enumerated Constants
 Для помощи в отладке перечисляемые константы ADOX список значений для каждой константы. Однако это значение является исключительно рекомендацией и может изменяться от одного выпуска ADOX к другому. Код должен зависеть только от имени перечисленных констант, а не от фактического значения.  
@@ -30,7 +30,7 @@ ms.locfileid: "88985715"
 |[ActionEnum](./actionenum.md)|Указывает тип действия, выполняемого при вызове **SetPermissions** .|  
 |[AllowNullsEnum](./allownullsenum.md)|Указывает, индексируются ли записи со значениями NULL.|  
 |[ColumnAttributesEnum](./columnattributesenum.md)|Задает характеристики **столбца**.|  
-|[DataTypeEnum](../ado-api/datatypeenum.md)|Указывает тип данных **поля**, **параметра**или **Свойства**.|  
+|[DataTypeEnum](../ado-api/datatypeenum.md)|Указывает тип данных **поля**, **параметра** или **Свойства**.|  
 |[InheritTypeEnum](./inherittypeenum.md)|Указывает, как объекты наследуют разрешения, заданные с помощью **SetPermissions**.|  
 |[KeyTypeEnum](./keytypeenum.md)|Указывает тип **ключа**: первичный, внешний или уникальный.|  
 |[ObjectTypeEnum](./objecttypeenum.md)|Указывает тип объекта базы данных, для которого задаются разрешения или владение.|  
@@ -38,6 +38,6 @@ ms.locfileid: "88985715"
 |[RuleEnum](./ruleenum.md)|Указывает правило, которое следует выполнить при удалении **ключа** .|  
 |[SortOrderEnum](./sortorderenum.md)|Задает последовательность сортировки для индексированного столбца.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по API ADOX](./adox-object-model.md?view=sql-server-ver15)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по API ADOX](./adox-object-model.md)   
  [Расширения ADO для языка описания данных и безопасности (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

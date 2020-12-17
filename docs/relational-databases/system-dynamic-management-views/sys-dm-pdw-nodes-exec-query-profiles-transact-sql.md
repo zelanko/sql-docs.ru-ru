@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: a8f3cfc9e47cc18df2728e7b6078cc355c488fa0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c5c908d8db988e83d682bbf636de08ef86a8223a
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440805"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644071"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 
@@ -72,7 +72,7 @@ ms.locfileid: "97440805"
   
 ## <a name="remarks"></a>Комментарии
 
-Те же примечания в [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) применяются.  
+Те же примечания в [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) применяются.  
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  

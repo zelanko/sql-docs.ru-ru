@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b4c8232909187894df11b7b1198fdb3416fbd1e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890865"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425489"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Установка или удаление надстройки служб Reporting Services для SharePoint (SSRS)
 
@@ -157,7 +157,7 @@ Rssharepoint.msi /?
 ### <a name="to-uninstall-from-windows-control-panel"></a>Удаление с панели управления Windows  
  Запуск мастера с панели управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и удаление надстройки  
   
-1.  На панели управления, в разделе **Программы**выберите **Удалить программу**.  
+1.  На панели управления, в разделе **Программы** выберите **Удалить программу**.  
   
 2.  Выберите **Надстройка служб Microsoft SQL Server RS для SharePoint**. Также вы можете открыть мастер удаления, запустив файл **rssharepoint.msi** из командной строки без ключей.  
   

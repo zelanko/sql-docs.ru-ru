@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: ca0b8567115c2a9209efb61185aad4fa4d05fa24
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6435440b60c7b90d78f8050d64b5b580e610f017
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97412992"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643337"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (база данных SQL Azure)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "97412992"
   
  Сведения о ценах см. в разделе [Параметры и производительность базы данных SQL: цены на базу данных SQL](https://azure.microsoft.com/pricing/details/sql-database/) и [цены на Azure синапсе Analytics](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- Сведения об изменении параметров службы см. в статье [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-transact-sql.md) и [ALTER DATABASE (Azure синапсе Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
+ Сведения об изменении параметров службы см. в статье [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-transact-sql.md) и [ALTER DATABASE (Azure синапсе Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).  
   
  Представление sys.database_service_objectives содержит следующие столбцы.  
   

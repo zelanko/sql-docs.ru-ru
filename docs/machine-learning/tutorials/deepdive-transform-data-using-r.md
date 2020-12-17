@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6260905faa886383ea41d913d1645fa47dc8ce7d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8c954d708a6dba6a0caad4122149cfcecdb5a182
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195096"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470515"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Преобразование данных с помощью языка R (учебник по SQL Server и RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92195096"
 > * Использование **rxDataStep** для создания и преобразования подмножества данных
 > * Использование **rxImport** для преобразования транзитных данных в XDF-файле или в кадре данных в памяти во время импорта
 
-Функции **rxSummary**, **rxCube**, **rxLinMod**и **rxLogit** поддерживают преобразования данных, хотя и не предназначены специально для перемещения данных.
+Функции **rxSummary**, **rxCube**, **rxLinMod** и **rxLogit** поддерживают преобразования данных, хотя и не предназначены специально для перемещения данных.
 
 ## <a name="use-rxdatastep-to-transform-variables"></a>Использование функции rxDataStep для преобразования переменных
 

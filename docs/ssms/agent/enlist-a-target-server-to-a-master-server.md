@@ -17,13 +17,13 @@ ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a936e1a601401787a36470d3119897ec0c5c5b77
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 63798bf4c5697adabfce39317883792ff73de2c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038888"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424133"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Прикрепление целевого сервера к главному
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92038888"
   
 #### <a name="to-enlist-a-target-server"></a>Прикрепление целевого сервера  
   
-1.  В **Обозревателе объектов**разверните главный сервер.  
+1.  В **Обозревателе объектов** разверните главный сервер.  
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server**, укажите пункт **Администрирование нескольких серверов**, а затем выберите пункт **Добавление целевых серверов**.  
   

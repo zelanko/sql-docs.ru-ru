@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4f6f001aa71a5ae2fd397fae2d89bdd951956987
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 735176a4fbb92d91d446f47492b2ddaa11098b2e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713832"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489419"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Урок 1. Основы навигации в помощнике по настройке ядра СУБД
 
@@ -32,10 +32,10 @@ ms.locfileid: "88713832"
 
 - Установите [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Скачайте [пример базы данных AdventureWorks2017](../../samples/adventureworks-install-configure.md?view=sql-server-2017).
+- Скачайте [пример базы данных AdventureWorks2017](../../samples/adventureworks-install-configure.md).
 
 
-См. инструкции по восстановлению резервной копии базы данных с помощью SSMS см. в статье: [Восстановление базы данных](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017).
+См. инструкции по восстановлению резервной копии базы данных с помощью SSMS см. в статье: [Восстановление базы данных](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
   >[!NOTE]
   > Этот учебник предназначен для пользователей, которые знакомы с SQL Server Management Studio и основными задачами по администрированию базы данных. 

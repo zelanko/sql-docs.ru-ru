@@ -9,20 +9,20 @@ ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
-ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: fdf9cb30fead518c36fef8de4e62db4cd56d9560
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94810514"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469995"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Новые возможности служб машинного обучения SQL Server
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
 В этих статьях описываются новые возможности и функции, включенные в различные версии [служб машинного обучения SQL Server](sql-server-machine-learning-services.md). Возможности машинного обучения добавляются в SQL Server в каждом выпуске, так как мы продолжаем расширять и углублять интеграцию между платформой данных, расширенной аналитикой и обработкой и анализом данных. 
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## <a name="new-in-sql-server-2019"></a>Новые возможности в SQL Server 2019
 
 В этом выпуске добавляются наиболее востребованные возможности для операций машинного обучения Python и R в SQL Server. Дополнительные сведения обо всех возможностях этого выпуска см. в статьях [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) и [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
@@ -41,7 +41,7 @@ ms.locfileid: "94810514"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 
 В этом выпуске добавляется [поддержка Python и ведущие в отрасли алгоритмы машинного обучения](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Переименованный в соответствии с новой областью, SQL Server 2017 вводит [Службы машинного обучения SQL Server (в базе данных)](sql-server-machine-learning-services.md) с языковой поддержкой Python и R. 
@@ -90,7 +90,7 @@ Python — это язык, обеспечивающий превосходну
 В этом выпуске также добавлен [Сервер машинного обучения SQL Server (изолированный)](r/r-server-standalone.md) — полностью независимый сервер обработки и анализа данных, поддерживающий статистический и прогнозирующий анализ в R и Python. Как и в случае со службами R, этот сервер является следующей версией SQL Server 2016 R Server (изолированный). С помощью изолированного сервера можно распространять и масштабировать решения R или Python без зависимостей от SQL Server.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="new-in-sql-server-2016"></a>Новые возможности SQL Server 2016
 
 В этом выпуске появились возможности машинного обучения в SQL Server с помощью **SQL Server 2016 R Services** — модуля аналитики в базе данных для обработки скрипта R в данных, хранящихся в экземпляре ядра СУБД.
@@ -106,7 +106,7 @@ Python — это язык, обеспечивающий превосходну
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="linux-support"></a>Поддержка Linux
 
 SQL Server 2019 добавляет поддержку Linux для R и Python при установке пакетов машинного обучения с помощью экземпляра ядра СУБД. Дополнительные сведения см. в статье [Установка служб машинного обучения SQL Server на Linux](../linux/sql-server-linux-setup-machine-learning.md).

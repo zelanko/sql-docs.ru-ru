@@ -15,13 +15,13 @@ ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b0a3f17e599b23144b47ac2747b270cb0d1fe9a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0eebafdfdb1c0f1fe948b6f68e391931d5fc7a87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035633"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424429"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "92035633"
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>Удаление учетной записи-посредника агента SQL Server  
   
-1.  В **обозревателе объектов**щелкните знак «плюс», чтобы развернуть сервер, содержащий учетную запись-посредник, которую необходимо удалить.  
+1.  В **обозревателе объектов** щелкните знак «плюс», чтобы развернуть сервер, содержащий учетную запись-посредник, которую необходимо удалить.  
   
 2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "92035633"
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>Удаление учетной записи-посредника агента SQL Server  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

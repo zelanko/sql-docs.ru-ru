@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 9bb87af8d580830072dd3a8199958497b8e38a25
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b4e4c686411d40a2c161c670821e6566460db4a4
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440819"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644077"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97440819"
 |**text**|**nvarchar(max)**|Текст SQL-запроса.<br /><br /> Имеет значение NULL для зашифрованных объектов.|  
 
 ## <a name="remarks"></a>Комментарии  
-Те же примечания в [sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md?view=sql-server-ver15) применяются.  
+Те же примечания в [sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md) применяются.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется роль сервера **sysadmin** или `VIEW SERVER STATE` разрешение на сервере.  

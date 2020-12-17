@@ -15,13 +15,13 @@ ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3c30588555fafa4922af3434271759614f19b1df
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 733e88a41fcf1d2fca045351610199cbc6375e9c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037997"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423976"
 ---
 # <a name="designate-an-events-forwarding-server"></a>Назначение сервера пересылки событий
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,9 +48,9 @@ ms.locfileid: "92037997"
   
 3.  В диалоговом окне **Свойства агента SQL Server —**_имя_сервера_ в разделе **Выберите страницу** выберите **Дополнительно**.  
   
-4.  В области **Пересылка событий SQL Server**установите флажок **Перенаправить события на другой сервер** .  
+4.  В области **Пересылка событий SQL Server** установите флажок **Перенаправить события на другой сервер** .  
   
-5.  В списке **Сервер** выберите сервер, а затем на вкладке **События**выполните одно из следующих действий:  
+5.  В списке **Сервер** выберите сервер, а затем на вкладке **События** выполните одно из следующих действий:  
   
     -   Выберите **Необработанные события** , чтобы выполнялась переадресация только событий, не обработанных локальными предупреждениями.  
   

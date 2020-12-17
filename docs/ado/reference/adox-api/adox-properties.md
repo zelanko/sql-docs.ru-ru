@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71c53b9a1f57e5c207500d25f1ab3eb0fec16ad8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cbc72515c3ba8bcee52bff213ba11bd0b4bc2140
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985595"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641153"
 ---
 # <a name="adox-properties"></a>Свойства ADOX
 
@@ -28,14 +28,14 @@ ms.locfileid: "88985595"
 |[ActiveConnection](./activeconnection-property-adox.md)|Указывает объект **соединения** ADO, к которому принадлежит каталог.|  
 |[Атрибуты](./attributes-property-adox.md)|Описывает характеристики столбцов.|  
 |[Кластеризованный](./clustered-property-adox.md)|Указывает, является ли индекс кластеризованным.|  
-|[Команда](./command-property-adox.md)|Указывает объект **команды** ADO, который может быть использован для создания или выполнения процедуры.|  
+|[Command](./command-property-adox.md)|Указывает объект **команды** ADO, который может быть использован для создания или выполнения процедуры.|  
 |[Count](../ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[DateCreated](./datecreated-property-adox.md)|Указывает дату создания объекта.|  
 |[DateModified](./datemodified-property-adox.md)|Указывает дату последнего изменения объекта.|  
 |[DefinedSize](./definedsize-property-adox.md)|Указывает указанный максимальный размер столбца.|  
 |[DeleteRule](./deleterule-property-adox.md)|Указывает действие, выполняемое при удалении первичного ключа.|  
 |[IndexNulls](./indexnulls-property-adox.md)|Указывает, имеют ли записи индекса элементы, имеющие значения NULL в полях индекса.|  
-|[Item](../ado-api/item-property-ado.md)|Указывает конкретный элемент коллекции по имени или порядковому номеру.|  
+|[Элемент](../ado-api/item-property-ado.md)|Указывает конкретный элемент коллекции по имени или порядковому номеру.|  
 |[имя](./name-property-adox.md);|Указывает имя объекта.|  
 |[NumericScale](./numericscale-property-adox.md)|Указывает Масштаб числового значения в столбце.|  
 |[ParentCatalog](./parentcatalog-property-adox.md)|Указывает родительский каталог таблицы или столбца, чтобы предоставить доступ к свойствам, зависящим от поставщика.|  
@@ -50,6 +50,6 @@ ms.locfileid: "88985595"
 |[Уникальный](./unique-property-adox.md)|Указывает, должны ли ключи индекса быть уникальными.|  
 |[UpdateRule](./updaterule-property-adox.md)|Указывает действие, выполняемое при обновлении первичного ключа.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по API ADOX](./adox-object-model.md?view=sql-server-ver15)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по API ADOX](./adox-object-model.md)   
  [Расширения ADO для языка описания данных и безопасности (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

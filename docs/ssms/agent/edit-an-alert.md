@@ -15,13 +15,13 @@ ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ccc873742a2c2c8d547d3d0a8200e6fbf6beb90
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 50ea1739cda75e303e3f0d9f1d6ac50b8c876950
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034997"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423762"
 ---
 # <a name="edit-an-alert"></a>Изменение предупреждения
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "92034997"
   
 4.  Щелкните правой кнопкой мыши предупреждение, которое необходимо изменить, и выберите пункт **Свойства**.  
   
-5.  Обновите свойства предупреждения на страницах **Общие**, **Отклик**и **Параметры** .  
+5.  Обновите свойства предупреждения на страницах **Общие**, **Отклик** и **Параметры** .  
   
 6.  После завершения нажмите кнопку **ОК**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "92034997"
   
 #### <a name="to-edit-an-alert"></a>Изменение предупреждения  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

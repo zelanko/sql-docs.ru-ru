@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6986e0bf160bb5dcdb54d6ae485b3d3879a4800a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b6b0626880ee69e4a35df9bb86c3f07d9c3c0a1d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985705"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641356"
 ---
 # <a name="adox-methods"></a>Методы ADOX
 
@@ -35,12 +35,12 @@ ms.locfileid: "88985705"
 |[Append (представления)](./append-method-adox-views.md)|Добавляет новый объект **представления** в коллекцию **представлений** .|  
 |[ChangePassword;](./changepassword-method-adox.md)|Изменяет пароль для учетной записи пользователя.|  
 |[Создание](./create-method-adox.md)|Создает новый каталог.|  
-|[Удаление](./delete-method-adox-collections.md)|Удаляет объект из коллекции.|  
+|[Удалить](./delete-method-adox-collections.md)|Удаляет объект из коллекции.|  
 |[Примеры методов getobjectowner](./getobjectowner-method-adox.md)|Возвращает владельца объекта в каталоге.|  
 |[GetPermissions](./getpermissions-method-adox.md)|Возвращает разрешения для группы или пользователя на объекте.|  
 |[SetObjectOwner](./setobjectowner-method.md)|Указывает владельца объекта в каталоге.|  
 |[SetPermissions](./setpermissions-method-adox.md)|Задает разрешения для группы или пользователя на объекте.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по API ADOX](./adox-object-model.md?view=sql-server-ver15)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по API ADOX](./adox-object-model.md)   
  [Расширения ADO для языка описания данных и безопасности (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

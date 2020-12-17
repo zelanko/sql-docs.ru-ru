@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d21d06182f259451f53fed45ba77a5cbacbb382d
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 76d9f23cb32818c67c34e562b6b1f714a5666c72
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767005"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482261"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов
 
@@ -33,7 +33,7 @@ ms.locfileid: "83767005"
 
  **Локальный режим.** Если у вас есть расширение данных, которое поддерживает локальный режим, средство просмотра отчетов будет напрямую отображать отчеты из SharePoint. В *локальном режиме* нет сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Необходимо установить дополнение [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint, сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не требуется. В локальном режиме пользователи могут просматривать отчеты, но **не** имеют доступа к функциям на стороне сервера, например подпискам и предупреждениям об изменении данных.  
   
- В**удаленном режиме**или *режиме соединения* требуется наличие сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint, который подключен к ферме SharePoint, чтобы элемент управления просмотром отчетов мог их создавать.  
+ В **удаленном режиме** или *режиме соединения* требуется наличие сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint, который подключен к ферме SharePoint, чтобы элемент управления просмотром отчетов мог их создавать.  
   
  Ниже приведен список модулей обработки данных, поддерживающих локальный режим составления отчетов.  
   

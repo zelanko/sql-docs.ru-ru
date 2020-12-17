@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ba4b4992b97cb930005458640215497f0487016f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778413"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641557"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Элементы языка T-SQL для параллельного хранилища данных
 Элементы языка T-SQL для аналитической системы платформы (ТД) SQL Server Parallel Data Warehouse (PDW).
@@ -23,7 +23,7 @@ ms.locfileid: "88778413"
 * [Синтаксические обозначения](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [правила именования объектов](../relational-databases/databases/database-identifiers.md)
 * [зарезервированные ключевые слова](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [параметры сортировки](../t-sql/statements/collations.md?view=sql-server-ver15)
+* [параметры сортировки](../t-sql/statements/collations.md)
 * [обсуждения](../t-sql/language-elements/comment-transact-sql.md)
 * [постоянным](../t-sql/data-types/constants-transact-sql.md)
 * [типы данных](../t-sql/data-types/data-types-transact-sql.md)
@@ -48,7 +48,7 @@ ms.locfileid: "88778413"
 ## <a name="operators"></a>Операторы
 * [+ (сложение)](../t-sql/language-elements/add-transact-sql.md)
 * [+ (объединение строк)](../t-sql/language-elements/string-concatenation-transact-sql.md)
-* [-(Отрицательное значение)](../t-sql/language-elements/unary-operators-negative.md)
+* [- (отрицательное значение)](../t-sql/language-elements/unary-operators-negative.md)
 * [- (вычитание)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (умножение)](../t-sql/language-elements/multiply-transact-sql.md)
 * [/ (Деление)](../t-sql/language-elements/divide-transact-sql.md)
@@ -71,7 +71,7 @@ ms.locfileid: "88778413"
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
 * [OR](../t-sql/language-elements/or-transact-sql.md)
 
-### <a name="bitwise-operators"></a>Побитовые операторы
+### <a name="bitwise-operators"></a>битовые операторы;
 * [& (побитовое И)](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [| (Побитовый оператор ИЛИ)](../t-sql/language-elements/bitwise-or-transact-sql.md)
 * [^ (Побитовое исключающее или)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)

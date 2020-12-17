@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c4cdbd3a640e49bc9a43e30d4bf98cff7bf71194
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: d8f4145b85d505ccdf1d0fe26b22f2cdf02d9e90
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523829"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641497"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Установка пакетов управления SQL Server Operations Manager (SCOM) для Analytics Platform System
 Выполните следующие действия, чтобы скачать и установить пакеты управления System Center Operations Manager (SCOM) для SQL Server PDW. Пакеты управления необходимы для отслеживания SQL Server PDW из SCOM.  
@@ -29,7 +29,7 @@ ms.locfileid: "92523829"
   
 Для управления устройством Скачайте [базовый пакет управления для устройства SQL Server](/previous-versions/system-center/packs/gg602398(v=technet.10)).  
   
-Для более старых версий PDW без ТД Скачайте[Пакет мониторинга System Center для Microsoft SQL Server 2012 параллельного хранилища данных](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7).  
+Для более старых версий PDW без ТД Скачайте[Пакет мониторинга System Center для Microsoft SQL Server 2012 параллельного хранилища данных](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7&preserve-view=true).  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
@@ -47,7 +47,7 @@ ms.locfileid: "92523829"
   
     ![Выбрать папку установки](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  Щелкните **Install**(Установить).  
+4.  Нажмите кнопку **Установить**.  
   
     ![Снимок экрана с мастером установки модуля мониторинга для SQL Serverного устройства "на шаге установки с параметром установки, обозначенным красным цветом.](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "92523829"
   
     ![Выбор папки установки](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  Щелкните **Install**(Установить).  
+4.  Нажмите кнопку **Установить**.  
   
     ![Снимок экрана мастера установки ПДВМП на шаге "подтвердить установку" с параметром установки, обозначенным красным цветом.](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
