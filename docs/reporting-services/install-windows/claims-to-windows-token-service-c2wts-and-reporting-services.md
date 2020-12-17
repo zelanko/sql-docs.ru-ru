@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 78d7265398cab553a9378fecc54b25a32d36e84d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891604"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489834"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Служба Claims to Windows Token Service (C2WTS) и службы Reporting Services
 
@@ -31,7 +31,7 @@ ms.locfileid: "91891604"
 
 1. Настройте экземпляр Reporting Services (собственный режим) для проверки подлинности Kerberos, определив учетную запись службы SSRS, настроив имя субъекта-службы и обновив файл rsreportserver.config, чтобы использовать тип проверки подлинности RSWindowsNegotiate. [Регистрация имени субъекта-службы для сервера отчетов](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. Выполните шаги из раздела, посвященного [настройке службы c2WTS](?view=sql-server-2017#steps-needed-to-configure-c2wts).
+2. Выполните шаги из раздела, посвященного [настройке службы c2WTS](#steps-needed-to-configure-c2wts).
  
 
 ## <a name="sharepoint-mode-integration"></a>Интеграция с режимом SharePoint
@@ -84,7 +84,7 @@ ms.locfileid: "91891604"
     * Выберите **Пользователи или компьютеры...&#42;** и введите учетную запись, в которой размещена служба. Например, если SQL Server выполняется под учетной записью с именем *sqlservice*, введите `sqlservice`. 
       Для **веб-части средства просмотра отчетов** это будет учетная запись службы для экземпляра Reporting Services (собственный режим).
 
-    * Выберите список служб. Отобразятся имена участников-служб, которые доступны в этой учетной записи. Если вы не видите в списке службу для соответствующей учетной записи, возможно, она отсутствует или размещена в другой учетной записи. Для настройки имен SPN можно использовать служебную программу SetSPN. Для **веб-части средства просмотра отчетов** отобразится имя участника-службы HTTP, настроенное в разделе [Настройка веб-части средства просмотра отчетов](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
+    * Выберите список служб. Отобразятся имена участников-служб, которые доступны в этой учетной записи. Если вы не видите в списке службу для соответствующей учетной записи, возможно, она отсутствует или размещена в другой учетной записи. Для настройки имен SPN можно использовать служебную программу SetSPN. Для **веб-части средства просмотра отчетов** отобразится имя участника-службы HTTP, настроенное в разделе [Настройка веб-части средства просмотра отчетов](#report-viewer-native-mode-web-part-configuration).
 
     * Нажмите кнопку ОК, чтобы закрыть все диалоговые окна.
 

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95b00aff6a4a42ff0bc0cc01d6e4933f8ef6ceae
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 67cdc278387de1faef999aa67543ec73c021bc41
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793801"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489744"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Изолированный сервер Machine Learning Server или R Server в SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -59,7 +59,7 @@ SQL Server 2016 поддерживает только язык R. SQL Server 2
 Установите одну из следующих версий:
 
 + [Machine Learning Server (изолированный) в SQL Server 2017](../install/sql-machine-learning-standalone-windows-install.md)
-+ [R Server (изолированный) в SQL Server 2016 — только R](../install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016)
++ [R Server (изолированный) в SQL Server 2016 — только R](../install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016&preserve-view=true)
 
 ### <a name="step-2-configure-a-development-tool"></a>Шаг 2. Настройте среду разработки
 
