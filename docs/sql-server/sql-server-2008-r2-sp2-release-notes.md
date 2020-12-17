@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebebc4ed225e131db50df4c4c0b1ee3eb6da51b7
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 33d919b5536994da040ce4cca4d4ac32a0e735c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384639"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466685"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>Заметки о выпуске пакета обновления 2 (SP2) для SQL Server 2008 R2
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "94384639"
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2. Неудачное завершение программы установки, если файл SQAGTRES.dll заблокирован другим процессом  
 **Проблема**. Операция установки SQL Server может завершиться неудачей со следующей ошибкой. `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` Основная причина состоит в том, что файл C:\Windows\system32\SQAGTRES.DLL заблокирован другим процессом и программа установки не может его обновить.  
   
-**Возможное решение** : Переименуйте файл C:\Windows\system32\SQAGTRES.DLL, указав временное имя, такое как C:\Windows\system32\SQAGTRES_old.DLL, а затем нажмите кнопку "Повтор" в окне сообщения об ошибке установки. Это даст возможность программе установки продолжить работу. После перезагрузки можно удалить временный файл C:\Windows\system32\SQAGTRES_old.DLL.  
+**Возможное решение**: Переименуйте файл C:\Windows\system32\SQAGTRES.DLL, указав временное имя, такое как C:\Windows\system32\SQAGTRES_old.DLL, а затем нажмите кнопку "Повтор" в окне сообщения об ошибке установки. Это даст возможность программе установки продолжить работу. После перезагрузки можно удалить временный файл C:\Windows\system32\SQAGTRES_old.DLL.  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0. Известные проблемы, исправленные в этом пакете обновления  
 Полный список ошибок и известных проблем, исправленных в этом пакете обновления, см. в следующей [статье базы знаний](https://support.microsoft.com/kb/2630455).  

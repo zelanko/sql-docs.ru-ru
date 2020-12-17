@@ -9,30 +9,30 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: afc692cdd0b7766ff0366f0de5d13e47d6dc27e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585066"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470185"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Учебник по R. Прогнозирование стоимости поездки в нью-йоркском такси с использованием двоичной классификации
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 В этой серии руководств для программистов SQL вы узнаете об интеграции R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или в [кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 В этой серии (из пяти частей) руководств для программистов SQL вы узнаете об интеграции R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 В этой серии руководств для программистов SQL вы узнаете об интеграции R в [Службы R для SQL Server 2016](../sql-server-machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 В этой серии (из пяти частей) руководств для программистов SQL вы узнаете об интеграции R в [службы машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
@@ -61,11 +61,11 @@ ms.locfileid: "94585066"
 
 ## <a name="prerequisites"></a>Предварительные условия
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 + Установка [Служб R в SQL Server 2016](../install/sql-r-services-windows-install.md#verify-installation)
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + Установка [Служб машинного обучения SQL Server с поддержкой R](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 ::: moniker-end
 
@@ -73,7 +73,7 @@ ms.locfileid: "94585066"
 
 + [Предоставление разрешений на выполнение скриптов Python](../security/user-permission.md)
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + Начиная с SQL Server 2019, механизм изоляции требует предоставления соответствующих разрешений каталогу, в котором хранится файл графика. Дополнительные сведения о настройке этих разрешений см. в разделе [Разрешения для файлов программы | SQL Server 2019 в Windows: изменения в изоляции в Службах машинного обучения](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 

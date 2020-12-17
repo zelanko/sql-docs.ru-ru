@@ -8,23 +8,23 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1d36936a0dc921a02897bcf7f9a9bfceb6766293
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: a356a006e2defb8fd8c99f479280ff75c5ea45d9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956785"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471165"
 ---
 # <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>Скачивание CAB-файлов с накопительными обновлениями Служб машинного обучения SQL Server для автономной установки
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Скачивание CAB-файлов для Служб машинного обучения SQL Server (Python и R) Эти CAB-файлы содержат обновления компонента "Службы машинного обучения" (Python и R) и используются при установке SQL Server на сервере без доступа к Интернету.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Скачайте CAB-файлы для SQL Server 2016 R Services (Python и R). Эти CAB-файлы содержат обновления для компонента R Services и используются при установке SQL Server на сервере без доступа к Интернету.
 ::: moniker-end
 
@@ -32,23 +32,23 @@ ms.locfileid: "91956785"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Начните с базовой установки. В Службах машинного обучения SQL Server базовой установкой является начальный выпуск. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Начните с базовой установки.  В службах R SQL Server 2016 можно сначала установить начальный выпуск с пакетом обновления 1 (SP1) или с пакетом обновления 2 (SP2). 
 ::: moniker-end
 
 Вы также можете применить накопительные пакеты обновления.
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 ## <a name="sql-server-2019-cabs"></a>CAB-файлы для SQL Server 2019
 
 CAB-файлы перечислены в обратном хронологическом порядке. Скачав CAB-файлы, перенесите их на целевой компьютер, поместив в удобную папку, например, в папку  **Downloads** или в папку %temp% пользователя, который выполняет установку.
 
-|Release | Компонент | Ссылка для скачивания | Устраненные проблемы |
+|Release | Компонент | Ссылка на скачивание | Устраненные проблемы |
 |------- | --------- | ------------- | ---------------- |
 |**[SQL Server 2019 CU8](https://support.microsoft.com/help/4577194)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
@@ -83,7 +83,7 @@ CAB-файлы перечислены в обратном хронологиче
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 ## <a name="sql-server-2017-cabs"></a>CAB-файлы для SQL Server 2017
 
@@ -154,7 +154,7 @@ CAB-файлы перечислены в обратном хронологиче
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 <a name="bkmk_2016Installers"></a>
 

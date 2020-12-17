@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9601deea339bbbc8875bbb593a4efef42cdd070d
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: e0a8f226602ab41422715368fb12c13809fa6b40
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92257771"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477155"
 ---
 # <a name="editions-and-supported-features-of-sssqlv15-md"></a>Выпуски и поддерживаемые функции [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
 
@@ -133,7 +133,7 @@ ms.locfileid: "92257771"
 |Максимальный объем памяти для буферного пула на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Максимум, поддерживаемый операционной системой|128 <nobr/>ГБ|64 <nobr/>ГБ|1410 <nobr/>МБ|1410<nobr/> МБ|
 |Максимальный объем памяти для кэша сегмента Columnstore на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Неограниченная память| 32 <nobr/>ГБ| 16 <nobr/>ГБ| 352 <nobr/>МБ| 352 <nobr/>МБ|
 |Максимальный размер данных, оптимизированных для памяти, на базу данных в [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Неограниченная память| 32 <nobr/>ГБ| 16 <nobr/>ГБ| 352 <nobr/>МБ| 352 <nobr/>МБ|
-|Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Максимум, поддерживаемый операционной системой|16 <nobr/>ГБ<sup>2</sup><br /><br /> 64 <nobr/>ГБ<sup>3</sup>|Н/Д|Н/Д|Н/Д|
+|Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Максимум, поддерживаемый операционной системой|16 <nobr/>ГБ<sup>2</sup><br /><br /> 64 <nobr/>ГБ<sup>3</sup>|Н/Д|Недоступно|Н/Д|
 |Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Максимум, поддерживаемый операционной системой|64 <nobr/>ГБ|64 <nobr/>ГБ|4 <nobr/>ГБ|Н/Д|
 |Максимальный размер реляционной базы данных|524 <nobr/> ПB|524 <nobr/> ПB|524 <nobr/> ПB|10 <nobr/>ГБ|10 <nobr/>ГБ|
 

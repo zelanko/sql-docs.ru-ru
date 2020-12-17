@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f430d2be5a9b1af495b296f59c172e16401c01eb
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: eabb3e524e052823d4ea7b04348a58ccaf24fb64
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901117"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478415"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Дополнительно»)
 
@@ -30,7 +30,7 @@ ms.locfileid: "88901117"
 > - [Расширенная защита Windows \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
 > - [Общие сведения о расширенной защите для проверки подлинности](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
-Дополнительные сведения о настройке других служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и полное описание функции **Расширенная защита**см. на сайте [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752).
+Дополнительные сведения о настройке других служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и полное описание функции **Расширенная защита** см. на сайте [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752).
 
 **Расширенная защита** полностью поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Поддержка **расширенной защиты** для других поставщиков клиентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в настоящее время отсутствует.
 
@@ -40,7 +40,7 @@ ms.locfileid: "88901117"
 
 Возможны три значения.  
 
-- **Off**: Это означает, что **Расширенная защита** отключена. Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принимает соединения от всех клиентов, независимо от того, является клиент защищенным или нет. При задании**Выкл.** обеспечивается совместимость с предыдущими версиями операционных систем и версиями без установленных обновлений, но этот режим отличается меньшей безопасностью. Этот режим можно использовать, если известно, что клиентские операционные системы не поддерживают расширенную защиту.
+- **Off**: Это означает, что **Расширенная защита** отключена. Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принимает соединения от всех клиентов, независимо от того, является клиент защищенным или нет. При задании **Выкл.** обеспечивается совместимость с предыдущими версиями операционных систем и версиями без установленных обновлений, но этот режим отличается меньшей безопасностью. Этот режим можно использовать, если известно, что клиентские операционные системы не поддерживают расширенную защиту.
 
 - **Разрешено**. Функция **Расширенная защита** требуется для установки подключений от операционных систем, поддерживающих функцию **Расширенная защита**. Соединения незащищенных клиентских приложений, выполняемых на защищенных клиентских операционных системах, отклоняются. **Расширенная защита** пропускается для соединений от незащищенных операционных систем. Этот параметр обеспечивает более высокий уровень защиты, чем **Выкл**, но, тем не менее, не обеспечивает самый высокий уровень защиты. Этот параметр следует использовать в смешанных средах, где одни операционные системы и приложения поддерживают **расширенную защиту** , а другие — нет.
 

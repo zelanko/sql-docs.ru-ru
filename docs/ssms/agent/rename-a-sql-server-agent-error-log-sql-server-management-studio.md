@@ -16,13 +16,13 @@ ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e636d3a46feb104325e86fd53f98bbc108ce5be5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 28f93c2923c68f2f0585eced379548a87e1275f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034968"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472315"
 ---
 # <a name="rename-a-sql-server-agent-error-log"></a>Переименование журнала ошибок агента SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "92034968"
   
 #### <a name="to-rename-a-sql-server-agent-error-log"></a>Переименование журнала ошибок агента SQL Server  
   
-1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть сервер, содержащий журнал агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который необходимо переименовать.  
+1.  В **обозревателе объектов** щелкните значок «плюс», чтобы развернуть сервер, содержащий журнал агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который необходимо переименовать.  
   
 2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   

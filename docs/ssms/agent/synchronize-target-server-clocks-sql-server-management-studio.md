@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 496a5e901ec802cbd7a7ffbb810a14ee31734dcc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 01294938af5e2d1813a371091e89b03321268637
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037763"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478785"
 ---
 # <a name="synchronize-target-server-clocks"></a>Синхронизация часов целевых серверов
 
@@ -53,7 +53,7 @@ ms.locfileid: "92037763"
   
 4.  В списке **Тип инструкции** выберите **Синхронизировать часы**.  
   
-5.  В пункте **Адресаты**выполните одно из следующих действий:  
+5.  В пункте **Адресаты** выполните одно из следующих действий:  
   
     -   Установите флажок **Все целевые серверы** , чтобы синхронизировать часы всех целевых серверов с часами главного сервера.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "92037763"
   
 #### <a name="to-synchronize-target-server-clocks"></a>Синхронизация часов целевых серверов  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b828996ad806ad3c98694ed5065466e6b5f8c9f
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e65aa07cff708a7112b7a0c4e0bbc0338cb40860
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344050"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477115"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 
@@ -74,7 +74,7 @@ ms.locfileid: "92344050"
   
 3.  В диалоговом окне **Свойства задания** выберите страницу **Шаги** и нажмите кнопку **Добавить**.  
   
-4.  В диалоговом окне **Новый шаг задания** введите **Имя шага**задания.  
+4.  В диалоговом окне **Новый шаг задания** введите **Имя шага** задания.  
   
 5.  В списке **Типы** выберите **Команда служб SQL Server Analysis Services**.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "92344050"
   
 3.  В диалоговом окне **Свойства задания** выберите страницу **Шаги** и нажмите кнопку **Добавить**.  
   
-4.  В диалоговом окне **Новый шаг задания** введите **имя шага**задания.  
+4.  В диалоговом окне **Новый шаг задания** введите **имя шага** задания.  
   
 5.  В списке **Типы** выберите **Запрос служб SQL Server Analysis Services**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "92344050"
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Создание шага задания команды службы Analysis Services  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "92344050"
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Создание шага задания запроса служб Analysis Services  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

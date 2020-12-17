@@ -11,13 +11,13 @@ ms.author: maghan
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98d82f71690be9f22cb891d002a315ccfa7c1762
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 76d942c643b510f956f5199920c228e4071795e8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039008"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480655"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Формирование скриптов (среда SQL Server Management Studio)
 
@@ -65,7 +65,7 @@ ms.locfileid: "92039008"
 
 3. Разверните узел категории типов объектов, для которых требуется создать скрипт, например узел **Таблицы** .
 
-4. Откройте панель **Подробности обозревателя объектов** . Для этого нажмите клавишу **F7**или откройте меню **Вид** и выберите пункт **Подробности обозревателя объектов**.
+4. Откройте панель **Подробности обозревателя объектов** . Для этого нажмите клавишу **F7** или откройте меню **Вид** и выберите пункт **Подробности обозревателя объектов**.
 
     ![Меню "Вид"](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 

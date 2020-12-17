@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2cd244454b78e1199d59dcfe6539498328eac674
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 518406668e890aeddf656394ca9277610bc34f3f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870452"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470415"
 ---
 # <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Учебник по Python. Подготовка данных для классификации клиентов с использованием машинного обучения SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Во второй части этого цикла учебников, состоящего из четырех частей, вы восстановите и подготовите данные из базы данных с использованием Python. Далее в этом цикле вы используете подготовленные данные для обучения и развертывания модели кластеризации в Python с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Во второй части этого цикла учебников, состоящего из четырех частей, вы восстановите и подготовите данные из базы данных с использованием Python. Далее в этой серии руководств вы будете использовать эти данные для обучения и развертывания модели кластеризации с использованием Python в службах машинного обучения SQL Server.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Во второй части этого цикла учебников, состоящего из четырех частей, вы восстановите и подготовите данные из базы данных с использованием Python. Далее в этой серии руководств вы будете использовать эти данные для обучения и развертывания модели кластеризации с использованием Python в службах машинного обучения Управляемого экземпляра SQL Azure.
 ::: moniker-end
 

@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27e2596894e6d36742472ad1d3ae192fc37787e6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765943"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489674"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Настройка Службы Kubernetes Azure для развертываний кластера больших данных SQL Server
 
@@ -149,7 +149,7 @@ AKS упрощает создание, настройку и кластера в
 
 ## <a name="connect-to-the-cluster"></a>Подключение к кластеру
 
-1. Чтобы настроить kubectl для подключения к кластеру Kubernetes, выполните команду [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials). На этом шаге выполняется скачивание учетных данных и настройка интерфейса командной строки kubectl для их использования.
+1. Чтобы настроить kubectl для подключения к кластеру Kubernetes, выполните команду [az aks get-credentials](/cli/azure/aks#az-aks-get-credentials). На этом шаге выполняется скачивание учетных данных и настройка интерфейса командной строки kubectl для их использования.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,7 +165,7 @@ AKS упрощает создание, настройку и кластера в
 
 Если у вас возникли проблемы при создании Службы Azure Kubernetes с помощью предыдущих команд, воспользуйтесь следующими способами.
 
-- Убедитесь, что установлена [последняя версия Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Убедитесь, что установлена [последняя версия Azure CLI](/cli/azure/install-azure-cli).
 - Попробуйте выполнить те же действия, используя другую группу ресурсов и имя кластера.
 - См. [документацию по устранению неполадок, связанных с AKS](/azure/aks/troubleshooting).
 

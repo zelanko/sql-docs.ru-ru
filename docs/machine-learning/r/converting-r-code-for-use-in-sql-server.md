@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3badcbfeb967f76cef945bf3ebe108c44825772e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 56a52c3245d364bd1b111dbe5fedbda9da48e493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098873"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470955"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Преобразование кода R для выполнения в экземплярах SQL Server (в базе данных)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "92098873"
 
 ### <a name="improve-performance-and-security"></a>Повышение производительности и безопасности
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + Не рекомендуется записывать прогнозы или промежуточные результаты в файл. Чтобы избежать перемещения данных, вместо этого следует записывать прогнозы в таблицу.
 ::: moniker-end
 
@@ -117,7 +117,7 @@ ms.locfileid: "92098873"
 
 + Ищите способы для выполнения вычислений на основе наборов с использованием кода T-SQL, а не R.
 
-  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
   Например, это решение R демонстрирует, как пользовательские функции T-SQL и R могут выполнять одинаковую задачу по формированию признаков: [Пошаговое руководство по обработке и анализу данных](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
   ::: moniker-end
 
@@ -169,6 +169,6 @@ ms.locfileid: "92098873"
 
 + [Учебник по R. Прогнозирование стоимости поездки в нью-йоркском такси с использованием двоичной классификации](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [Комплексное решение по обработке и анализу данных](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) — в этой статье приведено сравнение формирования признаков в R и T-SQL
 ::: moniker-end

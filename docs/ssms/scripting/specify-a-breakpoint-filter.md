@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f4a350830a4d0672877cb94deb9b4baf8e602944
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036311"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466275"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Задание фильтра точек останова
 
@@ -45,7 +45,7 @@ ms.locfileid: "92036311"
   
     -   **MachineName** — это компьютер, на котором запущен экземпляр Database Engine.  
   
-    -   **ProcessID**и **ProcessName** — это процесс операционной системы, в котором исполняется экземпляр компонента Database Engine.  
+    -   **ProcessID** и **ProcessName** — это процесс операционной системы, в котором исполняется экземпляр компонента Database Engine.  
   
     -   **ThreadID** и **ThreadName** — это поток операционной системы, в котором выполняется пакет, процедура или функция [!INCLUDE[tsql](../../includes/tsql-md.md)] на экземпляре Database Engine.  
   

@@ -9,13 +9,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 03/01/2017
-ms.openlocfilehash: cfddbdca35d24589b3fa87976cbfb547f14a46ee
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.date: 12/13/2020
+ms.openlocfilehash: b99ed7142dece1c256962b21dacf46bc78470967
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891794"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489854"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)
 
@@ -25,7 +25,7 @@ ms.locfileid: "91891794"
 
 Чтобы создать внедренный источник данных, необходимы сведения о соединении с внешним источником данных и сведения о разрешениях для доступа к данным. Эти сведения обычно предоставляет владелец источника данных. Можно проверить соединение, чтобы убедиться, что указаны правильные учетные данные.
 
-Дополнительные сведения см. в статьях о [создании строк подключения к данным (построитель отчетов и службы SSRS)](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и об [указании учетных данных в построителе отчетов](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017).
+Дополнительные сведения см. в статьях о [создании строк подключения к данным (построитель отчетов и службы SSRS)](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и об [указании учетных данных в построителе отчетов](./specify-credential-and-connection-information-for-report-data-sources.md).
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -57,9 +57,9 @@ ms.locfileid: "91891794"
 
 4. Если не удалось установить подключение, отобразится следующее сообщение: "Не удалось подключиться к источнику данных".  
 
-5. Нажмите кнопку **Подробные сведения**и воспользуйтесь предоставленными сведениями, чтобы исправить проблему.
+5. Нажмите кнопку **Подробные сведения** и воспользуйтесь предоставленными сведениями, чтобы исправить проблему.
 
-    Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017).
+    Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](./specify-credential-and-connection-information-for-report-data-sources.md).
 
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

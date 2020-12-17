@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 107b4cc7c68f1fdf91a685235d336556740547c7
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8e2f37542ae3363e654370f6dcdcbc76cc941335
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956595"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470855"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Создание запросов многомерных выражений на языке R с помощью olapR
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "91956595"
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. Базовое многомерное выражение со срезом
 
-Этот запрос многомерных выражений выбирает _меры_ для количества и объема продаж через Интернет и размещает их на оси столбцов. Она добавляет элементы измерения SalesTerritory в качестве *среза*для фильтрации запроса, чтобы в вычислениях использовались только данные по продажам из Австралии.
+Этот запрос многомерных выражений выбирает _меры_ для количества и объема продаж через Интернет и размещает их на оси столбцов. Она добавляет элементы измерения SalesTerritory в качестве *среза* для фильтрации запроса, чтобы в вычислениях использовались только данные по продажам из Австралии.
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 
