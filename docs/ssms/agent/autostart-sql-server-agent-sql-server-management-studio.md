@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9916bd14969b7bf9065e98ecb07fc131d8391f30
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 32006b2ac6581e4f5bc3a303cc5f6475483708c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472375"
 ---
 # <a name="autostart-sql-server-agent"></a>Автозапуск агента SQL Server
 
@@ -55,7 +55,7 @@ ms.locfileid: "92035753"
   
 #### <a name="to-configure-sql-server-agent-to-automatically-restart"></a>Настройка агента SQL Server на автоматический перезапуск  
   
-1.  В **обозревателе объектов**щелкните знак «плюс», чтобы развернуть сервер, на котором необходимо настроить агент SQL Server на автоматический перезапуск.  
+1.  В **обозревателе объектов** щелкните знак «плюс», чтобы развернуть сервер, на котором необходимо настроить агент SQL Server на автоматический перезапуск.  
   
 2.  Щелкните правой кнопкой мыши **агент SQL Server**, затем выберите **Свойства**.  
   

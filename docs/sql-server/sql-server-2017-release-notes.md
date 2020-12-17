@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2cb011f6d5140099a82a3d41587c5f7a93fac009
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: = sql-server-2017
+ms.openlocfilehash: 83829530014c83279bcde7dc8aa4be17496bdf50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985710"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409590"
 ---
 # <a name="sql-server-2017-release-notes"></a>Заметки о выпуске SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91985710"
     3. Снова установите флажок **Разрешить FILESTREAM при потоковом доступе файлового ввода-вывода** для имени исходной общей папки и нажмите кнопку **Применить**.
 
 ### <a name="master-data-services-mds"></a>Службы Master Data Services (MDS)
-- **Проблема и последствия для клиентов:**   когда на странице разрешений пользователя предоставляется разрешение для корневого уровня в представлении сущностей в виде дерева, отображается ошибка `"The model permission cannot be saved. The object guid is not valid"`.
+- **Проблема и последствия для клиентов:**  когда на странице разрешений пользователя предоставляется разрешение для корневого уровня в представлении сущностей в виде дерева, отображается ошибка `"The model permission cannot be saved. The object guid is not valid"`.
 
 - **Решение:** 
   - Предоставьте разрешение для подузлов в представлении в виде дерева, а не для корневого уровня.

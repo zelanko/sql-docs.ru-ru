@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b9cfce1762ef678e544a2148df4a4d79074e152
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fe50ef2d018f01e0811c5d950f73ae6cb3d3c5f3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991075"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638063"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Общие сведения о поставщике сохраняемости Microsoft OLE DB
 Поставщик сохраняемости Microsoft OLE DB позволяет сохранить объект [набора записей](../../reference/ado-api/recordset-object-ado.md) в файл, а затем восстановить этот объект **набора записей** из файла. Сведения о схеме, данные и ожидающие изменения сохраняются.
@@ -34,7 +34,7 @@ ms.locfileid: "88991075"
 "Provider=MSPersist"
 ```
 
-## <a name="errors"></a>Ошибки
+## <a name="errors"></a>ошибки
  Следующие ошибки, выданные поставщиком, могут быть обнаружены в приложении.
 
 |Константа|Описание|
@@ -42,7 +42,7 @@ ms.locfileid: "88991075"
 |E_BADSTREAM|Открытый файл имеет недопустимый формат (то есть формат не АДТГ или XML).|
 |E_CANTPERSISTROWSET|Сохраненный объект **набора записей** имеет характеристики, которые не позволяют сохранить его.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
  Поставщик сохраняемости Microsoft OLE DB не предоставляет динамические свойства.
 
  В настоящее время невозможно сохранить только параметризованные иерархические объекты **Recordset** .
@@ -50,6 +50,3 @@ ms.locfileid: "88991075"
  Дополнительные сведения о постоянном хранении объектов **набора записей** см. в разделе [Сохранение набора записей](../data/more-about-recordset-persistence.md).
 
  Если для открытия **набора записей** используется поток, не должны быть заданы параметры, отличные от *исходного* параметра метода **Open** .
-
-## <a name="see-also"></a>См. также
-[Поставщик сохраняемости Microsoft OLE DB (поставщик служб ADO)]()

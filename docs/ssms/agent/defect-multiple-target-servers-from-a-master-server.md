@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0397c22a479f911ebe5e070ece2d9cdf1fe6ab07
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f047c57adc1c9cd660b38d7c72bc5dc3a00cc9e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036643"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477055"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
 
@@ -39,13 +39,13 @@ ms.locfileid: "92036643"
   
 #### <a name="to-defect-multiple-target-servers-from-a-master-server"></a>Отключение нескольких целевых серверов от главного  
   
-1.  В **Обозревателе объектов**разверните главный сервер.  
+1.  В **Обозревателе объектов** разверните главный сервер.  
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server**, укажите пункт **Администрирование нескольких серверов**, а затем выберите пункт **Управление целевыми серверами**.  
   
-3.  Щелкните **Отправить инструкции**и в списке **Тип инструкции** выберите **Отключить**.  
+3.  Щелкните **Отправить инструкции** и в списке **Тип инструкции** выберите **Отключить**.  
   
-4.  В пункте **Адресаты**выполните одно из следующих действий:  
+4.  В пункте **Адресаты** выполните одно из следующих действий:  
   
     -   щелкните **Все целевые серверы** , чтобы отключить от главного сервера все целевые (этот параметр используется в случае, когда нужно полностью удалить установленную текущую конфигурацию администрирования нескольких серверов);  
   

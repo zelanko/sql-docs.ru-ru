@@ -9,14 +9,14 @@ ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6625e985781f3980c44bef9b6dbd408243ac78a9
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: a524b238e980ee4b8972a4a8f7b976a34ca17c3e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523854"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420126"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>Виртуализация данных CSV-файла из пула носителей (кластеры больших данных)
 
@@ -85,13 +85,13 @@ Azure Data Studio обеспечивает предварительный про
 
 ## <a name="summary"></a>Сводка
 
-На этом шаге предоставляется сводка выбранных значений. Он предоставляет имя SQL Server, имя базы данных, имя таблицы, схему таблицы и сведения о внешней таблице. На этом шаге можно создать скрипт или создать таблицу. **Создать скрипт**  — создание скрипта в T-SQL для создания внешнего источника данных. **Создать таблицу**  — создание внешнего источника данных.
+На этом шаге предоставляется сводка выбранных значений. Он предоставляет имя SQL Server, имя базы данных, имя таблицы, схему таблицы и сведения о внешней таблице. На этом шаге можно создать скрипт или создать таблицу. **Создать скрипт** — создание скрипта в T-SQL для создания внешнего источника данных. **Создать таблицу** — создание внешнего источника данных.
 
 ![Экран сводки](media/data-virtualization/150-csv-virtualize-data-summary.png)
 
 После нажатия кнопки **Создать таблицу** SQL Server создаст внешнюю таблицу в целевой базе данных.
 
-Если щелкнуть **Создать скрипт** , Azure Data Studio создаст запрос T-SQL для создания внешней таблицы.
+Если щелкнуть **Создать скрипт**, Azure Data Studio создаст запрос T-SQL для создания внешней таблицы.
 
 После создания таблицу можно запрашивать напрямую с помощью T-SQL из экземпляра SQL Server.
 

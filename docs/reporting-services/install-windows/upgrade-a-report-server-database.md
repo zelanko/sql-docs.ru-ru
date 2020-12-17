@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: b4d5b4e01abaf0643f6f121be28abe98972078a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891174"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472435"
 ---
 # <a name="upgrade-a-report-server-database"></a>Обновление базы данных сервера отчетов
 
@@ -25,7 +25,7 @@ ms.locfileid: "91891174"
   
  **Собственный режим**. В собственном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] база данных сервера отчетов на самом деле состоит из двух баз данных с именами по умолчанию: ReportServer и ReportServerTempDB.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **Режим SharePoint**: в режиме интеграции служб SQL Server 2016 Reporting Services с SharePoint база данных сервера отчетов фактически является коллекцией баз данных, созданных для каждого экземпляра приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 

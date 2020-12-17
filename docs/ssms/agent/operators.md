@@ -24,13 +24,13 @@ ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e275d0465f436e20ac590e40a001fb8c335a573
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 770f6c82bfdafb20d826ae11b52ada0a0b1a5702
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033076"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478865"
 ---
 # <a name="operators"></a>Операторы
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "92033076"
   
 -   Для передачи пейджинговых сообщений необходимо иметь программные или аппаратные средства от независимых операторов для преобразования пейджинговых сообщений в сообщения электронной почты.  
   
--   Для выполнения команды **net send**оператор должен быть зарегистрирован на указанном компьютере, а указанный компьютер должен принимать сообщения от Windows Messenger.  
+-   Для выполнения команды **net send** оператор должен быть зарегистрирован на указанном компьютере, а указанный компьютер должен принимать сообщения от Windows Messenger.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   

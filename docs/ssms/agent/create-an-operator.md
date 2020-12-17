@@ -18,13 +18,13 @@ ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bad9dcc1d3fad1e7f0359d7805f93cbe44cb7652
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1c3aa127a22f45d403de94484b590a3fc5db1616
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035053"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477125"
 ---
 # <a name="create-an-operator"></a>Create an Operator
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "92035053"
   
 #### <a name="to-create-an-operator"></a>Создание оператора  
   
-1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть сервер, на котором необходимо создать оператора агента SQL Server.  
+1.  В **обозревателе объектов** щелкните значок «плюс», чтобы развернуть сервер, на котором необходимо создать оператора агента SQL Server.  
   
 2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "92035053"
   
 #### <a name="to-create-an-operator"></a>Создание оператора  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

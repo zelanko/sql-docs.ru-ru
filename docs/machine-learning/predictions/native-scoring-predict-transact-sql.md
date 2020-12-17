@@ -9,13 +9,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d8f65baaec3038431455712d64803459a96e45c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: 842daa6574dc660346733e7b74b539eba5c7f7b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956965"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471035"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function-with-sql-machine-learning"></a>Собственная оценка с использованием функции PREDICT T-SQL с помощью машинного обучения SQL
 
@@ -60,13 +60,13 @@ ms.locfileid: "91956965"
 | SQL Azure для пограничных вычислений | Да | Нет |
 | Azure Synapse Analytics | Да | Нет |
 
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="onnx-models"></a>Модели ONNX
 
 Модель должна быть в формате [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html).
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ### <a name="revoscale-models"></a>Модели RevoScale
 
 Модель должна быть заранее обучена с помощью одного из поддерживаемых алгоритмов **rx**, указанных ниже, с использованием пакетов [RevoScaleR](../r/ref-r-revoscaler.md) или [revoscalepy](../python/ref-py-revoscalepy.md).
@@ -106,7 +106,7 @@ ms.locfileid: "91956965"
 ::: moniker-end
 
 ## <a name="examples"></a>Примеры
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="predict-with-an-onnx-model"></a>PREDICT с моделью ONNX
 
 В этом примере показано, как использовать модель ONNX, хранимую в таблице `dbo.models`, для собственной оценки.
@@ -145,7 +145,7 @@ FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1
 > Поскольку столбцы и значения, возвращаемые функцией **PREDICT**, могут зависеть от типа модели, необходимо определить схему возвращаемых данных с помощью предложения **WITH**.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017"
 ### <a name="predict-with-revoscale-model"></a>PREDICT с моделью RevoScale
 
 В этом примере создается модель с помощью **RevoScaleR** в R, а затем вызывается функция прогнозирования в реальном времени из T-SQL.

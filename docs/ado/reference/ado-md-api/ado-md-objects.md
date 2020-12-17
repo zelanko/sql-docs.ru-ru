@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a75672db242d5b7388eb625bc028728c8522b11c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c988c6a1bbe0d8d582af3ab8a355f1109906401c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987435"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639651"
 ---
 # <a name="ado-md-objects"></a>Многомерные объекты ADO
 
@@ -32,22 +32,22 @@ ms.locfileid: "88987435"
 |[CubeDef](./cubedef-object-ado-md.md)|Представляет куб из многомерной схемы, содержащий набор связанных измерений.|  
 |[Измерение](./dimension-object-ado-md.md)|Представляет одно из измерений многомерного куба, содержащего одну или несколько иерархий элементов.|  
 |[Иерархия](./hierarchy-object-ado-md.md)|Представляет один из способов, с помощью которых элементы измерения могут быть объединены или сведены. Измерение можно объединить по одной или нескольким иерархиям.|  
-|[Level](./level-object-ado-md.md)|Содержит набор элементов, каждый из которых имеет одинаковый ранг в иерархии.|  
+|[Уровень](./level-object-ado-md.md)|Содержит набор элементов, каждый из которых имеет одинаковый ранг в иерархии.|  
 |[Член](./member-object-ado-md.md)|Представляет элемент уровня в Кубе, дочерние элементы элемента уровня или элемента в положении вдоль оси набора ячеек.|  
-|[Положение](./position-object-ado-md.md)|Представляет набор из одного или нескольких элементов различных измерений, определяющих точку вдоль оси.|  
+|[Позиция](./position-object-ado-md.md)|Представляет набор из одного или нескольких элементов различных измерений, определяющих точку вдоль оси.|  
   
  Кроме того, объект **каталога** подключается к объекту **соединения** ADO, который входит в стандартную библиотеку ADO:  
   
 |Объект|Описание|  
 |------------|-----------------|  
-|[Соединение](../ado-api/connection-object-ado.md)|Представляет открытое подключение к источнику данных.|  
+|[Подключение](../ado-api/connection-object-ado.md)|Представляет открытое подключение к источнику данных.|  
   
  Связи между этими объектами иллюстрируются в [объектной модели объекты данных ActiveX (MD)](./ado-md-object-model.md).  
   
  Многие объекты объекты данных ActiveX (MD) могут содержаться в соответствующей коллекции. Например, объект [CubeDef](./cubedef-object-ado-md.md) может содержаться в коллекции [кубедефс](./cubedefs-collection-ado-md.md) **каталога**. Дополнительные сведения см. в разделе [объекты данных ActiveX (MD) Collections](./ado-md-collections.md).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по объекты данных ActiveX (MD) API](./ado-md-object-model.md?view=sql-server-ver15)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по объекты данных ActiveX (MD) API](./ado-md-object-model.md)   
  [Примеры кода объекты данных ActiveX (MD)](./ado-md-code-examples.md)   
  [объекты данных ActiveX (MD) коллекции](./ado-md-collections.md)   
  [объекты данных ActiveX (MD) перечислимые константы](./ado-md-enumerated-constants.md)   

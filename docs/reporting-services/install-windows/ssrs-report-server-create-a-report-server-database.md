@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 922445116df06017b84aa84bf8dff8f924f2aeae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935569"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474555"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>Создание базы данных сервера отчетов, диспетчер конфигурации сервера отчетов  
 
@@ -25,9 +25,9 @@ ms.locfileid: "91935569"
 
 Эти базы данных создаются одновременно и связываются по именам. В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию базы данных именуются **reportserver** и **reportservertempdb**. В совокупности эти две базы данных называются **базой данных сервера отчетов** или **каталогом сервера отчетов**.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
-В режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]интеграции с SharePoint**SQL Server** добавляет третью базу данных для метаданных предупреждений об изменении данных. Эти три базы данных создаются отдельно для каждого приложения службы SSRS. Имена баз данных по умолчанию содержат идентификатор GUID, который соответствует приложению службы. 
+В режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]интеграции с SharePoint **SQL Server** добавляет третью базу данных для метаданных предупреждений об изменении данных. Эти три базы данных создаются отдельно для каждого приложения службы SSRS. Имена баз данных по умолчанию содержат идентификатор GUID, который соответствует приложению службы. 
 
 Далее приводятся примеры имен этих трех баз данных, используемых в режиме интеграции с SharePoint.
 
@@ -53,7 +53,7 @@ ms.locfileid: "91935569"
   
 - **Вручную**. Используйте диспетчер конфигурации SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Базу данных сервера отчетов следует создавать вручную, если вы используете для хранения базы данных удаленный [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Дополнительные сведения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-mode"></a>Режим интеграции с SharePoint 
 На странице **Report Server Installation Options** (Параметры установки сервера отчетов) есть только один вариант для режима интеграции с SharePoint: **Install Only** (Только установка). Это действие устанавливает все файлы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и общую службу SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. После этого следует создать по крайней мере одно приложение службы SSRS одним из следующих способов.  
@@ -67,14 +67,14 @@ ms.locfileid: "91935569"
 ## <a name="database-server-version-requirements"></a>Требования к версии сервера баз данных
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется для размещения баз данных сервера отчетов. Экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] может быть локальным или удаленным. Далее перечислены поддерживаемые версии компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], на которых можно размещать базы данных сервера отчетов.  
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 - Управляемый экземпляр SQL Azure
 
 - SQL Server 2019
 
 ::: moniker-end
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 - SQL Server 2017  
 ::: moniker-end

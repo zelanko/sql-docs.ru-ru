@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8402ec9094b7e765764d5e650ac27a0b87b0e5d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793751"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471125"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Установка предварительно обученных моделей машинного обучения в SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "92793751"
 
 Необходимо включить внешние сценарии, а на SQL Server должна быть запущена служба панели запуска. Инструкции по установке содержат инструкции по включению и проверке этих компонентов. 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 [Пакет R MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) и [пакет Python microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) содержат предварительно обученные модели.
 
 [Службы машинного обучения SQL Server](sql-machine-learning-services-windows-install.md) включают версии библиотеки машинного обучения для обоих языков, поэтому это условие выполняется без каких-либо дополнительных действий с вашей стороны. Так как библиотеки существуют, можно использовать сценарий PowerShell, описанный в этой статье, чтобы добавить предварительно обученные модели в эти библиотеки.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 [Пакет MicrosoftML R](/machine-learning-server/r-reference/microsoftml/microsoftml-package) содержит предварительно обученные модели.
 
 Службы [SQL Server R Services](sql-r-services-windows-install.md), предназначенные только для языка R, не содержат [пакет MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package). Чтобы добавить пакет MicrosoftML, необходимо выполнить [обновление компонентов](../install/upgrade-r-and-python.md). Одним из преимуществ обновления компонентов является возможность одновременного добавления предварительно обученных моделей, что делает ненужным выполнение сценария PowerShell. Однако если вы уже выполнили обновление, но не добавили предварительно обученные модели в первый раз, можно выполнить сценарий PowerShell, как описано в этой статье. Он работает для обеих версий SQL Server. Перед выполнением сценария убедитесь, что библиотека MicrosoftML в `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library` существует.
@@ -73,11 +73,11 @@ ms.locfileid: "92793751"
 
 ## <a name="download-the-installation-script"></a>Скачивание сценария установки
 
-Щелкните [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql), чтобы скачать файл **Install-MLModels.ps1** .
+Щелкните [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql), чтобы скачать файл **Install-MLModels.ps1**.
 
 ## <a name="execute-with-elevated-privileges"></a>Выполнение с повышенными привилегиями
 
-1. Запустите PowerShell. На панели задач щелкните правой кнопкой мыши значок программы PowerShell и выберите **Запуск от имени администратора** .
+1. Запустите PowerShell. На панели задач щелкните правой кнопкой мыши значок программы PowerShell и выберите **Запуск от имени администратора**.
 2. Введите полный путь к файлу сценария установки, указав имя экземпляра. Если сценарий находится в папке Downloads и используется экземпляр по умолчанию, команда может выглядеть следующим образом:
 
    ```powershell
@@ -196,7 +196,7 @@ ms.locfileid: "92793751"
 
 ## <a name="research-and-resources"></a>Исследования и ресурсы
 
-Сейчас доступны модели глубокой нейронной сети для анализа тональности и классификации изображений. Все предварительно обученные модели были обучены с помощью [Computation Network Toolkit](https://cntk.ai/Features/Index.html) от корпорации Майкрософт ( **CNTK** ).
+Сейчас доступны модели глубокой нейронной сети для анализа тональности и классификации изображений. Все предварительно обученные модели были обучены с помощью [Computation Network Toolkit](https://cntk.ai/Features/Index.html) от корпорации Майкрософт (**CNTK**).
 
 Конфигурация каждой сети была основана на следующих эталонных реализациях:
 

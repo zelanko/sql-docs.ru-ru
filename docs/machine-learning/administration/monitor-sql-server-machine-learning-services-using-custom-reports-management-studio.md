@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 1dd9f995efad5f8e4209baf5827c7be8ccdd8886
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115400"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471355"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Мониторинг выполнения скриптов Python и R с помощью пользовательских отчетов в SQL Server Management Studio
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92115400"
 
 1. Скачайте [пользовательские отчеты SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) для служб машинного обучения SQL Server с сайта GitHub.
 
-   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   ::: moniker range="=azuresqldb-mi-current"
    >[!NOTE]
    > Пользовательский отчет **ML Services — Configure Instance** не поддерживается в Управляемом экземпляре SQL Azure.
    ::: moniker-end
@@ -60,11 +60,11 @@ ms.locfileid: "92115400"
 
     1. В Management Studio щелкните правой кнопкой мыши узел **Базы данных** для экземпляра, на котором вы хотите запустить отчеты.
 
-    2. Щелкните **Отчеты** , а затем **Настраиваемые отчеты** .
+    2. Щелкните **Отчеты**, а затем **Настраиваемые отчеты**.
 
     3. В диалоговом окне **Открыть файл** найдите папку настраиваемых отчетов.
 
-    4. Выберите один из загруженных ранее RDL-файлов и нажмите кнопку **Открыть** .
+    4. Выберите один из загруженных ранее RDL-файлов и нажмите кнопку **Открыть**.
 
 ## <a name="reports"></a>Отчеты
 

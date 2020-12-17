@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c67f5f1e1021a303a1cdb52e02fdb5c8c1f8f2e2
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d623bd63cfb9d2d72f41bf498259b1d13fe651b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901536"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478425"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>Свойства SQL Server (вкладка "Высокий уровень доступности AlwaysOn")
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88901536"
  **Включение групп доступности AlwaysOn**  
  Этот флажок позволяет включить или выключить функцию "Группы доступности AlwaysOn" в данном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]следующим образом:  
   
--   Если этот флажок пуст, то функция "Группы доступности AlwaysOn" в настоящее время отключена. Чтобы включить "Группы доступности AlwaysOn", выберите флажок, нажмите кнопку **ОК**и вручную перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Если этот флажок пуст, то функция "Группы доступности AlwaysOn" в настоящее время отключена. Чтобы включить "Группы доступности AlwaysOn", выберите флажок, нажмите кнопку **ОК** и вручную перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Если этот флажок уже выбран, то функция "Группы доступности AlwaysOn" в настоящее время включена. Чтобы отключить "Группы доступности AlwaysOn", снимите этот флажок и нажмите кнопку **ОК**. Экземпляр сервера будет перезапущен автоматически.  
   

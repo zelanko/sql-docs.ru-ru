@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6bc64949b0e636a6c64e7b0ef576613f6e02c5c2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b67460528da7cac2e7d3d2d10dfbb4719b08d77f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777723"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638073"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Мониторинг загрузки в хранилище Parallel Data
 Мониторинг активных и недавних загрузок [dwloader](dwloader.md) с помощью консоли администрирования системы АНАЛИТИКИ (ТД) или [системных представлений](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)параллельного хранилища данных (PDW). 
@@ -49,7 +49,7 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -58,7 +58,7 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
 ### <a name="to-monitor-loads-by-using-system-views"></a>Мониторинг загрузок с помощью системных представлений  
 Чтобы отслеживать активные и последние загрузки с помощью SQL Server PDW представлений, выполните следующие действия. Сведения о столбцах и возможных значениях, возвращаемых представлением, для каждого используемого системного представления см. в документации по этому представлению.  
   
-1.  Найдите `request_id` для загрузки в представлении [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) , найдя командную строку загрузчика в `command` столбце для этого представления.  
+1.  Найдите `request_id` для загрузки в представлении [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) , найдя командную строку загрузчика в `command` столбце для этого представления.  
   
     Например, следующая команда возвращает текст команды и текущее состояние, а также `request_id` .  
   
@@ -66,7 +66,7 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  Используйте `request_id` для получения дополнительных сведений о нагрузке с помощью представлений [sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) и [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) . Например, следующий запрос возвращает `run_id` сведения о времени начала, окончания и продолжительности загрузки, а также все ошибки и сведения о количестве обработанных строк:  
+2.  Используйте `request_id` для получения дополнительных сведений о нагрузке с помощью [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) и [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) представлений. Например, следующий запрос возвращает `run_id` сведения о времени начала, окончания и продолжительности загрузки, а также все ошибки и сведения о количестве обработанных строк:  
   
     ```sql  
     SELECT lbr.run_id,   

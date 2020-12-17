@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca718daf11f544120db3a17aed21f73b2e467c54
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96f2987363fd52cc92127b6b54ffcd2a98b9ae10
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036257"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476885"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd — использование с переменными скрипта
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "92036257"
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  Чтобы просмотреть переменные среды, на **панели управления**откройте компонент **Система**и перейдите на вкладку **Дополнительно** .  
+>  Чтобы просмотреть переменные среды, на **панели управления** откройте компонент **Система** и перейдите на вкладку **Дополнительно** .  
   
 ## <a name="implicitly-setting-scripting-variables"></a>Неявное задание переменных скрипта  
  При запуске программы **sqlcmd** с параметром, с которым связана переменная **sqlcmd** , переменной **sqlcmd** неявно присваивается значение, заданное для этого параметра. В следующем примере программа `sqlcmd` запускается с параметром `-l` . Этим неявно определяется переменная SQLLOGINTIMEOUT.  
@@ -190,7 +190,7 @@ C:\>sqlcmd -d AdventureWorks2012
 ```
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>Г. Использование переменных среды уровня пользователя в программе sqlcmd  
- В следующем примере пользовательская переменная среды `%Temp%` устанавливается в командной строке и передается входному файлу `sqlcmd` . Чтобы просмотреть пользовательские переменные среды, на **панели управления**дважды щелкните компонент **Система**. Перейдите на вкладку **Дополнительно** и щелкните **Переменные среды**.  
+ В следующем примере пользовательская переменная среды `%Temp%` устанавливается в командной строке и передается входному файлу `sqlcmd` . Чтобы просмотреть пользовательские переменные среды, на **панели управления** дважды щелкните компонент **Система**. Перейдите на вкладку **Дополнительно** и щелкните **Переменные среды**.  
   
  Следующий программный код является частью входного файла `c:\testscript.txt`:
 

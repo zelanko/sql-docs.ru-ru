@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247543"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477065"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Планирование создания и развертывания отчетов | Службы Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет несколько способов для разработки и развертывания отчетов с разбивкой на страницы. Вы можете ознакомиться с дополнительными сведениями о планировании совместной работы функций создания отчетов и среды сервера отчетов.
@@ -53,7 +53,7 @@ ms.locfileid: "87247543"
   
 -   **Веб-портал.** Передача отчета из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] на сервер отчетов, работающий в собственном режиме.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint**. Передача отчета на сайт SharePoint, настроенный на работу с сервером отчетов в режиме интеграции с SharePoint.  
 
@@ -69,11 +69,11 @@ ms.locfileid: "87247543"
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> либо<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> либо<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
   
- Если определение отчета публикуется на сервере отчетов или выполняется обновление сервера отчетов, то сервер отчетов сохранит определение отчета в первоначальном формате. **При первом использовании**сервер отчетов обновит отчет в базе данных сервера отчетов, преобразовав его в двоичный формат, который будет сохранен для использования при последующих просмотрах. Само определение отчетов (RDL-файл) не обновляется.  
+ Если определение отчета публикуется на сервере отчетов или выполняется обновление сервера отчетов, то сервер отчетов сохранит определение отчета в первоначальном формате. **При первом использовании** сервер отчетов обновит отчет в базе данных сервера отчетов, преобразовав его в двоичный формат, который будет сохранен для использования при последующих просмотрах. Само определение отчетов (RDL-файл) не обновляется.  
   
  На сервере отчетов можно извлечь доступную только для чтения копию файла определения отчета (RDL-файл). На сервере отчетов, работающем в основном режиме, перейдите в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], выберите отчет и нажмите кнопку **Скачать**. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 При развертывании в режиме интеграции с SharePoint перейдите в библиотеку документов, выберите отчет и нажмите кнопку **Загрузить копию**.  
 
