@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2acca0bd84985700395cb3d073e6476167577b68
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ab2a821d2c7d14f16caefb7f881f69962b3eaa94
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901176"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465775"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Свойства SQL Server (вкладка «Дополнительно»)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88901176"
  Отображает номер SKU продукта, иногда называемый выпуском продукта.  
   
  **Параметры запуска**  
- Указывает все параметры запуска, используемые этим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметры разделяются точками с запятой. Параметры по умолчанию включают пути к файлу данных главной базы данных (`master.mdf`), файлу журнала главной базы данных (`mastlog.ldf`) и файлу журнала ошибок. Дополнительные сведения о синтаксисе параметров запуска см. в разделе **Использование параметров запуска службы SQL Server**электронной документации.  
+ Указывает все параметры запуска, используемые этим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметры разделяются точками с запятой. Параметры по умолчанию включают пути к файлу данных главной базы данных (`master.mdf`), файлу журнала главной базы данных (`mastlog.ldf`) и файлу журнала ошибок. Дополнительные сведения о синтаксисе параметров запуска см. в разделе **Использование параметров запуска службы SQL Server** электронной документации.  
   
  **Номер SKU**  
  Отображает номер SKU продукта.  

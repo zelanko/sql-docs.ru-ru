@@ -154,7 +154,7 @@
               href: big-data-cluster/manage-user-access.md
         - name: Частный кластер
           items:
-            - name: Развернуть
+            - name: Развертывание
               href: big-data-cluster/private-deploy.md
             - name: Управление
               href: big-data-cluster/private-manage.md
@@ -9728,15 +9728,28 @@
             - name: Отзывы >>
               href: 'https://aka.ms/sqlfeedback'
     - name: SQLPackage.exe
+      href: tools/sqlpackage/sqlpackage.md
       items:
         - name: Установка sqlpackage
-          href: tools/sqlpackage-download.md
+          href: tools/sqlpackage/sqlpackage-download.md
         - name: Заметки о выпуске
-          href: tools/release-notes-sqlpackage.md
-        - name: Справочник по sqlpackage
-          href: tools/sqlpackage.md
+          href: tools/sqlpackage/release-notes-sqlpackage.md
+        - name: Действия SqlPackage
+          items:
+            - name: Извлечение SqlPackage
+              href: tools/sqlpackage/sqlpackage-extract.md
+            - name: Публикация SqlPackage
+              href: tools/sqlpackage/sqlpackage-publish.md
+            - name: Экспорт SqlPackage
+              href: tools/sqlpackage/sqlpackage-export.md
+            - name: Импорт SqlPackage
+              href: tools/sqlpackage/sqlpackage-import.md
+            - name: Отчеты о развертывании и смещении SqlPackage
+              href: tools/sqlpackage/sqlpackage-deploy-drift-report.md
+            - name: Скрипт SqlPackage
+              href: tools/sqlpackage/sqlpackage-script.md
         - name: SqlPackage в конвейерах разработки
-          href: tools/sqlpackage-pipelines.md
+          href: tools/sqlpackage/sqlpackage-pipelines.md
     - name: Приложение SQL Server Profiler
       href: tools/sql-server-profiler/sql-server-profiler.md
       items:

@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: aee6dcfce5e07b62d53420328221999bed0f887f
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 8b9836119612aa64b941f056902e7886deb8233b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870268"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470095"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>Учебники по использованию R для машинного обучения SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 В этой статье описываются учебники и краткие руководства по использованию R для работы со [Службами машинного обучения SQL Server](../sql-server-machine-learning-services.md) и [Кластерами больших данных](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 В этой статье описываются учебники и краткие руководства по R для [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 В этой статье описываются учебники и краткие руководства по R для служб [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 В этой статье описываются учебники и краткие руководства по Python для [Служб машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
@@ -38,7 +38,7 @@ ms.locfileid: "94870268"
 
 ## <a name="r-tutorials"></a>Учебники по R
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 | Учебник | Описание |
 |------|-------------|
 | [Прогнозирование проката лыж с помощью дерева принятия решений](r-predictive-model-introduction.md) | Используйте R и модель дерева принятия решений для прогнозирования числа лыж, сдаваемых напрокат. Используйте записные книжки в Azure Data Studio для подготовки данных и обучения модели, а также T-SQL для развертывания модели. |

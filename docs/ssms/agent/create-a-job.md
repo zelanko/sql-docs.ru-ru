@@ -14,13 +14,13 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 404971a6874de15cfae2408e5fa2d4bc2e387c0e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0542509d087aee51d942aeb1d8c59e382fa80b63
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039214"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461385"
 ---
 # <a name="create-a-job"></a>Создание задания
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "92039214"
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Создание задания агента SQL Server  
   
-1.  В **обозревателе объектов**щелкните знак «плюс», чтобы развернуть сервер, на котором нужно создать задание агента SQL Server.  
+1.  В **обозревателе объектов** щелкните знак «плюс», чтобы развернуть сервер, на котором нужно создать задание агента SQL Server.  
   
 2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "92039214"
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Создание задания агента SQL Server  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

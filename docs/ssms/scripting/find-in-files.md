@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56201dec5bb9b6a66c63f6c4bca50d90b4e27c33
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ac7abdfbac2beec19e5cd53d0077dbcd0c2c8d24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039054"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466365"
 ---
 # <a name="find-in-files"></a>Найти в файлах
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92039054"
  Выберите в списке заранее определенную область поиска или используйте диалоговое окно **Пользовательский набор каталогов** для ввода собственного набора каталогов.  
   
  **Текущий документ**  
- Этот параметр доступен, если документ открыт в редакторе. Будет произведен поиск строки в поле **Найти**только в активном документе.  
+ Этот параметр доступен, если документ открыт в редакторе. Будет произведен поиск строки в поле **Найти** только в активном документе.  
   
  **Все открытые документы**  
  Поиск производится во всех файлах, открытых в данный момент для редактирования.  

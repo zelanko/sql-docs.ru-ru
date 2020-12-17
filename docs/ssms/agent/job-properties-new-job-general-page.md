@@ -13,13 +13,13 @@ ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9da8480712a40612b4078af57864dffdec561c4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 992a0ecbc8ec36ce88ca44490d04a6354828a116
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037927"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408990"
 ---
 # <a name="job-properties---new-job-general-page"></a>Свойства задания — создание задания (страница "Общие")
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

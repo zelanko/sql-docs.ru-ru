@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9584b479d77efaa6c114cd160964e0fbf09c77d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: f8e0b03d5ea3be6473c8e00a8d62ef5900f33973
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901029"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465735"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Свойства SQL Server (вкладка «Параметры запуска»)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88901029"
  Подробнее о перемещении базы данных master см. в разделе «Перемещение системных баз данных» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="optional-parameters"></a>Необязательные параметры  
- Все поддерживаемые параметры запуска описаны в разделе «Использование параметров запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметр запуска -T*trace#* показывает, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запускаться с указанным флагом трассировки (*trace#* ). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе о флагах трассировки ([!INCLUDE[tsql](../../includes/tsql-md.md)]) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Все поддерживаемые параметры запуска описаны в разделе «Использование параметров запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметр запуска -T *trace#* показывает, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запускаться с указанным флагом трассировки (*trace#* ). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе о флагах трассировки ([!INCLUDE[tsql](../../includes/tsql-md.md)]) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!CAUTION]  
 >  Описание некоторых дополнительных недокументированных параметров запуска и флагов трассировки можно найти в Интернете. Недокументированные параметры запуска и флаги трассировки создаются для решения нетиповых задач и создания определенных условий, необходимых для тестирования. Использование недокументированных параметров запуска может привести к непредвиденным результатам. Используйте недокументированные параметры только по указанию службы поддержки пользователей Майкрософт.  

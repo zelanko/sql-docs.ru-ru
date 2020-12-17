@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412515"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470115"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>Учебник по R. Запуск прогнозов в хранимых процедурах SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -144,7 +144,7 @@ GO
 Эта хранимая процедура возвращает ряд значений, представляющих прогнозы для каждой из 10 самых популярных поездок. Однако самые популярные поездки — это поездки с одним пассажиром на относительно короткое расстояние, за которые водители вряд ли получат чаевые.
 
 > [!TIP]
-> Вместо получения результатов типа "есть чаевые" или "нет чаевых" можно также получить оценку вероятности для прогноза, а затем применить предложение WHERE к значениям столбца _Score_ , чтобы классифицировать оценки как "высокая вероятность чаевых" или "низкая вероятность чаевых", используя пороговое значение, например 0,5 или 0,7. Это действие отсутствует в хранимой процедуре, но его можно легко реализовать.
+> Вместо получения результатов типа "есть чаевые" или "нет чаевых" можно также получить оценку вероятности для прогноза, а затем применить предложение WHERE к значениям столбца _Score_, чтобы классифицировать оценки как "высокая вероятность чаевых" или "низкая вероятность чаевых", используя пороговое значение, например 0,5 или 0,7. Это действие отсутствует в хранимой процедуре, но его можно легко реализовать.
 
 ## <a name="single-row-scoring-of-multiple-inputs"></a>Оценка одной строки нескольких входных значений
 

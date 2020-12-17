@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 18cd0c279493dcb41d043d3f76d6debe71eb402c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 7f7b7a22376cba31a54f5682e041e225cb15760c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194485"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470345"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Учебник по Python. Обучение и сохранение модели Python с помощью T-SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "92194485"
    В рамках обучения модели эта хранимая процедура выполняет следующие действия:
 
    + Запрос SELECT применяет пользовательскую скалярную функцию _fnCalculateDistance_ для вычисления прямого расстояния между местами посадки и высадки. Результаты выполнения запроса сохраняются во входной переменной Python по умолчанию `InputDataset`.
-   + Двоичная переменная _tipped_ применяется в качестве столбца *меток* или результатов, и модель компонуется с использованием следующих столбцов характеристик: _passenger_count_, _trip_distance_, _trip_time_in_secs_и _direct_distance_.
+   + Двоичная переменная _tipped_ применяется в качестве столбца *меток* или результатов, и модель компонуется с использованием следующих столбцов характеристик: _passenger_count_, _trip_distance_, _trip_time_in_secs_ и _direct_distance_.
    + Обученная модель сериализуется и сохраняется в переменной Python `logitObj`. С помощью ключевого слова OUTPUT T-SQL можно добавить переменную в качестве выходных данных хранимой процедуры. На следующем шаге эта переменная используется для вставки двоичного кода модели в таблицу базы данных _nyc_taxi_models_. Этот механизм упрощает хранение и повторное использование моделей.
 
 2. Выполните хранимую процедуру следующим образом, чтобы вставить обученную модель **revoscalepy** в таблицу *nyc_taxi_models*.

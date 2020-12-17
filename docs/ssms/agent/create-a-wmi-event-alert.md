@@ -13,13 +13,13 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6511ea5b72a4031ec212d463b6cf8a6f7b977a9e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1ae08f86a984f4a8bdbc73db02fb41e335250e4f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035091"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464475"
 ---
 # <a name="create-a-wmi-event-alert"></a>Создание предупреждения о событии WMI
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "92035091"
   
 6.  В списке **Тип** выберите **Предупреждение о событии WMI**.  
   
-7.  В разделе **Определение условий предупреждений о событиях WMI**в поле **Пространство имен** укажите пространство имен WMI для инструкций языка WQL, определяющее события WMI, которые будут приводить к возникновению этого предупреждения.  
+7.  В разделе **Определение условий предупреждений о событиях WMI** в поле **Пространство имен** укажите пространство имен WMI для инструкций языка WQL, определяющее события WMI, которые будут приводить к возникновению этого предупреждения.  
   
 8.  В поле **Запрос** укажите инструкцию WQL, определяющую событие, на которое реагирует предупреждение.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "92035091"
   
 #### <a name="to-create-a-wmi-event-alert"></a>Создание предупреждения о событии WMI  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
