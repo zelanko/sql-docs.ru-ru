@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f83f06c5aa72c31df711db05198032206c5a32b9
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: d5422c524cdd275f0afbb64cb5efabb9da0b224d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098673"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638042"
 ---
 # <a name="ado-md-collections"></a>Коллекции многомерных объектов ADO
 
@@ -34,7 +34,7 @@ ms.locfileid: "92098673"
 |[Positions](./positions-collection-ado-md.md)|Содержит объекты **позиции** , определяющие точку на оси.|  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по объекты данных ActiveX (MD) API](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Справочник по объекты данных ActiveX (MD) API](./ado-md-object-model.md)   
  [Примеры кода объекты данных ActiveX (MD)](./ado-md-code-examples.md)   
  [объекты данных ActiveX (MD) перечислимые константы](./ado-md-enumerated-constants.md)   
  [Методы объекты данных ActiveX (MD)](./ado-md-methods.md)   

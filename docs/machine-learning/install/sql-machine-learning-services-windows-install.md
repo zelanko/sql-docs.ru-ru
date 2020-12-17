@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 11e051a87e0b5d051cf62c702c13f1189a21ca05
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017'
+ms.openlocfilehash: 9df3f0d56e3d210389110cdf155bd79a32c7c978
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870502"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471195"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Установка служб машинного обучения SQL Server (Python и R) в Windows
 
@@ -39,7 +39,7 @@ ms.locfileid: "94870502"
   + Использование другой библиотеки и исполняемых файлов приведет к несогласованным результатам, которые отличаются от ожидаемых в SQL Server.
   + Сценариями R и Python, выполняемыми во внешних библиотеках, нельзя управлять с помощью SQL Server, так как это приведет к конфликту ресурсов.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 > [!NOTE]
 > Службы машинного обучения устанавливаются по умолчанию в **кластерах больших данных SQL Server**. Если вы используете **кластеры больших данных**, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
@@ -51,11 +51,11 @@ ms.locfileid: "94870502"
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Дополнительные сведения о том, какие выпуски SQL Server поддерживают интеграцию Python и R со Службами машинного обучения, см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 Дополнительные сведения о том, какие выпуски SQL Server поддерживают интеграцию Python и R со Службами машинного обучения, см. в статье [о выпусках и поддерживаемых функциях SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 ::: moniker-end
 
@@ -67,17 +67,17 @@ ms.locfileid: "94870502"
   
 1. На вкладке **Установка** выберите параметр **Новая установка изолированного экземпляра SQL Server или добавление компонентов к существующей установке**.
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Новые изолированные установки SQL Server](media/2017setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Новые изолированные установки SQL Server](media/2019setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
 1. На странице **Выбор компонентов** выберите следующие компоненты:
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
 
    - **Службы ядра СУБД**
      
@@ -89,7 +89,7 @@ ms.locfileid: "94870502"
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
 
    - **Службы ядра СУБД**
      
@@ -109,15 +109,15 @@ ms.locfileid: "94870502"
      
      Установите этот флажок, чтобы добавить пакеты Microsoft Python, исполняемый файл Python 3.5 и выбрать библиотеки из дистрибутива Anaconda.
      
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    Сведения об установке и использовании Java см. в статье [Установка расширений языка для SQL Server в Windows](../../language-extensions/install/windows-java.md).
    ::: moniker-end
    
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Параметры функции для R и Python](media/2017setup-features-page-mls-rpy.PNG "Параметры установки для R и Python")
    ::: moniker-end
    
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Параметры функции для R и Python](media/2019setup-features-page-mls-rpy.png "Параметры установки для R и Python")
    ::: moniker-end
    
@@ -125,7 +125,7 @@ ms.locfileid: "94870502"
    > 
    > Не выбирайте параметр для **Сервера машинного обучения (изолированный)** . Возможность установки сервера машинного обучения в разделе **Общие компоненты**  предназначена для использования на отдельном компьютере.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 4. На странице **Согласие на установку Microsoft R Open** выберите **Принять**, а затем **Следующий**. 
 
@@ -151,7 +151,7 @@ ms.locfileid: "94870502"
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 1. На странице **Согласие на установку Microsoft R Open** выберите **Принять**, а затем **Следующий**. Принятие лицензионного соглашения включает Microsoft R Open — дистрибутива, содержащего базовые пакеты и средства R с открытым исходным кодом, а также поставщики услуг подключения и расширенные пакеты R от команды разработки Microsoft.
 
@@ -272,7 +272,7 @@ ms.locfileid: "94870502"
 >
 > Например, можно добавить следующую строку для создания произвольного имени столбца: `WITH RESULT SETS ((Col1 AS int))`
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 <!-- There are no updates yet available for 2019, and there's no 2019 update list site. When updates become available, add 2019 information to this section. -->
 
 <a name="apply-cu"></a>
@@ -313,7 +313,7 @@ ms.locfileid: "94870502"
 * [Создание учетных данных для SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 * [Управление квотами на диск](/windows/desktop/fileio/managing-disk-quotas) во избежание выполнения внешними сценариями задач, тратящих дисковое пространство
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 В SQL Server 2019 в Windows механизм изоляции изменился. Этот механизм влияет на **SQLRUserGroup**, правила брандмауэра, разрешение файла и подразумеваемую проверку подлинности. Дополнительные сведения см. в разделе [Изменения в изоляции служб машинного обучения](sql-server-machine-learning-services-2019.md).
 ::: moniker-end
 
@@ -331,7 +331,7 @@ ms.locfileid: "94870502"
 
 Теперь, когда все работает, также может потребоваться оптимизировать сервер для поддержки машинного обучения или установки предварительно подготовленных моделей машинного обучения.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ### <a name="add-more-worker-accounts"></a>Добавление рабочих учетных записей
 
 Если вы предполагаете, что множество пользователей будут одновременно выполнять сценарии, вы можете увеличить количество рабочих учетных записей, назначенных службе панели запуска. Дополнительные сведения см. в разделе [Масштабирование параллельного выполнения внешних сценариев в SQL Server службы машинного обучения](../administration/scale-concurrent-execution-external-scripts.md).

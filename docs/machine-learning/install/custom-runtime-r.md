@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b058fe7aa723eddcdcf97158d19a053bf2b062b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 554c3a08cc29cfbc6addef598698c40df31f9990
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870056"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471235"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Установка настраиваемой среды выполнения R для SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "94870056"
 
 + Установка Служб машинного обучения с SQL Server 2019. Расширение языка можно использовать со [Службами машинного обучения SQL Server ](../sql-server-machine-learning-services.md) после выполнения некоторых дополнительных этапов настройки.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > В этой статье описывается, как установить настраиваемую среду выполнения для R в Windows. Об установке на Linux см. статью [Установка настраиваемую среды выполнения R для SQL Server на Linux](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
@@ -182,7 +182,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 Вы можете установить SQL Server на платформах Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) и Ubuntu. Дополнительные сведения см. в разделе ["Поддерживаемые платформы" в руководстве по установке SQL Server на Linux](../../linux/sql-server-linux-setup.md#supportedplatforms).
 

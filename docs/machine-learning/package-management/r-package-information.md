@@ -8,25 +8,25 @@ ms.date: 05/27/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bbc530a84ca09ce5e2797bc770e50a20fc5113e
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ee042503a0d88a878b96caba480551e9553d6a88
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869980"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471005"
 ---
 # <a name="get-r-package-information"></a>Получение сведений о пакете R
 
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 В этой статье описывается, как получить сведения об установленных пакетах R в [Службах машинного обучения в SQL Server](../sql-server-machine-learning-services.md) и [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Примеры сценариев R показывают, как получить сведения о пакете, например путь установки и версия.
 ::: moniker-end
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 В этой статье описывается, как получить сведения об установленных пакетах R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md). Примеры сценариев R показывают, как получить сведения о пакете, например путь установки и версия.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 В этой статье описывается, как получить сведения об установленных пакетах R в [Службах машинного обучения Управляемого экземпляра SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Примеры сценариев R показывают, как получить сведения о пакете, например путь установки и версия.
 ::: moniker-end
 
@@ -37,7 +37,7 @@ ms.locfileid: "94869980"
 Все скрипты, выполняемые в базе данных на SQL Server, должны загружать функции из библиотеки экземпляров. SQL Server не может получить доступ к пакетам, установленным в других библиотеках. Это относится и к удаленным клиентам: любой скрипт R, выполняющийся в контексте вычислений сервера, может использовать только пакеты, установленные в библиотеке экземпляров.
 Для защиты серверных ресурсов библиотека экземпляров по умолчанию может быть изменена только администратором компьютера.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Путь по умолчанию к двоичным файлам для R:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
@@ -45,7 +45,7 @@ ms.locfileid: "94869980"
 Предполагается, что экземпляр SQL по умолчанию — MSSQLSERVER. Если SQL Server устанавливается как определяемый пользователем именованный экземпляр, вместо него используется указанное имя.
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Путь по умолчанию к двоичным файлам для R:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
@@ -53,7 +53,7 @@ ms.locfileid: "94869980"
 Предполагается, что экземпляр SQL по умолчанию — MSSQLSERVER. Если SQL Server устанавливается как определяемый пользователем именованный экземпляр, вместо него используется указанное имя.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Путь по умолчанию к двоичным файлам для R:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
@@ -73,7 +73,7 @@ GO
 
 ## <a name="default-microsoft-r-packages"></a>Пакеты Microsoft R по умолчанию
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Приведенные ниже пакеты Microsoft R устанавливаются вместе с SQL Server R Services.
 
@@ -84,7 +84,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 Приведенные ниже пакеты Microsoft R устанавливаются со Службами машинного обучения SQL Server, если во время установки был выбран компонент R.
 
@@ -97,7 +97,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 Приведенные ниже пакеты Microsoft R устанавливаются со Службами машинного обучения SQL Server, если во время установки был выбран компонент R.
 
@@ -114,7 +114,7 @@ GO
 
 По умолчанию пакеты R обновляются с помощью пакетов обновления и накопительных пакетов обновления. Дополнительные пакеты и обновление полных версий компонентов R можно применять только путем обновления продукта или привязки поддержки R к Microsoft Machine Learning Server.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Кроме того, вы можете добавлять пакеты MicrosoftML и olapR в экземпляр SQL Server с помощью обновления компонента.
 ::: moniker-end
 
@@ -178,9 +178,9 @@ print(packageDescription("MicrosoftML"))
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [Установка пакетов с инструментами R](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [Установка новых пакетов R с помощью sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

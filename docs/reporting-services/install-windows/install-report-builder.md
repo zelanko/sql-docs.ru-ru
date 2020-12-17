@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98134fb195b9184bb10905b4a4f8ddec48f3cb57
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: ca0071416491700254047b43056d32fc64ed1d9d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496979"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425137"
 ---
 # <a name="install-report-builder"></a>Установите Построитель отчетов.
 
@@ -33,11 +33,11 @@ ms.locfileid: "92496979"
   
  Вы можете запустить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или сайте SharePoint, интегрированном с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Сведения см. в разделе [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-site-integrated-with-ssrsnoversion"></a>Сайт SharePoint, интегрированный с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- На сайте SharePoint, интегрированном с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], если меню **Создать документ** не содержит пункты **Отчет построителя отчетов** , **Модель построителя отчетов** и **Источник данных отчета** , необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ На сайте SharePoint, интегрированном с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], если меню **Создать документ** не содержит пункты **Отчет построителя отчетов**, **Модель построителя отчетов** и **Источник данных отчета**, необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ::: moniker-end
  
@@ -67,7 +67,7 @@ ms.locfileid: "92496979"
     > [!NOTE]  
     >  Если планируется работать со средством [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , когда оно подключено к серверу отчетов, на данном этапе будет удобнее указать URL-адрес сервера. Вы также можете сделать это в диалоговом окне **Параметры** в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
-5.  Нажмите кнопку **Установить** , чтобы завершить установку [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+5.  Нажмите кнопку **Установить**, чтобы завершить установку [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
 ## <a name="to-install-ssrbnoversion-from-a-share"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из общей папки  
   
@@ -113,7 +113,7 @@ ms.locfileid: "92496979"
   
 -   Щелкните **Построитель отчетов** .  
   
-     Если сервер отчетов отсутствует в списке существующих серверов, закройте диалоговое окно **Открытие отчета** , а затем в нижней части [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нажмите кнопку **Подключиться** , чтобы подключиться к серверу.  
+     Если сервер отчетов отсутствует в списке существующих серверов, закройте диалоговое окно **Открытие отчета**, а затем в нижней части [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нажмите кнопку **Подключиться**, чтобы подключиться к серверу.  
   
 ## <a name="see-also"></a>См. также  
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)   

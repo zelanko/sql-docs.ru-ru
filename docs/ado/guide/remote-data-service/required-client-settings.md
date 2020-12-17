@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc3a7962855feb076faad1ffe26d21b9273354f7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 614f8f4444ab470530cea01133b34adffc505b78
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723165"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638032"
 ---
 # <a name="required-client-settings"></a>Требуемые параметры клиента
 > [!IMPORTANT]
@@ -76,11 +76,10 @@ rs.CursorLocation = adUseClient
 "Remote Server=https://yourServer"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Раздел "Подключение файла настройки"](./customization-file-connect-section.md)   
  [Раздел файла настройки SQL](./customization-file-sql-section.md)   
  [Раздел UserList файла настройки](./customization-file-userlist-section.md)   
  [Настройка в отношении фактов](./datafactory-customization.md)   
- [Требуемые параметры клиента]()   
  [Общие сведения о файле настройки](./understanding-the-customization-file.md)   
  [Создание собственного настраиваемого обработчика](./writing-your-own-customized-handler.md)

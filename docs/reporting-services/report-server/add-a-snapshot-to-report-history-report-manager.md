@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 18d1cc11b8ab4d4501e62ac5acfbffaeab32c892
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935325"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466585"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Добавление моментального снимка к журналу отчета
 
@@ -24,7 +24,7 @@ ms.locfileid: "91935325"
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>Добавление моментальных снимков в журнал отчета вручную
   
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 1. В диспетчере отчетов перейдите на страницу **Оглавление** , наведите курсор на элемент, журнал которого необходимо просмотреть, и щелкните стрелку раскрывающегося списка.
   
@@ -75,7 +75,7 @@ ms.locfileid: "91935325"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>Добавление моментальных снимков в журнал отчета вручную
   

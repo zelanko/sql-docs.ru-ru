@@ -16,13 +16,13 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 139694d124788cc68aec005f3c35b2ee47a39ef4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5e8774eeb1f0c13350e81a6cb5635695c80a3eb8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037979"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423510"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Назначение резервного оператора
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,10 +57,10 @@ ms.locfileid: "92037979"
   
 3.  В диалоговом окне **Свойства агента SQL —** _имя\_сервера_ в разделе **Выберите страницу** выберите **Система предупреждений**.  
   
-4.  В разделе **Резервный оператор**выберите **Включить резервный оператор**.  
+4.  В разделе **Резервный оператор** выберите **Включить резервный оператор**.  
   
 5.  В списке **Оператор** выберите оператор, который необходимо сделать резервным.  
   
-6.  Установите некоторые или все указанные флажки для выбора способа уведомления оператора: **Электронная почта**, **Пейджер**или **Net send**.  
+6.  Установите некоторые или все указанные флажки для выбора способа уведомления оператора: **Электронная почта**, **Пейджер** или **Net send**.  
   
 7.  После завершения нажмите кнопку **ОК**.  

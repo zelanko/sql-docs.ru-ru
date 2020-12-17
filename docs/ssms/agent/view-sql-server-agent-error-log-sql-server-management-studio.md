@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 966929c35df641a6a464c14481c03a11e45bc34a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 77c2134ee706b7cd86676501aec703f8468d6a5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038138"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476955"
 ---
 # <a name="view-sql-server-agent-error-log"></a>Просмотр журнала ошибок агента SQL Server
 
@@ -60,7 +60,7 @@ ms.locfileid: "92038138"
   
 #### <a name="to-view-the-ssnoversion-agent-error-log"></a>Просмотр журнала ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть сервер, содержащий журнал агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который необходимо просмотреть.  
+1.  В **обозревателе объектов** щелкните значок «плюс», чтобы развернуть сервер, содержащий журнал агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который необходимо просмотреть.  
   
 2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "92038138"
     Позволяет обновить представление выбранных журналов. При нажатии кнопки **Обновить** выбранные журналы заново считываются с целевого сервера с применением параметров фильтра.  
   
     **Filter**  
-    Открывает диалоговое окно, позволяющее указывать параметры фильтрации файла журнала, например **Соединение**и **Дата**или другие **Общие** условия фильтра.  
+    Открывает диалоговое окно, позволяющее указывать параметры фильтрации файла журнала, например **Соединение** и **Дата** или другие **Общие** условия фильтра.  
   
     **Поиск**  
     Позволяет найти определенный текст в файле журнала. Поиск с символами-шаблонами не поддерживается.  

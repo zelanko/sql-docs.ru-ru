@@ -8,25 +8,25 @@ ms.date: 06/03/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb55bf9bac934f78b0a309663ced729a8ef6534
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ca07166159b1d637b58f9eb7056218d1fc504a66
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471025"
 ---
 # <a name="get-python-package-information"></a>Получение сведений о пакете Python
 
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 В этой статье описывается, как получить сведения об установленных пакетах Python, включая версии и расположения установки, в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) и [кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Примеры сценариев Python показывают, как получить сведения о пакете, например путь установки и версия.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 В этой статье описывается, как получить сведения об установленных пакетах Python, включая версии и расположения установки, в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md). Примеры сценариев Python показывают, как получить сведения о пакете, например путь установки и версия.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 В этой статье описывается, как получить сведения об установленных пакетах Python, включая версии и расположения установки, в [Службах машинного обучения управляемого экземпляра SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Примеры сценариев Python показывают, как получить сведения о пакете, например путь установки и версия.
 ::: moniker-end
 
@@ -37,7 +37,7 @@ ms.locfileid: "94869866"
 Все скрипты или код, выполняемые в базе данных на SQL Server, должны загружать функции из библиотеки экземпляров. SQL Server не может получить доступ к пакетам, установленным в других библиотеках. Это относится и к удаленным клиентам: любой код Python, выполняющийся в контексте вычислений сервера, может использовать только пакеты, установленные в библиотеке экземпляров.
 Для защиты серверных ресурсов библиотека экземпляров по умолчанию может быть изменена только администратором компьютера.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Путь по умолчанию к двоичным файлам для Python:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
@@ -45,7 +45,7 @@ ms.locfileid: "94869866"
 Предполагается, что экземпляр SQL по умолчанию — MSSQLSERVER. Если SQL Server устанавливается как определяемый пользователем именованный экземпляр, вместо него используется указанное имя.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Путь по умолчанию к двоичным файлам для Python:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES`
@@ -60,7 +60,7 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 > [!IMPORTANT]
 > В Управляемом экземпляре SQL Azure выполнение команд sp_configure и RECONFIGURE приводит к перезагрузке сервера SQL для активации параметров RG. В результате сервер будет недоступен в течение нескольких секунд.
 ::: moniker-end
@@ -75,7 +75,7 @@ EXECUTE sp_execute_external_script
 
 Дополнительные сведения о переменной `sys.path` и о том, как она используется для задания пути поиска для модулей, см. в разделе [Путь поиска модуля](https://docs.python.org/2/tutorial/modules.html#the-module-search-path).
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > Не пытайтесь установить пакеты Python непосредственно в библиотеке пакетов SQL с помощью **pip** или аналогичных методов. Вместо этого используйте **sqlmlutils** для установки пакетов в экземпляре SQL. Дополнительные сведения см. в статье [Установка пакетов Python с помощью sqlmlutils](install-additional-python-packages-on-sql-server.md).
 ::: moniker-end
@@ -161,9 +161,9 @@ print(sys.version)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [Установка пакетов с инструментами Python](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [Установка пакетов Python с помощью sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

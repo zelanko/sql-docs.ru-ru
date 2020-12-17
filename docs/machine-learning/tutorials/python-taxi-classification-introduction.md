@@ -9,26 +9,26 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b8e0e8df7bd2a5453299751df682e0c33502c25
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 2dd02ddc0dccb0ca41d16688039fa33ad406abd8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585076"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470365"
 ---
 # <a name="python-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Учебник по Python. Прогнозирование стоимости поездки в нью-йоркском такси с использованием двоичной классификации
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 В этой серии руководств для программистов SQL вы узнаете об интеграции Python в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или в [кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 В этой серии (из пяти частей) руководств для программистов SQL вы узнаете об интеграции Python в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 В этой серии (из пяти частей) руководств для программистов SQL вы узнаете об интеграции Python в [службы машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
@@ -57,7 +57,7 @@ ms.locfileid: "94585076"
 
 ## <a name="prerequisites"></a>Предварительные условия
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + Установите [Службы машинного обучения SQL Server с поддержкой Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 ::: moniker-end
 

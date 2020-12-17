@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 817395eca7ed1fd5f9a0ae9f01c3059c17deffef
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fcc511680e1635563c8dac50786130fb6835d472
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036384"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466305"
 ---
 # <a name="search-documents-using-results-lists"></a>Поиск документов с помощью списков результатов
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "92036384"
      Нажмите кнопку **Заменить все** , чтобы заменить все совпадения на текст, указанный в поле **Заменить на** . Чтобы позже можно было отменить некоторые из замен, выберите **Оставить измененные файлы открытыми после замены** .  
   
     > [!NOTE]  
-    >  Команда**Заменить все** заменяет все совпадения при поиске, включая совпадения в файлах, пропущенных с помощью кнопок **Пропустить файл** или **Найти далее**. С помощью кнопки **Отменить** можно отменить замены только для тех файлов, которые остались открытыми после операции замены.  
+    >  Команда **Заменить все** заменяет все совпадения при поиске, включая совпадения в файлах, пропущенных с помощью кнопок **Пропустить файл** или **Найти далее**. С помощью кнопки **Отменить** можно отменить замены только для тех файлов, которые остались открытыми после операции замены.  
   
  Сведения о заменах появляются по умолчанию в окне «Результаты поиска 1». Замены можно просмотреть двойным щелчком на каждой записи в окне «Результаты поиска 1».  
   
