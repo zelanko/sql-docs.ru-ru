@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 19bdca4ab4b380d5a971078eb8e264cb409caa7c
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518984"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559086"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Руководство. Установить расширения компонентов и управлять ими
 
@@ -37,7 +37,7 @@ ms.locfileid: "85518984"
 |Тип расширения|Служба командной строки|Папка установки|  
 |------------------|------------------------|------------------|  
 |Пользовательские условия теста для модульных тестов SQL Server|Для выполнения модульных тестов из Командной строки разработчика в Visual Studio 2013 и аналогичных программ командной строки можно использовать MSBuild или MSTest.|Та же, что и при выполнении в Visual Studio.|  
-|Участники сборки<br /><br />Участники развертывания|[SqlPackage.exe](../tools/sqlpackage.md) или с помощью целевых объектов Deploy или Publish MSBuild при сборке проекта базы данных.|MSBuild. Та же, что и при выполнении в Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md). Если размещается в том же каталоге Visual Studio, то используется та же папка, что раньше.<br /><br />Если SqlPackage.exe и другие библиотеки DLL DacFx находятся вне этого каталога, то расширения должны размещаться либо в одном с ними каталоге, либо в каталоге C:\Program Files (x86)\\Microsoft SQL Server\120\DAC\bin\Extensions.|  
+|Участники сборки<br /><br />Участники развертывания|[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) или с помощью целевых объектов Deploy или Publish MSBuild при сборке проекта базы данных.|MSBuild. Та же, что и при выполнении в Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md). Если размещается в том же каталоге Visual Studio, то используется та же папка, что раньше.<br /><br />Если SqlPackage.exe и другие библиотеки DLL DacFx находятся вне этого каталога, то расширения должны размещаться либо в одном с ними каталоге, либо в каталоге C:\Program Files (x86)\\Microsoft SQL Server\120\DAC\bin\Extensions.|  
 |Правила анализа статического кода|MSBuild можно использовать для сборки проекта и запуска анализа статического кода.<br /><br />Кроме того, анализ кода можно выполнять с помощью API CodeAnalysisService из собственных приложений. Правила поиска расширения функционируют в этом случае так же, как при использовании SqlPackage.exe.|Там же, где для участников сборки и развертывания.|  
   
 > [!NOTE]  

@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cbe9bfd3727e90b330ea894ba3e2fdc590486a29
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 33a2a8e5eee76214f9d7fdf3cedd8baaf4eeaa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035677"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440445"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
 
@@ -50,7 +50,7 @@ ms.locfileid: "92035677"
 ## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Использование среды SQL Server Management Studio  
 **Добавление имени входа SQL или роли базы данных msdb к предопределенной роли базы данных агента SQL Server**  
   
-1.  В **Обозревателе объектов**разверните сервер.  
+1.  В **Обозревателе объектов** разверните сервер.  
   
 2.  Разверните элемент **Безопасность**, а затем элемент **Имена входа**.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "92035677"
   
 4.  На странице **Сопоставление пользователей** диалогового окна **Свойства имени входа** выберите строку, содержащую базу данных **msdb**.  
   
-5.  На вкладке **Членство в роли базы данных для: msdb**выберите соответствующую предопределенную роль базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+5.  На вкладке **Членство в роли базы данных для: msdb** выберите соответствующую предопределенную роль базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Настройка учетной записи-посредника для создания и управления шагами заданий агента SQL Server**  
   
-1.  В **Обозревателе объектов**разверните сервер.  
+1.  В **Обозревателе объектов** разверните сервер.  
   
 2.  Разверните узел **Агент SQL Server**.  
   

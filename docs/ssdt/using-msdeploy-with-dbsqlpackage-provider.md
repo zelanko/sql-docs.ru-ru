@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: b0cf5e6c46add1ce49b4d95f6eebe1feb2fb496f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 04b814eece5041851b932f19e9e1d4cd1b63e035
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987770"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559196"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Использование MSDeploy с поставщиком dbSqlPackage
 
@@ -29,13 +29,13 @@ ms.locfileid: "91987770"
   
 -   **Script**: создает скрипт Transact\-SQL, эквивалентный скрипту, который выполняется действием публикации.  
   
-Дополнительные сведения о DACFx можно найти в разделе документации по управляемому API DACFx по адресу [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) или описании средства командной строки DACFx [SqlPackage.exe](../tools/sqlpackage.md).  
+Дополнительные сведения о DACFx можно найти в разделе документации по управляемому API DACFx по адресу [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) или описании средства командной строки DACFx [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
   
 > [!IMPORTANT]  
 > Компонент поставщика dbSqlPackage будет удален из следующей основной версии Visual Studio. Сведения о публикации базы данных с помощью с веб-развертывания см. в статье [Поставщик dbDacFx для добавочной публикации базы данных](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
   
 ## <a name="command-line-syntax"></a>Синтаксис командной строки  
-Программа **MSDeploy**с поставщиком**dbSqlPackage** использует командную строку в следующем формате:  
+Программа **MSDeploy **с поставщиком** dbSqlPackage** использует командную строку в следующем формате:  
   
 ```  
   

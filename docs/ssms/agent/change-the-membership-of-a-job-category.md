@@ -16,13 +16,13 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4bd4131d55022e494c54a4350d666615ac59493
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f603cebc7157aa57c7f72cf2017a898cb7c6d119
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035701"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440455"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "92035701"
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Изменение состава категории заданий  
   
-1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть сервер, на котором нужно изменить категорию заданий.  
+1.  В **обозревателе объектов** щелкните значок «плюс», чтобы развернуть сервер, на котором нужно изменить категорию заданий.  
   
 2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "92035701"
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Изменение состава категории заданий  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

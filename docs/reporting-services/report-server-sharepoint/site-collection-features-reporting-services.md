@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 052a6893f28d86a7f966edfe2a4b953ccc442e27
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 75c1c49f70eb44fbffab50ef66a3785d97a3f9ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461455"
 ---
 # <a name="reporting-services-site-collection-features"></a>Компоненты семейства веб-сайтов служб Reporting Services
 
@@ -35,7 +35,7 @@ ms.locfileid: "83764791"
 |-------------|-----------------|  
 |**Центр администрирования сервера отчетов**|Включает возможности для управления интеграцией с сервером отчетов служб Reporting Services. Этот компонент устанавливается и используется в семействе веб-сайтов центра администрирования SharePoint.<br /><br /> Компонент интеграции сервера отчетов автоматически активируется в семействе веб-сайтов центра администрирования SharePoint после установки надстройки служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для продуктов SharePoint. В некоторых ситуациях необходимо активировать этот компонент вручную. Чтобы активировать компонент сервера отчетов, используйте страницы служб Reporting Services на странице параметров сайта в центре администрирования SharePoint.<br /><br /> Версия служб [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services и более поздние версии надстройки для продуктов SharePoint активируют функцию интеграции сервера отчетов для всех семейств веб-сайтов, существующих на момент установки надстройки. Кроме того, эта функция автоматически активируется для новых семейств веб-сайтов.|  
 |**Компонент интеграции сервера отчетов**|Обеспечивает создание улучшенных отчетов с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services.<br /><br /> Этот компонент активен по умолчанию.|  
-|**Компонент интеграции Power View**|Включает интерактивное исследование данных и визуальное представление для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и табличных баз данных служб Analsysis Services.<br /><br /> Доступ к этому компоненту можно получить через контекстное меню следующих источников данных:<br /><br /> **RDLX;**<br /><br /> **RSDS**<br /><br /> файл соединения с**BISM** .<br /><br /> <br /><br /> Если [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] отсутствует в контекстном меню, убедитесь, что **интеграция Power View** включена.<br /><br /> По умолчанию эта функция отключена.|  
+|**Компонент интеграции Power View**|Включает интерактивное исследование данных и визуальное представление для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и табличных баз данных служб Analsysis Services.<br /><br /> Доступ к этому компоненту можно получить через контекстное меню следующих источников данных:<br /><br /> **RDLX;**<br /><br /> **RSDS**<br /><br /> файл соединения с **BISM** .<br /><br /> <br /><br /> Если [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] отсутствует в контекстном меню, убедитесь, что **интеграция Power View** включена.<br /><br /> По умолчанию эта функция отключена.|  
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

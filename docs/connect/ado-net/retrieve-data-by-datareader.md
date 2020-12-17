@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 06bfaa994c2b29959f44cfc554122465db9e0394
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772290"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559206"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>Извлечение данных с помощью DataReader
 
@@ -53,7 +53,7 @@ reader = command.ExecuteReader();
 > Имейте в виду, что, пока объект **DataReader** открыт, соединение **Connection** используется исключительно этим объектом **DataReader**. Невозможно выполнять какие-либо команды для **Connection**, включая создание другого объекта **DataReader**, пока исходный объект **DataReader** не будет закрыт.  
 
 > [!NOTE]
-> В методе **Finalize** вашего класса нельзя вызывать методы **Close** или **Dispose** объектов **Connection**, **DataReader** или любого другого управляемого объекта. В методе завершения следует только освобождать неуправляемые ресурсы, которыми ваш класс непосредственно владеет. Если класс не владеет какими-либо неуправляемыми ресурсами, не включайте в его определение метод **Finalize**. Дополнительные сведения см. в статье [Сборка мусора](/dotnet/standard/garbage-collection/index.md).
+> В методе **Finalize** вашего класса нельзя вызывать методы **Close** или **Dispose** объектов **Connection**, **DataReader** или любого другого управляемого объекта. В методе завершения следует только освобождать неуправляемые ресурсы, которыми ваш класс непосредственно владеет. Если класс не владеет какими-либо неуправляемыми ресурсами, не включайте в его определение метод **Finalize**. Дополнительные сведения см. в статье [Сборка мусора](/dotnet/standard/garbage-collection/index).
  
 ## <a name="retrieve-multiple-result-sets-using-nextresult"></a>Извлечение нескольких результирующих наборов при помощи NextResult
 

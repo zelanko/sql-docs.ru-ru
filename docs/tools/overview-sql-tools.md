@@ -11,13 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 668ab3177cb49cfcbafc81500325740c941046d0
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: df6a1e45a31bffd87ea7db06e0569162f7896fc0
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006631"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559306"
 ---
 # <a name="sql-tools-overview"></a>Обзор средств SQL
 
@@ -37,8 +37,8 @@ ms.locfileid: "92006631"
 | Инструмент | Description | Операционная система |
 |:--|:--|:--|
 | [ **![Изображение ADS](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | Простой редактор, с помощью которого можно выполнять SQL-запросы по требованию, а затем анализировать и сохранять результаты в виде текста, а также в форматах JSON или Excel. Редактируйте данные, упорядочивайте избранные подключения к базам данных и просматривайте объекты базы данных в знакомом интерфейсе. | **Windows</br>macOS</br>Linux** |
-| [ **![Изображение SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | Управление экземпляром SQL Server или базой данных с полной поддержкой GUI. Возможности доступа, настройки, администрирования и разработки всех компонентов SQL Server, Базы данных SQL Azure и Azure Synapse Analytics, а также управления ими. Среда SSMS предоставляет единую полнофункциональную служебную программу, которая сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для доступа к SQL для разработчиков и администраторов баз данных всех профессиональных уровней. | **Windows** |
-| [ **![Изображение SSDT](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)** ](../ssdt/download-sql-server-data-tools-ssdt.md) | Это современное средство разработки, позволяющее создавать реляционные базы данных SQL Server, базы данных SQL Azure, модели данных Analysis Services (AS), пакеты Integration Services (IS) и отчеты Reporting Services (RS). С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** . | **Windows** |
+| [ **![Изображение SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) | Управление экземпляром SQL Server или базой данных с полной поддержкой GUI. Возможности доступа, настройки, администрирования и разработки всех компонентов SQL Server, Базы данных SQL Azure и Azure Synapse Analytics, а также управления ими. Среда SSMS предоставляет единую полнофункциональную служебную программу, которая сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для доступа к SQL для разработчиков и администраторов баз данных всех профессиональных уровней. | **Windows** |
+| [ **![Изображение SSDT](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md) | Это современное средство разработки, позволяющее создавать реляционные базы данных SQL Server, базы данных SQL Azure, модели данных Analysis Services (AS), пакеты Integration Services (IS) и отчеты Reporting Services (RS). С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** . | **Windows** |
 | [ **![Изображение VS Code](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | **[Расширение mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)** для Visual Studio Code — это официальное расширение SQL Server, которое поддерживает подключения к SQL Server и расширенные возможности редактирования для T-SQL в Visual Studio Code. Написание скриптов T-SQL в упрощенном редакторе. | **Windows</br>macOS</br>Linux** |
 
 ## <a name="command-line-tools"></a>Программы командной строки
@@ -47,12 +47,12 @@ ms.locfileid: "92006631"
 
 | Инструмент | Description | Операционная система |
 |:--|:--|:--|
-|[**bcp**](bcp-utility.md)|Служебная программа **b**ulk **c**opy **p**rogram (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате.| **Windows</br>macOS</br>Linux** |
-|[**mssql-cli (предварительная версия)** ](mssql-cli.md)|**mssql-cli** представляет собой интерактивное средство создания запросов к SQL Server из командной строки. Кроме того, SQL Server можно запрашивать с помощью программы командной строки, в которой реализована технология IntelliSense, выделение синтаксиса и многое другое. | **Windows</br>macOS</br>Linux** |
+|[**bcp**](bcp-utility.md)|Служебная программа **b** ulk **c** opy **p** rogram (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате.| **Windows</br>macOS</br>Linux** |
+|[**mssql-cli (предварительная версия)**](mssql-cli.md)|**mssql-cli** представляет собой интерактивное средство создания запросов к SQL Server из командной строки. Кроме того, SQL Server можно запрашивать с помощью программы командной строки, в которой реализована технология IntelliSense, выделение синтаксиса и многое другое. | **Windows</br>macOS</br>Linux** |
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | Средство **mssql-conf** настраивает SQL Server в Linux. | **Linux** |
-|[**mssql-scripter (предварительная версия)** ](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** — это многоплатформенный интерфейс командной строки для написания сценариев баз данных SQL Server. | **Windows</br>macOS</br>Linux** |
+|[**mssql-scripter (предварительная версия)**](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** — это многоплатформенный интерфейс командной строки для написания сценариев баз данных SQL Server. | **Windows</br>macOS</br>Linux** |
 | [**sqlcmd**](sqlcmd-utility.md) |Служебная программа **sqlcmd** позволяет из командной строки выполнять инструкции Transact-SQL, системные процедуры и файлы скриптов. | **Windows</br>macOS</br>Linux** |
-| [**sqlpackage**](sqlpackage.md) |Программа командной строки **sqlpackage** автоматизирует некоторые задачи разработки баз данных. |**Windows</br>macOS</br>Linux** |
+| [**sqlpackage**](sqlpackage/sqlpackage.md) |Программа командной строки **sqlpackage** автоматизирует некоторые задачи разработки баз данных. |**Windows</br>macOS</br>Linux** |
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** предоставляет командлеты для работы с SQL. | **Windows</br>macOS</br>Linux** |
 
 ## <a name="migration-and-other-tools"></a>Средства миграции и другие инструменты

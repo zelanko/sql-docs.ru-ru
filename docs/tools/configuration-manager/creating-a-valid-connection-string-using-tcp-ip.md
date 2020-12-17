@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e4cbb0942e3aead7b4150e788a5f064f6a240dbc
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 19c218d9047d31145a7172628cc5e64d941cb645
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900464"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463870"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Создание допустимой строки подключения с использованием протокола TCP/IP
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "88900464"
   
 -   Укажите **Имя псевдонима**.  
   
--   В поле **Сервер**введите имя сервера, к которому можно подключиться с помощью команды **PING** , или IP-адрес, к которому можно подключиться с помощью команды **PING** . Для именованного экземпляра добавьте имя экземпляра.  
+-   В поле **Сервер** введите имя сервера, к которому можно подключиться с помощью команды **PING** , или IP-адрес, к которому можно подключиться с помощью команды **PING** . Для именованного экземпляра добавьте имя экземпляра.  
   
 -   Укажите **TCP/IP** в поле **Протокол**.  
   
--   При необходимости в поле **Номер порта**введите номер порта. Номер порта по умолчанию равен 1433. Это номер порта экземпляра по умолчанию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на сервере. Для подключения к именованному экземпляру или к экземпляру по умолчанию, не прослушивающему порт 1433, необходимо указать номер порта или запустить службу « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер». Дополнительные сведения о настройке службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Служба браузера SQL Server](../../tools/configuration-manager/sql-server-browser-service.md).  
+-   При необходимости в поле **Номер порта** введите номер порта. Номер порта по умолчанию равен 1433. Это номер порта экземпляра по умолчанию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на сервере. Для подключения к именованному экземпляру или к экземпляру по умолчанию, не прослушивающему порт 1433, необходимо указать номер порта или запустить службу « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер». Дополнительные сведения о настройке службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Служба браузера SQL Server](../../tools/configuration-manager/sql-server-browser-service.md).  
   
  Во время соединения компонент собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считывает значения сервера, протокола и порта из реестра для заданного имени псевдонима и создает строку подключения в формате `tcp:<servername>[\<instancename>],<port>` или `tcp:<IPAddress>[\<instancename>],<port>`.  
   

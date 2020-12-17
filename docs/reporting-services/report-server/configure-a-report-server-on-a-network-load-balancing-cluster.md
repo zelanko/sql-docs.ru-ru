@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: b5bf533e9b74edd11d6c39d10d97eeb385c9e1a9
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 674e549b48cdb96a6ecae1b8630353751195085f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933852"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461395"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>настроить сервер отчетов в кластере с балансированием сетевой нагрузки
 
@@ -43,11 +43,11 @@ ms.locfileid: "91933852"
   
 ## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> Как настроить проверку состояния представления
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Для запуска масштабного развертывания на NLB-кластере необходимо настроить проверку состояния представления, чтобы пользователи могли просматривать интерактивные HTML-отчеты.  Это необходимо сделать для веб-службы сервера отчетов.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Для запуска масштабного развертывания на NLB-кластере необходимо настроить проверку состояния представления, чтобы пользователи могли просматривать интерактивные HTML-отчеты.
 ::: moniker-end
   
@@ -55,7 +55,7 @@ ms.locfileid: "91933852"
   
  Чтобы избежать этой проблемы, можно создать произвольный ключ для проверки состояния представления, а затем вручную настроить каждый узел сервера отчетов на его использование. Можно использовать любую случайно сформированную шестнадцатеричную последовательность. Алгоритм проверки (такой как SHA1) определяет длину шестнадцатеричной последовательности.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 1. Создайте ключ проверки и ключ дешифрования с помощью функции автоформирования, доступной в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В результате будет сформирована одна запись <`machineKey`>, которую можно добавить в файл Web.config для каждого экземпляра сервера отчетов, входящего в конфигурацию масштабного развертывания.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91933852"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 1. Создайте ключ проверки и ключ дешифрования с помощью функции автоформирования, доступной в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В результате этого будет сформирован один элемент \<**MachineKey**>, который можно добавить в файл RSReportServer.config для каждого экземпляра сервера отчетов, входящего в конфигурацию развертывания с горизонтальным увеличением масштаба.
 

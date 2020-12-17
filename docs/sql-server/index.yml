@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: 97ca3c3c7fb6611b58f20fb14f627cf0ad546b15
-  ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+  ms.openlocfilehash: e5fc8f3df8974ebde59f1ed2443565a0ab538b5e
+  ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 12/01/2020
-  ms.locfileid: "96442934"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "97617533"
 landingContent:
 - title: SQL в Azure
   linkLists:
@@ -22,7 +22,7 @@ landingContent:
     links:
     - text: Отдельная база данных Базы данных SQL Azure
       url: /azure/sql-database/sql-database-single-database
-    - text: Управляемый экземпляр SQL Azure
+    - text: Управляемый экземпляр SQL Azure
       url: /azure/sql-database/sql-database-managed-instance
     - text: Azure Synapse Analytics
       url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
@@ -63,7 +63,7 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: Подключение и отправка запроса (SSMS)
-      url: ../ssms/tutorials/connect-query-sql-server.md
+      url: ../ssms/quickstarts/ssms-connect-query-sql-server.md
     - text: Подключение и отправка запроса (Azure Data Studio)
       url: ../azure-data-studio/quickstart-sql-server.md
   - linkListType: download
@@ -100,7 +100,7 @@ landingContent:
       url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
     - text: Зеркальное отображение базы данных
       url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
-    - text: Доставка журналов
+    - text: доставка журналов;
       url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
     - text: Репликация
       url: ../relational-databases/replication/sql-server-replication.md
