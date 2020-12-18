@@ -18,14 +18,14 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37e3914abd99f03fa441a2b6284bd43ea570e269
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868967"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468635"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Поиск свойств документа с использованием списков свойств поиска
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -200,7 +200,7 @@ GO
   
     1.  Чтобы удалить свойство документа, щелкните заголовок строки слева от свойства и нажмите кнопку DEL.  
   
-    2.  Чтобы добавить свойство документа, щелкните пустую строку в конце списка, справа от **\*** , и введите значения для нового свойства.  
+    2.  Чтобы добавить свойство документа, щелкните пустую строку в конце списка, справа от * *\** _, и введите значения для нового свойства.  
   
          Описание этих значений см. в разделе [Редактор списка свойств поиска](../../t-sql/statements/create-search-property-list-transact-sql.md). Сведения о способе получения этих значений для свойств, определенных корпорацией Майкрософт, см. в разделе [Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Дополнительные сведения о свойствах, определенных независимыми поставщиками программного обеспечения (ISV), см. в документации по этим поставщикам.  
   
@@ -209,7 +209,7 @@ GO
 ###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> Удаление списка свойств поиска  
  Нельзя удалить из базы данных список свойств поиска, связанный с каким-либо полнотекстовым индексом.  
   
- **Удаление списка свойств поиска с помощью Transact-SQL**  
+ _ *Удаление списка свойств поиска с помощью Transact-SQL**  
   
  Используйте оператор [DROP SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/drop-search-property-list-transact-sql.md).  
   

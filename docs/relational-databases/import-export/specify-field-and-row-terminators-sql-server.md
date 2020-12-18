@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d36cb40971fc371022eb71dc922eb22a198bab9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 88b25ab93d2baf680464d70b08bf6962b6aafb4c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001710"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407570"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Определение признаков конца поля и строки (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "86001710"
         > [!NOTE]  
         >  Если указан параметр **-n** (данные в собственном формате) или **-N** (данные в собственном формате в кодировке Юникод), то признаки конца полей и строк не вставляются.  
   
-    -   Если интерактивная команда **bcp** содержит параметр **in** или **out** без указания параметра файла форматирования ( **-f**) или параметра формата данных ( **-n**, **-c**, **-w**или **-N**) и если предписано не указывать длину префикса и поля, команда предлагает пользователю указать признак конца каждого поля, причем по умолчанию признак конца отсутствует.  
+    -   Если интерактивная команда **bcp** содержит параметр **in** или **out** без указания параметра файла форматирования ( **-f**) или параметра формата данных ( **-n**, **-c**, **-w** или **-N**) и если предписано не указывать длину префикса и поля, команда предлагает пользователю указать признак конца каждого поля, причем по умолчанию признак конца отсутствует.  
   
          `Enter field terminator [none]:`  
   
@@ -138,8 +138,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Квалификатор|Описание|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='***признак_конца_поля***'**|Задает признак конца поля, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \t (символ табуляции).|  
-    |ROWTERMINATOR **='***признак_конца_строки***'**|Задает признак конца строки, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \n (символ перевода строки).|  
+    |FIELDTERMINATOR  **='** _field_terminator_*_'_* (признак_конца_поля)|Задает признак конца поля, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \t (символ табуляции).|  
+    |ROWTERMINATOR  **='** _row_terminator_*_'_* (признак_конца_строки)|Задает признак конца строки, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \n (символ перевода строки).|  
   
      Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   

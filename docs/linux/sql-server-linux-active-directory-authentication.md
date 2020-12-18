@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f1e526621d9ff769094830af5cf312eb8c1f17f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115933"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323693"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Руководство по Использование проверки подлинности Active Directory с SQL Server на Linux
 
@@ -64,7 +64,11 @@ ms.locfileid: "92115933"
    ```
 
    > [!NOTE]
-   > В целях безопасности рекомендуется использовать для SQL Server выделенную учетную запись Active Directory, чтобы учетные данные SQL Server не использовались другими службами. Однако при необходимости можно выбрать существующую учетную запись Active Directory, если вы знаете ее пароль (он потребуется для создания файла KEYTAB в следующем шаге). Кроме того, учетная запись должна быть включена для поддержки 128-разрядного и 256-разрядного шифрования Kerberos (атрибут **msDS-SupportedEncryptionTypes**) в учетной записи пользователя.
+   > В целях безопасности рекомендуется использовать для SQL Server выделенную учетную запись Active Directory, чтобы учетные данные SQL Server не использовались другими службами. Однако при необходимости можно выбрать существующую учетную запись Active Directory, если вы знаете ее пароль (он потребуется для создания файла KEYTAB в следующем шаге). Кроме того, учетная запись должна быть включена для поддержки 128-разрядного и 256-разрядного шифрования Kerberos (атрибут **msDS-SupportedEncryptionTypes**) в учетной записи пользователя. Чтобы убедиться в том, что для учетной записи включено шифрование AES, найдите ее в служебной программе **Пользователи и компьютеры Active Directory** и выберите пункт **Свойства**. В окне **Свойства** перейдите на вкладку **Учетные записи** и убедитесь в том, что установлены два указанных ниже флажка. 
+   >
+   > 1. **Данная учетная запись поддерживает 128-битовое шифрование Kerberos AES**
+   >
+   > 2. **Данная учетная запись поддерживает 256-битовое шифрование Kerberos AES**
 
 2. Укажите значение ServicePrincipalName (имя субъекта-службы) для этой учетной записи с помощью средства **setspn.exe**. Формат имени субъекта-службы должен быть в точности таким же, как в приведенном ниже примере. Чтобы определить полное доменное имя хост-компьютера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выполните команду `hostname --all-fqdns` в узле [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. TCP-портом должен быть порт 1433, если вы не настроили для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] другой номер порта.
 

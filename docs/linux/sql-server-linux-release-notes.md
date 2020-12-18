@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: dd0473eea265df700c1224ba4db8edf2dbff9e9e
-ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
+ms.openlocfilehash: a585314a26e90b76d18117be2eafe6f78e399dc3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90013677"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322250"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 на Linux
 
@@ -28,8 +28,8 @@ ms.locfileid: "90013677"
 
 | Платформа | Файловая система | Руководство по установке |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6 или 8 Server | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server версии 12 с пакетом обновления 2 (SP2) | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-suse.md) |
+| Red Hat Enterprise Linux 7.3–7.8 или 8.0–8.3 Server | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server версии 12 с пакетом обновления 2–5 (SP2–SP5) | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS, 18.04 LTS | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-ubuntu.md) | 
 | Подсистема Docker Engine 1.8+ на базе Windows, Mac или Linux | Недоступно | [Руководство по установке](quickstart-install-connect-docker.md) | 
 

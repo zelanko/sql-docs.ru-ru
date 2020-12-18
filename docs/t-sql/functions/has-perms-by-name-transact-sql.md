@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 8574b99c65972f566817749f34d89e3f6d3ca3e5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91115235"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900983"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Необязательное скалярное выражение типа **sysname**, представляющее имя защищаемой вложенной сущности, у которой проверяется разрешение. Значение по умолчанию — NULL.  
   
 > [!NOTE]  
->  В версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выше во вложенных защищаемых объектах не могут использоваться скобки в форме **"[**_вложенное имя_**]"**. Используйте вместо этого форму **'** _вложенное имя_ **'** .  
+>  Во вложенных защищаемых объектах не могут использоваться скобки в форме **'[** _вложенное имя_ **]'** . Используйте вместо этого форму **'** _вложенное имя_ **'** .  
   
  *sub-securable_class*  
  Необязательное скалярное выражение типа **nvarchar(60)**, представляющее класс защищаемой вложенной сущности, для которой проверяется разрешение. Значение по умолчанию — NULL.  

@@ -17,13 +17,13 @@ dev_langs:
 - TSQL
 author: kevinvngo
 ms.author: kevin
-monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
-ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96788027"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460787"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -432,6 +432,18 @@ WITH (
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Есть ли ограничения на число или размер файлов?
 Ограничение на количество или размер файлов отсутствует, но для лучшей производительности мы рекомендуем использовать файлы размером не менее 4 МБ.
+
+### <a name="are-there-any-known-issues-with-the-copy-statement"></a>Существуют ли известные проблемы с инструкцией COPY?
+Если у вас есть рабочая область Synapse, созданная до 12.07.2020, при проверке подлинности с помощью управляемого удостоверения может появиться такое сообщение об ошибке:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.*  (Управляемое удостоверение службы отключено на этом сервере. Включите управляемое удостоверение службы и повторите попытку.)
+
+Чтобы обойти эту ошибку, повторно зарегистрируйте управляемое удостоверение рабочей области, выполнив указанные ниже действия.
+
+1. Перейдите к рабочей области Synapse на портале Azure.
+2. Перейдите к колонке "Управляемые удостоверения". 
+3. Если параметр "Разрешить конвейеры" уже выбран, необходимо снять этот флажок и сохранить изменения.
+4. Проверьте параметр "Разрешить конвейеры" и сохраните изменения.
 
 
 ## <a name="see-also"></a>См. также раздел  

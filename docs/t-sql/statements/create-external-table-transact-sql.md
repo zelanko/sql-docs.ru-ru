@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6bfa965b74aada909b7e28e1429941d4a82b65a
-ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d45781583e8ac6147f5f761cebc288cc60f9bd9a
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328034"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489060"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "96328034"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -101,6 +101,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Аргументы
 
 *{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, в SQL хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается Hadoop и хранилище больших двоичных объектов Azure. Никакие данные не перемещаются и не хранятся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+> [!IMPORTANT]
+> Для обеспечения наилучшей производительности, если драйвер внешнего источника данных поддерживает трехкомпонентное имя, настоятельно рекомендуется указать такое имя.  
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
 
@@ -589,11 +592,11 @@ WITH
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* База данных SQL \*_** &nbsp;
@@ -641,6 +644,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Аргументы
 
 *{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, в SQL хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается база данных SQL Azure. Никакие данные не перемещаются и не хранятся в базе данных SQL Azure.
+
+> [!IMPORTANT]
+> Для обеспечения наилучшей производительности, если драйвер внешнего источника данных поддерживает трехкомпонентное имя, настоятельно рекомендуется указать такое имя.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
 
@@ -750,11 +756,11 @@ WITH
 - [Приступая к работе с межбазовыми запросами (вертикальное секционирование)](/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -825,6 +831,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Аргументы
 
 *{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается Azure Data Lake, Hadoop и хранилище больших двоичных объектов Azure. При создании внешних таблиц фактические данные не перемещаются и не сохраняются.
+
+> [!IMPORTANT]
+> Для обеспечения наилучшей производительности, если драйвер внешнего источника данных поддерживает трехкомпонентное имя, настоятельно рекомендуется указать такое имя.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
 
@@ -1020,11 +1029,11 @@ AS SELECT * FROM
 - [CREATE TABLE AS SELECT (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -1078,6 +1087,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Аргументы
 
 *{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, в Системе платформы аналитики хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается Hadoop и хранилище больших двоичных объектов Azure. Никакие данные не перемещаются и не хранятся в Системе платформы аналитики.
+
+> [!IMPORTANT]
+> Для обеспечения наилучшей производительности, если драйвер внешнего источника данных поддерживает трехкомпонентное имя, настоятельно рекомендуется указать такое имя.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
 

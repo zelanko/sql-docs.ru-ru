@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d92e83fd3bba6c5ee6ae6af3743de98000e05575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866671"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408276"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Подготовка данных к массовому экспорту или импорту
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "91866671"
   
 -   Чтобы импортировать данные из файлов данных фиксированной длины или с полями фиксированной ширины, используйте файл форматирования. Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
--   CSV-Файлы с разделителями-запятыми не поддерживаются в операциях массового импорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако в некоторых случаях CSV-файл можно использовать в качестве файла данных для массового импорта данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обратите внимание, что признаком конца поля CSV-файла не обязательно должна быть запятая. CSV-файл, который можно использовать в качестве файла данных для массового импорта, должен соответствовать следующим условиям.  
+-  Начиная с SQL Server 2017 файл CSV может использоваться как файл данных для массового импорта данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обратите внимание, что признаком конца поля CSV-файла не обязательно должна быть запятая. CSV-файл, который можно использовать в качестве файла данных для массового импорта, должен соответствовать следующим условиям.  
   
     -   Поля данных не должны содержать признак конца поля.  
   

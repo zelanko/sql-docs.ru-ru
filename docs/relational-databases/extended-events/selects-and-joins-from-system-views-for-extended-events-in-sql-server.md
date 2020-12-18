@@ -11,13 +11,13 @@ ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2dc811a3e3217c3aa6bf2d9a006cfd1ff0c7796b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868790"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481475"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server
 
@@ -114,9 +114,9 @@ ms.locfileid: "91868790"
 ### <a name="b1-ssms-ui-perspective"></a>Б.1. Обзор с использованием пользовательского интерфейса среды SSMS
 
 
-В среде SSMS в **обозревателе объектов**откройте диалоговое окно **Новый сеанс** , развернув узлы **Управление** > **Расширенные события**и щелкнув правой кнопкой мыши **Сеансы** > **Создать сеанс**.
+В среде SSMS в **обозревателе объектов** откройте диалоговое окно **Новый сеанс** , развернув узлы **Управление** > **Расширенные события** и щелкнув правой кнопкой мыши **Сеансы** > **Создать сеанс**.
 
-В большом диалоговом окне **Новый сеанс** в его первом разделе **Общие**был выбран параметр **Запускать сеанс событий при запуске сервера**.
+В большом диалоговом окне **Новый сеанс** в его первом разделе **Общие** был выбран параметр **Запускать сеанс событий при запуске сервера**.
 
 ![Новый сеанс > Общие, Запускать сеанс событий при запуске сервера.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
@@ -675,7 +675,7 @@ SELECT  --C.5
 
 
 ```
-/***  5 sampled rows from the actual 153 rows returned.
+/**_  5 sampled rows from the actual 153 rows returned.
     NOTE:  'resource_type' under 'Column'.
 
 Package     Object          Object-Type   O--C   Column          Column-Type-Name     Column-Type   Column-Value   C--M   Map-Value        Map-Key
@@ -689,7 +689,7 @@ sqlserver   lock_deadlock   event         o--c   resource_type   lock_resource_t
 Therefore, on your CREATE EVENT SESSION statement, in its ADD EVENT WHERE clause,
 you could put:
     WHERE( ... resource_type = 6 ...)  -- Meaning:  6 = PAGE.
-***/
+_*_/
 ```
 
 
@@ -700,7 +700,7 @@ you could put:
 
 Следующая инструкция SELECT возвращает каждый параметр для целевого объекта. Каждый параметр помечается, поэтому можно определить, является он обязательным или нет. Значения, назначаемые параметрам, влияют на поведение целевого объекта.
 
-- Обратите внимание на элемент предложения WHERE: *object_type = 'customizable'* .
+- Обратите внимание на элемент предложения WHERE: _object_type = 'customizable'*.
 - Кроме того, потребуется изменить значение предложения WHERE для *o.name =* .
 
 
@@ -754,7 +754,7 @@ package0   event_file   lazy_create_blob     boolean              Not_mandatory 
 package0   event_file   max_file_size        uint64               Not_mandatory   Maximum file size in MB
 package0   event_file   max_rollover_files   uint32               Not_mandatory   Maximum number of files to retain
 package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory   Not used
-***/
+**_/
 ```
 
 
@@ -766,7 +766,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 Эта инструкция DMV SELECT возвращает строки данных из целевого объекта открытого сеанса событий. Данные приведены к формату XML, поэтому возвращенную ячейку можно активировать щелчком мыши для простоты отображения в среде.
 
 - Если сеанс событий остановлен, SELECT не возвратит ни одной строки.
-- Потребуется изменить значение предложения WHERE для *s.name =* .
+- Потребуется изменить значение предложения WHERE для _s.name =*.
 
 
 ```sql

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eac4d8a51dabb844ff6f3607383e676ecf0fc16a
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09d3e92d2e181264965a1d4525d13f7d13b4504d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175973"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460487"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -210,7 +210,7 @@ DECLARE @tvTableD TABLE
   
 #### <a name="d1-convert-inline-to-explicit"></a>Г.1. Преобразование встроенной переменной в явную  
   
-Предыдущий синтаксис создает так называемую *встроенную*табличную переменную. Встроенный синтаксис не поддерживает оптимизацию для памяти. Поэтому давайте преобразуем встроенный синтаксис в явный для TYPE.  
+Предыдущий синтаксис создает так называемую *встроенную* табличную переменную. Встроенный синтаксис не поддерживает оптимизацию для памяти. Поэтому давайте преобразуем встроенный синтаксис в явный для TYPE.  
   
 *Область действия*. Определение TYPE, созданное первым пакетом, отделенным командой GO, сохраняется даже после завершения работы и перезапуска сервера. Но после первого разделителя GO объявленная таблица @tvTableC сохраняется только до тех пор, пока не будет достигнут следующий разделитель GO и пакет не завершится.  
   
@@ -411,7 +411,7 @@ Beginning execution loop
 Batch execution completed 5001 times.  
 2016-04-20 00:27:05.440  = End time, _tempdb.  
 ---- Tests done. ----  
-***/
+**_/
 ```
   
   
@@ -423,7 +423,7 @@ Batch execution completed 5001 times.
 - [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Размер строк и таблицы для таблиц, оптимизированных для памяти. Пример вычисления](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-В случае с большими табличными переменными некластеризованные индексы потребляют больше памяти, чем в случае с *таблицами*, оптимизированными для памяти. Чем больше число строк и ключ индекса, тем сильнее эта разница.  
+В случае с большими табличными переменными некластеризованные индексы потребляют больше памяти, чем в случае с _таблицами*, оптимизированными для памяти. Чем больше число строк и ключ индекса, тем сильнее эта разница.  
   
 Если в каждой операции доступа к оптимизированной для памяти табличной переменной используется только одно точное значение ключа, хэш-индекс может быть предпочтительнее некластеризованного индекса. Однако, если вы не можете оценить подходящее значение BUCKET_COUNT, можно использовать и некластеризованный индекс.  
   

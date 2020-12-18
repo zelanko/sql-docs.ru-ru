@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba0eb3c9907acfe02939c49ea253869adbfc992b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867345"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478255"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Разрешение фрагментации индекса путем реорганизации или перестроения индекса
 
@@ -148,7 +148,7 @@ object_id   TableName    index_id    IndexName                                  
 
 Подробные сведения см. в статье [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
-### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-tsql"></a>Проверка фрагментации индекса columnstore с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]
+### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql"></a>Проверка фрагментации индекса columnstore с помощью Transact-SQL
 
 В приведенном ниже примере рассчитывается средний процент фрагментации всех индексов в таблице `dbo.FactResellerSalesXL_CCI` базы данных `AdventureWorksDW2016`.
 
@@ -180,7 +180,7 @@ object_id   TableName                   index_id    IndexName                   
 ### <a name="check-index-fragmentation-using-sql-server-management-studio"></a>Проверка фрагментации индекса с помощью среды SQL Server Management Studio
 
 > [!NOTE]
-> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] не может использоваться для расчета фрагментации индексов columnstore в SQL Server и не может использоваться для расчета фрагментации любых индексов в базе данных SQL Azure. Используйте предыдущий [!INCLUDE[tsql](../../includes/tsql-md.md)] [пример](#to-check-the-fragmentation-of-a-columnstore-index-using-) в этих сценариях.
+> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] не может использоваться для расчета фрагментации индексов columnstore в SQL Server и не может использоваться для расчета фрагментации любых индексов в базе данных SQL Azure. Используйте предыдущий [пример](#to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 1. В обозревателе объектов разверните базу данных, содержащую таблицу, в которой необходимо проверить фрагментацию индекса.
 2. Разверните папку **Таблицы**.

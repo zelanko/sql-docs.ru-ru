@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 897172c3a268ac07f1fccb0c3756d10d89054978
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6126a2676e20230e21502ae7022adca2eeb3df63
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426176"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934017"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture для Oracle от Attunity
 
@@ -33,6 +33,7 @@ ms.locfileid: "88426176"
 
 Скачайте конструктор и службу системы отслеживания измененных данных Microsoft для Oracle от Attunity для соответствующей версии SQL Server по одной из следующих ссылок:
 
+- [Пакет дополнительных компонентов для конструктора и службы CDC Oracle для Microsoft SQL Server 2012 Integration Services от Attunity](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Пакет дополнительных компонентов для конструктора и службы CDC Oracle для Microsoft SQL Server 2016 Integration Services от Attunity](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Пакет дополнительных компонентов для конструктора и службы CDC Oracle для Microsoft SQL Server 2017 Integration Services от Attunity](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Пакет дополнительных компонентов для служб Microsoft SQL Server 2019 Integration Services](https://www.microsoft.com/download/details.aspx?id=100303)

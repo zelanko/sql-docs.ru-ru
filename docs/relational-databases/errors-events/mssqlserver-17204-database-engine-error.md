@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0dafe59102083ea1cd5c675819487eb88c9ecbc
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 996650e8552f435240663d61bf3734f875e2210a
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869487"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595219"
 ---
 # <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,12 +79,14 @@ FCB::Open failed: Could not open file c:\Program Files\Microsoft SQL Server\MSSQ
 1. Для устранения ошибки 17204 необходимо узнать соответствующий код ошибки операционной системы. А затем выполнить диагностику этой ошибки. После устранения ошибки операционной системы можно попытаться перезапустить базу данных (например, с помощью инструкции ALTER DATABASE SET ONLINE) или экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы перевести затронутую базу данных в режим "в сети". Иногда устранить ошибку операционной системы не удается. В таком случае необходимо выполнить определенные корректирующие действия. Мы обсудим их в этом разделе.
 1. Если сообщение об ошибке 17204 содержит лишь код ошибки, а не ее описание, можно попробовать разрешить код ошибки, выполнив в оболочке операционной системы эту команду: net helpmsg <error code>. Если кодом ошибки является 8-значный код состояния, ознакомьтесь с инструкциями на [этой странице](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133), чтобы декодировать код состояния в ошибку ОС.
 1. В случае возникновения ошибки операционной системы 5 (`Access is Denied`), рассмотрите следующие методы устранения:
-   -  Проверьте разрешения, заданные в файле, просмотрев свойства файла в проводнике Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует группы Windows, чтобы подготовить службу контроля доступа для различных ресурсов файла. Убедитесь, что соответствующая группа (с именем SQLServerMSSQLUser$ComputerName$MSSQLSERVER или SQLServerMSSQLUser$ComputerName$InstanceName) имеет необходимые разрешения для файла базы данных, указанного в сообщении об ошибке. Дополнительные сведения см. в статье [Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014). Убедитесь, что группа Windows содержит учетную запись запуска службы или идентификатор безопасности службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+   -  Проверьте разрешения, заданные в файле, просмотрев свойства файла в проводнике Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует группы Windows, чтобы подготовить службу контроля доступа для различных ресурсов файла. Убедитесь, что соответствующая группа (с именем SQLServerMSSQLUser$ComputerName$MSSQLSERVER или SQLServerMSSQLUser$ComputerName$InstanceName) имеет необходимые разрешения для файла базы данных, указанного в сообщении об ошибке. Дополнительные сведения см. в статье [Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access). Убедитесь, что группа Windows содержит учетную запись запуска службы или идентификатор безопасности службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
    -  Проверьте учетную запись пользователя, от имени которой сейчас запущена служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для получения этих сведений можно использовать диспетчер задач Windows. Найдите значение "Имя пользователя" для исполняемого файла "sqlservr.exe". Если вы недавно изменили учетную запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемым способом выполнения этой операции является использование служебной программы "Диспетчер конфигурации SQL Server". Дополнительные сведения см. в статье [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md). 
    -  В зависимости от типа операции — открытие баз данных во время запуска сервера, присоединение базы данных, восстановление базы данных и т. д. — учетная запись, используемая для олицетворения и получения доступа к файлу базы данных, может варьироваться. Сведения о том, какая операция позволяет задавать разрешения к каким учетным записям, см. в статье [Защита данных и файлов журналов](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)). Используйте такие средства, как [Process Monitor](/sysinternals/downloads/procmon), чтобы узнать, каким образом предоставляется доступ к файлу: в контексте безопасности учетной записи запуска службы экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (или идентификатора безопасности службы) либо олицетворенной учетной записи.
 
       Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] олицетворяет учетные данные пользователя, выполняющего операцию ALTER DATABASE или CREATE DATABASE, в средстве Process Monitor отобразятся следующие сведения (пример):
-        ```Date & Time:      3/27/2010 8:26:08 PM
+        
+        ```output
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -97,18 +99,19 @@ FCB::Open failed: Could not open file c:\Program Files\Microsoft SQL Server\MSSQ
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
-1. If you are getting `The system cannot find the file specified` OS error = 3:
-   - Review the complete path from the error message
-   - Ensure the disk drive and the folder path is visible and accessible from Windows Explorer
-   - Review the Windows Event log to find out if any problems exist with this disk drive
-   - If the path is incorrect and if this database already exists in the system, you can change the database file paths using the methods explained in the topic [Move Database Files](../databases/move-database-files.md). You may have to use this procedure, especially for system database files that encounter 17204 or 17207 and you are working through a disaster recovery scenario where the specified disk drives are unavailable. This topic also explains how you can identify the current location of the various system databases [master, model, tempdb, msdb and mssqlsystemresource].
-   - If you see this error because the database files are missing, you have to restore the database from a valid backup.
-     - If the database file associated with the error belongs to a secondary filegroup, then you can optionally mark that filegroup offline, bring the database online and then perform a restore of that filegroup alone. For more information, refer to the OFFLINE section of the topic [ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
-     - If the file that produced the error is a transaction log file, review the information under the sections "FOR ATTACH" and "FOR ATTACH_REBUILD_LOG" of the topic [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) to understand how you can recreate the missing transaction log files.
-   - Ensure that any disk or network location [like iSCSI drive] is available before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to access the database files on these locations. If needed create the required dependencies in Cluster Administrator or Service Control Manager.
-1. If you're getting the `The process cannot access the file because it is being used by another process` operating system error = 32:
-   - Use a tool like [Process Explorer](/sysinternals/downloads/process-explorer) or [Handle](/sysinternals/downloads/handle) from Windows Sysinternals to find out if another process or service has acquired exclusive lock on this database file
-   - Stop that process from accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database files. Common examples include anti-virus programs (see guidance for file exclusions in the following [KB article](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server) )
-   - In a cluster environment, make sure that the sqlservr.exe process from the previous owning node has actually released the handles to the database files. Normally, this doesn't occur, but misconfigurations of the cluster or I/O paths can lead to such issues.
+1. Если вы получаете ошибку ОС `The system cannot find the file specified` = 3
+   - Проверьте полный путь из сообщения об ошибке.
+   - Убедитесь, что диск и путь к папке видимы и доступны в проводнике.
+   - Проверьте журнал событий Windows на предмет проблем с этим диском.
+   - Если путь указан неправильно и база данных уже существует в системе, можно изменить пути к файлам базы данных, используя методы, описанные в статье [Перемещение файлов базы данных](../databases/move-database-files.md). Используйте эту процедуру, особенно для файлов системных баз данных, где возникают ошибки 17204 или 17207, если вы работаете со сценарием аварийного восстановления, в котором указанные диски недоступны. В этом разделе также объясняется, как можно найти текущее расположение различных системных баз данных [master, model, tempdb, msdb и mssqlsystemresource].
+   - Если эта ошибка возникает из-за отсутствия файлов базы данных, необходимо восстановить ее из допустимой резервной копии.
+     - Если файл базы данных, связанный с ошибкой, принадлежит вторичной файловой группе, можно дополнительно пометить ее как автономную, перевести базу данных в режим "в сети", а затем выполнить восстановление только этой файловой группы. Дополнительные сведения см. в разделе об автономной работе в статье [Параметры файлов и файловых групп ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+     - Если файл, вызвавший ошибку, является файлом журнала транзакций, ознакомьтесь со сведениями в разделах FOR ATTACH и FOR ATTACH_REBUILD_LOG в статье [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md), чтобы понять, как можно повторно создать отсутствующие файлы журнала транзакций.
+   - Прежде чем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] попытается получить доступ к файлам базы данных в этих расположениях, убедитесь, что доступно дисковое или сетевое расположение (например, iSCSI-диск). При необходимости создайте нужные зависимости в администраторе кластера или диспетчере служб.
+1. Если возникает ошибка операционной системы `The process cannot access the file because it is being used by another process` = 32
+   - Определите, нет ли у другого процесса или службы монопольной блокировки для этого файла базы данных, используя такие средств, как [Обозреватель процессов](/sysinternals/downloads/process-explorer) или [Дескриптор](/sysinternals/downloads/handle) из Windows Sysinternals.
+   - Запретите этому процессу доступ к файлам базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Распространенные примеры — антивирусные программы (см. руководство по исключению файлов в следующей [статье базы знаний](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).
+   - В кластерной среде убедитесь, что процесс sqlservr.exe предыдущего узла-владельца освободил дескрипторы для файлов базы данных. Обычно этого не происходит, но неправильная настройка кластера или путей ввода-вывода может привести к таким проблемам.
